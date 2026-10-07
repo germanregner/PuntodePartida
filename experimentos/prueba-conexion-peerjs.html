@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Prueba de conexión</title>
+<style>
+:root{--bg:#0A1015;--card:#10161B;--line:#27323C;--text:#F4E8CA;--muted:#8E96A3;--gold:#E2B450;--teal:#0CE9E1;--amber:#FFE04D;--burg:#933016;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.45 system-ui,sans-serif;padding:14px 16px 40px}
+h1{font-size:22px;margin:0 0 4px}h2{font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:16px 0 6px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;margin:10px 0}
+button{font:inherit;font-weight:700;color:var(--text);background:linear-gradient(135deg,var(--burg),#6B1D0B);border:1px solid var(--gold);border-radius:12px;padding:12px 16px;width:100%;margin:6px 0}
+button.sec{background:#141b23;border-color:var(--line)}
+input{font:inherit;width:100%;padding:12px;border-radius:12px;border:1px solid var(--line);background:#0b1115;color:var(--text);margin:6px 0}
+.code{font-size:32px;font-weight:800;letter-spacing:.08em;text-align:center;color:var(--gold)}
+.estado{font-weight:800;text-align:center;padding:10px;border-radius:12px;margin:8px 0}
+.est-no{background:#3A3520;color:var(--amber)}.est-ok{background:#12413D;color:var(--teal)}
+#qr{background:#fff;border-radius:12px;padding:8px;width:fit-content;margin:8px auto}#qr svg{display:block;width:210px;height:210px}
+.big{font-size:20px;font-weight:700}.muted{color:var(--muted);font-size:13px}
+#log{font:12px/1.4 ui-monospace,monospace;background:#05080b;border:1px solid var(--line);border-radius:12px;padding:10px;max-height:220px;overflow:auto;white-space:pre-wrap}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+</style></head><body>
+<h1>Prueba de conexión entre teléfonos</h1>
+<div class="muted">Solo una prueba técnica. No guarda ni envía datos personales.</div>
+
+<div id="elegir" class="card">
+  <button id="bAl">Soy el alumno (el niño)</button>
+  <button id="bAd" class="sec">Soy el adulto</button>
+</div>
+
+<div id="vistaAl" class="card" hidden>
+  <h2>Alumno</h2>
+  <div class="muted">En el otro teléfono, abrí esta página, tocá "Soy el adulto" y escribí el código, o escaneá el QR con la cámara.</div>
+  <div class="code" id="codigo">…</div>
+  <div id="qr"></div>
+  <div class="estado est-no" id="estAl">Esperando al adulto…</div>
+  <div class="card"><div class="muted">Ejercicio <b id="nEj">1</b> (simulado)</div>
+    <div class="opts"><button class="sec" data-o="A">Opción A</button><button class="sec" data-o="B">Opción B</button></div>
+    <input id="escribe" placeholder="Escribí algo y el adulto lo ve mientras escribís">
+    <button id="bOk">Confirmar respuesta</button>
+  </div>
+  <div id="ordenAl" class="muted"></div>
+  <button id="bRec" class="sec" hidden>Reconectar (mostrar código y QR de nuevo)</button>
+</div>
+
+<div id="vistaAd" class="card" hidden>
+  <h2>Adulto</h2>
+  <input id="codIn" placeholder="Código del alumno (ej. pdp-test-1234)" autocapitalize="off">
+  <button id="bConn">Conectar</button>
+  <div class="estado est-no" id="estAd">Sin conexión</div>
+  <div class="card"><div class="muted">Ejercicio que está haciendo el alumno</div><div class="big" id="adEj">—</div>
+    <div class="muted">Lo que va escribiendo / eligiendo</div><div class="big" id="adTxt">—</div>
+    <div class="muted">Resultado</div><div class="big" id="adRes">—</div></div>
+  <button id="bAv">Mandar "avanzar" al alumno</button>
+</div>
+
+<div class="card"><h2>Calidad de la conexión</h2>
+  <div>Tipo: <b id="tipo">—</b></div><div>Tiempo de ida y vuelta: <b id="rtt">—</b></div>
+  <div class="muted">"directa en la misma red" = no pasa por ningún servidor. "directa por internet" = usa un servidor solo para encontrarse. "con relevo" = los datos pasan por un servidor.</div>
+</div>
+<div class="card"><h2>Registro</h2><div id="log"></div><button class="sec" id="bCopiar">Copiar el registro</button></div>
+
+<script src="https://cdn.jsdelivr.net/npm/peerjs@1.5.4/dist/peerjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  var t0=Date.now(), logEl=$('log');
+  function log(m){ var s=((Date.now()-t0)/1000).toFixed(1).padStart(6)+'s  '+m; logEl.textContent+=s+'\n'; logEl.scrollTop=logEl.scrollHeight; try{console.log(m)}catch(e){} }
+  window.__log=function(){return logEl.textContent};
+  var peer=null, conn=null, rol=null, miCodigo=null, pingTimer=null, nEj=1, ultimo=0, vigilante=null;
+  function latido(){ ultimo=Date.now(); }
+  function estado(el,ok,txt){ el.className='estado '+(ok?'est-ok':'est-no'); el.textContent=txt; }
+  function codigoNuevo(){ return 'pdp-test-'+Math.floor(1000+Math.random()*9000); }
+  function mostrarQR(cod){
+    var url=location.origin+location.pathname+'#'+cod;
+    try{ var q=qrcode(0,'M'); q.addData(url); q.make(); $('qr').innerHTML=q.createSvgTag({cellSize:6,margin:0,scalable:true}); }catch(e){ $('qr').textContent='(no se pudo dibujar el QR)'; log('QR error: '+e.message); }
+    log('QR apunta a '+url);
+  }
+  function enviar(o){ if(conn&&conn.open){ try{conn.send(o)}catch(e){log('envío falló: '+e.message)} } }
+  function medir(){
+    if(!conn||!conn.peerConnection) return;
+    conn.peerConnection.getStats().then(function(stats){
+      var par=null, loc={}, rem={};
+      stats.forEach(function(r){ if(r.type==='local-candidate') loc[r.id]=r; if(r.type==='remote-candidate') rem[r.id]=r; });
+      stats.forEach(function(r){ if(r.type==='candidate-pair' && (r.selected||r.nominated) && r.state==='succeeded') par=r; });
+      if(!par){ $('tipo').textContent='(midiendo…)'; return; }
+      var l=loc[par.localCandidateId], r=rem[par.remoteCandidateId];
+      var tl=l&&l.candidateType, tr=r&&r.candidateType, txt;
+      if(tl==='relay'||tr==='relay') txt='con relevo (pasa por un servidor)';
+      else if(tl==='host'&&tr==='host') txt='directa en la misma red';
+      else txt='directa por internet';
+      $('tipo').textContent=txt; log('candidatos: local='+tl+' remoto='+tr+' => '+txt);
+    }).catch(function(e){log('stats error: '+e.message)});
+  }
+  function cortado(){
+    clearInterval(pingTimer); clearInterval(vigilante);
+    if(rol==='al'){ estado($('estAl'),false,'Se cortó la conexión'); $('bRec').hidden=false; }
+    else { estado($('estAd'),false,'Se cortó la conexión. Volvé a tocar Conectar o escaneá el QR.'); }
+    $('tipo').textContent='—'; $('rtt').textContent='—';
+  }
+  function atar(c){
+    conn=c;
+    c.on('open',function(){
+      log('canal abierto con '+c.peer); latido();
+      clearInterval(vigilante); vigilante=setInterval(function(){ if(conn===c && c.open && Date.now()-ultimo>7000){ log('sin señales hace 7 s: lo trato como cortado'); try{c.close()}catch(e){} cortado(); } },1000);
+      if(rol==='al'){ estado($('estAl'),true,'Conectado con el adulto'); $('bRec').hidden=true; }
+      else { estado($('estAd'),true,'Conectado con el alumno'); }
+      setTimeout(medir,1500); setTimeout(medir,5000);
+      clearInterval(pingTimer);
+      pingTimer=setInterval(function(){ enviar({t:'ping',ts:Date.now()}); },2000);
+      if(rol==='al') enviar({t:'estado',ej:nEj,txt:$('escribe').value,res:'—'});
+    });
+    c.on('data',function(d){
+      latido();
+      if(d.t==='ping'){ enviar({t:'pong',ts:d.ts}); }
+      else if(d.t==='pong'){ $('rtt').textContent=(Date.now()-d.ts)+' ms'; }
+      else if(d.t==='estado'){ $('adEj').textContent='Ejercicio '+d.ej; $('adTxt').textContent=d.txt||'—'; $('adRes').textContent=d.res||'—'; }
+      else if(d.t==='orden'){ if(rol==='al'){ nEj++; $('nEj').textContent=nEj; $('ordenAl').textContent='El adulto mandó avanzar → ejercicio '+nEj; $('escribe').value=''; enviar({t:'estado',ej:nEj,txt:'',res:'—'}); log('orden recibida: avanzar'); } }
+    });
+    c.on('close',function(){ log('canal cerrado'); cortado(); });
+    c.on('error',function(e){ log('error del canal: '+(e&&e.type||e)); });
+  }
+  function iniciarPeer(id){
+    peer=id?new Peer(id):new Peer();
+    peer.on('open',function(i){ log('registrado en el servicio de encuentro como '+i); if(rol==='al'){ miCodigo=i; $('codigo').textContent=i; mostrarQR(i); } if(rol==='ad'&&$('codIn').value) conectarAd(); });
+    peer.on('connection',function(c){ if(rol==='al'){ log('el adulto se está conectando…'); atar(c); } });
+    peer.on('disconnected',function(){ log('se perdió el contacto con el servicio de encuentro; reintentando'); try{peer.reconnect()}catch(e){} });
+    peer.on('error',function(e){ log('error: '+e.type+' '+(e.message||'')); if(e.type==='unavailable-id'&&rol==='al'){ log('el código estaba en uso; pido otro'); peer.destroy(); iniciarPeer(codigoNuevo()); } });
+  }
+  function conectarAd(){
+    var cod=$('codIn').value.trim(); if(!cod) return; log('conectando a '+cod+'…'); estado($('estAd'),false,'Conectando…');
+    if(conn){ try{conn.close()}catch(e){} }
+    atar(peer.connect(cod,{reliable:true}));
+  }
+  $('bAl').onclick=function(){ rol='al'; $('elegir').hidden=true; $('vistaAl').hidden=false; log('rol: alumno'); iniciarPeer(codigoNuevo()); };
+  $('bAd').onclick=function(){ rol='ad'; $('elegir').hidden=true; $('vistaAd').hidden=false; log('rol: adulto'); iniciarPeer(); };
+  $('bConn').onclick=function(){ if(peer&&peer.open) conectarAd(); else log('todavía no estoy registrado; espero un momento'); };
+  $('bAv').onclick=function(){ enviar({t:'orden',a:'avanzar'}); log('orden enviada: avanzar'); };
+  $('bRec').onclick=function(){ log('reconectar: nuevo código'); if(peer){try{peer.destroy()}catch(e){}} estado($('estAl'),false,'Esperando al adulto…'); $('bRec').hidden=true; iniciarPeer(codigoNuevo()); };
+  document.querySelectorAll('[data-o]').forEach(function(b){ b.onclick=function(){ enviar({t:'estado',ej:nEj,txt:'Eligió '+b.dataset.o,res:'—'}); }; });
+  $('escribe').addEventListener('input',function(){ enviar({t:'estado',ej:nEj,txt:$('escribe').value,res:'—'}); });
+  $('bOk').onclick=function(){ enviar({t:'estado',ej:nEj,txt:$('escribe').value,res:'Confirmó la respuesta'}); };
+  $('bCopiar').onclick=function(){ var t=logEl.textContent; if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(function(){log('registro copiado')},function(){log('no pude copiar')}); else log('copiar no disponible: seleccioná el texto a mano'); };
+  // si abrieron el QR del alumno (la página trae el código en la dirección), entra directo como adulto
+  if(location.hash.length>2){ $('codIn').value=decodeURIComponent(location.hash.slice(1)); $('bAd').click(); }
+  window.addEventListener('online',function(){log('volvió internet')}); window.addEventListener('offline',function(){log('sin internet')});
+})();
+</script></body></html>
