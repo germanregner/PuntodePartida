@@ -54,7 +54,7 @@ input{font:inherit;width:100%;padding:12px;border-radius:12px;border:1px solid v
 </div>
 
 <div class="card"><h2>Calidad de la conexión</h2>
-  <div>Tipo: <b id="tipo">—</b></div><div>Tiempo de ida y vuelta: <b id="rtt">—</b></div>
+  <div>Tipo: <b id="tipo">—</b></div><div>Estado ICE: <b id="ice">—</b></div><div>Tiempo de ida y vuelta: <b id="rtt">—</b></div>
   <div class="muted">"directa en la misma red" = no pasa por ningún servidor. "directa por internet" = usa un servidor solo para encontrarse. "con relevo" = los datos pasan por un servidor.</div>
 </div>
 <div class="card"><h2>Registro</h2><div id="log"></div><button class="sec" id="bCopiar">Copiar el registro</button></div>
@@ -72,7 +72,7 @@ input{font:inherit;width:100%;padding:12px;border-radius:12px;border:1px solid v
   function estado(el,ok,txt){ el.className='estado '+(ok?'est-ok':'est-no'); el.textContent=txt; }
   function codigoNuevo(){ return 'pdp-test-'+Math.floor(1000+Math.random()*9000); }
   function mostrarQR(cod){
-    var url=location.origin+location.pathname+'#'+cod;
+    var url=location.origin+location.pathname+location.search+'#'+cod;
     try{ var q=qrcode(0,'M'); q.addData(url); q.make(); $('qr').innerHTML=q.createSvgTag({cellSize:6,margin:0,scalable:true}); }catch(e){ $('qr').textContent='(no se pudo dibujar el QR)'; log('QR error: '+e.message); }
     log('QR apunta a '+url);
   }
@@ -120,17 +120,36 @@ input{font:inherit;width:100%;padding:12px;border-radius:12px;border:1px solid v
     c.on('close',function(){ log('canal cerrado'); cortado(); });
     c.on('error',function(e){ log('error del canal: '+(e&&e.type||e)); });
   }
+  var banderas=new URLSearchParams(location.search);
+  function configIce(){
+    var servers=[{urls:'stun:stun.l.google.com:19302'},{urls:['turn:eu-0.turn.peerjs.com:3478','turn:us-0.turn.peerjs.com:3478'],username:'peerjs',credential:'peerjsp'}];
+    if(banderas.get('turn')==='openrelay') servers.push({urls:['turn:openrelay.metered.ca:80','turn:openrelay.metered.ca:443','turn:openrelay.metered.ca:443?transport=tcp','turns:openrelay.metered.ca:443?transport=tcp'],username:'openrelayproject',credential:'openrelayproject'});
+    return {iceServers:servers, iceTransportPolicy: banderas.get('relay')==='1'?'relay':'all'};
+  }
+  function diag(c){
+    var n=0, tipos={};
+    (function intentar(){
+      if(!c.peerConnection){ if(++n<40) setTimeout(intentar,250); return; }
+      var pc=c.peerConnection;
+      pc.addEventListener('iceconnectionstatechange',function(){ log('ICE: '+pc.iceConnectionState); $('ice').textContent=pc.iceConnectionState; });
+      pc.addEventListener('icegatheringstatechange',function(){ log('recolección de candidatos: '+pc.iceGatheringState+' '+JSON.stringify(tipos)); });
+      pc.addEventListener('icecandidate',function(e){ if(e.candidate){ var t=(e.candidate.candidate.match(/ typ (\w+)/)||[])[1]||'?'; var pr=(e.candidate.candidate.match(/ (udp|tcp) /i)||[])[1]||''; var k=t+(pr?'/'+pr.toLowerCase():''); tipos[k]=(tipos[k]||0)+1; } });
+      pc.addEventListener('icecandidateerror',function(e){ log('error de candidato ICE: '+(e.url||'')+' '+(e.errorCode||'')+' '+(e.errorText||'')); });
+    })();
+    setTimeout(function(){ if(!c.open){ log('A LOS 20 s EL CANAL SIGUE SIN ABRIR. Candidatos juntados: '+JSON.stringify(tipos)); estado(rol==='al'?$('estAl'):$('estAd'),false,'No se pudo abrir el canal (ver el registro)'); } },20000);
+  }
   function iniciarPeer(id){
-    peer=id?new Peer(id):new Peer();
+    var cfg={config:configIce()}; log('banderas: relay='+(banderas.get('relay')||'0')+' turn='+(banderas.get('turn')||'-'));
+    peer=id?new Peer(id,cfg):new Peer(undefined,cfg);
     peer.on('open',function(i){ log('registrado en el servicio de encuentro como '+i); if(rol==='al'){ miCodigo=i; $('codigo').textContent=i; mostrarQR(i); } if(rol==='ad'&&$('codIn').value) conectarAd(); });
-    peer.on('connection',function(c){ if(rol==='al'){ log('el adulto se está conectando…'); atar(c); } });
+    peer.on('connection',function(c){ if(rol==='al'){ log('el adulto se está conectando…'); diag(c); atar(c); } });
     peer.on('disconnected',function(){ log('se perdió el contacto con el servicio de encuentro; reintentando'); try{peer.reconnect()}catch(e){} });
     peer.on('error',function(e){ log('error: '+e.type+' '+(e.message||'')); if(e.type==='unavailable-id'&&rol==='al'){ log('el código estaba en uso; pido otro'); peer.destroy(); iniciarPeer(codigoNuevo()); } });
   }
   function conectarAd(){
     var cod=$('codIn').value.trim(); if(!cod) return; log('conectando a '+cod+'…'); estado($('estAd'),false,'Conectando…');
     if(conn){ try{conn.close()}catch(e){} }
-    atar(peer.connect(cod,{reliable:true}));
+    var cc=peer.connect(cod,{reliable:true}); diag(cc); atar(cc);
   }
   $('bAl').onclick=function(){ rol='al'; $('elegir').hidden=true; $('vistaAl').hidden=false; log('rol: alumno'); iniciarPeer(codigoNuevo()); };
   $('bAd').onclick=function(){ rol='ad'; $('elegir').hidden=true; $('vistaAd').hidden=false; log('rol: adulto'); iniciarPeer(); };
