@@ -412,6 +412,19 @@ input, textarea { font-family: var(--font); font-size: 16px; color: inherit; }
 /* Aviso (2026-10-08): centrado abajo, con salto de línea y ancho máximo (en un celular de 360 px se cortaba a la derecha y tapaba los botones de arriba) */
 #toast { position: fixed; left: 50%; bottom: calc(env(safe-area-inset-bottom, 0px) + 112px); transform: translate(-50%, 24px); opacity: 0; pointer-events: none; width: max-content; max-width: calc(100% - 32px); text-align: center; background: var(--toast-bg); color: var(--toast-text); padding: 12px 18px; border-radius: 18px; font-size: 14px; font-weight: 700; line-height: 1.3; z-index: 9999; transition: transform .35s ease-out, opacity .35s ease-out; white-space: normal; box-shadow: var(--shadow-2); }
 #toast.show { transform: translate(-50%, 0); opacity: 1; }
+/* Globo de diálogo de Spike (2026-10-13, pedido del Director): reemplaza al cartelito «Tocá "Necesitás ayuda"…». Sale UNA sola vez, junto a Spike (el botón del pie que abre las pistas),
+   con una entrada con rebote y un flote suave; se va solo o al tocar. Cola apuntando a Spike. */
+.spike-globo{ position:fixed; z-index:9998; max-width:min(250px, calc(100vw - 32px)); padding:11px 15px 12px; border-radius:20px; background:var(--bg-card); color:var(--text-primary); border:2px solid var(--primary,#6C63FF);
+  font-size:14px; font-weight:700; line-height:1.3; box-shadow:0 8px 22px rgba(0,0,0,.35); transform-origin:var(--cola-x,28px) 100%; animation:spikeGloboEntra .45s cubic-bezier(.34,1.56,.64,1) both; cursor:pointer; }
+.spike-globo::after{ content:''; position:absolute; left:calc(var(--cola-x,28px) - 9px); bottom:-10px; width:16px; height:16px; background:inherit; border-right:2px solid var(--primary,#6C63FF); border-bottom:2px solid var(--primary,#6C63FF); border-radius:0 0 6px 0; transform:rotate(45deg); }
+.spike-globo-flota{ animation:spikeGloboFlota 2.2s ease-in-out .45s infinite; }
+.spike-globo.sale{ animation:spikeGloboSale .3s ease-in both; }
+.pdp-fondo-ej .spike-globo{ background:#101A29; color:#FBF0D5; border-color:#F4C66A; font-family:var(--font-heading); font-weight:700; font-size:15px; }
+.pdp-fondo-ej .spike-globo::after{ border-color:#F4C66A; }
+@keyframes spikeGloboEntra{ 0%{ opacity:0; transform:scale(.4) translateY(10px); } 100%{ opacity:1; transform:scale(1) translateY(0); } }
+@keyframes spikeGloboFlota{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-4px); } }
+@keyframes spikeGloboSale{ to{ opacity:0; transform:scale(.8) translateY(6px); } }
+@media (prefers-reduced-motion: reduce){ .spike-globo, .spike-globo-flota, .spike-globo.sale{ animation:none; } }
 /* Rediseño visual calibrado, Fase 7 (2026-07-28): banner de hito —
    componente NUEVO y SEPARADO (no reusa #tutor-zone/flashTutorZone(),
    ese slot ya lo ocupan el tip de la Fase 5 y el texto normal del
@@ -4151,9 +4164,9 @@ body.sheet-open .exercise-image-zone { max-width:min(340px,26vh); transition:max
 /* botón principal del alumno con el adulto conectado (2026-10-07): gris, sin respuesta al toque, con el ícono de profe */
 .pds-btn-depth.sy-espera{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--bg-section,#2a2f34);color:var(--text-muted);border:1px solid var(--border);box-shadow:none;cursor:default;opacity:1;pointer-events:none}.pds-btn-depth.sy-espera svg{flex-shrink:0}
 .pf-wrap.sy-remoto .pf-ev,.pf-wrap.sy-remoto .pf-pp,.pf-wrap.sy-remoto .pf-luego{display:none}
-/* Level Check en clase (2026-10-07): sin "Saltar"; resultados con fichas neutras (nunca rojo); nota grande */
-body.sy-lc #skip-btn{display:none!important}
-html:not(.pdp-modo-prueba) #skip-btn{display:none!important} /* solo en modo prueba (2026-10-13) */
+/* Level Check en clase (2026-10-07): sin "Saltar" para los chicos; resultados con fichas neutras (nunca rojo); nota grande.
+   «Saltar» existe SOLO en el modo prueba (2026-10-13) y ahí queda SIEMPRE, también en un Level Check y en un Skill Check (pedido del Director: para recorrer la Unidad al probarla). */
+html:not(.pdp-modo-prueba) #skip-btn{display:none!important}
 .sy-chip{align-self:flex-start;font-size:12px;font-weight:800;letter-spacing:.04em;padding:3px 10px;border-radius:999px;border:1.5px solid var(--border);color:var(--text-secondary)}.sy-chip.bien{color:var(--celebrate);border-color:var(--celebrate)}.sy-chip.ayuda{color:#F59E0B;border-color:#F59E0B}.sy-chip.mal,.sy-chip.todavia{color:var(--text-secondary);border-color:var(--text-muted)}.sy-chip.pendiente{color:var(--text-muted);border-style:dashed}
 .sy-nota{font-family:var(--font-heading,inherit);font-size:48px;font-weight:800;text-align:center;color:var(--text-primary);line-height:1.05}.sy-nota-fila{display:grid;grid-template-columns:64px 1fr 64px;gap:10px;align-items:center}.sy-trofeo{font-size:56px;text-align:center;line-height:1.1}.sy-centro{align-items:stretch}
 /* Fin de lección en clase (2026-10-07, paso 3b): Spike en el centro, halo dorado, resumen corto. Trofeo del Level Check = imagen de Assets/ */
@@ -5708,6 +5721,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/be1c6d9325e4632d9b354c1dfc577234.js"></script><script src="../pdp-assets/dcfcd4e731c647f97d7bfd2cfcba9933.js"></script>
+<script src="../pdp-assets/e0880723b7a02020b4e567343c554bd8.js"></script><script src="../pdp-assets/384321e84b279d996cee5d5c0840b1c8.js"></script>
 </body>
 </html>
