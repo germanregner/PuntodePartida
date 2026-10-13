@@ -1,0 +1,12 @@
+{
+  "formato": "unidades-v1",
+  "nota": "Registro de las Unidades instalables de la app. El service worker (sw.js) solo guarda para uso sin internet las páginas listadas acá, y solo cuando se abren. Sumar una Unidad = publicar su página + sus recursos y agregar una línea acá; sw.js no se toca. Lo mantiene promover_app.mjs.",
+  "entrada": "en-a2-u01-back-to-basics.html",
+  "unidades": [
+    {
+      "id": "en-a2-u01-back-to-basics",
+      "pagina": "en-a2-u01-back-to-basics.html",
+      "titulo": "EN-A2-U01 Back to Basics"
+    }
+  ]
+}
