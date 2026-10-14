@@ -4310,6 +4310,53 @@ html.pdp-lec-perg #screen-exercise:has(.pf-wrap) .progress-fill{ position:relati
 html.pdp-lec-perg #screen-exercise:has(.pf-wrap) .progress-bar::after{ content:''; position:absolute; left:50%; top:50%; width:30px; height:30px; transform:translate(-50%,-50%); background:url("data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22 width=%2232%22 height=%2232%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%23fdf0b0%22/%3E%3Cstop offset=%22.5%22 stop-color=%22%23fae491%22/%3E%3Cstop offset=%221%22 stop-color=%22%23ac7836%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d=%22M16 1C17 11 21 15 31 16 21 17 17 21 16 31 15 21 11 17 1 16 11 15 15 11 16 1z%22 fill=%22url(%23g)%22 stroke=%22%23fff3b0%22 stroke-width=%22.8%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E") center / 22px no-repeat; filter:drop-shadow(0 1px 2px rgba(0,0,0,.5)); pointer-events:none; }
 html.pdp-lec-perg #screen-exercise:has(.pf-wrap) .exercise-question{ color:#fef2ca; }
 /* de día, la pregunta va oscura con un halo crema para leerse sobre la biblioteca clara */
+
+/* ══ Pantalla del profe en la biblioteca (2026-10-14, maqueta y papiros del Director): solo con lecturaEstilo. No cambia reglas, evidencia ni el flujo del profe. ══ */
+html.pdp-lec-perg .sy-ov.sy-ad{ color:#3f2910; background:linear-gradient(180deg, rgba(255,244,222,.5), rgba(255,244,222,.08) 24%, rgba(255,244,222,0) 60%), var(--lec-fondo-dia) 50% 0 / cover no-repeat, #e9d5ae !important; }
+html.pdp-lec-perg[data-theme="dark"] .sy-ov.sy-ad{ color:#f2e6c8; background:linear-gradient(180deg, rgba(8,4,2,.55), rgba(8,4,2,.08) 24%, rgba(8,4,2,0) 60%), var(--lec-fondo-noche) 50% 0 / cover no-repeat, #0a0806 !important; }
+/* cabecera: aro dorado, título, subtítulo y píldora */
+html.pdp-lec-perg .sy-ov.sy-ad .uno-h b{ font-size:18px; color:#2b1a0a; overflow:hidden; text-overflow:ellipsis; } html.pdp-lec-perg .sy-ov.sy-ad .uno-h small{ font-size:13px; font-style:italic; color:#5a3d1a; }
+html.pdp-lec-perg[data-theme="dark"] .sy-ov.sy-ad .uno-h b{ color:#fefde9; } html.pdp-lec-perg[data-theme="dark"] .sy-ov.sy-ad .uno-h small{ color:#efe6d4; }
+html.pdp-lec-perg .sy-ov.sy-ad .uno-fl{ width:42px; height:42px; flex:0 0 42px; border:0; color:#fee793; background:radial-gradient(circle at 50% 38%, #1f1106, #120a03 78%); box-shadow:inset 0 0 0 1.5px #c98c43, 0 0 6px 1px rgba(230,150,40,.35), 0 3px 8px rgba(0,0,0,.45); }
+html.pdp-lec-perg .sy-ov.sy-ad .uno-x{ font-size:13px; padding:9px 12px; color:#fefefd; border:1.5px solid transparent; background:linear-gradient(180deg,#1d110a,#120a06) padding-box, linear-gradient(180deg,#fdeb9c,#d9a840 55%,#f6dd99) border-box; box-shadow:0 0 8px rgba(255,200,80,.4), 0 3px 8px rgba(0,0,0,.4); }
+html.pdp-lec-perg .sy-ov.sy-ad .ad-body{ gap:4px; padding:2px 12px 6px; }
+/* «Para el profe»: papiro oscuro */
+html.pdp-lec-perg .sy-ov.sy-ad .pf-pp{ border:0; border-radius:0; background:var(--lec-profe-oscuro) center / 107% 124% no-repeat; padding:14px 26px 14px; filter:drop-shadow(0 8px 12px rgba(0,0,0,.5)); }
+html.pdp-lec-perg .sy-ov.sy-ad .pf-pp summary{ gap:10px; padding:0 0 6px; font-family:var(--font-heading); font-size:21px; font-weight:700; color:#fdd878; }
+html.pdp-lec-perg .sy-ov.sy-ad .pf-pp summary svg{ width:26px; height:26px; stroke:#fdd878; }
+html.pdp-lec-perg .sy-ov.sy-ad .pf-pp-b{ padding:0; font-family:var(--font-heading); font-size:14.5px; line-height:1.35; color:#ede5dd; }
+html.pdp-lec-perg .sy-ov.sy-ad .pf-pp-b b{ display:block; margin:2px 0 3px; font-size:17.5px; font-weight:700; color:#fdfaec; }
+html.pdp-lec-perg .sy-ov.sy-ad .pf-pp-b b:nth-of-type(2){ margin-top:8px; color:#fddd7d; }
+html.pdp-lec-perg .sy-ov.sy-ad .pf-pp-b ul{ margin:4px 0 8px; padding-left:22px; } html.pdp-lec-perg .sy-ov.sy-ad .pf-pp-b li::marker{ color:#fbecaa; } html.pdp-lec-perg .sy-ov.sy-ad .pf-pp-b li{ margin-bottom:3px; }
+html.pdp-lec-perg .sy-ov.sy-ad .pf-mod{ color:#f2ebe6; }
+/* «Sticker para el alumno»: papiro claro, título en mayúsculas con línea, botones brillantes */
+html.pdp-lec-perg .sy-ov.sy-ad .ad-bl{ background:var(--lec-profe-claro) center / 106% 120% no-repeat !important; box-shadow:none !important; border:0; border-radius:0; padding:16px 26px 12px; filter:drop-shadow(0 8px 12px rgba(0,0,0,.45)); }
+html.pdp-lec-perg .sy-ov.sy-ad .ad-bl::before, html.pdp-lec-perg .sy-ov.sy-ad .ad-bl::after, html.pdp-lec-perg .sy-ov.sy-ad .ad-bl > .pc-esq{ display:none !important; }
+html.pdp-lec-perg .sy-ov.sy-ad .ad-bl h6, html.pdp-lec-perg .sy-ov.sy-ad .ad-dock .ad-lbl{ display:flex; align-items:center; gap:10px; margin:0 0 9px; font-family:var(--font-heading); font-size:13px; font-weight:700; letter-spacing:.05em; color:#1a0800 !important; }
+html.pdp-lec-perg .sy-ov.sy-ad .ad-bl h6::after, html.pdp-lec-perg .sy-ov.sy-ad .ad-dock .ad-lbl::after{ content:''; flex:1; height:1.5px; background:#523b23; opacity:.85; }
+html.pdp-lec-perg .sy-ov.sy-ad .ad-bl p.ad-sub{ display:flex; align-items:center; gap:10px; margin:8px 0 0; font-family:var(--font-heading); font-size:12.5px; font-style:italic; color:#200f05 !important; }
+html.pdp-lec-perg .sy-ov.sy-ad .ad-bl p.ad-sub::after{ content:''; flex:1; height:1.5px; background:#523b23; opacity:.7; }
+html.pdp-lec-perg .sy-ov.sy-ad .ad-stk{ gap:5px; margin-top:0; }
+html.pdp-lec-perg .sy-ov.sy-ad .ad-stk-b{ padding:4px 12px; border:0; border-radius:999px; font-family:var(--font-heading); font-weight:500; font-size:13.5px; color:#fefefe; text-shadow:0 1px 1px rgba(0,0,0,.6); }
+html.pdp-lec-perg .sy-ov.sy-ad .ad-stk-b.ok{ background:linear-gradient(180deg,#0f403b,#082d2a 55%,#041f1d); box-shadow:0 0 0 1.5px #072522, inset 0 0 0 1.5px #2f9f90, inset 0 0 0 2.7px rgba(2,20,18,.7), inset 0 2px 3px rgba(190,255,240,.3), 0 3px 6px rgba(0,0,0,.4); }
+html.pdp-lec-perg .sy-ov.sy-ad .ad-stk-b.amb{ background:linear-gradient(180deg,#6f4721,#4e2f12 55%,#3b210a); box-shadow:0 0 0 1.5px #3a2008, inset 0 0 0 1.5px #d6a04a, inset 0 0 0 2.7px rgba(40,20,0,.6), inset 0 2px 3px rgba(255,225,160,.35), 0 3px 6px rgba(0,0,0,.4); }
+html.pdp-lec-perg .sy-ov.sy-ad .ad-stk-b.blu{ background:linear-gradient(180deg,#0e3157,#08234a 55%,#051a38); box-shadow:0 0 0 1.5px #061a34, inset 0 0 0 1.5px #4c86c8, inset 0 0 0 2.7px rgba(0,10,30,.65), inset 0 2px 3px rgba(190,215,255,.3), 0 3px 6px rgba(0,0,0,.4); }
+html.pdp-lec-perg .sy-ov.sy-ad .ad-stk-b.on{ outline:2px solid #fff0b8; outline-offset:2px; }
+/* «Marcá cómo le fue»: papiro claro, tres botones marrón con borde dorado y el principal bordó */
+html.pdp-lec-perg .sy-ov.sy-ad .ad-dock{ margin:0 8px 8px; padding:14px 26px calc(env(safe-area-inset-bottom,0px) + 12px); gap:6px; border:0; border-radius:0; box-shadow:none; background:var(--lec-profe-claro) center / 106% 120% no-repeat; filter:drop-shadow(0 8px 12px rgba(0,0,0,.45)); }
+html.pdp-lec-perg .sy-ov.sy-ad .ad-dock::before{ display:none; }
+html.pdp-lec-perg .sy-ov.sy-ad .ad-marks{ gap:9px; }
+html.pdp-lec-perg .sy-ov.sy-ad .ad-cb{ padding:8px 4px; border:1.5px solid transparent; border-radius:999px; font-family:var(--font-heading); font-size:14px; color:#fefefe;
+  background:linear-gradient(180deg,#4a2a12,#3d210d 45%,#2c1403) padding-box, linear-gradient(180deg,#f6e2b0,#c89440 50%,#f0d594) border-box; box-shadow:inset 0 1px 2px rgba(255,220,160,.22), 0 3px 6px rgba(0,0,0,.4); }
+html.pdp-lec-perg .sy-ov.sy-ad .ad-cb.on.solo{ color:#fff; background:linear-gradient(180deg,#14756a,#0b4f48) padding-box, linear-gradient(180deg,#bff3e6,#2fb7a3) border-box; }
+html.pdp-lec-perg .sy-ov.sy-ad .ad-cb.on.ayuda{ color:#fff; background:linear-gradient(180deg,#b8730f,#7f4a07) padding-box, linear-gradient(180deg,#fbe3a8,#e6a63f) border-box; }
+html.pdp-lec-perg .sy-ov.sy-ad .ad-cb.on.todavia{ color:#fff; background:linear-gradient(180deg,#55606c,#3a434d) padding-box, linear-gradient(180deg,#d4dae1,#8896a5) border-box; }
+html.pdp-lec-perg .sy-ov.sy-ad .ad-dock .pds-btn-depth{ min-height:46px; border:1.8px solid transparent; border-radius:999px; font-size:16px; color:#fefefe;
+  background:linear-gradient(180deg,#5a0b0b,#430808 40%,#350506) padding-box, linear-gradient(180deg,#fdeeb0,#e6a63f 30%,#cc8b2f 60%,#f6dd99) border-box !important; box-shadow:0 0 4px 1px rgba(250,224,122,.5), 0 0 14px 2px rgba(204,139,47,.45), 0 5px 10px rgba(0,0,0,.4); }
+html.pdp-lec-perg .sy-ov.sy-ad .ad-dock .pds-btn-depth:disabled{ opacity:.62; color:rgba(255,255,255,.8); box-shadow:0 0 2px 1px rgba(250,224,122,.3), 0 4px 10px rgba(0,0,0,.35); }
+@media (max-width:380px){ html.pdp-lec-perg .sy-ov.sy-ad .uno-h b{ font-size:15px; } html.pdp-lec-perg .sy-ov.sy-ad .uno-x{ font-size:12px; padding:8px 10px; } }
+html.pdp-lec-perg .sy-ov.sy-ad .sy-link{ font-family:var(--font-heading); font-size:14px; color:#5a3d1a; text-decoration:underline; }
+html.pdp-lec-perg[data-theme="dark"] .sy-ov.sy-ad .sy-link{ color:#efe2c0; }
 html.pdp-lec-perg:not([data-theme="dark"]) #screen-exercise:has(.pf-wrap) .exercise-question{ color:#2a1606; text-shadow:0 0 3px #fff4dc, 0 0 9px #fff4dc, 0 0 20px rgba(255,244,220,.95); }
 /* «Saltar»: crema, discreto (solo si la pantalla lo muestra; su función no cambia) */
 html.pdp-lec-perg #screen-exercise:has(.pf-wrap) .skip-btn{ background:linear-gradient(180deg,#fff4d6,#ecd29c) !important; color:#2b1807 !important; border:1.5px solid #f6dd84 !important; font-family:var(--font-heading); font-weight:700; box-shadow:0 0 8px rgba(255,200,80,.5), 0 3px 8px rgba(0,0,0,.4) !important; }
@@ -5897,6 +5944,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/7c1ff2cd63c6a526c3929961261aed62.js"></script><script src="../pdp-assets/b1671a1eaac105e8265ec5a9253db999.js"></script>
+<script src="../pdp-assets/5e323f859c769fcb62eba2a9b36dac5d.js"></script><script src="../pdp-assets/19628152ff981d1c4d22307d42e5c7fb.js"></script>
 </body>
 </html>
