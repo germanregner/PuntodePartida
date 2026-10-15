@@ -410,7 +410,15 @@ input, textarea { font-family: var(--font); font-size: 16px; color: inherit; }
    tapaba contenido de golpe. Ahora entra desde la izquierda, como una
    tarjeta-recordatorio, con transición más lenta y sin rebote. */
 /* Aviso (2026-10-08): centrado abajo, con salto de línea y ancho máximo (en un celular de 360 px se cortaba a la derecha y tapaba los botones de arriba) */
-#toast { position: fixed; left: 50%; bottom: calc(env(safe-area-inset-bottom, 0px) + 112px); transform: translate(-50%, 24px); opacity: 0; pointer-events: none; width: max-content; max-width: calc(100% - 32px); text-align: center; background: var(--toast-bg); color: var(--toast-text); padding: 12px 18px; border-radius: 18px; font-size: 14px; font-weight: 700; line-height: 1.3; z-index: 9999; transition: transform .35s ease-out, opacity .35s ease-out; white-space: normal; box-shadow: var(--shadow-2); }
+#toast { position: fixed; left: 50%; bottom: calc(env(safe-area-inset-bottom, 0px) + 112px); transform: translate(-50%, 24px); opacity: 0; pointer-events: none; width: max-content; max-width: calc(100% - 24px); display: flex; align-items: flex-end; gap: 9px; text-align: left; z-index: 9999; transition: transform .35s ease-out, opacity .35s ease-out; white-space: normal; }
+/* Globo de Spike (2026-10-15): el avatar a la izquierda y el globo con cola que sale hacia él. */
+#toast .toast-spike { flex: 0 0 44px; width: 44px; height: 44px; border-radius: 50%; background: var(--bg-card) center / cover no-repeat; border: 2px solid var(--primary, #6C63FF); box-shadow: 0 4px 12px rgba(0,0,0,.28); }
+#toast .toast-tx { position: relative; padding: 11px 15px 12px; border-radius: 20px 20px 20px 6px; background: var(--bg-card); color: var(--text-primary); border: 2px solid var(--primary, #6C63FF); font-size: 14.5px; font-weight: 700; line-height: 1.32; box-shadow: var(--shadow-2); }
+#toast .toast-tx::before { content: ''; position: absolute; left: -8px; bottom: 11px; width: 13px; height: 13px; background: var(--bg-card); border-left: 2px solid var(--primary, #6C63FF); border-bottom: 2px solid var(--primary, #6C63FF); border-radius: 0 0 0 5px; transform: rotate(45deg); }
+.pdp-fondo-ej #toast .toast-tx { background: #101A29; color: #FBF0D5; border-color: #F4C66A; font-family: var(--font-heading); }
+.pdp-fondo-ej #toast .toast-tx::before { background: #101A29; border-color: #F4C66A; }
+.pdp-fondo-ej #toast .toast-spike { border-color: #F4C66A; }
+@media (prefers-reduced-motion: reduce){ #toast { transition: none; } }
 #toast.show { transform: translate(-50%, 0); opacity: 1; }
 /* Globo de diálogo de Spike (2026-10-13, pedido del Director): reemplaza al cartelito «Tocá "Necesitás ayuda"…». Sale UNA sola vez, junto a Spike (el botón del pie que abre las pistas),
    con una entrada con rebote y un flote suave; se va solo o al tocar. Cola apuntando a Spike. */
@@ -2340,6 +2348,32 @@ body.sheet-open .exercise-image-zone { max-width:min(340px,26vh); transition:max
    tamaño e interlineado juntos. El color ya era correcto (var(--text-primary),
    medido con buen contraste) y no se toca. */
 .concept-screens .concept-why-body { max-width:46ch; margin-top:14px; font-size:17px; line-height:1.72; }
+
+/* Jerarquía opcional del bloque idea (2026-10-15): regla → fichas → notas. Todo con tokens del tema. */
+.concept-regla { max-width:46ch; margin-top:14px; font-size:19px; line-height:1.5; font-weight:700; color:var(--text-primary); }
+.cw-kw { font-weight:800; color:var(--tutor-primary); background:color-mix(in srgb, var(--tutor-primary) 14%, transparent); padding:0 6px; border-radius:6px; white-space:nowrap; }
+.concept-fichas { display:flex; flex-direction:column; gap:10px; margin-top:16px; }
+.concept-ficha { padding:11px 14px 12px; border-radius:14px; background:color-mix(in srgb, var(--tutor-primary) 8%, var(--bg-card)); box-shadow:inset 0 0 0 1.4px color-mix(in srgb, var(--tutor-primary) 38%, transparent); }
+.cf-rotulo { margin-bottom:3px; font-size:11px; font-weight:900; letter-spacing:.09em; text-transform:uppercase; color:var(--tutor-primary); }
+.cf-en { font-family:var(--font-heading); font-style:italic; font-weight:800; font-size:21px; line-height:1.25; color:var(--text-primary); overflow-wrap:anywhere; }
+.cf-en .cw-kw { font-style:italic; }
+.cf-es { margin-top:3px; font-size:16px; line-height:1.4; font-weight:600; color:var(--text-muted); }
+.concept-notas { margin:14px 0 0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px; font-size:16px; line-height:1.5; font-weight:600; color:var(--text-muted); max-width:46ch; }
+.concept-notas li { position:relative; padding-left:18px; }
+.concept-notas li::before { content:'▸'; position:absolute; left:0; top:0; color:var(--tutor-primary); font-size:13px; }
+.pdp-fondo-ej .concept-regla, .pdp-fondo-ej .cf-en { color:#F6EBCB; } .pdp-fondo-ej .cf-en { color:#F0C25E; }
+.pdp-fondo-ej .cf-es, .pdp-fondo-ej .concept-notas { color:#E8D9B3; }
+.pdp-fondo-ej .cf-rotulo, .pdp-fondo-ej .concept-notas li::before, .pdp-fondo-ej .cw-kw { color:#E9C46A; }
+.pdp-fondo-ej .cw-kw { background:rgba(233,196,106,.14); }
+.pdp-fondo-ej .concept-ficha { background:rgba(10,17,30,.74); box-shadow:inset 0 0 0 1.4px rgba(217,168,64,.7); }
+/* Modo claro (tarjeta crema con texto marrón): los mismos elementos con los colores del resto de la explicación. */
+.pdp-fondo-ej:not([data-theme="dark"]) .concept-regla { color:#2B1A0A; }
+.pdp-fondo-ej:not([data-theme="dark"]) .cf-en { color:#8A3F0C; }
+.pdp-fondo-ej:not([data-theme="dark"]) .cf-es, .pdp-fondo-ej:not([data-theme="dark"]) .concept-notas { color:#43301A; }
+.pdp-fondo-ej:not([data-theme="dark"]) .cf-rotulo { color:#9A5B0B; }
+.pdp-fondo-ej:not([data-theme="dark"]) .concept-notas li::before { color:#B7791F; }
+.pdp-fondo-ej:not([data-theme="dark"]) .cw-kw { color:#8A3F0C; background:rgba(231,163,39,.22); }
+.pdp-fondo-ej:not([data-theme="dark"]) .concept-ficha { background:rgba(231,163,39,.10); box-shadow:inset 0 0 0 1.4px rgba(180,120,30,.55); }
 
 /* Dato destacado (campo `ejemplo`, capacidad ya existente y con 9 usos reales
    en cs-02): más aire y cuerpo legible. El fondo se reconstruye por la MISMA
@@ -5951,6 +5985,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/c8fa7a1a7b5e5aa2bbd07da7452baac8.js"></script><script src="../pdp-assets/96ec6488ffa3e9dac2dadd3cd15341b7.js"></script>
+<script src="../pdp-assets/10021ce0e1f060ace1bb0df325cdbe08.js"></script><script src="../pdp-assets/49e57e8cb593d2bd6b9157487c0cb358.js"></script>
 </body>
 </html>
