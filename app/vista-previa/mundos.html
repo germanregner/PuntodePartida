@@ -6040,7 +6040,7 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/0219f8bde64958ad8cb0668e81e296f0.js"></script><script src="../pdp-assets/f5cdac7dc611fb213a412f3063acc569.js"></script>
+<script src="../pdp-assets/c23e6c5a6d5485c1b0c1c43acd61f224.js"></script><script src="../pdp-assets/4592d93422e2f5b3e09d72adb6c61db3.js"></script>
 <script>/* Corredor de mundos (PdP) — v0.1 BORRADOR, 2026-10-19. Función pura: no toca el DOM.
  *
  * Un MUNDO es un dato (JSON). El alumno arma una JUGADA (qué pieza va en cada hueco). El corredor la EJECUTA sobre el mundo
@@ -6244,6 +6244,7 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   var st = document.createElement('style'); st.id = 'mundo-estilos'; st.textContent = css; document.head.appendChild(st);
 
   /* ───────── jugada ───────── */
+  var historia = {};   // lo último que se resolvió de cada mundo, para volver a verlo sin poder contestarlo otra vez
   function comun(def) { return !def.huecos.every(function (h) { return h.opciones; }); }
   function jugadaActual(M) {
     if (comun(M.def)) { var j = {}; M.def.huecos.forEach(function (h, i) { if (M.picks[i]) j[h.id] = M.picks[i]; }); return j; }
@@ -6406,6 +6407,7 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
     var msg = R.mensaje(def, res);
     if (!res.logrado) { M.ex.feedbackWrong = msg.texto; try { var cur = getActiveExercises(state.currentModule)[state.currentExerciseIndex]; if (cur) cur.feedbackWrong = msg.texto; } catch (e) {} }
     M.corriendo = false;
+    historia[String(M.ex.id)] = { picks: M.picks.slice(), jugada: JSON.parse(JSON.stringify(M.jugada)), logrado: res.logrado };
     handleConfirm();
     if (!comun(def)) setTimeout(function () { abajo(M); }, RM ? 30 : 450);   // la hoja de resultado sube desde abajo: la conversación queda ARRIBA de la hoja, no detrás (nota del teléfono, 2026-10-19)
   }
@@ -6459,9 +6461,19 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
       return r;
     };
   }
+  /* Volver a un mundo ya resuelto (deslizar hacia atrás): en modo prueba arranca nuevo (para poder probarlo otra vez); en uso normal se ve LO QUE QUEDÓ — lo armado y las marcas — y no se puede volver a contestar
+     (un Skill Check mide un solo intento). Si no se había resuelto, arranca nuevo. */
   if (typeof window.restoreExerciseFromSnapshot === 'function') {
     var _restore = window.restoreExerciseFromSnapshot;
-    window.restoreExerciseFromSnapshot = function (ex) { if (ex && ex.kind === 'mundo') return; return _restore.apply(this, arguments); };   // el tablero no se guarda: al volver, el mundo empieza de nuevo
+    window.restoreExerciseFromSnapshot = function (ex) {
+      if (!(ex && ex.kind === 'mundo')) return _restore.apply(this, arguments);
+      var M = state.mundo, h = historia[String(ex.id)];
+      if (!M || !h || (typeof pdpModoPrueba === 'function' && pdpModoPrueba())) return;
+      if (comun(M.def)) M.picks = h.picks.slice(); else M.jugada = JSON.parse(JSON.stringify(h.jugada));
+      pintarArmado(M); limpiar(M); pintarFinal(M, R.correr(M.def, jugadaActual(M)));
+      state.answered = true; M.corriendo = false; disableConfirm();
+      setPrimaryCTA('Continuar', h.logrado ? 'state-correct' : 'state-wrong', goToNextExercise);
+    };
   }
   DOMAIN_PLUGINS.push({
     renderers: { mundo: renderMundo },
