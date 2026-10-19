@@ -5370,6 +5370,55 @@ a.hu-card:active{ transform:translateY(1px); } a.hu-card:focus-visible{ outline:
 .pdp-fondo-ej:not([data-theme="dark"]) .feedback-text, .pdp-fondo-ej:not([data-theme="dark"]) .feedback-compare-value{ color:#3A2A10; }
 .pdp-fondo-ej:not([data-theme="dark"]) .feedback-compare{ background:rgba(255,252,240,.8); border:1px solid rgba(150,100,40,.25); }
 /* ═══ fin colores de resultado ═══ */
+/* ═══ Clasificar y línea de tiempo con paisaje (2026-10-19, pedido del Director tras la prueba en teléfono) ═══
+   Problemas medidos en un teléfono real (Playwright, oscuro): las etiquetas de los grupos y de la línea usaban --primary (#73210C) como TEXTO sobre tarjetas #10161B (contraste 1,7:1 y 1,8:1); la zona de cada grupo era de 38 px y sin indicación; el último casillero de la línea quedaba bajo el botón de pistas. Mismo lenguaje visual del resto (serif, dorado fino). Solo .pdp-fondo-ej. */
+.pdp-fondo-ej .classify-cat{ border-radius:16px; padding:14px 14px 12px; min-height:122px; display:flex; flex-direction:column; transition:border-color .2s, box-shadow .2s; }
+.pdp-fondo-ej .classify-cat-label{ font-family:var(--font-heading); font-weight:700; font-size:18px; letter-spacing:.01em; margin-bottom:10px; }
+.pdp-fondo-ej .classify-cat-zone{ flex:1; min-height:68px; padding:8px; gap:8px; align-content:flex-start; border:1.5px dashed rgba(214,170,90,.4); border-radius:12px; transition:border-color .2s, background .2s; }
+.pdp-fondo-ej .classify-cat-zone:empty::before{ content:'Tocá acá para poner la frase'; margin:auto; font-size:13px; font-style:italic; opacity:.55; }
+.pdp-fondo-ej .classify-placed-chip{ padding:10px 15px; font-size:15px; }
+.pdp-fondo-ej .classify-categories.esperando .classify-cat{ border-color:#F4C66A; box-shadow:0 0 0 1px rgba(244,198,106,.45), 0 0 16px rgba(244,198,106,.28); }
+.pdp-fondo-ej .classify-categories.esperando .classify-cat-zone{ border-color:#F4C66A; background:rgba(244,198,106,.07); }
+.pdp-fondo-ej .classify-categories.esperando .classify-cat-zone:empty::before{ opacity:.9; }
+.pdp-fondo-ej[data-theme="dark"] .classify-cat-label{ color:#F0D9A0; }
+.pdp-fondo-ej[data-theme="dark"] .classify-cat-zone:empty::before{ color:#E8DAB7; }
+.pdp-fondo-ej .timeline-track{ margin:14px 0 104px; }                       /* espacio al pie: el botón de pistas flota a la izquierda y tapaba el último lugar */
+.pdp-fondo-ej .timeline-slot{ margin-bottom:14px; }
+.pdp-fondo-ej .timeline-label{ font-family:var(--font-heading); font-weight:700; font-size:15px; min-width:78px; }
+.pdp-fondo-ej .timeline-card{ min-height:58px; display:flex; align-items:center; padding:12px 14px; border-width:1.5px; border-color:rgba(214,170,90,.5); transition:border-color .2s, background .2s; }
+.pdp-fondo-ej .timeline-track.esperando .timeline-slot:not(.placed) .timeline-card{ border-color:#F4C66A; background:rgba(244,198,106,.09); }
+.pdp-fondo-ej[data-theme="dark"] .timeline-track::before{ background:linear-gradient(to bottom,#F4C66A,#A9803A); }
+.pdp-fondo-ej[data-theme="dark"] .timeline-label{ color:#F0D9A0; }
+.pdp-fondo-ej[data-theme="dark"] .timeline-dot{ border-color:#D6AA5A; background:#09121A; }
+.pdp-fondo-ej[data-theme="dark"] .timeline-slot.placed .timeline-dot{ border-color:#F4C66A; background:#F4C66A; box-shadow:0 0 0 3px rgba(244,198,106,.2); }
+.pdp-fondo-ej[data-theme="dark"] .timeline-card.filled{ color:#F4E8CA; background:#0B1320; border-style:solid; border-color:#F4C66A; font-weight:700; }
+.pdp-fondo-ej[data-theme="dark"] .timeline-card:not(.filled):not(.correct):not(.wrong){ color:#CFC3A2; }
+/* ═══ fin clasificar y línea de tiempo ═══ */
+/* ═══ Escritura (2026-10-19, pedido del Director): lista de revisión de «free», dictado y recuadro de varias líneas. Mismo lenguaje que el resto de los ejercicios con paisaje. ═══ */
+.free-checklist{ pointer-events:auto; margin:12px 0 2px; display:flex; flex-direction:column; gap:6px; }
+.free-checklist-title{ font-family:var(--font-heading); font-weight:700; font-size:16px; margin-bottom:2px; }
+.free-check{ display:flex; align-items:flex-start; gap:12px; min-height:44px; padding:6px 2px; font-size:15px; line-height:1.35; cursor:pointer; }
+.free-check input[type=checkbox]{ -webkit-appearance:none; appearance:none; flex:0 0 auto; width:26px; height:26px; margin:0; border:2px solid var(--primary); border-radius:8px; background:var(--bg-card); color:var(--primary); display:inline-grid; place-content:center; cursor:pointer; transition:background .15s, border-color .15s; }
+.free-check input[type=checkbox]::after{ content:''; width:13px; height:7px; border-left:3px solid currentColor; border-bottom:3px solid currentColor; transform:rotate(-45deg) translate(1px,-1px) scale(0); transition:transform .12s; }
+.free-check input[type=checkbox]:checked::after{ transform:rotate(-45deg) translate(1px,-1px) scale(1); }
+.free-check input:checked + span{ opacity:.78; }
+.pdp-fondo-ej[data-theme="dark"] .free-checklist-title{ color:#F0D9A0; }
+.pdp-fondo-ej[data-theme="dark"] .free-check{ color:#E8DAB7; }
+.pdp-fondo-ej[data-theme="dark"] .free-check input[type=checkbox]{ border-color:#D6AA5A; background:#09121A; color:#F4C66A; }
+.pdp-fondo-ej[data-theme="dark"] .free-check input[type=checkbox]:checked{ border-color:#F4C66A; background:rgba(244,198,106,.16); }
+/* el recuadro de escritura (fill y free) al confirmar: verde azulado como el panel de resultado, no el fucsia del oscuro base */
+.pdp-fondo-ej[data-theme="dark"] .text-input.correct{ border-color:#0EA88F; background:#033233; color:#03F6F6; box-shadow:0 0 0 1px #0EA88F, 0 0 14px rgba(14,168,143,.55); }
+.pdp-fondo-ej:not([data-theme="dark"]) .text-input.correct{ border-color:#0EA88F; background:#D3F0EA; color:#07685A; }
+.free-criterio{ display:flex; align-items:flex-start; gap:10px; min-height:34px; padding:4px 2px; font-size:15px; line-height:1.35; }
+.free-criterio-ico{ flex:0 0 22px; width:22px; height:22px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:13px; font-weight:900; margin-top:1px; }
+.free-criterio.ok .free-criterio-ico{ background:var(--celebrate-light); color:var(--celebrate); border:1.5px solid var(--celebrate); }
+.free-criterio.falta .free-criterio-ico{ background:var(--warning-light); color:var(--warning); border:1.5px solid var(--warning); }
+.pdp-fondo-ej[data-theme="dark"] .free-criterio{ color:#E8DAB7; }
+.pdp-fondo-ej[data-theme="dark"] .free-criterio.ok .free-criterio-ico{ color:#00CDBF; border-color:#00CDBF; background:#033233; }
+.pdp-fondo-ej[data-theme="dark"] .free-criterio.falta .free-criterio-ico{ color:#F4B544; border-color:#F4B544; background:#4E3001; }
+.pdp-fondo-ej textarea.text-input{ min-height:104px; line-height:1.4; resize:none; }
+#exercise-input-area > .listen-audio-btn{ margin-bottom:16px; }
+/* ═══ fin escritura ═══ */
 /* ═══ «¡Lección completada!» (2026-10-13): jardín de arcos y cascadas de fondo (noche / día), brújula con halo, título en serif, recuadros con esquinas y botón «Seguir» bordó. Solo Unidades con paisaje (.pdp-fondo-ej); datos y navegación intactos. ═══ */
 :root{ --pdp-jardin-bg:url('../pdp-assets/864cb715fb9c3841baa75665834f3535.webp'); --pdp-lq-jardin:url('data:image/webp;base64,UklGRqgEAABXRUJQVlA4IJwEAABwEwCdASokAFAAPrFEmkqnI6IhtUgA4BYJbACdMqqALJFuHW7jK/gGHD0nbbLceb0tvSk+a52femYC+Hdn74MspgJ9eNaZM5aGFQodpirVYMLDgV6rczsLC3rlRNupxhZvC84pogQAVvD4b66k1KB20l6fEved7y0B8Ufg9qMtefYOhxuVZloY/zAFisYSMqIp6hqUoRAV3WRXSf9smLqZunj5DAD+8Tqd1VGtDK1lzaFhFkWL0lgf+7oLIjNQrx8xqj3PZ8K0+9gNeu4JP1h727PeoxzcVQkiYWYJtIspEtb7LzUgZPlsIIPErWaw8w/WP/Q3BLTSXRA+H3J5Ol+0c542CdO/VoYaGxhP1pz7SdmvyPDrBRMUr+bhCsVf2WgeGku0Ywx9qtAtTJzau16neq+ekA2zaompJXTZiP5plupDbX77d1J83RS9fAxrG+uhFMik2/E1wBaGSzVt1uj5L+5B8OOD3JCTjtj2nLuTXMTkyMHQvUTlEQX1gZ48g2R9hup/lHFe8k+YEjIG//6XpmEMdHoFlUYhxzg3lI7NGZDHX1wkoENXU0nErZ4iFVdwdcQGTF1kjN6SeQaICS6z8wq6OD8BmWXvz3fr90QaB8bmaW5jY87ovi58KcpEjt6zDy2UwVDvizyJBRidE/uJvogd77zwbk0OwIX4wzbTe+5SGwmqq6n4Do5/e+H3aAxC0l15fh9ZTkshDn/9/kUf9rE/G7/+GLHQoXuUALyuu2Jqjcs9rcZN/eX65YOWBxK0wFzQicLfA4ajFa7bpwMd/ORy3hBuz9GKeRaN1R9recv/BtBPa7g8e2hpB8vZx+ZtFgBIvNMx9mCOpIiW+8lttJPBq2cMXOyDPWcG+PY8nOlQbMPUOnPfqxS7vZgQLOeFD0ENT3wnZHiWrDuiq4ylB5vc2HdLXag6T2TGBo3rgDNtTmc/CSeNkMnYOjYP6J5nsTVl28kjU0iuZ27AeeIa47DD5nzwZx/4kJKibzg3RS54J5mELXazzl6TLo6yrmJf9oZqgLd8mHiMoHeMg440LFNK7HAxPE++66V1F3+KkQaCYh6cjkVkoPFNrVFDCOO6N8dE0Ofk+cPlpOYrRVqMFuMvHswxB9DxGRCFlxykXsiPZ9HMKTEVq7Np8zP6449TmnWQ59cLriO36dx9L17S7DXrPZNAgngeJibYhh7DSsP/1VPXUgVuGh4IWmorMltmcGQXXizNuS+u3zq5YHlG+EcLe9buiUIp+9AFXb+QKIySPzyY+5uRJKce5EydIbD/wLW0enHJae/54JVhn9mSQsfjYpBfZi6j5a7iPySs0TjKI8xbH/zTUKfKY8Ug5QFgNHG/uqA+Be3Y9oc2Z0HwHjpt+X0yL6npR0oHIcFyjKIe7TsRZItq6AdBRuXduraPepjesPuPoJW715ntW33HmpxtWuo1j1F2o1rZl5B5XYyzVMFC3CSR6WMYMZ1uTkmPKVVHsNyS3JglZKfQfDSngXnTI2E5/CemhYfr5OEev6x03xRMMPV0ewVzeW+vIvmBfbfGIMz8p4oA8pJOl94oFiaF+j3AyhOBqAAA'); }
 :root[data-theme="dark"]{ --pdp-jardin-bg:url('../pdp-assets/d62ed23162be83d35686753d4de127b7.webp'); --pdp-lq-jardin:url('data:image/webp;base64,UklGRqwDAABXRUJQVlA4IKADAABwEQCdASokAFAAPrVGmkqnI6IhtV5oAOAWiWwAp0cqUaoL4C9lv0e7ffnX9OJgTbVGVsYdWyhmS0xvYq15xwuFwl4+7/NBkYvoq36gtv3x+r7HzUuiGHnYzITTRKh+sZvzQ02elrLSGnOwGydkDST1fTAYuKqwTLgWvjMGgvUiahGvT+OOqnhqQY4hw7QiovtRxSlgAP77kQntE4bkQFPJgbWN24Rk2Eex4yNE8IiOt5CuAlwBd9OY474eSfXhEk1PRWrRJ+R2I17LJhGEaSIMcnx/O7NYOQ+QiiqCJ5swgC1A/0PM9vJn0/ChjxRuMZ3b5IbqaxYAw5JhFs17vS56gmbz/mXeuEfDJuSbP2GwQN/3na3Qa+xDPvR2jBUFEcfQMn0Ev3y3vOqChgvzIszdPHRUxL/jWNZRfvmVmcozBqUQwaAGPV22YqU6kHwh8itn00PbaWRb/GDBMbDgJauiwEr+3TUR4YBO2eG2IUPaptAVFzfjfAg6BwfMVqes3S0IWTee/IduzImRdp7u3HBG7Hfz46139XcQyBgbohU856kvK9k/ROnVboZ7WwOwyGJT0FcQ1juRLIFEx2kqbye8IWB91UNbq41XG0iv8BJaz7jgIW3LIKlnukDb99HkEZIGuFqDNSWsj3bDycNcZHYFIBgvVrr3yD70L3hy4ueB/iX2nfYk2ImxSVnWlWxWNahqwsLspeCPOCsYyt82u3/6SzrQpt+pgOuSOKq/WOE8QLUdr2/ZG0B7bE20srnWUAQz9cmSPs6n+PBlABiVNhrnARtLTm+yhWjuG7weLir8ddrJQK69srj49cjdNSL32cVh5+A9UIYngSudho0Iq0RNUGoCeNk4zUtlS+uJkmVzzm/xH3FR+BB58Qq3W/q0t6AeK7cboPsiuMnmAvVCMcByOFDTiKabPYUpgn3N4FWyD1Xcpd9Ccb3KfRUoYlFjzc1XQlAOZe82+5tfxCCQaFVCYdNnkM2R/7GU+NWridwR4JHa9nDVoODvNyYAdZHzOj2tVVXL77YqZhWVrGOeFe9UZC9Tc4v3XNkPb5Yiznfv7Cf+9EUydgk2o1d6+KPr7w0FX3vvSNpCHf8D/E2A5BgNWUnIM0MIWD5oa/eP35JH9tXg7m6uBDcjuXFHpj0vjGPdU5R9zt3VqS0Zw4QY9D6gWuzdk/ITD/nNP+m2JXzG3m37AqaqB3uDrcUcSj/ZdRcr4xCW6CVw+JsbsWAogAAA'); }
@@ -5984,6 +6033,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/4aa0f06184cf3d493ee42bda481805ea.js"></script><script src="../pdp-assets/fe3a82a78bcc43c20617387612e4b384.js"></script>
+<script src="../pdp-assets/2c4e784f96bc55bfd61c26b36b77998c.js"></script><script src="../pdp-assets/a40f3b965db55dae5593db8fa151023c.js"></script>
 </body>
 </html>
