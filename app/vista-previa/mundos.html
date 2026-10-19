@@ -5156,6 +5156,62 @@ html #screen-exercise:has(.lec-wrap) .skip-btn{ bottom:calc(100% + 100px); }
 .pdp-modo-ov .pds-btn-depth{ margin-top:12px; }
 #pdp-prueba-demos{ display:flex; flex-direction:column; gap:8px; }
 .pdp-modo-sub{ margin:6px 0 4px; text-align:center; font-size:14.5px; color:#E6DABD; text-shadow:0 1px 8px rgba(0,0,0,.8); }
+/* ═══ MUNDO (Motor Base, CONTRATO_MUNDO_v1): solo tokens var(--*) ═══ */
+/* overflow:visible: el que scrollea de verdad es #app; así el tablero «sticky» se queda fijo debajo del encabezado mientras la conversación baja */
+#screen-exercise:has(.mundo-wrap) .exercise-body{overflow:visible;padding:8px 14px calc(var(--exercise-footer-h,115px) + var(--feedback-zone-h,0px))}
+#screen-exercise:has(.mundo-wrap) .exercise-question{font-size:17px;line-height:1.2;margin-bottom:6px}
+#screen-exercise:has(.mundo-wrap) .tutor-zone{display:none!important}
+.mundo-wrap{display:flex;flex-direction:column;gap:8px}
+/* la escena: la imagen del personaje con su burbuja encima (ni gigante ni un circulito) */
+.mundo-escena{position:relative;height:104px;border-radius:16px;overflow:hidden;border:1.5px solid var(--accent-gold);background-size:cover;background-position:50% 22%;background-color:var(--bg-card);flex:0 0 auto}
+.mundo-escena .quien{position:absolute;left:8px;bottom:8px;padding:2px 10px;border-radius:99px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;font-weight:700}
+.mundo-dice{position:absolute;right:8px;top:8px;max-width:68%;min-height:34px;padding:7px 11px;border-radius:14px 14px 4px 14px;background:var(--bg-card);border:1.5px solid var(--border);color:var(--text-primary);font-weight:700;font-size:13.5px;line-height:1.25;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.mundo-dice small{display:block;color:var(--text-muted);font-weight:700;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.mundo-tabla-fija{position:sticky;top:64px;z-index:3;border-radius:var(--radius-md);box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.mundo-tabla{margin-bottom:0}
+.mundo-tabla th{padding:6px 10px;font-size:12px}
+.mundo-tabla th.sc{text-align:right;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-gold-light)}
+.mundo-tabla td{padding:1px 10px}
+.mundo-et{width:40%}
+.mundo-et-in{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 6px;font-weight:800;font-size:14px;line-height:1.15}
+.mundo-et-in small{font-weight:500;color:var(--text-muted);font-size:11px}
+.mundo-celda{display:flex;align-items:center;gap:8px;justify-content:space-between;min-height:34px}
+.mundo-val{font-weight:700;font-size:15px;display:block;min-height:18px;line-height:1.15}
+.mundo-pista{display:block;font-size:11px;color:var(--text-muted);font-weight:500;line-height:1.1}
+.mundo-mark{flex:0 0 auto;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:13px;visibility:hidden}
+.mundo-tabla tr.fuera{display:none}.mundo-tabla tr.fuera.on{display:table-row}
+.mundo-tabla tr.is-live .mundo-val{border-bottom:2px solid var(--accent-gold);display:inline-block}
+.mundo-tabla tr.is-ok .mundo-mark{visibility:visible;background:var(--feedback-correct);color:#fff}
+.mundo-tabla tr.is-bad .mundo-mark,.mundo-tabla tr.is-miss .mundo-mark{visibility:visible;background:var(--warning);color:#1b1305}
+.mundo-tabla tr.is-bad .mundo-val{color:var(--warning-text)}
+.mundo-tabla tr.is-miss .mundo-val{border-bottom:2px dashed var(--warning)}
+/* piezas: las mismas pastillas de la app, un poco más chicas */
+#exercise-input-area .mundo-wrap .word-bank{gap:5px;padding:6px;margin:0}
+#exercise-input-area .mundo-wrap .word-chip{flex:0 1 auto;min-height:34px;padding:3px 10px;font-size:13.5px;line-height:1.15;border-width:2px}
+#exercise-input-area .mundo-wrap .word-chip.pick{background:var(--accent-gold);color:#1b1305;border-color:var(--accent-gold)}
+/* diálogo: la conversación crece hacia abajo */
+.mundo-hilo{display:flex;flex-direction:column;gap:8px}
+/* nada de lo que se va eligiendo queda por debajo del botón «Probalo» (aunque sea transparente): al llevar una burbuja o las opciones a la vista, se deja el alto del pie de pantalla */
+.mundo-hilo>*,.mundo-wrap .word-bank{scroll-margin-bottom:calc(var(--exercise-footer-h,115px) + var(--feedback-zone-h,0px) + 16px)}
+.mundo-val.escribiendo::after{content:"";display:inline-block;width:2px;height:1em;margin-left:2px;vertical-align:-2px;background:var(--accent-gold);animation:mundo-cursor .6s steps(1) infinite}
+@keyframes mundo-cursor{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.mundo-val.escribiendo::after{animation:none}}
+.mundo-burbuja{max-width:86%;padding:8px 12px;border-radius:16px;font-weight:700;font-size:14.5px;line-height:1.25;animation:mundo-entra .22s ease}
+.mundo-burbuja small{display:block;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);font-weight:700}
+.mundo-burbuja.leo{align-self:flex-start;background:var(--bg-card);border:1.5px solid var(--border);color:var(--text-primary);border-bottom-left-radius:4px}
+.mundo-burbuja.yo{align-self:flex-end;background:var(--accent-gold);border:1.5px solid var(--accent-gold);color:#1b1305;border-bottom-right-radius:4px;cursor:pointer;font-family:inherit;text-align:left}
+/* lo que se armó y NO era lo correcto queda marcado (ámbar, sin relleno, borde punteado): es lo que hay que tocar para corregirlo. Nunca rojo. */
+.mundo-burbuja.yo.mal{background:transparent;border:2px dashed var(--warning);color:var(--warning-text,var(--warning))}
+.mundo-burbuja.yo.mal small{color:var(--warning-text,var(--warning))}
+.mundo-burbuja.yo.mal::after{content:" \270E\FE0E";font-weight:800}
+#exercise-input-area .mundo-wrap .word-chip.pick.mal{background:transparent;color:var(--warning-text,var(--warning));border:2px dashed var(--warning)}
+.mundo-opciones{display:flex;flex-direction:column;gap:6px;align-self:stretch;padding-left:18px}
+#exercise-input-area .mundo-opciones .option-btn{min-height:38px;padding:5px 12px;font-size:14px}
+@keyframes mundo-entra{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.mundo-burbuja{animation:none}}
+/* teléfonos bajos (≈ 740 px o menos): un punto más de compactación */
+@media (max-height:760px){.mundo-escena{height:84px}.mundo-celda{min-height:30px}#exercise-input-area .mundo-wrap .word-chip{min-height:30px;font-size:13px;padding:2px 9px}#exercise-input-area .mundo-opciones .option-btn{min-height:34px}}
+/* ═══ fin MUNDO ═══ */
 /* ═══ fin «Mis Unidades» ═══ */
 /* ═══ «¿Quién es?» (2026-10-12): mismo fondo y brújula que las otras pantallas de perfiles; fondo de biblioteca luminosa en modo claro. Solo presentación (.pf2-elegir). ═══ */
 :root{ --pdp-elegir-bg-claro:url('../pdp-assets/4585cabe3461e2099b97e877976ddc17.webp'); --pdp-lq-elegir-claro:url('data:image/webp;base64,UklGRn4EAABXRUJQVlA4IHIEAABQEwCdASooAEcAPrVKnUonJCKhrvtqAOAWiWQAqSbtB5yReg5jg4b9x4Bc+Pzw3oU3qP9M+CS/79b08F69WIjXZZOPD1MocoKwu87UJDibplayrPefd5F6rFQXBokEEAJp75A6y9hpKNpYYcVLwu55/R6/if28j0Umi7+4G9babOa6Da8z2DRA9c8JJL0bfZl7Txkd6ywI6ZZhwzkGJBVzqTLwAP5klpWeJo4/kwuIss9UigF+bPdUjbZT7IW04fgH9GPFjB94NZzqfotPzk7EuQ0qY34B7+3hXXQL8wsRZUcRzPLEfnctlNx9GR67d291MoJG68kdNHh7O1VJdyCniiFrn9ORwOLflRAQiwIsAvmUbeEJS/oPRA7l1119fMP0BlyMoARDcCRqRxnNLM/0WHuKwL7XjilqXmbvMJdLF7MzsilWTHaDr6fjSdkG520fafCqP1hfwnJcnqMR7vVeSKX1lZeUtl47fBpATIUfhe2OVwYYnoBc4Gasq/icy+qnuWSz7LdA5Dp6MA3BaW1jAfOZJTMgf2vp9waAXtL37DweTdsntAWif0tF+tE9fLrG8sxicz8oMvTgdgHaRNG8Q04xdZdLLCZbzik8qds+2cmNDmNQ5n9IfAxkp1STmhO0DPmM+ZNQ3/05Ij+TZxTHxd/gpf8mCqHOlXwv7EliRWoIXfmC8hAORW9SlERVobD60nnSDksBIuT0hEfHsx7d8QA2eRs0MdjxUDGOdWN7cz8o0y+q4+6Ec4x04uv2lCpeqAE1stRJdnVZCzr7RNK0ejdA3PHEvOzd47+tIF3LEo8It6FAJOhst1p71LVmx/2A55nn1pdiUr3WYGV50M+XEl5Kg27Yv4T+lhCOaIG84oQ6xsHsvS8cJ5A6wnETJX9skjTrwsCqxIkFD4tBlXp9txAJeDJe2ZBklhOQnlE95YTqTQtiJeEp/dNvl5u/7nPNIYVwWC5yJ0uEeNDXEQhrfnWvyD/trppIgLe5klngosLCrzL0SB8OjHiaoo2k/XFzIwSDqnhC0OgRuXtuoNYPadnTJNV2bk0+oc3azUisevR9WBvZ3/73EeUzgF+XEWxQzf5STI/6WzDZF8W18DsgGZ+DfYrfsnn0Yq/3yFwRafeGvBmAHOxHc3XxEr0U/gjdhnHFZTzpuGYqSVLO8idxyv5koqP/LnlOi+/e1gHaBfxBIyKCgBCnu2ZrRck1i8G8+qF8O4h6gnstsy+My5+I0ZwoQ2gqBWZ7rcZHgbe1IQ0QwRKNgeHzKE7VwJPkle/nxZXsfpad172IjQOiW6rdnry6ZO0bAWn/fKLFEYPQkD/7Dc6F5GQop7FZgG6NQ1uqDSOf+QHdKeQ36TVIla4l89/4JFiOr2USfTV8s6Uc5Vx1VqLbU6NmBuE8yS6/JzHid6LQBlBmUcMqvqlC8G6T3fXVUkDppteEOP+yDh4xbBc01lDzIRCVhGxY9WwMCcPsChZhj+22ZX6di8frQoz8kNAIuQCFcUy7fJBtp16ZgAAA'); }
@@ -6040,460 +6096,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/12be3ec2a93e666ab828de2e207df909.js"></script><script src="../pdp-assets/36068774d8a3ac967d9ae621cf644023.js"></script>
-<script>/* Corredor de mundos (PdP) — v0.1 BORRADOR, 2026-10-19. Función pura: no toca el DOM.
- *
- * Un MUNDO es un dato (JSON). El alumno arma una JUGADA (qué pieza va en cada hueco). El corredor la EJECUTA sobre el mundo
- * y devuelve la traza (qué pasó paso a paso), el estado final y el veredicto. El veredicto sale de lo que pasó, no de una clave.
- *
- * Funciona en el navegador (window.MundoRunner) y en Node (require). Lo usan: la pantalla (prototipo), el validador de mundos
- * (controles automáticos) y el solver (para que el arnés de QA pueda «jugar» cualquier mundo).
- *
- * Forma del mundo (resumen; el contrato completo está en PROPUESTA_MUNDOS_v0.1.md):
- *   campos   [{id, etiqueta, sub?, pista?, fuera?}]   filas del tablero. `fuera:true` = fila que el carnet NO tiene (si se escribe, sobra).
- *   objetivo {campoId: valor}                           lo que el tablero tiene que mostrar al final (solo campos no `fuera`).
- *   piezas   [{id, texto, efecto: {campoId: valor} | null, reaccion?}]   `efecto:null` = el personaje no entiende (error de forma).
- *   huecos   [{id, rotulo?, pregunta?, opciones?: [piezaId]}]   `opciones` ausente = banco común (cada pieza se usa una sola vez).
- */
-(function (root, factory) {
-  if (typeof module === 'object' && module.exports) module.exports = factory(); else root.MundoRunner = factory();
-})(typeof self !== 'undefined' ? self : this, function () {
-  'use strict';
-
-  const pieza = (m, id) => m.piezas.find(p => p.id === id);
-  const campo = (m, id) => m.campos.find(c => c.id === id);
-  const enObjetivo = (m, id) => Object.prototype.hasOwnProperty.call(m.objetivo, id);
-
-  /** jugada: { huecoId: piezaId }. Devuelve { traza, estado, diferencias, logrado, cuenta }. */
-  function correr(m, jugada) {
-    const estado = {};                    // campoId -> { valor, huecoId, estado }
-    const traza = [];
-    for (const h of m.huecos) {
-      const pid = jugada[h.id];
-      if (!pid) { traza.push({ hueco: h.id, estado: 'vacio' }); continue; }
-      const p = pieza(m, pid);
-      if (!p) throw new Error('pieza inexistente: ' + pid);
-      if (!p.efecto) { traza.push({ hueco: h.id, pieza: pid, texto: p.texto, estado: 'no-entendio', reaccion: p.reaccion || null }); continue; }
-      const ids = Object.keys(p.efecto);
-      ids.forEach((cid, k) => {
-        const valor = p.efecto[cid];
-        if (!campo(m, cid)) throw new Error('el efecto de ' + pid + ' apunta a un campo que no existe: ' + cid);
-        const est = !enObjetivo(m, cid) ? 'sobra' : (valor === m.objetivo[cid] ? 'ok' : 'distinto');
-        if (estado[cid]) { const antes = traza.find(t => t.campo === cid && !t.reemplazado); if (antes) antes.reemplazado = true; }
-        estado[cid] = { valor, hueco: h.id, estado: est };
-        traza.push({ hueco: h.id, pieza: pid, texto: k === 0 ? p.texto : undefined, campo: cid, valor, estado: est, reaccion: p.reaccion || null });
-      });
-    }
-    const diferencias = { faltan: [], distinto: [], sobran: [], noEntendio: [] };
-    for (const cid of Object.keys(m.objetivo)) {
-      if (!estado[cid]) diferencias.faltan.push(cid);
-      else if (estado[cid].valor !== m.objetivo[cid]) diferencias.distinto.push(cid);
-    }
-    for (const cid of Object.keys(estado)) if (!enObjetivo(m, cid)) diferencias.sobran.push(cid);
-    for (const t of traza) if (t.estado === 'no-entendio') diferencias.noEntendio.push(t.hueco);
-    const cuenta = { ok: Object.keys(m.objetivo).length - diferencias.faltan.length - diferencias.distinto.length, total: Object.keys(m.objetivo).length };
-    const incompleta = m.huecos.some(h => !jugada[h.id]);
-    const logrado = !incompleta && !diferencias.faltan.length && !diferencias.distinto.length && !diferencias.sobran.length && !diferencias.noEntendio.length;
-    return { traza, estado, diferencias, logrado, cuenta, incompleta };
-  }
-
-  const plural = (n, par) => n === 1 ? par[0] : par[1];
-
-  /** Consecuencia en palabras. NUNCA nombra el valor correcto: dice QUÉ pasó y DÓNDE mirar (Correction Contract: señala el proceso). */
-  function mensaje(m, r) {
-    const v = Object.assign({ dato: ['dato', 'datos'], referencia: 'el carnet', receptor: 'Leo', pieza: ['frase', 'frases'], sobra: ['cosa de más', 'cosas de más'], falta: ['dato', 'datos'] }, m.vocab || {});
-    if (r.logrado) return { ok: true, titulo: (m.textos && m.textos.okTitulo) || '¡Quedó igual!', texto: (m.textos && m.textos.okTexto) || 'Todo coincide.' };
-    const d = r.diferencias, partes = [];
-    if (r.cuenta.total) partes.push(r.cuenta.ok + ' de ' + r.cuenta.total + ' ' + v.dato[1] + ' coinciden con ' + v.referencia + '.');
-    if (d.noEntendio.length) partes.push(v.receptor + ' no entendió ' + d.noEntendio.length + ' ' + plural(d.noEntendio.length, v.pieza) + '.');
-    if (d.sobran.length) partes.push('Hay ' + d.sobran.length + ' ' + plural(d.sobran.length, v.sobra) + '.');
-    if (d.faltan.length && !d.noEntendio.length) partes.push(plural(d.faltan.length, ['Falta ', 'Faltan ']) + d.faltan.length + ' ' + plural(d.faltan.length, v.falta) + '.');
-    return { ok: false, titulo: (m.textos && m.textos.casiTitulo) || 'Casi.', texto: partes.join(' ') + ' Mirá las filas marcadas.' };
-  }
-
-  /** Todas las jugadas posibles (banco común sin repetir piezas; con `opciones`, una por hueco). Generador. */
-  function* jugadas(m) {
-    const hs = m.huecos;
-    const comun = hs.every(h => !h.opciones);
-    if (!comun) {
-      const rec = function* (i, acc) {
-        if (i === hs.length) { yield Object.assign({}, acc); return; }
-        for (const pid of (hs[i].opciones || m.piezas.map(p => p.id))) { acc[hs[i].id] = pid; yield* rec(i + 1, acc); }
-      };
-      yield* rec(0, {}); return;
-    }
-    const ids = m.piezas.map(p => p.id), usados = new Set();
-    const rec = function* (i, acc) {
-      if (i === hs.length) { yield Object.assign({}, acc); return; }
-      for (const pid of ids) { if (usados.has(pid)) continue; usados.add(pid); acc[hs[i].id] = pid; yield* rec(i + 1, acc); usados.delete(pid); }
-    };
-    yield* rec(0, {});
-  }
-
-  /** Todas las jugadas que logran el mundo (límite para no colgar). */
-  function soluciones(m, limite) {
-    const out = []; let n = 0;
-    for (const j of jugadas(m)) { n++; if (correr(m, j).logrado) { out.push(j); if (limite && out.length >= limite) break; } }
-    return { soluciones: out, evaluadas: n };
-  }
-  /** Una solución (para que el arnés de QA y el botón «ver cómo se arma» puedan jugar el mundo). null si no tiene. */
-  function resolver(m) { const s = soluciones(m, 1).soluciones; return s.length ? s[0] : null; }
-
-  /** Orden de las piezas del banco para MOSTRAR. Estable (misma mezcla cada vez que se abre el mundo, así las pastillas no saltan) pero sin relación con cuál es
-   *  la correcta. Hallazgo real del Director (2026-10-19, prueba en teléfono, nota «las opciones son siempre las primeras»): el orden de autoría ponía las
-   *  correctas adelante y el Skill Check se resolvía tocando las primeras. Medida: P(una correcta sale antes que un distractor) (el AUC); 0,5 = sin relación,
-   *  1 = las correctas siempre primero. Se busca la primera mezcla con P entre 0,35 y 0,65. */
-  function sesgoBanco(m, orden) {
-    const sol = resolver(m); const c = new Set(sol ? Object.values(sol) : []); const o = orden || m.piezas.map(p => p.id);
-    const pos = o.map((id, i) => c.has(id) ? i : -1).filter(i => i >= 0), neg = o.map((id, i) => c.has(id) ? -1 : i).filter(i => i >= 0);
-    if (!pos.length || !neg.length) return 0.5;
-    let antes = 0; for (const a of pos) for (const b of neg) if (a < b) antes++;
-    return antes / (pos.length * neg.length);
-  }
-  function bancoCumple(m, orden) { const s = sesgoBanco(m, orden || ordenBanco(m)); return s >= 0.35 && s <= 0.65; }
-  function ordenBanco(m) {
-    const ids = m.piezas.map(p => p.id);
-    const hash = (s) => { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; };
-    const prng = (a) => () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
-    let mejor = ids.slice(), mejorD = 9;
-    for (let salt = 0; salt < 500; salt++) {
-      const r = prng(hash(String(m.id) + '|' + salt)), o = ids.slice();
-      for (let i = o.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [o[i], o[j]] = [o[j], o[i]]; }
-      const s = sesgoBanco(m, o), d = Math.abs(s - 0.5);
-      if (s >= 0.35 && s <= 0.65) return o;
-      if (d < mejorD) { mejorD = d; mejor = o; }
-    }
-    return mejor;
-  }
-
-  return { correr, mensaje, jugadas, soluciones, resolver, pieza, campo, ordenBanco, bancoCumple, sesgoBanco };
-});
-</script><script>/* Plugin «mundo» para el Motor — v0.5 BORRADOR, 2026-10-19. Se inyecta en una COPIA de la aplicación real (nunca en el Motor Fuente).
- * Usa el mecanismo que el Motor ya tiene para dominios (DOMAIN_PLUGINS: renderers + checkers + checkCorrect), así que el ejercicio pasa por el
- * flujo REAL de la app: encabezado, botón, hoja de resultado en ámbar, escalera de ayuda, Revelar, Skill Check (sin ayuda, un intento) y repaso con apoyo.
- * Criterio de diseño (Director, 2026-10-19): la regla fija es la CONTINUIDAD ESTÉTICA con el resto de la app y un minimalismo que no pierda lo estético.
- * Entrar en una pantalla es una guía, no una regla: lo que se prefiere es un proceso continuo de consecuencias. Por eso:
- *   · Ficha y agenda: una escena (imagen) con la burbuja del personaje, el tablero y las piezas, que suelen entrar en una pantalla.
- *   · Diálogo: una conversación que CRECE hacia abajo a medida que se contesta; el tablero (la libreta) queda fijo arriba y se va escribiendo.
- *   · Práctica: el efecto de cada pieza se ve en el tablero MIENTRAS se elige (consecuencia, no veredicto); «Probalo» marca el veredicto.
- *   · Skill Check: SIN vista previa (el tablero queda como el carnet) y sin reacciones; «Probalo» escribe todo y marca todo junto al final.
- * Depende de window.MundoRunner (nucleo/runner.js, se inyecta antes). */
-(function () {
-  'use strict';
-  var R = window.MundoRunner;
-  if (!R || typeof DOMAIN_PLUGINS === 'undefined') { console.error('[mundo] falta MundoRunner o DOMAIN_PLUGINS'); return; }
-  var RM = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function sleep(ms) { return new Promise(function (r) { setTimeout(r, RM ? Math.min(ms, 20) : ms); }); }
-  function el(t, c, h) { var e = document.createElement(t); if (c) e.className = c; if (h != null) e.innerHTML = h; return e; }
-  function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
-  function boton() { return window.MUNDO_BOTON || 'Probalo'; }
-  function neutro() { try { return typeof isEvalModule === 'function' && isEvalModule(state.currentModule); } catch (e) { return false; } }
-
-  /* ───────── estilos: tokens del Motor (claro/oscuro salen solos) ───────── */
-  var css = [
-    /* overflow:visible: el que scrollea de verdad es #app; así el tablero «sticky» se queda fijo debajo del encabezado mientras la conversación baja */
-    '#screen-exercise:has(.mundo-wrap) .exercise-body{overflow:visible;padding:8px 14px calc(var(--exercise-footer-h,115px) + var(--feedback-zone-h,0px))}',
-    '#screen-exercise:has(.mundo-wrap) .exercise-question{font-size:17px;line-height:1.2;margin-bottom:6px}',
-    '#screen-exercise:has(.mundo-wrap) .tutor-zone{display:none!important}',
-    '.mundo-wrap{display:flex;flex-direction:column;gap:8px}',
-    /* la escena: la imagen del personaje con su burbuja encima (ni gigante ni un circulito) */
-    '.mundo-escena{position:relative;height:104px;border-radius:16px;overflow:hidden;border:1.5px solid var(--accent-gold);background-size:cover;background-position:50% 22%;background-color:var(--bg-card);flex:0 0 auto}',
-    '.mundo-escena .quien{position:absolute;left:8px;bottom:8px;padding:2px 10px;border-radius:99px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;font-weight:700}',
-    '.mundo-dice{position:absolute;right:8px;top:8px;max-width:68%;min-height:34px;padding:7px 11px;border-radius:14px 14px 4px 14px;background:var(--bg-card);border:1.5px solid var(--border);color:var(--text-primary);font-weight:700;font-size:13.5px;line-height:1.25;box-shadow:0 2px 8px rgba(0,0,0,.35)}',
-    '.mundo-dice small{display:block;color:var(--text-muted);font-weight:700;font-size:10px;letter-spacing:.08em;text-transform:uppercase}',
-    '.mundo-tabla-fija{position:sticky;top:64px;z-index:3;border-radius:var(--radius-md);box-shadow:0 4px 14px rgba(0,0,0,.4)}',
-    '.mundo-tabla{margin-bottom:0}',
-    '.mundo-tabla th{padding:6px 10px;font-size:12px}',
-    '.mundo-tabla th.sc{text-align:right;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-gold-light)}',
-    '.mundo-tabla td{padding:1px 10px}',
-    '.mundo-et{width:40%}',
-    '.mundo-et-in{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 6px;font-weight:800;font-size:14px;line-height:1.15}',
-    '.mundo-et-in small{font-weight:500;color:var(--text-muted);font-size:11px}',
-    '.mundo-celda{display:flex;align-items:center;gap:8px;justify-content:space-between;min-height:34px}',
-    '.mundo-val{font-weight:700;font-size:15px;display:block;min-height:18px;line-height:1.15}',
-    '.mundo-pista{display:block;font-size:11px;color:var(--text-muted);font-weight:500;line-height:1.1}',
-    '.mundo-mark{flex:0 0 auto;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:13px;visibility:hidden}',
-    '.mundo-tabla tr.fuera{display:none}.mundo-tabla tr.fuera.on{display:table-row}',
-    '.mundo-tabla tr.is-live .mundo-val{border-bottom:2px solid var(--accent-gold);display:inline-block}',
-    '.mundo-tabla tr.is-ok .mundo-mark{visibility:visible;background:var(--feedback-correct);color:#fff}',
-    '.mundo-tabla tr.is-bad .mundo-mark,.mundo-tabla tr.is-miss .mundo-mark{visibility:visible;background:var(--warning);color:#1b1305}',
-    '.mundo-tabla tr.is-bad .mundo-val{color:var(--warning-text)}',
-    '.mundo-tabla tr.is-miss .mundo-val{border-bottom:2px dashed var(--warning)}',
-    /* piezas: las mismas pastillas de la app, un poco más chicas */
-    '#exercise-input-area .mundo-wrap .word-bank{gap:5px;padding:6px;margin:0}',
-    '#exercise-input-area .mundo-wrap .word-chip{flex:0 1 auto;min-height:34px;padding:3px 10px;font-size:13.5px;line-height:1.15;border-width:2px}',
-    '#exercise-input-area .mundo-wrap .word-chip.pick{background:var(--accent-gold);color:#1b1305;border-color:var(--accent-gold)}',
-    /* diálogo: la conversación crece hacia abajo */
-    '.mundo-hilo{display:flex;flex-direction:column;gap:8px}',
-    /* nada de lo que se va eligiendo queda por debajo del botón «Probalo» (aunque sea transparente): al llevar una burbuja o las opciones a la vista, se deja el alto del pie de pantalla */
-    '.mundo-hilo>*,.mundo-wrap .word-bank{scroll-margin-bottom:calc(var(--exercise-footer-h,115px) + var(--feedback-zone-h,0px) + 16px)}',
-    '.mundo-val.escribiendo::after{content:"";display:inline-block;width:2px;height:1em;margin-left:2px;vertical-align:-2px;background:var(--accent-gold);animation:mundo-cursor .6s steps(1) infinite}',
-    '@keyframes mundo-cursor{50%{opacity:0}}',
-    '@media (prefers-reduced-motion:reduce){.mundo-val.escribiendo::after{animation:none}}',
-    '.mundo-burbuja{max-width:86%;padding:8px 12px;border-radius:16px;font-weight:700;font-size:14.5px;line-height:1.25;animation:mundo-entra .22s ease}',
-    '.mundo-burbuja small{display:block;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);font-weight:700}',
-    '.mundo-burbuja.leo{align-self:flex-start;background:var(--bg-card);border:1.5px solid var(--border);color:var(--text-primary);border-bottom-left-radius:4px}',
-    '.mundo-burbuja.yo{align-self:flex-end;background:var(--accent-gold);border:1.5px solid var(--accent-gold);color:#1b1305;border-bottom-right-radius:4px;cursor:pointer;font-family:inherit;text-align:left}',
-    /* lo que se armó y NO era lo correcto queda marcado (ámbar, sin relleno, borde punteado): es lo que hay que tocar para corregirlo. Nunca rojo. */
-    '.mundo-burbuja.yo.mal{background:transparent;border:2px dashed var(--warning);color:var(--warning-text,var(--warning))}',
-    '.mundo-burbuja.yo.mal small{color:var(--warning-text,var(--warning))}',
-    '.mundo-burbuja.yo.mal::after{content:" \\270E\\FE0E";font-weight:800}',
-    '#exercise-input-area .mundo-wrap .word-chip.pick.mal{background:transparent;color:var(--warning-text,var(--warning));border:2px dashed var(--warning)}',
-    '.mundo-opciones{display:flex;flex-direction:column;gap:6px;align-self:stretch;padding-left:18px}',
-    '#exercise-input-area .mundo-opciones .option-btn{min-height:38px;padding:5px 12px;font-size:14px}',
-    '@keyframes mundo-entra{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}',
-    '@media (prefers-reduced-motion:reduce){.mundo-burbuja{animation:none}}',
-    /* teléfonos bajos (≈ 740 px o menos): un punto más de compactación */
-    '@media (max-height:760px){.mundo-escena{height:84px}.mundo-celda{min-height:30px}#exercise-input-area .mundo-wrap .word-chip{min-height:30px;font-size:13px;padding:2px 9px}#exercise-input-area .mundo-opciones .option-btn{min-height:34px}}'
-  ].join('\n');
-  var st = document.createElement('style'); st.id = 'mundo-estilos'; st.textContent = css; document.head.appendChild(st);
-
-  /* ───────── jugada ───────── */
-  var historia = {};   // lo último que se resolvió de cada mundo, para volver a verlo sin poder contestarlo otra vez
-  function comun(def) { return !def.huecos.every(function (h) { return h.opciones; }); }
-  function jugadaActual(M) {
-    if (comun(M.def)) { var j = {}; M.def.huecos.forEach(function (h, i) { if (M.picks[i]) j[h.id] = M.picks[i]; }); return j; }
-    return M.jugada;
-  }
-  function completo(M) { var j = jugadaActual(M); return M.def.huecos.every(function (h) { return j[h.id]; }); }
-  function pieza(M, id) { return R.pieza(M.def, id); }
-  function fila(M, id) { return M.area.querySelector('.mundo-tabla tr[data-f="' + id + '"]'); }
-  function confirmBtn() { return document.getElementById('confirm-btn'); }
-  function filas(M) { return M.area.querySelectorAll('.mundo-tabla tbody tr'); }
-
-  function actualizar() {
-    var M = state.mundo; if (!M) return;
-    if (completo(M) && !M.corriendo && !state.answered) { enableConfirm(); var b = confirmBtn(); b.textContent = boton(); b.onclick = correr; }
-    else if (!state.answered) { disableConfirm(); confirmBtn().textContent = boton(); }
-  }
-
-  /* ───────── el tablero ───────── */
-  function limpiar(M) {
-    Array.prototype.forEach.call(filas(M), function (r) { r.className = r.classList.contains('fuera') ? 'fuera' : ''; r.querySelector('.mundo-val').textContent = ''; r.querySelector('.mundo-mark').textContent = ''; });
-  }
-  function marcar(M, id, ok) { var r = fila(M, id); r.classList.remove('is-ok', 'is-bad', 'is-live', 'is-miss'); r.classList.add(ok ? 'is-ok' : 'is-bad'); r.querySelector('.mundo-mark').textContent = ok ? '✓' : '!'; }
-  /* VISTA PREVIA: el efecto de lo que está elegido se escribe en el tablero al instante, sin veredicto. En el Skill Check no existe. */
-  function vivo(M) {
-    if (neutro()) return;
-    limpiar(M);
-    var res = R.correr(M.def, jugadaActual(M));
-    M.def.campos.forEach(function (c) {
-      var e = res.estado[c.id]; if (!e) return;
-      var r = fila(M, c.id); r.classList.add('on', 'is-live'); r.querySelector('.mundo-val').textContent = e.valor;
-    });
-  }
-  /* EJECUCIÓN VISIBLE: al tocar «Probalo» el mundo escribe cada dato letra por letra (es lo que muestra que algo se ejecuta de verdad). Sin movimiento reducido. */
-  function escribir(r, texto) {
-    var v = r.querySelector('.mundo-val'); texto = String(texto);
-    if (RM) { v.textContent = texto; return Promise.resolve(); }
-    var i = 0, paso = Math.max(18, Math.min(48, 800 / Math.max(texto.length, 1)));
-    v.textContent = ''; v.classList.add('escribiendo');
-    return new Promise(function (ok) { (function t() { v.textContent = texto.slice(0, ++i); if (i < texto.length) setTimeout(t, paso); else { v.classList.remove('escribiendo'); ok(); } })(); });
-  }
-  function dice(M, quien, texto) {
-    var d = M.area.querySelector('.mundo-dice'); if (!d) return;
-    d.innerHTML = (quien ? '<small>' + esc(quien) + '</small>' : '') + '<span>' + esc(texto) + '</span>';
-  }
-  function pintarFinal(M, res) {
-    M.def.campos.forEach(function (c) {
-      var r = fila(M, c.id), e = res.estado[c.id];
-      if (e) { r.classList.add('on'); r.querySelector('.mundo-val').textContent = e.valor; marcar(M, c.id, e.estado === 'ok'); }
-    });
-    res.diferencias.faltan.forEach(function (id) { var r = fila(M, id); r.classList.add('is-miss'); r.querySelector('.mundo-mark').textContent = '?'; });
-  }
-
-  /* ───────── armado ───────── */
-  function primerSinResponder(M) { var i = M.def.huecos.findIndex(function (h) { return !M.jugada[h.id]; }); return i < 0 ? M.def.huecos.length - 1 : i; }
-  function pintarHilo(M, avisar) {
-    var hilo = M.area.querySelector('.mundo-hilo'), def = M.def, vis = primerSinResponder(M), ultimo = null;
-    hilo.innerHTML = '';
-    def.huecos.forEach(function (h, i) {
-      if (i > vis) return;
-      var q = el('div', 'mundo-burbuja leo', '<small>' + esc(def.escena.receptor) + '</small>' + esc(h.pregunta)); hilo.appendChild(q); ultimo = q;
-      var elegido = M.jugada[h.id];
-      if (elegido) {
-        var y = el('button', 'mundo-burbuja yo', '<small>' + esc(def.escena.hablante) + '</small>' + esc(pieza(M, elegido).texto)); y.type = 'button';
-        y.setAttribute('aria-label', M.malos[h.id] ? 'Respuesta para corregir: tocala para cambiarla' : 'Cambiar esta respuesta'); if (M.malos[h.id]) y.classList.add('mal');
-        y.onclick = function () { if (M.corriendo || state.answered) return; delete M.jugada[h.id]; delete M.malos[h.id]; vivo(M); actualizar(); pintarHilo(M, true); };   // tocar una respuesta la deshace y vuelve a la pregunta
-        hilo.appendChild(y); ultimo = y;
-      } else {
-        var o = el('div', 'mundo-opciones'); o.dataset.h = h.id;
-        h.opciones.forEach(function (pid) {
-          var b = el('button', 'option-btn'); b.dataset.pid = pid; b.textContent = pieza(M, pid).texto;
-          b.onclick = function () { if (M.corriendo || state.answered) return; M.jugada[h.id] = pid; dice(M, def.escena.hablante, pieza(M, pid).texto); vivo(M); actualizar(); pintarHilo(M, true); };
-          o.appendChild(b);
-        });
-        hilo.appendChild(o); ultimo = o;
-      }
-    });
-    if (avisar && ultimo && ultimo.scrollIntoView) ultimo.scrollIntoView({ block: 'nearest', behavior: RM ? 'auto' : 'smooth' });   // la conversación baja sola
-  }
-  function pintarArmado(M) {
-    if (comun(M.def)) Array.prototype.forEach.call(M.area.querySelectorAll('.word-bank .word-chip'), function (c) { var on = M.picks.indexOf(c.dataset.pid) > -1; c.classList.toggle('pick', on); c.classList.toggle('mal', on && !!M.malos[c.dataset.pid]); c.setAttribute('aria-pressed', String(on)); });
-    else pintarHilo(M, false);
-  }
-  function elegirPieza(M, pid) {
-    var i = M.picks.indexOf(pid);
-    if (i > -1) { M.picks.splice(i, 1); delete M.malos[pid]; dice(M, '', M.def.consigna.banner); }
-    else { if (M.picks.length >= M.def.huecos.length) return; M.picks.push(pid); dice(M, M.def.escena.hablante, pieza(M, pid).texto); }
-    pintarArmado(M); vivo(M); actualizar();
-  }
-
-  /* ───────── render (todo lo que va dentro de #exercise-input-area) ───────── */
-  function renderMundo(ex, area) {
-    var def = ex.mundo, M = state.mundo = { def: def, ex: ex, area: area, picks: [], jugada: {}, corriendo: false, malos: {} };   // malos: lo que se armó y no era correcto (hueco → true en el diálogo; pieza → true en los demás)
-    state.mundoLogrado = false;
-    var esc_ = def.escena, wrap = el('div', 'mundo-wrap'), sc = ex.role === 'skill_check';
-    var escena = el('div', 'mundo-escena'); if (ex.avatar) escena.style.backgroundImage = 'url(' + ex.avatar + ')';
-    escena.appendChild(el('span', 'quien', esc(esc_.hablante))); escena.appendChild(el('div', 'mundo-dice'));
-    wrap.appendChild(escena);
-    var fija = el('div', 'mundo-tabla-fija'), tbl = el('table', 'ex-table mundo-tabla');
-    tbl.innerHTML = '<thead><tr><th>' + esc(esc_.tablero) + '</th><th class="sc">' + (sc ? 'Skill Check' : '') + '</th></tr></thead>';
-    var tb = el('tbody');
-    def.campos.forEach(function (c) {
-      var tr = el('tr', c.fuera ? 'fuera' : ''); tr.dataset.f = c.id;
-      tr.innerHTML = '<td class="mundo-et"><div class="mundo-et-in">' + esc(c.etiqueta) + (c.sub ? '<small>' + esc(c.sub) + '</small>' : '') + '</div></td><td><div class="mundo-celda"><div><span class="mundo-val"></span>' + (c.pista ? '<span class="mundo-pista">' + esc(c.pista) + '</span>' : '') + '</div><span class="mundo-mark" aria-hidden="true"></span></div></td>';
-      tb.appendChild(tr);
-    });
-    tbl.appendChild(tb); fija.appendChild(tbl); wrap.appendChild(fija);
-    if (comun(def)) {
-      var bank = el('div', 'word-bank');
-      R.ordenBanco(def).map(function (id) { return R.pieza(def, id); }).forEach(function (p) {   // orden mezclado y estable: las correctas no van adelante
-        var b = el('button', 'word-chip'); b.textContent = p.texto; b.dataset.pid = p.id;
-        b.onclick = function () { if (M.corriendo || state.answered) return; elegirPieza(M, p.id); };
-        bank.appendChild(b);
-      });
-      wrap.appendChild(bank);
-    } else wrap.appendChild(el('div', 'mundo-hilo'));
-    area.appendChild(wrap);
-    dice(M, '', def.consigna.banner);
-    pintarArmado(M);
-    // Revelar (último escalón de la escalera): arma la solución y deja Confirmar habilitado, igual que el resto de los tipos
-    state.revealFn = function () {
-      var sol = R.resolver(def); if (!sol) return;
-      if (comun(def)) M.picks = def.huecos.map(function (h) { return sol[h.id]; }); else M.jugada = JSON.parse(JSON.stringify(sol));
-      pintarArmado(M); limpiar(M); pintarFinal(M, R.correr(def, sol)); enableConfirm();
-    };
-    disableConfirm(); confirmBtn().textContent = boton();
-    armarDemos();
-  }
-
-  /* ───────── «Probalo» ───────── */
-  async function correr() {
-    var M = state.mundo; if (!M || M.corriendo || state.answered || !completo(M)) return;
-    M.corriendo = true; confirmBtn().disabled = true;
-    var def = M.def, res = R.correr(def, jugadaActual(M)), neutral = neutro(), esc_ = def.escena;
-    if (comun(def)) M.area.querySelector('.mundo-tabla-fija').scrollIntoView({ block: 'start', behavior: RM ? 'auto' : 'smooth' });   // en el diálogo el tablero ya está fijo arriba
-    if (neutral) {
-      // Skill Check: hasta acá el tablero estaba como el carnet. Se escribe todo y las marcas aparecen JUNTAS al final.
-      limpiar(M);
-      for (var i = 0; i < res.traza.length; i++) {
-        var t = res.traza[i]; if (!t.campo || t.reemplazado) continue;
-        var r = fila(M, t.campo); r.classList.add('on', 'is-live'); await escribir(r, t.valor); await sleep(RM ? 0 : 120);
-      }
-      await sleep(RM ? 0 : 380);
-      pintarFinal(M, res);
-    } else {
-      // Práctica: la vista previa dejó el efecto a la vista; ahora el mundo lo EJECUTA de verdad: vacía el tablero y escribe cada dato letra por letra, y marca el veredicto de a una pieza mientras el personaje reacciona
-      limpiar(M);
-      for (var k = 0; k < res.traza.length; k++) {
-        var s = res.traza[k]; if (s.estado === 'vacio') continue;
-        var texto = null;
-        if (s.estado === 'no-entendio') texto = (s.reaccion || (def.reacciones && def.reacciones['no-entendio'])) || null;
-        else if (s.campo && !s.reemplazado) {
-          var rf = fila(M, s.campo); rf.classList.add('on', 'is-live'); await escribir(rf, s.valor);
-          marcar(M, s.campo, s.estado === 'ok');
-          texto = s.reaccion || (def.reacciones && def.reacciones[s.estado === 'sobra' ? 'sobra' : (s.estado === 'ok' ? 'ok' : 'distinto')]) || null;
-        }
-        if (texto) { dice(M, esc_.receptor, texto); await sleep(RM ? 0 : 420); } else await sleep(RM ? 0 : 140);
-      }
-      res.diferencias.faltan.forEach(function (id) { var r = fila(M, id); r.classList.add('is-miss'); r.querySelector('.mundo-mark').textContent = '?'; });
-    }
-    // lo que se armó y no era correcto queda marcado donde se armó (la burbuja o la pastilla), para saber qué tocar al corregir
-    M.malos = {};
-    res.traza.forEach(function (s) {
-      if (s.estado === 'vacio') return;
-      if (s.estado === 'no-entendio' || s.reemplazado || (s.campo && s.estado !== 'ok')) { if (comun(def)) M.malos[s.pieza] = true; else M.malos[s.hueco] = true; }
-    });
-    pintarArmado(M);
-    var msg = R.mensaje(def, res);
-    if (!res.logrado) { M.ex.feedbackWrong = msg.texto; try { var cur = getActiveExercises(state.currentModule)[state.currentExerciseIndex]; if (cur) cur.feedbackWrong = msg.texto; } catch (e) {} }
-    M.corriendo = false;
-    historia[String(M.ex.id)] = { picks: M.picks.slice(), jugada: JSON.parse(JSON.stringify(M.jugada)), logrado: res.logrado };
-    handleConfirm();
-    if (!comun(def)) setTimeout(function () { abajo(M); }, RM ? 30 : 450);   // la hoja de resultado sube desde abajo: la conversación queda ARRIBA de la hoja, no detrás (nota del teléfono, 2026-10-19)
-  }
-  /* lleva el final de la conversación hasta el borde de abajo del contenido (el cuerpo del ejercicio ya reserva el alto de la hoja de resultado) */
-  function abajo(M) {
-    var sc = document.getElementById('app') || document.scrollingElement; if (!sc) return;
-    var hilo = M.area.querySelector('.mundo-hilo'), ult = hilo && hilo.lastElementChild;
-    if (ult && ult.scrollIntoView) ult.scrollIntoView({ block: 'end', behavior: RM ? 'auto' : 'smooth' });
-    sc.scrollTop = sc.scrollHeight;
-  }
-
-  /* ───────── demostraciones (modo prueba, 🧪): el mundo se resuelve solo, a la vista y con pausas ───────── */
-  function pausa(ms) { return sleep(RM ? 0 : ms); }
-  async function esperar(cond, ms) { var t0 = Date.now(); while (Date.now() - t0 < (ms || 9000)) { if (cond()) return true; await sleep(80); } return false; }
-  async function jugarDemo(M, jugada) {
-    for (var i = 0; i < M.def.huecos.length; i++) {
-      var pid = jugada[M.def.huecos[i].id];
-      var b = comun(M.def) ? M.area.querySelector('.word-chip[data-pid="' + pid + '"]') : M.area.querySelector('.mundo-opciones .option-btn[data-pid="' + pid + '"]');
-      if (!b) { b = null; continue; }
-      b.click(); await pausa(550);
-    }
-    await pausa(450);
-  }
-  async function vaciarDemo(M) {
-    if (comun(M.def)) { var s = M.area.querySelectorAll('.word-bank .word-chip.pick'); for (var i = 0; i < s.length; i++) { s[i].click(); await pausa(120); } }
-    else { var y; while ((y = M.area.querySelectorAll('.mundo-burbuja.yo')).length) { y[y.length - 1].click(); await pausa(120); } }
-  }
-  function nuevo() { renderExercise(); return state.mundo; }          // el ejercicio se dibuja de nuevo: siempre se empieza limpio
-  async function probar(M) { var b = confirmBtn(); if (b && !b.disabled) b.click(); await esperar(function () { return !M.corriendo && (state.answered || document.querySelector('#feedback-zone .feedback-actions, #feedback-zone [data-retry], #feedback-zone button')); }, 15000); await pausa(500); }
-  function reintentar() { var b = confirmBtn(); if (b && /Intentar de nuevo/i.test(b.textContent)) { b.click(); return true; } return false; }
-  function armarDemos() {
-    var M0 = state.mundo, def = M0.def, sol = R.resolver(def);
-    state.pruebaDemo = {
-      bien: async function () { var M = nuevo(); await pausa(400); await jugarDemo(M, sol); await probar(M); },
-      soloError: async function () { var M = nuevo(); await pausa(400); await jugarDemo(M, def.demo.error); await probar(M); },
-      error: async function () {
-        var M = nuevo(); await pausa(400); await jugarDemo(M, def.demo.error); await probar(M);
-        await esperar(function () { var b = confirmBtn(); return !!b && !b.disabled && /Intentar de nuevo/i.test(b.textContent); }, 6000);   // la app habilita el botón 350 ms después de mostrarlo (anti doble toque)
-        if (reintentar()) { await pausa(700); M = state.mundo; await vaciarDemo(M); await pausa(300); await jugarDemo(M, sol); await probar(M); }
-      }
-    };
-  }
-
-  /* «Intentar de nuevo»: la app no sabe de mundos (su cadena de reintento es por tipo). Se envuelve retryExercise para limpiar las marcas y dejar lo armado
-     donde estaba (el alumno cambia solo la pieza que hace falta, como dice la ayuda). */
-  if (typeof window.retryExercise === 'function') {
-    var _retry = window.retryExercise;
-    window.retryExercise = function (ex) {
-      var r = _retry.apply(this, arguments);
-      try { if (ex && ex.kind === 'mundo' && state.mundo) { var M = state.mundo; limpiar(M); M.corriendo = false; vivo(M); dice(M, '', M.def.consigna.banner); actualizar(); } } catch (e) { console.error('[mundo] reintento', e); }
-      return r;
-    };
-  }
-  /* Volver a un mundo ya resuelto (deslizar hacia atrás): en modo prueba arranca nuevo (para poder probarlo otra vez); en uso normal se ve LO QUE QUEDÓ — lo armado y las marcas — y no se puede volver a contestar
-     (un Skill Check mide un solo intento). Si no se había resuelto, arranca nuevo. */
-  if (typeof window.restoreExerciseFromSnapshot === 'function') {
-    var _restore = window.restoreExerciseFromSnapshot;
-    window.restoreExerciseFromSnapshot = function (ex) {
-      if (!(ex && ex.kind === 'mundo')) return _restore.apply(this, arguments);
-      var M = state.mundo, h = historia[String(ex.id)];
-      if (!M || !h || (typeof pdpModoPrueba === 'function' && pdpModoPrueba())) return;
-      if (comun(M.def)) M.picks = h.picks.slice(); else M.jugada = JSON.parse(JSON.stringify(h.jugada));
-      pintarArmado(M); limpiar(M); pintarFinal(M, R.correr(M.def, jugadaActual(M)));
-      state.answered = true; M.corriendo = false; disableConfirm();
-      setPrimaryCTA('Continuar', h.logrado ? 'state-correct' : 'state-wrong', goToNextExercise);
-    };
-  }
-  DOMAIN_PLUGINS.push({
-    renderers: { mundo: renderMundo },
-    checkers: { mundo: function () { var M = state.mundo; return !!(M && R.correr(M.def, jugadaActual(M)).logrado); } },
-    checkCorrect: function (kind, ex, ctx) { return this.checkers[kind](ex, ctx); }
-  });
-  try { if (typeof KIND_SPECS !== 'undefined') KIND_SPECS['mundo'] = { rules: [['mundo', 'truthy']], needsFeedbackWrong: false }; } catch (e) {}
-  window.__mundoPlugin = true;
-})();
-</script></body>
+<script src="../pdp-assets/9700dc55eaacdfeeb240fbeb92dd4829.js"></script><script src="../pdp-assets/a86e2ff5ca0100f57bc191c46deadbba.js"></script>
+</body>
 </html>

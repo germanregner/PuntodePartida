@@ -5156,6 +5156,62 @@ html #screen-exercise:has(.lec-wrap) .skip-btn{ bottom:calc(100% + 100px); }
 .pdp-modo-ov .pds-btn-depth{ margin-top:12px; }
 #pdp-prueba-demos{ display:flex; flex-direction:column; gap:8px; }
 .pdp-modo-sub{ margin:6px 0 4px; text-align:center; font-size:14.5px; color:#E6DABD; text-shadow:0 1px 8px rgba(0,0,0,.8); }
+/* ═══ MUNDO (Motor Base, CONTRATO_MUNDO_v1): solo tokens var(--*) ═══ */
+/* overflow:visible: el que scrollea de verdad es #app; así el tablero «sticky» se queda fijo debajo del encabezado mientras la conversación baja */
+#screen-exercise:has(.mundo-wrap) .exercise-body{overflow:visible;padding:8px 14px calc(var(--exercise-footer-h,115px) + var(--feedback-zone-h,0px))}
+#screen-exercise:has(.mundo-wrap) .exercise-question{font-size:17px;line-height:1.2;margin-bottom:6px}
+#screen-exercise:has(.mundo-wrap) .tutor-zone{display:none!important}
+.mundo-wrap{display:flex;flex-direction:column;gap:8px}
+/* la escena: la imagen del personaje con su burbuja encima (ni gigante ni un circulito) */
+.mundo-escena{position:relative;height:104px;border-radius:16px;overflow:hidden;border:1.5px solid var(--accent-gold);background-size:cover;background-position:50% 22%;background-color:var(--bg-card);flex:0 0 auto}
+.mundo-escena .quien{position:absolute;left:8px;bottom:8px;padding:2px 10px;border-radius:99px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;font-weight:700}
+.mundo-dice{position:absolute;right:8px;top:8px;max-width:68%;min-height:34px;padding:7px 11px;border-radius:14px 14px 4px 14px;background:var(--bg-card);border:1.5px solid var(--border);color:var(--text-primary);font-weight:700;font-size:13.5px;line-height:1.25;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.mundo-dice small{display:block;color:var(--text-muted);font-weight:700;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.mundo-tabla-fija{position:sticky;top:64px;z-index:3;border-radius:var(--radius-md);box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.mundo-tabla{margin-bottom:0}
+.mundo-tabla th{padding:6px 10px;font-size:12px}
+.mundo-tabla th.sc{text-align:right;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-gold-light)}
+.mundo-tabla td{padding:1px 10px}
+.mundo-et{width:40%}
+.mundo-et-in{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 6px;font-weight:800;font-size:14px;line-height:1.15}
+.mundo-et-in small{font-weight:500;color:var(--text-muted);font-size:11px}
+.mundo-celda{display:flex;align-items:center;gap:8px;justify-content:space-between;min-height:34px}
+.mundo-val{font-weight:700;font-size:15px;display:block;min-height:18px;line-height:1.15}
+.mundo-pista{display:block;font-size:11px;color:var(--text-muted);font-weight:500;line-height:1.1}
+.mundo-mark{flex:0 0 auto;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:13px;visibility:hidden}
+.mundo-tabla tr.fuera{display:none}.mundo-tabla tr.fuera.on{display:table-row}
+.mundo-tabla tr.is-live .mundo-val{border-bottom:2px solid var(--accent-gold);display:inline-block}
+.mundo-tabla tr.is-ok .mundo-mark{visibility:visible;background:var(--feedback-correct);color:#fff}
+.mundo-tabla tr.is-bad .mundo-mark,.mundo-tabla tr.is-miss .mundo-mark{visibility:visible;background:var(--warning);color:#1b1305}
+.mundo-tabla tr.is-bad .mundo-val{color:var(--warning-text)}
+.mundo-tabla tr.is-miss .mundo-val{border-bottom:2px dashed var(--warning)}
+/* piezas: las mismas pastillas de la app, un poco más chicas */
+#exercise-input-area .mundo-wrap .word-bank{gap:5px;padding:6px;margin:0}
+#exercise-input-area .mundo-wrap .word-chip{flex:0 1 auto;min-height:34px;padding:3px 10px;font-size:13.5px;line-height:1.15;border-width:2px}
+#exercise-input-area .mundo-wrap .word-chip.pick{background:var(--accent-gold);color:#1b1305;border-color:var(--accent-gold)}
+/* diálogo: la conversación crece hacia abajo */
+.mundo-hilo{display:flex;flex-direction:column;gap:8px}
+/* nada de lo que se va eligiendo queda por debajo del botón «Probalo» (aunque sea transparente): al llevar una burbuja o las opciones a la vista, se deja el alto del pie de pantalla */
+.mundo-hilo>*,.mundo-wrap .word-bank{scroll-margin-bottom:calc(var(--exercise-footer-h,115px) + var(--feedback-zone-h,0px) + 16px)}
+.mundo-val.escribiendo::after{content:"";display:inline-block;width:2px;height:1em;margin-left:2px;vertical-align:-2px;background:var(--accent-gold);animation:mundo-cursor .6s steps(1) infinite}
+@keyframes mundo-cursor{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.mundo-val.escribiendo::after{animation:none}}
+.mundo-burbuja{max-width:86%;padding:8px 12px;border-radius:16px;font-weight:700;font-size:14.5px;line-height:1.25;animation:mundo-entra .22s ease}
+.mundo-burbuja small{display:block;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);font-weight:700}
+.mundo-burbuja.leo{align-self:flex-start;background:var(--bg-card);border:1.5px solid var(--border);color:var(--text-primary);border-bottom-left-radius:4px}
+.mundo-burbuja.yo{align-self:flex-end;background:var(--accent-gold);border:1.5px solid var(--accent-gold);color:#1b1305;border-bottom-right-radius:4px;cursor:pointer;font-family:inherit;text-align:left}
+/* lo que se armó y NO era lo correcto queda marcado (ámbar, sin relleno, borde punteado): es lo que hay que tocar para corregirlo. Nunca rojo. */
+.mundo-burbuja.yo.mal{background:transparent;border:2px dashed var(--warning);color:var(--warning-text,var(--warning))}
+.mundo-burbuja.yo.mal small{color:var(--warning-text,var(--warning))}
+.mundo-burbuja.yo.mal::after{content:" \270E\FE0E";font-weight:800}
+#exercise-input-area .mundo-wrap .word-chip.pick.mal{background:transparent;color:var(--warning-text,var(--warning));border:2px dashed var(--warning)}
+.mundo-opciones{display:flex;flex-direction:column;gap:6px;align-self:stretch;padding-left:18px}
+#exercise-input-area .mundo-opciones .option-btn{min-height:38px;padding:5px 12px;font-size:14px}
+@keyframes mundo-entra{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.mundo-burbuja{animation:none}}
+/* teléfonos bajos (≈ 740 px o menos): un punto más de compactación */
+@media (max-height:760px){.mundo-escena{height:84px}.mundo-celda{min-height:30px}#exercise-input-area .mundo-wrap .word-chip{min-height:30px;font-size:13px;padding:2px 9px}#exercise-input-area .mundo-opciones .option-btn{min-height:34px}}
+/* ═══ fin MUNDO ═══ */
 /* ═══ fin «Mis Unidades» ═══ */
 /* ═══ «¿Quién es?» (2026-10-12): mismo fondo y brújula que las otras pantallas de perfiles; fondo de biblioteca luminosa en modo claro. Solo presentación (.pf2-elegir). ═══ */
 :root{ --pdp-elegir-bg-claro:url('../pdp-assets/4585cabe3461e2099b97e877976ddc17.webp'); --pdp-lq-elegir-claro:url('data:image/webp;base64,UklGRn4EAABXRUJQVlA4IHIEAABQEwCdASooAEcAPrVKnUonJCKhrvtqAOAWiWQAqSbtB5yReg5jg4b9x4Bc+Pzw3oU3qP9M+CS/79b08F69WIjXZZOPD1MocoKwu87UJDibplayrPefd5F6rFQXBokEEAJp75A6y9hpKNpYYcVLwu55/R6/if28j0Umi7+4G9babOa6Da8z2DRA9c8JJL0bfZl7Txkd6ywI6ZZhwzkGJBVzqTLwAP5klpWeJo4/kwuIss9UigF+bPdUjbZT7IW04fgH9GPFjB94NZzqfotPzk7EuQ0qY34B7+3hXXQL8wsRZUcRzPLEfnctlNx9GR67d291MoJG68kdNHh7O1VJdyCniiFrn9ORwOLflRAQiwIsAvmUbeEJS/oPRA7l1119fMP0BlyMoARDcCRqRxnNLM/0WHuKwL7XjilqXmbvMJdLF7MzsilWTHaDr6fjSdkG520fafCqP1hfwnJcnqMR7vVeSKX1lZeUtl47fBpATIUfhe2OVwYYnoBc4Gasq/icy+qnuWSz7LdA5Dp6MA3BaW1jAfOZJTMgf2vp9waAXtL37DweTdsntAWif0tF+tE9fLrG8sxicz8oMvTgdgHaRNG8Q04xdZdLLCZbzik8qds+2cmNDmNQ5n9IfAxkp1STmhO0DPmM+ZNQ3/05Ij+TZxTHxd/gpf8mCqHOlXwv7EliRWoIXfmC8hAORW9SlERVobD60nnSDksBIuT0hEfHsx7d8QA2eRs0MdjxUDGOdWN7cz8o0y+q4+6Ec4x04uv2lCpeqAE1stRJdnVZCzr7RNK0ejdA3PHEvOzd47+tIF3LEo8It6FAJOhst1p71LVmx/2A55nn1pdiUr3WYGV50M+XEl5Kg27Yv4T+lhCOaIG84oQ6xsHsvS8cJ5A6wnETJX9skjTrwsCqxIkFD4tBlXp9txAJeDJe2ZBklhOQnlE95YTqTQtiJeEp/dNvl5u/7nPNIYVwWC5yJ0uEeNDXEQhrfnWvyD/trppIgLe5klngosLCrzL0SB8OjHiaoo2k/XFzIwSDqnhC0OgRuXtuoNYPadnTJNV2bk0+oc3azUisevR9WBvZ3/73EeUzgF+XEWxQzf5STI/6WzDZF8W18DsgGZ+DfYrfsnn0Yq/3yFwRafeGvBmAHOxHc3XxEr0U/gjdhnHFZTzpuGYqSVLO8idxyv5koqP/LnlOi+/e1gHaBfxBIyKCgBCnu2ZrRck1i8G8+qF8O4h6gnstsy+My5+I0ZwoQ2gqBWZ7rcZHgbe1IQ0QwRKNgeHzKE7VwJPkle/nxZXsfpad172IjQOiW6rdnry6ZO0bAWn/fKLFEYPQkD/7Dc6F5GQop7FZgG6NQ1uqDSOf+QHdKeQ36TVIla4l89/4JFiOr2USfTV8s6Uc5Vx1VqLbU6NmBuE8yS6/JzHid6LQBlBmUcMqvqlC8G6T3fXVUkDppteEOP+yDh4xbBc01lDzIRCVhGxY9WwMCcPsChZhj+22ZX6di8frQoz8kNAIuQCFcUy7fJBtp16ZgAAA'); }
@@ -6040,6 +6096,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/21f13ce95a5bb538f9f889f7e14d2bbe.js"></script><script src="../pdp-assets/eba451ebc69badaff180160025d18a55.js"></script>
+<script src="../pdp-assets/90939fb569d274d2eb60535b0e118ca4.js"></script><script src="../pdp-assets/a86e2ff5ca0100f57bc191c46deadbba.js"></script>
 </body>
 </html>
