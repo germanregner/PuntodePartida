@@ -6,12 +6,21 @@
     {
       "id": "en-a2-u01-back-to-basics",
       "pagina": "en-a2-u01-back-to-basics.html",
-      "titulo": "A2 · U01 Back to Basics"
+      "titulo": "A2 · U01 Back to Basics",
+      "materia": "Inglés",
+      "dual": true,
+      "claveApp": "pdp_Back_to_Basics:_People_and_Routines",
+      "total": 260,
+      "icono": "pdp-assets/e1a38d81ce3c7f246d2cbd0fd851bdd5.png"
     },
     {
       "id": "en-lectura-casos-01",
       "pagina": "en-lectura-casos-01.html",
-      "titulo": "Club de lectura · 11 historias reales"
+      "titulo": "Club de lectura · 11 historias reales",
+      "materia": "Inglés",
+      "dual": true,
+      "claveApp": "pdp_Casos_reales",
+      "total": 44
     }
   ],
   "pruebas": [
@@ -19,7 +28,11 @@
       "id": "mundos-prueba",
       "pagina": "vista-previa/mundos.html",
       "titulo": "El mundo responde",
-      "descripcion": "Prototipo: tu respuesta se ejecuta en un mundo y ves qué pasa."
+      "descripcion": "Prototipo: tu respuesta se ejecuta en un mundo y ves qué pasa.",
+      "materia": "Inglés",
+      "claveApp": "pdp_El_mundo_responde",
+      "total": 7,
+      "icono": "pdp-assets/e1a38d81ce3c7f246d2cbd0fd851bdd5.png"
     }
   ]
 }

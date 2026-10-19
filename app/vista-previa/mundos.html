@@ -5149,6 +5149,11 @@ html #screen-exercise:has(.lec-wrap) .skip-btn{ bottom:calc(100% + 100px); }
   background:var(--pdp-bordo-grad) padding-box, var(--pdp-metal-fino) border-box; color:#FBEFD6; box-shadow:inset 0 1px 0 rgba(255,214,160,.28), 0 6px 14px rgba(110,34,10,.4); }
 #screen-map .pds-worlddetail-units-list .pcc-cta::before, #screen-map .pds-worlddetail-units-list .pcc-cta::after{ content:''; position:absolute; top:calc(50% - 8px); width:16px; height:16px; background:linear-gradient(135deg, #fff0b8, #d99b2a); clip-path:polygon(50% 0, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50%, 40% 40%); pointer-events:none; }
 #screen-map .pds-worlddetail-units-list .pcc-cta::before{ left:14px; } #screen-map .pds-worlddetail-units-list .pcc-cta::after{ right:14px; }
+/* rótulo de materia en «Mis Unidades» y selector de modo (2026-10-19) */
+.pdp-materia-rot{ margin:10px 4px -2px; font-size:13px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:#5a3a1c; text-shadow:0 1px 6px rgba(255,247,230,.9); }
+:root[data-theme="dark"] .pdp-materia-rot{ color:#F1DFAE; text-shadow:0 1px 8px rgba(0,0,0,.85); }
+.pdp-modo-ov .pds-btn-depth{ margin-top:12px; }
+.pdp-modo-sub{ margin:6px 0 4px; text-align:center; font-size:14.5px; color:#E6DABD; text-shadow:0 1px 8px rgba(0,0,0,.8); }
 /* ═══ fin «Mis Unidades» ═══ */
 /* ═══ «¿Quién es?» (2026-10-12): mismo fondo y brújula que las otras pantallas de perfiles; fondo de biblioteca luminosa en modo claro. Solo presentación (.pf2-elegir). ═══ */
 :root{ --pdp-elegir-bg-claro:url('../pdp-assets/4585cabe3461e2099b97e877976ddc17.webp'); --pdp-lq-elegir-claro:url('data:image/webp;base64,UklGRn4EAABXRUJQVlA4IHIEAABQEwCdASooAEcAPrVKnUonJCKhrvtqAOAWiWQAqSbtB5yReg5jg4b9x4Bc+Pzw3oU3qP9M+CS/79b08F69WIjXZZOPD1MocoKwu87UJDibplayrPefd5F6rFQXBokEEAJp75A6y9hpKNpYYcVLwu55/R6/if28j0Umi7+4G9babOa6Da8z2DRA9c8JJL0bfZl7Txkd6ywI6ZZhwzkGJBVzqTLwAP5klpWeJo4/kwuIss9UigF+bPdUjbZT7IW04fgH9GPFjB94NZzqfotPzk7EuQ0qY34B7+3hXXQL8wsRZUcRzPLEfnctlNx9GR67d291MoJG68kdNHh7O1VJdyCniiFrn9ORwOLflRAQiwIsAvmUbeEJS/oPRA7l1119fMP0BlyMoARDcCRqRxnNLM/0WHuKwL7XjilqXmbvMJdLF7MzsilWTHaDr6fjSdkG520fafCqP1hfwnJcnqMR7vVeSKX1lZeUtl47fBpATIUfhe2OVwYYnoBc4Gasq/icy+qnuWSz7LdA5Dp6MA3BaW1jAfOZJTMgf2vp9waAXtL37DweTdsntAWif0tF+tE9fLrG8sxicz8oMvTgdgHaRNG8Q04xdZdLLCZbzik8qds+2cmNDmNQ5n9IfAxkp1STmhO0DPmM+ZNQ3/05Ij+TZxTHxd/gpf8mCqHOlXwv7EliRWoIXfmC8hAORW9SlERVobD60nnSDksBIuT0hEfHsx7d8QA2eRs0MdjxUDGOdWN7cz8o0y+q4+6Ec4x04uv2lCpeqAE1stRJdnVZCzr7RNK0ejdA3PHEvOzd47+tIF3LEo8It6FAJOhst1p71LVmx/2A55nn1pdiUr3WYGV50M+XEl5Kg27Yv4T+lhCOaIG84oQ6xsHsvS8cJ5A6wnETJX9skjTrwsCqxIkFD4tBlXp9txAJeDJe2ZBklhOQnlE95YTqTQtiJeEp/dNvl5u/7nPNIYVwWC5yJ0uEeNDXEQhrfnWvyD/trppIgLe5klngosLCrzL0SB8OjHiaoo2k/XFzIwSDqnhC0OgRuXtuoNYPadnTJNV2bk0+oc3azUisevR9WBvZ3/73EeUzgF+XEWxQzf5STI/6WzDZF8W18DsgGZ+DfYrfsnn0Yq/3yFwRafeGvBmAHOxHc3XxEr0U/gjdhnHFZTzpuGYqSVLO8idxyv5koqP/LnlOi+/e1gHaBfxBIyKCgBCnu2ZrRck1i8G8+qF8O4h6gnstsy+My5+I0ZwoQ2gqBWZ7rcZHgbe1IQ0QwRKNgeHzKE7VwJPkle/nxZXsfpad172IjQOiW6rdnry6ZO0bAWn/fKLFEYPQkD/7Dc6F5GQop7FZgG6NQ1uqDSOf+QHdKeQ36TVIla4l89/4JFiOr2USfTV8s6Uc5Vx1VqLbU6NmBuE8yS6/JzHid6LQBlBmUcMqvqlC8G6T3fXVUkDppteEOP+yDh4xbBc01lDzIRCVhGxY9WwMCcPsChZhj+22ZX6di8frQoz8kNAIuQCFcUy7fJBtp16ZgAAA'); }
@@ -6033,7 +6038,7 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/5c5f674436f52c09b8e73ab5b7017f91.js"></script><script src="../pdp-assets/c07bb26accb852a16f74c539ae936839.js"></script>
+<script src="../pdp-assets/58fa94ca3a6206e5d9f527f602768469.js"></script><script src="../pdp-assets/580b53eca3e58f6da6d8f826dc4dc05d.js"></script>
 <script>/* Corredor de mundos (PdP) — v0.1 BORRADOR, 2026-10-19. Función pura: no toca el DOM.
  *
  * Un MUNDO es un dato (JSON). El alumno arma una JUGADA (qué pieza va en cada hueco). El corredor la EJECUTA sobre el mundo
@@ -6218,6 +6223,11 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
     '#exercise-input-area .mundo-wrap .word-chip.pick{background:var(--accent-gold);color:#1b1305;border-color:var(--accent-gold)}',
     /* diálogo: la conversación crece hacia abajo */
     '.mundo-hilo{display:flex;flex-direction:column;gap:8px}',
+    /* nada de lo que se va eligiendo queda por debajo del botón «Probalo» (aunque sea transparente): al llevar una burbuja o las opciones a la vista, se deja el alto del pie de pantalla */
+    '.mundo-hilo>*,.mundo-wrap .word-bank{scroll-margin-bottom:calc(var(--exercise-footer-h,115px) + var(--feedback-zone-h,0px) + 16px)}',
+    '.mundo-val.escribiendo::after{content:"";display:inline-block;width:2px;height:1em;margin-left:2px;vertical-align:-2px;background:var(--accent-gold);animation:mundo-cursor .6s steps(1) infinite}',
+    '@keyframes mundo-cursor{50%{opacity:0}}',
+    '@media (prefers-reduced-motion:reduce){.mundo-val.escribiendo::after{animation:none}}',
     '.mundo-burbuja{max-width:86%;padding:8px 12px;border-radius:16px;font-weight:700;font-size:14.5px;line-height:1.25;animation:mundo-entra .22s ease}',
     '.mundo-burbuja small{display:block;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);font-weight:700}',
     '.mundo-burbuja.leo{align-self:flex-start;background:var(--bg-card);border:1.5px solid var(--border);color:var(--text-primary);border-bottom-left-radius:4px}',
@@ -6263,6 +6273,14 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
       var e = res.estado[c.id]; if (!e) return;
       var r = fila(M, c.id); r.classList.add('on', 'is-live'); r.querySelector('.mundo-val').textContent = e.valor;
     });
+  }
+  /* EJECUCIÓN VISIBLE: al tocar «Probalo» el mundo escribe cada dato letra por letra (es lo que muestra que algo se ejecuta de verdad). Sin movimiento reducido. */
+  function escribir(r, texto) {
+    var v = r.querySelector('.mundo-val'); texto = String(texto);
+    if (RM) { v.textContent = texto; return Promise.resolve(); }
+    var i = 0, paso = Math.max(18, Math.min(48, 800 / Math.max(texto.length, 1)));
+    v.textContent = ''; v.classList.add('escribiendo');
+    return new Promise(function (ok) { (function t() { v.textContent = texto.slice(0, ++i); if (i < texto.length) setTimeout(t, paso); else { v.classList.remove('escribiendo'); ok(); } })(); });
   }
   function dice(M, quien, texto) {
     var d = M.area.querySelector('.mundo-dice'); if (!d) return;
@@ -6362,17 +6380,19 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
       limpiar(M);
       for (var i = 0; i < res.traza.length; i++) {
         var t = res.traza[i]; if (!t.campo || t.reemplazado) continue;
-        var r = fila(M, t.campo); r.classList.add('on', 'is-live'); r.querySelector('.mundo-val').textContent = t.valor; await sleep(RM ? 0 : 220);
+        var r = fila(M, t.campo); r.classList.add('on', 'is-live'); await escribir(r, t.valor); await sleep(RM ? 0 : 120);
       }
       await sleep(RM ? 0 : 380);
       pintarFinal(M, res);
     } else {
-      // Práctica: el efecto ya estaba a la vista; ahora el mundo marca el veredicto, de a una pieza, y el personaje reacciona
+      // Práctica: la vista previa dejó el efecto a la vista; ahora el mundo lo EJECUTA de verdad: vacía el tablero y escribe cada dato letra por letra, y marca el veredicto de a una pieza mientras el personaje reacciona
+      limpiar(M);
       for (var k = 0; k < res.traza.length; k++) {
         var s = res.traza[k]; if (s.estado === 'vacio') continue;
         var texto = null;
         if (s.estado === 'no-entendio') texto = (s.reaccion || (def.reacciones && def.reacciones['no-entendio'])) || null;
         else if (s.campo && !s.reemplazado) {
+          var rf = fila(M, s.campo); rf.classList.add('on', 'is-live'); await escribir(rf, s.valor);
           marcar(M, s.campo, s.estado === 'ok');
           texto = s.reaccion || (def.reacciones && def.reacciones[s.estado === 'sobra' ? 'sobra' : (s.estado === 'ok' ? 'ok' : 'distinto')]) || null;
         }
