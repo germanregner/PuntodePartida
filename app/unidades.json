@@ -12,11 +12,14 @@
       "id": "en-lectura-casos-01",
       "pagina": "en-lectura-casos-01.html",
       "titulo": "Club de lectura · 11 historias reales"
-    },
+    }
+  ],
+  "pruebas": [
     {
       "id": "mundos-prueba",
       "pagina": "vista-previa/mundos.html",
-      "titulo": "🧪 El mundo responde · prueba"
+      "titulo": "El mundo responde",
+      "descripcion": "Prototipo: tu respuesta se ejecuta en un mundo y ves qué pasa."
     }
   ]
 }
