@@ -4419,7 +4419,8 @@ html.pdp-lec-perg .lec-conimg .lec-body::first-letter{ float:left; font-family:v
 .pf-wrap.sy-remoto .pf-ev,.pf-wrap.sy-remoto .pf-pp,.pf-wrap.sy-remoto .pf-luego{display:none}
 /* Level Check en clase (2026-10-07): sin "Saltar" para los chicos; resultados con fichas neutras (nunca rojo); nota grande.
    «Saltar» existe SOLO en el modo prueba (2026-10-13) y ahí queda SIEMPRE, también en un Level Check y en un Skill Check (pedido del Director: para recorrer la Unidad al probarla). */
-html:not(.pdp-modo-prueba) #skip-btn{display:none!important}
+/* 2026-10-19 (pedido del Director): en el modo prueba «Saltar» se reemplaza por deslizar a la izquierda (pasa al ejercicio siguiente, como en la lectura); el botón ya no se muestra nunca. */
+#skip-btn{display:none!important}
 /* Lectura en modo prueba (2026-10-15, pedido del Director): «Saltar» caía encima de la flecha de seguir (.lec-btn.sig); en una pantalla de lectura sube para quedar sobre la fila de navegación. */
 html #screen-exercise:has(.lec-wrap) .skip-btn{ bottom:calc(100% + 100px); }
 .sy-chip{align-self:flex-start;font-size:12px;font-weight:800;letter-spacing:.04em;padding:3px 10px;border-radius:999px;border:1.5px solid var(--border);color:var(--text-secondary)}.sy-chip.bien{color:var(--celebrate);border-color:var(--celebrate)}.sy-chip.ayuda{color:#F59E0B;border-color:#F59E0B}.sy-chip.mal,.sy-chip.todavia{color:var(--text-secondary);border-color:var(--text-muted)}.sy-chip.pendiente{color:var(--text-muted);border-style:dashed}
@@ -5153,6 +5154,7 @@ html #screen-exercise:has(.lec-wrap) .skip-btn{ bottom:calc(100% + 100px); }
 .pdp-materia-rot{ margin:10px 4px -2px; font-size:13px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:#5a3a1c; text-shadow:0 1px 6px rgba(255,247,230,.9); }
 :root[data-theme="dark"] .pdp-materia-rot{ color:#F1DFAE; text-shadow:0 1px 8px rgba(0,0,0,.85); }
 .pdp-modo-ov .pds-btn-depth{ margin-top:12px; }
+#pdp-prueba-demos{ display:flex; flex-direction:column; gap:8px; }
 .pdp-modo-sub{ margin:6px 0 4px; text-align:center; font-size:14.5px; color:#E6DABD; text-shadow:0 1px 8px rgba(0,0,0,.8); }
 /* ═══ fin «Mis Unidades» ═══ */
 /* ═══ «¿Quién es?» (2026-10-12): mismo fondo y brújula que las otras pantallas de perfiles; fondo de biblioteca luminosa en modo claro. Solo presentación (.pf2-elegir). ═══ */
@@ -6038,6 +6040,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/165d320ce0dd6f82feec1545fa89cb4c.js"></script><script src="../pdp-assets/010368d8444b25fa7cf27bef21d1311e.js"></script>
+<script src="../pdp-assets/f721e69f62cda3290315b507903f4edf.js"></script><script src="../pdp-assets/0bc647db820ddd51af4aaddf0b4908be.js"></script>
 </body>
 </html>
