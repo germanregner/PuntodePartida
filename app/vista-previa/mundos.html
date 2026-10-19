@@ -6040,7 +6040,7 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/c23e6c5a6d5485c1b0c1c43acd61f224.js"></script><script src="../pdp-assets/4592d93422e2f5b3e09d72adb6c61db3.js"></script>
+<script src="../pdp-assets/b5712f08caf5b1d704acae41a7bd1287.js"></script><script src="../pdp-assets/4592d93422e2f5b3e09d72adb6c61db3.js"></script>
 <script>/* Corredor de mundos (PdP) — v0.1 BORRADOR, 2026-10-19. Función pura: no toca el DOM.
  *
  * Un MUNDO es un dato (JSON). El alumno arma una JUGADA (qué pieza va en cada hueco). El corredor la EJECUTA sobre el mundo
@@ -6234,6 +6234,11 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
     '.mundo-burbuja small{display:block;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);font-weight:700}',
     '.mundo-burbuja.leo{align-self:flex-start;background:var(--bg-card);border:1.5px solid var(--border);color:var(--text-primary);border-bottom-left-radius:4px}',
     '.mundo-burbuja.yo{align-self:flex-end;background:var(--accent-gold);border:1.5px solid var(--accent-gold);color:#1b1305;border-bottom-right-radius:4px;cursor:pointer;font-family:inherit;text-align:left}',
+    /* lo que se armó y NO era lo correcto queda marcado (ámbar, sin relleno, borde punteado): es lo que hay que tocar para corregirlo. Nunca rojo. */
+    '.mundo-burbuja.yo.mal{background:transparent;border:2px dashed var(--warning);color:var(--warning-text,var(--warning))}',
+    '.mundo-burbuja.yo.mal small{color:var(--warning-text,var(--warning))}',
+    '.mundo-burbuja.yo.mal::after{content:" \\270E\\FE0E";font-weight:800}',
+    '#exercise-input-area .mundo-wrap .word-chip.pick.mal{background:transparent;color:var(--warning-text,var(--warning));border:2px dashed var(--warning)}',
     '.mundo-opciones{display:flex;flex-direction:column;gap:6px;align-self:stretch;padding-left:18px}',
     '#exercise-input-area .mundo-opciones .option-btn{min-height:38px;padding:5px 12px;font-size:14px}',
     '@keyframes mundo-entra{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}',
@@ -6308,8 +6313,8 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
       var elegido = M.jugada[h.id];
       if (elegido) {
         var y = el('button', 'mundo-burbuja yo', '<small>' + esc(def.escena.hablante) + '</small>' + esc(pieza(M, elegido).texto)); y.type = 'button';
-        y.setAttribute('aria-label', 'Cambiar esta respuesta');
-        y.onclick = function () { if (M.corriendo || state.answered) return; delete M.jugada[h.id]; vivo(M); actualizar(); pintarHilo(M, true); };   // tocar una respuesta la deshace y vuelve a la pregunta
+        y.setAttribute('aria-label', M.malos[h.id] ? 'Respuesta para corregir: tocala para cambiarla' : 'Cambiar esta respuesta'); if (M.malos[h.id]) y.classList.add('mal');
+        y.onclick = function () { if (M.corriendo || state.answered) return; delete M.jugada[h.id]; delete M.malos[h.id]; vivo(M); actualizar(); pintarHilo(M, true); };   // tocar una respuesta la deshace y vuelve a la pregunta
         hilo.appendChild(y); ultimo = y;
       } else {
         var o = el('div', 'mundo-opciones'); o.dataset.h = h.id;
@@ -6324,19 +6329,19 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
     if (avisar && ultimo && ultimo.scrollIntoView) ultimo.scrollIntoView({ block: 'nearest', behavior: RM ? 'auto' : 'smooth' });   // la conversación baja sola
   }
   function pintarArmado(M) {
-    if (comun(M.def)) Array.prototype.forEach.call(M.area.querySelectorAll('.word-bank .word-chip'), function (c) { var on = M.picks.indexOf(c.dataset.pid) > -1; c.classList.toggle('pick', on); c.setAttribute('aria-pressed', String(on)); });
+    if (comun(M.def)) Array.prototype.forEach.call(M.area.querySelectorAll('.word-bank .word-chip'), function (c) { var on = M.picks.indexOf(c.dataset.pid) > -1; c.classList.toggle('pick', on); c.classList.toggle('mal', on && !!M.malos[c.dataset.pid]); c.setAttribute('aria-pressed', String(on)); });
     else pintarHilo(M, false);
   }
   function elegirPieza(M, pid) {
     var i = M.picks.indexOf(pid);
-    if (i > -1) { M.picks.splice(i, 1); dice(M, '', M.def.consigna.banner); }
+    if (i > -1) { M.picks.splice(i, 1); delete M.malos[pid]; dice(M, '', M.def.consigna.banner); }
     else { if (M.picks.length >= M.def.huecos.length) return; M.picks.push(pid); dice(M, M.def.escena.hablante, pieza(M, pid).texto); }
     pintarArmado(M); vivo(M); actualizar();
   }
 
   /* ───────── render (todo lo que va dentro de #exercise-input-area) ───────── */
   function renderMundo(ex, area) {
-    var def = ex.mundo, M = state.mundo = { def: def, ex: ex, area: area, picks: [], jugada: {}, corriendo: false };
+    var def = ex.mundo, M = state.mundo = { def: def, ex: ex, area: area, picks: [], jugada: {}, corriendo: false, malos: {} };   // malos: lo que se armó y no era correcto (hueco → true en el diálogo; pieza → true en los demás)
     state.mundoLogrado = false;
     var esc_ = def.escena, wrap = el('div', 'mundo-wrap'), sc = ex.role === 'skill_check';
     var escena = el('div', 'mundo-escena'); if (ex.avatar) escena.style.backgroundImage = 'url(' + ex.avatar + ')';
@@ -6404,6 +6409,13 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
       }
       res.diferencias.faltan.forEach(function (id) { var r = fila(M, id); r.classList.add('is-miss'); r.querySelector('.mundo-mark').textContent = '?'; });
     }
+    // lo que se armó y no era correcto queda marcado donde se armó (la burbuja o la pastilla), para saber qué tocar al corregir
+    M.malos = {};
+    res.traza.forEach(function (s) {
+      if (s.estado === 'vacio') return;
+      if (s.estado === 'no-entendio' || s.reemplazado || (s.campo && s.estado !== 'ok')) { if (comun(def)) M.malos[s.pieza] = true; else M.malos[s.hueco] = true; }
+    });
+    pintarArmado(M);
     var msg = R.mensaje(def, res);
     if (!res.logrado) { M.ex.feedbackWrong = msg.texto; try { var cur = getActiveExercises(state.currentModule)[state.currentExerciseIndex]; if (cur) cur.feedbackWrong = msg.texto; } catch (e) {} }
     M.corriendo = false;
