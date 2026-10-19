@@ -12,6 +12,11 @@
       "id": "en-lectura-casos-01",
       "pagina": "en-lectura-casos-01.html",
       "titulo": "Club de lectura · 11 historias reales"
+    },
+    {
+      "id": "mundos-prueba",
+      "pagina": "vista-previa/mundos.html",
+      "titulo": "🧪 El mundo responde · prueba"
     }
   ]
 }
