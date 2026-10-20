@@ -5211,6 +5211,30 @@ html #screen-exercise:has(.lec-wrap) .skip-btn{ bottom:calc(100% + 100px); }
 @media (prefers-reduced-motion:reduce){.mundo-burbuja{animation:none}}
 /* teléfonos bajos (≈ 740 px o menos): un punto más de compactación */
 @media (max-height:760px){.mundo-escena{height:84px}.mundo-celda{min-height:30px}#exercise-input-area .mundo-wrap .word-chip{min-height:30px;font-size:13px;padding:2px 9px}#exercise-input-area .mundo-opciones .option-btn{min-height:34px}}
+/* Estilos de presentación de las piezas del mundo (2026-10-19, pedido del Director: «las opciones no están estéticamente visibles y la letra es un poco chica»). Se elige en el 🧪 (Estilo de las piezas);
+   sin elegir, queda «compacto» (el de siempre). Solo cambian tamaño y aspecto de pastillas, opciones, burbujas y tablero: los datos y el comportamiento son los mismos. Solo tokens var(--*). */
+html[data-mundo-estilo="grande"] #exercise-input-area .mundo-wrap .word-bank{gap:8px;padding:10px}
+html[data-mundo-estilo="grande"] #exercise-input-area .mundo-wrap .word-chip{min-height:44px;padding:7px 14px;font-size:16.5px;font-weight:700;line-height:1.2;border-radius:14px}
+html[data-mundo-estilo="grande"] #exercise-input-area .mundo-opciones .option-btn{min-height:48px;padding:8px 14px;font-size:16.5px;font-weight:700;border-radius:14px}
+html[data-mundo-estilo="grande"] .mundo-burbuja{font-size:16.5px;padding:10px 14px}
+html[data-mundo-estilo="grande"] .mundo-et-in{font-size:15.5px}html[data-mundo-estilo="grande"] .mundo-et-in small{font-size:12px}
+html[data-mundo-estilo="grande"] .mundo-val{font-size:17px;min-height:21px}html[data-mundo-estilo="grande"] .mundo-pista{font-size:12px}
+html[data-mundo-estilo="grande"] .mundo-tabla th{font-size:13.5px}html[data-mundo-estilo="grande"] .mundo-celda{min-height:38px}
+html[data-mundo-estilo="tarjetas"] #exercise-input-area .mundo-wrap .word-bank{flex-direction:column;flex-wrap:nowrap;gap:8px;padding:10px}
+html[data-mundo-estilo="tarjetas"] #exercise-input-area .mundo-wrap .word-chip{flex:0 0 auto;width:100%;min-height:46px;padding:9px 14px 9px 16px;text-align:left;font-size:16.5px;font-weight:700;line-height:1.2;border-radius:12px;border-width:1.5px;border-left-width:6px;border-left-color:var(--accent-gold);box-shadow:0 2px 6px rgba(0,0,0,.28)}
+html[data-mundo-estilo="tarjetas"] #exercise-input-area .mundo-wrap .word-chip.pick{border-left-color:var(--bg-card);box-shadow:0 0 0 2px var(--accent-gold),0 2px 8px rgba(0,0,0,.3)}
+html[data-mundo-estilo="tarjetas"] #exercise-input-area .mundo-opciones .option-btn{min-height:50px;padding:10px 14px 10px 16px;text-align:left;font-size:16.5px;font-weight:700;border-radius:12px;border-left-width:6px;border-left-color:var(--accent-gold);box-shadow:0 2px 6px rgba(0,0,0,.28)}
+html[data-mundo-estilo="tarjetas"] .mundo-burbuja{font-size:16.5px;padding:10px 14px}
+html[data-mundo-estilo="tarjetas"] .mundo-val{font-size:17px;min-height:21px}html[data-mundo-estilo="tarjetas"] .mundo-et-in{font-size:15.5px}
+html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap .word-bank{gap:9px;padding:12px;border:1.5px solid var(--accent-gold);border-radius:16px;background:linear-gradient(180deg,var(--bg-card),var(--bg-section))}
+html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap .word-chip{min-height:46px;padding:7px 15px;font-family:var(--font-heading,inherit);font-size:17px;font-weight:700;line-height:1.2;border-radius:12px;border:2px solid var(--accent-gold);background:linear-gradient(180deg,var(--bg-card),var(--bg-section));box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 2px 0 rgba(0,0,0,.35)}
+html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap .word-chip.pick{background:linear-gradient(180deg,var(--accent-gold-light,var(--accent-gold)),var(--accent-gold));color:#1b1305;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 1px 0 rgba(0,0,0,.4)}
+html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-opciones .option-btn{min-height:50px;padding:9px 15px;font-family:var(--font-heading,inherit);font-size:17px;font-weight:700;border-radius:12px;border:2px solid var(--accent-gold);box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 2px 0 rgba(0,0,0,.35)}
+html[data-mundo-estilo="pergamino"] .mundo-burbuja{font-family:var(--font-heading,inherit);font-size:17px;padding:10px 15px}
+html[data-mundo-estilo="pergamino"] .mundo-val{font-family:var(--font-heading,inherit);font-size:17.5px;min-height:22px}html[data-mundo-estilo="pergamino"] .mundo-et-in{font-size:15.5px}
+/* lo mal armado sigue en ámbar punteado en cualquier estilo */
+html[data-mundo-estilo] #exercise-input-area .mundo-wrap .word-chip.pick.mal{background:transparent;color:var(--warning-text,var(--warning));border:2px dashed var(--warning);box-shadow:none}
+html[data-mundo-estilo] .mundo-burbuja.yo.mal{background:transparent;border:2px dashed var(--warning);color:var(--warning-text,var(--warning))}
 /* ═══ fin MUNDO ═══ */
 /* ═══ fin «Mis Unidades» ═══ */
 /* ═══ «¿Quién es?» (2026-10-12): mismo fondo y brújula que las otras pantallas de perfiles; fondo de biblioteca luminosa en modo claro. Solo presentación (.pf2-elegir). ═══ */
@@ -6096,6 +6120,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/42d7fbd5bfbc2cea0dcb309693863aa2.js"></script><script src="../pdp-assets/2dbed03a0b93b7357e1b2fd30d68a732.js"></script>
+<script src="../pdp-assets/40b76bfab426ec833e453d3c42eeddcc.js"></script><script src="../pdp-assets/4a1ccb98b77448d5a821807b309e266a.js"></script>
 </body>
 </html>
