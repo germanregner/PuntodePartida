@@ -5226,12 +5226,18 @@ html[data-mundo-estilo="tarjetas"] #exercise-input-area .mundo-wrap .word-chip.p
 html[data-mundo-estilo="tarjetas"] #exercise-input-area .mundo-opciones .option-btn{min-height:50px;padding:10px 14px 10px 16px;text-align:left;font-size:16.5px;font-weight:700;border-radius:12px;border-left-width:6px;border-left-color:var(--accent-gold);box-shadow:0 2px 6px rgba(0,0,0,.28)}
 html[data-mundo-estilo="tarjetas"] .mundo-burbuja{font-size:16.5px;padding:10px 14px}
 html[data-mundo-estilo="tarjetas"] .mundo-val{font-size:17px;min-height:21px}html[data-mundo-estilo="tarjetas"] .mundo-et-in{font-size:15.5px}
-html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap .word-bank{gap:9px;padding:12px;border:1.5px solid var(--accent-gold);border-radius:16px;background:linear-gradient(180deg,var(--bg-card),var(--bg-section))}
-html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap .word-chip{min-height:46px;padding:7px 15px;font-family:var(--font-heading,inherit);font-size:17px;font-weight:700;line-height:1.2;border-radius:12px;border:2px solid var(--accent-gold);background:linear-gradient(180deg,var(--bg-card),var(--bg-section));box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 2px 0 rgba(0,0,0,.35)}
+html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap .word-bank{gap:5px;padding:7px;border:1.5px solid var(--accent-gold);border-radius:16px;background:linear-gradient(180deg,var(--bg-card),var(--bg-section))}
+html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap .word-chip{min-height:40px;padding:4px 13px;font-family:var(--font-heading,inherit);font-size:16.5px;font-weight:700;line-height:1.15;border-radius:12px;border:2px solid var(--accent-gold);background:linear-gradient(180deg,var(--bg-card),var(--bg-section));box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 2px 0 rgba(0,0,0,.35)}
 html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap .word-chip.pick{background:linear-gradient(180deg,var(--accent-gold-light,var(--accent-gold)),var(--accent-gold));color:#1b1305;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 1px 0 rgba(0,0,0,.4)}
 html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-opciones .option-btn{min-height:50px;padding:9px 15px;font-family:var(--font-heading,inherit);font-size:17px;font-weight:700;border-radius:12px;border:2px solid var(--accent-gold);box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 2px 0 rgba(0,0,0,.35)}
 html[data-mundo-estilo="pergamino"] .mundo-burbuja{font-family:var(--font-heading,inherit);font-size:17px;padding:10px 15px}
-html[data-mundo-estilo="pergamino"] .mundo-val{font-family:var(--font-heading,inherit);font-size:17.5px;min-height:22px}html[data-mundo-estilo="pergamino"] .mundo-et-in{font-size:15.5px}
+html[data-mundo-estilo="pergamino"] .mundo-val{font-family:var(--font-heading,inherit);font-size:17px;min-height:20px;display:inline-block}html[data-mundo-estilo="pergamino"] .mundo-et-in{font-size:15.5px}
+/* pergamino: la pista de la fila va al lado del valor (no debajo): cada fila del tablero ocupa una línea y todo entra en la pantalla (decisión del Director: elegir sin desplazarse) */
+html[data-mundo-estilo="pergamino"] .mundo-celda>div:first-child{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 9px;min-width:0}
+html[data-mundo-estilo="pergamino"] .mundo-pista{display:inline;font-size:12px}
+html[data-mundo-estilo="pergamino"] .mundo-celda{min-height:29px}
+html[data-mundo-estilo="pergamino"] .mundo-escena{height:86px}
+@media (max-height:760px){html[data-mundo-estilo="pergamino"] .mundo-celda{min-height:27px}html[data-mundo-estilo="pergamino"] .mundo-escena{height:72px}html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap .word-chip{min-height:38px;font-size:15.5px;padding:3px 11px}html[data-mundo-estilo="pergamino"] .mundo-val{font-size:16px}}
 /* lo mal armado sigue en ámbar punteado en cualquier estilo */
 html[data-mundo-estilo] #exercise-input-area .mundo-wrap .word-chip.pick.mal{background:transparent;color:var(--warning-text,var(--warning));border:2px dashed var(--warning);box-shadow:none}
 html[data-mundo-estilo] .mundo-burbuja.yo.mal{background:transparent;border:2px dashed var(--warning);color:var(--warning-text,var(--warning))}
@@ -6120,6 +6126,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/91944a6dc6ae3cce0016092c84346c87.js"></script><script src="../pdp-assets/4a1ccb98b77448d5a821807b309e266a.js"></script>
+<script src="../pdp-assets/c88621fd4d9d0139b31d6aca6394b0a6.js"></script><script src="../pdp-assets/a6a7af29167e8fc6905238aa2a373249.js"></script>
 </body>
 </html>
