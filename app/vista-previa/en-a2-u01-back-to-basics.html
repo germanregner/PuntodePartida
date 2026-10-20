@@ -5300,6 +5300,14 @@ html[data-var-zonas-estetica="colores"] .mundo-zona:nth-child(2){background:colo
 html[data-var-zonas-estetica="colores"] .mundo-zona:nth-child(3){background:color-mix(in srgb,#ffb03d 26%,var(--bg-card));border-color:#ffb03d}
 html[data-var-zonas-estetica="colores"] .mundo-zona:nth-child(4){background:color-mix(in srgb,#c07bff 24%,var(--bg-card));border-color:#c07bff}
 html[data-var-zonas-estetica="colores"] .mundo-zona.espera,html[data-var-zonas-estetica="colores"] .mundo-zona.limbo{background:color-mix(in srgb,var(--bg-card) 62%,transparent)}
+/* Imágenes opcionales de los mundos (2026-10-20): campos[].img (retrato u objeto, redondo) y zonas[].img (fondo del lugar). Si no hay imagen, rige el emoji de siempre. */
+.mundo-ficha-c img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+.mundo-et-img{width:22px;height:22px;border-radius:50%;object-fit:cover;vertical-align:middle;margin:-3px 5px -3px 0;border:1.5px solid var(--accent-gold)}
+@media (max-height:760px){.mundo-et-img{width:19px;height:19px;margin-right:4px}}
+.mundo-zona.con-img{background:linear-gradient(180deg,rgba(0,0,0,.04) 30%,rgba(0,0,0,.55)),var(--zona-img) center/cover no-repeat;border-color:var(--accent-gold)}
+.mundo-zona.con-img .mundo-zona-ico{display:none}
+.mundo-zona.con-img .mundo-zona-et{color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.8)}
+.mundo-zona.con-img .mundo-ficha{background:color-mix(in srgb,var(--bg-card) 88%,transparent);border-radius:10px;padding:2px 3px}
 /* ═══ fin MUNDO ═══ */
 /* ═══ fin «Mis Unidades» ═══ */
 /* ═══ «¿Quién es?» (2026-10-12): mismo fondo y brújula que las otras pantallas de perfiles; fondo de biblioteca luminosa en modo claro. Solo presentación (.pf2-elegir). ═══ */
@@ -6184,6 +6192,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/ec6c4688830520393159ad507070da0b.js"></script><script src="../pdp-assets/f0fdd8ad5b9b16a8e6073e3a027c403b.js"></script>
+<script src="../pdp-assets/71f9a467ada0dad547acfbec23629054.js"></script><script src="../pdp-assets/67a4515514ab3c4fce314bccd2e95c94.js"></script>
 </body>
 </html>
