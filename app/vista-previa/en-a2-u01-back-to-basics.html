@@ -5308,6 +5308,13 @@ html[data-var-zonas-estetica="colores"] .mundo-zona.espera,html[data-var-zonas-e
 .mundo-zona.con-img .mundo-zona-ico{display:none}
 .mundo-zona.con-img .mundo-zona-et{color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.8)}
 .mundo-zona.con-img .mundo-ficha{background:color-mix(in srgb,var(--bg-card) 88%,transparent);border-radius:10px;padding:2px 3px}
+/* Agenda: foto vertical al costado, dentro del tablero fijo (2026-10-20) */
+.mundo-wrap.foto-lado>.mundo-tabla-fija{order:1}.mundo-wrap.foto-lado>.mundo-dice{order:2;position:static;max-width:none;border-radius:14px}.mundo-wrap.foto-lado>.word-bank{order:3}
+.mundo-tabla-fija.con-foto{display:grid;grid-template-columns:84px minmax(0,1fr);overflow:hidden;background:var(--bg-card)}
+.mundo-tabla-fija.con-foto>.mundo-escena{height:auto;min-height:100%;align-self:stretch;border:0;border-right:1.5px solid var(--accent-gold);border-radius:var(--radius-md) 0 0 var(--radius-md);background-position:50% 30%}
+.mundo-tabla-fija.con-foto>.mundo-escena .quien{left:50%;transform:translateX(-50%);bottom:6px;font-size:11px}
+.mundo-tabla-fija.con-foto .mundo-tabla{min-width:0}
+@media (max-height:760px){.mundo-tabla-fija.con-foto{grid-template-columns:54px minmax(0,1fr)}.mundo-tabla-fija.con-foto .mundo-pista{font-size:12px}.mundo-tabla-fija.con-foto .mundo-et-in{font-size:13.5px}.mundo-tabla-fija.con-foto>.mundo-escena .quien{font-size:9px;padding:1px 6px}.mundo-wrap.foto-lado>.mundo-dice{padding:4px 10px;min-height:0;font-size:12.5px}}
 /* ═══ fin MUNDO ═══ */
 /* ═══ fin «Mis Unidades» ═══ */
 /* ═══ «¿Quién es?» (2026-10-12): mismo fondo y brújula que las otras pantallas de perfiles; fondo de biblioteca luminosa en modo claro. Solo presentación (.pf2-elegir). ═══ */
@@ -6192,6 +6199,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/71f9a467ada0dad547acfbec23629054.js"></script><script src="../pdp-assets/67a4515514ab3c4fce314bccd2e95c94.js"></script>
+<script src="../pdp-assets/372e34390c6ccbb5662235bf2f473b5d.js"></script><script src="../pdp-assets/e921999ac8755b0b4c38df34bcb6e377.js"></script>
 </body>
 </html>
