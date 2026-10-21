@@ -33,6 +33,16 @@
       "claveApp": "pdp_El_mundo_responde",
       "total": 15,
       "icono": "pdp-assets/e1a38d81ce3c7f246d2cbd0fd851bdd5.png"
+    },
+    {
+      "id": "galeria-mundos",
+      "pagina": "vista-previa/galeria-mundos.html",
+      "titulo": "Galería de mundos",
+      "materia": "Inglés",
+      "descripcion": "Prototipo: tu respuesta se ejecuta en un mundo y ves qué pasa.",
+      "claveApp": "pdp_Galería_de_mundos",
+      "total": 18,
+      "icono": "pdp-assets/e1a38d81ce3c7f246d2cbd0fd851bdd5.png"
     }
   ]
 }
