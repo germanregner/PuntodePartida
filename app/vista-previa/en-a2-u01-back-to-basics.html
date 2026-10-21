@@ -5376,17 +5376,6 @@ html[data-var-zonas-estetica="colores"] .mundo-zona.espera,html[data-var-zonas-e
 .ml-slot.is-miss .ml-pal{border-color:var(--warning);border-style:dashed}
 .ml-aviso{min-height:20px;margin-top:8px;padding-top:7px;border-top:1px solid var(--border);color:var(--warning-text,var(--warning));font:700 13px/1.3 var(--font-body,inherit)}
 .ml-aviso:empty::before{content:"El analizador marca dónde la frase deja de concordar.";color:var(--text-muted);font-weight:600}
-.mundo-cuerdas.con-marco{--k:.32;padding:0;background:transparent;border-radius:0;border-style:solid;border-color:transparent;border-width:calc(185px*var(--k)) calc(140px*var(--k)) calc(232px*var(--k)) calc(150px*var(--k));border-image-source:var(--marco-img);border-image-slice:79 96 131 102;border-image-width:calc(185px*var(--k)) calc(140px*var(--k)) calc(232px*var(--k)) calc(150px*var(--k));border-image-repeat:stretch;box-sizing:content-box;margin:0 0 -4px}
-.mundo-cuerdas.con-marco .mundo-cuerdas-cols{gap:0;grid-template-columns:minmax(0,1fr) minmax(40px,.4fr) minmax(0,1fr)}
-.mundo-cuerdas.con-marco .mundo-cuerdas-col{gap:14px}
-.mundo-cuerdas.con-marco .mundo-cuerdas-rot{height:calc(70px*var(--k)*1.5);min-height:30px;display:grid;place-items:center;background:var(--cartel-img) center/100% 100% no-repeat;color:#2a1d0a;font-size:12px;font-weight:800;line-height:1;letter-spacing:.04em;white-space:nowrap;text-transform:uppercase;margin:0 0 4px;padding:0 10px}
-.mundo-cuerdas.con-marco .mundo-cuerda-it{min-height:56px;padding:4px 5px 4px 4px;gap:5px;background:rgba(10,12,20,.78);color:#fff;border-radius:12px;font:700 12px/1.1 var(--font-heading,inherit);box-shadow:0 2px 6px rgba(0,0,0,.4)}
-.mundo-cuerdas.con-marco .mundo-cuerda-it.der{flex-direction:row}
-.mundo-cuerdas.con-marco .ci-img{width:40px;height:40px;border-radius:7px;object-fit:cover;object-position:50% 25%;flex:none}
-.mundo-cuerdas.con-marco .mundo-cuerda-it.izq::after,.mundo-cuerdas.con-marco .mundo-cuerda-it.der::before{background:var(--accent-gold);border-color:#fff3c9}
-.mundo-cuerdas.con-marco .cuerda .c-base{filter:drop-shadow(0 0 4px var(--accent-gold))}
-.mundo-cuerdas.con-marco .cuerda.ok .c-base{filter:drop-shadow(0 0 7px var(--feedback-correct))}
-@media (max-height:760px){.mundo-cuerdas.con-marco .mundo-cuerda-it{min-height:46px;font-size:11px}.mundo-cuerdas.con-marco .ci-img{width:32px;height:32px}.mundo-cuerdas.con-marco .mundo-cuerdas-col{gap:9px}}
 /* ARCOS (2026-10-21): dos arcos de piedra con una escena detrás, zona punteada abajo y banco de tarjetas. Solo tokens var(--*); el marco es la ilustración del Director (PNG con transparencia). */
 .mundo-wrap.tiene-arcos{display:grid;grid-template-columns:54px minmax(0,1fr);grid-template-areas:"av dice" "cuenta cuenta" "arcos arcos" "banco banco";column-gap:10px;row-gap:6px;align-items:center}
 .mundo-wrap.tiene-arcos>.mundo-escena{grid-area:av;width:54px;height:54px;border-radius:50%;border:2.5px solid var(--accent-gold);background-position:50% 20%}
@@ -5434,8 +5423,8 @@ html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .wor
 .arco.oro .arco-suelta{left:calc(84px*var(--k));right:calc(84px*var(--k));bottom:calc(var(--zs-b)*1px*var(--k));min-height:46px;padding:2px;gap:2px;justify-content:flex-end}
 @media (max-height:760px){.mundo-arcos.n3 .arco.oro{--arco-h:200px}}
 /* MARCO de las cuerdas (2026-10-21, diseño del Director): marco de piedra con hiedra y faroles, carteles dorados, elementos con imagen y cuerdas que brillan. El marco se estira solo hacia los lados de piedra (la altura la manda el contenido). */
-.mundo-cuerdas.con-marco{--k:.32;padding:0;background:transparent;border-radius:0;border-style:solid;border-color:transparent;border-width:calc(185px*var(--k)) calc(140px*var(--k)) calc(232px*var(--k)) calc(150px*var(--k));border-image-source:var(--marco-img);border-image-slice:79 96 131 102;border-image-width:calc(185px*var(--k)) calc(140px*var(--k)) calc(232px*var(--k)) calc(150px*var(--k));border-image-repeat:stretch;box-sizing:content-box;margin:0 0 -4px}
-.mundo-cuerdas.con-marco .mundo-cuerdas-cols{gap:0;grid-template-columns:minmax(0,1fr) minmax(40px,.4fr) minmax(0,1fr)}
+.mundo-cuerdas.con-marco{--k:.32;--kx:.82;padding:0;background:transparent;border-radius:0;border-style:solid;border-color:transparent;border-width:calc(185px*var(--k)) calc(140px*var(--k)*var(--kx)) calc(232px*var(--k)) calc(150px*var(--k)*var(--kx));border-image-source:var(--marco-img);border-image-slice:79 96 131 102;border-image-width:calc(185px*var(--k)) calc(140px*var(--k)*var(--kx)) calc(232px*var(--k)) calc(150px*var(--k)*var(--kx));border-image-repeat:stretch;box-sizing:content-box;margin:0 -9px -4px}
+.mundo-cuerdas.con-marco .mundo-cuerdas-cols{gap:0;grid-template-columns:minmax(0,1fr) minmax(60px,.62fr) minmax(0,1fr)}
 .mundo-cuerdas.con-marco .mundo-cuerdas-col{gap:14px}
 .mundo-cuerdas.con-marco .mundo-cuerdas-rot{height:calc(70px*var(--k)*1.5);min-height:30px;display:grid;place-items:center;background:var(--cartel-img) center/100% 100% no-repeat;color:#2a1d0a;font-size:12px;font-weight:800;line-height:1;letter-spacing:.04em;white-space:nowrap;text-transform:uppercase;margin:0 0 4px;padding:0 10px}
 .mundo-cuerdas.con-marco .mundo-cuerda-it{min-height:56px;padding:4px 5px 4px 4px;gap:5px;background:rgba(10,12,20,.78);color:#fff;border-radius:12px;font:700 12px/1.1 var(--font-heading,inherit);box-shadow:0 2px 6px rgba(0,0,0,.4)}
@@ -6359,6 +6348,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/2f5166140350599e07961c471bdd1d78.js"></script><script src="../pdp-assets/b3ad428c6bb2383b2bfe2b590d8ccf2f.js"></script>
+<script src="../pdp-assets/402dc8f0961ad81fb2f7a44ea0749f0a.js"></script><script src="../pdp-assets/b3ad428c6bb2383b2bfe2b590d8ccf2f.js"></script>
 </body>
 </html>
