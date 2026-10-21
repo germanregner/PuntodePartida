@@ -5366,6 +5366,33 @@ html[data-var-zonas-estetica="colores"] .mundo-zona.espera,html[data-var-zonas-e
 .ml-aviso{min-height:20px;margin-top:8px;padding-top:7px;border-top:1px solid var(--border);color:var(--warning-text,var(--warning));font:700 13px/1.3 var(--font-body,inherit)}
 .ml-aviso:empty::before{content:"El analizador marca dónde la frase deja de concordar.";color:var(--text-muted);font-weight:600}
 @media (max-height:760px){.ml-pal{min-height:30px;font-size:15px}.mundo-linea{padding:8px 10px}}
+/* ARCOS (2026-10-21): dos arcos de piedra con una escena detrás, zona punteada abajo y banco de tarjetas. Solo tokens var(--*); el marco es la ilustración del Director (PNG con transparencia). */
+.mundo-wrap.tiene-arcos{display:grid;grid-template-columns:54px minmax(0,1fr);grid-template-areas:"av dice" "cuenta cuenta" "arcos arcos" "banco banco";column-gap:10px;row-gap:6px;align-items:center}
+.mundo-wrap.tiene-arcos>.mundo-escena{grid-area:av;width:54px;height:54px;border-radius:50%;border:2.5px solid var(--accent-gold);background-position:50% 20%}
+.mundo-wrap.tiene-arcos>.mundo-escena .quien{display:none}
+.mundo-wrap.tiene-arcos>.mundo-dice{grid-area:dice;position:static;max-width:none;border-radius:14px;padding:6px 12px;min-height:0;background:rgba(14,18,30,.92);color:#fff;border-color:rgba(255,255,255,.12)}
+.mundo-wrap.tiene-arcos>.mundo-dice small{color:var(--accent-gold)}
+.mundo-wrap.tiene-arcos>.mundo-tabla-fija{display:none}
+.mundo-wrap.tiene-arcos>.mundo-cuenta{grid-area:cuenta;font-size:12px;font-weight:700;color:var(--text-primary);padding:0 4px;line-height:1.25;text-shadow:0 1px 2px rgba(255,255,255,.25)}
+.mundo-wrap.tiene-arcos>.mundo-arcos{grid-area:arcos}
+.mundo-wrap.tiene-arcos>.word-bank{grid-area:banco}
+.mundo-arcos{--k:.47;display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.arco{position:relative;height:var(--arco-h,300px)}
+.arco-fondo{position:absolute;left:calc(70px*var(--k));right:calc(66px*var(--k));top:calc(130px*var(--k));bottom:calc(122px*var(--k));background:var(--fondo) center/cover no-repeat;border-radius:999px 999px 0 0;filter:saturate(1.05)}
+.arco-marco{position:absolute;inset:0;border-style:solid;border-width:calc(200px*var(--k)) calc(62px*var(--k)) calc(130px*var(--k)) calc(70px*var(--k));border-image-source:var(--marco);border-image-slice:200 62 130 70;border-image-width:calc(200px*var(--k)) calc(62px*var(--k)) calc(130px*var(--k)) calc(70px*var(--k));border-image-repeat:stretch;pointer-events:none;box-sizing:border-box;z-index:2}
+.arco-et{position:absolute;z-index:3;left:calc(62px*var(--k));right:calc(62px*var(--k));top:calc(98px*var(--k));height:calc(68px*var(--k));display:grid;place-items:center;font:700 clamp(12px,3.4vw,15px)/1.1 var(--font-heading,inherit);color:#2a1d0a;text-align:center}
+.arco-suelta{position:absolute;z-index:3;left:calc(78px*var(--k));right:calc(72px*var(--k));bottom:calc(140px*var(--k));min-height:48px;display:flex;flex-direction:column;justify-content:flex-end;gap:3px;border:1.5px dashed rgba(255,255,255,.7);border-radius:10px;padding:3px;background:rgba(10,12,20,.28)}
+.arco.con-cartas .arco-suelta{border-color:transparent;background:transparent}
+.carta-mini{display:flex;align-items:center;gap:4px;width:100%;padding:2px 3px;border-radius:8px;border:1.5px solid var(--accent-gold);background:linear-gradient(180deg,#fbf1da,#efdcb0);color:#2a1d0a;font:700 9.5px/1.1 var(--font-heading,inherit);text-align:left;cursor:pointer}
+.carta-mini img{width:20px;height:20px;border-radius:6px;object-fit:cover;flex:none}
+.carta-mini.is-ok{border-color:var(--feedback-correct);box-shadow:0 0 0 2px color-mix(in srgb,var(--feedback-correct) 40%,transparent)}
+.carta-mini.is-bad{border-color:var(--warning);border-style:dashed;background:color-mix(in srgb,var(--warning) 16%,#fbf1da)}
+html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-arcos .word-bank{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:7px;margin:0;background:rgba(10,12,20,.88);border:1.5px solid var(--accent-gold);border-radius:16px}
+html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-arcos .word-chip.carta{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:0;min-height:0;height:auto;overflow:hidden;border-radius:10px;border:2px solid var(--accent-gold);background:linear-gradient(180deg,#fbf1da,#efdcb0);color:#2a1d0a;font:700 10.5px/1.15 var(--font-heading,inherit);text-align:center;white-space:normal;box-shadow:0 2px 4px rgba(0,0,0,.35)}
+html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-arcos .word-chip.carta img{width:100%;height:32px;object-fit:cover;display:block}
+html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-arcos .word-chip.carta span{display:flex;align-items:center;justify-content:center;min-height:28px;padding:2px 4px;font-size:10.5px;font-weight:700}
+html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-arcos .word-chip.carta.pick{visibility:hidden}
+@media (max-height:760px){.arco{--arco-h:262px}html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-arcos .word-chip.carta img{height:26px}html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-arcos .word-chip.carta span{min-height:24px;font-size:10px}.mundo-wrap.tiene-arcos>.mundo-escena{width:44px;height:44px}}
 /* ═══ fin MUNDO ═══ */
 /* ═══ fin «Mis Unidades» ═══ */
 /* ═══ «¿Quién es?» (2026-10-12): mismo fondo y brújula que las otras pantallas de perfiles; fondo de biblioteca luminosa en modo claro. Solo presentación (.pf2-elegir). ═══ */
@@ -6250,6 +6277,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/50d76f67324e638da638c92186d3d072.js"></script><script src="../pdp-assets/1f613a4867986a167598293f88beacd0.js"></script>
+<script src="../pdp-assets/cf82aecb66c4cce9c6ee48f7321115e5.js"></script><script src="../pdp-assets/9318a20767b86b665375768fefdf9396.js"></script>
 </body>
 </html>
