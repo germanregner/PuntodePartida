@@ -1,0 +1,155 @@
+<title>Taller de imágenes</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#eff1f3;--card:#ffffff;--fg:#1b2129;--mut:#5a6572;--bord:#d3d8de;--acc:#0e6a66;--acc2:#a4480b;--code:#f4f6f8;--ok:#1e7a3e;--mal:#b3590a;
+--disp:'Fraunces',Georgia,serif;--body:'Source Sans 3',system-ui,-apple-system,'Segoe UI',sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11161c;--card:#19202a;--fg:#e7eaee;--mut:#9aa6b4;--bord:#2b3542;--acc:#5fc7bf;--acc2:#f0a15c;--code:#141a22;--ok:#6bd18c;--mal:#f0a15c;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#11161c;--card:#19202a;--fg:#e7eaee;--mut:#9aa6b4;--bord:#2b3542;--acc:#5fc7bf;--acc2:#f0a15c;--code:#141a22;--ok:#6bd18c;--mal:#f0a15c;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 var(--body);padding-block:18px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+main{max-width:760px;margin:0 auto}
+h1{font:700 28px/1.15 var(--disp);margin:0 0 6px;text-wrap:balance}
+h2.grupo{font:700 13px/1.2 var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--acc);margin:30px 0 10px}
+h3{font:700 18px/1.25 var(--disp);margin:0 0 2px}
+.sub{color:var(--mut);margin:0 0 14px}
+.pasos{margin:0 0 6px;padding-left:20px}.pasos li{margin:4px 0}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--acc2);outline-offset:2px}
+.avance{color:var(--mut);font-size:14px;margin:10px 0 0}
+.card{background:var(--card);border:1px solid var(--bord);border-radius:12px;padding:14px;margin:0 0 12px}
+.card-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.card-top>div{min-width:0}
+.hecha{display:flex;gap:6px;align-items:center;font-size:14px;font-weight:600;white-space:nowrap;padding:6px 8px}
+.hecha input{width:20px;height:20px;accent-color:var(--acc)}
+.card.listo{opacity:.62}
+.arch{margin:8px 0 6px;font-size:14px;color:var(--mut)}
+.lab{font-weight:700;font-size:13px;color:var(--mut);margin:8px 0 2px}
+.pan{margin:0 0 10px;padding-left:22px;font-size:14px}.pan li{margin:6px 0}
+code{font:600 13px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--code);padding:1px 5px;border-radius:4px;overflow-wrap:anywhere}
+.chip{display:inline-block;font-size:13px;font-weight:700;color:var(--acc2);border:1px solid var(--acc2);border-radius:99px;padding:2px 10px;margin:2px 0 8px}
+.prompt{white-space:pre-wrap;overflow-wrap:anywhere;margin:0 0 10px;background:var(--code);border:1px solid var(--bord);border-radius:8px;padding:10px 12px;font:400 14px/1.5 var(--body)}
+.fila{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.btn{font:700 15px var(--body);background:var(--acc);color:#fff;border:0;border-radius:8px;padding:10px 16px;min-height:44px;cursor:pointer}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{color:#0b1412}}
+:root[data-theme="dark"] .btn{color:#0b1412}
+.aviso{font-size:14px;color:var(--acc);font-weight:600}
+.btn-link{display:inline-flex;align-items:center;text-decoration:none}
+details.cmd{margin-top:8px}details.cmd summary{cursor:pointer;color:var(--mut);font-size:14px;padding:6px 0}
+.mut{color:var(--mut)}.peq{font-size:13px}
+.ref{width:100%;height:auto;border-radius:8px;display:block;margin:8px 0}
+.ok{color:var(--ok);font-weight:700}.mal{color:var(--mal);font-weight:700}
+#rev-out{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:10px}
+.rev-c{background:#8c8c8c;border-radius:8px;padding:6px;text-align:center}
+.rev-c canvas{width:100%;height:auto;display:block;border-radius:6px}
+.rev-t{background:var(--card);border-radius:6px;padding:4px 6px;margin-top:6px;font-size:13px;text-align:left}
+.tabla{width:100%;border-collapse:collapse;font-size:14px;margin:6px 0 4px}.tabla th,.tabla td{border-bottom:1px solid var(--bord);padding:5px 6px;text-align:left;vertical-align:top}
+.tabla-wrap{overflow-x:auto}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+<main>
+<h1>Taller de imágenes</h1>
+<p class="sub">Íconos redondos para los campos de las fichas, las libretas y las cuerdas de A2 U01: <b>12 imágenes en 2 láminas</b>. Un prompt por lámina, y yo las corto y las enchufo.</p>
+<ol class="pasos">
+  <li><b>Paso 1 · Referencia.</b> Copiá la imagen de abajo («Copiar imagen») o descargala del chat: es la que fija el estilo.</li>
+  <li><b>Paso 2 · Pedirla.</b> En ChatGPT, adjuntá la referencia y pegá el prompt de la lámina A. Después, la B.</li>
+  <li><b>Paso 3 · Revisar.</b> Cargá la lámina en «Revisar la lámina»: te dice si cada medallón está centrado, entero y con el fondo liso. Si alguno sale mal, pedí solo ese («rehacé el medallón 4») en lugar de repetir toda la lámina.</li>
+  <li><b>Paso 4 · Mandarme.</b> Pegá o adjuntá las dos láminas en el chat. Yo las corto (redondas y transparentes, unos 12 KB cada una), las enchufo en los mundos y las pruebo.</li>
+</ol>
+<p class="avance" id="avance" aria-live="polite"></p>
+
+<h2 class="grupo">Paso 1 · Imagen de referencia</h2>
+<article class="card">
+  <img class="ref" id="img-ref" src="taller-imagenes/referencia-medallones.png" alt="Referencia: tres medallones redondos, uno verde con un libro, uno rojo con una cruz y uno marrón con un granero, sobre fondo gris azulado liso">
+  <p>Los tres medallones que ya están en la app (escuela, hospital, granja), sobre el mismo fondo liso que se le pide a GPT. Archivo: <code>_trabajo/2026-10-21-taller-imagenes/referencia-medallones.png</code></p>
+  <div class="fila"><button class="btn" data-copiar-img="img-ref">Copiar imagen</button><button class="btn" id="btn-compartir" hidden>Compartir</button><a class="btn btn-link" href="taller-imagenes/referencia-medallones.png" target="_blank" rel="noopener">Abrir la imagen sola</a><a class="btn btn-link" href="taller-imagenes/referencia-medallones.png" download="referencia-medallones.png">Descargar</a><span class="aviso" role="status"></span></div>
+  <p class="mut peq">Si «Copiar» no anda en tu teléfono: «Compartir» la manda directo a ChatGPT; «Descargar» la guarda; y la imagen también se puede mantener apretada. Sin la referencia el prompt igual funciona (describe el estilo con palabras), pero con ella los medallones salen mucho más parecidos a los que ya tenés.</p>
+</article>
+
+<h2 class="grupo">Paso 2 · Las dos láminas</h2>
+<article class="card" data-id="lamA"><div class="card-top"><div><h3>Lámina A · Datos personales y trabajo</h3><p class="mut">Seis medallones para los campos de las fichas y las cuerdas de datos.</p></div><label class="hecha"><input type="checkbox" data-hecha="lamA"> Hecha</label></div><p class="arch">Lámina de <b>3 columnas × 2 filas</b> · formato <b>1536×1024 (3:2)</b> · <b>6 medallones</b></p><span class="chip">Adjuntar: la imagen de referencia (Paso 1)</span><p class="lab">Medallones, de izquierda a derecha y de arriba abajo:</p><ol class="pan"><li><code>mundo-campo-nombre.png</code> · <b>Name · Nombre</b><br><span class="mut peq">royal-blue enamel; a name badge (an ID tag hanging from a lanyard) with a blank space for the name, no letters.<br>Se usa en: ficha de Maya y de Sofía (L1), diálogos de Leo (L4)</span></li><li><code>mundo-campo-edad.png</code> · <b>Age · Edad</b><br><span class="mut peq">purple enamel; a birthday cake with three lit candles.<br>Se usa en: ficha de Maya y de Sofía (L1), cuerdas de datos (L1)</span></li><li><code>mundo-campo-pais.png</code> · <b>From · De dónde es</b><br><span class="mut peq">teal enamel; a globe with simple meridians and parallels, no country shapes with names.<br>Se usa en: fichas (L1), diálogos (L4), cuerdas de datos (L1)</span></li><li><code>mundo-campo-vive.png</code> · <b>Lives in · Dónde vive</b><br><span class="mut peq">terracotta-orange enamel; a small house with a door and a chimney.<br>Se usa en: fichas (L1), cuerdas de datos (L1)</span></li><li><code>mundo-campo-grado.png</code> · <b>Grade · Grado</b><br><span class="mut peq">indigo enamel; a school backpack seen from the front.<br>Se usa en: ficha de Maya (L1), cuerdas de datos (L1)</span></li><li><code>mundo-campo-trabajo.png</code> · <b>Job · Trabajo</b><br><span class="mut peq">charcoal-gray enamel; a briefcase with a handle and two clasps.<br>Se usa en: ficha de Pedro (L8)</span></li></ol><pre class="prompt" id="p-lamA">Create ONE contact-sheet image made of 6 separate round medallion icons arranged in a grid of 3 columns x 2 rows. Each medallion sits perfectly centered in its own SQUARE panel; all 6 panels have exactly the same size. The background of every panel is one perfectly flat, solid, dark slate color (#1f2a36): no gradient, no texture, no shadow on the background, nothing else in the panel. The panels are separated from each other by thin pure-white gutters (about 2% of the sheet width), with a thin pure-white border around the whole sheet. Every medallion must have EXACTLY the same design family as the attached reference image (a green book, a red cross and a brown barn): a polished glossy gold rim with a soft bevel, a deep enamel-colored disc with subtle shading, and ONE single simple symbol in embossed cream / ivory relief in the center, with a soft highlight at the upper left and a soft shadow. Each medallion is perfectly circular, fills about 88% of the panel width and is perfectly centered. Do NOT use green, red or brown for the enamel (those three are already taken by the reference icons): use exactly the color given for each medallion. The symbols must be simple and still readable when shrunk to 36 pixels. No text, no letters, no numbers, no logos and no labels anywhere, not even on the symbols. Canvas ratio 3:2 (landscape). Medallions, from left to right and from top to bottom: 1) royal-blue enamel; a name badge (an ID tag hanging from a lanyard) with a blank space for the name, no letters. 2) purple enamel; a birthday cake with three lit candles. 3) teal enamel; a globe with simple meridians and parallels, no country shapes with names. 4) terracotta-orange enamel; a small house with a door and a chimney. 5) indigo enamel; a school backpack seen from the front. 6) charcoal-gray enamel; a briefcase with a handle and two clasps.</pre><div class="fila"><button class="btn" data-copiar="p-lamA">Copiar prompt</button><span class="aviso" role="status"></span></div><details class="cmd"><summary>Comando de corte (lo corro yo, no hace falta que lo uses)</summary><pre class="prompt" id="c-lamA">python projects/ingles/herramientas/cortar_lamina.py RUTA_DE_LA_LAMINA.png mundo-campo-nombre mundo-campo-edad mundo-campo-pais mundo-campo-vive mundo-campo-grado mundo-campo-trabajo --destino=app --prefijo= --cols=3 --filas=2 --proporcion=1 --ancho=192 --maxkb=24 --medallon</pre></details></article><article class="card" data-id="lamB"><div class="card-top"><div><h3>Lámina B · Rutina y comidas</h3><p class="mut">Cuatro medallones para las fichas y diálogos, más dos extras para las próximas lecciones.</p></div><label class="hecha"><input type="checkbox" data-hecha="lamB"> Hecha</label></div><p class="arch">Lámina de <b>3 columnas × 2 filas</b> · formato <b>1536×1024 (3:2)</b> · <b>6 medallones</b></p><span class="chip">Adjuntar: la imagen de referencia (Paso 1)</span><p class="lab">Medallones, de izquierda a derecha y de arriba abajo:</p><ol class="pan"><li><code>mundo-campo-despierta.png</code> · <b>Gets up · Se levanta</b><br><span class="mut peq">rose-pink enamel; a sun rising over a horizon line with short rays (no clock, no numbers).<br>Se usa en: ficha de Pedro (L8), diálogos (L4 y L7)</span></li><li><code>mundo-campo-sabado.png</code> · <b>On Saturday · El sábado</b><br><span class="mut peq">sky-blue enamel; a calendar page with a small sun and a few blank squares (no numbers, no letters).<br>Se usa en: ficha de Pedro (L8)</span></li><li><code>mundo-campo-almuerzo.png</code> · <b>Lunch · Almuerza</b><br><span class="mut peq">plum-purple enamel; a plate with a fork on the left and a knife on the right.<br>Se usa en: ficha de Pedro (L8), diálogos (L4 y L7)</span></li><li><code>mundo-campo-desayuno.png</code> · <b>Breakfast · Desayuna</b><br><span class="mut peq">mustard-yellow enamel; a steaming cup next to a piece of bread, with a darker cream relief so it reads on yellow.<br>Se usa en: diálogo de Maya (L4, Skill Check)</span></li><li><code>mundo-campo-tiempo-libre.png</code> · <b>Tiempo libre (extra)</b><br><span class="mut peq">turquoise enamel; a soccer ball.<br>Se usa en: extra: próximas lecciones (fin de semana, hobbies)</span></li><li><code>mundo-campo-familia.png</code> · <b>Familia (extra)</b><br><span class="mut peq">magenta enamel; three simple figures in a row, two tall and one small.<br>Se usa en: extra: próximas lecciones (familia)</span></li></ol><pre class="prompt" id="p-lamB">Create ONE contact-sheet image made of 6 separate round medallion icons arranged in a grid of 3 columns x 2 rows. Each medallion sits perfectly centered in its own SQUARE panel; all 6 panels have exactly the same size. The background of every panel is one perfectly flat, solid, dark slate color (#1f2a36): no gradient, no texture, no shadow on the background, nothing else in the panel. The panels are separated from each other by thin pure-white gutters (about 2% of the sheet width), with a thin pure-white border around the whole sheet. Every medallion must have EXACTLY the same design family as the attached reference image (a green book, a red cross and a brown barn): a polished glossy gold rim with a soft bevel, a deep enamel-colored disc with subtle shading, and ONE single simple symbol in embossed cream / ivory relief in the center, with a soft highlight at the upper left and a soft shadow. Each medallion is perfectly circular, fills about 88% of the panel width and is perfectly centered. Do NOT use green, red or brown for the enamel (those three are already taken by the reference icons): use exactly the color given for each medallion. The symbols must be simple and still readable when shrunk to 36 pixels. No text, no letters, no numbers, no logos and no labels anywhere, not even on the symbols. Canvas ratio 3:2 (landscape). Medallions, from left to right and from top to bottom: 1) rose-pink enamel; a sun rising over a horizon line with short rays (no clock, no numbers). 2) sky-blue enamel; a calendar page with a small sun and a few blank squares (no numbers, no letters). 3) plum-purple enamel; a plate with a fork on the left and a knife on the right. 4) mustard-yellow enamel; a steaming cup next to a piece of bread, with a darker cream relief so it reads on yellow. 5) turquoise enamel; a soccer ball. 6) magenta enamel; three simple figures in a row, two tall and one small.</pre><div class="fila"><button class="btn" data-copiar="p-lamB">Copiar prompt</button><span class="aviso" role="status"></span></div><details class="cmd"><summary>Comando de corte (lo corro yo, no hace falta que lo uses)</summary><pre class="prompt" id="c-lamB">python projects/ingles/herramientas/cortar_lamina.py RUTA_DE_LA_LAMINA.png mundo-campo-despierta mundo-campo-sabado mundo-campo-almuerzo mundo-campo-desayuno mundo-campo-tiempo-libre mundo-campo-familia --destino=app --prefijo= --cols=3 --filas=2 --proporcion=1 --ancho=192 --maxkb=24 --medallon</pre></details></article>
+
+<h2 class="grupo">Paso 3 · Revisar la lámina</h2>
+<article class="card">
+  <p>Cargá la lámina que te dio GPT. Todo pasa en tu navegador: la imagen no se sube a ningún lado.</p>
+  <div class="fila"><input type="file" id="rev-file" accept="image/*" aria-label="Elegir la lámina para revisar"><span class="aviso" id="rev-aviso" role="status"></span></div>
+  <div id="rev-out"></div>
+  <p class="mut peq" id="rev-nota"></p>
+</article>
+
+<h2 class="grupo">Qué se reutiliza y qué no se pide</h2>
+<article class="card">
+  <ul>
+    <li><b>«School»</b> usa el medallón de la escuela que ya existe; <b>«Mum»</b> y <b>«Brother»</b> usan los retratos de Ana y Leo que ya están.</li>
+    <li><b>Las agendas no llevan imágenes</b> en las filas: la imagen de la actividad (la escuela, el almuerzo) delataría la respuesta de cada hora.</li>
+    <li>Los íconos de los campos representan la <b>categoría</b> («edad», «de dónde es»), nunca el valor, así que no regalan ninguna respuesta.</li>
+  </ul>
+</article>
+</main>
+<script>
+(function(){
+  function guardar(){ try{ return JSON.parse(localStorage.getItem('taller_hechas')||'{}'); }catch(e){ return {}; } }
+  var hechas=guardar();
+  function actualizar(){ var cajas=document.querySelectorAll('[data-hecha]'),n=0;
+    cajas.forEach(function(c){ var on=!!hechas[c.getAttribute('data-hecha')]; c.checked=on; if(on) n++; c.closest('.card').classList.toggle('listo',on); });
+    document.getElementById('avance').textContent=n+' de '+cajas.length+' láminas marcadas como hechas'; }
+  document.querySelectorAll('[data-hecha]').forEach(function(c){ c.addEventListener('change',function(){ hechas[c.getAttribute('data-hecha')]=c.checked; try{ localStorage.setItem('taller_hechas',JSON.stringify(hechas)); }catch(e){} actualizar(); }); });
+  actualizar();
+  function avisar(b,t){ var s=b.parentNode.querySelector('.aviso'); if(s){ s.textContent=t; setTimeout(function(){ s.textContent=''; },2600); } }
+  function copiarTexto(b,txt){
+    function respaldo(){ try{ var r=document.createRange(); r.selectNodeContents(document.getElementById(b.getAttribute('data-copiar'))); var s=getSelection(); s.removeAllRanges(); s.addRange(r); avisar(b,'Seleccionado: copialo con el menú'); }catch(e){} }
+    try{ navigator.clipboard.writeText(txt).then(function(){ avisar(b,'Copiado ✓'); },respaldo); }catch(e){ respaldo(); } }
+  document.querySelectorAll('[data-copiar]').forEach(function(b){ b.addEventListener('click',function(){ copiarTexto(b,document.getElementById(b.getAttribute('data-copiar')).textContent); }); });
+  document.querySelectorAll('[data-copiar-img]').forEach(function(b){ b.addEventListener('click',function(){
+    var img=document.getElementById(b.getAttribute('data-copiar-img'));
+    try{ var c=document.createElement('canvas'); c.width=img.naturalWidth; c.height=img.naturalHeight; c.getContext('2d').drawImage(img,0,0);
+      c.toBlob(function(bl){ try{ navigator.clipboard.write([new ClipboardItem({'image/png':bl})]).then(function(){ avisar(b,'Imagen copiada ✓'); },function(){ avisar(b,'No se pudo copiar: usá Compartir o Descargar'); }); }catch(e){ avisar(b,'No se pudo copiar: usá Compartir o Descargar'); } },'image/png');
+    }catch(e){ avisar(b,'No se pudo copiar: usá Compartir o Descargar'); } }); });
+
+  var bc=document.getElementById('btn-compartir');
+  try{ if(navigator.canShare&&navigator.canShare({files:[new File([''],'a.png',{type:'image/png'})]})) bc.hidden=false; }catch(e){}
+  bc.addEventListener('click',function(){ var img=document.getElementById('img-ref');
+    fetch(img.src).then(function(r){ return r.blob(); }).then(function(bl){ var f=new File([bl],'referencia-medallones.png',{type:'image/png'});
+      return navigator.share({files:[f],title:'Referencia de medallones'}); }).catch(function(e){ if(e&&e.name!=='AbortError') avisar(bc,'No se pudo compartir: usá Descargar'); }); });
+  // ── Revisar la lámina: misma lógica que cortar_lamina.py --medallon (franjas blancas, medallón por diferencia con el fondo liso) ──
+  var COLS=3, FILAS=2;
+  function bandas(frac){ var out=[],s=null; for(var i=0;i<frac.length;i++){ var v=frac[i]>=0.9; if(v&&s===null) s=i; if(!v&&s!==null){ out.push([s,i-1]); s=null; } } if(s!==null) out.push([s,frac.length-1]); return out; }
+  function tramos(bs,n,total){
+    var x0=0,x1=total; bs.forEach(function(b){ if(b[0]===0) x0=Math.max(x0,b[1]+1); if(b[1]===total-1) x1=Math.min(x1,b[0]); });
+    var inter=bs.filter(function(b){ return b[0]>0&&b[1]<total-1; }); if(n===1) return [[x0,x1]]; if(inter.length!==n-1) return null;
+    var seg=[],prev=x0; inter.forEach(function(b){ seg.push([prev,b[0]]); prev=b[1]+1; }); seg.push([prev,x1]); return seg; }
+  document.getElementById('rev-file').addEventListener('change',function(ev){
+    var f=ev.target.files[0]; if(!f) return; var out=document.getElementById('rev-out'), nota=document.getElementById('rev-nota'), av=document.getElementById('rev-aviso'); out.innerHTML=''; nota.textContent=''; av.textContent='';
+    var url=URL.createObjectURL(f), im=new Image();
+    im.onload=function(){
+      var W=Math.min(1200,im.naturalWidth), H=Math.round(im.naturalHeight*W/im.naturalWidth), c=document.createElement('canvas'); c.width=W; c.height=H; var x=c.getContext('2d',{willReadFrequently:true}); x.drawImage(im,0,0,W,H);
+      var d=x.getImageData(0,0,W,H).data, claro=function(X,Y){ var i=(Y*W+X)*4; return Math.min(d[i],d[i+1],d[i+2])>235; };
+      var fx=[],fy=[]; for(var X=0;X<W;X++){ var n=0; for(var Y=0;Y<H;Y++) if(claro(X,Y)) n++; fx.push(n/H); } for(var Y2=0;Y2<H;Y2++){ var m=0; for(var X2=0;X2<W;X2++) if(claro(X2,Y2)) m++; fy.push(m/W); }
+      var xs=tramos(bandas(fx),COLS,W), ys=tramos(bandas(fy),FILAS,H), problemas=0;
+      if(!xs||!ys){ nota.textContent='No encontré las franjas blancas que separan los paneles: corto en partes iguales. Pedile a GPT «paneles separados por franjas blancas finas».'; xs=[]; ys=[]; for(var a=0;a<COLS;a++) xs.push([Math.round(W*a/COLS),Math.round(W*(a+1)/COLS)]); for(var b=0;b<FILAS;b++) ys.push([Math.round(H*b/FILAS),Math.round(H*(b+1)/FILAS)]); problemas++; }
+      var k=0;
+      ys.forEach(function(yy){ xs.forEach(function(xx){
+        k++; var pw=xx[1]-xx[0]-4, ph=yy[1]-yy[0]-4, px0=xx[0]+2, py0=yy[0]+2, razon=pw/ph, msgs=[];
+        function pix(X,Y){ var i=((py0+Y)*W+(px0+X))*4; return [d[i],d[i+1],d[i+2]]; }
+        var bg=[0,0,0],cnt=0; [[2,2],[pw-3,2],[2,ph-3],[pw-3,ph-3]].forEach(function(p){ var q=pix(p[0],p[1]); bg[0]+=q[0]; bg[1]+=q[1]; bg[2]+=q[2]; cnt++; }); bg=bg.map(function(v){ return v/cnt; });
+        var minx=1e9,miny=1e9,maxx=-1,maxy=-1,n=0;
+        for(var Y=0;Y<ph;Y+=2) for(var X=0;X<pw;X+=2){ var q=pix(X,Y); if(Math.abs(q[0]-bg[0])+Math.abs(q[1]-bg[1])+Math.abs(q[2]-bg[2])>60){ n++; if(X<minx)minx=X; if(X>maxx)maxx=X; if(Y<miny)miny=Y; if(Y>maxy)maxy=Y; } }
+        if(Math.abs(razon-1)>0.1) msgs.push('el panel no es cuadrado (proporción '+razon.toFixed(2)+')');
+        var cv=document.createElement('canvas'); cv.width=cv.height=160; var cx=cv.getContext('2d');
+        if(n<50){ msgs.push('no encuentro el medallón (¿el fondo no es liso?)'); }
+        else {
+          var bw=maxx-minx+1, bh=maxy-miny+1, lado=Math.max(bw,bh), mx=(minx+maxx)/2, my=(miny+maxy)/2;
+          if(lado/pw<0.7) msgs.push('el medallón es chico ('+Math.round(100*lado/pw)+'% del panel)');
+          if(minx<=3||miny<=3||maxx>=pw-5||maxy>=ph-5) msgs.push('toca el borde del panel: puede estar cortado');
+          if(Math.abs(mx-pw/2)/pw>0.06||Math.abs(my-ph/2)/ph>0.06) msgs.push('está corrido del centro (el recorte lo centra igual)');
+          if(Math.abs(bw-bh)/lado>0.08) msgs.push('no es redondo (ancho '+bw+' × alto '+bh+')');
+          cx.save(); cx.beginPath(); cx.arc(80,80,80,0,Math.PI*2); cx.clip(); cx.drawImage(im,(px0+mx-lado/2)*im.naturalWidth/W,(py0+my-lado/2)*im.naturalHeight/H,lado*im.naturalWidth/W,lado*im.naturalHeight/H,0,0,160,160); cx.restore();
+        }
+        var cel=document.createElement('div'); cel.className='rev-c'; cel.appendChild(cv);
+        var t=document.createElement('div'); t.className='rev-t'; t.innerHTML=msgs.length?'<span class="mal">'+k+' · revisar</span><br>'+msgs.join('<br>'):'<span class="ok">'+k+' · bien</span>'; if(msgs.length) problemas++;
+        cel.appendChild(t); out.appendChild(cel); }); });
+      av.textContent=problemas?'Hay '+problemas+' cosa(s) para revisar':'Todo bien: las 6 están listas para mandar';
+      av.style.color=problemas?'var(--mal)':'var(--ok)'; URL.revokeObjectURL(url); };
+    im.onerror=function(){ av.textContent='No pude abrir esa imagen'; }; im.src=url; });
+})();
+</script>
