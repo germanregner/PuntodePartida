@@ -5394,11 +5394,20 @@ html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-arcos
 .mundo-wrap.tiene-arcos .word-chip.carta span::before{content:"\22EE\22EE";flex:none;letter-spacing:-3px;font-size:13px;color:#8d7a52;margin-right:1px}
 html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-arcos .word-chip.carta.pick{visibility:hidden}
 @media (max-height:760px){.arco{--arco-h:252px}html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-arcos .word-chip.carta img{height:clamp(34px,5.6vh,44px)}html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-arcos .word-chip.carta span{min-height:24px;font-size:10px}.mundo-wrap.tiene-arcos>.mundo-escena{width:44px;height:44px}}
-.mundo-arcos.n3{gap:3px}
+.mundo-arcos.n3{gap:4px}
+/* Tres arcos (diseño del Director, 2026-10-21): la zona punteada va DEBAJO del arco, sobre su base de piedra, y el banco son tarjetas horizontales (retrato a la izquierda, frase a la derecha), de a dos. */
+.mundo-arcos.n3 .arco{--arco-h:226px;height:calc(var(--arco-h) + 64px)}
+.mundo-arcos.n3 .arco-marco{inset:0 0 64px 0}
+.mundo-arcos.n3 .arco-fondo{bottom:calc(64px + 56px*var(--k))}
 .mundo-arcos.n3 .arco-et{font-size:clamp(10px,2.9vw,12px)}
-.mundo-arcos.n3 .carta-mini{flex-direction:column;align-items:stretch;text-align:center;font-size:8.5px;padding:2px}
-.mundo-arcos.n3 .carta-mini img{width:100%;height:30px}
-.mundo-arcos.n3 .arco-suelta{left:calc(70px*var(--k));right:calc(64px*var(--k));padding:2px;gap:2px}
+.mundo-arcos.n3 .arco-suelta{left:4px;right:4px;bottom:0;min-height:58px;padding:3px;gap:2px;justify-content:center}
+.mundo-arcos.n3 .carta-mini{flex-direction:row;align-items:center;text-align:left;font-size:8.5px;padding:2px}
+.mundo-arcos.n3 .carta-mini img{width:24px;height:24px}
+.mundo-wrap.arcos3 .word-bank{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .word-chip.carta{flex-direction:row;align-items:center;text-align:left;min-height:56px}
+html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .word-chip.carta img{width:54px;height:54px;flex:none;border-radius:8px;margin:2px}
+html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .word-chip.carta span{flex:1;justify-content:flex-start;text-align:left;min-height:0;font-size:11px;padding:2px 6px 2px 2px}
+@media (max-height:760px){.mundo-arcos.n3 .arco{--arco-h:172px;height:calc(var(--arco-h) + 52px)}.mundo-arcos.n3 .arco-marco{inset:0 0 52px 0}.mundo-arcos.n3 .arco-fondo{bottom:calc(52px + 56px*var(--k))}.mundo-arcos.n3 .arco-suelta{min-height:46px}html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .word-chip.carta{min-height:42px}html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .word-chip.carta img{width:38px;height:38px}html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .word-chip.carta span{font-size:10px}}
 /* Fondo propio del mundo: la consigna y la cuenta van en blanco con halo oscuro para leerse sobre la ilustración */
 .pdp-fondo-mundo #screen-exercise .exercise-question{color:#fff!important;text-shadow:0 2px 10px rgba(0,0,0,.85),0 0 2px rgba(0,0,0,.7)!important}
 .pdp-fondo-mundo .mundo-wrap.tiene-arcos>.mundo-cuenta{color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.9),0 0 2px rgba(0,0,0,.8);font-size:11px}
@@ -6286,6 +6295,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/3935fc0d56ae03fb1ed551847af53871.js"></script><script src="../pdp-assets/68af53342d6e909122fc2606d38600db.js"></script>
+<script src="../pdp-assets/a562758a6f628a00cc22d7664e51311d.js"></script><script src="../pdp-assets/e507429c795c22246bd8d052e215229e.js"></script>
 </body>
 </html>
