@@ -5347,7 +5347,13 @@ html[data-var-zonas-estetica="colores"] .mundo-zona.espera,html[data-var-zonas-e
 .mundo-wrap.tiene-linea{display:grid;grid-template-columns:44px minmax(0,1fr);grid-template-areas:"av dice" "linea linea" "banco banco";column-gap:8px;row-gap:8px;align-items:center}
 .mundo-wrap.tiene-linea>.mundo-escena{grid-area:av;width:44px;height:44px;border-radius:50%;background-position:50% 18%}
 .mundo-wrap.tiene-linea>.mundo-escena .quien{display:none}
-.mundo-wrap.tiene-linea>.mundo-dice{grid-area:dice;position:static;max-width:none;border-radius:14px;padding:5px 10px;min-height:0}
+.mundo-wrap.tiene-linea>.mundo-dice{position:relative;background:linear-gradient(180deg,#fbf1da,#efdcb0);color:#2a1d0a;border:2px solid var(--accent-gold);border-radius:16px;padding:8px 14px 10px;font-family:var(--font-heading,inherit);font-size:14.5px;font-weight:700;line-height:1.3;box-shadow:0 0 0 1px rgba(0,0,0,.3),0 3px 10px rgba(0,0,0,.35)}
+.mundo-wrap.tiene-linea{display:grid;grid-template-columns:76px minmax(0,1fr);grid-template-areas:"av dice" "linea linea" "banco banco";column-gap:14px;row-gap:8px;align-items:center}
+.mundo-wrap.tiene-linea>.mundo-escena{grid-area:av;width:76px;height:76px;border-radius:50%;background-position:50% 18%;border:3px solid var(--accent-gold);box-shadow:0 0 0 2px rgba(0,0,0,.4),0 0 0 4px rgba(217,168,64,.55),0 3px 10px rgba(0,0,0,.45)}
+.mundo-wrap.tiene-linea>.mundo-escena .quien{display:none}
+.mundo-wrap.tiene-linea>.mundo-dice{grid-area:dice;position:relative;max-width:none;background:linear-gradient(180deg,#fbf1da,#efdcb0);color:#2a1d0a;border:2px solid var(--accent-gold);border-radius:16px;padding:8px 14px 10px;min-height:0;font-family:var(--font-heading,inherit);font-size:14.5px;font-weight:700;line-height:1.3;box-shadow:0 0 0 1px rgba(0,0,0,.3),0 3px 10px rgba(0,0,0,.35)}
+.mundo-wrap.tiene-linea>.mundo-dice::before{content:"";position:absolute;left:-10px;top:26px;width:16px;height:16px;transform:rotate(45deg);background:#f7e8c6;border-left:2px solid var(--accent-gold);border-bottom:2px solid var(--accent-gold);border-radius:0 0 0 4px}
+.mundo-wrap.tiene-linea>.mundo-dice small{display:block;margin-bottom:2px;color:#8a5a14;font-family:var(--font-body,inherit);font-size:12px;font-weight:800;letter-spacing:.1em}
 .mundo-wrap.tiene-linea>.mundo-tabla-fija{display:none}
 .mundo-wrap.tiene-linea>.mundo-linea{grid-area:linea}
 .mundo-wrap.tiene-linea>.word-bank{grid-area:banco}
@@ -5365,54 +5371,6 @@ html[data-var-zonas-estetica="colores"] .mundo-zona.espera,html[data-var-zonas-e
 .ml-slot.is-miss .ml-pal{border-color:var(--warning);border-style:dashed}
 .ml-aviso{min-height:20px;margin-top:8px;padding-top:7px;border-top:1px solid var(--border);color:var(--warning-text,var(--warning));font:700 13px/1.3 var(--font-body,inherit)}
 .ml-aviso:empty::before{content:"El analizador marca dónde la frase deja de concordar.";color:var(--text-muted);font-weight:600}
-@media (max-height:760px){.ml-pal{min-height:30px;font-size:15px}.mundo-linea{padding:8px 10px}}
-/* ARCOS (2026-10-21): dos arcos de piedra con una escena detrás, zona punteada abajo y banco de tarjetas. Solo tokens var(--*); el marco es la ilustración del Director (PNG con transparencia). */
-.mundo-wrap.tiene-arcos{display:grid;grid-template-columns:54px minmax(0,1fr);grid-template-areas:"av dice" "cuenta cuenta" "arcos arcos" "banco banco";column-gap:10px;row-gap:6px;align-items:center}
-.mundo-wrap.tiene-arcos>.mundo-escena{grid-area:av;width:54px;height:54px;border-radius:50%;border:2.5px solid var(--accent-gold);background-position:50% 20%}
-.mundo-wrap.tiene-arcos>.mundo-escena .quien{display:none}
-.mundo-wrap.tiene-arcos>.mundo-dice{grid-area:dice;position:static;max-width:none;border-radius:14px;padding:4px 10px;min-height:0;font-size:12px;line-height:1.2;background:rgba(14,18,30,.92);color:#fff;border-color:rgba(255,255,255,.12)}
-.mundo-wrap.tiene-arcos>.mundo-dice small{color:var(--accent-gold)}
-.mundo-wrap.tiene-arcos>.mundo-tabla-fija{display:none}
-.mundo-wrap.tiene-arcos>.mundo-cuenta{grid-area:cuenta;font-size:11px;line-height:1.2;font-weight:700;color:var(--text-primary);padding:0 4px;line-height:1.25;text-shadow:0 1px 2px rgba(255,255,255,.25)}
-.mundo-wrap.tiene-arcos>.mundo-arcos{grid-area:arcos}
-.mundo-wrap.tiene-arcos>.word-bank{grid-area:banco}
-.mundo-arcos{--k:.47;display:grid;grid-template-columns:1fr 1fr;gap:6px}
-.arco{position:relative;height:var(--arco-h,300px)}
-.arco-fondo{position:absolute;left:calc(40px*var(--k));right:calc(36px*var(--k));top:calc(110px*var(--k));bottom:calc(80px*var(--k));background:var(--fondo) center/cover no-repeat;filter:saturate(1.05)}   /* se extiende por detrás del marco (la piedra lo tapa): cubre toda la abertura, también la curva de arriba y el pie */
-.arco-marco{position:absolute;inset:0;border-style:solid;border-width:calc(200px*var(--k)) calc(62px*var(--k)) calc(130px*var(--k)) calc(70px*var(--k));border-image-source:var(--marco);border-image-slice:200 62 130 70;border-image-width:calc(200px*var(--k)) calc(62px*var(--k)) calc(130px*var(--k)) calc(70px*var(--k));border-image-repeat:stretch;pointer-events:none;box-sizing:border-box;z-index:2}
-.arco-et{position:absolute;z-index:3;left:calc(62px*var(--k));right:calc(62px*var(--k));top:calc(88px*var(--k));height:calc(66px*var(--k));display:grid;place-items:center;font:700 clamp(12px,3.4vw,15px)/1.1 var(--font-heading,inherit);color:#2a1d0a;text-align:center}
-.arco-suelta{position:absolute;z-index:3;left:calc(78px*var(--k));right:calc(72px*var(--k));bottom:calc(140px*var(--k));min-height:48px;display:flex;flex-direction:column;justify-content:flex-end;gap:3px;border:1.5px dashed rgba(255,255,255,.7);border-radius:10px;padding:3px;background:rgba(10,12,20,.28)}
-.arco.con-cartas .arco-suelta{border-color:transparent;background:transparent}
-.carta-mini{display:flex;flex-direction:column;align-items:stretch;text-align:center;gap:2px;width:100%;padding:2px 3px;border-radius:8px;border:1.5px solid var(--accent-gold);background:linear-gradient(180deg,#fbf1da,#efdcb0);color:#2a1d0a;font:700 9.5px/1.1 var(--font-heading,inherit);text-align:left;cursor:pointer}
-.carta-mini img{width:100%;height:38px;border-radius:6px;object-fit:cover;object-position:50% 22%;flex:none}
-.carta-mini.is-ok{border-color:var(--feedback-correct);box-shadow:0 0 0 2px color-mix(in srgb,var(--feedback-correct) 40%,transparent)}
-.carta-mini.is-bad{border-color:var(--warning);border-style:dashed;background:color-mix(in srgb,var(--warning) 16%,#fbf1da)}
-html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-arcos .word-bank{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:7px;margin:0;background:linear-gradient(180deg,#8a7b66,#6c5e4b);border:2px solid #d8c391;border-radius:14px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.25),0 3px 8px rgba(0,0,0,.4)}
-html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-arcos .word-chip.carta{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:0;min-height:0;height:auto;overflow:hidden;border-radius:10px;border:2px solid var(--accent-gold);background:linear-gradient(180deg,#fbf1da,#efdcb0);color:#2a1d0a;font:700 10.5px/1.15 var(--font-heading,inherit);text-align:center;white-space:normal;box-shadow:0 2px 4px rgba(0,0,0,.35)}
-html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-arcos .word-chip.carta img{width:100%;height:clamp(44px,6.6vh,58px);object-fit:cover;display:block}
-html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-arcos .word-chip.carta span{display:flex;align-items:center;justify-content:center;gap:3px;min-height:30px;padding:2px 4px;font-size:10.5px;font-weight:700}
-.mundo-wrap.tiene-arcos .word-chip.carta span::before{content:"\22EE\22EE";flex:none;letter-spacing:-3px;font-size:13px;color:#8d7a52;margin-right:1px}
-html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-arcos .word-chip.carta.pick{visibility:hidden}
-@media (max-height:760px){.arco{--arco-h:252px}html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-arcos .word-chip.carta img{height:clamp(34px,5.6vh,44px)}html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-arcos .word-chip.carta span{min-height:24px;font-size:10px}.mundo-wrap.tiene-arcos>.mundo-escena{width:44px;height:44px}}
-.mundo-arcos.n3{gap:4px}
-/* Tres arcos (diseño del Director, 2026-10-21): la zona punteada va DEBAJO del arco, sobre su base de piedra, y el banco son tarjetas horizontales (retrato a la izquierda, frase a la derecha), de a dos. */
-.mundo-arcos.n3 .arco-et{font-size:clamp(10px,2.9vw,12px)}
-.mundo-arcos.n3 .carta-mini{flex-direction:column;align-items:stretch;text-align:center;font-size:8px;line-height:1.1;padding:2px}
-.mundo-arcos.n3 .carta-mini img{width:100%;height:34px;object-fit:cover;object-position:50% 22%}
-.mundo-wrap.arcos3 .word-bank{grid-template-columns:repeat(2,minmax(0,1fr))!important}
-html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .word-chip.carta{flex-direction:row;align-items:center;text-align:left;min-height:56px}
-html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .word-chip.carta img{width:54px;height:54px;flex:none;border-radius:8px;margin:2px}
-html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .word-chip.carta span{flex:1;justify-content:flex-start;text-align:left;min-height:0;font-size:11px;padding:2px 6px 2px 2px}
-
-/* ARCO DORADO (2026-10-21, ilustración del Director): marco con hiedra dorada, ícono arriba y las tarjetas DENTRO del arco (sin zona aparte). Dos variantes del pie: con escalón (por defecto) y sin escalón (🧪 → «Arcos · base»). */
-.mundo-arcos.n3 .arco.oro{--marco:var(--marco-esc);--arco-h:250px;--sl-t:140;--sl-r:76;--sl-b:85;--sl-l:78;--fb-b:92;--zs-b:100}
-.arco.oro .arco-marco{border-width:calc(var(--sl-t)*1px*var(--k)) calc(var(--sl-r)*1px*var(--k)) calc(var(--sl-b)*1px*var(--k)) calc(var(--sl-l)*1px*var(--k));border-image-slice:var(--sl-t) var(--sl-r) var(--sl-b) var(--sl-l);border-image-width:calc(var(--sl-t)*1px*var(--k)) calc(var(--sl-r)*1px*var(--k)) calc(var(--sl-b)*1px*var(--k)) calc(var(--sl-l)*1px*var(--k))}
-.arco.oro .arco-fondo{left:calc(58px*var(--k));right:calc(58px*var(--k));top:calc(120px*var(--k));bottom:calc(var(--fb-b)*1px*var(--k))}
-.arco.oro .arco-et{left:calc(101px*var(--k));right:calc(109px*var(--k));top:calc(75px*var(--k));height:calc(27px*var(--k));line-height:1;font-size:clamp(9.5px,2.7vw,12px)}
-.arco.oro .arco-ico{position:absolute;z-index:4;left:calc(156px*var(--k));top:calc(10px*var(--k));width:calc(62px*var(--k));height:calc(62px*var(--k));object-fit:contain}
-.arco.oro .arco-suelta{left:calc(84px*var(--k));right:calc(84px*var(--k));bottom:calc(var(--zs-b)*1px*var(--k));min-height:46px;padding:2px;gap:2px;justify-content:flex-end}
-@media (max-height:760px){.mundo-arcos.n3 .arco.oro{--arco-h:210px}}
-/* MARCO de las cuerdas (2026-10-21, diseño del Director): marco de piedra con hiedra y faroles, carteles dorados, elementos con imagen y cuerdas que brillan. El marco se estira solo hacia los lados de piedra (la altura la manda el contenido). */
 .mundo-cuerdas.con-marco{--k:.32;padding:0;background:transparent;border-radius:0;border-style:solid;border-color:transparent;border-width:calc(185px*var(--k)) calc(140px*var(--k)) calc(232px*var(--k)) calc(150px*var(--k));border-image-source:var(--marco-img);border-image-slice:79 96 131 102;border-image-width:calc(185px*var(--k)) calc(140px*var(--k)) calc(232px*var(--k)) calc(150px*var(--k));border-image-repeat:stretch;box-sizing:content-box;margin:0 0 -4px}
 .mundo-cuerdas.con-marco .mundo-cuerdas-cols{gap:0;grid-template-columns:minmax(0,1fr) minmax(40px,.4fr) minmax(0,1fr)}
 .mundo-cuerdas.con-marco .mundo-cuerdas-col{gap:14px}
@@ -5425,10 +5383,6 @@ html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .wor
 .mundo-cuerdas.con-marco .cuerda.ok .c-base{filter:drop-shadow(0 0 7px var(--feedback-correct))}
 @media (max-height:760px){.mundo-cuerdas.con-marco .mundo-cuerda-it{min-height:46px;font-size:11px}.mundo-cuerdas.con-marco .ci-img{width:32px;height:32px}.mundo-cuerdas.con-marco .mundo-cuerdas-col{gap:9px}}
 /* ANALIZADOR con el diseño del Director (2026-10-21): globo crema con serif, panel oscuro con doble borde dorado y rombo, palabras más grandes. */
-.mundo-wrap.tiene-linea{grid-template-columns:58px minmax(0,1fr);column-gap:10px}
-.mundo-wrap.tiene-linea>.mundo-escena{width:58px;height:58px;border:2.5px solid var(--accent-gold);box-shadow:0 0 0 2px rgba(0,0,0,.35),0 2px 8px rgba(0,0,0,.4)}
-.mundo-wrap.tiene-linea>.mundo-dice{background:linear-gradient(180deg,#fbf1da,#efdcb0);color:#2a1d0a;border:2px solid var(--accent-gold);border-radius:16px;padding:6px 12px;font-family:var(--font-heading,inherit);font-size:13px;font-weight:700;line-height:1.25}
-.mundo-wrap.tiene-linea>.mundo-dice small{color:#8a5a14}
 .mundo-wrap.tiene-linea .mundo-linea{position:relative;padding:16px 18px 12px;margin-top:8px}
 .mundo-wrap.tiene-linea .ml-num{color:var(--accent-gold);border-right-color:rgba(217,168,64,.6);font-size:15px}
 .mundo-wrap.tiene-linea .ml-pal{min-height:42px;font-size:19px;color:#fff;background:rgba(0,0,0,.35);border-color:rgba(217,168,64,.5);border-radius:11px;padding:3px 12px}
@@ -5441,7 +5395,7 @@ html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .wor
 .mundo-wrap.tiene-linea .ml-aviso:empty::before{color:#d9c7a0;font-weight:600;font-size:13px}
 html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-linea .word-bank{position:relative;padding:14px 16px;gap:8px;margin:0}
 html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-linea .word-chip{min-height:42px;font-size:18px;padding:3px 14px}
-@media (max-height:760px){.mundo-wrap.tiene-linea .ml-pal{min-height:36px;font-size:17px}html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-linea .word-chip{min-height:36px;font-size:16px;padding:2px 11px}.mundo-wrap.tiene-linea>.mundo-escena{width:48px;height:48px}.mundo-wrap.tiene-linea{grid-template-columns:48px minmax(0,1fr)}}
+@media (max-height:760px){.mundo-wrap.tiene-linea .ml-pal{min-height:36px;font-size:17px}html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-linea .word-chip{min-height:36px;font-size:16px;padding:2px 11px}.mundo-wrap.tiene-linea>.mundo-escena{width:62px;height:62px}.mundo-wrap.tiene-linea{grid-template-columns:62px minmax(0,1fr);column-gap:12px}.mundo-wrap.tiene-linea>.mundo-dice{font-size:13px;padding:6px 12px 8px}.mundo-wrap.tiene-linea>.mundo-dice::before{top:20px}}
 /* Fondo propio del mundo: la consigna y la cuenta van en blanco con halo oscuro para leerse sobre la ilustración */
 .pdp-fondo-mundo #screen-exercise .exercise-question{color:#fff!important;text-shadow:0 2px 10px rgba(0,0,0,.85),0 0 2px rgba(0,0,0,.7)!important}
 .pdp-fondo-mundo .mundo-wrap.tiene-arcos>.mundo-cuenta{color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.9),0 0 2px rgba(0,0,0,.8);font-size:11px}
@@ -6329,6 +6283,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/99bdff3a1f4093d59dfb212e96e2a6ea.js"></script><script src="../pdp-assets/bc50a90c732cd7d130c661500d03a9e4.js"></script>
+<script src="../pdp-assets/afe25924a57c0ab9d0d4b5d416a36435.js"></script><script src="../pdp-assets/81ece172e1d37b1ca6c3a9d21f4b1f1a.js"></script>
 </body>
 </html>
