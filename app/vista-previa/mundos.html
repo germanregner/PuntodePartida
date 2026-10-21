@@ -5427,7 +5427,7 @@ html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .wor
 .arco.oro .arco-et{left:calc(101px*var(--k));right:calc(109px*var(--k));top:calc(75px*var(--k));height:calc(27px*var(--k));line-height:1;font-size:clamp(9.5px,2.7vw,12px)}
 .arco.oro .arco-ico{position:absolute;z-index:4;left:calc(156px*var(--k));top:calc(10px*var(--k));width:calc(62px*var(--k));height:calc(62px*var(--k));object-fit:contain}
 .arco.oro .arco-suelta{left:calc(84px*var(--k));right:calc(84px*var(--k));bottom:calc(var(--zs-b)*1px*var(--k));min-height:46px;padding:2px;gap:2px;justify-content:flex-end}
-@media (max-height:760px){.mundo-arcos.n3 .arco.oro{--arco-h:210px}}
+@media (max-height:760px){.mundo-arcos.n3 .arco.oro{--arco-h:200px}}
 /* MARCO de las cuerdas (2026-10-21, diseño del Director): marco de piedra con hiedra y faroles, carteles dorados, elementos con imagen y cuerdas que brillan. El marco se estira solo hacia los lados de piedra (la altura la manda el contenido). */
 .mundo-cuerdas.con-marco{--k:.32;padding:0;background:transparent;border-radius:0;border-style:solid;border-color:transparent;border-width:calc(185px*var(--k)) calc(140px*var(--k)) calc(232px*var(--k)) calc(150px*var(--k));border-image-source:var(--marco-img);border-image-slice:79 96 131 102;border-image-width:calc(185px*var(--k)) calc(140px*var(--k)) calc(232px*var(--k)) calc(150px*var(--k));border-image-repeat:stretch;box-sizing:content-box;margin:0 0 -4px}
 .mundo-cuerdas.con-marco .mundo-cuerdas-cols{gap:0;grid-template-columns:minmax(0,1fr) minmax(40px,.4fr) minmax(0,1fr)}
@@ -5456,9 +5456,18 @@ html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-linea
 @media (max-height:760px){.mundo-wrap.tiene-linea .ml-pal{min-height:36px;font-size:17px}html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-linea .word-chip{min-height:36px;font-size:16px;padding:2px 11px}.mundo-wrap.tiene-linea>.mundo-escena{width:62px;height:62px}.mundo-wrap.tiene-linea{grid-template-columns:62px minmax(0,1fr);column-gap:12px}.mundo-wrap.tiene-linea>.mundo-dice{font-size:13px;padding:6px 12px 8px}.mundo-wrap.tiene-linea>.mundo-dice::before{top:20px}}
 .mundo-wrap.tiene-linea>.mundo-dice.pdp-tarjeta-marco{background:none;border:0;box-shadow:none;border-radius:0;padding:12px 20px 14px}
 .mundo-wrap.tiene-linea>.mundo-dice.pdp-tarjeta-marco .dice-in{position:relative;z-index:1}
+.mundo-dice.pdp-tarjeta-marco .dice-in{font-size:12.5px;line-height:1.22}
+@media (max-height:760px){.mundo-dice.pdp-tarjeta-marco .dice-in{font-size:12px;line-height:1.18}.mundo-dice.pdp-tarjeta-marco{padding:5px 14px 6px!important}}
 .mundo-wrap.tiene-linea>.mundo-dice.pdp-tarjeta-marco::before,.mundo-wrap.tiene-linea>.mundo-dice.pdp-tarjeta-marco::after{display:none}
 .mundo-wrap.tiene-linea>.mundo-dice.pdp-tarjeta-marco .dice-in{font-size:13.5px;line-height:1.28}
 .mundo-wrap.tiene-linea>.mundo-escena{border:2px solid #e8b44a;box-shadow:0 0 0 1.5px #6b4310,0 0 0 2.5px #ffdf7a,0 0 12px rgba(255,200,90,.5),0 3px 8px rgba(0,0,0,.5),inset 0 0 8px rgba(0,0,0,.4)}
+.mundo-dice.pdp-tarjeta-marco{background:none!important;border:0!important;box-shadow:none!important;border-radius:0!important;padding:7px 16px 8px!important;color:#2a1d0a!important;font-family:var(--font-heading,inherit)}
+.mundo-dice.pdp-tarjeta-marco .dice-in{position:relative;z-index:1}
+.mundo-dice.pdp-tarjeta-marco small{color:#8a5a14!important}
+.mundo-wrap.foto-lado>.mundo-dice.pdp-tarjeta-marco,.mundo-wrap.tiene-arcos>.mundo-dice.pdp-tarjeta-marco,.mundo-wrap.tiene-cuerdas>.mundo-dice.pdp-tarjeta-marco,.mundo-wrap.tiene-linea>.mundo-dice.pdp-tarjeta-marco{position:relative}
+.mundo-dice.pdp-tarjeta-marco::before,.mundo-dice.pdp-tarjeta-marco::after{display:none!important}
+.mundo-wrap.tiene-arcos,.mundo-wrap.tiene-linea,.mundo-wrap.tiene-cuerdas{column-gap:20px}
+.mundo-wrap.tiene-arcos>.mundo-dice{padding:0}
 /* Fondo propio del mundo: la consigna y la cuenta van en blanco con halo oscuro para leerse sobre la ilustración */
 .pdp-fondo-mundo #screen-exercise .exercise-question{color:#fff!important;text-shadow:0 2px 10px rgba(0,0,0,.85),0 0 2px rgba(0,0,0,.7)!important}
 .pdp-fondo-mundo .mundo-wrap.tiene-arcos>.mundo-cuenta{color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.9),0 0 2px rgba(0,0,0,.8);font-size:11px}
@@ -6346,6 +6355,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/cce7df26dc8828b6150ee414428eb4aa.js"></script><script src="../pdp-assets/666e0de99812d70ee11952d72518a2f7.js"></script>
+<script src="../pdp-assets/3bca4020b7eb33b2744689e78eea2519.js"></script><script src="../pdp-assets/04c98b1051d9b76d99685b55288d5b4c.js"></script>
 </body>
 </html>
