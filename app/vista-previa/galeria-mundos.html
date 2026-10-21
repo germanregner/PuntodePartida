@@ -5424,6 +5424,25 @@ html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .wor
 .mundo-cuerdas.con-marco .cuerda .c-base{filter:drop-shadow(0 0 4px var(--accent-gold))}
 .mundo-cuerdas.con-marco .cuerda.ok .c-base{filter:drop-shadow(0 0 7px var(--feedback-correct))}
 @media (max-height:760px){.mundo-cuerdas.con-marco .mundo-cuerda-it{min-height:46px;font-size:11px}.mundo-cuerdas.con-marco .ci-img{width:32px;height:32px}.mundo-cuerdas.con-marco .mundo-cuerdas-col{gap:9px}}
+/* ANALIZADOR con el diseño del Director (2026-10-21): globo crema con serif, panel oscuro con doble borde dorado y rombo, palabras más grandes. */
+.mundo-wrap.tiene-linea{grid-template-columns:58px minmax(0,1fr);column-gap:10px}
+.mundo-wrap.tiene-linea>.mundo-escena{width:58px;height:58px;border:2.5px solid var(--accent-gold);box-shadow:0 0 0 2px rgba(0,0,0,.35),0 2px 8px rgba(0,0,0,.4)}
+.mundo-wrap.tiene-linea>.mundo-dice{background:linear-gradient(180deg,#fbf1da,#efdcb0);color:#2a1d0a;border:2px solid var(--accent-gold);border-radius:16px;padding:6px 12px;font-family:var(--font-heading,inherit);font-size:13px;font-weight:700;line-height:1.25}
+.mundo-wrap.tiene-linea>.mundo-dice small{color:#8a5a14}
+.mundo-wrap.tiene-linea .mundo-linea{position:relative;background:linear-gradient(180deg,rgba(14,18,32,.94),rgba(8,10,20,.96));border:2px solid var(--accent-gold);border-radius:16px;box-shadow:inset 0 0 0 3px rgba(0,0,0,.55),inset 0 0 0 4px rgba(217,168,64,.55),0 4px 12px rgba(0,0,0,.4);padding:14px 14px 10px;margin-top:8px}
+.mundo-wrap.tiene-linea .mundo-linea::before{content:"";position:absolute;left:50%;top:-11px;width:18px;height:18px;margin-left:-9px;transform:rotate(45deg);background:linear-gradient(135deg,#ffe08a,#c98a1e);border:1.5px solid #6b4310;border-radius:3px}
+.mundo-wrap.tiene-linea .ml-num{color:var(--accent-gold);border-right-color:rgba(217,168,64,.6);font-size:15px}
+.mundo-wrap.tiene-linea .ml-pal{min-height:42px;font-size:19px;color:#fff;background:rgba(0,0,0,.35);border-color:rgba(217,168,64,.5);border-radius:11px;padding:3px 12px}
+.mundo-wrap.tiene-linea .ml-slot:not(.vacio) .ml-pal{border-color:var(--accent-gold)}
+.mundo-wrap.tiene-linea .ml-slot.is-ok .ml-pal{border-color:var(--feedback-correct);box-shadow:0 0 8px color-mix(in srgb,var(--feedback-correct) 55%,transparent)}
+.mundo-wrap.tiene-linea .ml-slot.is-bad .ml-pal{border-color:var(--warning);box-shadow:0 0 8px color-mix(in srgb,var(--warning) 45%,transparent)}
+.mundo-wrap.tiene-linea .ml-rol{color:#f3dfae;font-size:11px}
+.mundo-wrap.tiene-linea .ml-pista{color:#d9c7a0;font-size:12px}
+.mundo-wrap.tiene-linea .ml-aviso{color:#f6c453;font:700 15px/1.3 var(--font-heading,inherit);border-top-color:rgba(120,150,170,.45)}
+.mundo-wrap.tiene-linea .ml-aviso:empty::before{color:#d9c7a0;font-weight:600;font-size:13px}
+html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-linea .word-bank{background:linear-gradient(180deg,rgba(14,18,32,.94),rgba(8,10,20,.96));border:2px solid var(--accent-gold);border-radius:16px;box-shadow:inset 0 0 0 3px rgba(0,0,0,.55),inset 0 0 0 4px rgba(217,168,64,.5),0 4px 12px rgba(0,0,0,.4);padding:12px;gap:8px}
+html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-linea .word-chip{min-height:42px;font-size:18px;padding:3px 14px}
+@media (max-height:760px){.mundo-wrap.tiene-linea .ml-pal{min-height:36px;font-size:17px}html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-linea .word-chip{min-height:36px;font-size:16px;padding:2px 11px}.mundo-wrap.tiene-linea>.mundo-escena{width:48px;height:48px}.mundo-wrap.tiene-linea{grid-template-columns:48px minmax(0,1fr)}}
 /* Fondo propio del mundo: la consigna y la cuenta van en blanco con halo oscuro para leerse sobre la ilustración */
 .pdp-fondo-mundo #screen-exercise .exercise-question{color:#fff!important;text-shadow:0 2px 10px rgba(0,0,0,.85),0 0 2px rgba(0,0,0,.7)!important}
 .pdp-fondo-mundo .mundo-wrap.tiene-arcos>.mundo-cuenta{color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.9),0 0 2px rgba(0,0,0,.8);font-size:11px}
@@ -6311,6 +6330,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/f8915dc6397a09bd577a13aac6d70ee7.js"></script><script src="../pdp-assets/7b0492410a5dd5f566d96ee05cec1cd8.js"></script>
+<script src="../pdp-assets/972dc2d0a1a04bfc5e63f15847ef5699.js"></script><script src="../pdp-assets/7b0492410a5dd5f566d96ee05cec1cd8.js"></script>
 </body>
 </html>
