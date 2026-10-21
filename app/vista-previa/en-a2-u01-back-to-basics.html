@@ -5396,18 +5396,22 @@ html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-arcos
 @media (max-height:760px){.arco{--arco-h:252px}html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-arcos .word-chip.carta img{height:clamp(34px,5.6vh,44px)}html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-arcos .word-chip.carta span{min-height:24px;font-size:10px}.mundo-wrap.tiene-arcos>.mundo-escena{width:44px;height:44px}}
 .mundo-arcos.n3{gap:4px}
 /* Tres arcos (diseño del Director, 2026-10-21): la zona punteada va DEBAJO del arco, sobre su base de piedra, y el banco son tarjetas horizontales (retrato a la izquierda, frase a la derecha), de a dos. */
-.mundo-arcos.n3 .arco{--arco-h:226px;height:calc(var(--arco-h) + 64px)}
-.mundo-arcos.n3 .arco-marco{inset:0 0 64px 0}
-.mundo-arcos.n3 .arco-fondo{bottom:calc(64px + 56px*var(--k))}
 .mundo-arcos.n3 .arco-et{font-size:clamp(10px,2.9vw,12px)}
-.mundo-arcos.n3 .arco-suelta{left:4px;right:4px;bottom:0;min-height:58px;padding:3px;gap:2px;justify-content:center}
-.mundo-arcos.n3 .carta-mini{flex-direction:row;align-items:center;text-align:left;font-size:8.5px;padding:2px}
-.mundo-arcos.n3 .carta-mini img{width:24px;height:24px}
+.mundo-arcos.n3 .carta-mini{flex-direction:column;align-items:stretch;text-align:center;font-size:8px;line-height:1.1;padding:2px}
+.mundo-arcos.n3 .carta-mini img{width:100%;height:34px;object-fit:cover;object-position:50% 22%}
 .mundo-wrap.arcos3 .word-bank{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .word-chip.carta{flex-direction:row;align-items:center;text-align:left;min-height:56px}
 html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .word-chip.carta img{width:54px;height:54px;flex:none;border-radius:8px;margin:2px}
 html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .word-chip.carta span{flex:1;justify-content:flex-start;text-align:left;min-height:0;font-size:11px;padding:2px 6px 2px 2px}
-@media (max-height:760px){.mundo-arcos.n3 .arco{--arco-h:172px;height:calc(var(--arco-h) + 52px)}.mundo-arcos.n3 .arco-marco{inset:0 0 52px 0}.mundo-arcos.n3 .arco-fondo{bottom:calc(52px + 56px*var(--k))}.mundo-arcos.n3 .arco-suelta{min-height:46px}html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .word-chip.carta{min-height:42px}html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .word-chip.carta img{width:38px;height:38px}html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .word-chip.carta span{font-size:10px}}
+
+/* ARCO DORADO (2026-10-21, ilustración del Director): marco con hiedra dorada, ícono arriba y las tarjetas DENTRO del arco (sin zona aparte). Dos variantes del pie: con escalón (por defecto) y sin escalón (🧪 → «Arcos · base»). */
+.mundo-arcos.n3 .arco.oro{--marco:var(--marco-esc);--arco-h:250px;--sl-t:140;--sl-r:76;--sl-b:85;--sl-l:78;--fb-b:92;--zs-b:100}
+.arco.oro .arco-marco{border-width:calc(var(--sl-t)*1px*var(--k)) calc(var(--sl-r)*1px*var(--k)) calc(var(--sl-b)*1px*var(--k)) calc(var(--sl-l)*1px*var(--k));border-image-slice:var(--sl-t) var(--sl-r) var(--sl-b) var(--sl-l);border-image-width:calc(var(--sl-t)*1px*var(--k)) calc(var(--sl-r)*1px*var(--k)) calc(var(--sl-b)*1px*var(--k)) calc(var(--sl-l)*1px*var(--k))}
+.arco.oro .arco-fondo{left:calc(58px*var(--k));right:calc(58px*var(--k));top:calc(120px*var(--k));bottom:calc(var(--fb-b)*1px*var(--k))}
+.arco.oro .arco-et{left:calc(101px*var(--k));right:calc(109px*var(--k));top:calc(75px*var(--k));height:calc(27px*var(--k));line-height:1;font-size:clamp(9.5px,2.7vw,12px)}
+.arco.oro .arco-ico{position:absolute;z-index:4;left:calc(156px*var(--k));top:calc(10px*var(--k));width:calc(62px*var(--k));height:calc(62px*var(--k));object-fit:contain}
+.arco.oro .arco-suelta{left:calc(84px*var(--k));right:calc(84px*var(--k));bottom:calc(var(--zs-b)*1px*var(--k));min-height:46px;padding:2px;gap:2px;justify-content:flex-end}
+@media (max-height:760px){.mundo-arcos.n3 .arco.oro{--arco-h:210px}}
 /* Fondo propio del mundo: la consigna y la cuenta van en blanco con halo oscuro para leerse sobre la ilustración */
 .pdp-fondo-mundo #screen-exercise .exercise-question{color:#fff!important;text-shadow:0 2px 10px rgba(0,0,0,.85),0 0 2px rgba(0,0,0,.7)!important}
 .pdp-fondo-mundo .mundo-wrap.tiene-arcos>.mundo-cuenta{color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.9),0 0 2px rgba(0,0,0,.8);font-size:11px}
@@ -6295,6 +6299,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/c23540bfd2fc3befa4e40f6a0c6de1f1.js"></script><script src="../pdp-assets/e507429c795c22246bd8d052e215229e.js"></script>
+<script src="../pdp-assets/0d639d4b3827df101b48b6067c096b86.js"></script><script src="../pdp-assets/bbb3d193055da81a6e258aba5c07e285.js"></script>
 </body>
 </html>
