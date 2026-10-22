@@ -5310,14 +5310,23 @@ html[data-var-zonas-estetica="colores"] .mundo-zona.espera,html[data-var-zonas-e
 .mundo-et-in.con-ico .mundo-et-txt small{display:block}
 @media (max-height:760px){.mundo-et-in.con-ico .mundo-et-img{width:26px;height:26px}.mundo-et-in.con-ico{gap:5px}}
 /* PAPEL (2026-10-21): la tabla de la ficha/agenda/libreta sobre un objeto de papelería (cuaderno con espiral y franja de cuero). Escala --pk = ancho real / ancho del archivo; cortes por JSON (escena.papelCortes). */
-.mundo-tabla-fija.con-papel{background:transparent;box-shadow:none;overflow:visible;gap:5px}
-.mundo-tabla-fija.con-papel>.mundo-escena{border:1.5px solid var(--accent-gold);border-radius:14px;box-shadow:0 3px 10px rgba(0,0,0,.35)}
+.mundo-tabla-fija.con-foto.con-papel,.mundo-tabla-fija.con-papel{background:transparent;box-shadow:none;overflow:visible;gap:5px}
+.mundo-tabla-fija.con-foto.con-papel>.mundo-escena,.mundo-tabla-fija.con-papel>.mundo-escena{border:1.5px solid var(--accent-gold);border-radius:14px;box-shadow:0 3px 10px rgba(0,0,0,.35)}
 .mundo-papel{position:relative;--pk:.37;min-width:0;border-style:solid;border-color:transparent;border-width:calc(var(--pt)*1px*var(--pk)) calc(var(--pr)*1px*var(--pk)) calc(var(--pb)*1px*var(--pk)) calc(var(--pl)*1px*var(--pk));border-image-source:var(--papel-img);border-image-slice:var(--pt) var(--pr) var(--pb) var(--pl) fill;border-image-width:calc(var(--pt)*1px*var(--pk)) calc(var(--pr)*1px*var(--pk)) calc(var(--pb)*1px*var(--pk)) calc(var(--pl)*1px*var(--pk));border-image-repeat:stretch;filter:drop-shadow(0 4px 8px rgba(0,0,0,.4))}
 .mundo-papel .mundo-tabla{background:transparent;margin:0}.mundo-papel .mundo-tabla thead{display:none}
-.mundo-papel .mundo-et{width:47%}
+.mundo-papel .mundo-et{width:45%}.mundo-papel .mundo-val{font-size:15px}
 .mundo-papel .mundo-tabla td,.mundo-papel .mundo-tabla tr{background:transparent!important}.mundo-papel .mundo-tabla td{border-color:rgba(122,84,48,.3)}
 .mundo-papel-titulo{position:absolute;z-index:2;left:0;right:2px;top:calc(var(--pt)*-1px*var(--pk));height:calc(var(--pt)*1px*var(--pk));display:flex;align-items:center;justify-content:space-between;gap:6px;padding:0 6px 0 4px;color:#fff4e0;font:800 13px/1.1 var(--font-heading,inherit);letter-spacing:.02em;text-shadow:0 1px 2px rgba(0,0,0,.5)}
 .mundo-papel-titulo .sc{font:800 10px/1 var(--font-body,inherit);letter-spacing:.08em;text-transform:uppercase;color:#f3d9a4}
+.mundo-tabla-fija.con-ilu{width:min(100%,316px);margin:0 auto;background:transparent;box-shadow:none;overflow:visible;container-type:inline-size}
+.mundo-ficha-ilu{position:relative;width:100%;background:var(--ficha-img) center/100% 100% no-repeat;filter:drop-shadow(0 5px 9px rgba(0,0,0,.45))}
+.mundo-ficha-ilu .mundo-tabla,.mundo-ficha-ilu tbody{display:block;position:absolute;inset:0;margin:0;background:none}.mundo-ficha-ilu thead,.mundo-ficha-ilu .mundo-et{display:none}
+.mundo-ficha-ilu tr{display:block;position:absolute;background:transparent!important}.mundo-ficha-ilu td{display:block;width:100%;height:100%;padding:0;border:0;background:transparent!important}
+.mundo-ficha-ilu .mundo-celda{height:100%;display:flex;align-items:center;justify-content:space-between;gap:1cqw;padding:0 2.6cqw;box-sizing:border-box}.mundo-ficha-ilu .mundo-celda>div{min-width:0;flex:1}
+.mundo-ficha-ilu .mundo-val{font-size:4.9cqw;line-height:1.1;font-family:var(--font-heading,inherit);color:#1d2a52;font-weight:700}.mundo-ficha-ilu .mundo-pista{font-size:3.75cqw;white-space:nowrap;color:#4f5470;font-weight:600}.mundo-ficha-ilu tr.ilu-name .mundo-pista{font-size:8.4cqw;color:#1d2a52;font-weight:800;font-family:var(--font-heading,inherit);opacity:.55}
+.mundo-ficha-ilu tr.ilu-name .mundo-celda{justify-content:center;padding:0}.mundo-ficha-ilu tr.ilu-name .mundo-val{font-size:9.2cqw;font-weight:800}
+@media (max-height:760px){.mundo-tabla-fija.con-ilu{width:min(100%,268px)}}
+@media (max-height:760px){.mundo-papel .mundo-et-in{font-size:14px}.mundo-papel .mundo-et-in small{font-size:10.5px}.mundo-papel .mundo-et-in.con-ico .mundo-et-img{width:23px;height:23px}.mundo-papel .mundo-val{font-size:14px}}
 .mundo-zona.con-img{background:linear-gradient(180deg,rgba(0,0,0,.04) 30%,rgba(0,0,0,.55)),var(--zona-img) center/cover no-repeat;border-color:var(--accent-gold)}
 .mundo-zona.con-img .mundo-zona-ico{display:none}
 .mundo-zona.con-img .mundo-zona-et{color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.8)}
@@ -6357,6 +6366,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/9d823c348c8e5fc6e338bb410577865b.js"></script><script src="../pdp-assets/0770cb6dffee284385e3c6d2a13ec690.js"></script>
+<script src="../pdp-assets/c8ab8ead9d8b913a8ddc47e2c6049083.js"></script><script src="../pdp-assets/0e11fb7c443a68beb10d9027754c9e1f.js"></script>
 </body>
 </html>
