@@ -5324,6 +5324,14 @@ html[data-mundo-estilo] .mundo-papel .mundo-tabla td,html[data-mundo-estilo] .mu
 html[data-mundo-estilo] .mundo-papel .mundo-celda{gap:4px}
 .mundo-ficha-ilu .mundo-letra{width:5.2cqw;height:5.2cqw;font-size:3.2cqw;margin:0}
 .mundo-ficha-ilu tr.on .mundo-pista{display:none}.mundo-ficha-ilu .mundo-val{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}.mundo-ficha-ilu .mundo-celda>div{overflow:hidden}
+/* Letra a la derecha (2026-10-22, nota del Director): ocupa el lugar del tilde; con el veredicto se vuelve correcta (verde, ✓) o incorrecta (ámbar, !). Lo elegido REEMPLAZA a la info de la ficha. */
+.mundo-celda .mundo-letra{order:9;margin:0 0 0 auto}.mundo-celda .mundo-letra:empty{display:none}
+.mundo-celda:has(.mundo-letra:not(:empty)) .mundo-mark{display:none}
+.mundo-letra.ok,.mundo-letra.bad{width:auto;min-width:18px;padding:0 5px;border-radius:99px;gap:2px}
+.mundo-letra.ok{background:var(--feedback-correct,#2e8b57)}.mundo-letra.ok::after{content:"\2713"}
+.mundo-letra.bad{background:var(--warning,#f59e0b);color:#2a1d0a}.mundo-letra.bad::after{content:"!"}
+html[data-mundo-estilo] .mundo-papel tr.on:has(.mundo-letra:not(:empty)) .mundo-pista{display:none}
+.mundo-ficha-ilu tr.on .mundo-pista{display:none}
 html[data-mundo-estilo] .mundo-papel{background:#f4e7cb;background-clip:padding-box}
 html[data-mundo-estilo] .mundo-papel .mundo-tabla td{padding:2px 5px}html[data-mundo-estilo] .mundo-papel .mundo-celda{min-height:0}html[data-mundo-estilo] .mundo-papel .mundo-et-in:not(.con-ico){flex-wrap:nowrap;white-space:nowrap;gap:0 5px}html[data-mundo-estilo] .mundo-papel .mundo-et-in:not(.con-ico) small{font-size:10px}html[data-mundo-estilo] .mundo-papel .mundo-pista{font-size:12px;line-height:1.1}html[data-mundo-estilo] .mundo-papel .mundo-val{font-size:14px;line-height:1.1}html[data-mundo-estilo] .mundo-papel .mundo-mark{flex:none;width:16px;min-width:0;margin:0;transform:none;font-size:13px}html[data-mundo-estilo] .mundo-papel .mundo-pista{font-size:11.5px}html[data-mundo-estilo] .mundo-papel .mundo-et-in:not(.con-ico){font-size:13px}html[data-mundo-estilo] .mundo-papel .mundo-tabla td{vertical-align:middle}html[data-mundo-estilo] .mundo-papel .mundo-et-in.con-ico .mundo-et-img{width:24px;height:24px}html[data-mundo-estilo] .mundo-papel .mundo-et-in{line-height:1.05}html[data-mundo-estilo] .mundo-papel .mundo-et-in small{line-height:1.05}
 .mundo-papel-titulo.libre{left:calc((var(--tx) - var(--pl))*1px*var(--pk));top:calc((var(--ty) - var(--pt))*1px*var(--pk));width:calc(var(--tw)*1px*var(--pk));height:calc(var(--th)*1px*var(--pk));right:auto;flex-direction:column;align-items:flex-start;justify-content:center;gap:3px;padding:0;color:#4a2c14;text-shadow:none;font-size:calc(var(--th)*1px*var(--pk)*.27)}
@@ -5334,7 +5342,7 @@ html[data-mundo-estilo] .mundo-papel .mundo-tabla td{padding:2px 5px}html[data-m
 .mundo-ficha-ilu .mundo-tabla,.mundo-ficha-ilu tbody{display:block;position:absolute;inset:0;margin:0;background:none}.mundo-ficha-ilu thead,.mundo-ficha-ilu .mundo-et{display:none}
 .mundo-ficha-ilu tr{display:block;position:absolute;background:transparent!important}.mundo-ficha-ilu td{display:block;width:100%;height:100%;padding:0;border:0;background:transparent!important}
 .mundo-ficha-ilu .mundo-celda{height:100%;display:flex;align-items:center;justify-content:space-between;gap:1cqw;padding:0 2.6cqw;box-sizing:border-box}.mundo-ficha-ilu .mundo-celda>div{min-width:0;flex:1}
-.mundo-ficha-ilu .mundo-val{font-size:4.4cqw;line-height:1.1;font-family:var(--font-heading,inherit);color:#1d2a52;font-weight:700}.mundo-ficha-ilu .mundo-pista{font-size:3.75cqw;white-space:nowrap;color:#4f5470;font-weight:600}.mundo-ficha-ilu tr.ilu-name .mundo-pista{font-size:8.4cqw;color:#1d2a52;font-weight:800;font-family:var(--font-heading,inherit);opacity:.55}
+.mundo-ficha-ilu .mundo-val{font-size:3.9cqw;line-height:1.1;font-family:var(--font-heading,inherit);color:#1d2a52;font-weight:700}.mundo-ficha-ilu .mundo-pista{font-size:3.75cqw;white-space:nowrap;color:#4f5470;font-weight:600}.mundo-ficha-ilu tr.ilu-name .mundo-pista{font-size:8.4cqw;color:#1d2a52;font-weight:800;font-family:var(--font-heading,inherit);opacity:.55}
 .mundo-ficha-ilu tr.ilu-name .mundo-celda{justify-content:center;padding:0}.mundo-ficha-ilu tr.ilu-name .mundo-val{font-size:9.2cqw;font-weight:800}
 @media (max-height:760px){.mundo-tabla-fija.con-ilu{width:min(100%,268px)}}
 @media (max-height:760px){html[data-mundo-estilo] .mundo-papel .mundo-et-in{font-size:14px}html[data-mundo-estilo] .mundo-papel .mundo-et-in small{font-size:10.5px}html[data-mundo-estilo] .mundo-papel .mundo-et-in.con-ico .mundo-et-img{width:23px;height:23px}html[data-mundo-estilo] .mundo-papel .mundo-val{font-size:14px}}
@@ -5438,6 +5446,10 @@ html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-arcos
 .mundo-arcos.n3 .arco-et{font-size:clamp(10px,2.9vw,12px)}
 .mundo-arcos.n3 .carta-mini{flex-direction:column;align-items:stretch;text-align:center;font-size:8px;line-height:1.1;padding:2px}
 .mundo-arcos.n3 .carta-mini img{width:100%;height:34px;object-fit:cover;object-position:50% 22%}
+/* Arco con 3 o más tarjetas (2026-10-22, nota del Director: «en el arca se excede cuando entran 3 opciones»): cada tarjeta pasa a un renglón (foto chica + texto) y las tres entran en el arco. */
+.mundo-arcos:not(.n3) .arco.muchas .carta-mini{flex-direction:row;align-items:center;gap:4px;padding:2px 4px;font-size:9px;text-align:left}
+.mundo-arcos:not(.n3) .arco.muchas .carta-mini img{width:30px;height:24px;flex:none}
+.mundo-arcos:not(.n3) .arco.muchas .arco-suelta{gap:2px}
 .mundo-wrap.arcos3 .word-bank{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .word-chip.carta{flex-direction:row;align-items:center;text-align:left;min-height:56px}
 html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .word-chip.carta img{width:54px;height:54px;flex:none;border-radius:8px;margin:2px}
@@ -5453,7 +5465,8 @@ html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .wor
 @media (max-height:760px){.mundo-arcos.n3 .arco.oro{--arco-h:200px}}
 /* MARCO de las cuerdas (2026-10-21, diseño del Director): marco de piedra con hiedra y faroles, carteles dorados, elementos con imagen y cuerdas que brillan. El marco se estira solo hacia los lados de piedra (la altura la manda el contenido). */
 .mundo-cuerdas.con-marco{--k:.32;--kx:.82;padding:0;background:transparent;border-radius:0;border-style:solid;border-color:transparent;border-width:calc(185px*var(--k)) calc(140px*var(--k)*var(--kx)) calc(232px*var(--k)) calc(150px*var(--k)*var(--kx));border-image-source:var(--marco-img);border-image-slice:79 96 131 102;border-image-width:calc(185px*var(--k)) calc(140px*var(--k)*var(--kx)) calc(232px*var(--k)) calc(150px*var(--k)*var(--kx));border-image-repeat:stretch;box-sizing:content-box;margin:0 -9px -4px}
-.mundo-cuerdas.con-marco .mundo-cuerdas-cols{gap:0;grid-template-columns:minmax(0,1fr) minmax(60px,.62fr) minmax(0,1fr)}
+.mundo-cuerdas.con-marco .mundo-cuerdas-cols{gap:0;align-items:stretch;grid-template-columns:minmax(0,1fr) minmax(60px,.62fr) minmax(0,1fr)}
+.mundo-cuerdas.con-marco .mundo-cuerdas-col .mundo-cuerda-it+.mundo-cuerda-it{margin-top:auto}   /* la columna con menos elementos (4 de 5) los reparte a lo alto, sin hueco abajo (nota del Director: «hay más de la derecha que de la izquierda») */
 .mundo-cuerdas.con-marco .mundo-cuerdas-col{gap:14px}
 .mundo-cuerdas.con-marco .mundo-cuerdas-rot{height:calc(70px*var(--k)*1.5);min-height:30px;display:grid;place-items:center;background:var(--cartel-img) center/100% 100% no-repeat;color:#2a1d0a;font-size:12px;font-weight:800;line-height:1;letter-spacing:.04em;white-space:nowrap;text-transform:uppercase;margin:0 0 4px;padding:0 10px}
 .mundo-cuerdas.con-marco .mundo-cuerda-it{min-height:56px;padding:4px 5px 4px 4px;gap:5px;background:rgba(10,12,20,.78);color:#fff;border-radius:12px;font:700 12px/1.1 var(--font-heading,inherit);box-shadow:0 2px 6px rgba(0,0,0,.4)}
@@ -6378,6 +6391,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/ee9622124036b737d272a8ec65668408.js"></script><script src="../pdp-assets/b94c53faddac412b29d475a229e307be.js"></script>
+<script src="../pdp-assets/037bdf18aef65e75c43abe878d794cbe.js"></script><script src="../pdp-assets/bb6e81979c42e3623592d58d65220f3c.js"></script>
 </body>
 </html>
