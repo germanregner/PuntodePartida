@@ -5324,6 +5324,34 @@ html[data-mundo-estilo] .mundo-papel .mundo-tabla td,html[data-mundo-estilo] .mu
 html[data-mundo-estilo] .mundo-papel .mundo-celda{gap:4px}
 .mundo-ficha-ilu .mundo-letra{width:5.2cqw;height:5.2cqw;font-size:3.2cqw;margin:0}
 .mundo-ficha-ilu tr.on .mundo-pista{display:none}.mundo-ficha-ilu .mundo-val{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}.mundo-ficha-ilu .mundo-celda>div{overflow:hidden}
+.mundo-ficha-ilu.con-et tr{display:flex;align-items:center}
+.mundo-ficha-ilu.con-et td{display:block;width:auto;height:auto;min-width:0}
+.mundo-ficha-ilu.con-et .mundo-et{display:block;flex:0 0 47%;width:auto}
+.mundo-ficha-ilu.con-et td:last-child{flex:1;height:100%}
+.mundo-ficha-ilu.con-et .mundo-et-in{font-size:3.8cqw;line-height:1.05;color:#3b2a14;font-weight:700;flex-wrap:nowrap;align-items:center;gap:1.6cqw;padding-left:1.2cqw}
+.mundo-ficha-ilu.con-et .mundo-et-in small{font-size:3cqw;color:#6a5535;font-weight:500}
+.mundo-ficha-ilu.con-et .mundo-et-img{width:7.2cqw;height:7.2cqw;flex:none;margin:0;border-width:1px}
+.mundo-ficha-ilu.con-et .mundo-et-txt{display:flex;flex-direction:column;min-width:0}
+.mundo-ficha-ilu.con-et .mundo-val{font-size:4.3cqw;color:#1d2a52}
+.mundo-ficha-ilu.con-et .mundo-pista{font-size:3.4cqw}
+.mundo-ilu-titulo{position:absolute;display:flex;align-items:center;color:#f5e6c8;font:800 5.4cqw/1 var(--font-heading,inherit);letter-spacing:.02em;text-shadow:0 1px 2px rgba(0,0,0,.6);white-space:nowrap;overflow:hidden}
+.mundo-wrap.foto-lado>.mundo-hilo{order:3}
+/* TEMA NOCHE (2026-10-25, maqueta del Director): opciones en píldoras azul marino con borde dorado y letra; burbuja de Leo oscura, la del alumno dorada. */
+.tema-noche .mundo-opciones .option-btn{display:flex;align-items:center;gap:10px;text-align:left;background:linear-gradient(180deg,#12294f,#0a1a38)!important;color:#f6ecd6!important;border:1.5px solid var(--accent-gold)!important;box-shadow:0 2px 6px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,214,120,.18)!important}
+.tema-noche .mundo-opciones .option-btn .op-letra{width:24px;height:24px;font-size:13px}
+.tema-noche .mundo-opciones .option-btn::after{content:"\25C6";margin-left:auto;color:var(--accent-gold);font-size:9px}
+html[data-mundo-estilo] .tema-noche .mundo-burbuja.leo{background:linear-gradient(180deg,#12294f,#0a1a38);color:#f6ecd6;border:1.5px solid rgba(255,214,120,.55)}
+html[data-mundo-estilo] .tema-noche .mundo-burbuja.leo small{color:var(--accent-gold)}
+html[data-mundo-estilo] .tema-noche .mundo-burbuja.yo{background:linear-gradient(180deg,#f1d9a0,#e2bf79);border-color:#b98a35;color:#2a1d0a}
+html[data-mundo-estilo] .tema-noche .mundo-burbuja.yo small{color:#7a5a24}
+/* rótulos de la libreta azul: una sola línea cada uno (sin pisarse) y el valor/pista con su propio tamaño aunque la fila se llame «name» */
+.mundo-ficha-ilu.con-et .mundo-et-in{font-size:3.3cqw;white-space:nowrap}
+.mundo-ficha-ilu.con-et .mundo-et-txt{overflow:hidden}
+.mundo-ficha-ilu.con-et .mundo-et-txt small{font-size:2.6cqw;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+.mundo-ficha-ilu.con-et .mundo-et{flex:0 0 52%}
+.mundo-ficha-ilu.con-et tr.ilu-name .mundo-celda{justify-content:space-between;padding:0 2.6cqw}
+.mundo-ficha-ilu.con-et tr.ilu-name .mundo-val{font-size:4.3cqw;font-weight:700}
+.mundo-ficha-ilu.con-et tr.ilu-name .mundo-pista{font-size:3.4cqw;font-weight:600;color:#4f5470;opacity:1;font-family:inherit}
 /* Letra a la derecha (2026-10-22, nota del Director): ocupa el lugar del tilde; con el veredicto se vuelve correcta (verde, ✓) o incorrecta (ámbar, !). Lo elegido REEMPLAZA a la info de la ficha. */
 .mundo-celda .mundo-letra{order:9;margin:0 0 0 auto}.mundo-celda .mundo-letra:empty{display:none}
 .mundo-celda:has(.mundo-letra:not(:empty)) .mundo-mark{display:none}
@@ -6391,6 +6419,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/ea17b4720a89bcc37a582b757a434d7c.js"></script><script src="../pdp-assets/bb6e81979c42e3623592d58d65220f3c.js"></script>
+<script src="../pdp-assets/1267d2174d67d97369acf68b85607f5a.js"></script><script src="../pdp-assets/89cfbe258a80744e685793dec5b17b89.js"></script>
 </body>
 </html>
