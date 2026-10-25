@@ -5335,6 +5335,17 @@ html[data-mundo-estilo] .mundo-papel .mundo-celda{gap:4px}
 .mundo-ficha-ilu.con-et .mundo-val{font-size:4.3cqw;color:#1d2a52}
 .mundo-ficha-ilu.con-et .mundo-pista{font-size:3.4cqw}
 .mundo-ilu-titulo{position:absolute;display:flex;align-items:center;color:#f5e6c8;font:800 5.4cqw/1 var(--font-heading,inherit);letter-spacing:.02em;text-shadow:0 1px 2px rgba(0,0,0,.6);white-space:nowrap;overflow:hidden}
+.pdp-fondo-mundo #confirm-btn{position:relative;overflow:visible}
+.pdp-fondo-mundo #confirm-btn::after{content:"";position:absolute;inset:-7px -12px;pointer-events:none;border:solid transparent;border-width:20px 42px;border-image-source:var(--pdp-boton-img);border-image-slice:60 150 60 150;border-image-width:20px 42px 20px 42px;border-image-repeat:stretch;filter:drop-shadow(0 2px 4px rgba(0,0,0,.5))}
+.mundo-ficha-ilu.con-et .mundo-val:empty{display:none}.mundo-ficha-ilu.con-et .mundo-celda>div{display:flex;flex-direction:column;justify-content:center}
+.mundo-ficha-ilu.con-et td{align-self:center}.mundo-ficha-ilu.con-et td:last-child{align-self:stretch}
+.mundo-ficha-ilu.con-et .mundo-val,.mundo-ficha-ilu.con-et .mundo-pista{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.mundo-ilu-avatar{position:absolute;aspect-ratio:1/1;border-radius:50%;background-size:cover;background-position:50% 22%;background-repeat:no-repeat;border:2px solid var(--accent-gold);box-shadow:0 2px 6px rgba(0,0,0,.55);z-index:3}
+/* TEMA NOCHE en fichas y agendas (2026-10-25): las frases del banco, en píldoras azul marino con borde dorado como las del chat; la elegida, dorada. */
+html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tema-noche .word-chip{background:linear-gradient(180deg,#12294f,#0a1a38);color:#f6ecd6;border:1.5px solid var(--accent-gold);box-shadow:0 2px 6px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,214,120,.16)}
+html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tema-noche .word-chip.pick{background:linear-gradient(180deg,#f1d9a0,#e2bf79);color:#2a1d0a;border-color:#b98a35}
+html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tema-noche .word-chip.mal{border-style:dashed;border-color:var(--warning);background:linear-gradient(180deg,#3a2a12,#241808);color:#ffe3b0}
+.tema-noche .word-chip .op-letra{background:#e8782a}
 .mundo-wrap.foto-lado>.mundo-hilo{order:3}
 /* TEMA NOCHE (2026-10-25, maqueta del Director): opciones en píldoras azul marino con borde dorado y letra; burbuja de Leo oscura, la del alumno dorada. */
 .tema-noche .mundo-opciones .option-btn{display:flex;align-items:center;gap:10px;text-align:left;background:linear-gradient(180deg,#12294f,#0a1a38)!important;color:#f6ecd6!important;border:1.5px solid var(--accent-gold)!important;box-shadow:0 2px 6px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,214,120,.18)!important}
@@ -5348,7 +5359,7 @@ html[data-mundo-estilo] .tema-noche .mundo-burbuja.yo small{color:#7a5a24}
 .mundo-ficha-ilu.con-et .mundo-et-in{font-size:3.3cqw;white-space:nowrap}
 .mundo-ficha-ilu.con-et .mundo-et-txt{overflow:hidden}
 .mundo-ficha-ilu.con-et .mundo-et-txt small{font-size:2.6cqw;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
-.mundo-ficha-ilu.con-et .mundo-et{flex:0 0 52%}
+.mundo-ficha-ilu.con-et .mundo-et{flex:0 0 var(--et,52%)}
 .mundo-ficha-ilu.con-et tr.ilu-name .mundo-celda{justify-content:space-between;padding:0 2.6cqw}
 .mundo-ficha-ilu.con-et tr.ilu-name .mundo-val{font-size:4.3cqw;font-weight:700}
 .mundo-ficha-ilu.con-et tr.ilu-name .mundo-pista{font-size:3.4cqw;font-weight:600;color:#4f5470;opacity:1;font-family:inherit}
@@ -6419,6 +6430,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/c700d38f8cc38b5f09b4e5553e22c738.js"></script><script src="../pdp-assets/89cfbe258a80744e685793dec5b17b89.js"></script>
+<script src="../pdp-assets/e200f4bd3ad19b5a9c95e4c0e40d0df1.js"></script><script src="../pdp-assets/a545f41617cd737cd4d3515662525ba3.js"></script>
 </body>
 </html>
