@@ -5530,6 +5530,35 @@ html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.arcos3 .wor
 
 /* ARCO DORADO (2026-10-21, ilustración del Director): marco con hiedra dorada, ícono arriba y las tarjetas DENTRO del arco (sin zona aparte). Dos variantes del pie: con escalón (por defecto) y sin escalón (🧪 → «Arcos · base»). */
 .mundo-arcos.n3 .arco.oro{--marco:var(--marco-esc);--arco-h:250px;--sl-t:140;--sl-r:76;--sl-b:85;--sl-l:78;--fb-b:92;--zs-b:100}
+/* MALETA (2026-10-26, pieza del Director T2-03 + fondo T2-07): dos hojas dentro de una maleta abierta; cada hoja lleva su insignia, su título y el hueco donde caen las frases. Medidas en porcentajes de la maleta (1377×1142). */
+.mundo-arcos.maleta{display:block;position:relative;gap:0;aspect-ratio:1377/1142;background:var(--maleta) center/100% 100% no-repeat;filter:drop-shadow(0 8px 10px rgba(0,0,0,.5))}
+.arco.hoja{position:absolute;top:14.4%;height:73.8%;width:38.2%;height:73.8%;display:flex;flex-direction:column;align-items:center;gap:2%;padding:2% 2.5% 2%;box-sizing:border-box}
+.arco.hoja:nth-child(1){left:7.7%}.arco.hoja:nth-child(2){left:54.6%}
+.arco.hoja .arco-fondo,.arco.hoja .arco-marco{display:none}
+.arco-insignia{flex:none;width:17%;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;font:900 clamp(14px,4.2vw,20px)/1 var(--font-heading,inherit);color:#fff;border:2px solid #f3dca0;box-shadow:0 2px 4px rgba(0,0,0,.45)}
+.arco-insignia.si{background:radial-gradient(circle at 35% 30%,#4fae5e,#1f6b34)}.arco-insignia.no{background:radial-gradient(circle at 35% 30%,#c4554b,#7d211b)}
+.arco.hoja .arco-et{position:static;flex:none;width:100%;height:auto;margin-top:2%;padding:1% 4%;box-sizing:border-box;background:linear-gradient(180deg,#fbf1d6,#ecd9a6);border:1.5px solid #b38a3c;border-radius:6px;box-shadow:0 2px 3px rgba(0,0,0,.35);color:#2a1d0a;font-size:clamp(10px,3vw,13px);text-shadow:none}
+.arco.hoja .arco-suelta{position:static;flex:1 1 auto;width:100%;min-height:0;padding:3%;gap:3%;justify-content:flex-start;overflow:hidden;border:1.5px dashed rgba(90,60,20,.45);border-radius:6px;background:rgba(255,248,226,.35)}
+.arco.hoja.con-cartas .arco-suelta{border-color:transparent;background:transparent}
+.mundo-arcos.maleta{width:84%;margin:0 auto}.arco.hoja.muchas .carta-mini{font-size:clamp(7.5px,2.1vw,9.5px);padding:2px 3px;line-height:1.08}.arco.hoja.muchas .arco-suelta{gap:2%;padding:2%}.arco.hoja .arco-insignia{width:14%}.arco.hoja{gap:1.2%;padding:1.8% 2.2%}
+@media (max-height:760px){.mundo-arcos.maleta{width:74%}.arco.hoja .arco-et{font-size:clamp(9px,2.7vw,11px)}.mundo-wrap.tiene-arcos.con-retrato:has(.mundo-arcos.maleta) .mundo-cuenta{font-size:10px}}
+.mundo-arcos.maleta .carta-mini img{display:none}.mundo-arcos.maleta .carta-mini{flex-direction:column;text-align:center;font-size:clamp(8.5px,2.4vw,11px);line-height:1.12;padding:3px 4px;flex:none}
+/* BANDERAS (2026-10-26, pendones del Director T2-06 sobre el fondo de la sala T2-05): en vez de los arcos, tres pendones que cuelgan de su barra; el medallón arriba, el nombre, la foto del lugar y abajo el hueco donde caen las frases. Todo en porcentajes del pendón (475×880). */
+.mundo-arcos.banderas{gap:0}.arco.bandera{height:auto;aspect-ratio:480/890;isolation:isolate}
+.arco.bandera .arco-marco{position:absolute;inset:0;z-index:0;border:0;border-image:none;background:var(--marco) center/100% 100% no-repeat;filter:drop-shadow(0 6px 7px rgba(0,0,0,.5))}
+.arco.bandera .arco-fondo{z-index:1;left:30%;right:19%;top:37.5%;bottom:auto;height:23%;border:2px solid #d9b25c;border-radius:5px;box-shadow:0 2px 5px rgba(0,0,0,.45)}
+.arco.bandera .arco-ico{position:absolute;z-index:4;left:37.5%;top:15.5%;width:24%;height:auto;aspect-ratio:1;object-fit:contain;filter:drop-shadow(0 2px 3px rgba(0,0,0,.5))}
+.arco.bandera .arco-et{z-index:3;left:14%;right:14%;top:30.6%;height:6%;color:#f6ecd6;text-shadow:0 1px 2px rgba(0,0,0,.75);font-size:clamp(10px,2.9vw,13px)}
+.arco.bandera .arco-suelta{z-index:3;left:30%;right:19%;top:62.5%;bottom:auto;height:15.5%;min-height:0;padding:2px;gap:2px;justify-content:flex-end;border:1.5px dashed rgba(255,246,220,.75);border-radius:6px;background:rgba(255,246,220,.14)}
+.arco.bandera.con-cartas .arco-suelta{border-color:transparent;background:rgba(255,246,220,.3)}
+/* en la bandera las frases entran solo como texto (la foto de la persona ya está en el banco) y el hueco crece hacia arriba si hay más de una */
+.mundo-arcos.banderas .carta-mini img{display:none}.mundo-arcos.banderas .carta-mini{flex-direction:column;text-align:center;font-size:8px;line-height:1.1;padding:2px 3px}
+.arco.bandera .arco-suelta{top:auto;bottom:21.5%;height:auto;min-height:15.5%}
+html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-arcos:has(.mundo-arcos.banderas, .mundo-arcos.maleta) .word-bank{background:rgba(24,16,8,.45);border-color:rgba(255,236,190,.4);box-shadow:0 3px 10px rgba(0,0,0,.4)}
+/* arcos con retrato: la fila del retrato ocupa el lugar del avatar y la consigna */
+.mundo-wrap.tiene-arcos.con-retrato{grid-template-columns:minmax(0,1fr);grid-template-areas:"ret" "cuenta" "arcos" "banco"}
+.mundo-wrap.tiene-arcos.con-retrato>.mundo-ret{grid-area:ret;width:100%}.mundo-wrap.tiene-arcos.con-retrato>.mundo-escena{display:none}
+@media (max-height:760px){.mundo-arcos.banderas{width:80%;margin:0 auto}.mundo-wrap.tiene-arcos.con-retrato .mundo-ret-foto{flex-basis:98px;height:68px;border-width:11px 0 11px 11px;border-image-width:11px 0 11px 11px}html[data-mundo-estilo] .mundo-wrap.tiene-arcos.con-retrato>.mundo-ret>.mundo-dice{min-height:46px;font-size:13.5px;margin-left:-26px;padding:2px 4px 2px 14px}}
 .arco.oro .arco-marco{border-width:calc(var(--sl-t)*1px*var(--k)) calc(var(--sl-r)*1px*var(--k)) calc(var(--sl-b)*1px*var(--k)) calc(var(--sl-l)*1px*var(--k));border-image-slice:var(--sl-t) var(--sl-r) var(--sl-b) var(--sl-l);border-image-width:calc(var(--sl-t)*1px*var(--k)) calc(var(--sl-r)*1px*var(--k)) calc(var(--sl-b)*1px*var(--k)) calc(var(--sl-l)*1px*var(--k))}
 .arco.oro .arco-fondo{left:calc(58px*var(--k));right:calc(58px*var(--k));top:calc(120px*var(--k));bottom:calc(var(--fb-b)*1px*var(--k))}
 .arco.oro .arco-et{left:calc(101px*var(--k));right:calc(109px*var(--k));top:calc(75px*var(--k));height:calc(27px*var(--k));line-height:1;font-size:clamp(9.5px,2.7vw,12px)}
@@ -6464,6 +6493,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/35a43d3075f9347bb1e57c609e9d6483.js"></script><script src="../pdp-assets/a287b9f9bde029f82b5acd638d82ffb3.js"></script>
+<script src="../pdp-assets/1d108f6dbd25f0f6eb5e24f809793a3f.js"></script><script src="../pdp-assets/21e2adf1efaededc01a9f0f15f76f9e6.js"></script>
 </body>
 </html>
