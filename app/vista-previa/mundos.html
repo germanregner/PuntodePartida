@@ -5207,7 +5207,7 @@ html #screen-exercise:has(.lec-wrap) .skip-btn{ bottom:calc(100% + 100px); }
 /* nada de lo que se va eligiendo queda por debajo del botón «Probalo» (aunque sea transparente): al llevar una burbuja o las opciones a la vista, se deja el alto del pie de pantalla */
 .mundo-hilo>*,.mundo-wrap .word-bank{scroll-margin-bottom:calc(var(--exercise-footer-h,115px) + var(--feedback-zone-h,0px) + 16px)}
 .mundo-val.escribiendo::after{content:"";display:inline-block;width:2px;height:1em;margin-left:2px;vertical-align:-2px;background:var(--accent-gold);animation:mundo-cursor .6s steps(1) infinite}
-.mundo-val.pizarra{position:relative;-webkit-text-fill-color:transparent}.mundo-val.pizarra.escribiendo::after{display:none}.mundo-val .pz-base{display:inline-block;width:0;height:0}.mundo-val .pz{position:absolute;left:0;overflow:visible;pointer-events:none}.mundo-val .pz-punta{fill:var(--accent-gold)}
+.pizarra{position:relative;-webkit-text-fill-color:transparent}.pizarra.escribiendo::after{display:none}.pizarra .pz-base{display:inline-block;width:0;height:0}.pizarra .pz{position:absolute;left:0;overflow:visible;pointer-events:none}.pizarra .pz-punta{fill:var(--accent-gold)}.pz-espera{visibility:hidden}.pz-oculto{-webkit-text-fill-color:transparent}.pz-sobre-t{display:inline-block}
 @keyframes mundo-cursor{50%{opacity:0}}
 @media (prefers-reduced-motion:reduce){.mundo-val.escribiendo::after{animation:none}}
 .mundo-burbuja{max-width:86%;padding:8px 12px;border-radius:16px;font-weight:700;font-size:14.5px;line-height:1.25;animation:mundo-entra .22s ease}
@@ -6464,6 +6464,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/4f33b17e6e69d75857f175293c808345.js"></script><script src="../pdp-assets/ffa6cb2d9ff024ce623007486cbee9a3.js"></script>
+<script src="../pdp-assets/fc246f4b92fefecc8917ff0f76a1e360.js"></script><script src="../pdp-assets/a287b9f9bde029f82b5acd638d82ffb3.js"></script>
 </body>
 </html>
