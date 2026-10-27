@@ -6078,8 +6078,9 @@ html.pdp-fondo-ej.pdp-ej-rollo .fill-blank.correct{background:none;border:0;bord
 html.pdp-fondo-ej.pdp-ej-rollo .fill-blank.wrong{background:none;border:0;border-bottom:2px solid #1a1208;border-radius:0;color:#6a3a00;box-shadow:none}
 html.pdp-fondo-ej.pdp-ej-rollo .answer-slots{min-height:64px;margin:0;padding:18px 24px;gap:2px 8px;align-items:center;justify-content:center;border:0;border-radius:0;background:var(--pdp-hueco-pergamino) center/100% 100% no-repeat;box-shadow:none;filter:drop-shadow(0 3px 4px rgba(0,0,0,.4))}
 html.pdp-fondo-ej.pdp-ej-rollo .answer-slot{padding:0 3px;background:none;border:0;border-radius:0;color:#2a1a08;font-family:var(--font-heading);font-weight:800;font-size:clamp(18px,5vw,22px);line-height:1.2;box-shadow:none;text-shadow:none}
-html.pdp-fondo-ej.pdp-ej-rollo .answer-slot[style*="feedback-correct"]{color:#07503a!important;box-shadow:0 0 10px rgba(14,168,143,.5)}
-html.pdp-fondo-ej.pdp-ej-rollo .answer-slot[style*="--warning"]{color:#6a3a00!important;box-shadow:0 0 10px rgba(223,144,0,.5)}
+html.pdp-fondo-ej.pdp-ej-rollo .answer-slot[style]{background:none!important;border:0!important;box-shadow:none!important;text-shadow:none}
+html.pdp-fondo-ej.pdp-ej-rollo .answer-slot[style*="feedback-correct"],html.pdp-fondo-ej.pdp-ej-rollo .answer-slot[style*="celebrate"]{color:#0a6b45!important}
+html.pdp-fondo-ej.pdp-ej-rollo .answer-slot[style*="--warning"]{color:#a14a00!important}
 html.pdp-fondo-ej.pdp-ej-rollo .word-bank{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 10px;padding:4px 2px;background:none;border:0;border-radius:0}
 html.pdp-fondo-ej.pdp-ej-rollo .word-bank .word-chip{flex:0 0 calc(33.333% - 7px);max-width:calc(33.333% - 7px);aspect-ratio:1.8/1;min-height:0;box-sizing:border-box;padding:0 13%;display:flex;align-items:center;justify-content:center;border:0;border-radius:0;background:var(--pdp-ficha-crema) center/100% 100% no-repeat;color:#2a1a08;font-family:var(--font-heading);font-weight:800;font-size:clamp(15px,4.6vw,19px);line-height:1;white-space:nowrap;box-shadow:none;filter:drop-shadow(0 3px 4px rgba(0,0,0,.45));transition:transform .12s,filter .12s,opacity .12s}
 html.pdp-fondo-ej.pdp-ej-rollo .word-bank .word-chip:nth-child(4n+2){background-image:var(--pdp-ficha-azul);color:#f6ecd6}
@@ -6093,7 +6094,7 @@ html.pdp-fondo-ej.pdp-ej-rollo .word-bank .word-chip.used{opacity:.55;filter:gra
 html.pdp-fondo-ej.pdp-ej-rollo .word-bank .word-chip.rejected{border:0;text-decoration:line-through;opacity:.4}
 @media (max-height:760px){html.pdp-fondo-ej.pdp-ej-rollo .ej-pergamino{padding:14px 18px;margin-bottom:12px}html.pdp-fondo-ej.pdp-ej-rollo .word-bank{gap:8px 8px}}
 /* ═══ fin piezas word-bank/order ═══ */
-:root{--pdp-banner-azul:url('../pdp-assets/e96866b6bd42af5ee54550fd70dd830c.png');--pdp-marco-foto:url('../pdp-assets/78559ae873c438b0ec8403c6a336573a.png');--pdp-tira-pergamino:url('../pdp-assets/dc1c43498dae82efc589a0482e7d4e6b.png');--pdp-etiqueta-azul:url('../pdp-assets/89d16be9b8c2ec88a11bbceea0d24058.png');--pdp-campo-pergamino:url('../pdp-assets/73add8af28ee281e5e052656fb1d683e.png')}
+:root{--pdp-banner-azul:url('../pdp-assets/e96866b6bd42af5ee54550fd70dd830c.png');--pdp-marco-foto:url('../pdp-assets/eaf4b8d8aa346b82dd4a14106a8069f8.png');--pdp-tira-pergamino:url('../pdp-assets/dc1c43498dae82efc589a0482e7d4e6b.png');--pdp-etiqueta-azul:url('../pdp-assets/89d16be9b8c2ec88a11bbceea0d24058.png');--pdp-campo-pergamino:url('../pdp-assets/73add8af28ee281e5e052656fb1d683e.png')}
 /* ═══ Componentes del Director en todos los ejercicios con paisaje (2026-10-27) ═══
    Cada pieza es un componente: banner azul (consigna), marco de foto, tira de pergamino (oración), etiqueta fina azul, campo de pergamino (respuesta escrita y opciones).
    Los pone la clase pdp-ej-piezas (pdpPiezasEj); el botón Confirmar ya lleva el marco de los mundos. */
@@ -6134,6 +6135,16 @@ html.pdp-fondo-ej.pdp-ej-piezas .match-item.wrong,html.pdp-fondo-ej.pdp-ej-pieza
 html.pdp-fondo-ej.pdp-ej-piezas .classify-chip.placed,html.pdp-fondo-ej.pdp-ej-piezas .timeline-chip.used{opacity:.4;filter:grayscale(.4)}
 html.pdp-fondo-ej.pdp-ej-piezas .match-item.disabled,html.pdp-fondo-ej.pdp-ej-piezas .match-item:disabled{opacity:.75}
 html.pdp-fondo-ej.pdp-ej-piezas .free-guide-persistent{display:flex;align-items:center;justify-content:center;min-height:46px;margin:2px 0 6px;padding:0 6px;border:solid transparent;border-width:0 27px;border-image:var(--pdp-etiqueta-azul) 0 130 0 130 fill / 0 27px 0 27px stretch;background:none;color:#f6ecd6;font:600 clamp(11.5px,3.4vw,13.5px)/1.2 var(--font-heading);text-align:center;box-shadow:none}
+/* estado por COLOR DE LETRA, sin brillo de fondo (nota del Director, 2026-10-27): elegido = azul, acierto = verde, error = ámbar oscuro */
+html.pdp-fondo-ej.pdp-ej-piezas .option-btn.selected,html.pdp-fondo-ej.pdp-ej-piezas .checkbox-btn.selected,html.pdp-fondo-ej.pdp-ej-piezas .tf-btn.selected,html.pdp-fondo-ej.pdp-ej-piezas .match-item.selected,html.pdp-fondo-ej.pdp-ej-piezas .classify-chip.selected,html.pdp-fondo-ej.pdp-ej-piezas .timeline-chip.selected,html.pdp-fondo-ej.pdp-ej-piezas .geo-opt.selected,html.pdp-fondo-ej.pdp-ej-piezas .match-item.matched{color:#0c3f9a;filter:drop-shadow(0 3px 4px rgba(0,0,0,.4))}
+html.pdp-fondo-ej.pdp-ej-piezas .option-btn.correct,html.pdp-fondo-ej.pdp-ej-piezas .checkbox-btn.correct,html.pdp-fondo-ej.pdp-ej-piezas .tf-btn.correct,html.pdp-fondo-ej.pdp-ej-piezas .match-item.correct,html.pdp-fondo-ej.pdp-ej-piezas .classify-chip.correct,html.pdp-fondo-ej.pdp-ej-piezas .timeline-chip.correct,html.pdp-fondo-ej.pdp-ej-piezas .geo-opt.correct,html.pdp-fondo-ej.pdp-ej-piezas .match-item.matched.correct{color:#0a6b45;filter:drop-shadow(0 3px 4px rgba(0,0,0,.4))}
+html.pdp-fondo-ej.pdp-ej-piezas .option-btn.wrong,html.pdp-fondo-ej.pdp-ej-piezas .checkbox-btn.wrong,html.pdp-fondo-ej.pdp-ej-piezas .tf-btn.wrong,html.pdp-fondo-ej.pdp-ej-piezas .match-item.wrong,html.pdp-fondo-ej.pdp-ej-piezas .classify-chip.wrong,html.pdp-fondo-ej.pdp-ej-piezas .timeline-chip.wrong,html.pdp-fondo-ej.pdp-ej-piezas .geo-opt.wrong,html.pdp-fondo-ej.pdp-ej-piezas .match-item.matched.wrong{color:#a14a00;filter:drop-shadow(0 3px 4px rgba(0,0,0,.4))}
+html.pdp-fondo-ej.pdp-ej-piezas input.text-input:focus{filter:drop-shadow(0 3px 4px rgba(0,0,0,.4))}
+html.pdp-fondo-ej.pdp-ej-piezas input.text-input.correct,html.pdp-fondo-ej.pdp-ej-piezas input.text-input.revealed{color:#0a6b45;filter:drop-shadow(0 3px 4px rgba(0,0,0,.4))}
+html.pdp-fondo-ej.pdp-ej-piezas input.text-input.wrong{color:#a14a00;filter:drop-shadow(0 3px 4px rgba(0,0,0,.4))}
+html.pdp-fondo-ej.pdp-ej-piezas .error-word.selected{background:none;border-color:transparent;color:#0c3f9a;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+html.pdp-fondo-ej.pdp-ej-piezas .error-word.correct{background:none;border-color:transparent;color:#0a6b45;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+html.pdp-fondo-ej.pdp-ej-piezas .error-word.wrong{background:none;border-color:transparent;color:#a14a00;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
 /* ═══ fin componentes ═══ */
 
 
@@ -6577,6 +6588,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/4858e63a1f5a0265c21d5e1c7452a71c.js"></script><script src="../pdp-assets/c7a5d0bfbde6761c07871fc5e593017f.js"></script>
+<script src="../pdp-assets/05d3bf134815dfd794c6d59770dfbcee.js"></script><script src="../pdp-assets/2f20bfa9ab87faebccfbec6fcf3ed00c.js"></script>
 </body>
 </html>
