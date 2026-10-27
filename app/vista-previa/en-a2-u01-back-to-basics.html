@@ -6101,7 +6101,7 @@ html.pdp-fondo-ej.pdp-ej-rollo .word-bank .word-chip.rejected{border:0;text-deco
 html.pdp-fondo-ej.pdp-ej-piezas .ej-banner-q,html.pdp-fondo-ej.pdp-ej-piezas #tutor-zone{border:solid transparent;border-width:0 30px;border-image:var(--pdp-banner-azul) 0 150 0 150 fill / 0 30px 0 30px stretch;background:none!important;box-shadow:none;border-radius:0;padding:18px 6px 18px 4px;min-height:92px;filter:drop-shadow(0 6px 8px rgba(0,0,0,.45))}
 html.pdp-fondo-ej.pdp-ej-piezas .ej-banner-q .pdp-cartel-marco,html.pdp-fondo-ej.pdp-ej-piezas .ej-banner-q .pc-esq,html.pdp-fondo-ej.pdp-ej-piezas #tutor-zone .pdp-cartel-marco,html.pdp-fondo-ej.pdp-ej-piezas #tutor-zone .pc-esq{display:none!important}
 html.pdp-fondo-ej.pdp-ej-piezas .ej-banner-q{margin:6px 6px 14px}
-html.pdp-fondo-ej.pdp-ej-piezas .exercise-image-zone:not(.hidden){position:relative;padding:3.4% 3.2%;box-sizing:border-box}
+html.pdp-fondo-ej.pdp-ej-piezas .exercise-image-zone:not(.hidden){position:relative;padding:3% 1.8%;box-sizing:border-box}
 html.pdp-fondo-ej.pdp-ej-piezas .exercise-image-zone:not(.hidden)::after{content:'';position:absolute;inset:0;background:var(--pdp-marco-foto) center/100% 100% no-repeat;pointer-events:none;filter:drop-shadow(0 4px 6px rgba(0,0,0,.45))}
 html.pdp-fondo-ej.pdp-ej-piezas .exercise-image-zone img{border-radius:3px}
 html.pdp-fondo-ej.pdp-ej-piezas .error-sentence{border:solid transparent;border-width:0 28px;border-image:var(--pdp-tira-pergamino) 0 160 0 160 fill / 0 28px 0 28px stretch;padding:20px 10px;margin:6px 0 12px;text-align:center;font-family:var(--font-heading);font-weight:800;font-size:clamp(18px,5vw,22px);line-height:1.5;color:#2a1a08;filter:drop-shadow(0 4px 6px rgba(0,0,0,.4))}
@@ -6145,6 +6145,23 @@ html.pdp-fondo-ej.pdp-ej-piezas input.text-input.wrong{color:#a14a00;filter:drop
 html.pdp-fondo-ej.pdp-ej-piezas .error-word.selected{background:none;border-color:transparent;color:#0c3f9a;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
 html.pdp-fondo-ej.pdp-ej-piezas .error-word.correct{background:none;border-color:transparent;color:#0a6b45;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
 html.pdp-fondo-ej.pdp-ej-piezas .error-word.wrong{background:none;border-color:transparent;color:#a14a00;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+:root{--pdp-tira-op-1:url('../pdp-assets/2c22617d89392b41d2d2a93c6eb91ee6.png');--pdp-tira-op-2:url('../pdp-assets/c4632aef2a12bce7d8c758060b107db6.png');--pdp-tira-op-3:url('../pdp-assets/4793419b24b51d60dfafb8d819dc6450.png');--pdp-tira-op-4:url('../pdp-assets/c0ee0a8974f9f1dae97e143541271357.png');--pdp-tira-op-5:url('../pdp-assets/e583ba88ad63e8033413980dbd302af2.png');--pdp-tira-op-6:url('../pdp-assets/af5b725f1e7402759fd68c4ca5c711d6.png')}
+/* opciones largas: tira de pergamino con flores (una distinta por opción); el texto queda a la izquierda, las flores en el borde derecho */
+html.pdp-fondo-ej.pdp-ej-piezas .op-tira{border-image-slice:0 190 0 45 fill;border-image-width:0 116px 0 24px;border-width:0 116px 0 24px;border-image-repeat:stretch;min-height:64px;padding:6px 0;font-size:clamp(15px,4.2vw,18px);line-height:1.18}
+html.pdp-fondo-ej.pdp-ej-piezas .op-tira[data-tira="1"]{border-image-source:var(--pdp-tira-op-1)}
+html.pdp-fondo-ej.pdp-ej-piezas .op-tira[data-tira="2"]{border-image-source:var(--pdp-tira-op-2)}
+html.pdp-fondo-ej.pdp-ej-piezas .op-tira[data-tira="3"]{border-image-source:var(--pdp-tira-op-3)}
+html.pdp-fondo-ej.pdp-ej-piezas .op-tira[data-tira="4"]{border-image-source:var(--pdp-tira-op-4)}
+html.pdp-fondo-ej.pdp-ej-piezas .op-tira[data-tira="5"]{border-image-source:var(--pdp-tira-op-5)}
+html.pdp-fondo-ej.pdp-ej-piezas .op-tira[data-tira="6"]{border-image-source:var(--pdp-tira-op-6)}
+:root{--pdp-boton-escuchar:url('../pdp-assets/c530109383be51ec58f3479a32fc1e31.png')}
+/* botón Escuchar del Director (2026-10-27): el azul con marco dorado reemplaza al marrón; el ícono y la palabra vienen dibujados en la pieza, el texto real queda solo para lectores de pantalla */
+html.pdp-fondo-ej.pdp-ej-piezas .listen-audio-btn.pds-btn-primary{display:block;position:relative;width:min(290px,76vw);aspect-ratio:720/182;height:auto;padding:0;border:0;border-radius:0;background:var(--pdp-boton-escuchar) center/100% 100% no-repeat;box-shadow:none;font-size:0;color:transparent;filter:drop-shadow(0 5px 7px rgba(0,0,0,.45));transition:filter .12s,transform .12s}
+html.pdp-fondo-ej.pdp-ej-piezas .listen-audio-btn.pds-btn-primary>*{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+html.pdp-fondo-ej.pdp-ej-piezas .listen-audio-btn.pds-btn-primary:active{transform:scale(.985)}
+html.pdp-fondo-ej.pdp-ej-piezas .listen-audio-btn.pds-btn-primary.playing{filter:drop-shadow(0 0 10px rgba(130,190,255,.85)) drop-shadow(0 5px 7px rgba(0,0,0,.45)) brightness(1.12)}
+/* texto de la consigna sobre el paisaje: fondo crema transparente que se desvanece hacia la derecha (2026-10-27, pedido del Director) */
+html.pdp-fondo-ej.pdp-ej-piezas #exercise-question{padding:8px 16px 9px 12px;margin-left:-4px;border-radius:14px;background:linear-gradient(90deg,rgba(255,246,222,.8) 0%,rgba(255,246,222,.58) 62%,rgba(255,246,222,0) 100%);color:#2a1a08;text-shadow:none}
 /* ═══ fin componentes ═══ */
 
 
@@ -6588,6 +6605,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/05d3bf134815dfd794c6d59770dfbcee.js"></script><script src="../pdp-assets/2f20bfa9ab87faebccfbec6fcf3ed00c.js"></script>
+<script src="../pdp-assets/4e675d1d458c41cadff8e68c485fcbcf.js"></script><script src="../pdp-assets/f9298deca88e90b08d98050e209ae7c9.js"></script>
 </body>
 </html>
