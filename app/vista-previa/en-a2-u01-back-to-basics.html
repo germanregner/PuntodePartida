@@ -6106,6 +6106,10 @@ html.pdp-fondo-ej.pdp-ej-piezas .ej-banner-q{margin:6px 6px 14px}
 html.pdp-fondo-ej.pdp-ej-piezas .exercise-image-zone:not(.hidden){position:relative;padding:3% 1.8%;box-sizing:border-box}
 html.pdp-fondo-ej.pdp-ej-piezas .exercise-image-zone:not(.hidden)::after{content:'';position:absolute;inset:0;background:var(--pdp-marco-foto) center/100% 100% no-repeat;pointer-events:none;filter:drop-shadow(0 4px 6px rgba(0,0,0,.45))}
 html.pdp-fondo-ej.pdp-ej-piezas .exercise-image-zone img{border-radius:3px}
+/* Imágenes de los ejercicios con el efecto de la lectura (2026-10-28, pedido del Director; se prueba en el 🧪 → «Imágenes de los ejercicios»): sin marco dorado, con el borde de pergamino rasgado y el contorno quemado de las lecturas. */
+html.pdp-fondo-ej.pdp-ej-piezas[data-var-imagen-efecto="pergamino"] .exercise-image-zone:not(.hidden){padding:0;filter:drop-shadow(0 7px 9px rgba(0,0,0,.45))}
+html.pdp-fondo-ej.pdp-ej-piezas[data-var-imagen-efecto="pergamino"] .exercise-image-zone:not(.hidden)::after{background:var(--lec-bordes) center/100% 100% no-repeat;filter:none}
+html.pdp-fondo-ej.pdp-ej-piezas[data-var-imagen-efecto="pergamino"] .exercise-image-zone img{border-radius:0;-webkit-mask:var(--lec-hoja) center/100% 100% no-repeat;mask:var(--lec-hoja) center/100% 100% no-repeat}
 html.pdp-fondo-ej.pdp-ej-piezas .error-sentence{border:solid transparent;border-width:0 28px;border-image:var(--pdp-tira-pergamino) 0 160 0 160 fill / 0 28px 0 28px stretch;padding:20px 10px;margin:6px 0 12px;text-align:center;font-family:var(--font-heading);font-weight:800;font-size:clamp(18px,5vw,22px);line-height:1.5;color:#2a1a08;filter:drop-shadow(0 4px 6px rgba(0,0,0,.4))}
 html.pdp-fondo-ej.pdp-ej-piezas .error-word{color:#2a1a08;border:2px solid transparent;border-radius:10px;padding:0 3px;background:none}
 html.pdp-fondo-ej.pdp-ej-piezas .error-word:hover{background:rgba(185,138,53,.18);border-color:#b98a35}
@@ -6630,6 +6634,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/c6fa820dba0304b34be13c54e3ad79f5.js"></script><script src="../pdp-assets/0318002bcacb2c0ac526445a4b1857d0.js"></script>
+<script src="../pdp-assets/66b6bdfa03c22bbe4a98e19ab1131426.js"></script><script src="../pdp-assets/fda2849d9d03ce5e65a3e54fb67725e5.js"></script>
 </body>
 </html>
