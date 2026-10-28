@@ -6168,6 +6168,23 @@ html[data-theme="dark"].pdp-fondo-ej.pdp-ej-piezas #exercise-question{color:#122
 html[data-theme="dark"].pdp-fondo-ej.pdp-ej-piezas #exercise-question::before{background:rgba(244,230,200,.86)}
 /* ninguna opción con pieza deja ver el fondo ni el borde del estilo común (el elegido de listen traía un recuadro blanco detrás del pergamino) */
 html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip){background:none!important;border-top-color:transparent!important;border-bottom-color:transparent!important}
+:root{--pdp-cartel-madera:url('../pdp-assets/7d4cb14d5b59d567ad6e2e768d58422d.webp');--pdp-tablero-hiedra:url('../pdp-assets/d5d9d7a1d1bcfde262e1164d3719cd7c.webp');--pdp-biblioteca-dia:url('../pdp-assets/b83c4a89e41dc9b8dbbf80a93af79681.webp');--pdp-biblioteca-noche:url('../pdp-assets/b725d02c5106da8ae944a7c94a5bf139.webp')}
+/* ═══ Pantalla de tabla (table-fill de 3 filas) — rehecha con las piezas del Director (2026-10-27): fondo de biblioteca (día / noche), cartel de madera con hiedra para la consigna y tablero de pergamino con hiedra para la tabla. Las líneas del tablero son las de la imagen: la tabla se acomoda sobre ellas. ═══ */
+html.pdp-ej-tabla{--pdp-valle-bg:var(--pdp-biblioteca-dia)}
+html.pdp-ej-tabla[data-theme="dark"]{--pdp-valle-bg:var(--pdp-biblioteca-noche)}
+html.pdp-fondo-ej.pdp-ej-tabla #exercise-question{display:flex;align-items:center;justify-content:center;box-sizing:border-box;width:calc(100% - 8px);max-width:none;aspect-ratio:2.48/1;margin:2px auto 8px;padding:30px 44px 26px;background:var(--pdp-cartel-madera) center/100% 100% no-repeat;color:#fbf0d6;text-shadow:0 2px 3px rgba(40,18,4,.85);font-family:var(--font-heading);font-weight:700;font-size:clamp(19px,5.4vw,23px);line-height:1.22;text-align:center;text-wrap:balance;filter:drop-shadow(0 6px 8px rgba(0,0,0,.5))}
+html.pdp-fondo-ej.pdp-ej-tabla #exercise-question::before{display:none}
+html.pdp-fondo-ej.pdp-ej-tabla .tf-tablero{position:relative;aspect-ratio:1.5;margin:4px 0 14px;background:var(--pdp-tablero-hiedra) 0 0/100% 100% no-repeat;filter:drop-shadow(0 6px 8px rgba(0,0,0,.45))}
+html.pdp-fondo-ej.pdp-ej-tabla .tf-tablero .ex-table{position:absolute;left:10.5%;top:14%;width:79%;height:73%;margin:0;display:grid;grid-template-rows:22.6fr 25.8fr 25.8fr 25.8fr;border-radius:0;overflow:visible;box-shadow:none;background:none}
+html.pdp-fondo-ej.pdp-ej-tabla .tf-tablero .ex-table thead,html.pdp-fondo-ej.pdp-ej-tabla .tf-tablero .ex-table tbody{display:contents}
+html.pdp-fondo-ej.pdp-ej-tabla .tf-tablero .ex-table tr{display:grid;grid-template-columns:1fr 1fr;min-height:0}
+html.pdp-fondo-ej.pdp-ej-tabla .tf-tablero .ex-table th{display:flex;align-items:center;justify-content:center;padding:0 8px;background:none;color:#0c4a2e;text-align:center;font:800 clamp(15px,4.3vw,18px)/1.1 var(--font-heading)}
+html.pdp-fondo-ej.pdp-ej-tabla .tf-tablero .ex-table td,html.pdp-fondo-ej.pdp-ej-tabla .tf-tablero .ex-table tr:nth-child(even) td{display:flex;align-items:center;border:0;background:none;padding:2px 10px;color:#12275a;font:700 clamp(13px,3.9vw,16px)/1.2 var(--font-heading)}
+html.pdp-fondo-ej.pdp-ej-tabla .tf-tablero .table-input{display:block;width:100%;height:36px;padding:2px 2px 1px;border:0;border-bottom:2px solid #1a1208;border-radius:0;background:none;color:#12275a;text-align:center;resize:none;overflow:hidden;font:700 clamp(12px,3.5vw,14px)/1.12 var(--font-heading)}
+html.pdp-fondo-ej.pdp-ej-tabla .tf-tablero .table-input.correct{border-color:#1a1208;color:#0a6b45}
+html.pdp-fondo-ej.pdp-ej-tabla .tf-tablero .table-input.wrong{border-color:#1a1208;color:#a14a00}
+html[data-theme="dark"].pdp-fondo-ej.pdp-ej-tabla #exercise-question{color:#fbf0d6}
+html[data-theme="dark"].pdp-fondo-ej.pdp-ej-tabla #exercise-question::before{display:none}
 /* ═══ fin componentes ═══ */
 
 
@@ -6611,6 +6628,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/1b5bbb110a72aa28bc385c1fb6b1be98.js"></script><script src="../pdp-assets/f9298deca88e90b08d98050e209ae7c9.js"></script>
+<script src="../pdp-assets/4e7c41ad25800dd38d48184eb6d7f5eb.js"></script><script src="../pdp-assets/c8c46dc2c0aef2c40677523665a97bbb.js"></script>
 </body>
 </html>
