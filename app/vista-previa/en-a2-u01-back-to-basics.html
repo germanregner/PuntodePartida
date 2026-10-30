@@ -6256,6 +6256,9 @@ html.pdp-fondo-ej #screen-exercise:not(:has(.lec-wrap)):not(:has(.pf-wrap)) .pb-
 html.pdp-fondo-ej #screen-exercise:not(:has(.lec-wrap)):not(:has(.pf-wrap)) .pb-nodo{position:absolute;top:0;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;box-sizing:border-box;border-radius:50%;border:1.5px solid #fff;background:rgba(40,38,48,.78);box-shadow:0 1px 3px rgba(0,0,0,.55)}
 html.pdp-fondo-ej #screen-exercise:not(:has(.lec-wrap)):not(:has(.pf-wrap)) .pb-nodo.on{background:#F4C66A;border-color:#fff3d0}
 :root:not(.pdp-fondo-ej) .pb-nodos{display:none}
+/* Sin el recuadro celeste del toque (el que Android dibuja sobre cualquier <div> con onclick) ni selección de texto en las piezas de los ejercicios con paisaje (Director, 2026-10-30) */
+html.pdp-fondo-ej #screen-exercise :not(textarea):not(input){-webkit-tap-highlight-color:transparent}
+html.pdp-fondo-ej :is(.match-item,.classify-chip,.classify-cat,.classify-placed-chip,.option-btn,.checkbox-btn,.tf-btn,.timeline-chip,.word-chip,.answer-slot,.memory-card,.geo-opt,.order-chip,.ej-banner-q){-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
 /* ═══ «Unir» como tarjetas y tablero (2026-10-30, maqueta del Director): biblioteca con leones día/noche, las tarjetas (pergamino con barra de madera) arriba con un hueco, y abajo el tablero de cuero con las tiras rojas; al elegir una tira se ve dentro del hueco de su tarjeta. Solo Unidades con paisaje; la clase pdp-ej-union la pone pdpPiezasEj() y la saca renderExercise(). ═══ */
 html.pdp-fondo-ej.pdp-ej-union:not(.pdp-fondo-mundo) #screen-exercise::before{background:var(--pz-fondo-leones-dia) 50% 0 / cover no-repeat,#3a2614}
 html.pdp-fondo-ej.pdp-ej-union[data-theme="dark"]:not(.pdp-fondo-mundo) #screen-exercise::before{background:var(--pz-fondo-leones-noche) 50% 0 / cover no-repeat,#0e0a07}
@@ -6269,15 +6272,18 @@ html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .match-item[data-side="left"]::afte
 html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .match-item[data-side="left"]:not([data-slot=""])::after{padding:5px 0;border:solid transparent;border-width:0 11px;border-image:var(--pz-union-tira-4) 0 56 0 56 fill / 0 11px stretch;border-radius:0;background:none;box-shadow:none}
 html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .match-item[data-side="left"].selected{filter:drop-shadow(0 0 9px #F4C66A) drop-shadow(0 4px 6px rgba(0,0,0,.45)) brightness(1.05)}
 html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .match-item[data-side="left"].matched:not(.correct):not(.wrong){color:#2a1a08;filter:drop-shadow(0 4px 6px rgba(0,0,0,.45))}
-html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .match-item[data-side="left"].correct{color:#0a6b45;filter:drop-shadow(0 0 9px rgba(60,207,142,.9)) drop-shadow(0 4px 6px rgba(0,0,0,.4))}
-html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .match-item[data-side="left"].wrong{color:#a14a00;filter:drop-shadow(0 0 9px rgba(245,158,11,.95)) drop-shadow(0 4px 6px rgba(0,0,0,.4))}
-html.pdp-fondo-ej.pdp-ej-union .match-columns>div:last-child{box-sizing:border-box;display:flex;flex-wrap:wrap;justify-content:center;align-content:flex-start;gap:10px 8px;padding:8px 2px 10px;border:solid transparent;border-width:24px 24px 30px;border-image:var(--pz-union-tablero) 52 56 66 56 fill / 24px 24px 30px 24px stretch;filter:drop-shadow(0 6px 8px rgba(0,0,0,.5))}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .match-item[data-side="left"].correct{color:#2d5a3d;filter:drop-shadow(0 4px 6px rgba(0,0,0,.45))}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .match-item[data-side="left"].wrong{color:#8a4b12;filter:drop-shadow(0 4px 6px rgba(0,0,0,.45))}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .match-item[data-side="left"].correct:not([data-slot=""])::after{content:"\2713  " attr(data-slot)}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .match-item[data-side="left"].wrong:not([data-slot=""])::after{content:"\2715  " attr(data-slot)}
+html.pdp-fondo-ej.pdp-ej-union .match-columns>div:last-child{box-sizing:border-box;display:flex;flex-wrap:wrap;justify-content:center;align-content:flex-start;gap:14px 10px;min-height:150px;padding:18px 12px 22px;border:solid transparent;border-width:24px 24px 30px;border-image:var(--pz-union-tablero) 52 56 66 56 fill / 24px 24px 30px 24px stretch;filter:drop-shadow(0 6px 8px rgba(0,0,0,.5))}
 html.pdp-fondo-ej.pdp-ej-union .match-columns>div:last-child:not(:has(.match-item:not(.matched))){display:none}
 html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .match-item[data-side="right"]{flex:0 0 auto;box-sizing:border-box;min-height:46px;margin:0;padding:6px 0;border:solid transparent;border-width:0 20px;border-image:var(--pz-union-tira-3) 0 56 0 56 fill / 0 20px stretch;background:none;border-radius:0;box-shadow:none;color:#2a1a08;font:700 clamp(13px,3.7vw,15px)/1.2 var(--font-heading);filter:drop-shadow(0 3px 4px rgba(0,0,0,.5))}
 html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .match-item[data-side="right"][data-pl="1"]{border-image-source:var(--pz-union-tira-1)}
 html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .match-item[data-side="right"][data-pl="2"]{border-image-source:var(--pz-union-tira-2)}
 html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .match-item[data-side="right"][data-pl="4"]{border-image-source:var(--pz-union-tira-4)}
 html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .match-item[data-side="right"][data-pl="5"]{border-image-source:var(--pz-union-tira-5)}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .match-item[data-side="right"].selected{filter:drop-shadow(0 0 9px #F4C66A) drop-shadow(0 3px 4px rgba(0,0,0,.5)) brightness(1.08)}
 html.pdp-fondo-ej.pdp-ej-union .match-item[data-side="right"].matched{display:none}
 /* ═══ «Respuesta libre» en la biblioteca (2026-10-30, maqueta del Director): fondo de biblioteca día/noche, consigna grande con halo, cartel azul, campo = marco de pergamino con renglones (marco estirado, renglones de CSS que acompañan al texto). Clase: pdp-ej-libre. ═══ */
 html.pdp-fondo-ej.pdp-ej-libre:not(.pdp-fondo-mundo) #screen-exercise::before{background:var(--pz-fondo-sala-dia) 8% 0 / cover no-repeat,#3a2614}
@@ -6810,6 +6816,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/a4dffea38975d28b71fae257f97ddccc.js"></script><script src="../pdp-assets/2a6c47b9f7923af186044fc5a1819c62.js"></script>
+<script src="../pdp-assets/c29e90bb51d1245151bd90c72dfa7296.js"></script><script src="../pdp-assets/28c0c4466013dd723b1f03fb2c77d812.js"></script>
 </body>
 </html>
