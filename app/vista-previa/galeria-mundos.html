@@ -6206,6 +6206,9 @@ html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-libro #exercise-question::before,html.pdp
 html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-libro #tutor-zone{display:none!important}
 html.pdp-fondo-ej.pdp-ej-libro .classify-items{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px;padding:0 6%;margin-bottom:22px;background:none;border:0;border-radius:0;min-height:0}
 html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-libro .classify-chip{border:solid transparent;border-width:0 14px;border-image:var(--pz-tira-festoneada) 0 60 0 60 fill / 0 14px 0 14px stretch;min-height:54px;padding:4px 0;color:#2a1a08;filter:drop-shadow(0 3px 4px rgba(0,0,0,.4))}
+/* La ficha colocada sale del banco: se achica y desaparece, y las demás ocupan su lugar (2026-10-30). Sin soporte de animar display, desaparece de golpe. */
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-libro .classify-chip.placed{display:none;opacity:0;animation:pdpFichaSale .26s ease-in}
+@keyframes pdpFichaSale{from{display:flex;opacity:1;transform:scale(1)}to{display:flex;opacity:0;transform:scale(.6)}}
 html.pdp-fondo-ej.pdp-ej-libro .classify-categories{gap:16px;counter-reset:pdp-cat}
 html.pdp-fondo-ej.pdp-ej-libro .classify-cat{position:relative;border:solid transparent;border-width:26px 34px;border-image:var(--pz-zona-marco) 92 120 92 120 fill / 26px 34px 26px 34px stretch;background:none;box-shadow:none;border-radius:0;padding:0 0 4px;min-height:132px;filter:drop-shadow(0 4px 6px rgba(0,0,0,.35));counter-increment:pdp-cat}
 html.pdp-fondo-ej.pdp-ej-libro .classify-cat-label{position:relative;margin:-40px -22px 10px -22px;padding:0 24px 0 12px;height:52px;display:flex;align-items:center;border:solid transparent;border-width:0 21px 0 47px;border-image:var(--pz-zona-barra) 0 110 0 250 fill / 0 21px 0 47px stretch;background:none;color:#F6E3AD;font:700 clamp(15px,4.3vw,18px)/1.1 var(--font-heading);text-shadow:0 1px 2px rgba(0,0,0,.6)}
@@ -6749,6 +6752,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/f4cf010635400d6c43b8bd4bc2b5e4e4.js"></script><script src="../pdp-assets/ae438bd40371ebc975554c94a41ef7c4.js"></script>
+<script src="../pdp-assets/9bdaaece90c0f5782316dcbfc1e27f84.js"></script><script src="../pdp-assets/ae438bd40371ebc975554c94a41ef7c4.js"></script>
 </body>
 </html>
