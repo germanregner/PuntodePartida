@@ -6217,7 +6217,7 @@ html.pdp-fondo-ej.pdp-ej-libro[data-theme="dark"] .classify-cat-label{color:#F6E
 html.pdp-fondo-ej.pdp-ej-libro .classify-cat-zone{min-height:74px;margin:0 -6px;padding:6px 0;border:0;border-radius:0;background:none;flex-direction:column;flex-wrap:nowrap;gap:8px}
 html.pdp-fondo-ej.pdp-ej-libro .classify-cat-zone:empty::before{color:#7a5a2a;opacity:.75}
 html.pdp-fondo-ej.pdp-ej-libro[data-theme="dark"] .classify-cat-zone:empty::before{color:#7a5a2a}
-html.pdp-fondo-ej.pdp-ej-libro .classify-categories.esperando .classify-cat{border-color:transparent;box-shadow:none;filter:drop-shadow(0 0 10px rgba(244,198,106,.9)) drop-shadow(0 4px 6px rgba(0,0,0,.35))}
+html.pdp-fondo-ej.pdp-ej-libro .classify-categories.esperando .classify-cat{border-color:transparent;box-shadow:none;filter:drop-shadow(0 0 3px rgba(244,198,106,.5)) drop-shadow(0 4px 6px rgba(0,0,0,.35))}
 html.pdp-fondo-ej.pdp-ej-libro .classify-cat[data-parte="manana"]{--cat-img:var(--pz-zona-manana);--cat-ico:var(--pz-icono-sol)}
 html.pdp-fondo-ej.pdp-ej-libro .classify-cat[data-parte="tarde"]{--cat-img:var(--pz-zona-tarde);--cat-ico:var(--pz-icono-sol)}
 html.pdp-fondo-ej.pdp-ej-libro .classify-cat[data-parte="noche"]{--cat-img:var(--pz-zona-noche);--cat-ico:var(--pz-icono-luna)}
@@ -6229,7 +6229,8 @@ html.pdp-fondo-ej.pdp-ej-libro .classify-placed-chip{position:relative;box-sizin
 html.pdp-fondo-ej.pdp-ej-libro .classify-placed-chip::after{content:'';position:absolute;right:-35px;top:50%;width:26px;height:26px;margin-top:-13px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><defs><linearGradient id='g' gradientUnits='userSpaceOnUse' x1='0' y1='3.5' x2='0' y2='12.5'><stop offset='0' stop-color='%23FFF3C8'/><stop offset='.42' stop-color='%23F2CB78'/><stop offset='1' stop-color='%23DA842C'/></linearGradient></defs><path d='M3.5 3.5L12.5 12.5M12.5 3.5L3.5 12.5' stroke='url(%23g)' stroke-width='2.6' stroke-linecap='round' fill='none'/></svg>") center/16px 16px no-repeat;pointer-events:none}
 html.pdp-fondo-ej.pdp-ej-libro .classify-placed-chip.correct{background:none;border-color:transparent;color:#0a6b45;filter:drop-shadow(0 0 5px rgba(60,207,142,.9)) drop-shadow(0 2px 3px rgba(0,0,0,.3))}
 html.pdp-fondo-ej.pdp-ej-libro .classify-placed-chip.wrong{background:none;border-color:transparent;color:#a14a00;filter:drop-shadow(0 0 5px rgba(245,158,11,.95)) drop-shadow(0 2px 3px rgba(0,0,0,.3))}
-html.pdp-fondo-ej.pdp-ej-libro .classify-placed-chip:is(.correct,.wrong)::after{display:none}
+html.pdp-fondo-ej.pdp-ej-libro .classify-placed-chip.wrong::after{display:none}
+html.pdp-fondo-ej.pdp-ej-libro .classify-placed-chip.correct::after{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><defs><linearGradient id='g' gradientUnits='userSpaceOnUse' x1='0' y1='3.5' x2='0' y2='12.5'><stop offset='0' stop-color='%23FFF3C8'/><stop offset='.42' stop-color='%23F2CB78'/><stop offset='1' stop-color='%23DA842C'/></linearGradient></defs><path d='M3.4 8.4L6.7 11.7L12.6 4.6' stroke='url(%23g)' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>")}
 :root{--pdp-tira-op-1:url('../pdp-assets/2c22617d89392b41d2d2a93c6eb91ee6.png');--pdp-tira-op-2:url('../pdp-assets/c4632aef2a12bce7d8c758060b107db6.png');--pdp-tira-op-3:url('../pdp-assets/4793419b24b51d60dfafb8d819dc6450.png');--pdp-tira-op-4:url('../pdp-assets/c0ee0a8974f9f1dae97e143541271357.png');--pdp-tira-op-5:url('../pdp-assets/e583ba88ad63e8033413980dbd302af2.png');--pdp-tira-op-6:url('../pdp-assets/af5b725f1e7402759fd68c4ca5c711d6.png')}
 /* opciones largas: tira de pergamino con flores (una distinta por opción); el texto queda a la izquierda, las flores en el borde derecho */
 html.pdp-fondo-ej.pdp-ej-piezas .op-tira{border-image-slice:0 190 0 45 fill;border-image-width:0 116px 0 24px;border-width:0 116px 0 24px;border-image-repeat:stretch;min-height:64px;padding:6px 0;font-size:clamp(15px,4.2vw,18px);line-height:1.18}
@@ -6752,6 +6753,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/ebde93e7346719371ffc352ba96d1ea9.js"></script><script src="../pdp-assets/ae438bd40371ebc975554c94a41ef7c4.js"></script>
+<script src="../pdp-assets/970bc7f45d85025e1a8266ca1829c171.js"></script><script src="../pdp-assets/ae438bd40371ebc975554c94a41ef7c4.js"></script>
 </body>
 </html>
