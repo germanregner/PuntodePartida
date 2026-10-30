@@ -6242,6 +6242,16 @@ html[data-theme="dark"].pdp-fondo-ej.pdp-ej-piezas #exercise-question::before{ba
 html[data-theme="dark"].pdp-fondo-ej.pdp-ej-piezas #exercise-question .q-s{color:#E8C77E}
 /* ninguna opción con pieza deja ver el fondo ni el borde del estilo común (el elegido de listen traía un recuadro blanco detrás del pergamino) */
 html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip){background:none!important;border-top-color:transparent!important;border-bottom-color:transparent!important}
+/* OPCIÓN ELEGIDA Y CAMPO DE ESCRITURA EN OSCURO (2026-10-29, hallazgo del Director en el teléfono): el modo oscuro le ponía a la opción elegida de «escuchar» un recuadro celeste y la letra clara (sobre el pergamino no se leía), y al campo de dictado un recuadro naranja de foco. Con la pieza puesta no hay recuadro de ningún color: la elegida lleva la letra del color de SU flor. */
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).selected:not(.correct):not(.wrong):not(.wrong-first){border-color:transparent;background:none;box-shadow:none;color:#2a1a08}   /* la opción elegida no lleva recuadro de ningún color (ni el celeste del modo oscuro): solo cambia el color de la letra */
+html[data-theme="dark"].pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).selected:not(.correct):not(.wrong):not(.wrong-first){border-color:transparent;background:none;box-shadow:none}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-tira.selected[data-tira="1"]:not(.correct):not(.wrong):not(.wrong-first){color:#B02A66}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-tira.selected[data-tira="2"]:not(.correct):not(.wrong):not(.wrong-first){color:#1B4FB0}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-tira.selected[data-tira="3"]:not(.correct):not(.wrong):not(.wrong-first){color:#6A35A8}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-tira.selected[data-tira="4"]:not(.correct):not(.wrong):not(.wrong-first){color:#2F6B3A}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-tira.selected[data-tira="5"]:not(.correct):not(.wrong):not(.wrong-first){color:#9A5B00}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-tira.selected[data-tira="6"]:not(.correct):not(.wrong):not(.wrong-first){color:#B3202A}
+html[data-theme="dark"].pdp-fondo-ej.pdp-ej-piezas input.text-input:focus:not(.correct):not(.wrong):not(.revealed):not(.mathkind-input){border-color:transparent;box-shadow:none;caret-color:#2a1a08}
 :root{--pdp-cartel-madera:url('../pdp-assets/7d4cb14d5b59d567ad6e2e768d58422d.webp');--pdp-tablero-hiedra:url('../pdp-assets/d5d9d7a1d1bcfde262e1164d3719cd7c.webp');--pdp-biblioteca-dia:url('../pdp-assets/b83c4a89e41dc9b8dbbf80a93af79681.webp');--pdp-biblioteca-noche:url('../pdp-assets/b725d02c5106da8ae944a7c94a5bf139.webp')}
 /* ═══ Pantalla de tabla (table-fill de 3 filas) — rehecha con las piezas del Director (2026-10-27): fondo de biblioteca (día / noche), cartel de madera con hiedra para la consigna y tablero de pergamino con hiedra para la tabla. Las líneas del tablero son las de la imagen: la tabla se acomoda sobre ellas. ═══ */
 html.pdp-ej-tabla{--pdp-valle-bg:var(--pdp-biblioteca-dia)}
@@ -6705,6 +6715,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/fe9c1f952406d0f473fcfd31eda20dfb.js"></script><script src="../pdp-assets/b54e0a72f99a427e210b5e0719dd708d.js"></script>
+<script src="../pdp-assets/0d1624da81b7fd62c4306f1d2a5b5404.js"></script><script src="../pdp-assets/b54e0a72f99a427e210b5e0719dd708d.js"></script>
 </body>
 </html>
