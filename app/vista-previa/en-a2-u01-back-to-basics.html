@@ -6258,7 +6258,7 @@ html.pdp-fondo-ej #screen-exercise:not(:has(.lec-wrap)):not(:has(.pf-wrap)) .pb-
 :root:not(.pdp-fondo-ej) .pb-nodos{display:none}
 /* Sin el recuadro celeste del toque (el que Android dibuja sobre cualquier <div> con onclick) ni selección de texto en las piezas de los ejercicios con paisaje (Director, 2026-10-30) */
 html.pdp-fondo-ej #screen-exercise :not(textarea):not(input){-webkit-tap-highlight-color:transparent}
-html.pdp-fondo-ej :is(.match-item,.classify-chip,.classify-cat,.classify-placed-chip,.option-btn,.checkbox-btn,.tf-btn,.timeline-chip,.word-chip,.answer-slot,.memory-card,.geo-opt,.order-chip,.ej-banner-q){-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+html.pdp-fondo-ej :is(.ld-zone,.ld-tag,.ld-card,.match-item,.classify-chip,.classify-cat,.classify-placed-chip,.option-btn,.checkbox-btn,.tf-btn,.timeline-chip,.word-chip,.answer-slot,.memory-card,.geo-opt,.order-chip,.ej-banner-q){-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
 /* ═══ «Unir» como tarjetas y tablero (2026-10-30, maqueta del Director): biblioteca con leones día/noche, las tarjetas (pergamino con barra de madera) arriba con un hueco, y abajo el tablero de cuero con las tiras rojas; al elegir una tira se ve dentro del hueco de su tarjeta. Solo Unidades con paisaje; la clase pdp-ej-union la pone pdpPiezasEj() y la saca renderExercise(). ═══ */
 html.pdp-fondo-ej.pdp-ej-union:not(.pdp-fondo-mundo) #screen-exercise::before{background:var(--pz-fondo-leones-dia) 50% 0 / cover no-repeat,#3a2614}
 html.pdp-fondo-ej.pdp-ej-union[data-theme="dark"]:not(.pdp-fondo-mundo) #screen-exercise::before{background:var(--pz-fondo-leones-noche) 50% 0 / cover no-repeat,#0e0a07}
@@ -6285,6 +6285,28 @@ html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .match-item[data-side="right"][data
 html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .match-item[data-side="right"][data-pl="5"]{border-image-source:var(--pz-union-tira-5)}
 html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .match-item[data-side="right"].selected{filter:drop-shadow(0 0 9px #F4C66A) drop-shadow(0 3px 4px rgba(0,0,0,.5)) brightness(1.08)}
 html.pdp-fondo-ej.pdp-ej-union .match-item[data-side="right"].matched{display:none}
+/* «Etiquetar» con tarjetas (label-diagram con `tarjetas`), mismo look que «Unir» (Director, 2026-10-31: «sigue así» — la maqueta era de este tipo). Clase pdp-ej-union; los huecos y las etiquetas se tocan en cualquier orden. */
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .ld-wrap{box-sizing:border-box;width:100%;gap:16px;padding:0 3%}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .ld-cards{max-width:none;gap:14px 12px}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .ld-cards>.ld-card:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - 6px)}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .ld-card{box-sizing:border-box;min-height:128px;margin:0;padding:6px 4px 10px;gap:3px;border:solid transparent;border-width:26px 12px 12px;border-image:var(--pz-union-tarjeta) 66 28 28 28 fill / 26px 12px 12px 12px stretch;background:none;border-radius:0;box-shadow:none;filter:drop-shadow(0 4px 6px rgba(0,0,0,.45))}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .ld-card:has(.ld-zone.zone-sel){filter:drop-shadow(0 0 9px #F4C66A) drop-shadow(0 4px 6px rgba(0,0,0,.45)) brightness(1.05)}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .ld-card .ld-zone{position:relative;display:flex;align-items:center;justify-content:center;box-sizing:border-box;width:100%;min-width:0;min-height:44px;margin-top:auto;padding:4px 6px;text-align:center;font:700 clamp(12px,3.3vw,13.5px)/1.1 var(--font-heading);color:#7a4a12;border:1.5px solid rgba(120,84,30,.45);border-radius:10px;background:rgba(255,248,230,.55);box-shadow:inset 0 2px 4px rgba(90,60,20,.2);animation:none}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .ld-card .ld-zone.has-tag{min-height:58px;padding:9px 0;border:solid transparent;border-width:0 12px;border-image:var(--pz-union-tira-4) 0 56 0 56 fill / 0 12px stretch;border-radius:0;background:none;box-shadow:none;color:#2a1a08;font-size:clamp(11.5px,3.1vw,13px);line-height:1.18}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .ld-card .ld-zone.correct{color:#2d5a3d}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .ld-card .ld-zone.wrong{color:#8a4b12;animation:fracvShake .35s}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .ld-card .ld-zone.correct::before,html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .ld-card .ld-zone.wrong::before{position:absolute;top:-8px;right:-5px;display:flex;align-items:center;justify-content:center;width:19px;height:19px;border-radius:50%;color:#fff8e6;font:800 11px/1 var(--font-heading);box-shadow:0 1px 3px rgba(0,0,0,.45)}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .ld-card .ld-zone.correct::before{content:"\2713";background:#2d5a3d}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .ld-card .ld-zone.wrong::before{content:"\2715";background:#8a4b12}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .ld-tray{box-sizing:border-box;max-width:none;width:100%;min-height:150px;align-content:flex-start;gap:14px 10px;padding:18px 12px 22px;border:solid transparent;border-width:24px 24px 30px;border-image:var(--pz-union-tablero) 52 56 66 56 fill / 24px 24px 30px 24px stretch;background:none;filter:drop-shadow(0 6px 8px rgba(0,0,0,.5))}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .ld-tray:not(:has(.ld-tag:not(.placed))){display:none}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .ld-tray .ld-tag{flex:0 0 auto;box-sizing:border-box;min-height:46px;margin:0;padding:6px 0;border:solid transparent;border-width:0 20px;border-image:var(--pz-union-tira-3) 0 56 0 56 fill / 0 20px stretch;background:none;border-radius:0;box-shadow:none;color:#2a1a08;font:700 clamp(13px,3.7vw,15px)/1.2 var(--font-heading);filter:drop-shadow(0 3px 4px rgba(0,0,0,.5));transform:none;opacity:1}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .ld-tray .ld-tag[data-pl="1"]{border-image-source:var(--pz-union-tira-1)}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .ld-tray .ld-tag[data-pl="2"]{border-image-source:var(--pz-union-tira-2)}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .ld-tray .ld-tag[data-pl="4"]{border-image-source:var(--pz-union-tira-4)}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .ld-tray .ld-tag[data-pl="5"]{border-image-source:var(--pz-union-tira-5)}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-union .ld-tray .ld-tag.selected-tag{box-shadow:none;transform:none;filter:drop-shadow(0 0 9px #F4C66A) drop-shadow(0 3px 4px rgba(0,0,0,.5)) brightness(1.08)}
+html.pdp-fondo-ej.pdp-ej-union .ld-tray .ld-tag.placed{display:none}
 /* ═══ «Respuesta libre» en la biblioteca (2026-10-30, maqueta del Director): fondo de biblioteca día/noche, consigna grande con halo, cartel azul, campo = marco de pergamino con renglones (marco estirado, renglones de CSS que acompañan al texto). Clase: pdp-ej-libre. ═══ */
 html.pdp-fondo-ej.pdp-ej-libre:not(.pdp-fondo-mundo) #screen-exercise::before{background:var(--pz-fondo-sala-dia) 8% 0 / cover no-repeat,#3a2614}
 html.pdp-fondo-ej.pdp-ej-libre[data-theme="dark"]:not(.pdp-fondo-mundo) #screen-exercise::before{background:var(--pz-fondo-sala-noche) 8% 0 / cover no-repeat,#0e0a07}
@@ -6816,6 +6838,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/77bf097c4ee58f5686e35ca0401d655b.js"></script><script src="../pdp-assets/28c0c4466013dd723b1f03fb2c77d812.js"></script>
+<script src="../pdp-assets/9a15f4a43533d8923e7d0cb6b7b8afbb.js"></script><script src="../pdp-assets/f946671a1ae7ee4871677b3d0a954dca.js"></script>
 </body>
 </html>
