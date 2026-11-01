@@ -6428,6 +6428,8 @@ html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-linea .timeline-bank .timeline-chip.used{
 html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-linea .timeline-bank .timeline-chip.selected{filter:drop-shadow(0 0 9px #F4C66A) drop-shadow(0 3px 4px rgba(0,0,0,.5)) brightness(1.08)}
 /* Mundos con el fondo nocturno (mundo-fondo-noche): en modo claro llevan su versión de día (Director, 2026-10-31: «este es el fondo claro natural»). La clase pdp-mundo-noche la pone renderMundo y la saca renderExercise. */
 html.pdp-fondo-ej.pdp-fondo-mundo.pdp-mundo-noche:not([data-theme="dark"]) #screen-exercise::before{background:var(--pz-fondo-mundo-dia) 50% 0 / cover no-repeat,#9fc0e4}
+/* Mundos con fondo propio de noche (fondoPantallaNoche; Director, 2026-11-01: el estudio de la maleta): en modo oscuro llevan esa imagen. */
+html.pdp-fondo-ej.pdp-fondo-mundo.pdp-mundo-fondo-doble[data-theme="dark"] #screen-exercise::before{background:var(--pdp-valle-bg-noche) 50% 0 / cover no-repeat,#0b0f1e}
 html.pdp-fondo-ej.pdp-fondo-mundo.pdp-mundo-noche:not([data-theme="dark"]) #exercise-question{color:#1b2a5c!important;text-shadow:0 0 3px #fff6dc,0 0 8px rgba(255,246,220,.9),1px 1px 0 #fff6dc,-1px -1px 0 #fff6dc!important}
 /* ═══ «Ordená la oración» (order) en la selva (2026-10-31, maqueta del Director): ruinas con hiedra y cascadas (día / noche) de fondo, la consigna sobre una placa de madera, la oración se arma en una tira de piedra y las palabras son fichas de piedra con hiedra. Solo Unidades con paisaje; la clase pdp-ej-selva la pone pdpPiezasEj() y la saca renderExercise(). ═══ */
 html.pdp-fondo-ej.pdp-ej-selva:not(.pdp-fondo-mundo) #screen-exercise::before{background:var(--pz-selva-fondo-dia) 50% 20% / cover no-repeat,#2c4a1c}
@@ -7065,6 +7067,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/6a746b2d93f762c85fffb10f787f1aff.js"></script><script src="../pdp-assets/f73db0d76da30df2e0af489cc7d9383a.js"></script>
+<script src="../pdp-assets/771a4523ae552afc9ec747e1073803a8.js"></script><script src="../pdp-assets/767952012f2104b5e175f9edf843e2d1.js"></script>
 </body>
 </html>
