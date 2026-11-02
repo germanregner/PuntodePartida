@@ -23,26 +23,5 @@
       "total": 44
     }
   ],
-  "pruebas": [
-    {
-      "id": "mundos-prueba",
-      "pagina": "vista-previa/mundos.html",
-      "titulo": "El mundo responde",
-      "descripcion": "Prototipo: tu respuesta se ejecuta en un mundo y ves qué pasa.",
-      "materia": "Inglés",
-      "claveApp": "pdp_El_mundo_responde",
-      "total": 21,
-      "icono": "pdp-assets/e1a38d81ce3c7f246d2cbd0fd851bdd5.png"
-    },
-    {
-      "id": "galeria-mundos",
-      "pagina": "vista-previa/galeria-mundos.html",
-      "titulo": "Galería de mundos",
-      "materia": "Inglés",
-      "descripcion": "Prototipo: tu respuesta se ejecuta en un mundo y ves qué pasa.",
-      "claveApp": "pdp_Galería_de_mundos",
-      "total": 19,
-      "icono": "pdp-assets/e1a38d81ce3c7f246d2cbd0fd851bdd5.png"
-    }
-  ]
+  "pruebas": []
 }
