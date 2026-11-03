@@ -5978,6 +5978,29 @@ html.pdp-fondo-ej .feedback-zone.wrong-fb .feedback-text{color:#EFE3C0}
 .pdp-fondo-ej .sy-fin .pds-btn-depth .sy-fin-fl{ display:inline; font-weight:600; }
 .pdp-fondo-ej .sy-fin .pds-btn-depth:active{ transform:translateY(1px); }
 /* ═══ fin «¡Lección completada!» ═══ */
+/* Fin «¡Lección completada!» sin scroll (2026-11-03, Director: «hay que hacer scroll para apretar el botón»): los tamaños se escalan con el alto de la pantalla y «Seguir» queda pegado abajo (sticky): si de todos modos hay mucho para leer (Skill Check con explicaciones), lo único que se desplaza es el contenido, nunca el botón. */
+.pdp-fondo-ej .sy-ov.sy-fin{ gap:clamp(5px,1.5vh,14px); padding-top:calc(env(safe-area-inset-top,0px) + clamp(6px,1.6vh,18px)); padding-bottom:calc(env(safe-area-inset-bottom,0px) + 8px); }
+.pdp-fondo-ej .sy-fin-hero{ width:clamp(84px,18vh,200px); margin:0 auto; }
+.pdp-fondo-ej .sy-fin h2{ font-size:clamp(23px,7.2vw,33px); margin:0; }
+.pdp-fondo-ej .sy-fin-div{ height:10px; }
+.pdp-fondo-ej .sy-fin-sub{ font-size:clamp(11px,1.6vh,12.5px); }
+.pdp-fondo-ej .sy-fin-dice{ font-size:clamp(13.5px,2vh,16px); line-height:1.32; }
+.pdp-fondo-ej .sy-fin-tiles{ gap:clamp(8px,1.6vh,14px); }
+.pdp-fondo-ej .sy-fin-tile{ padding:clamp(7px,1.5vh,16px) 8px clamp(7px,1.3vh,14px); gap:2px; }
+.pdp-fondo-ej .sy-fin-icw, .pdp-fondo-ej .sy-fin-ic{ height:clamp(18px,2.8vh,24px); width:clamp(18px,2.8vh,24px); }
+.pdp-fondo-ej .sy-fin-v{ font-size:clamp(22px,3.5vh,30px); }
+.pdp-fondo-ej .sy-fin-pts{ min-height:clamp(20px,3vh,30px); }
+.pdp-fondo-ej .sy-fin-pt{ width:clamp(16px,2.4vh,20px); height:clamp(16px,2.4vh,20px); }
+.pdp-fondo-ej .sy-fin-sc{ gap:clamp(4px,1vh,8px); }
+.pdp-fondo-ej .sy-fin-scf{ padding:clamp(5px,1vh,9px) 10px; gap:8px; }
+.pdp-fondo-ej .sy-fin-scq{ font-size:clamp(12.5px,1.8vh,14px); line-height:1.25; }
+.pdp-fondo-ej .sy-fin-scp{ font-size:clamp(11.5px,1.6vh,13px); line-height:1.25; }
+.pdp-fondo-ej .sy-fin-chip{ padding:5px 11px; }
+.pdp-fondo-ej .sy-fin .pds-btn-depth{ position:sticky; bottom:0; z-index:3; margin-top:auto; min-height:clamp(50px,7vh,62px); font-size:clamp(20px,2.9vh,24px); }
+.sy-fin>:last-child.pds-btn-depth{ margin-bottom:0; }
+/* Sin fucsia en los resúmenes (2026-11-03, Director: «el fucsia quedó desactualizado»): `--celebrate` es el color de «bien hecho» de la paleta vieja (fucsia); en los ejercicios con paisaje lo bien hecho ya es verde. Las pantallas de resumen y de la clase (.sy-ov: fin de lección, cierre del Level Check, vistas del profe) lo heredaban y salían fucsia. Acá toman el verde de «correcto». Solo en Unidades con paisaje; el resto no cambia. */
+.pdp-fondo-ej .sy-ov{ --celebrate:#1F8A5B; --celebrate-light:#E4F4EA; }
+html[data-theme="dark"].pdp-fondo-ej .sy-ov{ --celebrate:#3FD08E; --celebrate-light:color-mix(in srgb,#3FD08E 14%,#0A0E1A); }
 /* ═══ Pantallas de un Concept (2026-10-13, mockup del Director): tarjeta con marco dorado fino, esquinas y brújula arriba; «Así sí» verde / «Así no» ámbar con ícono y filete; indicador N/total dorado; «Siguiente» bordó con estrellas.
    Solo Unidades con paisaje (.pdp-fondo-ej). Los datos y la navegación de los Concepts no cambian. ═══ */
 .cc-ic, .cc-div, .cc-sep{ display:none; }
@@ -7132,6 +7155,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/0d6e10e70b0dc9206dd0424610576508.js"></script><script src="../pdp-assets/d73d6f4dc409511fc8907715e9296db9.js"></script>
+<script src="../pdp-assets/f20c2308e9fa2879714592878a87202e.js"></script><script src="../pdp-assets/4e009ffe58cf238203e229d6f26df9c3.js"></script>
 </body>
 </html>
