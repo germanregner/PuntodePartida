@@ -1690,7 +1690,7 @@ body.sheet-open .exercise-image-zone { max-width:min(340px,26vh); transition:max
 .exercise-tutor-strip { position: relative; display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; flex-shrink: 0; padding: 0; background: none; border: none; box-shadow: none; cursor: pointer; }
 .exercise-tutor-strip:active { transform: scale(.93); }
 .exercise-tutor-strip.hidden { display: none; }
-.exercise-tutor-strip-icon { width: 50px; height: auto; filter: drop-shadow(0 4px 10px rgba(0,0,0,.4)); pointer-events: none; } /* 40→50px, proporcional al strip 48→60px */
+.exercise-tutor-strip-icon { width: 50px; height: auto; scale: 1.34; transform-origin: 50% 100%; animation: pdpSpikeMareo 26s ease-in-out 7s infinite; filter: drop-shadow(0 0 1.5px rgba(8,10,22,.95)) drop-shadow(0 0 4px rgba(8,10,22,.75)) drop-shadow(0 4px 9px rgba(0,0,0,.5)); pointer-events: none; } /* 40→50px, proporcional al strip 48→60px. 2026-11-03 (Director: «muy chiquito» y el fondo claro lo ocultaba): se agranda con `scale` (no mueve el layout ni el cálculo de riseTutor) y lleva un halo oscuro pegado al borde */
 /* Sheet único + tutor integrado (refactor real, 2026-08-25, sobre el spike
    ya aprobado) — UN SOLO elemento (.exercise-tutor-strip, el de siempre,
    nunca un 2do nodo) anima de chico/footer a grande/apoyado-sobre-el-sheet
@@ -1735,8 +1735,21 @@ body.sheet-open .exercise-image-zone { max-width:min(340px,26vh); transition:max
    reusados tal cual, no reinventados. Solo mientras está arriba/grande —
    dockeado/chico en el footer no se mueve, "esto ya estaba decidido
    antes, no es nuevo". */
+/* Mareo ocasional de Spike (2026-11-03, pedido del Director): casi todo el tiempo quieto; cada ~26 s se inclina un poco a la derecha, hacia atrás, a la izquierda y hacia adelante, siempre apoyado en su punta inferior (no se desplaza). Sin movimiento si el sistema pide menos animación. */
+@keyframes pdpSpikeMareo{
+  0%,72%,100%{transform:none}
+  74%{transform:perspective(170px) rotateZ(3deg)}
+  76.5%{transform:perspective(170px) rotateX(7deg)}
+  79%{transform:perspective(170px) rotateZ(-3deg)}
+  81.5%{transform:perspective(170px) rotateX(-5deg)}
+  84%{transform:perspective(170px) rotateZ(1.2deg)}
+  86%{transform:none}
+}
+@media (prefers-reduced-motion: reduce){ .exercise-tutor-strip-icon{ animation:none !important; } }
 .exercise-tutor-strip.rising .exercise-tutor-strip-icon {
-  animation: pmapTutorLean 18s ease-in-out infinite;
+  /* 2026-11-03 (Director): arriba, con el panel de ayuda abierto, Spike conserva el tamaño proporcional de siempre (sin el agrandado del pie, que se sumaba al de riseTutor y lo tapaba todo) y NO se mueve: ni el mareo ni la inclinación lenta de antes. */
+  scale: none;
+  animation: none;
   transform-origin: 50% 25%;
 }
 /* Pill "Ayuda próximamente" (Fase 1, punto 4b) reubicado por la CORRECCIÓN
@@ -5144,7 +5157,9 @@ html #screen-exercise:has(.lec-wrap) .skip-btn{ bottom:calc(100% + 100px); }
 :root:not([data-theme="dark"]) #screen-map .map-title{ color:#40240F; text-shadow:0 1px 12px rgba(255,248,230,.9); }
 #screen-map .map-tutor-avatar{ position:absolute; right:12px; top:-52px; width:54px; margin:0; }
 /* pestañas */
-#screen-map .mode-tabs-wrap{ justify-content:center; gap:10px; padding:14px 16px 4px; }
+#screen-map .mode-tabs-wrap{ justify-content:flex-start; gap:10px; padding:14px 16px 4px; }
+/* Las cuatro píldoras (General · Teoría · Práctica · Repaso) son más anchas que un teléfono: con justify-content:center el contenido se desbordaba por los DOS lados y «General» quedaba cortada a la izquierda sin poder deslizarse hasta ahí (2026-11-02, captura del Director: 411 px de ancho, 42 px fuera). Con márgenes automáticos en los extremos se centran cuando entran y empiezan a la izquierda cuando no. */
+#screen-map .mode-tabs-wrap > :first-child{ margin-left:auto; } #screen-map .mode-tabs-wrap > :last-child{ margin-right:auto; }
 #screen-map .mode-tab{ display:inline-flex; align-items:center; gap:7px; min-height:42px; padding:8px 18px; border-radius:999px; font-family:var(--font); font-size:14.5px; font-weight:800; color:#E8D9B6;
   border:var(--pdp-borde-fino,1.5px) solid rgba(190,140,70,.55); background:rgba(10,17,30,.74); box-shadow:0 4px 12px rgba(0,0,0,.35); }
 #screen-map .mode-tab .mt-i{ width:18px; height:18px; flex:0 0 auto; fill:none; stroke:#EBB654; stroke-width:1.9; stroke-linecap:round; stroke-linejoin:round; pointer-events:none; }
@@ -5755,6 +5770,8 @@ html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-linea
 .cm-tarjeta-tx{ flex:1 1 auto; min-width:0; padding:10px 12px; display:flex; flex-direction:column; gap:3px; color:#F6EBCB; font-size:13px; line-height:1.3; }
 .cm-tarjeta-tx b{ font-family:var(--font-heading); font-size:17px; color:#F6EBCB; } .cm-tarjeta-tx em{ font-size:12.5px; color:#F0C25E; font-style:italic; }
 .cm.cm-t-rejilla{ display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+/* Rejilla de 2 o de 4 imágenes: en 2 columnas (en 3 quedaba una suelta; 2026-11-03, imágenes de EN-A2-EV01). Con 3 o 6 sigue en 3. */
+.cm.cm-t-rejilla:has(> :nth-child(2):last-child), .cm.cm-t-rejilla:has(> :nth-child(4):last-child){ grid-template-columns:repeat(2,1fr); }
 .cm-vin{ margin:0; border-radius:12px; overflow:hidden; background:rgba(10,17,30,.74); box-shadow:inset 0 0 0 1.4px rgba(217,168,64,.7); }
 .cm-vin img{ width:100%; aspect-ratio:1; object-fit:cover; object-position:top; } .cm-vin figcaption{ padding:5px 4px 6px; text-align:center; font-size:12.5px; font-weight:700; color:#F6EBCB; }
 :root:not([data-theme="dark"]) .cm-globo, :root:not([data-theme="dark"]) .cm-fila, :root:not([data-theme="dark"]) .cm-tarjeta, :root:not([data-theme="dark"]) .cm-vin{ background:rgba(255,250,238,.9); }
@@ -5961,6 +5978,40 @@ html.pdp-fondo-ej .feedback-zone.wrong-fb .feedback-text{color:#EFE3C0}
 .pdp-fondo-ej .sy-fin .pds-btn-depth .sy-fin-fl{ display:inline; font-weight:600; }
 .pdp-fondo-ej .sy-fin .pds-btn-depth:active{ transform:translateY(1px); }
 /* ═══ fin «¡Lección completada!» ═══ */
+/* Fin «¡Lección completada!» sin scroll (2026-11-03, Director: «hay que hacer scroll para apretar el botón»): los tamaños se escalan con el alto de la pantalla y «Seguir» queda pegado abajo (sticky): si de todos modos hay mucho para leer (Skill Check con explicaciones), lo único que se desplaza es el contenido, nunca el botón. */
+.pdp-fondo-ej .sy-ov.sy-fin{ gap:clamp(5px,1.5vh,14px); padding-top:calc(env(safe-area-inset-top,0px) + clamp(6px,1.6vh,18px)); padding-bottom:calc(env(safe-area-inset-bottom,0px) + 8px); }
+.pdp-fondo-ej .sy-fin-hero{ width:clamp(84px,18vh,200px); margin:0 auto; }
+.pdp-fondo-ej .sy-fin h2{ font-size:clamp(23px,7.2vw,33px); margin:0; }
+.pdp-fondo-ej .sy-fin-div{ height:10px; }
+.pdp-fondo-ej .sy-fin-sub{ font-size:clamp(11px,1.6vh,12.5px); }
+.pdp-fondo-ej .sy-fin-dice{ font-size:clamp(13.5px,2vh,16px); line-height:1.32; }
+.pdp-fondo-ej .sy-fin-tiles{ gap:clamp(8px,1.6vh,14px); }
+.pdp-fondo-ej .sy-fin-tile{ padding:clamp(7px,1.5vh,16px) 8px clamp(7px,1.3vh,14px); gap:2px; }
+.pdp-fondo-ej .sy-fin-icw, .pdp-fondo-ej .sy-fin-ic{ height:clamp(18px,2.8vh,24px); width:clamp(18px,2.8vh,24px); }
+.pdp-fondo-ej .sy-fin-v{ font-size:clamp(22px,3.5vh,30px); }
+.pdp-fondo-ej .sy-fin-pts{ min-height:clamp(20px,3vh,30px); }
+.pdp-fondo-ej .sy-fin-pt{ width:clamp(16px,2.4vh,20px); height:clamp(16px,2.4vh,20px); }
+.pdp-fondo-ej .sy-fin-sc{ gap:clamp(4px,1vh,8px); }
+.pdp-fondo-ej .sy-fin-scf{ padding:clamp(5px,1vh,9px) 10px; gap:8px; }
+.pdp-fondo-ej .sy-fin-scq{ font-size:clamp(12.5px,1.8vh,14px); line-height:1.25; }
+.pdp-fondo-ej .sy-fin-scp{ font-size:clamp(11.5px,1.6vh,13px); line-height:1.25; }
+.pdp-fondo-ej .sy-fin-chip{ padding:5px 11px; }
+.pdp-fondo-ej .sy-fin .pds-btn-depth{ position:sticky; bottom:0; z-index:3; margin-top:auto; min-height:clamp(50px,7vh,62px); font-size:clamp(20px,2.9vh,24px); }
+.sy-fin>:last-child.pds-btn-depth{ margin-bottom:0; }
+/* Sin fucsia en los resúmenes (2026-11-03, Director: «el fucsia quedó desactualizado»): `--celebrate` es el color de «bien hecho» de la paleta vieja (fucsia); en los ejercicios con paisaje lo bien hecho ya es verde. Las pantallas de resumen y de la clase (.sy-ov: fin de lección, cierre del Level Check, vistas del profe) lo heredaban y salían fucsia. Acá toman el verde de «correcto». Solo en Unidades con paisaje; el resto no cambia. */
+.pdp-fondo-ej .sy-ov{ --celebrate:#1F8A5B; --celebrate-light:#E4F4EA; }
+html[data-theme="dark"].pdp-fondo-ej .sy-ov{ --celebrate:#3FD08E; --celebrate-light:color-mix(in srgb,#3FD08E 14%,#0A0E1A); }
+/* Diccionario de Spike (2026-11-03): botón discreto dentro del panel de ayuda y lista de palabras; toma el color del panel (claro u oscuro). */
+.help-dic-btn{ display:inline-flex; align-items:center; margin-top:12px; padding:9px 18px; border-radius:999px; border:1.5px solid color-mix(in srgb,currentColor 45%,transparent); background:transparent; color:inherit; font:700 14px var(--font-heading,inherit); cursor:pointer; }
+.help-dic-btn[aria-expanded="true"]{ background:color-mix(in srgb,currentColor 10%,transparent); }
+.help-dic{ margin-top:8px; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:5px 6px; max-height:40vh; overflow:auto; }   /* 2026-11-03 (Director): Spike sube al borde de arriba del panel, así que la lista usa todo el ancho y va compacta */
+.help-dic[hidden]{ display:none; }
+.help-dic-t{ grid-column:1 / -1; margin-top:3px; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:800; opacity:.75; }
+.help-dic-row{ display:flex; flex-direction:column; gap:1px; padding:5px 9px; border-radius:9px; background:color-mix(in srgb,currentColor 8%,transparent); font-size:12.5px; line-height:1.2; min-width:0; }
+.help-dic-row b{ font-weight:800; font-size:13px; } .help-dic-row span{ opacity:.88; }
+/* Sin fucsia en el panel de ayuda (2026-11-03, Director): «PISTA» y «1/3» tomaban el color base de la paleta de Inglés (#DB2777, fucsia). Con paisaje usan el dorado que la app ya usa para sus rótulos chicos (el mismo de «ACTIVIDADES Y DÍAS» del fin de lección). */
+.pdp-fondo-ej .scaffold-card-label, .pdp-fondo-ej .step-count{ color:#8A5A18; }
+html[data-theme="dark"].pdp-fondo-ej .scaffold-card-label, html[data-theme="dark"].pdp-fondo-ej .step-count{ color:#E9C46A; }
 /* ═══ Pantallas de un Concept (2026-10-13, mockup del Director): tarjeta con marco dorado fino, esquinas y brújula arriba; «Así sí» verde / «Así no» ámbar con ícono y filete; indicador N/total dorado; «Siguiente» bordó con estrellas.
    Solo Unidades con paisaje (.pdp-fondo-ej). Los datos y la navegación de los Concepts no cambian. ═══ */
 .cc-ic, .cc-div, .cc-sep{ display:none; }
@@ -6629,6 +6680,26 @@ html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.
 html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-tira.selected[data-tira="4"]:not(.correct):not(.wrong):not(.wrong-first){color:#2F6B3A}
 html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-tira.selected[data-tira="5"]:not(.correct):not(.wrong):not(.wrong-first){color:#9A5B00}
 html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-tira.selected[data-tira="6"]:not(.correct):not(.wrong):not(.wrong-first){color:#B3202A}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-color.selected[data-color="1"]:not(.correct):not(.wrong):not(.wrong-first){color:#B02A66}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-color.selected[data-color="2"]:not(.correct):not(.wrong):not(.wrong-first){color:#1B4FB0}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-color.selected[data-color="3"]:not(.correct):not(.wrong):not(.wrong-first){color:#6A35A8}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-color.selected[data-color="4"]:not(.correct):not(.wrong):not(.wrong-first){color:#2F6B3A}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-color.selected[data-color="5"]:not(.correct):not(.wrong):not(.wrong-first){color:#9A5B00}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-color.selected[data-color="6"]:not(.correct):not(.wrong):not(.wrong-first){color:#B3202A}
+/* Letra elegida (2026-11-03, Director: «el turquesa no va en el modo oscuro»): el circulito toma el color de la flor de su opción; sin flor, dorado oscuro */
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).selected:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#8A5A12;border-color:#8A5A12;color:#FFF3D6}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-color.selected[data-color="1"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#B02A66;border-color:#B02A66;color:#fff}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-tira.selected[data-tira="1"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#B02A66;border-color:#B02A66;color:#fff}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-color.selected[data-color="2"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#1B4FB0;border-color:#1B4FB0;color:#fff}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-tira.selected[data-tira="2"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#1B4FB0;border-color:#1B4FB0;color:#fff}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-color.selected[data-color="3"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#6A35A8;border-color:#6A35A8;color:#fff}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-tira.selected[data-tira="3"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#6A35A8;border-color:#6A35A8;color:#fff}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-color.selected[data-color="4"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#2F6B3A;border-color:#2F6B3A;color:#fff}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-tira.selected[data-tira="4"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#2F6B3A;border-color:#2F6B3A;color:#fff}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-color.selected[data-color="5"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#9A5B00;border-color:#9A5B00;color:#fff}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-tira.selected[data-tira="5"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#9A5B00;border-color:#9A5B00;color:#fff}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-color.selected[data-color="6"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#B3202A;border-color:#B3202A;color:#fff}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-tira.selected[data-tira="6"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#B3202A;border-color:#B3202A;color:#fff}
 html[data-theme="dark"].pdp-fondo-ej.pdp-ej-piezas input.text-input:focus:not(.correct):not(.wrong):not(.revealed):not(.mathkind-input){border-color:transparent;box-shadow:none;caret-color:#2a1a08}
 :root{--pdp-cartel-madera:url('../pdp-assets/7d4cb14d5b59d567ad6e2e768d58422d.webp');--pdp-tablero-hiedra:url('../pdp-assets/d5d9d7a1d1bcfde262e1164d3719cd7c.webp');--pdp-biblioteca-dia:url('../pdp-assets/b83c4a89e41dc9b8dbbf80a93af79681.webp');--pdp-biblioteca-noche:url('../pdp-assets/b725d02c5106da8ae944a7c94a5bf139.webp')}
 /* ═══ Pantalla de tabla (table-fill de 3 filas) — rehecha con las piezas del Director (2026-10-27): fondo de biblioteca (día / noche), cartel de madera con hiedra para la consigna y tablero de pergamino con hiedra para la tabla. Las líneas del tablero son las de la imagen: la tabla se acomoda sobre ellas. ═══ */
@@ -7095,6 +7166,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/b5701fe25bb8c7fa51b72ebcaafb11b3.js"></script><script src="../pdp-assets/7949982d12bcfcf725a8031b4e9dda77.js"></script>
+<script src="../pdp-assets/e2b87e46e1658915f6e38b8aec7cb8c4.js"></script><script src="../pdp-assets/21133c100912859e14925f1967672673.js"></script>
 </body>
 </html>
