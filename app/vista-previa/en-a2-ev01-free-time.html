@@ -1747,7 +1747,9 @@ body.sheet-open .exercise-image-zone { max-width:min(340px,26vh); transition:max
 }
 @media (prefers-reduced-motion: reduce){ .exercise-tutor-strip-icon{ animation:none !important; } }
 .exercise-tutor-strip.rising .exercise-tutor-strip-icon {
-  animation: pmapTutorLean 18s ease-in-out infinite;
+  /* 2026-11-03 (Director): arriba, con el panel de ayuda abierto, Spike conserva el tamaño proporcional de siempre (sin el agrandado del pie, que se sumaba al de riseTutor y lo tapaba todo) y NO se mueve: ni el mareo ni la inclinación lenta de antes. */
+  scale: none;
+  animation: none;
   transform-origin: 50% 25%;
 }
 /* Pill "Ayuda próximamente" (Fase 1, punto 4b) reubicado por la CORRECCIÓN
@@ -7130,6 +7132,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/0b911c186e98c6f2dad50c3d9a0a3f94.js"></script><script src="../pdp-assets/9ba88d74e97688c135274945a5908e07.js"></script>
+<script src="../pdp-assets/0d6e10e70b0dc9206dd0424610576508.js"></script><script src="../pdp-assets/d73d6f4dc409511fc8907715e9296db9.js"></script>
 </body>
 </html>
