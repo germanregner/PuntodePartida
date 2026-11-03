@@ -5144,7 +5144,9 @@ html #screen-exercise:has(.lec-wrap) .skip-btn{ bottom:calc(100% + 100px); }
 :root:not([data-theme="dark"]) #screen-map .map-title{ color:#40240F; text-shadow:0 1px 12px rgba(255,248,230,.9); }
 #screen-map .map-tutor-avatar{ position:absolute; right:12px; top:-52px; width:54px; margin:0; }
 /* pestañas */
-#screen-map .mode-tabs-wrap{ justify-content:center; gap:10px; padding:14px 16px 4px; }
+#screen-map .mode-tabs-wrap{ justify-content:flex-start; gap:10px; padding:14px 16px 4px; }
+/* Las cuatro píldoras (General · Teoría · Práctica · Repaso) son más anchas que un teléfono: con justify-content:center el contenido se desbordaba por los DOS lados y «General» quedaba cortada a la izquierda sin poder deslizarse hasta ahí (2026-11-02, captura del Director: 411 px de ancho, 42 px fuera). Con márgenes automáticos en los extremos se centran cuando entran y empiezan a la izquierda cuando no. */
+#screen-map .mode-tabs-wrap > :first-child{ margin-left:auto; } #screen-map .mode-tabs-wrap > :last-child{ margin-right:auto; }
 #screen-map .mode-tab{ display:inline-flex; align-items:center; gap:7px; min-height:42px; padding:8px 18px; border-radius:999px; font-family:var(--font); font-size:14.5px; font-weight:800; color:#E8D9B6;
   border:var(--pdp-borde-fino,1.5px) solid rgba(190,140,70,.55); background:rgba(10,17,30,.74); box-shadow:0 4px 12px rgba(0,0,0,.35); }
 #screen-map .mode-tab .mt-i{ width:18px; height:18px; flex:0 0 auto; fill:none; stroke:#EBB654; stroke-width:1.9; stroke-linecap:round; stroke-linejoin:round; pointer-events:none; }
@@ -7095,6 +7097,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/7d9349e835af175ae75837b660d148ac.js"></script><script src="../pdp-assets/7949982d12bcfcf725a8031b4e9dda77.js"></script>
+<script src="../pdp-assets/31f17bfd2a744bbac7a1ac8e8d0dff40.js"></script><script src="../pdp-assets/305422afebffb5f893d0c3d7ac6cddeb.js"></script>
 </body>
 </html>

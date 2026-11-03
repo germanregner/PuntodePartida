@@ -23,5 +23,16 @@
       "total": 44
     }
   ],
-  "pruebas": []
+  "pruebas": [
+    {
+      "id": "en-a2-ev01-free-time",
+      "pagina": "vista-previa/en-a2-ev01-free-time.html",
+      "titulo": "Free Time · prueba de inglés",
+      "descripcion": "Presente simple, adverbios, free time, gadgets, cuerpo y describir personas.",
+      "materia": "Inglés",
+      "claveApp": "pdp_Free_Time",
+      "total": 190,
+      "icono": "pdp-assets/e1a38d81ce3c7f246d2cbd0fd851bdd5.png"
+    }
+  ]
 }
