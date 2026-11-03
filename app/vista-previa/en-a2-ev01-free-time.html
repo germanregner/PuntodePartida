@@ -1690,7 +1690,7 @@ body.sheet-open .exercise-image-zone { max-width:min(340px,26vh); transition:max
 .exercise-tutor-strip { position: relative; display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; flex-shrink: 0; padding: 0; background: none; border: none; box-shadow: none; cursor: pointer; }
 .exercise-tutor-strip:active { transform: scale(.93); }
 .exercise-tutor-strip.hidden { display: none; }
-.exercise-tutor-strip-icon { width: 50px; height: auto; filter: drop-shadow(0 4px 10px rgba(0,0,0,.4)); pointer-events: none; } /* 40→50px, proporcional al strip 48→60px */
+.exercise-tutor-strip-icon { width: 50px; height: auto; scale: 1.34; transform-origin: 50% 100%; animation: pdpSpikeMareo 26s ease-in-out 7s infinite; filter: drop-shadow(0 0 1.5px rgba(8,10,22,.95)) drop-shadow(0 0 4px rgba(8,10,22,.75)) drop-shadow(0 4px 9px rgba(0,0,0,.5)); pointer-events: none; } /* 40→50px, proporcional al strip 48→60px. 2026-11-03 (Director: «muy chiquito» y el fondo claro lo ocultaba): se agranda con `scale` (no mueve el layout ni el cálculo de riseTutor) y lleva un halo oscuro pegado al borde */
 /* Sheet único + tutor integrado (refactor real, 2026-08-25, sobre el spike
    ya aprobado) — UN SOLO elemento (.exercise-tutor-strip, el de siempre,
    nunca un 2do nodo) anima de chico/footer a grande/apoyado-sobre-el-sheet
@@ -1735,6 +1735,17 @@ body.sheet-open .exercise-image-zone { max-width:min(340px,26vh); transition:max
    reusados tal cual, no reinventados. Solo mientras está arriba/grande —
    dockeado/chico en el footer no se mueve, "esto ya estaba decidido
    antes, no es nuevo". */
+/* Mareo ocasional de Spike (2026-11-03, pedido del Director): casi todo el tiempo quieto; cada ~26 s se inclina un poco a la derecha, hacia atrás, a la izquierda y hacia adelante, siempre apoyado en su punta inferior (no se desplaza). Sin movimiento si el sistema pide menos animación. */
+@keyframes pdpSpikeMareo{
+  0%,72%,100%{transform:none}
+  74%{transform:perspective(170px) rotateZ(3deg)}
+  76.5%{transform:perspective(170px) rotateX(7deg)}
+  79%{transform:perspective(170px) rotateZ(-3deg)}
+  81.5%{transform:perspective(170px) rotateX(-5deg)}
+  84%{transform:perspective(170px) rotateZ(1.2deg)}
+  86%{transform:none}
+}
+@media (prefers-reduced-motion: reduce){ .exercise-tutor-strip-icon{ animation:none !important; } }
 .exercise-tutor-strip.rising .exercise-tutor-strip-icon {
   animation: pmapTutorLean 18s ease-in-out infinite;
   transform-origin: 50% 25%;
@@ -6633,6 +6644,26 @@ html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.
 html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-tira.selected[data-tira="4"]:not(.correct):not(.wrong):not(.wrong-first){color:#2F6B3A}
 html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-tira.selected[data-tira="5"]:not(.correct):not(.wrong):not(.wrong-first){color:#9A5B00}
 html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-tira.selected[data-tira="6"]:not(.correct):not(.wrong):not(.wrong-first){color:#B3202A}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-color.selected[data-color="1"]:not(.correct):not(.wrong):not(.wrong-first){color:#B02A66}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-color.selected[data-color="2"]:not(.correct):not(.wrong):not(.wrong-first){color:#1B4FB0}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-color.selected[data-color="3"]:not(.correct):not(.wrong):not(.wrong-first){color:#6A35A8}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-color.selected[data-color="4"]:not(.correct):not(.wrong):not(.wrong-first){color:#2F6B3A}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-color.selected[data-color="5"]:not(.correct):not(.wrong):not(.wrong-first){color:#9A5B00}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.checkbox-btn,.tf-btn,.geo-opt,.match-item,.classify-chip,.timeline-chip).op-color.selected[data-color="6"]:not(.correct):not(.wrong):not(.wrong-first){color:#B3202A}
+/* Letra elegida (2026-11-03, Director: «el turquesa no va en el modo oscuro»): el circulito toma el color de la flor de su opción; sin flor, dorado oscuro */
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).selected:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#8A5A12;border-color:#8A5A12;color:#FFF3D6}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-color.selected[data-color="1"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#B02A66;border-color:#B02A66;color:#fff}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-tira.selected[data-tira="1"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#B02A66;border-color:#B02A66;color:#fff}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-color.selected[data-color="2"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#1B4FB0;border-color:#1B4FB0;color:#fff}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-tira.selected[data-tira="2"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#1B4FB0;border-color:#1B4FB0;color:#fff}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-color.selected[data-color="3"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#6A35A8;border-color:#6A35A8;color:#fff}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-tira.selected[data-tira="3"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#6A35A8;border-color:#6A35A8;color:#fff}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-color.selected[data-color="4"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#2F6B3A;border-color:#2F6B3A;color:#fff}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-tira.selected[data-tira="4"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#2F6B3A;border-color:#2F6B3A;color:#fff}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-color.selected[data-color="5"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#9A5B00;border-color:#9A5B00;color:#fff}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-tira.selected[data-tira="5"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#9A5B00;border-color:#9A5B00;color:#fff}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-color.selected[data-color="6"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#B3202A;border-color:#B3202A;color:#fff}
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.geo-opt).op-tira.selected[data-tira="6"]:not(.correct):not(.wrong):not(.wrong-first) .option-letter{background:#B3202A;border-color:#B3202A;color:#fff}
 html[data-theme="dark"].pdp-fondo-ej.pdp-ej-piezas input.text-input:focus:not(.correct):not(.wrong):not(.revealed):not(.mathkind-input){border-color:transparent;box-shadow:none;caret-color:#2a1a08}
 :root{--pdp-cartel-madera:url('../pdp-assets/7d4cb14d5b59d567ad6e2e768d58422d.webp');--pdp-tablero-hiedra:url('../pdp-assets/d5d9d7a1d1bcfde262e1164d3719cd7c.webp');--pdp-biblioteca-dia:url('../pdp-assets/b83c4a89e41dc9b8dbbf80a93af79681.webp');--pdp-biblioteca-noche:url('../pdp-assets/b725d02c5106da8ae944a7c94a5bf139.webp')}
 /* ═══ Pantalla de tabla (table-fill de 3 filas) — rehecha con las piezas del Director (2026-10-27): fondo de biblioteca (día / noche), cartel de madera con hiedra para la consigna y tablero de pergamino con hiedra para la tabla. Las líneas del tablero son las de la imagen: la tabla se acomoda sobre ellas. ═══ */
@@ -7099,6 +7130,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/e58992829e14034b8de088ad2a9075ef.js"></script><script src="../pdp-assets/305422afebffb5f893d0c3d7ac6cddeb.js"></script>
+<script src="../pdp-assets/0b911c186e98c6f2dad50c3d9a0a3f94.js"></script><script src="../pdp-assets/9ba88d74e97688c135274945a5908e07.js"></script>
 </body>
 </html>
