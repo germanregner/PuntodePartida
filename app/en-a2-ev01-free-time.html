@@ -2077,10 +2077,13 @@ html.pdp-fondo-ej #skillcheck-result-explain-btn{left:21.9%;width:58.5%;top:59.2
 html.pdp-fondo-ej #skillcheck-result-continue-btn{left:28%;width:46%;top:77%;height:12%}
 html.pdp-fondo-ej :is(#skillcheck-transition-continue,#skillcheck-result-explain-btn,#skillcheck-result-continue-btn):active{background:rgba(40,0,0,.22);border-radius:10px}
 html.pdp-fondo-ej :is(#skillcheck-transition-continue,#skillcheck-result-explain-btn,#skillcheck-result-continue-btn):focus-visible{outline:2px solid #F6DD84;outline-offset:2px;border-radius:10px}
-/* Las cartas se DESENROLLAN como el papiro del banner de Spike (2026-11-03, Director: «y el que le pusimos al papiro sobre la parte superior, ¿y este?»): arrancan enroscadas en el MEDIO y se abren hacia los dos lados con un rollo en cada borde que se apaga al llegar. La tarjeta aparece de golpe (display), por eso es una animación y no una transición. El recorte deja 40px de margen para no cortar la sombra. */
-@keyframes pdpSkAbre{ from{ clip-path:inset(-40px 50% -40px 50%); } to{ clip-path:inset(-40px); } }
-@keyframes pdpSkRolloI{ 0%{ left:50%; opacity:1; } 78%{ opacity:1; } 100%{ left:0; opacity:0; } }
-@keyframes pdpSkRolloD{ 0%{ right:50%; opacity:1; } 78%{ opacity:1; } 100%{ right:0; opacity:0; } }
+/* Las cartas se DESENROLLAN como el papiro del banner de Spike (2026-11-03, Director: «y el que le pusimos al papiro sobre la parte superior, ¿y este?»): arrancan enroscadas en el MEDIO y se abren hacia los dos lados con un rollo en cada borde que se apaga al llegar. La tarjeta aparece de golpe (display), por eso es una animación y no una transición. El recorte deja 40px de margen arriba y abajo y 16px a los costados para no cortar la sombra (a los costados es poco a propósito: el rollo y la imagen terminan casi a la vez). */
+/* Con «pan-y» el navegador solo se queda con el desplazamiento vertical y no cancela (pointercancel) el arrastre horizontal: sin esto, el gesto de volver desde el fin de Unidad fallaba a la segunda vez. Solo con el modo prueba encendido. */
+html.pdp-modo-prueba #screen-module-end, html.pdp-modo-prueba #screen-celebration, html.pdp-modo-prueba #module-end-body{ touch-action:pan-y; }
+@keyframes pdpSkAbre{ from{ clip-path:inset(-40px 50% -40px 50%); } to{ clip-path:inset(-40px -16px); } }
+/* El rollo sigue EXACTAMENTE el borde de lo que se va destapando (el recorte llega a -16px de los costados, no a 0): con el mismo recorrido y la misma curva, ya no se ve la imagen abierta antes de que lleguen los rollos (2026-11-03, Director). */
+@keyframes pdpSkRolloI{ 0%{ left:50%; opacity:1; } 70%{ opacity:1; } 100%{ left:calc(0% - 16px); opacity:0; } }
+@keyframes pdpSkRolloD{ 0%{ right:50%; opacity:1; } 70%{ opacity:1; } 100%{ right:calc(0% - 16px); opacity:0; } }
 html.pdp-fondo-ej :is(#skillcheck-transition-overlay,#skillcheck-result-overlay).visible .break-suggest-card{ animation:pdpSkAbre .9s cubic-bezier(.3,.55,.25,1) both; }
 html.pdp-fondo-ej :is(#skillcheck-transition-overlay,#skillcheck-result-overlay) .break-suggest-card::before, html.pdp-fondo-ej :is(#skillcheck-transition-overlay,#skillcheck-result-overlay) .break-suggest-card::after{ content:''; position:absolute; top:3%; bottom:3%; width:22px; z-index:3; pointer-events:none; opacity:0; }
 html.pdp-fondo-ej :is(#skillcheck-transition-overlay,#skillcheck-result-overlay) .break-suggest-card::before{ left:50%; border-radius:11px 4px 4px 11px / 50% 10% 10% 50%; background:linear-gradient(90deg,#5a3814 0%,#e9d1a0 26%,#f4e4bc 42%,#b98a4a 72%,#6b4318 100%); box-shadow:3px 0 7px rgba(60,32,8,.45); }
@@ -7223,6 +7226,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="pdp-assets/955e25d6b8156107f330a8e3d1a17888.js"></script><script src="pdp-assets/6ef7d3ca5eba798b2ad1540748755016.js"></script>
+<script src="pdp-assets/027c9d7172233b27a11d55c0cb108725.js"></script><script src="pdp-assets/189b4eb0d7d4b805ec7396f06174112d.js"></script>
 </body>
 </html>
