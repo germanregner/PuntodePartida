@@ -6403,6 +6403,10 @@ html.pdp-fondo-ej.pdp-ej-piezas .option-btn.wrong,html.pdp-fondo-ej.pdp-ej-pieza
 html.pdp-fondo-ej.pdp-ej-piezas input.text-input:focus{filter:drop-shadow(0 3px 4px rgba(0,0,0,.4))}
 html.pdp-fondo-ej.pdp-ej-piezas input.text-input.correct,html.pdp-fondo-ej.pdp-ej-piezas input.text-input.revealed{color:#0a6b45;filter:drop-shadow(0 3px 4px rgba(0,0,0,.4))}
 html.pdp-fondo-ej.pdp-ej-piezas input.text-input.wrong{color:#a14a00;filter:drop-shadow(0 3px 4px rgba(0,0,0,.4))}
+/* 2026-11-05 (Director: «los estilos de las fichas no me gustan… ni el de Escribí tu respuesta… usemos lo que ya tenemos… las fichas que sean las claritas»): las opciones (A/B/C, Verdadero/Falso, casillas, chips de «escuchar») usan la FICHA CREMA con marco dorado (la misma de «Etiquetas» y el banco de palabras, solo la clara) y TODO campo de escritura usa el campo AZUL con lápiz (el de «Encontrá el error»). Nada nuevo: son las piezas que ya estaban. */
+/* Opciones cortas (A/B/C) y Verdadero/Falso: la tira festoneada de la biblioteca (pergamino con florituras doradas y azules, la misma de «Clasificá»). Director, 2026-11-05: «tenés mil assets para elegir». Las largas siguen con la tira de flores; «Escuchar» no cambia. */
+html.pdp-fondo-ej.pdp-ej-piezas :is(.option-btn,.tf-btn):not(.op-tira){border-width:0 30px;border-image:var(--pz-tira-festoneada) 0 90 0 90 fill / 0 30px 0 30px stretch;min-height:68px;padding:6px 0}
+html.pdp-fondo-ej.pdp-ej-piezas input.text-input:not(.mathkind-input){border-width:0 30px;border-image:var(--pz-tira-festoneada) 0 90 0 90 fill / 0 30px 0 30px stretch;min-height:64px;padding:0 4px;color:#2a1a08;font:700 clamp(18px,5vw,22px)/1.2 var(--font-heading)}   /* Director, 2026-11-05: «el escribí tu respuesta podría ser más claro»: mismo pergamino festoneado de las opciones, con letra oscura. «Encontrá el error» sigue con su campo azul. */
 html.pdp-fondo-ej.pdp-ej-piezas .error-word.selected{background:none;border-color:transparent;color:#0c3f9a;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
 html.pdp-fondo-ej.pdp-ej-piezas .error-word.correct{background:none;border-color:transparent;color:#0a6b45;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
 html.pdp-fondo-ej.pdp-ej-piezas .error-word.wrong{background:none;border-color:transparent;color:#a14a00;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
@@ -6415,9 +6419,9 @@ html.pdp-fondo-ej.pdp-ej-campo-azul #exercise-body{padding-left:17%;padding-righ
 html.pdp-fondo-ej.pdp-ej-campo-azul #exercise-question{position:absolute!important;width:1px!important;height:1px!important;margin:0!important;padding:0!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;background:none!important;border:0!important;box-shadow:none!important;filter:none!important}
 html.pdp-fondo-ej.pdp-ej-campo-azul #exercise-question::before,html.pdp-fondo-ej.pdp-ej-campo-azul #exercise-question::after{display:none!important}   /* sigue en la página para los lectores de pantalla */
 /* 2026-10-31 (Director: «el texto del cartel quedaría bien sobre la pared sin cartel»): la consigna va escrita directo sobre la pared, sin el cartel azul. */
-html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-campo-azul :is(.ej-banner-q,#tutor-zone){border:0;border-width:0;border-image:none;background:none!important;box-shadow:none;border-radius:0;aspect-ratio:auto;min-height:0;margin:4px 0 14px;padding:0 2%;filter:none;display:block;text-align:center}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-campo-azul :is(.ej-banner-q,#tutor-zone){border:0;border-width:0;border-image:none;background:none!important;box-shadow:none;border-radius:0;aspect-ratio:auto;min-height:0;margin:4px 0 40px;padding:0 2%;filter:none;display:block;text-align:center}
 html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-campo-azul :is(.ej-banner-q .ej-hero,#tutor-zone .tutor-zone-hero){display:none}
-html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-campo-azul :is(.ej-banner-q .ej-banner-tx,#tutor-zone .tutor-text){font:800 clamp(15px,4.3vw,18px)/1.3 var(--font-heading);color:#24130a;text-shadow:0 0 2px #fff3d2,0 0 4px #fff3d2,0 0 8px rgba(255,243,210,.95),1px 1px 0 #fff3d2,-1px -1px 0 #fff3d2,1px -1px 0 #fff3d2,-1px 1px 0 #fff3d2}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-campo-azul :is(.ej-banner-q .ej-banner-tx,#tutor-zone .tutor-text){font:800 clamp(20px,5.8vw,24px)/1.25 var(--font-heading);color:#24130a;text-shadow:0 0 2px #fff3d2,0 0 4px #fff3d2,0 0 8px rgba(255,243,210,.95),1px 1px 0 #fff3d2,-1px -1px 0 #fff3d2,1px -1px 0 #fff3d2,-1px 1px 0 #fff3d2}
 html[data-theme="dark"].pdp-fondo-ej.pdp-ej-piezas.pdp-ej-campo-azul :is(.ej-banner-q .ej-banner-tx,#tutor-zone .tutor-text){color:#F6E3B0;text-shadow:0 1px 3px rgba(0,0,0,.9),0 0 8px rgba(0,0,0,.55)}
 
 html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-campo-azul .exercise-image-zone:not(.hidden){margin:0 -3% 12px}
@@ -6428,9 +6432,12 @@ html.pdp-fondo-ej.pdp-ej-piezas .exercise-image-zone img{border-radius:0;-webkit
 html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-campo-azul .exercise-image-zone:not(.hidden){padding:23px;filter:drop-shadow(0 6px 8px rgba(0,0,0,.5))}
 html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-campo-azul .exercise-image-zone:not(.hidden)::after{background:none;border:solid transparent;border-width:40px;border-image:var(--pz-marco-grueso) 230 / 40px stretch;filter:none}   /* 2026-11-01 (Director): marco grueso de bronce con escudo y placa; la foto queda en el hueco */
 html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-campo-azul .exercise-image-zone img{border-radius:2px;-webkit-mask:none;mask:none}
-html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-campo-azul .error-sentence{margin:6px -1.5% 14px}
+html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-campo-azul .error-sentence{margin:6px -1.5% 40px}   /* 2026-11-05 (Director: «separalas un poco»): más aire entre consigna, oración y campo */
 html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-campo-azul .error-word.selected{background:rgba(246,170,160,.72);border-radius:10px;color:#7a2418;text-decoration:none}
 html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-campo-azul .error-correction-label{display:none}
+/* 2026-11-05 (Director: «agranda la letra de la consigna» — de 15–18 px a 20–24 px, igual que la consigna del panel). */
+/* 2026-11-05 (Director: «reacomodalo más en el centro»): sin foto y en pantallas altas, la consigna + la oración + el campo bajan hacia el centro de la pared (antes quedaban pegados arriba con la pared vacía debajo). Con foto no cambia nada. */
+@media (min-height:780px){html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-campo-azul #exercise-body:has(>#exercise-image-zone.hidden) :is(.ej-banner-q,#tutor-zone):not([style*="display: none"]){margin-top:calc(21dvh - 24px)}}
 html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-campo-azul .error-correction-input{position:relative;margin-top:6px}
 html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-campo-azul .error-correction-input::after{content:'';position:absolute;right:20px;top:50%;width:22px;height:22px;transform:translateY(-50%);background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c9d2ea' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><path d='M4 20l1-4L16.5 4.5a2 2 0 013 3L8 19z'/><path d='M14.5 6.5l3 3'/></svg>") center/contain no-repeat;opacity:.8;pointer-events:none}
 html.pdp-fondo-ej.pdp-ej-piezas.pdp-ej-campo-azul input.text-input{border-width:0 var(--pz-c-w,23px);border-image:var(--pz-azul-1) 0 80 0 80 fill / 0 var(--pz-c-w,23px) 0 var(--pz-c-w,23px) stretch;min-height:58px;padding:0 34px 0 4px;color:#F2E2BC;font:600 clamp(18px,5vw,22px)/1.2 var(--font-heading)}
@@ -7226,6 +7233,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/16ac45ec59b02486be2a03f3064ff8f8.js"></script><script src="../pdp-assets/3a10699817def73eaae2413e98ed7b90.js"></script>
+<script src="../pdp-assets/2148fb035a7fcdb872211c5586777ab7.js"></script><script src="../pdp-assets/703e0ecbecf36946ccccf0e329920b2e.js"></script>
 </body>
 </html>
