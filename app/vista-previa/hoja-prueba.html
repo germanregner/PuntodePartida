@@ -5883,6 +5883,11 @@ html.pdp-hoja-on #toast{ max-width:calc(100% - 64px); }
 html.pdp-hoja-on .spike-globo{ max-width:min(250px, calc(100vw - 64px)); }
 html.pdp-hoja-on:has(.exercise-tutor-strip.rising) #toast{ display:none; }
 
+/* ═══ Tipos «marco» (2026-11-05, Director: «todos los ejercicios me aparecen opción múltiple»): el ejercicio real (campo, arrastres, uniones…) queda ENCIMA de la hoja, bajo la tarjeta del enunciado, en su propia bandeja ═══ */
+html.pdp-hoja-marco #screen-exercise #exercise-input-area{ visibility:visible; }
+html.pdp-hoja-marco #screen-exercise #exercise-body{ position:relative; z-index:41; background:transparent !important; pointer-events:none; }
+html.pdp-hoja-marco #screen-exercise #exercise-input-area{ pointer-events:auto; background:var(--pdp-card-bg); border:3px solid #14213d; border-radius:26px; padding:14px; box-shadow:0 6px 0 rgba(20,33,61,.18); box-sizing:border-box; }
+
 /* HOJA-PIEZAS:FIN */
 /* ═══ Fondo de paisaje detrás de los ejercicios (2026-10-12, a pedido del Director; opcional por Unidad: APP_CONFIG.fondoEjercicios) ═══
    Sin la marca, nada cambia. Con ella: valle con castillos y cascadas (noche en oscuro, día en claro) en una capa fija detrás de la pantalla de ejercicio, suavizada de antemano (la imagen ya va desenfocada, así no hace falta un filtro CSS caro),
@@ -7311,6 +7316,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/05c1ccd505864ec058ab2d804be1fd53.js"></script><script src="../pdp-assets/4da03c3419422f08cc8fc54298dd2b14.js"></script>
+<script src="../pdp-assets/d942b237506ecd398b380c939c57d297.js"></script><script src="../pdp-assets/564e113d5d286f79d6b0982f2bab20c6.js"></script>
 </body>
 </html>
