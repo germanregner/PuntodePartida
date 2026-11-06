@@ -5806,6 +5806,241 @@ html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-linea
 :root:not([data-theme="dark"]) .cm-globo, :root:not([data-theme="dark"]) .cm-fila-tx, :root:not([data-theme="dark"]) .cm-tarjeta-tx, :root:not([data-theme="dark"]) .cm-tarjeta-tx b, :root:not([data-theme="dark"]) .cm-vin figcaption{ color:#40240F; }
 :root:not([data-theme="dark"]) .cm-fila-tx b, :root:not([data-theme="dark"]) .cm-tarjeta-tx em{ color:#8a4a16; } :root:not([data-theme="dark"]) .cm-es{ color:#6B5B2E; }
 /* ═══ fin medios de un Concept ═══ */
+/* ATELIER-PIEZAS:INICIO (generado por Assets/atelier/inyectar_atelier.py; no editar a mano) */
+:root{--atl-top:url('pdp-assets/bee56b417ece6006555a954312665430.webp');--atl-mid:url('pdp-assets/8a1c296e8f1a3af5d4884d293c1cfb90.webp');--atl-bot:url('pdp-assets/eaed6cb442c0f2902b3ff2eb407e9ad6.webp');--atl-brujula:url('pdp-assets/b3dc4467f87209dd521336ebf987aba5.webp');--atl-hoja:url('pdp-assets/2285241adffaad02ca97723ef1906ccd.webp');--atl-globo:url('pdp-assets/623ff547da80e8de568c8572ec8e436e.webp');--atl-cola:url('pdp-assets/bd693f420530e088e3c3aaf0b4ca558f.webp');--atl-ronnie-senala:url('pdp-assets/7d1070f94c9a1bcb48420ec5e00971a3.webp');--atl-ronnie-piensa:url('pdp-assets/a4a40a31259cd0f1aaa415c51457e7e7.webp');--atl-ronnie-celebra:url('pdp-assets/f8c99a649981933af9bdb9ac1384776f.webp');--atl-ronnie-desconcertado:url('pdp-assets/15515e037a2c1f043e57407fe1710e81.webp');--atl-ronnie-sorprendido:url('pdp-assets/34e122666e48fb814fc7bf30f0107332.webp');--atl-ronnie-idea:url('pdp-assets/c42ef3711b9e3f7d4f4598676c408a74.webp')}
+/* ═══ Skin «Atelier» — fieltro cosido (2026-11-05, Director: kit definitivo de Matemática, MAT-27) ═══
+   Capa: Motor Base (presentación). Se enciende con APP_CONFIG.skin:'atelier' (o 🧪 «Skin»). Viste los componentes REALES de la pantalla de ejercicio; no corrige nada.
+   Unidad de medida: --u = ancho de pantalla (máx. 480 px) / 1086, la del lienzo de las láminas del Director. */
+:root{ --atl-ciruela:#5B285F; --atl-frambuesa:#B02D76; --atl-oliva:#707A08; --atl-salvia:#B7C177; --atl-crema:#FCE3BE; --atl-topo:#BF988A; --atl-coral:#FA8788; --atl-tinta:#1B1F4B; --atl-ambar:#F59E0B; --atl-ambar-fondo:#FCD98A; --atl-ambar-borde:#9A6410; }
+#atl-root{ position:absolute; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
+#atl-root .atl-stage{ position:absolute; left:50%; top:0; bottom:0; width:calc(var(--u) * 1086); transform:translateX(-50%); }
+#atl-root .atl-bg{ position:absolute; inset:0; display:flex; flex-direction:column; z-index:-2; }
+#atl-root .atl-bg i{ display:block; width:100%; background-size:100% auto; background-repeat:no-repeat; }
+#atl-root .atl-bg i.atl-top{ height:calc(var(--u) * 352); background-image:var(--atl-top); }
+#atl-root .atl-bg i.atl-mid{ flex:1; background-image:var(--atl-mid); background-repeat:repeat-y; background-size:100% calc(var(--u) * 357); }
+#atl-root .atl-bg i.atl-bot{ height:calc(var(--u) * 296); background-image:var(--atl-bot); background-position:0 100%; }
+/* el fondo de paisaje y las piezas viejas no conviven con el cuaderno */
+html.pdp-atl-on #screen-exercise{ background:#efe6d6 !important; }
+html.pdp-atl-on #screen-exercise .exercise-header{ visibility:hidden; height:0; padding:0; overflow:hidden; }
+html.pdp-atl-on #screen-exercise #tutor-zone, html.pdp-atl-on #screen-exercise #exercise-tutor-strip{ display:none !important; }
+html.pdp-atl-on #screen-exercise #exercise-body{ display:flex !important; flex-direction:column; position:relative; z-index:1; background:transparent !important; padding-top:calc(var(--u) * 258); justify-content:center; padding-left:calc(var(--u) * 128); padding-right:calc(var(--u) * 92); padding-bottom:calc(var(--exercise-footer-h,115px) + var(--u) * 350) !important;   /* sin sumar el alto del panel de resultado: el ejercicio no se mueve al responder */ }
+/* ── cabecera: cintas, brújula, progreso ── */
+#atl-root .atl-el{ position:absolute; display:flex; align-items:center; justify-content:center; box-sizing:border-box; text-align:center; white-space:nowrap; }
+#atl-root .atl-comp{ left:calc(var(--u)*32); top:calc(var(--u)*22); width:calc(var(--u)*140); height:calc(var(--u)*150); background:var(--atl-brujula) center/contain no-repeat; pointer-events:auto; border:0; padding:0; cursor:pointer; }
+#atl-root .atl-rib{ overflow:visible; color:#fff; font:italic 800 calc(var(--u)*35)/1 var(--font-heading,Georgia,serif); text-shadow:0 2px 0 rgba(0,0,0,.25); border:calc(var(--u)*3) solid #2a0f33; border-radius:calc(var(--u)*14); }
+#atl-root .atl-rib::before{ content:''; position:absolute; inset:calc(var(--u)*7); border:calc(var(--u)*3) dashed rgba(255,255,255,.85); border-radius:calc(var(--u)*8); pointer-events:none; }
+#atl-root .atl-rib::after{ content:''; position:absolute; top:calc(var(--u)*14); bottom:calc(var(--u)*-14); width:calc(var(--u)*34); background:inherit; filter:brightness(.72); z-index:-1; }
+#atl-root .atl-r1{ left:calc(var(--u)*150); top:calc(var(--u)*34); width:calc(var(--u)*330); height:calc(var(--u)*80); background:linear-gradient(180deg,#B53DB8,#82209A); }
+#atl-root .atl-r1::after{ left:calc(var(--u)*-26); clip-path:polygon(100% 0,0 0,28% 50%,0 100%,100% 100%); }
+#atl-root .atl-r2{ left:calc(var(--u)*548); top:calc(var(--u)*34); width:calc(var(--u)*505); height:calc(var(--u)*82); background:linear-gradient(180deg,#6B3BD0,#4C25A6); }
+#atl-root .atl-r2::after{ right:calc(var(--u)*-26); clip-path:polygon(0 0,100% 0,72% 50%,100% 100%,0 100%); }
+#atl-root .atl-lec{ left:calc(var(--u)*176); top:calc(var(--u)*36); width:calc(var(--u)*282); height:calc(var(--u)*84); background:linear-gradient(180deg,#5C8A2E,#436B1E); color:#fff; font:italic 800 calc(var(--u)*50)/1 var(--font-heading,Georgia,serif); border:calc(var(--u)*3) solid #1f3a0c; border-radius:calc(var(--u)*12); transform:rotate(-2deg); }
+#atl-root .atl-lec::before{ content:''; position:absolute; inset:calc(var(--u)*6); border:calc(var(--u)*3) dashed rgba(255,255,255,.85); border-radius:calc(var(--u)*7); }
+#atl-root .atl-tit{ left:calc(var(--u)*420); top:calc(var(--u)*24); width:calc(var(--u)*525); height:calc(var(--u)*104); color:var(--atl-tinta); font:italic 800 calc(var(--u)*50)/1.05 var(--font,Inter,system-ui,sans-serif); padding:0 calc(var(--u)*34); white-space:normal; }
+#atl-root .atl-nube{ position:absolute; z-index:-1; inset:0; background:#FBEBC0; border:calc(var(--u)*3) solid #D8A957; border-radius:calc(var(--u)*50); filter:url(#atl-rough); box-shadow:0 calc(var(--u)*4) 0 rgba(150,100,40,.25); }
+#atl-root .atl-nube::after{ content:''; position:absolute; inset:calc(var(--u)*9); border:calc(var(--u)*3) dashed rgba(190,130,40,.65); border-radius:calc(var(--u)*40); }
+#atl-root .atl-chip{ left:calc(var(--u)*100); top:calc(var(--u)*152); width:calc(var(--u)*222); height:calc(var(--u)*78); gap:calc(var(--u)*10); font:italic 800 calc(var(--u)*52)/1 var(--font,Inter,sans-serif); color:var(--atl-tinta); background:#FBEBC0; border:calc(var(--u)*3) solid #D8A957; border-radius:calc(var(--u)*40); }
+#atl-root .atl-chip b{ font-size:calc(var(--u)*58); filter:drop-shadow(0 1px 0 rgba(0,0,0,.3)); }
+#atl-root .atl-rail{ left:calc(var(--u)*346); top:calc(var(--u)*158); width:calc(var(--u)*478); height:calc(var(--u)*66); justify-content:space-evenly; background:#E4D2FA; border:calc(var(--u)*3) solid #A98AD8; border-radius:calc(var(--u)*34); padding:0 calc(var(--u)*18); }
+#atl-root .atl-rail::before{ content:''; position:absolute; left:calc(var(--u)*34); right:calc(var(--u)*34); top:50%; height:calc(var(--u)*5); background:#6a4aa0; transform:translateY(-50%); border-radius:3px; }
+#atl-root .atl-dot{ position:relative; width:calc(var(--u)*38); height:calc(var(--u)*38); border-radius:50%; background:#fff; border:calc(var(--u)*4) solid #3b2a63; box-sizing:border-box; }
+#atl-root .atl-dot.hecho{ background:radial-gradient(circle at 35% 30%,#8BEB4A,#2FAE22); }
+#atl-root .atl-snd{ left:calc(var(--u)*906); top:calc(var(--u)*146); width:calc(var(--u)*104); height:calc(var(--u)*104); border-radius:50%; background:#FBEBC0; border:calc(var(--u)*4) solid #3b2a63; font-size:calc(var(--u)*50); pointer-events:auto; cursor:pointer; padding:0; color:#2b2f75; }
+/* ── Ronnie y su globo ── */
+#atl-root .atl-ronnie{ left:calc(var(--u)*44); bottom:var(--atl-pie,100px); width:calc(var(--u)*360); height:calc(var(--u)*350); background:var(--atl-ronnie) left bottom/contain no-repeat; pointer-events:auto; cursor:pointer; border:0; padding:0; }
+#atl-root .atl-globo{ left:calc(var(--u)*430); bottom:calc(var(--atl-pie,100px) + var(--u)*24); width:calc(var(--u)*580); min-height:calc(var(--u)*190); padding:calc(var(--u)*30) calc(var(--u)*46); color:var(--atl-tinta); font:700 calc(var(--u)*40)/1.22 var(--font,Inter,sans-serif); white-space:normal; text-align:left; justify-content:flex-start; }
+#atl-root .atl-globo b{ color:var(--atl-ciruela); }
+#atl-root .atl-globo .atl-nube{ border-radius:calc(var(--u)*70); }
+#atl-root .atl-globo::before{ content:''; position:absolute; left:calc(var(--u)*-46); bottom:calc(var(--u)*34); width:calc(var(--u)*60); height:calc(var(--u)*50); background:#FBEBC0; clip-path:polygon(100% 0,0 70%,100% 100%); z-index:-1; border:0; }
+/* ── consigna (el enunciado real) ── */
+html.pdp-atl-on #screen-exercise #exercise-question{ position:relative; z-index:0; margin:0 0 calc(var(--u)*26); padding:calc(var(--u)*34) calc(var(--u)*50); text-align:center; color:var(--atl-tinta) !important; font:800 calc(var(--u)*48)/1.15 var(--font,Inter,system-ui,sans-serif) !important; letter-spacing:0; }
+html.pdp-atl-on #screen-exercise #exercise-question::before{ content:''; position:absolute; z-index:-1; inset:0; background:#FBEBC0; border:calc(var(--u)*3) solid #D8A957; border-radius:calc(var(--u)*46); filter:url(#atl-rough); box-shadow:0 calc(var(--u)*5) 0 rgba(150,100,40,.25); }
+html.pdp-atl-on #screen-exercise #exercise-question::after{ content:''; position:absolute; z-index:-1; inset:calc(var(--u)*10); border:calc(var(--u)*3) dashed rgba(190,130,40,.6); border-radius:calc(var(--u)*36); }
+/* ── zona de la figura: papel cuadriculado ── */
+html.pdp-atl-on #screen-exercise #exercise-image-zone{ margin:0 0 calc(var(--u)*26); padding:calc(var(--u)*18); background-color:#fff; background-image:linear-gradient(rgba(70,150,215,.35) 1px,transparent 1px),linear-gradient(90deg,rgba(70,150,215,.35) 1px,transparent 1px); background-size:calc(var(--u)*34) calc(var(--u)*34); border:calc(var(--u)*3) solid #9DC4E6; border-radius:calc(var(--u)*22); box-shadow:0 calc(var(--u)*4) 0 rgba(60,110,160,.18); }
+html.pdp-atl-on #screen-exercise #exercise-image-zone img{ display:block; width:100%; max-height:none; border:0; border-radius:0; background:transparent; box-shadow:none; }
+/* ── píldoras de respuesta ── */
+html.pdp-atl-on #screen-exercise .options-list, html.pdp-atl-on #screen-exercise .tf-row{ display:flex; flex-direction:row; flex-wrap:wrap; align-items:stretch; gap:calc(var(--u)*30) calc(var(--u)*34); }
+html.pdp-atl-on #screen-exercise :is(.option-btn,.tf-btn){ position:relative; flex:1 1 calc(var(--u)*330); width:auto; min-height:calc(var(--u)*104); padding:0 calc(var(--u)*34) 0 calc(var(--u)*104); flex-direction:row; justify-content:center; text-align:center; gap:0; background:linear-gradient(180deg,#E6C4FA,#CFA3F0); border:calc(var(--u)*4) solid #3C1B5E; border-radius:calc(var(--u)*60); box-shadow:0 calc(var(--u)*6) 0 rgba(60,27,94,.35); outline:calc(var(--u)*3) dashed rgba(60,27,94,.55); outline-offset:calc(var(--u)*-12); color:var(--atl-tinta); font:800 calc(var(--u)*44)/1.1 var(--font,Inter,sans-serif); transition:transform .12s, box-shadow .2s, filter .2s; }
+html.pdp-atl-on #screen-exercise :is(.option-btn,.tf-btn):nth-child(2n){ background:linear-gradient(180deg,#DDF08E,#C2E062); border-color:#2F5E10; outline-color:rgba(47,94,16,.55); box-shadow:0 calc(var(--u)*6) 0 rgba(47,94,16,.35); }
+html.pdp-atl-on #screen-exercise :is(.option-btn,.tf-btn):nth-child(3n){ background:linear-gradient(180deg,#FFF1D6,#FCE3BE); border-color:#8A6A3A; outline-color:rgba(138,106,58,.55); box-shadow:0 calc(var(--u)*6) 0 rgba(138,106,58,.35); }
+html.pdp-atl-on #screen-exercise :is(.option-btn,.tf-btn)::before{ content:''; position:absolute; left:calc(var(--u)*30); top:50%; width:calc(var(--u)*48); height:calc(var(--u)*48); transform:translateY(-50%); border-radius:50%; background:radial-gradient(circle at 35% 30%,#C77DF2,#7E2FC0); border:calc(var(--u)*5) solid #1b0b2e; box-sizing:border-box; }
+html.pdp-atl-on #screen-exercise :is(.option-btn,.tf-btn):nth-child(2n)::before{ background:radial-gradient(circle at 35% 30%,#8BEB4A,#2FAE22); }
+html.pdp-atl-on #screen-exercise :is(.option-btn,.tf-btn):nth-child(3n)::before{ background:radial-gradient(circle at 35% 30%,#FFE9B0,#D9A94F); }
+html.pdp-atl-on #screen-exercise :is(.option-btn,.tf-btn) .option-letter, html.pdp-atl-on #screen-exercise .tf-btn .tf-icon{ display:none; }
+html.pdp-atl-on #screen-exercise :is(.option-btn,.tf-btn):active{ transform:translateY(calc(var(--u)*4)); }
+html.pdp-atl-on #screen-exercise :is(.option-btn,.tf-btn).selected{ box-shadow:0 0 0 calc(var(--u)*7) rgba(176,45,118,.35), 0 0 calc(var(--u)*34) rgba(176,45,118,.55); filter:saturate(1.1); }
+html.pdp-atl-on #screen-exercise :is(.option-btn,.tf-btn).correct{ background:linear-gradient(180deg,#DDF08E,#BCE05A); border-color:#2F5E10; box-shadow:0 0 0 calc(var(--u)*8) rgba(110,220,40,.45), 0 0 calc(var(--u)*40) rgba(110,220,40,.7); color:var(--atl-tinta); }
+html.pdp-atl-on #screen-exercise :is(.option-btn,.tf-btn).correct::after{ content:'✓'; position:absolute; right:calc(var(--u)*-14); top:calc(var(--u)*-22); width:calc(var(--u)*62); height:calc(var(--u)*62); border-radius:50%; background:#3DBE2B; color:#fff; border:calc(var(--u)*5) solid #fff; box-shadow:0 0 0 calc(var(--u)*3) #1f5a10; display:flex; align-items:center; justify-content:center; font-size:calc(var(--u)*44); line-height:1; }
+/* error: ÁMBAR + sacudida (regla global de PdP, nunca rojo en chicos) */
+html.pdp-atl-on #screen-exercise :is(.option-btn,.tf-btn):is(.wrong,.wrong-first){ background:linear-gradient(180deg,#FDE3A6,var(--atl-ambar-fondo)); border-color:var(--atl-ambar-borde); outline-color:rgba(154,100,16,.6); box-shadow:0 0 0 calc(var(--u)*6) rgba(245,158,11,.35); color:var(--atl-tinta); animation:atl-sacudir .3s; }
+html.pdp-atl-on #screen-exercise :is(.option-btn,.tf-btn):is(.wrong,.wrong-first)::after{ content:'↻'; position:absolute; right:calc(var(--u)*-14); top:calc(var(--u)*-22); width:calc(var(--u)*60); height:calc(var(--u)*60); border-radius:50%; background:var(--atl-ambar); color:#3a2308; border:calc(var(--u)*5) solid #fff; display:flex; align-items:center; justify-content:center; font-size:calc(var(--u)*42); line-height:1; }
+html.pdp-atl-on #screen-exercise :is(.option-btn,.tf-btn).rejected{ opacity:.45; filter:grayscale(.4); }
+@keyframes atl-sacudir{ 0%,100%{ transform:translateX(0); } 25%{ transform:translateX(calc(var(--u)*-12)); } 55%{ transform:translateX(calc(var(--u)*10)); } 80%{ transform:translateX(calc(var(--u)*-6)); } }
+@media (prefers-reduced-motion:reduce){ html.pdp-atl-on #screen-exercise :is(.option-btn,.tf-btn){ animation:none !important; transition:none; } }
+/* ── botón Confirmar / Continuar / Intentar de nuevo ── */
+html.pdp-atl-on #screen-exercise #confirm-btn#confirm-btn{ position:relative; background:linear-gradient(180deg,#8B3A94,var(--atl-ciruela)) !important; color:#fff !important; border:calc(var(--u)*4) solid #2a0f33 !important; border-radius:calc(var(--u)*60) !important; box-shadow:0 calc(var(--u)*6) 0 rgba(42,15,51,.4) !important; outline:calc(var(--u)*3) dashed rgba(255,255,255,.8); outline-offset:calc(var(--u)*-12); font:800 calc(var(--u)*52)/1 var(--font,Inter,sans-serif) !important; text-shadow:0 2px 0 rgba(0,0,0,.3) !important; min-height:calc(var(--u)*118); width:100%; }
+html.pdp-atl-on #screen-exercise #confirm-btn#confirm-btn[data-atl="continuar"]{ background:linear-gradient(180deg,#CFE87E,#9DC93E) !important; color:var(--atl-tinta) !important; border-color:#2F5E10 !important; outline-color:rgba(47,94,16,.6); text-shadow:none !important; box-shadow:0 calc(var(--u)*6) 0 rgba(47,94,16,.4) !important; }
+html.pdp-atl-on #screen-exercise #confirm-btn#confirm-btn[data-atl="reintentar"]{ background:linear-gradient(180deg,#FFE3A0,#F6C453) !important; color:#3a2308 !important; border-color:var(--atl-ambar-borde) !important; outline-color:rgba(154,100,16,.6); text-shadow:none !important; box-shadow:0 calc(var(--u)*6) 0 rgba(154,100,16,.4) !important; }
+html.pdp-atl-on #screen-exercise #confirm-btn#confirm-btn:disabled{ opacity:.55; filter:saturate(.6); }
+
+/* el ejercicio (consigna + figura + respuestas) queda centrado entre la cabecera y Ronnie */
+html.pdp-atl-on #screen-exercise #exercise-image-zone:not(.hidden){ flex:0 0 auto; display:flex; align-items:center; justify-content:center; min-height:calc(var(--u) * 430); }
+html.pdp-atl-on #screen-exercise #exercise-image-zone img{ width:100%; height:auto; }
+html.pdp-atl-on #screen-exercise #exercise-body > *{ flex-shrink:0; }
+html.pdp-atl-on #screen-exercise #exercise-question, html.pdp-atl-on #screen-exercise #exercise-image-zone, html.pdp-atl-on #screen-exercise #exercise-input-area{ margin-bottom:calc(var(--u) * 34); }
+html.pdp-atl-on #screen-exercise #exercise-input-area{ margin-bottom:0; }
+
+/* el botón vive DENTRO de la hoja: entre las anillas y el margen derecho, y por encima del borde inferior del cuaderno (2026-11-05, Director: «queda por debajo del margen de la hoja») */
+html.pdp-atl-on #screen-exercise .exercise-footer{ padding-left:calc(var(--u) * 132); padding-right:calc(var(--u) * 100); padding-bottom:calc(var(--u) * 122 + var(--safe-bottom,0px)); }
+
+/* mientras la hoja vieja se arranca, la de abajo queda en blanco: nada del ejercicio anterior asoma detrás */
+html.pdp-atl-on.atl-pasando body > :not(#atl-transicion) #screen-exercise #exercise-body, html.pdp-atl-on.atl-pasando body > :not(#atl-transicion) #screen-exercise .exercise-footer, html.pdp-atl-on.atl-pasando body > :not(#atl-transicion) #screen-exercise #feedback-zone, html.pdp-atl-on.atl-pasando body > :not(#atl-transicion) #atl-root .atl-stage > :not(.atl-bg){ visibility:hidden !important; }   /* la copia (#atl-transicion) conserva todo: solo se oculta la pantalla real */
+
+/* ── SIN HOJA (2026-11-06, Director: «vamos con la 2»): la pantalla sin el cuaderno; los componentes sueltos sobre el fondo de la app y casi a todo el ancho.
+   Se activa con APP_CONFIG.atelier.hoja:false (o 🧪 «Skin · hoja»). Sin hoja no hay nada que arrancar: el avance usa la transición normal del Motor. ── */
+html.pdp-atl-on.pdp-atl-sinhoja #atl-root .atl-bg{ display:none; }
+html.pdp-atl-on.pdp-atl-sinhoja #screen-exercise{ background:var(--bg-base,#efe6d6) !important; }
+html.pdp-atl-on.pdp-atl-sinhoja #screen-exercise #exercise-body{ padding-left:calc(var(--u) * 56); padding-right:calc(var(--u) * 56); }
+html.pdp-atl-on.pdp-atl-sinhoja #screen-exercise .exercise-footer{ padding-left:calc(var(--u) * 56); padding-right:calc(var(--u) * 56); padding-bottom:calc(var(--u) * 40 + var(--safe-bottom,0px)); }
+
+/* ── disposición «Ronnie arriba» (2026-11-06, Director: la pantalla 2 de L01): Ronnie y su globo (con la explicación) ARRIBA; después la figura, la consigna y las respuestas en columna.
+   Es una disposición PROPIA, por ejercicio (`layout:'ronnie-arriba'`); la de siempre (Ronnie abajo, respuestas en fila) sigue siendo la de la pantalla 1. ── */
+html.pdp-atl-on.pdp-atl-arriba #atl-root .atl-ronnie{ top:calc(var(--u)*252); bottom:auto; }
+html.pdp-atl-on.pdp-atl-arriba #atl-root .atl-globo{ top:calc(var(--u)*268); bottom:auto; }
+html.pdp-atl-on.pdp-atl-arriba #atl-root .atl-globo{ left:calc(var(--u)*410); width:calc(var(--u)*620); font-size:calc(var(--u)*33); line-height:1.25; padding:calc(var(--u)*26) calc(var(--u)*40); }
+html.pdp-atl-on.pdp-atl-arriba #atl-root .atl-globo::before{ top:calc(var(--u)*96); bottom:auto; }
+html.pdp-atl-on.pdp-atl-arriba #screen-exercise #exercise-body{ justify-content:flex-start; padding-top:calc(var(--u) * 640); padding-bottom:calc(var(--exercise-footer-h,115px) + var(--u) * 30) !important; }
+html.pdp-atl-on.pdp-atl-arriba #screen-exercise #exercise-body > *{ order:3; }
+html.pdp-atl-on.pdp-atl-arriba #screen-exercise #exercise-image-zone{ order:1; min-height:0; }
+html.pdp-atl-on.pdp-atl-arriba #screen-exercise #exercise-question{ order:2; }
+html.pdp-atl-on.pdp-atl-arriba #screen-exercise .options-list, html.pdp-atl-on.pdp-atl-arriba #screen-exercise .tf-row{ flex-direction:column; flex-wrap:nowrap; gap:calc(var(--u)*24); }
+html.pdp-atl-on.pdp-atl-arriba #screen-exercise :is(.option-btn,.tf-btn){ flex:0 0 auto; width:100%; }
+#atl-root .atl-globo p{ margin:0; } #atl-root .atl-globo p + p{ margin-top:.5em; }
+
+/* ── reparto vertical (2026-11-06, Director: «quedaron mal distribuidos los componentes»): el espacio que sobra se reparte ENTRE los componentes, no se junta abajo ── */
+html.pdp-atl-on #screen-exercise #exercise-body{ justify-content:space-evenly; }
+html.pdp-atl-on.pdp-atl-arriba #screen-exercise #exercise-body{ justify-content:space-evenly; }
+html.pdp-atl-on #screen-exercise #exercise-body > *{ margin-top:0; margin-bottom:0 !important; }
+html.pdp-atl-on #screen-exercise #exercise-image-zone:not(.hidden){ min-height:calc(var(--u) * 470); }
+html.pdp-atl-on.pdp-atl-arriba #screen-exercise #exercise-image-zone:not(.hidden){ min-height:calc(var(--u) * 430); }
+/* la zona de la figura (el papel cuadriculado) crece y absorbe el espacio libre, así consigna y respuestas no quedan flotando lejos entre sí */
+html.pdp-atl-on #screen-exercise #exercise-image-zone:not(.hidden){ flex:1 1 auto; max-height:calc(var(--u) * 540); }
+html.pdp-atl-on.pdp-atl-arriba #screen-exercise #exercise-image-zone:not(.hidden){ max-height:calc(var(--u) * 540); }
+html.pdp-atl-on #screen-exercise #exercise-body{ gap:calc(var(--u) * 34); }
+
+/* ── componentes como en la imagen de la pantalla 2 (2026-11-06, Director: «no quedó igual, los componentes son diferentes») ──
+   respuestas: las del kit (se quedan como estaban; el Director prefirió las propias);
+   consigna en una sola línea; papel de la figura más bajo. */
+html.pdp-atl-on #screen-exercise #exercise-question{ font-size:calc(var(--u)*40); padding:calc(var(--u)*30) calc(var(--u)*34); white-space:normal; }
+html.pdp-atl-on.pdp-atl-arriba #screen-exercise #exercise-image-zone:not(.hidden){ max-height:calc(var(--u) * 470); }
+
+/* ── el globo de Ronnie como en la imagen de la pantalla 2 (2026-11-06, Director: «el globo de Ronnie… es otro»): globo de diálogo con COLA que apunta a Ronnie, borde dorado y esquinas muy redondas ── */
+#atl-root .atl-globo::before{ content:''; position:absolute; z-index:-1; left:calc(var(--u)*-62); bottom:calc(var(--u)*40); top:auto; width:calc(var(--u)*78); height:calc(var(--u)*64); background:#D8A957; clip-path:polygon(100% 0,0 74%,100% 100%); }
+#atl-root .atl-globo::after{ content:''; position:absolute; z-index:0; left:calc(var(--u)*-50); bottom:calc(var(--u)*44); width:calc(var(--u)*68); height:calc(var(--u)*54); background:#FBEBC0; clip-path:polygon(100% 0,0 74%,100% 100%); pointer-events:none; }
+html.pdp-atl-on.pdp-atl-arriba #atl-root .atl-globo::before{ top:auto; bottom:calc(var(--u)*40); }
+html.pdp-atl-on.pdp-atl-arriba #atl-root .atl-globo::after{ bottom:calc(var(--u)*44); }
+#atl-root .atl-globo .atl-nube{ border-radius:calc(var(--u)*76); border-width:calc(var(--u)*4); }
+#atl-root .atl-globo span{ position:relative; z-index:1; }
+
+/* el aviso de arriba (saludo de Ronnie, rachas, hitos) con el mismo estilo que el globo de Ronnie: crema, borde dorado grueso, esquinas redondas (2026-11-06) */
+html.pdp-atl-on #milestone-banner{ background:#FBEBC0; border:calc(var(--u)*4) solid #D8A957; border-radius:calc(var(--u)*70); box-shadow:0 calc(var(--u)*5) 0 rgba(150,100,40,.28); }
+html.pdp-atl-on #milestone-banner-text{ color:var(--atl-tinta); font-weight:800; }
+
+/* ── EL globo de Ronnie: el arte del Director (globo de diálogo con cola), no uno dibujado en código (2026-11-06, «el globo… lo hiciste vos»).
+   Cuerpo = border-image de 9 cortes (se estira con el texto); la cola es una pieza aparte, anclada abajo a la izquierda. ── */
+#atl-root .atl-globo{ box-sizing:border-box; border:calc(var(--u)*52) solid transparent; border-image:var(--atl-globo) 100 fill / calc(var(--u)*52) stretch; padding:0 calc(var(--u)*6); min-height:0; background:none; filter:none; }
+#atl-root .atl-globo .atl-nube{ display:none; }
+#atl-root .atl-globo::before{ content:''; position:absolute; z-index:0; left:calc(var(--u)*-75); bottom:calc(var(--u)*-17); top:auto; width:calc(var(--u)*40); height:calc(var(--u)*68); background:var(--atl-cola) 0 0/100% 100% no-repeat; clip-path:none; border:0; }
+#atl-root .atl-globo::after{ display:none; }
+html.pdp-atl-on.pdp-atl-arriba #atl-root .atl-globo{ padding:0 calc(var(--u)*6); }
+html.pdp-atl-on.pdp-atl-arriba #atl-root .atl-globo::before{ left:calc(var(--u)*-75); bottom:calc(var(--u)*-17); top:auto; }
+html.pdp-atl-on.pdp-atl-arriba #atl-root .atl-globo::after{ display:none; }
+
+/* ATELIER-PIEZAS:FIN */
+/* HOJA-PIEZAS:INICIO (generado por Assets/piezas-hoja/inyectar_en_motor.py; no editar a mano) */
+:root{--hz-res:url('pdp-assets/ab17914415131b9a9ba0af3e8016ab3b.webp');--hz-sub:url('pdp-assets/cb13fc39f8d33494134ce42aa231bb3a.webp');--hz-card:url('pdp-assets/252115ef6b28f906f01866d1b65447d1.webp');--hz-oa:url('pdp-assets/77ee59e2dd1bdfc4ebc93d4877be9d1a.webp');--hz-ob:url('pdp-assets/084ddb842811a6b22a944389e1911e4d.webp');--hz-oc:url('pdp-assets/55e76189d8973955c3cadb95bc84e5c6.webp');--hz-od:url('pdp-assets/540d524bfbfc621540304bb90b946308.webp');--hz-chl:url('pdp-assets/825cc11fa588388e24dd4b123cac166f.webp');--hz-chr:url('pdp-assets/766c769e2921d0384412930f2c821c19.webp');--hz-calc:url('pdp-assets/7985392314ae84cad7ad13941e6751f4.webp');--hz-libros:url('pdp-assets/2f96a9503ab11262614aa6691df5acf1.webp');--hz-bru:url('pdp-assets/a438393c38333b7fb1938a45bcb97371.webp');--hz-btn:url('pdp-assets/695625b786bc2657fbde14d0837c7f38.webp');--hz-star:url('pdp-assets/cdb047886bcd59bc6ca4b8d10c6622c0.webp');--hz-bola:url('pdp-assets/67d9cfcc255855aa5efdb44cc91fbe08.webp');--hz-fondo:url('pdp-assets/42d8dfdbc4efb8c8ef9941d28396480b.webp');--hz-arr:url('pdp-assets/768ab09da770de4d1b124a496a505245.webp');--hz-atlas:url('pdp-assets/d68079fae8c547db5aeec4e1a4607f97.webp');--hz-ico-x:url('pdp-assets/a4589d68da8b06be3b4b0f9d0efea3a5.webp');--hz-ico-son:url('pdp-assets/cc718702cc1ddcce95e4cb81b4e086c9.webp');--hz-ico-check:url('pdp-assets/0a55eaef0448e5060fc5773c7c41014b.webp');--hz-ico2-x:url('pdp-assets/69afcdc955aa4eeee0d5abd1f7d48d80.webp');--hz-ico2-son:url('pdp-assets/2340f5886e472f4168cbd5dc9519f520.webp');--hz-ico2-check:url('pdp-assets/beb598e7cff35c2b2091eb4234bf1454.webp');--hz-r-card:url('pdp-assets/774fe4e3b0111f79d4a94e451b3ad886.webp');--hz-r-op:url('pdp-assets/dbd437900a91dc5d47aec8456fd35cc3.webp');--hz-r-sel:url('pdp-assets/d278744530183e93ef624879a07c3546.webp');--hz-i-card:url('pdp-assets/d1b2892238bf441e41767eab88d26d34.webp');--hz-i-op:url('pdp-assets/d20df549371b71c44a940c4cbbe19eb9.webp');--hz-i-sel:url('pdp-assets/aad76810b3644c705964b227436ff0e0.webp');--hz-bru-01:url('pdp-assets/f66a1848729ba37d57081f17627da327.webp');--hz-bru-02:url('pdp-assets/59baa738ffa47541186a1d57f32ce153.webp');--hz-bru-03:url('pdp-assets/927bb19a5b788fa64993881f5a24a95f.webp');--hz-bru-04:url('pdp-assets/16a8fd2a8555786ef3fee2562b769bf6.webp');--hz-bru-05:url('pdp-assets/b6c4cd9933effe3bf267beaab70823bc.webp');--hz-bru-06:url('pdp-assets/9be9d79aada51b6b31e6ac0ccc119f12.webp');--hz-bru-07:url('pdp-assets/eb0a6279442d2a69ac760e0c59e34a6a.webp');--hz-bru-08:url('pdp-assets/f8293004074ef43687d4123f623f720b.webp');--hz-bru-09:url('pdp-assets/509e9ce0f059dabb1f1ae72e84fda294.webp');--hz-bru-10:url('pdp-assets/0452d62cc516634b632edde3920e538d.webp');--hz-bru-11:url('pdp-assets/41a7fc9f5535ab1c20699837fc16dfa3.webp');--hz-bru-12:url('pdp-assets/242f83348c6c8f5d47b1c519b462dc34.webp');--hz-bru-13:url('pdp-assets/3b25d8fcb85aa25effbdbe08a615427f.webp');--hz-bru-14:url('pdp-assets/164ee943f2b478a4140a6abda7a64c68.webp');--hz-bru-15:url('pdp-assets/c24be9ce0a4a88b860f6905870e5bf6b.webp');--hz-bru-16:url('pdp-assets/ab486b2f1de2233af2eab848d2a06e3c.webp');--hz-bru-17:url('pdp-assets/dfafb341849d1ac6297e1d4f333f19da.webp');--hz-bru-18:url('pdp-assets/96bcb9a22428363e4b96b6e93c3b5375.webp');--hz-bru-19:url('pdp-assets/d258159bdbcfa22bba9e1dabef36eecf.webp');--hz-bru-20:url('pdp-assets/f31e04a563510734fbb60fa395cc0bda.webp')}
+/* ═══ Pantalla «hoja que se dibuja» (2026-11-05) — reglas; el JS está en el bloque HOJA-MOTOR. Solo con html.pdp-hoja-on (opción activada + opción múltiple). ═══ */
+#hoja-ej{ position:fixed; inset:0; z-index:40; background:#e7d3ae; overflow:hidden; touch-action:pan-y; user-select:none; -webkit-user-select:none; }
+#hoja-ej .hj-stage{ position:absolute; left:0; top:0; width:942px; transform-origin:0 0; overflow:hidden; }
+#hoja-ej .hj-pg{ position:absolute; left:0; top:0; width:942px; background:var(--hz-fondo) 0 0/100% 100% no-repeat #f7e9cf; will-change:transform; }
+#hoja-ej .hj-pc{ position:absolute; background-size:100% 100%; background-repeat:no-repeat; pointer-events:none; }
+#hoja-ej .hj-card{ position:absolute; pointer-events:none; }
+#hoja-ej .hj-cs{ position:absolute; left:0; width:835px; background-image:var(--hz-card); background-repeat:no-repeat; pointer-events:none; }
+#hoja-ej .hj-rail{ position:absolute; pointer-events:none; }
+#hoja-ej .hj-rl{ position:absolute; left:0; right:0; top:-2px; height:4px; border-radius:2px; background:#14213d; }
+#hoja-ej .hj-rf{ position:absolute; left:0; top:-6px; height:12px; min-width:12px; border-radius:6px; background:#3AA655; border:3px solid #14213d; box-sizing:border-box; }
+#hoja-ej .hj-tag{ position:absolute; pointer-events:none; border-radius:34px; background:rgba(111,138,112,.26); }
+#hoja-ej .hj-hit{ touch-action:pan-y; position:absolute; margin:0; padding:0; border:0; background:transparent; cursor:pointer; border-radius:40px; font:inherit; color:transparent; -webkit-tap-highlight-color:transparent; }
+#hoja-ej .hj-hit:focus-visible{ outline:5px solid #F59E0B; outline-offset:4px; }
+#hoja-ej .hj-hit:disabled{ cursor:default; }
+#hoja-ej .hj-ring{ position:absolute; pointer-events:none; overflow:visible; }
+#hoja-ej .hj-folds{ position:absolute; inset:0; z-index:5; pointer-events:none; opacity:0; background:var(--hz-arr) 0 0/100% 100%; mix-blend-mode:multiply; }
+#hoja-ej .hj-ball{ position:absolute; z-index:6; width:300px; height:360px; left:321px; top:calc(50% - 180px); pointer-events:none; background:var(--hz-bola) center/contain no-repeat; filter:drop-shadow(0 22px 22px rgba(60,44,20,.35)); }
+#hoja-ej .hj-comp{ position:absolute; pointer-events:none; background:var(--hz-bru) center/contain no-repeat; filter:drop-shadow(0 2px 3px rgba(60,44,20,.3)); }
+/* texto escrito con el alfabeto del Director */
+.hj-tx{ position:absolute; pointer-events:none; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+.hj-ln{ display:flex; align-items:flex-end; justify-content:center; white-space:nowrap; }
+.hj-ln > span{ display:inline-flex; align-items:flex-end; }
+.hj-g{ display:block; flex:none; position:relative; background-image:var(--hz-atlas); background-repeat:no-repeat; }
+.hj-ga{ position:absolute; background-image:var(--hz-atlas); background-repeat:no-repeat; }
+.hj-sp{ display:block; flex:none; }
+.hj-fb{ display:block; flex:none; font-family:Georgia,'Times New Roman',serif; font-style:italic; font-weight:700; color:#14213d; text-shadow:0 0 2px #fbf1de,0 0 2px #fbf1de,0 0 3px #fbf1de; }
+.hj-plain{ font-family:Georgia,'Times New Roman',serif; font-style:italic; font-weight:700; color:#14213d; text-align:center; line-height:1.25; padding:0 8px; }
+/* el pie real del Motor queda por encima de la hoja: el botón Confirmar real lleva la pieza dibujada y el rótulo escrito va encima */
+html.pdp-hoja-on #screen-exercise .exercise-header{ visibility:hidden; }
+html.pdp-hoja-on #screen-exercise .exercise-footer{ z-index:50; }
+html.pdp-hoja-on #screen-exercise #confirm-btn#confirm-btn{ background:var(--hz-btn) 50% 50%/100% 100% no-repeat !important; border:0 !important; box-shadow:none !important; color:transparent !important; text-shadow:none !important; border-radius:0 !important; padding:0 !important; min-height:0 !important; flex:0 0 auto; margin-left:auto; margin-right:0; width:min(calc(100% - 96px),330px); aspect-ratio:644/177; filter:none; transition:none; }
+html.pdp-hoja-on #screen-exercise #confirm-btn#confirm-btn::after, html.pdp-hoja-on #screen-exercise #confirm-btn#confirm-btn::before{ display:none !important; }
+html.pdp-hoja-on #screen-exercise #confirm-btn#confirm-btn:disabled{ opacity:1; filter:saturate(.5) brightness(1.03); }
+html.pdp-hoja-on #screen-exercise #confirm-btn#confirm-btn:active{ transform:translateY(2px); }
+.hj-btn-label{ position:absolute; z-index:3; pointer-events:none; display:flex; align-items:center; justify-content:center; transition:opacity .25s; }
+.hj-btn-label .hj-tx{ position:static; width:100%; height:100%; }
+.hj-btn-label.hj-off{ opacity:.55; }
+html.hj-arrugando #screen-exercise .exercise-footer, html.hj-arrugando #feedback-zone{ visibility:hidden; }
+html.pdp-hoja-on #screen-exercise #exercise-question, html.pdp-hoja-on #screen-exercise #exercise-input-area, html.pdp-hoja-on #screen-exercise #exercise-image-zone, html.pdp-hoja-on #screen-exercise #workspace-zone, html.pdp-hoja-on #screen-exercise #tutor-zone{ visibility:hidden; }   /* siguen en el DOM (la hoja les hace click), solo no se ven */
+html.hj-arrugando #hoja-ej .hj-comp{ display:none; }
+/* 🧪 «Hoja · piezas» (2026-11-05): alterna los juegos de piezas del Director. Solo cambia qué imagen usan la tarjeta y las opciones. */
+html[data-var-hoja-piezas="mixto"] #hoja-ej, html[data-var-hoja-piezas="ilustrado"] #hoja-ej{ --hz-oa:var(--hz-i-op); --hz-oc:var(--hz-i-op); --hz-od:var(--hz-i-op); --hz-ob:var(--hz-i-sel); }
+html[data-var-hoja-piezas="ilustrado"] #hoja-ej{ --hz-card:var(--hz-i-card); }
+html[data-var-hoja-piezas="realista"] #hoja-ej{ --hz-card:var(--hz-r-card); --hz-oa:var(--hz-r-op); --hz-oc:var(--hz-r-op); --hz-od:var(--hz-r-op); --hz-ob:var(--hz-r-sel); }
+/* 🧪 «Hoja · íconos» (2026-11-05): el segundo kit de íconos del Director (con costuras). */
+html[data-var-hoja-iconos="2"] #hoja-ej{ --hz-ico-x:var(--hz-ico2-x); --hz-ico-son:var(--hz-ico2-son); --hz-ico-check:var(--hz-ico2-check); }
+/* La brújula del Director reemplaza al Spike viejo del pie: mismo botón de ayuda (toggleTutorHelp), mismos globos. SOLO cambia la imagen (`content`): el tamaño, el halo, el mareo, el balanceo y el efecto de subir con la ayuda son los del Motor y NO se tocan (Director, 2026-11-05: «tenía efectos, saltaba, todo; ojo, ya estaban previos»). El pie se corre 14 px a la derecha para que no quede sobre el anillado de la hoja. */
+html.pdp-hoja-on #exercise-tutor-strip-icon{ content:var(--hz-bru); }   /* sin `#screen-exercise`: al abrir la ayuda el botón sube y el Motor lo muda de lugar; así la brújula también reemplaza a Spike ahí */
+html.pdp-hoja-on #screen-exercise #exercise-tutor-strip{ margin-left:14px; }
+/* 🧪 «Hoja · brújula» (2026-11-05): las 20 brújulas del Director reemplazan a Spike en el pie y en la ayuda. */
+html.pdp-hoja-on[data-var-hoja-brujula="1"] #exercise-tutor-strip-icon{ content:var(--hz-bru-01); }
+html.pdp-hoja-on[data-var-hoja-brujula="2"] #exercise-tutor-strip-icon{ content:var(--hz-bru-02); }
+html.pdp-hoja-on[data-var-hoja-brujula="3"] #exercise-tutor-strip-icon{ content:var(--hz-bru-03); }
+html.pdp-hoja-on[data-var-hoja-brujula="4"] #exercise-tutor-strip-icon{ content:var(--hz-bru-04); }
+html.pdp-hoja-on[data-var-hoja-brujula="5"] #exercise-tutor-strip-icon{ content:var(--hz-bru-05); }
+html.pdp-hoja-on[data-var-hoja-brujula="6"] #exercise-tutor-strip-icon{ content:var(--hz-bru-06); }
+html.pdp-hoja-on[data-var-hoja-brujula="7"] #exercise-tutor-strip-icon{ content:var(--hz-bru-07); }
+html.pdp-hoja-on[data-var-hoja-brujula="8"] #exercise-tutor-strip-icon{ content:var(--hz-bru-08); }
+html.pdp-hoja-on[data-var-hoja-brujula="9"] #exercise-tutor-strip-icon{ content:var(--hz-bru-09); }
+html.pdp-hoja-on[data-var-hoja-brujula="10"] #exercise-tutor-strip-icon{ content:var(--hz-bru-10); }
+html.pdp-hoja-on[data-var-hoja-brujula="11"] #exercise-tutor-strip-icon{ content:var(--hz-bru-11); }
+html.pdp-hoja-on[data-var-hoja-brujula="12"] #exercise-tutor-strip-icon{ content:var(--hz-bru-12); }
+html.pdp-hoja-on[data-var-hoja-brujula="13"] #exercise-tutor-strip-icon{ content:var(--hz-bru-13); }
+html.pdp-hoja-on[data-var-hoja-brujula="14"] #exercise-tutor-strip-icon{ content:var(--hz-bru-14); }
+html.pdp-hoja-on[data-var-hoja-brujula="15"] #exercise-tutor-strip-icon{ content:var(--hz-bru-15); }
+html.pdp-hoja-on[data-var-hoja-brujula="16"] #exercise-tutor-strip-icon{ content:var(--hz-bru-16); }
+html.pdp-hoja-on[data-var-hoja-brujula="17"] #exercise-tutor-strip-icon{ content:var(--hz-bru-17); }
+html.pdp-hoja-on[data-var-hoja-brujula="18"] #exercise-tutor-strip-icon{ content:var(--hz-bru-18); }
+html.pdp-hoja-on[data-var-hoja-brujula="19"] #exercise-tutor-strip-icon{ content:var(--hz-bru-19); }
+html.pdp-hoja-on[data-var-hoja-brujula="20"] #exercise-tutor-strip-icon{ content:var(--hz-bru-20); }
+/* Carteles de mensaje con la hoja activa (2026-11-05, Director: «el globo del mensaje toca el lateral y tapa letra»): márgenes de 32 px a cada lado y, con la ayuda abierta, el cartel no se muestra (cualquier lugar le tapaba las opciones o la brújula que subió). El texto, el tiempo y el resto son los del Motor. */
+html.pdp-hoja-on #toast{ max-width:calc(100% - 64px); }
+html.pdp-hoja-on .spike-globo{ max-width:min(250px, calc(100vw - 64px)); }
+html.pdp-hoja-on:has(.exercise-tutor-strip.rising) #toast{ display:none; }
+
+/* ═══ Tipos «marco» (2026-11-05, Director: «todos los ejercicios me aparecen opción múltiple»): el ejercicio real (campo, arrastres, uniones…) queda ENCIMA de la hoja, bajo la tarjeta del enunciado, en su propia bandeja ═══ */
+html.pdp-hoja-marco #screen-exercise #exercise-input-area{ visibility:visible; }
+html.pdp-hoja-marco #screen-exercise #exercise-body{ position:relative; z-index:41; background:transparent !important; pointer-events:none; }
+html.pdp-hoja-marco #screen-exercise #exercise-input-area{ pointer-events:auto; background:var(--bg-card); border:3px solid #14213d; border-radius:26px; padding:14px; box-shadow:0 6px 0 rgba(20,33,61,.18); box-sizing:border-box; }
+
+/* HOJA-PIEZAS:FIN */
 /* ═══ Fondo de paisaje detrás de los ejercicios (2026-10-12, a pedido del Director; opcional por Unidad: APP_CONFIG.fondoEjercicios) ═══
    Sin la marca, nada cambia. Con ella: valle con castillos y cascadas (noche en oscuro, día en claro) en una capa fija detrás de la pantalla de ejercicio, suavizada de antemano (la imagen ya va desenfocada, así no hace falta un filtro CSS caro),
    con un velo del color del tema, y todo el contenido del ejercicio sobre un panel casi opaco con marco fino dorado: el paisaje se siente en los bordes pero no compite con la consigna. En las evaluaciones el velo es más denso. ═══ */
@@ -7233,6 +7468,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="pdp-assets/9af25b0a9f974d3bea6541abbabd556d.js"></script><script src="pdp-assets/109ef0b66cf5130c07938f3955dca9d4.js"></script>
+<script src="pdp-assets/4fd63cc3edd979112ed8cc5b4a0f6733.js"></script><script src="pdp-assets/dc631acac12a9dbf80883bf538619db9.js"></script>
 </body>
 </html>
