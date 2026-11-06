@@ -52,6 +52,15 @@
       "claveApp": "pdp_Galería_de_mundos",
       "total": 19,
       "icono": "pdp-assets/e1a38d81ce3c7f246d2cbd0fd851bdd5.png"
+    },
+    {
+      "id": "mat-27-perimetro-area",
+      "pagina": "vista-previa/mat-27-perimetro-area.html",
+      "titulo": "Perímetro y Área",
+      "materia": "Matemática",
+      "descripcion": "Matemática: perímetro y área. Unidad nueva con Ronnie (prueba).",
+      "claveApp": "pdp_Perímetro_y_Área",
+      "total": 4
     }
   ]
 }

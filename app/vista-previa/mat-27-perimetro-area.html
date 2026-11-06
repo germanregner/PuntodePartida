@@ -5807,7 +5807,7 @@ html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-linea
 :root:not([data-theme="dark"]) .cm-fila-tx b, :root:not([data-theme="dark"]) .cm-tarjeta-tx em{ color:#8a4a16; } :root:not([data-theme="dark"]) .cm-es{ color:#6B5B2E; }
 /* ═══ fin medios de un Concept ═══ */
 /* ATELIER-PIEZAS:INICIO (generado por Assets/atelier/inyectar_atelier.py; no editar a mano) */
-:root{--atl-top:url('../pdp-assets/bee56b417ece6006555a954312665430.webp');--atl-mid:url('../pdp-assets/8a1c296e8f1a3af5d4884d293c1cfb90.webp');--atl-bot:url('../pdp-assets/eaed6cb442c0f2902b3ff2eb407e9ad6.webp');--atl-brujula:url('../pdp-assets/b3dc4467f87209dd521336ebf987aba5.webp');--atl-hoja:url('../pdp-assets/2285241adffaad02ca97723ef1906ccd.webp');--atl-ronnie-senala:url('../pdp-assets/7d1070f94c9a1bcb48420ec5e00971a3.webp');--atl-ronnie-piensa:url('../pdp-assets/a4a40a31259cd0f1aaa415c51457e7e7.webp');--atl-ronnie-celebra:url('../pdp-assets/f8c99a649981933af9bdb9ac1384776f.webp');--atl-ronnie-desconcertado:url('../pdp-assets/15515e037a2c1f043e57407fe1710e81.webp');--atl-ronnie-sorprendido:url('../pdp-assets/34e122666e48fb814fc7bf30f0107332.webp');--atl-ronnie-idea:url('../pdp-assets/c42ef3711b9e3f7d4f4598676c408a74.webp')}
+:root{--atl-top:url('../pdp-assets/bee56b417ece6006555a954312665430.webp');--atl-mid:url('../pdp-assets/8a1c296e8f1a3af5d4884d293c1cfb90.webp');--atl-bot:url('../pdp-assets/eaed6cb442c0f2902b3ff2eb407e9ad6.webp');--atl-brujula:url('../pdp-assets/b3dc4467f87209dd521336ebf987aba5.webp');--atl-hoja:url('../pdp-assets/2285241adffaad02ca97723ef1906ccd.webp');--atl-globo:url('../pdp-assets/623ff547da80e8de568c8572ec8e436e.webp');--atl-cola:url('../pdp-assets/bd693f420530e088e3c3aaf0b4ca558f.webp');--atl-ronnie-senala:url('../pdp-assets/7d1070f94c9a1bcb48420ec5e00971a3.webp');--atl-ronnie-piensa:url('../pdp-assets/a4a40a31259cd0f1aaa415c51457e7e7.webp');--atl-ronnie-celebra:url('../pdp-assets/f8c99a649981933af9bdb9ac1384776f.webp');--atl-ronnie-desconcertado:url('../pdp-assets/15515e037a2c1f043e57407fe1710e81.webp');--atl-ronnie-sorprendido:url('../pdp-assets/34e122666e48fb814fc7bf30f0107332.webp');--atl-ronnie-idea:url('../pdp-assets/c42ef3711b9e3f7d4f4598676c408a74.webp')}
 /* ═══ Skin «Atelier» — fieltro cosido (2026-11-05, Director: kit definitivo de Matemática, MAT-27) ═══
    Capa: Motor Base (presentación). Se enciende con APP_CONFIG.skin:'atelier' (o 🧪 «Skin»). Viste los componentes REALES de la pantalla de ejercicio; no corrige nada.
    Unidad de medida: --u = ancho de pantalla (máx. 480 px) / 1086, la del lienzo de las láminas del Director. */
@@ -5896,6 +5896,66 @@ html.pdp-atl-on #screen-exercise .exercise-footer{ padding-left:calc(var(--u) * 
 
 /* mientras la hoja vieja se arranca, la de abajo queda en blanco: nada del ejercicio anterior asoma detrás */
 html.pdp-atl-on.atl-pasando body > :not(#atl-transicion) #screen-exercise #exercise-body, html.pdp-atl-on.atl-pasando body > :not(#atl-transicion) #screen-exercise .exercise-footer, html.pdp-atl-on.atl-pasando body > :not(#atl-transicion) #screen-exercise #feedback-zone, html.pdp-atl-on.atl-pasando body > :not(#atl-transicion) #atl-root .atl-stage > :not(.atl-bg){ visibility:hidden !important; }   /* la copia (#atl-transicion) conserva todo: solo se oculta la pantalla real */
+
+/* ── SIN HOJA (2026-11-06, Director: «vamos con la 2»): la pantalla sin el cuaderno; los componentes sueltos sobre el fondo de la app y casi a todo el ancho.
+   Se activa con APP_CONFIG.atelier.hoja:false (o 🧪 «Skin · hoja»). Sin hoja no hay nada que arrancar: el avance usa la transición normal del Motor. ── */
+html.pdp-atl-on.pdp-atl-sinhoja #atl-root .atl-bg{ display:none; }
+html.pdp-atl-on.pdp-atl-sinhoja #screen-exercise{ background:var(--bg-base,#efe6d6) !important; }
+html.pdp-atl-on.pdp-atl-sinhoja #screen-exercise #exercise-body{ padding-left:calc(var(--u) * 56); padding-right:calc(var(--u) * 56); }
+html.pdp-atl-on.pdp-atl-sinhoja #screen-exercise .exercise-footer{ padding-left:calc(var(--u) * 56); padding-right:calc(var(--u) * 56); padding-bottom:calc(var(--u) * 40 + var(--safe-bottom,0px)); }
+
+/* ── disposición «Ronnie arriba» (2026-11-06, Director: la pantalla 2 de L01): Ronnie y su globo (con la explicación) ARRIBA; después la figura, la consigna y las respuestas en columna.
+   Es una disposición PROPIA, por ejercicio (`layout:'ronnie-arriba'`); la de siempre (Ronnie abajo, respuestas en fila) sigue siendo la de la pantalla 1. ── */
+html.pdp-atl-on.pdp-atl-arriba #atl-root .atl-ronnie{ top:calc(var(--u)*252); bottom:auto; }
+html.pdp-atl-on.pdp-atl-arriba #atl-root .atl-globo{ top:calc(var(--u)*268); bottom:auto; }
+html.pdp-atl-on.pdp-atl-arriba #atl-root .atl-globo{ left:calc(var(--u)*410); width:calc(var(--u)*620); font-size:calc(var(--u)*33); line-height:1.25; padding:calc(var(--u)*26) calc(var(--u)*40); }
+html.pdp-atl-on.pdp-atl-arriba #atl-root .atl-globo::before{ top:calc(var(--u)*96); bottom:auto; }
+html.pdp-atl-on.pdp-atl-arriba #screen-exercise #exercise-body{ justify-content:flex-start; padding-top:calc(var(--u) * 640); padding-bottom:calc(var(--exercise-footer-h,115px) + var(--u) * 30) !important; }
+html.pdp-atl-on.pdp-atl-arriba #screen-exercise #exercise-body > *{ order:3; }
+html.pdp-atl-on.pdp-atl-arriba #screen-exercise #exercise-image-zone{ order:1; min-height:0; }
+html.pdp-atl-on.pdp-atl-arriba #screen-exercise #exercise-question{ order:2; }
+html.pdp-atl-on.pdp-atl-arriba #screen-exercise .options-list, html.pdp-atl-on.pdp-atl-arriba #screen-exercise .tf-row{ flex-direction:column; flex-wrap:nowrap; gap:calc(var(--u)*24); }
+html.pdp-atl-on.pdp-atl-arriba #screen-exercise :is(.option-btn,.tf-btn){ flex:0 0 auto; width:100%; }
+#atl-root .atl-globo p{ margin:0; } #atl-root .atl-globo p + p{ margin-top:.5em; }
+
+/* ── reparto vertical (2026-11-06, Director: «quedaron mal distribuidos los componentes»): el espacio que sobra se reparte ENTRE los componentes, no se junta abajo ── */
+html.pdp-atl-on #screen-exercise #exercise-body{ justify-content:space-evenly; }
+html.pdp-atl-on.pdp-atl-arriba #screen-exercise #exercise-body{ justify-content:space-evenly; }
+html.pdp-atl-on #screen-exercise #exercise-body > *{ margin-top:0; margin-bottom:0 !important; }
+html.pdp-atl-on #screen-exercise #exercise-image-zone:not(.hidden){ min-height:calc(var(--u) * 470); }
+html.pdp-atl-on.pdp-atl-arriba #screen-exercise #exercise-image-zone:not(.hidden){ min-height:calc(var(--u) * 430); }
+/* la zona de la figura (el papel cuadriculado) crece y absorbe el espacio libre, así consigna y respuestas no quedan flotando lejos entre sí */
+html.pdp-atl-on #screen-exercise #exercise-image-zone:not(.hidden){ flex:1 1 auto; max-height:calc(var(--u) * 540); }
+html.pdp-atl-on.pdp-atl-arriba #screen-exercise #exercise-image-zone:not(.hidden){ max-height:calc(var(--u) * 540); }
+html.pdp-atl-on #screen-exercise #exercise-body{ gap:calc(var(--u) * 34); }
+
+/* ── componentes como en la imagen de la pantalla 2 (2026-11-06, Director: «no quedó igual, los componentes son diferentes») ──
+   respuestas: las del kit (se quedan como estaban; el Director prefirió las propias);
+   consigna en una sola línea; papel de la figura más bajo. */
+html.pdp-atl-on #screen-exercise #exercise-question{ font-size:calc(var(--u)*40); padding:calc(var(--u)*30) calc(var(--u)*34); white-space:normal; }
+html.pdp-atl-on.pdp-atl-arriba #screen-exercise #exercise-image-zone:not(.hidden){ max-height:calc(var(--u) * 470); }
+
+/* ── el globo de Ronnie como en la imagen de la pantalla 2 (2026-11-06, Director: «el globo de Ronnie… es otro»): globo de diálogo con COLA que apunta a Ronnie, borde dorado y esquinas muy redondas ── */
+#atl-root .atl-globo::before{ content:''; position:absolute; z-index:-1; left:calc(var(--u)*-62); bottom:calc(var(--u)*40); top:auto; width:calc(var(--u)*78); height:calc(var(--u)*64); background:#D8A957; clip-path:polygon(100% 0,0 74%,100% 100%); }
+#atl-root .atl-globo::after{ content:''; position:absolute; z-index:0; left:calc(var(--u)*-50); bottom:calc(var(--u)*44); width:calc(var(--u)*68); height:calc(var(--u)*54); background:#FBEBC0; clip-path:polygon(100% 0,0 74%,100% 100%); pointer-events:none; }
+html.pdp-atl-on.pdp-atl-arriba #atl-root .atl-globo::before{ top:auto; bottom:calc(var(--u)*40); }
+html.pdp-atl-on.pdp-atl-arriba #atl-root .atl-globo::after{ bottom:calc(var(--u)*44); }
+#atl-root .atl-globo .atl-nube{ border-radius:calc(var(--u)*76); border-width:calc(var(--u)*4); }
+#atl-root .atl-globo span{ position:relative; z-index:1; }
+
+/* el aviso de arriba (saludo de Ronnie, rachas, hitos) con el mismo estilo que el globo de Ronnie: crema, borde dorado grueso, esquinas redondas (2026-11-06) */
+html.pdp-atl-on #milestone-banner{ background:#FBEBC0; border:calc(var(--u)*4) solid #D8A957; border-radius:calc(var(--u)*70); box-shadow:0 calc(var(--u)*5) 0 rgba(150,100,40,.28); }
+html.pdp-atl-on #milestone-banner-text{ color:var(--atl-tinta); font-weight:800; }
+
+/* ── EL globo de Ronnie: el arte del Director (globo de diálogo con cola), no uno dibujado en código (2026-11-06, «el globo… lo hiciste vos»).
+   Cuerpo = border-image de 9 cortes (se estira con el texto); la cola es una pieza aparte, anclada abajo a la izquierda. ── */
+#atl-root .atl-globo{ box-sizing:border-box; border:calc(var(--u)*52) solid transparent; border-image:var(--atl-globo) 100 fill / calc(var(--u)*52) stretch; padding:0 calc(var(--u)*6); min-height:0; background:none; filter:none; }
+#atl-root .atl-globo .atl-nube{ display:none; }
+#atl-root .atl-globo::before{ content:''; position:absolute; z-index:0; left:calc(var(--u)*-75); bottom:calc(var(--u)*-17); top:auto; width:calc(var(--u)*40); height:calc(var(--u)*68); background:var(--atl-cola) 0 0/100% 100% no-repeat; clip-path:none; border:0; }
+#atl-root .atl-globo::after{ display:none; }
+html.pdp-atl-on.pdp-atl-arriba #atl-root .atl-globo{ padding:0 calc(var(--u)*6); }
+html.pdp-atl-on.pdp-atl-arriba #atl-root .atl-globo::before{ left:calc(var(--u)*-75); bottom:calc(var(--u)*-17); top:auto; }
+html.pdp-atl-on.pdp-atl-arriba #atl-root .atl-globo::after{ display:none; }
 
 /* ATELIER-PIEZAS:FIN */
 /* HOJA-PIEZAS:INICIO (generado por Assets/piezas-hoja/inyectar_en_motor.py; no editar a mano) */
@@ -7408,6 +7468,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/bbe840745243509490a545f7ce1ea491.js"></script><script src="../pdp-assets/f9587dc3ecbd992962c6e91e491c39f7.js"></script>
+<script src="../pdp-assets/27d43ae37a9c5f71f0561dbf9266e581.js"></script><script src="../pdp-assets/294e355b9e39fe7dc7b0e6014d8d1269.js"></script>
 </body>
 </html>
