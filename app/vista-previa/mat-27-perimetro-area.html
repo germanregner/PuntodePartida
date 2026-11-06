@@ -932,6 +932,141 @@ textarea.text-input { min-height: 110px; }
 .cnt-confirm-input.correct { border-color: var(--success); background: var(--success-light); color: var(--success); }
 .cnt-confirm-input.wrong { border-color: var(--warning); background: var(--warning-light); color: var(--warning); }
 
+/* superficie (Gate de Motor 2026-11-06, CONTRATO_SUPERFICIE_v0.2) — solo var(--*); error en ámbar (nunca rojo); estado por forma y rótulo, no solo por color */
+.sup-wrap { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 6px 0; width: 100%; }
+.sup-grilla-wrap { display: flex; flex-direction: column; align-items: center; gap: 6px; max-width: 100%; }
+.sup-titulo { font-size: 13px; font-weight: 800; color: var(--text-secondary); }
+.sup-grilla { --sup-cell: clamp(28px, calc((min(100vw, 480px) - 92px) / var(--sup-cols, 6)), 52px); display: grid; grid-template-columns: repeat(var(--sup-cols, 6), var(--sup-cell)); grid-auto-rows: var(--sup-cell); gap: 0; padding: 6px; border-radius: var(--radius-md); background: var(--bg-section); touch-action: manipulation; max-width: 100%; box-sizing: content-box; }
+.sup-celda { position: relative; isolation: isolate; display: flex; align-items: center; justify-content: center; border: 0; padding: 0; min-width: 0; background: var(--bg-card); box-shadow: inset 0 0 0 1px var(--border); font: 800 13px var(--font); color: var(--text-primary); cursor: default; }
+button.sup-celda { cursor: pointer; }
+.sup-fig { background: var(--primary-light); box-shadow: inset 0 0 0 1.5px var(--primary); }
+.sup-p::before { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: 16%; background: var(--success); border: 2px solid color-mix(in srgb, var(--success) 55%, #000); box-sizing: border-box; }
+.sup-p { color: #fff; text-shadow: 0 1px 2px rgba(0, 0, 0, .6); }
+.sup-pp::before { background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .32) 0 4px, rgba(0, 0, 0, 0) 4px 8px), var(--success); }
+.sup-hueco { background: var(--warning-light); box-shadow: inset 0 0 0 2px var(--warning); color: var(--warning-text); }
+.sup-doble::before { box-shadow: inset 0 0 0 3px var(--warning); }
+.sup-fuera::before { box-shadow: inset 0 0 0 3px var(--warning); }
+.sup-marca { background: var(--warning-light); box-shadow: inset 0 0 0 2px var(--warning); color: var(--warning-text); }
+.sup-celda:focus-visible { outline: 3px solid var(--border-focus); outline-offset: -2px; z-index: 2; }
+/* superponer: A (fija), B (la que se mueve) y AB (coinciden) se distinguen por letra y trama */
+.sup-sA  { background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .32) 0 4px, rgba(0, 0, 0, 0) 4px 8px), var(--success); color: #fff; box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--success) 55%, #000); }
+.sup-sB  { background: var(--success); color: #fff; box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--success) 55%, #000); }
+.sup-sAB { background: repeating-linear-gradient(45deg, rgba(0, 0, 0, .32) 0 4px, rgba(0, 0, 0, 0) 4px 8px), var(--success); color: #fff; outline: 3px solid var(--text-primary); outline-offset: -3px; }
+.sup-leyenda { font-size: 12px; font-weight: 700; color: var(--text-muted); text-align: center; }
+/* region: el contorno es UN objetivo */
+.sup-contorno { position: absolute; left: 6px; top: 6px; width: calc(100% - 12px); height: calc(100% - 12px); pointer-events: none; overflow: visible; }
+.sup-borde-vis { fill: none; stroke: var(--primary-dark); stroke-width: 3; vector-effect: non-scaling-stroke; stroke-linecap: square; }
+.sup-borde-hit { fill: none; stroke: transparent; stroke-width: 26; vector-effect: non-scaling-stroke; pointer-events: stroke; cursor: pointer; }
+.sel-borde .sup-borde-vis { stroke: var(--accent-blue); stroke-width: 7; }
+.sel-interior .sup-r-int, .sel-exterior .sup-r-ext { outline: 3px solid var(--accent-blue); outline-offset: -3px; }
+.sup-regiones { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.sup-regiones:focus-within { position: static; width: auto; height: auto; overflow: visible; clip: auto; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.sup-reg-op { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-weight: 700; color: var(--text-primary); }
+.sup-reg-op.rejected { opacity: .45; }
+/* herramientas, contadores, opciones, flechas */
+.sup-herr { display: flex; gap: 8px; }
+.sup-herr-b { min-height: 44px; min-width: 88px; padding: 0 16px; border-radius: var(--radius-pill); border: 2px solid var(--border); background: var(--bg-card); color: var(--text-primary); font: 800 14px var(--font); cursor: pointer; touch-action: manipulation; }
+.sup-herr-b.on { border-color: var(--accent-blue); background: var(--accent-blue-tint); color: var(--accent-blue); }
+.sup-contador { font-size: 14px; font-weight: 800; color: var(--primary); text-align: center; min-height: 20px; }
+.sup-opciones { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.sup-op { min-height: 44px; min-width: 56px; padding: 6px 16px; border-radius: var(--radius-pill); border: 2px solid var(--border); background: var(--bg-card); color: var(--text-primary); font: 800 16px var(--font); cursor: pointer; touch-action: manipulation; }
+.sup-op4 .sup-op { font-size: 14px; flex: 1 1 40%; }
+.sup-op.sel { border-color: var(--accent-blue); background: var(--accent-blue-tint); color: var(--accent-blue); }
+.sup-op.rejected, .sup-op:disabled { opacity: .45; text-decoration: line-through; cursor: default; }
+.sup-flechas { display: grid; grid-template-columns: repeat(3, 48px); grid-template-rows: repeat(2, 48px); grid-template-areas: ". n ." "o s e"; gap: 6px; justify-content: center; }
+.sup-flecha { min-width: 44px; min-height: 44px; border-radius: 12px; border: 2px solid var(--border); background: var(--bg-card); color: var(--text-primary); font: 900 20px var(--font); cursor: pointer; touch-action: manipulation; }
+.sup-fN { grid-area: n; } .sup-fS { grid-area: s; } .sup-fO { grid-area: o; } .sup-fE { grid-area: e; }
+.reveal-progreso { margin-top: 4px; font-size: 12px; font-weight: 700; color: var(--text-muted); }
+/* arrastre: pieza de la bandeja, fantasma que sigue al puntero y celda de destino */
+.sup-fuente { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 4px 12px; border: 2px dashed var(--border); border-radius: var(--radius-md); background: var(--bg-card); touch-action: none; user-select: none; -webkit-user-select: none; cursor: grab; max-width: 100%; }
+.sup-fuente-pieza { flex: none; width: var(--sup-pieza, 44px); height: var(--sup-pieza, 44px); border-radius: 16%; background: var(--success); border: 2px solid color-mix(in srgb, var(--success) 55%, #000); box-sizing: border-box; }
+.sup-fuente-txt { font-size: 12px; font-weight: 700; color: var(--text-muted); line-height: 1.25; }
+.sup-fantasma { position: fixed; z-index: 99999; pointer-events: none; transform: translate(-50%, -135%); border-radius: 16%; background: var(--success); border: 2px solid color-mix(in srgb, var(--success) 55%, #000); box-sizing: border-box; opacity: .92; box-shadow: var(--shadow-2); }
+.sup-destino { outline: 3px dashed var(--accent-blue); outline-offset: -3px; z-index: 2; }
+.sup-p, .sup-sB, .sup-sAB { touch-action: none; }
+button.sup-p { cursor: grab; }
+.sup-sB, .sup-sAB { cursor: grab; }
+
+/* superficie · kit del Director: imágenes (generado por aplicar_gate.py) */
+:root{--sup-k-papel:url(../pdp-assets/74e9e9ed8693d980d06cc3ab87fe7401.webp);--sup-k-verde:url(../pdp-assets/7aa25f4433e7a934bd8a088f8aeec6b9.webp);--sup-k-verde-clara:url(data:image/webp;base64,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);--sup-k-hueco:url(../pdp-assets/7838917f9113d7ea42fae4af98206135.webp);--sup-k-pverde:url(../pdp-assets/d2350c53088f65638c6288f3b562db98.webp);--sup-k-crema:url(../pdp-assets/2eea94651e5ee32ca90b574e2847a023.webp);--sup-k-lila-chica:url(../pdp-assets/b55df1112319e94fd3ef71f51c5da4d4.webp);--sup-k-menor:url(../pdp-assets/0be9d37fb521c70d1801c64e1cf99f88.webp);--sup-k-igual:url(../pdp-assets/b189aa31c813f911af1feb9e25a792b1.webp);--sup-k-mayor:url(../pdp-assets/5aaabf8746efeee708e099a5dc662162.webp);--sup-k-menor-sel:url(../pdp-assets/9d90af3e0e574c67d46eca84570fe107.webp);--sup-k-igual-sel:url(../pdp-assets/0bcaab747a32a8a8a904d3fd3db3bd0a.webp);--sup-k-mayor-sel:url(../pdp-assets/c2ce2ec6e940304bffa6e72ad61ca296.webp);--sup-k-cinta:url(../pdp-assets/d857b605b9ba6104b4ef93a5e9f3a25a.webp);}
+/* ESTILO-2026-11-06 */
+/* superficie vestida con el kit del Director (lámina con transparencia real, 2026-11-06). Solo con el skin Atelier encendido: sin él, `superficie` conserva su aspecto base (superficie.css).
+   Las piezas se usan TAL CUAL (Assets/atelier/superficie/*.webp, cortadas de la lámina sin retocar). Las variables --sup-k-* con las imágenes las inyecta aplicar_gate.py.
+   El estado sigue sin depender solo del color: letras (A / B / AB), ○, ✕ y ×n se conservan. El error sigue en ámbar. */
+html.pdp-atl-on .sup-grilla { background: var(--sup-k-papel) center / 100% 100% no-repeat; padding: 10px; border-radius: 0; }
+html.pdp-atl-on .sup-celda { background: transparent; box-shadow: inset 0 0 0 1.5px rgba(35, 105, 200, .85); color: var(--text-primary); }
+html.pdp-atl-on .sup-fig { background: var(--sup-k-hueco) 0 0 / 100% 100% no-repeat; box-shadow: inset 0 0 0 2px rgba(25, 90, 190, .95); }
+html.pdp-atl-on .sup-fig.sup-p { background: none; }
+html.pdp-atl-on .sup-p::before { inset: 0; background: var(--sup-k-verde) 0 0 / 100% 100% no-repeat; border: 0; border-radius: 0; }   /* la pieza ocupa EXACTAMENTE su celda */
+html.pdp-atl-on .sup-pp::before { background: repeating-linear-gradient(45deg, rgba(8, 60, 8, .42) 0 4px, rgba(8, 60, 8, 0) 4px 8px), var(--sup-k-verde) 0 0 / 100% 100% no-repeat; background-size: auto, 100% 100%; background-repeat: repeat, no-repeat; border-radius: 12%; }
+html.pdp-atl-on .sup-p { color: #fff; text-shadow: 0 1px 2px rgba(0, 0, 0, .65); }
+html.pdp-atl-on .sup-fuera::before, html.pdp-atl-on .sup-doble::before { box-shadow: inset 0 0 0 3px var(--warning); border-radius: 12%; }   /* error / sobrante: aro ámbar, la pieza sigue verde */
+html.pdp-atl-on .sup-doble { outline: 0; }
+html.pdp-atl-on .sup-hueco { background: var(--sup-k-hueco) 0 0 / 100% 100% no-repeat; box-shadow: inset 0 0 0 3px var(--warning); color: var(--warning-text); }
+html.pdp-atl-on .sup-marca { background-color: var(--warning-light); box-shadow: inset 0 0 0 3px var(--warning); color: var(--warning-text); }
+/* superponer: todo verde. A (fija) = verde con trama diagonal; B (la que se mueve) = verde sólido; AB (coinciden) = trama y aro oscuro. Además llevan la letra. */
+html.pdp-atl-on .sup-sA, html.pdp-atl-on .sup-sB, html.pdp-atl-on .sup-sAB { background: transparent; color: #fff; text-shadow: 0 1px 2px rgba(0, 0, 0, .65); }
+html.pdp-atl-on .sup-sA::before, html.pdp-atl-on .sup-sB::before, html.pdp-atl-on .sup-sAB::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--sup-k-verde) 0 0 / 100% 100% no-repeat; }
+html.pdp-atl-on .sup-sA::before, html.pdp-atl-on .sup-sAB::before { background: repeating-linear-gradient(45deg, rgba(8, 60, 8, .42) 0 4px, rgba(8, 60, 8, 0) 4px 8px), var(--sup-k-verde) 0 0 / 100% 100% no-repeat; background-size: auto, 100% 100%; background-repeat: repeat, no-repeat; border-radius: 12%; }
+html.pdp-atl-on .sup-sAB { outline: 3px solid var(--text-primary); outline-offset: -3px; }
+html.pdp-atl-on .sup-r-int { background: var(--sup-k-verde-clara) 0 0 / 100% 100% no-repeat; }
+/* pestaña «Figura A / B» (píldora lila chica del kit, apoyada sobre el borde del papel). Alto fijo = dos veces el borde: solo las dos tapas, sin franja */
+html.pdp-atl-on .sup-titulo { display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; height: 36px; padding: 0; border-style: solid; border-width: 18px 24px; border-image: var(--sup-k-lila-chica) 29 fill / 18px 24px stretch; white-space: nowrap; color: var(--text-primary); font-weight: 900; font-size: 14px; position: relative; z-index: 1; margin-bottom: -18px; }
+/* contadores: cinta crema cosida; en `comparar`, rótulo y número aparte */
+html.pdp-atl-on .sup-contador { border-style: solid; border-width: 14px 24px; border-image: var(--sup-k-cinta) 41 fill / 14px 24px stretch; padding: 0; color: var(--text-primary); font-weight: 800; }
+/* píldoras: crema; la elegida o activa, verde (la del kit). Alto fijo = dos veces el borde: solo se dibujan las dos tapas y el medio estirado, sin franja */
+html.pdp-atl-on .sup-herr-b, html.pdp-atl-on .sup-op, html.pdp-atl-on .sup-flecha { border-style: solid; border-width: 27px 24px; border-image: var(--sup-k-crema) 37 fill / 27px 24px stretch; background: none; box-sizing: border-box; padding: 0; height: 54px; min-height: 54px; min-width: 72px; color: var(--text-primary); display: inline-flex; align-items: center; justify-content: center; text-align: center; line-height: 1.1; font-size: 15px; }
+html.pdp-atl-on .sup-herr-b.on, html.pdp-atl-on .sup-op.sel { border-image: var(--sup-k-pverde) 39 fill / 27px 24px stretch; color: #17400a; }
+html.pdp-atl-on .sup-op4 .sup-op { flex: 1 1 42%; font-size: 13px; }
+html.pdp-atl-on .sup-op.rejected, html.pdp-atl-on .sup-op:disabled { opacity: .5; }
+/* «<», «=» y «>»: los tres botones redondos del kit (el signo está dibujado; el texto queda para el lector de pantalla) */
+html.pdp-atl-on .sup-op[data-v="<"], html.pdp-atl-on .sup-op[data-v="="], html.pdp-atl-on .sup-op[data-v=">"] { border: 0; border-image: none; width: 74px; height: 58px; min-height: 58px; padding: 0; color: transparent; font-size: 0; background: var(--sup-k-menor) center / 100% 100% no-repeat; }
+html.pdp-atl-on .sup-op[data-v="="] { background-image: var(--sup-k-igual); }
+html.pdp-atl-on .sup-op[data-v=">"] { background-image: var(--sup-k-mayor); }
+html.pdp-atl-on .sup-op[data-v="<"].sel { background-image: var(--sup-k-menor-sel); background-size: 104% 104%; }
+html.pdp-atl-on .sup-op[data-v="="].sel { background-image: var(--sup-k-igual-sel); background-size: 104% 104%; }
+html.pdp-atl-on .sup-op[data-v=">"].sel { background-image: var(--sup-k-mayor-sel); background-size: 104% 104%; }
+/* bandeja y fantasma del arrastre con la pieza verde del kit */
+html.pdp-atl-on .sup-fuente { border: 0; background: none; padding: 0 4px; min-height: 0; }
+html.pdp-atl-on .sup-fuente-pieza { width: var(--sup-pieza, 44px); height: var(--sup-pieza, 44px); border: 0; border-radius: 0; background: var(--sup-k-verde) 0 0 / 100% 100% no-repeat; }
+html.pdp-atl-on .sup-fuente-txt { font-size: 12px; font-weight: 800; color: var(--text-primary); }
+html.pdp-atl-on .sup-fantasma { background: var(--sup-k-verde) 0 0 / 100% 100% no-repeat; border: 0; border-radius: 0; box-shadow: none; filter: drop-shadow(0 5px 6px rgba(0, 0, 0, .35)); }
+html.pdp-atl-on .sup-destino { outline-color: #7bc400; }
+html.pdp-atl-on .sup-leyenda { color: var(--text-primary); }
+
+/* compactación bajo el skin (medido: el contenido debe entrar entre el encabezado y Confirmar) */
+html.pdp-atl-on .sup-wrap { gap: 8px; padding: 2px 0; }
+html.pdp-atl-on .sup-grilla { padding: 8px; }
+html.pdp-atl-on .sup-flechas { grid-template-columns: repeat(4, 64px); grid-template-rows: 54px; grid-template-areas: "o n s e"; gap: 6px; }
+html.pdp-atl-on .sup-wrap[data-modo="superponer"] .sup-leyenda { font-size: 11px; }
+html.pdp-atl-on .sup-wrap[data-modo="superponer"] .sup-contador { border-width: 8px 20px; border-image-width: 8px 20px; font-size: 12px; min-height: 0; }
+/* comparar: la fila de «<  =  >» se corre a la derecha para no quedar debajo de Ronnie (el skin lo pone abajo a la izquierda) */
+html.pdp-atl-on .sup-wrap[data-modo="comparar"] .sup-opciones { flex-wrap: nowrap; gap: 4px; padding-left: 112px; }
+html.pdp-atl-on .sup-wrap[data-modo="comparar"] .sup-op { width: 60px; min-width: 60px; height: 50px; min-height: 50px; }
+/* compactación automática (supAjustar): cada paso incluye los anteriores. Se aplica solo si el contenido pisaría a Ronnie o a su globo. Las celdas tocables NO se achican: el piso es 44 px. */
+html.pdp-atl-on .sup-wrap[data-compacto="1"], html.pdp-atl-on .sup-wrap[data-compacto="2"], html.pdp-atl-on .sup-wrap[data-compacto="3"], html.pdp-atl-on .sup-wrap[data-compacto="4"], html.pdp-atl-on .sup-wrap[data-compacto="5"] { gap: 3px; padding: 0; }
+html.pdp-atl-on .sup-wrap[data-compacto="1"] .sup-grilla, html.pdp-atl-on .sup-wrap[data-compacto="2"] .sup-grilla, html.pdp-atl-on .sup-wrap[data-compacto="3"] .sup-grilla, html.pdp-atl-on .sup-wrap[data-compacto="4"] .sup-grilla, html.pdp-atl-on .sup-wrap[data-compacto="5"] .sup-grilla { padding: 5px; }
+html.pdp-atl-on .sup-wrap[data-compacto="3"] .sup-herr-b, html.pdp-atl-on .sup-wrap[data-compacto="4"] .sup-herr-b, html.pdp-atl-on .sup-wrap[data-compacto="5"] .sup-herr-b,
+html.pdp-atl-on .sup-wrap[data-compacto="3"] .sup-op, html.pdp-atl-on .sup-wrap[data-compacto="4"] .sup-op, html.pdp-atl-on .sup-wrap[data-compacto="5"] .sup-op,
+html.pdp-atl-on .sup-wrap[data-compacto="3"] .sup-flecha, html.pdp-atl-on .sup-wrap[data-compacto="4"] .sup-flecha, html.pdp-atl-on .sup-wrap[data-compacto="5"] .sup-flecha { height: 46px; min-height: 46px; border-width: 23px 22px; border-image-width: 23px 22px; }
+html.pdp-atl-on .sup-wrap[data-compacto="4"] .sup-leyenda, html.pdp-atl-on .sup-wrap[data-compacto="5"] .sup-leyenda { display: none; }
+html.pdp-atl-on .sup-wrap[data-compacto="4"] .sup-fuente-txt, html.pdp-atl-on .sup-wrap[data-compacto="5"] .sup-fuente-txt { display: none; }
+html.pdp-atl-on .sup-wrap[data-compacto="5"] .sup-contador { display: none; }
+.sup-cuerpo { display: flex; flex-direction: column; align-items: center; gap: inherit; width: 100%; }
+/* más compactación (el piso táctil de 44 px no se toca): relación «<  =  >» y barra a 44, pestañas más bajas */
+html.pdp-atl-on .sup-wrap[data-compacto="4"][data-modo="comparar"] .sup-op, html.pdp-atl-on .sup-wrap[data-compacto="5"][data-modo="comparar"] .sup-op { height: 44px; min-height: 44px; }
+html.pdp-atl-on .sup-wrap[data-compacto="4"] .sup-herr-b, html.pdp-atl-on .sup-wrap[data-compacto="5"] .sup-herr-b { height: 44px; min-height: 44px; border-width: 22px 22px; border-image-width: 22px 22px; }
+html.pdp-atl-on .sup-wrap[data-compacto="4"] .sup-titulo, html.pdp-atl-on .sup-wrap[data-compacto="5"] .sup-titulo { height: 28px; border-width: 14px 22px; border-image-width: 14px 22px; margin-bottom: -14px; font-size: 13px; }
+/* paso 5 (último antes de desplazar): sin espacios ni relleno extra. Las celdas NO se achican: A y B miden lo mismo y nunca bajan de 44 px */
+html.pdp-atl-on .sup-wrap[data-compacto="5"], html.pdp-atl-on .sup-wrap[data-compacto="5"] .sup-cuerpo { gap: 0; }
+html.pdp-atl-on .sup-wrap[data-compacto="5"] .sup-grilla { padding: 3px; }
+/* Escala uniforme (decisión del Director, 2026-11-06): una unidad de A representa el mismo tamaño que una unidad de B. Si no entra, se desplaza solo el cuerpo de las figuras (supAjustar). */
+/* penúltimo recurso: celdas en el piso táctil (44 px), iguales en A y en B; nunca menos */
+html.pdp-atl-on .sup-wrap[data-celda-min] .sup-grilla { --sup-cell: 44px; }
+/* el bloque de figuras se desplaza: degradé al pie mientras haya más figura abajo + barra fina siempre visible */
+html.pdp-atl-on .sup-cuerpo { scrollbar-width: thin; scrollbar-color: color-mix(in srgb, var(--accent, #7c3aed) 55%, transparent) transparent; overscroll-behavior: contain; }
+html.pdp-atl-on .sup-cuerpo[data-mas="1"] { -webkit-mask-image: linear-gradient(#000 calc(100% - 30px), transparent); mask-image: linear-gradient(#000 calc(100% - 30px), transparent); }
+
 /* frac-steps */
 .frs-wrap { display:flex; flex-direction:column; align-items:center; gap:14px; padding:8px 0; width:100%; }
 .frs-step { display:flex; flex-direction:column; align-items:center; gap:10px; padding:12px 14px; background:var(--bg-section); border-radius:14px; width:100%; box-sizing:border-box; }
@@ -7468,6 +7603,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/8236b8f2b102c49fe745656db4d88bf7.js"></script><script src="../pdp-assets/75fa0ae5debf78c150a7f7348023fcf5.js"></script>
+<script src="../pdp-assets/ac35a72318b4f10ce5debc85aa7720f9.js"></script><script src="../pdp-assets/a8fb7d67c631327ee5dcbe9013387669.js"></script>
 </body>
 </html>
