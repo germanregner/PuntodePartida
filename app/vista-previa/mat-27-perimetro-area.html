@@ -6009,11 +6009,13 @@ html[data-mundo-estilo="pergamino"] #exercise-input-area .mundo-wrap.tiene-linea
 /* el fondo de paisaje y las piezas viejas no conviven con el cuaderno */
 html.pdp-atl-on #screen-exercise{ background:#efe6d6 !important; }
 html.pdp-atl-on #screen-exercise .exercise-header{ visibility:hidden; height:0; padding:0; overflow:hidden; }
-html.pdp-atl-on #screen-exercise #tutor-zone, html.pdp-atl-on #screen-exercise #exercise-tutor-strip{ display:none !important; }
+html.pdp-atl-on #screen-exercise #tutor-zone{ display:none !important; }   /* el botón del tutor (#exercise-tutor-strip) YA NO se esconde: es el acceso a la hoja de ayuda, igual que en Inglés, pero con la brújula en lugar de Spike (2026-11-07) */
 html.pdp-atl-on #screen-exercise #exercise-body{ display:flex !important; flex-direction:column; position:relative; z-index:1; background:transparent !important; padding-top:calc(var(--u) * 258); justify-content:center; padding-left:calc(var(--u) * 128); padding-right:calc(var(--u) * 92); padding-bottom:calc(var(--exercise-footer-h,115px) + var(--u) * 350) !important;   /* sin sumar el alto del panel de resultado: el ejercicio no se mueve al responder */ }
 /* ── cabecera: cintas, brújula, progreso ── */
 #atl-root .atl-el{ position:absolute; display:flex; align-items:center; justify-content:center; box-sizing:border-box; text-align:center; white-space:nowrap; }
-#atl-root .atl-comp{ left:calc(var(--u)*32); top:calc(var(--u)*22); width:calc(var(--u)*140); height:calc(var(--u)*150); background:var(--atl-brujula) center/contain no-repeat; pointer-events:auto; border:0; padding:0; cursor:pointer; }
+/* arriba a la izquierda queda solo «volver» (salir del ejercicio); la brújula pasó abajo, junto a Continuar, como botón del tutor */
+#atl-root .atl-comp{ left:calc(var(--u)*40); top:calc(var(--u)*34); width:calc(var(--u)*104); height:calc(var(--u)*104); background:#FBEBC0; border:calc(var(--u)*5) solid #D8A957; border-radius:50%; pointer-events:auto; padding:0; cursor:pointer; color:#3a2410; font:900 calc(var(--u)*62)/1 var(--font,Inter,sans-serif); display:flex; align-items:center; justify-content:center; }
+#atl-root .atl-comp::before{ content:''; width:58%; height:58%; background:#3a2410; -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 12H5M11 5l-7 7 7 7' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat; mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 12H5M11 5l-7 7 7 7' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat; }   /* flecha de «volver» como imagen (la tipografía no tiene ese signo) */
 #atl-root .atl-rib{ overflow:visible; color:#fff; font:italic 800 calc(var(--u)*35)/1 var(--font-heading,Georgia,serif); text-shadow:0 2px 0 rgba(0,0,0,.25); border:calc(var(--u)*3) solid #2a0f33; border-radius:calc(var(--u)*14); }
 #atl-root .atl-rib::before{ content:''; position:absolute; inset:calc(var(--u)*7); border:calc(var(--u)*3) dashed rgba(255,255,255,.85); border-radius:calc(var(--u)*8); pointer-events:none; }
 #atl-root .atl-rib::after{ content:''; position:absolute; top:calc(var(--u)*14); bottom:calc(var(--u)*-14); width:calc(var(--u)*34); background:inherit; filter:brightness(.72); z-index:-1; }
@@ -6156,6 +6158,10 @@ html.pdp-atl-on.pdp-atl-math .atl-destello-q-d{ right:4px; background-image:var(
 html.pdp-atl-on.pdp-atl-math #screen-exercise #exercise-question{ padding-left:42px; padding-right:42px; }   /* el texto se corre hacia adentro para que los destellos no queden pegados a las letras */
 /* Matemática + Ronnie arriba: la figura va en una posición fija debajo del globo. El globo nuevo tiene el borde izquierdo más ancho (la cola), así que se achica el relleno para que no sea más alto que el de siempre y no se meta bajo la figura. */
 html.pdp-atl-on.pdp-atl-math.pdp-atl-arriba #atl-root .atl-globo{ padding:calc(var(--u)*10) calc(var(--u)*20); font-size:calc(var(--u)*30); }   /* letra un poco menor: el texto vuelve a entrar en los mismos renglones que con el globo de siempre */
+
+/* Botón del tutor junto a Continuar (acceso a la hoja de ayuda): la brújula reemplaza a Spike. SIN `#screen-exercise` en el selector: al abrir la ayuda el botón sube y el Motor lo muda de lugar; así la brújula también viaja con la hoja. */
+html.pdp-atl-on #exercise-tutor-strip-icon{ content:var(--atl-brujula); animation:none; scale:1; width:calc(var(--u)*124); height:auto; }   /* a este tamaño la barra de abajo mide lo mismo que antes de sumar la brújula: Confirmar no se estira y Ronnie no sube */
+html.pdp-atl-on #screen-exercise #exercise-tutor-strip{ margin-left:14px; width:46px; height:46px; min-width:0; min-height:0; padding:0; align-self:center; flex:none; }   /* la caja del botón mide menos de alto que Confirmar: no estira la barra de abajo ni sube a Ronnie */
 
 /* ATELIER-PIEZAS:FIN */
 /* HOJA-PIEZAS:INICIO (generado por Assets/piezas-hoja/inyectar_en_motor.py; no editar a mano) */
@@ -7668,6 +7674,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/ce63af5bd33a3b8efc4da9c575eefc12.js"></script><script src="../pdp-assets/e6ac8eddb5a4bae72fb620372ac57a06.js"></script>
+<script src="../pdp-assets/5bc36f4984bae435b7ecb677c9adf520.js"></script><script src="../pdp-assets/e6ac8eddb5a4bae72fb620372ac57a06.js"></script>
 </body>
 </html>
