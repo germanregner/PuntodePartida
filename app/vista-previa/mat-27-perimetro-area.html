@@ -1027,7 +1027,7 @@ html.pdp-atl-on .sup-op[data-v="<"].sel { background-image: var(--sup-k-menor-se
 html.pdp-atl-on .sup-op[data-v="="].sel { background-image: var(--sup-k-igual-sel); background-size: 104% 104%; }
 html.pdp-atl-on .sup-op[data-v=">"].sel { background-image: var(--sup-k-mayor-sel); background-size: 104% 104%; }
 /* bandeja y fantasma del arrastre con la pieza verde del kit */
-html.pdp-atl-on .sup-fuente { border: 2px dashed color-mix(in srgb, var(--warning) 40%, transparent); border-radius: 18px; background: color-mix(in srgb, var(--bg-card) 82%, var(--warning-light)); padding: 6px; min-height: 0; }
+html.pdp-atl-on .sup-fuente { border: 1px dashed color-mix(in srgb, var(--warning) 55%, transparent); border-radius: 18px; background: color-mix(in srgb, var(--bg-card) 82%, var(--warning-light)); padding: 1px; min-height: 0; }   /* siempre el mismo tamaño: la fila de herramientas es igual en todas las pantallas */
 html.pdp-atl-on .sup-fuente-pieza { width: var(--sup-pieza, 44px); height: var(--sup-pieza, 44px); border: 0; border-radius: 0; background: var(--sup-k-verde) 0 0 / 100% 100% no-repeat; }
 html.pdp-atl-on .sup-fuente-txt { font-size: 12px; font-weight: 800; color: var(--text-primary); }
 html.pdp-atl-on .sup-fantasma { background: var(--sup-k-verde) 0 0 / 100% 100% no-repeat; border: 0; border-radius: 0; box-shadow: none; filter: drop-shadow(0 5px 6px rgba(0, 0, 0, .35)); }
@@ -1126,6 +1126,8 @@ html.pdp-atl-on:has(.sup-wrap) #atl-root .atl-globo::after { display: block; con
 html.pdp-atl-on #screen-exercise:has(.sup-wrap) #exercise-question { padding-left: 42px; padding-right: 42px; }
 /* teléfono bajo (compactación 4 y 5): el marco de la ficha se afina para no sumar altura */
 html.pdp-atl-on .sup-wrap[data-compacto="4"] .sup-fuente, html.pdp-atl-on .sup-wrap[data-compacto="5"] .sup-fuente { padding: 1px; border-width: 1px; }
+/* la ficha de la bandeja no lleva texto bajo el skin (maqueta del Director): así la fila de herramientas es IGUAL en todas las pantallas y no cambia la disposición del resto. La indicación de cómo poner piezas va en el globo del tutor. */
+html.pdp-atl-on .sup-fuente-txt { display: none; }
 
 /* frac-steps */
 .frs-wrap { display:flex; flex-direction:column; align-items:center; gap:14px; padding:8px 0; width:100%; }
@@ -7663,6 +7665,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/5232ef464a711af26c553572d0dc9544.js"></script><script src="../pdp-assets/91544afc685adaafe112a248ece25512.js"></script>
+<script src="../pdp-assets/87337fcc396448f12cba8aafb50dcd1e.js"></script><script src="../pdp-assets/91544afc685adaafe112a248ece25512.js"></script>
 </body>
 </html>
