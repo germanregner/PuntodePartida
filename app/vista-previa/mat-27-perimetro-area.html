@@ -1023,12 +1023,12 @@ html.pdp-atl-on .sup-herr-b.on, html.pdp-atl-on .sup-op.sel { border-image: var(
 html.pdp-atl-on .sup-op4 .sup-op { flex: 1 1 42%; font-size: 13px; }
 html.pdp-atl-on .sup-op.rejected, html.pdp-atl-on .sup-op:disabled { opacity: .5; }
 /* «<», «=» y «>»: los tres botones redondos del kit (el signo está dibujado; el texto queda para el lector de pantalla) */
-html.pdp-atl-on .sup-op[data-v="<"], html.pdp-atl-on .sup-op[data-v="="], html.pdp-atl-on .sup-op[data-v=">"] { border: 0; border-image: none; width: 74px; height: 58px; min-height: 58px; padding: 0; color: transparent; font-size: 0; background: var(--sup-k-menor) center / 100% 100% no-repeat; }
+html.pdp-atl-on .sup-op[data-v="<"], html.pdp-atl-on .sup-op[data-v="="], html.pdp-atl-on .sup-op[data-v=">"] { border: 0; border-image: none; width: 74px; height: 58px; min-height: 58px; padding: 0; color: transparent; font-size: 0; background: var(--sup-k-menor) center / contain no-repeat; }   /* imagen ENTERA del botón (contain): nunca recortada ni estirada */
 html.pdp-atl-on .sup-op[data-v="="] { background-image: var(--sup-k-igual); }
 html.pdp-atl-on .sup-op[data-v=">"] { background-image: var(--sup-k-mayor); }
-html.pdp-atl-on .sup-op[data-v="<"].sel { background-image: var(--sup-k-menor-sel); background-size: 104% 104%; }
-html.pdp-atl-on .sup-op[data-v="="].sel { background-image: var(--sup-k-igual-sel); background-size: 104% 104%; }
-html.pdp-atl-on .sup-op[data-v=">"].sel { background-image: var(--sup-k-mayor-sel); background-size: 104% 104%; }
+html.pdp-atl-on .sup-op[data-v="<"].sel { background-image: var(--sup-k-menor-sel); background-size: contain; }
+html.pdp-atl-on .sup-op[data-v="="].sel { background-image: var(--sup-k-igual-sel); background-size: contain; }
+html.pdp-atl-on .sup-op[data-v=">"].sel { background-image: var(--sup-k-mayor-sel); background-size: contain; }
 /* bandeja y fantasma del arrastre con la pieza verde del kit */
 html.pdp-atl-on .sup-fuente { border: 1px dashed color-mix(in srgb, var(--warning) 55%, transparent); border-radius: 18px; background: color-mix(in srgb, var(--bg-card) 82%, var(--warning-light)); padding: 1px; min-height: 0; }   /* siempre el mismo tamaño: la fila de herramientas es igual en todas las pantallas */
 html.pdp-atl-on .sup-fuente-pieza { width: var(--sup-pieza, 44px); height: var(--sup-pieza, 44px); border: 0; border-radius: 0; background: var(--sup-k-verde) 0 0 / 100% 100% no-repeat; }
@@ -1047,7 +1047,7 @@ html.pdp-atl-on .sup-wrap[data-modo="superponer"] .sup-leyenda { font-size: 11px
 html.pdp-atl-on .sup-wrap[data-modo="superponer"] .sup-contador { border-width: 8px 20px; border-image-width: 8px 20px; font-size: 12px; min-height: 0; }
 /* comparar: la fila de «<  =  >» se corre a la derecha para no quedar debajo de Ronnie (el skin lo pone abajo a la izquierda) */
 html.pdp-atl-on .sup-wrap[data-modo="comparar"] .sup-opciones { flex-wrap: nowrap; gap: 6px; padding-left: 0; align-items: center; }
-html.pdp-atl-on .sup-wrap[data-modo="comparar"] .sup-op { width: 56px; min-width: 56px; height: 50px; min-height: 50px; }
+html.pdp-atl-on .sup-wrap[data-modo="comparar"] .sup-op { width: 60px; min-width: 60px; height: 48px; min-height: 48px; }   /* proporción de la imagen del botón (1,25:1) */
 /* compactación automática (supAjustar): cada paso incluye los anteriores. Se aplica solo si el contenido pisaría a Ronnie o a su globo. Las celdas tocables NO se achican: el piso es 44 px. */
 html.pdp-atl-on .sup-wrap[data-compacto="1"], html.pdp-atl-on .sup-wrap[data-compacto="2"], html.pdp-atl-on .sup-wrap[data-compacto="3"], html.pdp-atl-on .sup-wrap[data-compacto="4"], html.pdp-atl-on .sup-wrap[data-compacto="5"] { gap: 8px; padding: 0; }
 html.pdp-atl-on .sup-wrap[data-compacto="1"] .sup-grilla, html.pdp-atl-on .sup-wrap[data-compacto="2"] .sup-grilla, html.pdp-atl-on .sup-wrap[data-compacto="3"] .sup-grilla, html.pdp-atl-on .sup-wrap[data-compacto="4"] .sup-grilla, html.pdp-atl-on .sup-wrap[data-compacto="5"] .sup-grilla { padding: 5px; }
@@ -1099,8 +1099,8 @@ html.pdp-atl-on .sup-flechas { position: relative; }
 html.pdp-atl-on .sup-flechas::before { left: -30px; top: 50%; width: 22px; height: 28px; margin-top: -22px; background-image: var(--sup-k-dest-amar-i); }
 html.pdp-atl-on .sup-flechas::after { right: -30px; top: 50%; width: 22px; height: 28px; margin-top: -22px; background-image: var(--sup-k-dest-amar-d); }
 /* fila de «<  =  >» */
-html.pdp-atl-on .sup-wrap[data-modo="comparar"] .sup-rel-lado:first-child::before { left: -28px; top: 50%; width: 22px; height: 28px; margin-top: -14px; background-image: var(--sup-k-dest-amar-i); }
-html.pdp-atl-on .sup-wrap[data-modo="comparar"] .sup-rel-lado:last-child::after { right: -28px; top: 50%; width: 22px; height: 28px; margin-top: -14px; background-image: var(--sup-k-dest-amar-d); }
+html.pdp-atl-on .sup-wrap[data-modo="comparar"] .sup-rel-lado:first-child::before { left: -52px; top: 50%; width: 22px; height: 28px; margin-top: -14px; background-image: var(--sup-k-dest-amar-i); }
+html.pdp-atl-on .sup-wrap[data-modo="comparar"] .sup-rel-lado:last-child::after { right: -52px; top: 50%; width: 22px; height: 28px; margin-top: -14px; background-image: var(--sup-k-dest-amar-d); }
 /* pestaña «Figura A / B»: lila a los dos lados */
 html.pdp-atl-on .sup-titulo::before { left: -52px; top: 50%; width: 20px; height: 28px; margin-top: -17px; background-image: var(--sup-k-dest-lila-i); }
 html.pdp-atl-on .sup-titulo::after { right: -52px; top: 50%; width: 20px; height: 28px; margin-top: -17px; background-image: var(--sup-k-dest-lila-d); }
@@ -1133,7 +1133,7 @@ html.pdp-atl-on .sup-wrap[data-compacto="4"] .sup-fuente, html.pdp-atl-on .sup-w
 html.pdp-atl-on .sup-fuente-txt { display: none; }
 
 /* «A  <  =  >  B»: letras a los lados de los botones de comparar (la fila se lee como una frase) */
-html.pdp-atl-on .sup-rel-lado { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 32px; height: 32px; border-radius: 50%; font: 900 17px var(--font); color: var(--text-primary); background: color-mix(in srgb, var(--primary-light) 85%, var(--bg-card)); border: 2px solid color-mix(in srgb, var(--primary) 55%, transparent); }
+html.pdp-atl-on .sup-rel-lado { display: inline-flex; align-items: center; justify-content: center; flex: none; box-sizing: border-box; width: 38px; height: 38px; border-style: solid; border-width: 19px; border-image: var(--sup-k-lila-chica) 29 fill / 19px stretch; background: none; border-radius: 0; font: 900 17px var(--font); color: var(--text-primary); }   /* misma píldora lila del kit que «Figura A / B» */
 
 /* frac-steps */
 .frs-wrap { display:flex; flex-direction:column; align-items:center; gap:14px; padding:8px 0; width:100%; }
@@ -7671,6 +7671,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/c39517bb54ee586f573ed232d68587d5.js"></script><script src="../pdp-assets/f64d323d86278090cbdff737b40e48d1.js"></script>
+<script src="../pdp-assets/4bc87b635a8bb081aba19efdd966312b.js"></script><script src="../pdp-assets/f64d323d86278090cbdff737b40e48d1.js"></script>
 </body>
 </html>
