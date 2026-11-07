@@ -6154,6 +6154,8 @@ html.pdp-atl-on.pdp-atl-math .atl-destello-q{ display:block; position:absolute; 
 html.pdp-atl-on.pdp-atl-math .atl-destello-q-i{ left:4px; background-image:var(--atl-dest-amar-i); }
 html.pdp-atl-on.pdp-atl-math .atl-destello-q-d{ right:4px; background-image:var(--atl-dest-amar-d); }
 html.pdp-atl-on.pdp-atl-math #screen-exercise #exercise-question{ padding-left:42px; padding-right:42px; }   /* el texto se corre hacia adentro para que los destellos no queden pegados a las letras */
+/* Matemática + Ronnie arriba: la figura va en una posición fija debajo del globo. El globo nuevo tiene el borde izquierdo más ancho (la cola), así que se achica el relleno para que no sea más alto que el de siempre y no se meta bajo la figura. */
+html.pdp-atl-on.pdp-atl-math.pdp-atl-arriba #atl-root .atl-globo{ padding:calc(var(--u)*10) calc(var(--u)*20); font-size:calc(var(--u)*30); }   /* letra un poco menor: el texto vuelve a entrar en los mismos renglones que con el globo de siempre */
 
 /* ATELIER-PIEZAS:FIN */
 /* HOJA-PIEZAS:INICIO (generado por Assets/piezas-hoja/inyectar_en_motor.py; no editar a mano) */
@@ -7666,6 +7668,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/8ef9210f74fe9faef94c92e9ed686b31.js"></script><script src="../pdp-assets/e6ac8eddb5a4bae72fb620372ac57a06.js"></script>
+<script src="../pdp-assets/ce63af5bd33a3b8efc4da9c575eefc12.js"></script><script src="../pdp-assets/e6ac8eddb5a4bae72fb620372ac57a06.js"></script>
 </body>
 </html>
