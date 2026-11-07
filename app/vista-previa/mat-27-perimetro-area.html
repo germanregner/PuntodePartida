@@ -6081,7 +6081,8 @@ html.pdp-atl-on #screen-exercise #exercise-question, html.pdp-atl-on #screen-exe
 html.pdp-atl-on #screen-exercise #exercise-input-area{ margin-bottom:0; }
 
 /* el botón vive DENTRO de la hoja: entre las anillas y el margen derecho, y por encima del borde inferior del cuaderno (2026-11-05, Director: «queda por debajo del margen de la hoja») */
-html.pdp-atl-on #screen-exercise .exercise-footer{ padding-left:calc(var(--u) * 132); padding-right:calc(var(--u) * 100); padding-bottom:calc(var(--u) * 122 + var(--safe-bottom,0px)); }
+html.pdp-atl-on #screen-exercise .exercise-footer{ padding-left:calc(var(--u) * 95); padding-right:calc(var(--u) * 56);   /* la brújula queda lo más cerca del margen que permite el papel (los anillos), y Confirmar ocupa casi todo el ancho, como en Inglés */ padding-bottom:calc(var(--u) * 100 + var(--safe-bottom,0px)); }   /* sin responder: el botón queda dentro del papel (el cuaderno termina con un borde roto) */
+html.pdp-atl-on #screen-exercise .exercise-footer:has(#confirm-btn[data-atl="continuar"]), html.pdp-atl-on #screen-exercise .exercise-footer:has(#confirm-btn[data-atl="reintentar"]){ padding-bottom:calc(var(--u) * 34 + var(--safe-bottom,0px)); }   /* ya respondido: la hoja de resultado cubre el cuaderno y el botón queda pegado al margen inferior, como en Inglés (Director 2026-11-07) */
 
 /* mientras la hoja vieja se arranca, la de abajo queda en blanco: nada del ejercicio anterior asoma detrás */
 html.pdp-atl-on.atl-pasando body > :not(#atl-transicion) #screen-exercise #exercise-body, html.pdp-atl-on.atl-pasando body > :not(#atl-transicion) #screen-exercise .exercise-footer, html.pdp-atl-on.atl-pasando body > :not(#atl-transicion) #screen-exercise #feedback-zone, html.pdp-atl-on.atl-pasando body > :not(#atl-transicion) #atl-root .atl-stage > :not(.atl-bg){ visibility:hidden !important; }   /* la copia (#atl-transicion) conserva todo: solo se oculta la pantalla real */
@@ -6160,9 +6161,10 @@ html.pdp-atl-on.pdp-atl-math #screen-exercise #exercise-question{ padding-left:4
 html.pdp-atl-on.pdp-atl-math.pdp-atl-arriba #atl-root .atl-globo{ padding:calc(var(--u)*10) calc(var(--u)*20); font-size:calc(var(--u)*30); }   /* letra un poco menor: el texto vuelve a entrar en los mismos renglones que con el globo de siempre */
 
 /* Botón del tutor junto a Continuar (acceso a la hoja de ayuda): la brújula reemplaza a Spike. SIN `#screen-exercise` en el selector: al abrir la ayuda el botón sube y el Motor lo muda de lugar; así la brújula también viaja con la hoja. */
-html.pdp-atl-on #exercise-tutor-strip-icon{ content:var(--atl-brujula-tutor); animation:none; }   /* brújula nueva del Director (sin el fondo violeta de la anterior). SIN tamaño acá: con la hoja abierta (.rising) el Motor calcula solo el tamaño y la posición, igual que en Inglés */
-html.pdp-atl-on .exercise-tutor-strip:not(.rising) #exercise-tutor-strip-icon{ scale:1.12; transform-origin:50% 100%; width:calc(var(--u)*124); height:auto; }   /* tamaño de la brújula SOLO con la hoja cerrada; sobresale un poco hacia arriba sin estirar la barra de abajo */
-html.pdp-atl-on #screen-exercise #exercise-tutor-strip{ margin-left:14px; width:46px; height:46px; min-width:0; min-height:0; padding:0; align-self:center; flex:none; }   /* la caja del botón mide menos de alto que Confirmar: no estira la barra de abajo ni sube a Ronnie */
+html.pdp-atl-on #exercise-tutor-strip-icon{ content:var(--atl-brujula-tutor); animation:none; filter:drop-shadow(0 2px 3px rgba(40,20,60,.28)); }   /* sombra suave: la oscura que el Motor le pone a Spike pesaba demasiado alrededor de la brújula */   /* brújula nueva del Director (sin el fondo violeta de la anterior). SIN tamaño acá: con la hoja abierta (.rising) el Motor calcula solo el tamaño y la posición, igual que en Inglés */
+html.pdp-atl-on .exercise-tutor-strip:not(.rising) #exercise-tutor-strip-icon{ scale:1.08; transform-origin:50% 100%; width:calc(var(--u)*124); height:auto; }   /* tamaño de la brújula SOLO con la hoja cerrada; sobresale un poco hacia arriba sin estirar la barra de abajo */
+html.pdp-atl-on #screen-exercise #confirm-btn#confirm-btn{ min-height:calc(var(--u) * 148); }   /* un poco más grande (Director 2026-11-07) */
+html.pdp-atl-on #screen-exercise #exercise-tutor-strip{ margin-left:0; margin-right:10px; width:48px; height:48px; min-width:0; min-height:0; padding:0; align-self:center; flex:none; }   /* la caja del botón mide menos de alto que Confirmar: no estira la barra de abajo ni sube a Ronnie */
 
 /* ATELIER-PIEZAS:FIN */
 /* HOJA-PIEZAS:INICIO (generado por Assets/piezas-hoja/inyectar_en_motor.py; no editar a mano) */
@@ -7675,6 +7677,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/9381e82561c7619078f61e4728fad4e4.js"></script><script src="../pdp-assets/e6ac8eddb5a4bae72fb620372ac57a06.js"></script>
+<script src="../pdp-assets/d6947e0e8ae2a74486142cb54368dcf3.js"></script><script src="../pdp-assets/e6ac8eddb5a4bae72fb620372ac57a06.js"></script>
 </body>
 </html>
