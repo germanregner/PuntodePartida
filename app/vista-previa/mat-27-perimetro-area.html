@@ -987,6 +987,9 @@ button.sup-celda { cursor: pointer; }
 button.sup-p { cursor: grab; }
 .sup-sB, .sup-sAB { cursor: grab; }
 
+/* «A  <  =  >  B»: sin skin también se lee como frase */
+.sup-rel-lado { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 32px; height: 32px; border-radius: 50%; font: 900 17px var(--font); color: var(--primary); background: var(--primary-light); align-self: center; }
+
 /* superficie · kit del Director: imágenes (generado por aplicar_gate.py) */
 :root{--sup-k-papel:url(../pdp-assets/74e9e9ed8693d980d06cc3ab87fe7401.webp);--sup-k-verde:url(../pdp-assets/7aa25f4433e7a934bd8a088f8aeec6b9.webp);--sup-k-verde-clara:url(data:image/webp;base64,UklGRrgHAABXRUJQVlA4WAoAAAAQAAAATgAATQAAQUxQSDoEAAABB+agjSRHOtdc5A/57iOCiMjF39YtZmXyqLkajUfu3K2QZgvjmTvvQ+5QyLP8JaGwbdumWUgN9/+HM/pCRP8nIEhpnSSL65QLVQIQEV3IH5oLJMREVcZ34FnbttO2bdt6nj+lombbrdu2GepB96OzeQy2bdvupeT0v4E/IeeU8gFExAQwXwSQ+WFu2GPYt0rSVCAz9m8ExIQsUypeXJx3neNAJiGEkFCTBBTIUK92l6EkWUTKPQ/d/7jbrj3tSldUIKmpqWFUBEgIrTW73Z9+/6tf/+xP1SXi45/znPtOT1MwMjOMCgIIMiqtYfefH3z+qz9D5+jZC9/8YEpQUBCMCRBaGZe5gVoi/vC9n4M4xckr3nhtuh4BaSUYIAZkUhaH1HD1DmFKnv36k65nMjJtQjsDXEIMu5r/XBLSmGe/+awrgCDIpIT5Nns0CG9/au1AMHe+4fZ0gCyOmSEHTW579QUKyFOflR4BnCUIGIwc2jq86LG1ANYbX9xZ2LdEVhiSa59UCMgjD5UO4xJH1mt/8tzbUgDuubFK2HYoufO2WkBvOyvgIlcGpV53mwDekABxnqw8Se3uEqRcyPaF0l+AUE6zB1cXSOlpu56SEmfJJj0tBOwJMU7J+gORYoC+B0EmZasaIKVAZFo2LEiRrWdEQjAucAtLS8E52xZIp0ybLSkgXQEnNpkpFKAUOZZTznADZkpaJTNWagQyFpsICkLRFRmZzsi4Ic3aZXYM4AjCHLOJxVEMdSBhnXLAAAowJCKIBwP31wqBoRJGdV0hcyRBwFojCLLCWWF5BcNuqGG9ToTZQiA1gKnEFQX3AAiMMNQQwawCmkDmCJCpotKwXsNSATJWEQK6nr3XShgV2X4SiEMkcgxrFQEEyMaEBCCVCLgxJkw0snGbNhzfgHgMbJKacETIAJEjqDZ1CMcwgAEzEHBzkwk1HMcEEMKxbEZzHGwCBbcXgATAIm2SDQkkCWI/BmYzCWAiwcL2BZIhtCohTbKRAJKAEgHZfIYrgKQ2OJatBOq/U0L8x+UJIUlDFgXICmD4398JFB586NQisu+Ew4vp/vV3IQ7XPVqibDy1/PlXBgrlgesoe8tKApTv/7XBf/Y31xD3M5lDkYFffyUEKfXquj7IYeOhwue+VyqG+Je/XNSrkARwTxwkyZCfffq/NQQ1f/4dw5XSZl+jAoHMCe3O/3342x0IJPznl9/5x+7yKg2kCZJlMxPHIBmuyv/e98nUEMAodz7/dQ/Vjp7CuATTZMSAM2xiqFb6/nefuLCATJZc+6TnPvXevkQEjJGw3IlpQ58/fvNL56UwGYngLY889pF7rj3vewvEjFYCIkIQwIAKodbLf/7ux386VR0L4xLP7rzh9KL0J31XipJah6HWhCjKqIJtzXC52w12IGF5IWFURIAQ9ixtAmBJZb8KYblL0gAynlTmAlZQOCBYAwAA0A8AnQEqTwBOAD4pEIdCIaEJ7qsMDAFCUAXfQMKX/bPkA34HPvlruK+jPb688Z0TPU870uSqvyMfSwPV9l6x8Wp5155wffP2aUXqWMkY9WCldFfZH3rEKlqMkZUN6M9k7+8onleWJssURQ2NpCOR5F7iT0BcAW1G6uTfdctaVtMLlhXhOyAAAP73CJpli/tsJ0eeyfB3XA8KaPjeuZCF5L6PjbBFeB5xHPP3PsnyGufF7a+zaz4eB7b4jxvxHPNePR/Du4fzPpmyn+ccvsJYnxM+aJyjhCPiSUme7Vt/naW//7dovcd1/x/0z5P0H9mOZ8/D8ORydvf+u3+9NuQddwE1zMk4+zXe3D1RcS+rLsB/hMVOWLHEiJwsQH0TdkfG70xTI4Cp2iqKhjJnEwlvxEYFsmx4ihfK7GiZ+9JLGhxllFavj4P4wE1Em37BimY+bv4ifSIbWSLzpS9Kxn8G2GNzVB1LCvPADHqVGMQ1ptVi4S5qPGECivx+FgOZF9tO5Of+5U9tfE6u150f05aoVyCcpi7djLdv3W8nP9qocciqt/zvrtPjy7Cd/adPOPXj3C8xNSWDBHvI/xSO7XQvnFNi4tYBwSOoLlHJu44MHHgZT/lSLIQi+sDIG7XiUmx1QuyQGuiTg+CGS5W7oAWCPPavh8UZMsSJYoSi3optRgk09yjTrDNVSscX4F99CPrcNwEokJpHfBEpf4XFGOTQzYOBqvfhr3EPy6FlgABtC6r7UzF2d4ZTqsVfs0HtKmJEOUEJ/IpYLuZ3ArqeCS8NIH0yO78RAqJJtPs9u9Sn4mGihcMZgfyoWR3V5Ytxs8AjU8lDGG0yVk6K/lYGC2yotRx6xvFTYk0kE1PdA4JUmjKStP7Br3Wv8niYw0cVpx7R/01lz97dvEfJ3lMs+Qo/n0QWsZUsU9H1j+xT2752ttdSBiADYKN9QnAnhQef8rATYGsCNc6otsixSwBqGyGjDje6VEM9rTmh0M92z9ZtwO4p9XXGfPEvUNfFc4SW5whFnnIbajo+Mv5p1f3FqOcu5xoj8AoJFGJpK2R4PFDXhcMIKW0ggBU2UQ1PPzaYqSbudxocSE9Gws+Uf8uEf958DTzj/1f7mZb9qnNwgCWr30PY1ZdpeUQAAA==);--sup-k-hueco:url(../pdp-assets/7838917f9113d7ea42fae4af98206135.webp);--sup-k-pverde:url(../pdp-assets/d2350c53088f65638c6288f3b562db98.webp);--sup-k-crema:url(../pdp-assets/2eea94651e5ee32ca90b574e2847a023.webp);--sup-k-lila-chica:url(../pdp-assets/b55df1112319e94fd3ef71f51c5da4d4.webp);--sup-k-menor:url(../pdp-assets/0be9d37fb521c70d1801c64e1cf99f88.webp);--sup-k-igual:url(../pdp-assets/b189aa31c813f911af1feb9e25a792b1.webp);--sup-k-mayor:url(../pdp-assets/5aaabf8746efeee708e099a5dc662162.webp);--sup-k-menor-sel:url(../pdp-assets/9d90af3e0e574c67d46eca84570fe107.webp);--sup-k-igual-sel:url(../pdp-assets/0bcaab747a32a8a8a904d3fd3db3bd0a.webp);--sup-k-mayor-sel:url(../pdp-assets/c2ce2ec6e940304bffa6e72ad61ca296.webp);--sup-k-cinta:url(../pdp-assets/d857b605b9ba6104b4ef93a5e9f3a25a.webp);--sup-k-dest-lila-i:url(../pdp-assets/89efc13e49ca5e7264cbaa0a0bf2ab00.webp);--sup-k-dest-lila-d:url(../pdp-assets/ea4a6c80578ab5cc1902a174e7973912.webp);--sup-k-dest-amar-i:url(../pdp-assets/e3cfdef827dab80583903ddba6426334.webp);--sup-k-dest-amar-d:url(../pdp-assets/025ba236649c13158759e433db6eef29.webp);--sup-k-dest-esq-i:url(../pdp-assets/a8439ea172237c34c0cd8cb460ea5f59.webp);--sup-k-dest-esq-d:url(../pdp-assets/dc8f75a309e2edf7d10a4631653f660b.webp);--sup-k-globo:url(../pdp-assets/7776c39ed0db70034c8b3490e37369c1.webp);}
 /* ESTILO-2026-11-06 */
@@ -1043,8 +1046,8 @@ html.pdp-atl-on .sup-flechas { grid-template-columns: repeat(4, 64px); grid-temp
 html.pdp-atl-on .sup-wrap[data-modo="superponer"] .sup-leyenda { font-size: 11px; }
 html.pdp-atl-on .sup-wrap[data-modo="superponer"] .sup-contador { border-width: 8px 20px; border-image-width: 8px 20px; font-size: 12px; min-height: 0; }
 /* comparar: la fila de «<  =  >» se corre a la derecha para no quedar debajo de Ronnie (el skin lo pone abajo a la izquierda) */
-html.pdp-atl-on .sup-wrap[data-modo="comparar"] .sup-opciones { flex-wrap: nowrap; gap: 4px; padding-left: 112px; }
-html.pdp-atl-on .sup-wrap[data-modo="comparar"] .sup-op { width: 60px; min-width: 60px; height: 50px; min-height: 50px; }
+html.pdp-atl-on .sup-wrap[data-modo="comparar"] .sup-opciones { flex-wrap: nowrap; gap: 6px; padding-left: 0; align-items: center; }
+html.pdp-atl-on .sup-wrap[data-modo="comparar"] .sup-op { width: 56px; min-width: 56px; height: 50px; min-height: 50px; }
 /* compactación automática (supAjustar): cada paso incluye los anteriores. Se aplica solo si el contenido pisaría a Ronnie o a su globo. Las celdas tocables NO se achican: el piso es 44 px. */
 html.pdp-atl-on .sup-wrap[data-compacto="1"], html.pdp-atl-on .sup-wrap[data-compacto="2"], html.pdp-atl-on .sup-wrap[data-compacto="3"], html.pdp-atl-on .sup-wrap[data-compacto="4"], html.pdp-atl-on .sup-wrap[data-compacto="5"] { gap: 8px; padding: 0; }
 html.pdp-atl-on .sup-wrap[data-compacto="1"] .sup-grilla, html.pdp-atl-on .sup-wrap[data-compacto="2"] .sup-grilla, html.pdp-atl-on .sup-wrap[data-compacto="3"] .sup-grilla, html.pdp-atl-on .sup-wrap[data-compacto="4"] .sup-grilla, html.pdp-atl-on .sup-wrap[data-compacto="5"] .sup-grilla { padding: 5px; }
@@ -1084,9 +1087,9 @@ html.pdp-atl-on .sup-fE::after { transform: rotate(180deg); } html.pdp-atl-on .s
 /* destellos del kit (lámina del Director): amarillos a los lados de las filas de botones, lilas a los lados de la pestaña y en las esquinas de arriba de una cuadrícula sin pestaña.
    Son adorno: sin eventos, sin texto. El amarillo izquierdo es DERIVADO (espejo del que trae la lámina). */
 html.pdp-atl-on .sup-fuente::before, html.pdp-atl-on .sup-herr-b:last-child::after, html.pdp-atl-on .sup-flechas::before, html.pdp-atl-on .sup-flechas::after,
-html.pdp-atl-on .sup-wrap[data-modo="comparar"] .sup-op[data-v="<"]::before, html.pdp-atl-on .sup-wrap[data-modo="comparar"] .sup-op[data-v=">"]::after,
+html.pdp-atl-on .sup-wrap[data-modo="comparar"] .sup-rel-lado:first-child::before, html.pdp-atl-on .sup-wrap[data-modo="comparar"] .sup-rel-lado:last-child::after,
 html.pdp-atl-on .sup-titulo::before, html.pdp-atl-on .sup-titulo::after, html.pdp-atl-on .sup-grilla-wrap.sup-sin-titulo::before, html.pdp-atl-on .sup-grilla-wrap.sup-sin-titulo::after { content: ""; position: absolute; pointer-events: none; background-repeat: no-repeat; background-position: center; background-size: contain; }
-html.pdp-atl-on .sup-fuente, html.pdp-atl-on .sup-herr-b, html.pdp-atl-on .sup-wrap[data-modo="comparar"] .sup-op { position: relative; }
+html.pdp-atl-on .sup-fuente, html.pdp-atl-on .sup-herr-b, html.pdp-atl-on .sup-wrap[data-modo="comparar"] .sup-op, html.pdp-atl-on .sup-rel-lado { position: relative; }
 html.pdp-atl-on .sup-grilla-wrap.sup-sin-titulo { position: relative; }
 /* fila de herramientas: amarillo a izquierda (de la bandeja) y a derecha (de «Sacar») */
 html.pdp-atl-on .sup-fuente::before { left: -30px; top: 50%; width: 22px; height: 28px; margin-top: -14px; background-image: var(--sup-k-dest-amar-i); }
@@ -1096,8 +1099,8 @@ html.pdp-atl-on .sup-flechas { position: relative; }
 html.pdp-atl-on .sup-flechas::before { left: -30px; top: 50%; width: 22px; height: 28px; margin-top: -22px; background-image: var(--sup-k-dest-amar-i); }
 html.pdp-atl-on .sup-flechas::after { right: -30px; top: 50%; width: 22px; height: 28px; margin-top: -22px; background-image: var(--sup-k-dest-amar-d); }
 /* fila de «<  =  >» */
-html.pdp-atl-on .sup-wrap[data-modo="comparar"] .sup-op[data-v="<"]::before { left: -28px; top: 50%; width: 22px; height: 28px; margin-top: -14px; background-image: var(--sup-k-dest-amar-i); }
-html.pdp-atl-on .sup-wrap[data-modo="comparar"] .sup-op[data-v=">"]::after { right: -28px; top: 50%; width: 22px; height: 28px; margin-top: -14px; background-image: var(--sup-k-dest-amar-d); }
+html.pdp-atl-on .sup-wrap[data-modo="comparar"] .sup-rel-lado:first-child::before { left: -28px; top: 50%; width: 22px; height: 28px; margin-top: -14px; background-image: var(--sup-k-dest-amar-i); }
+html.pdp-atl-on .sup-wrap[data-modo="comparar"] .sup-rel-lado:last-child::after { right: -28px; top: 50%; width: 22px; height: 28px; margin-top: -14px; background-image: var(--sup-k-dest-amar-d); }
 /* pestaña «Figura A / B»: lila a los dos lados */
 html.pdp-atl-on .sup-titulo::before { left: -52px; top: 50%; width: 20px; height: 28px; margin-top: -17px; background-image: var(--sup-k-dest-lila-i); }
 html.pdp-atl-on .sup-titulo::after { right: -52px; top: 50%; width: 20px; height: 28px; margin-top: -17px; background-image: var(--sup-k-dest-lila-d); }
@@ -1128,6 +1131,9 @@ html.pdp-atl-on #screen-exercise:has(.sup-wrap) #exercise-question { padding-lef
 html.pdp-atl-on .sup-wrap[data-compacto="4"] .sup-fuente, html.pdp-atl-on .sup-wrap[data-compacto="5"] .sup-fuente { padding: 1px; border-width: 1px; }
 /* la ficha de la bandeja no lleva texto bajo el skin (maqueta del Director): así la fila de herramientas es IGUAL en todas las pantallas y no cambia la disposición del resto. La indicación de cómo poner piezas va en el globo del tutor. */
 html.pdp-atl-on .sup-fuente-txt { display: none; }
+
+/* «A  <  =  >  B»: letras a los lados de los botones de comparar (la fila se lee como una frase) */
+html.pdp-atl-on .sup-rel-lado { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 32px; height: 32px; border-radius: 50%; font: 900 17px var(--font); color: var(--text-primary); background: color-mix(in srgb, var(--primary-light) 85%, var(--bg-card)); border: 2px solid color-mix(in srgb, var(--primary) 55%, transparent); }
 
 /* frac-steps */
 .frs-wrap { display:flex; flex-direction:column; align-items:center; gap:14px; padding:8px 0; width:100%; }
@@ -7665,6 +7671,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/87337fcc396448f12cba8aafb50dcd1e.js"></script><script src="../pdp-assets/91544afc685adaafe112a248ece25512.js"></script>
+<script src="../pdp-assets/c39517bb54ee586f573ed232d68587d5.js"></script><script src="../pdp-assets/f64d323d86278090cbdff737b40e48d1.js"></script>
 </body>
 </html>
