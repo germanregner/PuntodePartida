@@ -6160,7 +6160,8 @@ html.pdp-atl-on.pdp-atl-math #screen-exercise #exercise-question{ padding-left:4
 html.pdp-atl-on.pdp-atl-math.pdp-atl-arriba #atl-root .atl-globo{ padding:calc(var(--u)*10) calc(var(--u)*20); font-size:calc(var(--u)*30); }   /* letra un poco menor: el texto vuelve a entrar en los mismos renglones que con el globo de siempre */
 
 /* Botón del tutor junto a Continuar (acceso a la hoja de ayuda): la brújula reemplaza a Spike. SIN `#screen-exercise` en el selector: al abrir la ayuda el botón sube y el Motor lo muda de lugar; así la brújula también viaja con la hoja. */
-html.pdp-atl-on #exercise-tutor-strip-icon{ content:var(--atl-brujula-tutor); animation:none; scale:1.32; transform-origin:50% 100%; width:calc(var(--u)*124); height:auto; }   /* brújula nueva del Director (sin el fondo violeta de la anterior); un poco más grande: sobresale hacia arriba, sin estirar la barra de abajo */   /* a este tamaño la barra de abajo mide lo mismo que antes de sumar la brújula: Confirmar no se estira y Ronnie no sube */
+html.pdp-atl-on #exercise-tutor-strip-icon{ content:var(--atl-brujula-tutor); animation:none; }   /* brújula nueva del Director (sin el fondo violeta de la anterior). SIN tamaño acá: con la hoja abierta (.rising) el Motor calcula solo el tamaño y la posición, igual que en Inglés */
+html.pdp-atl-on .exercise-tutor-strip:not(.rising) #exercise-tutor-strip-icon{ scale:1.12; transform-origin:50% 100%; width:calc(var(--u)*124); height:auto; }   /* tamaño de la brújula SOLO con la hoja cerrada; sobresale un poco hacia arriba sin estirar la barra de abajo */
 html.pdp-atl-on #screen-exercise #exercise-tutor-strip{ margin-left:14px; width:46px; height:46px; min-width:0; min-height:0; padding:0; align-self:center; flex:none; }   /* la caja del botón mide menos de alto que Confirmar: no estira la barra de abajo ni sube a Ronnie */
 
 /* ATELIER-PIEZAS:FIN */
@@ -7674,6 +7675,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/bfce3cee02291b957424ca7b5dc8cad2.js"></script><script src="../pdp-assets/e6ac8eddb5a4bae72fb620372ac57a06.js"></script>
+<script src="../pdp-assets/9381e82561c7619078f61e4728fad4e4.js"></script><script src="../pdp-assets/e6ac8eddb5a4bae72fb620372ac57a06.js"></script>
 </body>
 </html>
