@@ -2106,6 +2106,15 @@ html.pdp-fondo-ej :is(#skillcheck-transition-overlay,#skillcheck-result-overlay)
 .skillcheck-card-icon { font-size:40px; text-align:center; margin-bottom:10px; }
 .skillcheck-card-title { font-size:19px; font-weight:900; color:var(--text-primary); text-align:center; margin-bottom:10px; }
 #skillcheck-transition-overlay .break-suggest-msg, #skillcheck-result-overlay .break-suggest-msg { text-align:center; }
+/* Carteles del Skill Check ARRIBA (2026-11-10, pedido del Director: «más visible en el momento que aparezca»): la capa los ancla debajo de la barra de arriba (la X y los puntos) en vez de abajo.
+   Vale para el de entrada y el de resultado, con la carta nueva y con la tarjeta de siempre. En la fila de abajo va el aviso del deslizar (.sk-desliz), solo con la opción 🧪 «Comprobar». */
+#skillcheck-transition-overlay, #skillcheck-result-overlay { flex-direction:column; align-items:center; justify-content:flex-start; padding-top:calc(env(safe-area-inset-top,0px) + 64px); touch-action:pan-y; }
+#skillcheck-transition-overlay .break-suggest-card, #skillcheck-result-overlay .break-suggest-card { margin-bottom:0; }
+@keyframes pdpSkBaja{ from{ transform:translateY(-28px); opacity:0; } to{ transform:none; opacity:1; } }
+html:not(.pdp-fondo-ej) :is(#skillcheck-transition-overlay,#skillcheck-result-overlay) .break-suggest-card{ animation:pdpSkBaja .3s ease-out both; }
+@media (prefers-reduced-motion: reduce){ html:not(.pdp-fondo-ej) :is(#skillcheck-transition-overlay,#skillcheck-result-overlay) .break-suggest-card{ animation:none; } }
+.sk-desliz{ margin-top:14px; padding:8px 16px; border-radius:999px; background:var(--bg-card); color:var(--text-primary); border:1.5px solid var(--accent-gold,var(--border)); box-shadow:0 6px 18px rgba(0,0,0,.35); font-weight:700; font-size:14px; text-align:center; pointer-events:none; max-width:min(88vw,360px); }
+.sk-desliz.listo{ border-color:var(--celebrate); }
 /* CORRECCIÓN DE COMPOSICIÓN Y JERARQUÍA DE CAPAS (2026-09-05, auditoría del
    Director): .help-panel pasa de "un solo bloque que scrollea entero" a
    flex-column de 3 filas — cabecera (mascota/¿Necesitás más ayuda?/✕,
@@ -7537,6 +7546,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/31bf26427c193f2d7d6b4063a7aac4b9.js"></script><script src="../pdp-assets/38d5b5c8a3ecf8c06445cb2cccd42911.js"></script>
+<script src="../pdp-assets/8d680e15c4fa393f9aa40d67c38fd36b.js"></script><script src="../pdp-assets/2548e0b00d2f7cc0ee4382349dd0b6af.js"></script>
 </body>
 </html>
