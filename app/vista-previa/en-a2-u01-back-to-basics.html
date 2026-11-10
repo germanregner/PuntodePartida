@@ -4483,6 +4483,11 @@ html.pdp-lec-perg .lec-conimg .lec-body::first-letter{ float:left; font-family:v
    «Saltar» existe SOLO en el modo prueba (2026-10-13) y ahí queda SIEMPRE, también en un Level Check y en un Skill Check (pedido del Director: para recorrer la Unidad al probarla). */
 /* 2026-10-19 (pedido del Director): en el modo prueba «Saltar» se reemplaza por deslizar a la izquierda (pasa al ejercicio siguiente, como en la lectura); el botón ya no se muestra nunca. */
 #skip-btn{display:none!important}
+/* Deslizar para comprobar (2026-11-10): aviso y pista sobre el botón principal */
+#pdp-desliz-aviso{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 104px);transform:translate(-50%,8px);max-width:min(88vw,360px);padding:8px 16px;border-radius:999px;background:var(--bg-card);color:var(--text-primary);border:1.5px solid var(--accent-gold,var(--border));box-shadow:0 6px 18px rgba(0,0,0,.35);font-weight:700;font-size:14px;text-align:center;z-index:80;pointer-events:none;opacity:0;transition:opacity .25s ease,transform .25s ease}
+#pdp-desliz-aviso.on{opacity:1;transform:translate(-50%,0)}
+#pdp-desliz-aviso.aviso{border-color:#F59E0B}
+@media (prefers-reduced-motion: reduce){#pdp-desliz-aviso{transition:none}}
 /* Lectura en modo prueba (2026-10-15, pedido del Director): «Saltar» caía encima de la flecha de seguir (.lec-btn.sig); en una pantalla de lectura sube para quedar sobre la fila de navegación. */
 html #screen-exercise:has(.lec-wrap) .skip-btn{ bottom:calc(100% + 100px); }
 .sy-chip{align-self:flex-start;font-size:12px;font-weight:800;letter-spacing:.04em;padding:3px 10px;border-radius:999px;border:1.5px solid var(--border);color:var(--text-secondary)}.sy-chip.bien{color:var(--celebrate);border-color:var(--celebrate)}.sy-chip.ayuda{color:#F59E0B;border-color:#F59E0B}.sy-chip.mal,.sy-chip.todavia{color:var(--text-secondary);border-color:var(--text-muted)}.sy-chip.pendiente{color:var(--text-muted);border-style:dashed}
@@ -7532,6 +7537,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/68a36e1f566f8da57a515eec75b71306.js"></script><script src="../pdp-assets/927dde06bfa224982f59ab0e9595219c.js"></script>
+<script src="../pdp-assets/31bf26427c193f2d7d6b4063a7aac4b9.js"></script><script src="../pdp-assets/38d5b5c8a3ecf8c06445cb2cccd42911.js"></script>
 </body>
 </html>
