@@ -2183,6 +2183,9 @@ html.pdp-fondo-ej :is(#skillcheck-transition-overlay,#skillcheck-result-overlay)
 .tutor-transcript { padding:11px 13px; border-radius:var(--radius-md); background:color-mix(in srgb, var(--text-primary) 6%, transparent); border-left:3px solid var(--tutor-primary, var(--primary)); margin-bottom:14px; }
 .tutor-transcript-label { font-size:11px; font-weight:900; letter-spacing:.04em; text-transform:uppercase; color:var(--text-secondary); margin-bottom:4px; }
 .tutor-transcript-text { font-size:14px; line-height:1.55; color:var(--text-primary); }
+.tutor-transcript.tutor-transcript-leer{ margin-top:10px; border-left-color:var(--accent-gold); }   /* 2026-11-09: «Leer lo que dice» en escuchar, dorado como las etiquetas del panel (no el fucsia de la paleta) */
+.tutor-transcript.tutor-transcript-leer .tutor-transcript-label{ color:var(--accent-gold); }
+.tutor-transcript.tutor-transcript-leer .tutor-transcript-text{ font-size:16px; font-weight:600; }
 /* Zona de acción del Tutor (CORRECCIÓN DE COMPOSICIÓN, 2026-09-05) — fila
    propia al pie de #help-panel, en flujo normal (ver .help-panel de arriba).
    :empty la colapsa sin dejar hueco cuando no hay CTA que mostrar (ayuda
@@ -5494,6 +5497,45 @@ html[data-mundo-estilo] .mundo-papel .mundo-tabla td{padding:2px 5px}html[data-m
 .mundo-tabla-fija.con-foto>.mundo-escena .quien{left:50%;transform:translateX(-50%);bottom:6px;font-size:11px}
 .mundo-tabla-fija.con-foto .mundo-tabla{min-width:0}
 @media (max-height:760px){.mundo-tabla-fija.con-foto{grid-template-columns:54px minmax(0,1fr)}.mundo-tabla-fija.con-foto .mundo-pista{font-size:12px}.mundo-tabla-fija.con-foto .mundo-et-in{font-size:13.5px}.mundo-tabla-fija.con-foto>.mundo-escena .quien{font-size:9px;padding:1px 6px}.mundo-wrap.foto-lado>.mundo-dice{padding:4px 10px;min-height:0;font-size:12.5px}}
+/* ESCENA (2026-11-09, elegido por el Director: «Poné cada cosa en su lugar»): un dibujo con lugares marcados y una bandeja de objetos. Solo tokens var(--*). Error en ámbar, nunca rojo. */
+.mundo-wrap.tiene-escena{display:flex;flex-direction:column;gap:10px}
+.mundo-wrap.tiene-escena>.mundo-escena,.mundo-wrap.tiene-escena>.mundo-tabla-fija{display:none}
+.mundo-wrap.tiene-escena>.mundo-dice{position:static;max-width:none;border-radius:14px;padding:7px 12px;min-height:0;font-size:15.5px;line-height:1.35}
+.mundo-aula{display:flex;flex-direction:column;gap:10px}
+.mundo-aula-dib{position:relative;width:100%;max-width:100%;background:var(--bg-card) center/100% 100% no-repeat;border-radius:14px;border:2px solid var(--accent-gold);box-shadow:0 3px 10px rgba(0,0,0,.18);overflow:hidden}
+.mundo-aula-lugar{position:absolute;box-sizing:border-box;display:flex;align-items:center;justify-content:center;border:2px dashed transparent;border-radius:12px;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:border-color .2s,background-color .2s}
+.mundo-aula.eligiendo .mundo-aula-lugar{border-color:var(--accent-gold);background:rgba(255,255,255,.18)}
+.mundo-aula.eligiendo .mundo-aula-lugar.ocupado{background:transparent}
+.mundo-aula-lugar.arrastre{border-style:solid;background:rgba(255,255,255,.35)}
+.mundo-aula-lugar.multi{flex-wrap:wrap;align-content:center;gap:5px;padding:5px}
+/* modo «marcar» (idea 3): las cosas están fijas en el dibujo; tocar marca o desmarca. La marca es neutra (dorada, una cruz) hasta probar: no anticipa nada. */
+.mundo-aula-marca{position:absolute;box-sizing:border-box;border:2px dashed rgba(255,255,255,.55);border-radius:12px;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:border-color .2s,box-shadow .2s,background-color .2s}
+.mundo-aula-marca::after{content:'';position:absolute;top:-9px;right:-9px;width:24px;height:24px;border-radius:50%;background:var(--accent-gold);color:#fff;font:700 15px/24px var(--font-body,inherit);text-align:center;box-shadow:0 2px 5px rgba(0,0,0,.35);opacity:0;transform:scale(.4);transition:opacity .15s,transform .15s}
+.mundo-aula-marca.marcado{border:3px solid var(--accent-gold);background:rgba(255,255,255,.12)}
+.mundo-aula-marca.marcado::after{content:'✗';opacity:1;transform:none}
+.mundo-aula-marca.ok{border:3px solid var(--feedback-correct);box-shadow:0 0 0 2px var(--feedback-correct);animation:aulaMarca .45s ease-out}
+.mundo-aula-marca.ok.marcado::after{background:var(--feedback-correct)}
+.mundo-aula-marca.bad{border:3px dashed var(--warning);box-shadow:0 0 0 2px var(--warning);animation:aulaMarca .45s ease-out}
+.mundo-aula-marca.bad.marcado::after{background:var(--warning)}
+.mundo-aula.marcar .mundo-aula-bandeja{display:none}
+.mundo-burbuja.leo.reac{margin-top:-2px}
+.mundo-aula-guia{font:600 14px/1.3 var(--font-body,inherit);color:var(--text-primary);text-align:center;background:var(--bg-card);border:1.5px solid var(--accent-gold);border-radius:12px;padding:6px 10px}
+.mundo-aula.eligiendo .mundo-aula-bandeja.es-lugar{box-shadow:0 0 0 2px var(--accent-gold)}
+.mundo-aula-bandeja{display:flex;flex-direction:column;gap:6px;padding:8px 10px;border-radius:14px;border:1.5px dashed var(--accent-gold);background:var(--bg-card);min-height:64px;box-sizing:border-box}
+.mundo-aula-bandeja.vacia{border-style:solid;min-height:0}
+.mundo-aula-rot{font:700 11.5px/1.2 var(--font-heading,inherit);letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted)}
+.mundo-aula-objs{display:flex;flex-wrap:wrap;gap:8px}
+.mundo-aula-obj{display:inline-flex;align-items:center;gap:6px;min-height:46px;padding:4px 12px 4px 8px;border-radius:12px;border:2px solid var(--accent-gold);background:var(--bg-card);color:var(--text-primary);font:700 15.5px/1.1 var(--font-heading,inherit);cursor:grab;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+.mundo-aula-obj .ao-ico{font-size:26px;line-height:1}
+.mundo-aula-obj .ao-img{width:30px;height:30px;object-fit:contain}
+.mundo-aula-obj.sel{box-shadow:0 0 0 3px var(--accent-gold);transform:translateY(-2px)}
+.mundo-aula-lugar .mundo-aula-obj{flex-direction:column;gap:0;min-height:0;padding:2px 6px;border-width:1.5px;background:rgba(255,255,255,.88);color:#2b2118;font-size:11.5px;box-shadow:0 2px 6px rgba(0,0,0,.35)}
+.mundo-aula-lugar .mundo-aula-obj .ao-ico{font-size:24px}
+.mundo-aula-obj.ok{border-color:var(--feedback-correct);box-shadow:0 0 0 3px var(--feedback-correct);animation:aulaMarca .45s ease-out}
+.mundo-aula-obj.bad{border-color:var(--warning);border-style:dashed;box-shadow:0 0 0 2px var(--warning);animation:aulaMarca .45s ease-out}
+@keyframes aulaMarca{0%{transform:scale(1)}40%{transform:scale(1.18)}100%{transform:scale(1)}}
+.mundo-aula-fantasma{position:fixed;z-index:9999;pointer-events:none;transform:translate(-50%,-60%) scale(1.12);opacity:.92;box-shadow:0 8px 18px rgba(0,0,0,.35)}
+@media (prefers-reduced-motion:reduce){.mundo-aula-obj.ok,.mundo-aula-obj.bad{animation:none}.mundo-aula-obj.sel{transform:none}}
 /* CUERDAS (2026-10-20): dos columnas y cuerdas flojas, onduladas, que se cruzan y se iluminan despacio. Solo tokens var(--*). */
 .mundo-wrap.tiene-cuerdas{display:grid;grid-template-columns:44px minmax(0,1fr);grid-template-areas:"av dice" "cuerdas cuerdas" "cuerdas cuerdas";column-gap:8px;row-gap:8px;align-items:center}
 .mundo-wrap.tiene-cuerdas>.mundo-escena{grid-area:av;width:44px;height:44px;border-radius:50%;background-position:50% 18%}
@@ -7490,6 +7532,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/c14429b0cfed8bcc44e060ddaf367d4e.js"></script><script src="../pdp-assets/421e8dfcf2f296f80d7c4378dbd62585.js"></script>
+<script src="../pdp-assets/5090c4116d1206d633674abd7f92cd4a.js"></script><script src="../pdp-assets/927dde06bfa224982f59ab0e9595219c.js"></script>
 </body>
 </html>
