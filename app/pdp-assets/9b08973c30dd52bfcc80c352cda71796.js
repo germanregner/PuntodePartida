@@ -32,15 +32,15 @@ const _ASSET_DEDUP_28 = "../pdp-assets/465cf5cb04e039991f799124bf08da6d.jpg";
 const _ASSET_DEDUP_29 = "../pdp-assets/91bbe7357f143114b982a3162cccb4a6.jpg";
 const _ASSET_DEDUP_30 = "../pdp-assets/22cbb41a64375fa756832af4f47a7bc8.jpg";
 
-/* DATA ZONE generado por Pipeline v0 — 2026-11-10T03:50:35.931Z
+/* DATA ZONE generado por Pipeline v0 — 2026-11-10T05:13:20.859Z
    Proyecto: C:\Users\germa\OneDrive\Escritorio\Punto de partida\_trabajo\2026-10-19-mundos\unidad_galeria
    Motor fuente: template-standard-v3.html
    NO EDITAR — artefacto generado. Toda modificación vuelve a la Unidad
    (Principio de generación, DOCTRINA_CONGELADA.md §4). */
 
 const PDP_BUILD = {
-  "fecha": "2026-11-10 00:50",
-  "id": "6e560d"
+  "fecha": "2026-11-10 02:13",
+  "id": "ae6bcb"
 };
 
 const APP_CONFIG = {

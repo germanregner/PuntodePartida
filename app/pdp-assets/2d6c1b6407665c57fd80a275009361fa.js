@@ -66,42 +66,84 @@ const _ASSET_DEDUP_62 = "../pdp-assets/a97077e3a95a5240bfe02864856a2bd4.mp3";
 const _ASSET_DEDUP_63 = "../pdp-assets/4fc2b7974d32c4c7a11e0aa45a7f3b97.mp3";
 const _ASSET_DEDUP_64 = "../pdp-assets/9a81bbd1d2a594bb9775d3ffda2ded7c.jpg";
 const _ASSET_DEDUP_65 = "../pdp-assets/b91840022df5d37694783e5a55bb3b94.jpg";
-const _ASSET_DEDUP_66 = "../pdp-assets/859fcfc8ef3f05c70c75af70b7beb07a.jpg";
-const _ASSET_DEDUP_67 = "../pdp-assets/863e8a1d49006a375ed232e411106859.jpg";
-const _ASSET_DEDUP_68 = "../pdp-assets/f57c39e404e3338132623826c8e97048.jpg";
-const _ASSET_DEDUP_69 = "../pdp-assets/16c746d238f244fb8b559410da1258bc.jpg";
-const _ASSET_DEDUP_70 = "../pdp-assets/cf7eb1754c02504454d0e404257b17b2.jpg";
-const _ASSET_DEDUP_71 = "../pdp-assets/74f244ef7964a2fd55c6bec97ffd9e1e.jpg";
-const _ASSET_DEDUP_72 = "../pdp-assets/296dc3cf272e9054e172e565f359815c.jpg";
-const _ASSET_DEDUP_73 = "../pdp-assets/3180c3ebc9e0fc5cf3f71971e344c32e.jpg";
-const _ASSET_DEDUP_74 = "../pdp-assets/53170dfe0a51ddf9c824636ee22c11c1.jpg";
-const _ASSET_DEDUP_75 = "../pdp-assets/5defb74fe5dd5793160b285f28e8f17f.jpg";
-const _ASSET_DEDUP_76 = "../pdp-assets/ab0c112c79b12d2d5520ea5ddd8098db.jpg";
-const _ASSET_DEDUP_77 = "../pdp-assets/4398fce5c68c813d9bae2b55f89a5258.jpg";
-const _ASSET_DEDUP_78 = "../pdp-assets/a2f9fecb8550b9c756137f2c0da9907b.jpg";
-const _ASSET_DEDUP_79 = "../pdp-assets/1dd3d34dac96ec092537c99df02a4890.jpg";
-const _ASSET_DEDUP_80 = "../pdp-assets/bcd3f2520d670bfe5e12ff1ac6da640d.webp";
-const _ASSET_DEDUP_81 = "../pdp-assets/6bf7452d99e6fbc0cdb23bcda9680be7.webp";
-const _ASSET_DEDUP_82 = "../pdp-assets/4b6914c10a55a6d61cb35b9c7c98e6f6.webp";
-const _ASSET_DEDUP_83 = "../pdp-assets/96a460c63c283f0914bfcd3c4718181e.webp";
-const _ASSET_DEDUP_84 = "../pdp-assets/df45179598531081dc634fecd4b3f50c.webp";
-const _ASSET_DEDUP_85 = "../pdp-assets/c67588194d77507556e953be4779dd37.webp";
-const _ASSET_DEDUP_86 = "../pdp-assets/f51a71a845b6ce85870707a6f585c0e2.jpg";
-const _ASSET_DEDUP_87 = "../pdp-assets/a780676200aad6fe97cae7dffef2585d.jpg";
-const _ASSET_DEDUP_88 = "../pdp-assets/489a8f368c855a3a5f15526ab7e8d4ac.jpg";
-const _ASSET_DEDUP_89 = "../pdp-assets/d78a6b0479a1450afcf0f14f1da3f405.jpg";
-const _ASSET_DEDUP_90 = "../pdp-assets/12c63d50e57c03494669f0c472e41783.jpg";
-const _ASSET_DEDUP_91 = "../pdp-assets/3c5d3ab03090707b7818ac7b8e2f8263.jpg";
+const _ASSET_DEDUP_66 = "../pdp-assets/9e793b4783774838817374fe3265295d.jpg";
+const _ASSET_DEDUP_67 = "../pdp-assets/859fcfc8ef3f05c70c75af70b7beb07a.jpg";
+const _ASSET_DEDUP_68 = "../pdp-assets/863e8a1d49006a375ed232e411106859.jpg";
+const _ASSET_DEDUP_69 = "../pdp-assets/bd6e76ea7840ee2e455643de433d3427.mp3";
+const _ASSET_DEDUP_70 = "../pdp-assets/9602eb41de6a2309ede28ccd314a83ad.mp3";
+const _ASSET_DEDUP_71 = "../pdp-assets/6f88ba94f28dd7750ea78d40df0e66c2.jpg";
+const _ASSET_DEDUP_72 = "../pdp-assets/ac369afef8f258086e9be79d8bdcc591.jpg";
+const _ASSET_DEDUP_73 = "../pdp-assets/f57c39e404e3338132623826c8e97048.jpg";
+const _ASSET_DEDUP_74 = "../pdp-assets/16c746d238f244fb8b559410da1258bc.jpg";
+const _ASSET_DEDUP_75 = "../pdp-assets/8e6686264d577d4082683286b6b4af0d.mp3";
+const _ASSET_DEDUP_76 = "../pdp-assets/66240ad847c60ae79ca75ff1ac0a1e35.mp3";
+const _ASSET_DEDUP_77 = "../pdp-assets/cf7eb1754c02504454d0e404257b17b2.jpg";
+const _ASSET_DEDUP_78 = "../pdp-assets/74f244ef7964a2fd55c6bec97ffd9e1e.jpg";
+const _ASSET_DEDUP_79 = "../pdp-assets/296dc3cf272e9054e172e565f359815c.jpg";
+const _ASSET_DEDUP_80 = "../pdp-assets/3180c3ebc9e0fc5cf3f71971e344c32e.jpg";
+const _ASSET_DEDUP_81 = "../pdp-assets/53170dfe0a51ddf9c824636ee22c11c1.jpg";
+const _ASSET_DEDUP_82 = "../pdp-assets/5defb74fe5dd5793160b285f28e8f17f.jpg";
+const _ASSET_DEDUP_83 = "../pdp-assets/ab0c112c79b12d2d5520ea5ddd8098db.jpg";
+const _ASSET_DEDUP_84 = "../pdp-assets/93b293af60ee9a9f4173f9a922f19093.jpg";
+const _ASSET_DEDUP_85 = "../pdp-assets/6452665da70290b4a3df5a2f106e3e2a.mp3";
+const _ASSET_DEDUP_86 = "../pdp-assets/4398fce5c68c813d9bae2b55f89a5258.jpg";
+const _ASSET_DEDUP_87 = "../pdp-assets/0d612de19aa9e092ac43fd634d94f588.mp3";
+const _ASSET_DEDUP_88 = "../pdp-assets/a16466e5b6c1d79fb534aa739cd8fa32.mp3";
+const _ASSET_DEDUP_89 = "../pdp-assets/f0cddb816b0499a9f5ea75e2d2c8929e.mp3";
+const _ASSET_DEDUP_90 = "../pdp-assets/a2f9fecb8550b9c756137f2c0da9907b.jpg";
+const _ASSET_DEDUP_91 = "../pdp-assets/1dd3d34dac96ec092537c99df02a4890.jpg";
+const _ASSET_DEDUP_92 = "../pdp-assets/bcd3f2520d670bfe5e12ff1ac6da640d.webp";
+const _ASSET_DEDUP_93 = "../pdp-assets/6bf7452d99e6fbc0cdb23bcda9680be7.webp";
+const _ASSET_DEDUP_94 = "../pdp-assets/4b6914c10a55a6d61cb35b9c7c98e6f6.webp";
+const _ASSET_DEDUP_95 = "../pdp-assets/96a460c63c283f0914bfcd3c4718181e.webp";
+const _ASSET_DEDUP_96 = "../pdp-assets/df45179598531081dc634fecd4b3f50c.webp";
+const _ASSET_DEDUP_97 = "../pdp-assets/c67588194d77507556e953be4779dd37.webp";
+const _ASSET_DEDUP_98 = "../pdp-assets/f51a71a845b6ce85870707a6f585c0e2.jpg";
+const _ASSET_DEDUP_99 = "../pdp-assets/a780676200aad6fe97cae7dffef2585d.jpg";
+const _ASSET_DEDUP_100 = "../pdp-assets/19e2735ff04d8b1d027ac83d21115620.mp3";
+const _ASSET_DEDUP_101 = "../pdp-assets/4e9db3a1a87d7cac9ef5604215e9ae76.jpg";
+const _ASSET_DEDUP_102 = "../pdp-assets/83f5dfad641a7a1b2e91b4134836579f.jpg";
+const _ASSET_DEDUP_103 = "../pdp-assets/489a8f368c855a3a5f15526ab7e8d4ac.jpg";
+const _ASSET_DEDUP_104 = "../pdp-assets/86d4b8f1a6c3013d90495f278ff92c4e.mp3";
+const _ASSET_DEDUP_105 = "../pdp-assets/e5a1edd9c2ebfaf46c222c91ffe1a9bb.mp3";
+const _ASSET_DEDUP_106 = "../pdp-assets/ca2dae40aa7023387246f6b881538a60.jpg";
+const _ASSET_DEDUP_107 = "../pdp-assets/d78a6b0479a1450afcf0f14f1da3f405.jpg";
+const _ASSET_DEDUP_108 = "../pdp-assets/1e8d2cf5604f0f2f9070da3094708c64.mp3";
+const _ASSET_DEDUP_109 = "../pdp-assets/a4d04820636a6a45bb2c4b3c675c2f8c.mp3";
+const _ASSET_DEDUP_110 = "../pdp-assets/e6d297cb927f8056a370dbbf075a191e.jpg";
+const _ASSET_DEDUP_111 = "../pdp-assets/0be1a1bfbc4e053fc5ac4a71ccc75e42.jpg";
+const _ASSET_DEDUP_112 = "../pdp-assets/d092d24e5502c6e4759454db7983c492.jpg";
+const _ASSET_DEDUP_113 = "../pdp-assets/2517a3659b2c90aadd9b58495a087b07.jpg";
+const _ASSET_DEDUP_114 = "../pdp-assets/627766b1de3eb2700c00c31890774647.mp3";
+const _ASSET_DEDUP_115 = "../pdp-assets/528e43088e23b646417eeafc6b78bc52.png";
+const _ASSET_DEDUP_116 = "../pdp-assets/b1d40c05a4b27af023255264898eff2e.png";
+const _ASSET_DEDUP_117 = "../pdp-assets/569b76072566f68d2f8b0e6f3bf57d7f.png";
+const _ASSET_DEDUP_118 = "../pdp-assets/956d2188a0d284b7e0a1f837b8b5f866.png";
+const _ASSET_DEDUP_119 = "../pdp-assets/2cceabf77925bccb59b5183b27204edb.png";
+const _ASSET_DEDUP_120 = "../pdp-assets/5b527aa31ed66ec451eb51b052cb2633.png";
+const _ASSET_DEDUP_121 = "../pdp-assets/9d669127fb0c134747c4d12229c550aa.png";
+const _ASSET_DEDUP_122 = "../pdp-assets/981768ee82e762cab7794934ed7d2d9b.png";
+const _ASSET_DEDUP_123 = "../pdp-assets/66dfd2b40e8b86a3f7754f201527fe7d.png";
+const _ASSET_DEDUP_124 = "../pdp-assets/e6fa933fab214c1578230273e537b09f.jpg";
+const _ASSET_DEDUP_125 = "../pdp-assets/12c63d50e57c03494669f0c472e41783.jpg";
+const _ASSET_DEDUP_126 = "../pdp-assets/3c5d3ab03090707b7818ac7b8e2f8263.jpg";
+const _ASSET_DEDUP_127 = "../pdp-assets/03d9b0868cc3f9142ac5b2e62ddaa09d.mp3";
+const _ASSET_DEDUP_128 = "../pdp-assets/084c7a9241831d708b3b4365f2e25950.mp3";
+const _ASSET_DEDUP_129 = "../pdp-assets/49ee4213cff91ca8ca6169c6292a6d0f.jpg";
+const _ASSET_DEDUP_130 = "../pdp-assets/3e47adf588c173b33239c0d366ba2c4b.jpg";
+const _ASSET_DEDUP_131 = "../pdp-assets/ba5f1ff06d1f4def674116815dd157e2.mp3";
+const _ASSET_DEDUP_132 = "../pdp-assets/0f60a6cb9f5764cc13699dc58011889e.mp3";
+const _ASSET_DEDUP_133 = "../pdp-assets/9b72faa9652257c48096f6d0a01c29e9.mp3";
 
-/* DATA ZONE generado por Pipeline v0 — 2026-11-10T01:42:36.510Z
+/* DATA ZONE generado por Pipeline v0 — 2026-11-10T05:08:00.750Z
    Proyecto: projects/ingles/en-a2-u02-things-and-school
    Motor fuente: template-standard-v3.html
    NO EDITAR — artefacto generado. Toda modificación vuelve a la Unidad
    (Principio de generación, DOCTRINA_CONGELADA.md §4). */
 
 const PDP_BUILD = {
-  "fecha": "2026-11-09 22:42",
-  "id": "031657"
+  "fecha": "2026-11-10 02:08",
+  "id": "1d73d9"
 };
 
 const APP_CONFIG = {
@@ -1966,7 +2008,28 @@ const MODULES = [
               "evidencia": "ninguna: la predicción no puntúa"
             },
             {
+              "id": "EN-A2-U02-753",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
               "id": "EN-A2-U02-060",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "P-02",
+              "funcion": "reconocimiento (oído ↔ opción)",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (listen)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
+              "id": "EN-A2-U02-760",
               "patronesLengua": [
                 "P1"
               ],
@@ -1987,7 +2050,29 @@ const MODULES = [
               "evidencia": "ninguna: la predicción no puntúa"
             },
             {
+              "id": "EN-A2-U02-489",
+              "patronesLengua": [
+                "P2"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
               "id": "EN-A2-U02-054",
+              "patronesLengua": [
+                "P1",
+                "P2"
+              ],
+              "realiza": "P-02",
+              "funcion": "reconocimiento (oído ↔ opción)",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (listen)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
+              "id": "EN-A2-U02-754",
               "patronesLengua": [
                 "P1",
                 "P2"
@@ -2010,7 +2095,28 @@ const MODULES = [
               "nota": "traza automática (modo ligero): no es una clasificación revisada"
             },
             {
+              "id": "EN-A2-U02-757",
+              "patronesLengua": [
+                "P2"
+              ],
+              "realiza": "P-03",
+              "funcion": "asociación (pares)",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (memory)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
               "id": "EN-A2-U02-410",
+              "patronesLengua": [
+                "P3"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
+              "id": "EN-A2-U02-490",
               "patronesLengua": [
                 "P3"
               ],
@@ -2031,7 +2137,30 @@ const MODULES = [
               "nota": "traza automática (modo ligero): no es una clasificación revisada"
             },
             {
+              "id": "EN-A2-U02-755",
+              "patronesLengua": [
+                "P3"
+              ],
+              "realiza": "P-02",
+              "funcion": "reconocimiento (oído ↔ opción)",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (listen)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
               "id": "EN-A2-U02-056",
+              "patronesLengua": [
+                "P1",
+                "P3"
+              ],
+              "realiza": "sin clasificar",
+              "funcion": "classify",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (classify)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
+              "id": "EN-A2-U02-756",
               "patronesLengua": [
                 "P1",
                 "P3"
@@ -2055,6 +2184,18 @@ const MODULES = [
               "evidencia": "ninguna: la predicción no puntúa"
             },
             {
+              "id": "EN-A2-U02-335",
+              "patronesLengua": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
               "id": "EN-A2-U02-058",
               "patronesLengua": [
                 "P2"
@@ -2066,7 +2207,29 @@ const MODULES = [
               "nota": "traza automática (modo ligero): no es una clasificación revisada"
             },
             {
+              "id": "EN-A2-U02-758",
+              "patronesLengua": [
+                "P2"
+              ],
+              "realiza": "P-16",
+              "funcion": "completar un hueco de estructura",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (word-bank)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
               "id": "EN-A2-U02-059",
+              "patronesLengua": [
+                "P2"
+              ],
+              "realiza": "P-07",
+              "funcion": "detectar y corregir",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (error-find)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
+              "id": "EN-A2-U02-759",
               "patronesLengua": [
                 "P2"
               ],
@@ -2089,7 +2252,29 @@ const MODULES = [
               "evidencia": "ninguna: la predicción no puntúa"
             },
             {
+              "id": "EN-A2-U02-343",
+              "patronesLengua": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
               "id": "EN-A2-U02-061",
+              "patronesLengua": [
+                "P2"
+              ],
+              "realiza": "P-16",
+              "funcion": "escribir cuántas cosas hay",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (classify, memory) → producción guiada (word-bank, error-find, fill) y oral con el profesor (P20, P22) → producción independiente en este Skill Check"
+            },
+            {
+              "id": "EN-A2-U02-761",
               "patronesLengua": [
                 "P2"
               ],
@@ -2109,6 +2294,16 @@ const MODULES = [
               "evidencia": "independiente; reconocimiento (listen) y asociación (classify, memory) → producción guiada (word-bank, error-find, fill) y oral con el profesor (P20, P22) → producción independiente en este Skill Check"
             },
             {
+              "id": "EN-A2-U02-762",
+              "patronesLengua": [
+                "P3"
+              ],
+              "realiza": "P-07",
+              "funcion": "corregir aren't por isn't",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (classify, memory) → producción guiada (word-bank, error-find, fill) y oral con el profesor (P20, P22) → producción independiente en este Skill Check"
+            },
+            {
               "id": "EN-A2-U02-063",
               "patronesLengua": [
                 "P3"
@@ -2117,6 +2312,28 @@ const MODULES = [
               "funcion": "escribir que no hay varias cosas",
               "objetivoN1": "apoyo",
               "evidencia": "independiente; reconocimiento (listen) y asociación (classify, memory) → producción guiada (word-bank, error-find, fill) y oral con el profesor (P20, P22) → producción independiente en este Skill Check"
+            },
+            {
+              "id": "EN-A2-U02-763",
+              "patronesLengua": [
+                "P3"
+              ],
+              "realiza": "P-16",
+              "funcion": "escribir que no hay varias cosas",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (classify, memory) → producción guiada (word-bank, error-find, fill) y oral con el profesor (P20, P22) → producción independiente en este Skill Check"
+            },
+            {
+              "id": "EN-A2-U02-911",
+              "patronesLengua": [
+                "P3",
+                "P1"
+              ],
+              "realiza": "—",
+              "funcion": "producción guiada con consecuencia (mundo): cuerdas",
+              "objetivoN1": "apoyo",
+              "evidencia": "arma la jugada y el tablero coincide con lo esperado",
+              "nota": "mundo intercalado después de EN-A2-U02-756"
             }
           ]
         }
@@ -2173,7 +2390,28 @@ const MODULES = [
               "evidencia": "ninguna: la predicción no puntúa"
             },
             {
+              "id": "EN-A2-U02-764",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
               "id": "EN-A2-U02-065",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "P-02",
+              "funcion": "reconocimiento (oído ↔ opción)",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (listen)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
+              "id": "EN-A2-U02-765",
               "patronesLengua": [
                 "P1"
               ],
@@ -2195,7 +2433,31 @@ const MODULES = [
               "evidencia": "ninguna: la predicción no puntúa"
             },
             {
+              "id": "EN-A2-U02-491",
+              "patronesLengua": [
+                "P2",
+                "P3"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
               "id": "EN-A2-U02-066",
+              "patronesLengua": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "realiza": "P-02",
+              "funcion": "reconocimiento (oído ↔ opción)",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (listen)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
+              "id": "EN-A2-U02-766",
               "patronesLengua": [
                 "P1",
                 "P2",
@@ -2221,7 +2483,32 @@ const MODULES = [
               "nota": "traza automática (modo ligero): no es una clasificación revisada"
             },
             {
+              "id": "EN-A2-U02-767",
+              "patronesLengua": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "realiza": "P-03",
+              "funcion": "asociación (pares)",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (match)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
               "id": "EN-A2-U02-306",
+              "patronesLengua": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
+              "id": "EN-A2-U02-336",
               "patronesLengua": [
                 "P1",
                 "P2",
@@ -2244,7 +2531,29 @@ const MODULES = [
               "nota": "traza automática (modo ligero): no es una clasificación revisada"
             },
             {
+              "id": "EN-A2-U02-768",
+              "patronesLengua": [
+                "P3"
+              ],
+              "realiza": "P-16",
+              "funcion": "completar un hueco de estructura",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (word-bank)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
               "id": "EN-A2-U02-069",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "P-06",
+              "funcion": "elegir varias correctas",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (mc-multi)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
+              "id": "EN-A2-U02-769",
               "patronesLengua": [
                 "P1"
               ],
@@ -2266,7 +2575,29 @@ const MODULES = [
               "nota": "traza automática (modo ligero): no es una clasificación revisada"
             },
             {
+              "id": "EN-A2-U02-770",
+              "patronesLengua": [
+                "P2"
+              ],
+              "realiza": "P-15",
+              "funcion": "ordenar los elementos",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (order)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
               "id": "EN-A2-U02-071",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "P-15",
+              "funcion": "ordenar los elementos",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (order)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
+              "id": "EN-A2-U02-771",
               "patronesLengua": [
                 "P1"
               ],
@@ -2289,7 +2620,29 @@ const MODULES = [
               "evidencia": "ninguna: la predicción no puntúa"
             },
             {
+              "id": "EN-A2-U02-344",
+              "patronesLengua": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
               "id": "EN-A2-U02-072",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "P-16",
+              "funcion": "escribir dónde está algo",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (match) → producción guiada (word-bank, order, fill) y oral con el profesor (P23, P25) → producción independiente en este Skill Check"
+            },
+            {
+              "id": "EN-A2-U02-772",
               "patronesLengua": [
                 "P1"
               ],
@@ -2309,6 +2662,16 @@ const MODULES = [
               "evidencia": "independiente; reconocimiento (listen) y asociación (match) → producción guiada (word-bank, order, fill) y oral con el profesor (P23, P25) → producción independiente en este Skill Check"
             },
             {
+              "id": "EN-A2-U02-773",
+              "patronesLengua": [
+                "P2"
+              ],
+              "realiza": "P-16",
+              "funcion": "escribir dónde está algo (pregunta)",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (match) → producción guiada (word-bank, order, fill) y oral con el profesor (P23, P25) → producción independiente en este Skill Check"
+            },
+            {
               "id": "EN-A2-U02-074",
               "patronesLengua": [
                 "P3"
@@ -2317,6 +2680,29 @@ const MODULES = [
               "funcion": "corregir Is por Are",
               "objetivoN1": "apoyo",
               "evidencia": "independiente; reconocimiento (listen) y asociación (match) → producción guiada (word-bank, order, fill) y oral con el profesor (P23, P25) → producción independiente en este Skill Check"
+            },
+            {
+              "id": "EN-A2-U02-774",
+              "patronesLengua": [
+                "P3"
+              ],
+              "realiza": "P-07",
+              "funcion": "corregir Is por Are",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (match) → producción guiada (word-bank, order, fill) y oral con el profesor (P23, P25) → producción independiente en este Skill Check"
+            },
+            {
+              "id": "EN-A2-U02-912",
+              "patronesLengua": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "realiza": "—",
+              "funcion": "producción guiada con consecuencia (mundo): escena",
+              "objetivoN1": "apoyo",
+              "evidencia": "arma la jugada y el tablero coincide con lo esperado",
+              "nota": "extiende EN-A2-U02-765, EN-A2-U02-767 (CONTRATO_MUNDO_v1)"
             },
             {
               "id": "EN-A2-U02-901",
@@ -2385,6 +2771,16 @@ const MODULES = [
               "evidencia": "ninguna: la predicción no puntúa"
             },
             {
+              "id": "EN-A2-U02-775",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
               "id": "EN-A2-U02-076",
               "patronesLengua": [
                 "P1"
@@ -2396,7 +2792,28 @@ const MODULES = [
               "nota": "traza automática (modo ligero): no es una clasificación revisada"
             },
             {
+              "id": "EN-A2-U02-776",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "P-02",
+              "funcion": "reconocimiento (oído ↔ opción)",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (listen)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
               "id": "EN-A2-U02-413",
+              "patronesLengua": [
+                "P2"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
+              "id": "EN-A2-U02-493",
               "patronesLengua": [
                 "P2"
               ],
@@ -2418,7 +2835,29 @@ const MODULES = [
               "nota": "traza automática (modo ligero): no es una clasificación revisada"
             },
             {
+              "id": "EN-A2-U02-779",
+              "patronesLengua": [
+                "P1",
+                "P2"
+              ],
+              "realiza": "sin clasificar",
+              "funcion": "classify",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (classify)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
               "id": "EN-A2-U02-414",
+              "patronesLengua": [
+                "P3"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
+              "id": "EN-A2-U02-494",
               "patronesLengua": [
                 "P3"
               ],
@@ -2440,6 +2879,18 @@ const MODULES = [
               "nota": "traza automática (modo ligero): no es una clasificación revisada"
             },
             {
+              "id": "EN-A2-U02-777",
+              "patronesLengua": [
+                "P2",
+                "P3"
+              ],
+              "realiza": "P-02",
+              "funcion": "reconocimiento (oído ↔ opción)",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (listen)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
               "id": "EN-A2-U02-415",
               "patronesLengua": [
                 "P1"
@@ -2450,7 +2901,28 @@ const MODULES = [
               "evidencia": "ninguna: la predicción no puntúa"
             },
             {
+              "id": "EN-A2-U02-495",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
               "id": "EN-A2-U02-082",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "P-15",
+              "funcion": "ordenar los elementos",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (order)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
+              "id": "EN-A2-U02-782",
               "patronesLengua": [
                 "P1"
               ],
@@ -2474,7 +2946,31 @@ const MODULES = [
               "nota": "traza automática (modo ligero): no es una clasificación revisada"
             },
             {
+              "id": "EN-A2-U02-778",
+              "patronesLengua": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "realiza": "P-03",
+              "funcion": "asociación (pares)",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (match)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
               "id": "EN-A2-U02-080",
+              "patronesLengua": [
+                "P3"
+              ],
+              "realiza": "P-04",
+              "funcion": "elegir una",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (mc)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
+              "id": "EN-A2-U02-780",
               "patronesLengua": [
                 "P3"
               ],
@@ -2497,7 +2993,30 @@ const MODULES = [
               "evidencia": "ninguna: la predicción no puntúa"
             },
             {
+              "id": "EN-A2-U02-337",
+              "patronesLengua": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
               "id": "EN-A2-U02-081",
+              "patronesLengua": [
+                "P2"
+              ],
+              "realiza": "P-16",
+              "funcion": "completar un hueco de estructura",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (word-bank)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
+              "id": "EN-A2-U02-781",
               "patronesLengua": [
                 "P2"
               ],
@@ -2520,7 +3039,29 @@ const MODULES = [
               "evidencia": "ninguna: la predicción no puntúa"
             },
             {
+              "id": "EN-A2-U02-345",
+              "patronesLengua": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
               "id": "EN-A2-U02-083",
+              "patronesLengua": [
+                "P2"
+              ],
+              "realiza": "P-16",
+              "funcion": "escribir un pedido de permiso",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (match, classify) → producción guiada (word-bank, fill) y oral con el profesor (P26, P28) → producción independiente en este Skill Check"
+            },
+            {
+              "id": "EN-A2-U02-783",
               "patronesLengua": [
                 "P2"
               ],
@@ -2540,6 +3081,16 @@ const MODULES = [
               "evidencia": "independiente; reconocimiento (listen) y asociación (match, classify) → producción guiada (word-bank, fill) y oral con el profesor (P26, P28) → producción independiente en este Skill Check"
             },
             {
+              "id": "EN-A2-U02-784",
+              "patronesLengua": [
+                "P2"
+              ],
+              "realiza": "P-16",
+              "funcion": "escribir la negativa a un permiso",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (match, classify) → producción guiada (word-bank, fill) y oral con el profesor (P26, P28) → producción independiente en este Skill Check"
+            },
+            {
               "id": "EN-A2-U02-085",
               "patronesLengua": [
                 "P1"
@@ -2548,6 +3099,29 @@ const MODULES = [
               "funcion": "corregir closing por close",
               "objetivoN1": "apoyo",
               "evidencia": "independiente; reconocimiento (listen) y asociación (match, classify) → producción guiada (word-bank, fill) y oral con el profesor (P26, P28) → producción independiente en este Skill Check"
+            },
+            {
+              "id": "EN-A2-U02-785",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "P-07",
+              "funcion": "corregir closing por close",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (match, classify) → producción guiada (word-bank, fill) y oral con el profesor (P26, P28) → producción independiente en este Skill Check"
+            },
+            {
+              "id": "EN-A2-U02-913",
+              "patronesLengua": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "realiza": "—",
+              "funcion": "producción guiada con consecuencia (mundo): dialogo",
+              "objetivoN1": "apoyo",
+              "evidencia": "arma la jugada y el tablero coincide con lo esperado",
+              "nota": "extiende EN-A2-U02-776, EN-A2-U02-778 (CONTRATO_MUNDO_v1)"
             },
             {
               "id": "EN-A2-U02-904",
@@ -2612,7 +3186,27 @@ const MODULES = [
               "evidencia": "ninguna: la predicción no puntúa"
             },
             {
+              "id": "EN-A2-U02-786",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
               "id": "EN-A2-U02-416",
+              "patronesLengua": [
+                "P2"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
+              "id": "EN-A2-U02-496",
               "patronesLengua": [
                 "P2"
               ],
@@ -2634,6 +3228,18 @@ const MODULES = [
               "nota": "traza automática (modo ligero): no es una clasificación revisada"
             },
             {
+              "id": "EN-A2-U02-787",
+              "patronesLengua": [
+                "P1",
+                "P2"
+              ],
+              "realiza": "P-02",
+              "funcion": "reconocimiento (oído ↔ opción)",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (listen)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
               "id": "EN-A2-U02-417",
               "patronesLengua": [
                 "P3"
@@ -2644,7 +3250,29 @@ const MODULES = [
               "evidencia": "ninguna: la predicción no puntúa"
             },
             {
+              "id": "EN-A2-U02-497",
+              "patronesLengua": [
+                "P3"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
               "id": "EN-A2-U02-088",
+              "patronesLengua": [
+                "P1",
+                "P3"
+              ],
+              "realiza": "P-02",
+              "funcion": "reconocimiento (oído ↔ opción)",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (listen)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
+              "id": "EN-A2-U02-788",
               "patronesLengua": [
                 "P1",
                 "P3"
@@ -2667,7 +3295,31 @@ const MODULES = [
               "nota": "traza automática (modo ligero): no es una clasificación revisada"
             },
             {
+              "id": "EN-A2-U02-789",
+              "patronesLengua": [
+                "P3"
+              ],
+              "realiza": "sin clasificar",
+              "funcion": "timeline",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (timeline)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
               "id": "EN-A2-U02-090",
+              "patronesLengua": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "realiza": "P-03",
+              "funcion": "asociación (pares)",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (match)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
+              "id": "EN-A2-U02-790",
               "patronesLengua": [
                 "P1",
                 "P2",
@@ -2692,7 +3344,30 @@ const MODULES = [
               "evidencia": "ninguna: la predicción no puntúa"
             },
             {
+              "id": "EN-A2-U02-338",
+              "patronesLengua": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
               "id": "EN-A2-U02-091",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "P-16",
+              "funcion": "completar un hueco de estructura",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (word-bank)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
+              "id": "EN-A2-U02-791",
               "patronesLengua": [
                 "P1"
               ],
@@ -2714,7 +3389,29 @@ const MODULES = [
               "nota": "traza automática (modo ligero): no es una clasificación revisada"
             },
             {
+              "id": "EN-A2-U02-792",
+              "patronesLengua": [
+                "P2"
+              ],
+              "realiza": "P-15",
+              "funcion": "ordenar los elementos",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (order)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
               "id": "EN-A2-U02-093",
+              "patronesLengua": [
+                "P3"
+              ],
+              "realiza": "P-16",
+              "funcion": "completar un hueco de estructura",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (word-bank)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
+              "id": "EN-A2-U02-793",
               "patronesLengua": [
                 "P3"
               ],
@@ -2737,7 +3434,29 @@ const MODULES = [
               "evidencia": "ninguna: la predicción no puntúa"
             },
             {
+              "id": "EN-A2-U02-346",
+              "patronesLengua": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
               "id": "EN-A2-U02-094",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "P-16",
+              "funcion": "escribir cuántas cosas hay",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (match, timeline) → producción guiada (word-bank, order, fill) y oral con el profesor (P29, P31) → producción independiente en este Skill Check"
+            },
+            {
+              "id": "EN-A2-U02-794",
               "patronesLengua": [
                 "P1"
               ],
@@ -2757,7 +3476,27 @@ const MODULES = [
               "evidencia": "independiente; reconocimiento (listen) y asociación (match, timeline) → producción guiada (word-bank, order, fill) y oral con el profesor (P29, P31) → producción independiente en este Skill Check"
             },
             {
+              "id": "EN-A2-U02-795",
+              "patronesLengua": [
+                "P2"
+              ],
+              "realiza": "P-07",
+              "funcion": "corregir have por has",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (match, timeline) → producción guiada (word-bank, order, fill) y oral con el profesor (P29, P31) → producción independiente en este Skill Check"
+            },
+            {
               "id": "EN-A2-U02-096",
+              "patronesLengua": [
+                "P3"
+              ],
+              "realiza": "P-16",
+              "funcion": "escribir un pedido a otra persona",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (match, timeline) → producción guiada (word-bank, order, fill) y oral con el profesor (P29, P31) → producción independiente en este Skill Check"
+            },
+            {
+              "id": "EN-A2-U02-796",
               "patronesLengua": [
                 "P3"
               ],
@@ -2777,6 +3516,18 @@ const MODULES = [
               "objetivoN1": "apoyo",
               "evidencia": "arma la jugada y el tablero coincide con lo esperado",
               "nota": "extiende EN-A2-U02-091, EN-A2-U02-087 (CONTRATO_MUNDO_v1)"
+            },
+            {
+              "id": "EN-A2-U02-914",
+              "patronesLengua": [
+                "P1",
+                "P2"
+              ],
+              "realiza": "—",
+              "funcion": "producción guiada con consecuencia (mundo): escena",
+              "objetivoN1": "apoyo",
+              "evidencia": "arma la jugada y el tablero coincide con lo esperado",
+              "nota": "extiende EN-A2-U02-791, EN-A2-U02-787 (CONTRATO_MUNDO_v1)"
             }
           ]
         }
@@ -3336,6 +4087,7 @@ const EXERCISES_M0 = [
       }
     ],
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -3438,6 +4190,7 @@ const EXERCISES_M0 = [
       "altExplanation": "El marinero dice I've got (tengo) y después nombra sus cosas. Escuchá las tres, una por una, y buscá la opción que nombra las mismas."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -3563,7 +4316,8 @@ const EXERCISES_M0 = [
         "audio": _ASSET_DEDUP_16
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-004",
@@ -3664,6 +4418,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Las frases del marinero van de a dos: una dice que tiene y la otra que no. Lo único que cambia es haven't, que quiere decir no tengo."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -3765,7 +4520,8 @@ const EXERCISES_M0 = [
         "audio": _ASSET_DEDUP_21
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-003",
@@ -3832,6 +4588,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Los marineros hablan de los dos (we). Con we la forma es igual que con I: en una frase oís haven't (no tienen) y en la otra 've (tienen)."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -4098,6 +4855,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Hablen el marinero, los dos marineros o los del bote, la regla es igual: haven't es que no la tiene; 've es que la tiene."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -4193,7 +4951,8 @@ const EXERCISES_M0 = [
         "audio": _ASSET_DEDUP_22
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-006",
@@ -4296,6 +5055,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Con got no se usa don't: la negación es haven't got. Y hasn't es solo para he y she: el marinero habla de sí mismo, con I."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -4425,6 +5185,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Hablás vos, como el marinero: empezá con I, seguí con la forma de tener y got, y terminá con la cosa con a o an."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -4545,6 +5306,7 @@ const EXERCISES_M0 = [
       "altExplanation": "El marinero le habla a otro (you). Con you la forma de tener es la misma que con I: buscá la palabra que no es esa."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -4714,7 +5476,8 @@ const EXERCISES_M0 = [
         "audio": _ASSET_DEDUP_25
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-905",
@@ -4804,6 +5567,7 @@ const EXERCISES_M0 = [
         }
       },
       "modo": "clase",
+      "ambientacion": "cuento",
       "gemeloDe": "EN-A2-U02-902",
       "_nota": "Gemelo de clase de escena_mochila_l1.json (fuente: generadores/mundos_clase_u02.py). Imagen: ilustración 4 de «El barco sin nadie» (el baúl con las cosas de los marineros).",
       "aula": {
@@ -5002,7 +5766,8 @@ const EXERCISES_M0 = [
       ]
     },
     "avatar": _ASSET_DEDUP_26,
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-902",
@@ -5432,6 +6197,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Primero quién tiene, después la forma de tener con got y al final a o an y la cosa."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "variantes": [
         "I have got a book."
@@ -5526,6 +6292,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Fijate con qué sonido empieza eraser: ¿de vocal o de otra letra?"
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "variantes": [],
       "errores": [
@@ -5623,6 +6390,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Es la misma frase que para tener, pero con la forma de no tener: haven't got."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "variantes": [
         "I have not got a map."
@@ -6069,7 +6837,8 @@ const EXERCISES_M0 = [
         "audio": _ASSET_DEDUP_30
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-013",
@@ -6140,6 +6909,7 @@ const EXERCISES_M0 = [
       "altExplanation": "El capitán es un hombre: he. Con he va has got. Tiene dos cosas: escuchá las dos, una por una."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -6274,7 +7044,8 @@ const EXERCISES_M0 = [
         "audio": _ASSET_DEDUP_36
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-014",
@@ -6341,6 +7112,7 @@ const EXERCISES_M0 = [
       "altExplanation": "En la primera frase 's got dice que tiene. En la segunda, hasn't got dice que no tiene."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -6597,6 +7369,7 @@ const EXERCISES_M0 = [
       },
       "enListado": false,
       "modo": "clase",
+      "ambientacion": "cuento",
       "_nota": "Mundo de clase ambientado en «El barco sin nadie» (fuente: generadores/mundos_clase_u02.py; molde: cuerdas_datos_l1 de A2 U01).",
       "cuerdas": {
         "izquierda": [
@@ -6854,7 +7627,8 @@ const EXERCISES_M0 = [
       ]
     },
     "avatar": _ASSET_DEDUP_17,
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-015",
@@ -6947,6 +7721,7 @@ const EXERCISES_M0 = [
     "feedbackWrong": "Esas dos no dicen lo mismo: buscá la misma frase, corta y larga.",
     "feedbackExtra": "He's got = He has got · She's got = She has got · hasn't = has not.",
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -7056,7 +7831,8 @@ const EXERCISES_M0 = [
         "audio": _ASSET_DEDUP_22
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-016",
@@ -7151,6 +7927,7 @@ const EXERCISES_M0 = [
       "altExplanation": "El capitán es un hombre: he. Con he se usa la forma de tener que termina en s, y el but dice que el capitán sí tiene."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -7314,6 +8091,7 @@ const EXERCISES_M0 = [
       "altExplanation": "La frase tiene tres partes: quién tiene, la forma de tener y lo que tiene, con el lugar al final."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -7421,6 +8199,7 @@ const EXERCISES_M0 = [
       "altExplanation": "El capitán es he. Con he la forma de NO tener cambia: buscá la palabra que no es esa."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -7529,6 +8308,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Un marinero es una persona: he. Con he se usa la forma de tener que termina en s."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -7698,7 +8478,8 @@ const EXERCISES_M0 = [
         "audio": _ASSET_DEDUP_25
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-907",
@@ -7899,11 +8680,13 @@ const EXERCISES_M0 = [
       },
       "nombre": "Analizador",
       "modo": "clase",
+      "ambientacion": "cuento",
       "enListado": false,
       "_nota": "Mundo de clase ambientado en «El barco sin nadie» (fuente: generadores/mundos_clase_u02.py; molde: analizador_mama_l5 de A2 U01)."
     },
     "avatar": _ASSET_DEDUP_39,
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "status": "published",
@@ -8091,6 +8874,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Primero quién tiene (she o he), después la forma de tener con got y al final a o an y la cosa."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "variantes": [
         "She has got a notebook.",
@@ -8189,6 +8973,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Con he y con she la forma de tener cambia. Buscá la palabra que no es esa."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "variantes": [],
       "errores": [
@@ -8323,6 +9108,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Es la misma frase que para tener, pero con la forma de no tener: hasn't got."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "variantes": [
         "He has not got a book.",
@@ -8769,7 +9555,8 @@ const EXERCISES_M0 = [
         "audio": _ASSET_DEDUP_43
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-024",
@@ -8840,6 +9627,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Un marinero pregunta con have al principio y el otro contesta repitiendo have. Escuchá qué cosa pregunta y si el otro dice que sí o que no."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -8930,7 +9718,8 @@ const EXERCISES_M0 = [
         "audio": _ASSET_DEDUP_45
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-025",
@@ -9001,6 +9790,7 @@ const EXERCISES_M0 = [
       "altExplanation": "La hija del capitán es she: por eso la pregunta empieza con has. Escuchá qué cosa nombran y si la respuesta es sí o no."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -9086,7 +9876,8 @@ const EXERCISES_M0 = [
         "audio": _ASSET_DEDUP_46
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-026",
@@ -9173,6 +9964,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Si le preguntan a vos (you), empieza con have; si preguntan por el capitán o su esposa (he o she), con has. What pregunta qué cosas tiene."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -9416,6 +10208,7 @@ const EXERCISES_M0 = [
       "altExplanation": "El marinero pregunta con have y vos sí tenés el mapa: la respuesta corta repite esa palabra, entera, con I."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -9634,11 +10427,13 @@ const EXERCISES_M0 = [
       },
       "nombre": "Analizador",
       "modo": "clase",
+      "ambientacion": "cuento",
       "enListado": false,
       "_nota": "Mundo de clase ambientado en «El barco sin nadie» (fuente: generadores/mundos_clase_u02.py; molde: analizador_mama_l5 de A2 U01)."
     },
     "avatar": _ASSET_DEDUP_32,
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-303",
@@ -9720,7 +10515,8 @@ const EXERCISES_M0 = [
         "audio": _ASSET_DEDUP_22
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-028",
@@ -9815,6 +10611,7 @@ const EXERCISES_M0 = [
       "altExplanation": "El capitán le pregunta a un marinero (you). La pregunta con got empieza con la forma de tener que va con you; no se usa do."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -9952,6 +10749,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Captain Briggs es el capitán (he): la pregunta empieza con has, después va él, después got y al final la cosa."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -10036,6 +10834,7 @@ const EXERCISES_M0 = [
       "altExplanation": "El capitán pregunta por un marinero (he): has va primero. Escuchá de quién pregunta y qué cosa nombra."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -10203,7 +11002,8 @@ const EXERCISES_M0 = [
         "audio": _ASSET_DEDUP_25
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-909",
@@ -10294,6 +11094,7 @@ const EXERCISES_M0 = [
       },
       "enListado": false,
       "modo": "clase",
+      "ambientacion": "cuento",
       "_nota": "Mundo de clase ambientado en «El barco sin nadie» (fuente: generadores/mundos_clase_u02.py; molde: cuerdas_datos_l1 de A2 U01).",
       "cuerdas": {
         "izquierda": [
@@ -10551,7 +11352,8 @@ const EXERCISES_M0 = [
       ]
     },
     "avatar": _ASSET_DEDUP_17,
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "status": "published",
@@ -10679,6 +11481,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Empezá por la palabra de la pregunta, después quién, got y la cosa con a o an."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "variantes": [],
       "errores": [
@@ -10785,6 +11588,7 @@ const EXERCISES_M0 = [
       "altExplanation": "La respuesta corta empieza con no, sigue I y la forma negativa de la palabra que abrió la pregunta."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "variantes": [
         "No, I have not."
@@ -10876,6 +11680,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Con he y she la pregunta empieza con la forma que termina en s. Mirá la primera palabra."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "variantes": [],
       "errores": [
@@ -11267,7 +12072,8 @@ const EXERCISES_M0 = [
         "audio": _ASSET_DEDUP_57
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-035",
@@ -11338,6 +12144,7 @@ const EXERCISES_M0 = [
       "altExplanation": "El político habla de él (I) y después del ingeniero (he). Escuchá en cada frase si dice que tiene o que no tiene."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -11427,7 +12234,8 @@ const EXERCISES_M0 = [
         "audio": _ASSET_DEDUP_60
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-036",
@@ -11498,6 +12306,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Son dos preguntas: una a vos y otra por el ingeniero. Escuchá si cada respuesta corta es sí o no."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -11587,7 +12396,8 @@ const EXERCISES_M0 = [
         "audio": _ASSET_DEDUP_61
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-037",
@@ -11674,6 +12484,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Fijate quién tiene: si es uno solo (el ingeniero, el río), va has; si son varios o sos vos, va have."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -12041,11 +12852,13 @@ const EXERCISES_M0 = [
       },
       "nombre": "Analizador",
       "modo": "clase",
+      "ambientacion": "cuento",
       "enListado": false,
       "_nota": "Mundo de clase ambientado en «El barco sin nadie» (fuente: generadores/mundos_clase_u02.py; molde: analizador_mama_l5 de A2 U01)."
     },
     "avatar": _ASSET_DEDUP_58,
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-038",
@@ -12112,6 +12925,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Leé la frase del político con atención: ¿dice que el ingeniero tiene el plan o que no lo tiene?"
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -12235,7 +13049,8 @@ const EXERCISES_M0 = [
         "audio": _ASSET_DEDUP_22
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-039",
@@ -12330,6 +13145,7 @@ const EXERCISES_M0 = [
       "altExplanation": "El ingeniero habla de él y su equipo (we): con we la forma de tener no lleva s, y el plan sí lo tienen."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -12476,6 +13292,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Hablan los políticos (we) y dicen que NO tienen: después de we va la forma negativa, got, la cosa y el lugar."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -12560,6 +13377,7 @@ const EXERCISES_M0 = [
       "altExplanation": "El político le pregunta al ingeniero (you). Con got no se usa do: la pregunta empieza con la forma de tener que va con you."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -12793,7 +13611,8 @@ const EXERCISES_M0 = [
         "audio": _ASSET_DEDUP_63
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "status": "published",
@@ -12938,6 +13757,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Vos y el ingeniero son nosotros: con we la forma de no tener es haven't got."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "variantes": [
         "We have not got a map."
@@ -13036,6 +13856,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Armá la pregunta en orden: la forma de tener, quién, got y la cosa con a o an."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "variantes": [
         "Has he got a plan?"
@@ -13127,6 +13948,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Con he y con she la forma negativa cambia. Buscá la palabra que no es esa."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "variantes": [],
       "errores": [
@@ -13860,6 +14682,7 @@ const EXERCISES_M0 = [
         "audio": "../pdp-assets/47ff65e2050d650d9373774d0247e29a.mp3"
       }
     ],
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -13920,6 +14743,47 @@ const EXERCISES_M0 = [
     }
   },
   {
+    "id": "EN-A2-U02-753",
+    "status": "draft",
+    "nivelId": "m0-n5",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "decir que hay una cosa",
+    "feedback": "Ya sabés decir que hay una cosa.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Mirá la sala del Parlamento.",
+        "title": "There is…",
+        "regla": "Para decir que hay UNA cosa: **there is**.",
+        "notas": [
+          "**There's** = there is.",
+          "Antes de la cosa va a o an."
+        ],
+        "idea": "Para decir que hay UNA cosa: there is. There's = there is. Antes de la cosa va a o an.",
+        "media": {
+          "tipo": "tres",
+          "items": [
+            {
+              "titulo": "There's a window.",
+              "texto": "Hay una ventana.",
+              "img": _ASSET_DEDUP_66
+            },
+            {
+              "titulo": "There's a map.",
+              "texto": "Hay un mapa.",
+              "img": _ASSET_DEDUP_59
+            }
+          ]
+        },
+        "audio": "../pdp-assets/0c4f13dd9467bfc050759570f26f2d61.mp3"
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
+  },
+  {
     "id": "EN-A2-U02-060",
     "status": "draft",
     "nivelId": "m0-n5",
@@ -13943,6 +14807,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "There's dice que hay una sola cosa; después viene qué cosa es y en qué lugar está."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -13959,6 +14824,51 @@ const EXERCISES_M0 = [
       ],
       "decis": [
         "Is there a clock in the classroom?"
+      ]
+    }
+  },
+  {
+    "id": "EN-A2-U02-760",
+    "status": "draft",
+    "nivelId": "m0-n5",
+    "kind": "listen",
+    "stage": "Reconocimiento",
+    "skill": "COMP_01",
+    "difficulty": 2,
+    "question": "Escuchá a un político. ¿Qué dice?",
+    "vozEntrada": "There's a map in the room.",
+    "audio": "../pdp-assets/ed37328102feeff11bdfa9266aa6d979.mp3",
+    "options": [
+      "Hay un mapa en el río.",
+      "Hay un mapa en la sala.",
+      "Hay un reloj en la sala."
+    ],
+    "correct": 1,
+    "feedback": "¡Eso! Hay un mapa en la sala.",
+    "feedbackWrong": "Escuchá de nuevo qué hay y dónde.",
+    "hint": "Oí la cosa y el lugar.",
+    "feedbackExtra": "There's a map in the room. = Hay un mapa en la sala. There's = there is: hay una cosa.",
+    "scaffold": {
+      "altExplanation": "El político dice qué hay en la sala: there is (o there's) y una sola cosa. Escuchá la cosa y el lugar."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Elige el reloj",
+          "hacer": "Preguntale qué cosa oyó."
+        },
+        {
+          "si": "Elige el río",
+          "hacer": "Preguntale dónde: ¿room o river?"
+        }
+      ],
+      "variaciones": [
+        "Que diga qué más hay en la sala."
+      ],
+      "decis": [
+        "Listen again. What is there? Where?"
       ]
     }
   },
@@ -13987,12 +14897,12 @@ const EXERCISES_M0 = [
             {
               "titulo": "There are two windows.",
               "texto": "Hay dos ventanas.",
-              "img": _ASSET_DEDUP_66
+              "img": _ASSET_DEDUP_67
             },
             {
               "titulo": "There are eight desks.",
               "texto": "Hay ocho pupitres.",
-              "img": _ASSET_DEDUP_67
+              "img": _ASSET_DEDUP_68
             },
             {
               "titulo": "There are three computers.",
@@ -14001,7 +14911,7 @@ const EXERCISES_M0 = [
             }
           ]
         },
-        "audio": "../pdp-assets/bd6e76ea7840ee2e455643de433d3427.mp3"
+        "audio": _ASSET_DEDUP_69
       },
       {
         "proposito": "ensenanza",
@@ -14021,9 +14931,75 @@ const EXERCISES_M0 = [
           }
         ],
         "idea": "Los números para contar cosas. eleven · twelve · thirteen · fifteen · twenty · thirty twenty-five = del 21 al 29 va con guion",
-        "audio": "../pdp-assets/9602eb41de6a2309ede28ccd314a83ad.mp3"
+        "audio": _ASSET_DEDUP_70
       }
-    ]
+    ],
+    "modo": "personal"
+  },
+  {
+    "id": "EN-A2-U02-489",
+    "status": "draft",
+    "nivelId": "m0-n5",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "decir cuántas cosas hay",
+    "feedback": "Ya sabés decir cuántas cosas hay.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Ahora, varias cosas.",
+        "title": "There are…",
+        "regla": "Para decir que hay varias cosas: **there are**.",
+        "notas": [
+          "Con varias cosas la palabra termina en s: window → windows."
+        ],
+        "idea": "Para decir que hay varias cosas: there are. Con varias cosas la palabra termina en s: window → windows.",
+        "media": {
+          "tipo": "tres",
+          "items": [
+            {
+              "titulo": "There are politicians.",
+              "texto": "Hay políticos.",
+              "img": _ASSET_DEDUP_58
+            },
+            {
+              "titulo": "There are tunnels.",
+              "texto": "Hay túneles.",
+              "img": _ASSET_DEDUP_71
+            },
+            {
+              "titulo": "There are boats.",
+              "texto": "Hay barcos.",
+              "img": _ASSET_DEDUP_72
+            }
+          ]
+        },
+        "audio": _ASSET_DEDUP_69
+      },
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Para contar.",
+        "title": "Los números",
+        "regla": "Los números para contar cosas.",
+        "fichas": [
+          {
+            "en": "eleven · twelve · thirteen · fifteen · twenty · thirty",
+            "rotulo": "DEL 11 AL 30"
+          },
+          {
+            "en": "twenty-five",
+            "es": "del 21 al 29 va con guion",
+            "rotulo": "CON GUION"
+          }
+        ],
+        "idea": "Los números para contar cosas. eleven · twelve · thirteen · fifteen · twenty · thirty twenty-five = del 21 al 29 va con guion",
+        "audio": _ASSET_DEDUP_70
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-054",
@@ -14037,11 +15013,11 @@ const EXERCISES_M0 = [
     "vozEntrada": "There is a board and a clock. There are twenty chairs.",
     "audio": "../pdp-assets/7cc9a9026f6ba13383a83cd6d14c78b1.mp3",
     "options": [
-      "Hay una pizarra y una puerta. Hay veinte sillas.",
       "Hay una pizarra y un reloj. Hay veinte sillas.",
-      "Hay una pizarra y un reloj. Hay quince sillas."
+      "Hay una pizarra y un reloj. Hay quince sillas.",
+      "Hay una pizarra y una puerta. Hay veinte sillas."
     ],
-    "correct": 1,
+    "correct": 0,
     "feedback": "¡Eso! Una pizarra, un reloj y veinte sillas.",
     "feedbackWrong": "Escuchá de nuevo: ¿qué cosas hay y cuántas sillas?",
     "hint": "Fijate en las cosas y en el número.",
@@ -14049,6 +15025,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Hay dos partes: lo que hay una sola vez y lo que hay varias veces. Escuchá las cosas y el número."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -14065,6 +15042,51 @@ const EXERCISES_M0 = [
       ],
       "decis": [
         "Listen again. Fifteen or twenty?"
+      ]
+    }
+  },
+  {
+    "id": "EN-A2-U02-754",
+    "status": "draft",
+    "nivelId": "m0-n5",
+    "kind": "listen",
+    "stage": "Reconocimiento",
+    "skill": "COMP_01",
+    "difficulty": 1,
+    "question": "Escuchá. ¿Qué dice?",
+    "vozEntrada": "There is a map and a plan. There are twenty politicians.",
+    "audio": "../pdp-assets/ec9eacd8bd988e576688bf1b5c6259fd.mp3",
+    "options": [
+      "Hay un mapa y un plan. Hay quince políticos.",
+      "Hay un mapa y una ventana. Hay veinte políticos.",
+      "Hay un mapa y un plan. Hay veinte políticos."
+    ],
+    "correct": 2,
+    "feedback": "¡Eso! Hay un mapa, un plan y veinte políticos.",
+    "feedbackWrong": "Escuchá de nuevo: ¿qué cosas hay y cuántos políticos?",
+    "hint": "¿Qué cosas? ¿Cuántos?",
+    "feedbackExtra": "There is a map and a plan. There are twenty politicians. There is para cada cosa sola; there are para varios.",
+    "scaffold": {
+      "altExplanation": "Primero nombra dos cosas sueltas (there is) y después cuántos políticos hay (there are y el número)."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Elige quince",
+          "hacer": "Preguntale qué número oyó."
+        },
+        {
+          "si": "Elige la ventana",
+          "hacer": "Preguntale qué dos cosas oyó primero."
+        }
+      ],
+      "variaciones": [
+        "Que cuente cuántas personas hay en el aula con there are."
+      ],
+      "decis": [
+        "Listen again. How many politicians?"
       ]
     }
   },
@@ -14098,6 +15120,7 @@ const EXERCISES_M0 = [
     "feedback": "¡Bien! Encontraste los cuatro pares.",
     "feedbackWrong": "Esas dos no son el mismo número: buscá la misma cantidad.",
     "feedbackExtra": "13 thirteen · 15 fifteen · 21 twenty-one · 30 thirty.",
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -14110,6 +15133,53 @@ const EXERCISES_M0 = [
       ],
       "decis": [
         "Which number is thirteen?"
+      ]
+    }
+  },
+  {
+    "id": "EN-A2-U02-757",
+    "status": "draft",
+    "nivelId": "m0-n5",
+    "kind": "memory",
+    "stage": "Asociación",
+    "skill": "ASOC_01",
+    "difficulty": 2,
+    "question": "Encontrá los pares: cuántos trabajadores hay en cada túnel, en inglés y en cifras.",
+    "pairs": [
+      {
+        "a": "twelve",
+        "b": "12"
+      },
+      {
+        "a": "eighteen",
+        "b": "18"
+      },
+      {
+        "a": "twenty-five",
+        "b": "25"
+      },
+      {
+        "a": "thirty",
+        "b": "30"
+      }
+    ],
+    "feedback": "¡Bien! Encontraste los cuatro pares.",
+    "feedbackWrong": "Esas dos no son el mismo número: buscá la misma cantidad.",
+    "feedbackExtra": "12 twelve · 18 eighteen · 25 twenty-five · 30 thirty.",
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Junta 12 con twenty",
+          "hacer": "Leé los dos números en voz alta."
+        }
+      ],
+      "variaciones": [
+        "Que diga cada número en inglés cuando lo encuentra."
+      ],
+      "decis": [
+        "Twelve: which number?"
       ]
     }
   },
@@ -14135,16 +15205,16 @@ const EXERCISES_M0 = [
             {
               "titulo": "There isn't a clock.",
               "texto": "No hay un reloj.",
-              "img": _ASSET_DEDUP_68
+              "img": _ASSET_DEDUP_73
             },
             {
               "titulo": "There aren't any computers.",
               "texto": "No hay computadoras.",
-              "img": _ASSET_DEDUP_69
+              "img": _ASSET_DEDUP_74
             }
           ]
         },
-        "audio": "../pdp-assets/8e6686264d577d4082683286b6b4af0d.mp3"
+        "audio": _ASSET_DEDUP_75
       },
       {
         "proposito": "ensenanza",
@@ -14163,9 +15233,66 @@ const EXERCISES_M0 = [
             "There isn't any computers."
           ]
         },
-        "audio": "../pdp-assets/66240ad847c60ae79ca75ff1ac0a1e35.mp3"
+        "audio": _ASSET_DEDUP_76
       }
-    ]
+    ],
+    "modo": "personal"
+  },
+  {
+    "id": "EN-A2-U02-490",
+    "status": "draft",
+    "nivelId": "m0-n5",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "decir qué no hay",
+    "feedback": "Ya sabés decir qué no hay.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "¿Y lo que no hay?",
+        "title": "There isn't… There aren't any…",
+        "regla": "Para decir que NO hay: **there isn't** (una cosa) y **there aren't any** (varias).",
+        "idea": "Para decir que NO hay: there isn't (una cosa) y there aren't any (varias).",
+        "media": {
+          "tipo": "tres",
+          "items": [
+            {
+              "titulo": "There isn't a good system.",
+              "texto": "No hay un buen sistema.",
+              "img": _ASSET_DEDUP_72
+            },
+            {
+              "titulo": "There aren't any tunnels.",
+              "texto": "No hay túneles (todavía).",
+              "img": _ASSET_DEDUP_66
+            }
+          ]
+        },
+        "audio": _ASSET_DEDUP_75
+      },
+      {
+        "proposito": "ensenanza",
+        "block": "compare",
+        "voz": "Any va en la negación.",
+        "correcto": {
+          "titulo": "✓ Así sí",
+          "items": [
+            "There aren't any tunnels."
+          ]
+        },
+        "incorrecto": {
+          "titulo": "✗ Así no",
+          "items": [
+            "There aren't tunnels.",
+            "There isn't any tunnels."
+          ]
+        },
+        "audio": _ASSET_DEDUP_76
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-055",
@@ -14179,11 +15306,11 @@ const EXERCISES_M0 = [
     "vozEntrada": "There isn't a computer. There aren't any chairs.",
     "audio": "../pdp-assets/a775216e6b9ee053de366bb948688500.mp3",
     "options": [
+      "No hay una computadora. Hay sillas.",
       "No hay una computadora. No hay sillas.",
-      "Hay una computadora. No hay sillas.",
-      "No hay una computadora. Hay sillas."
+      "Hay una computadora. No hay sillas."
     ],
-    "correct": 0,
+    "correct": 1,
     "feedback": "¡Eso! isn't y aren't dicen que no hay.",
     "feedbackWrong": "Escuchá de nuevo: ¿cada frase dice que hay o que no hay?",
     "hint": "Fijate qué sigue a there en cada frase.",
@@ -14191,6 +15318,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Con isn't y aren't se dice que no hay. Escuchá cuál oís en cada frase."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -14207,6 +15335,47 @@ const EXERCISES_M0 = [
       ],
       "decis": [
         "Listen again. Is there a computer?"
+      ]
+    }
+  },
+  {
+    "id": "EN-A2-U02-755",
+    "status": "draft",
+    "nivelId": "m0-n5",
+    "kind": "listen",
+    "stage": "Reconocimiento",
+    "skill": "COMP_01",
+    "difficulty": 2,
+    "question": "Escuchá a un político. ¿Qué dice de Londres?",
+    "vozEntrada": "There isn't a good system. There aren't any tunnels.",
+    "audio": "../pdp-assets/b1c67992edddca2e0f5f6b6669917c6c.mp3",
+    "options": [
+      "No hay un buen sistema. No hay túneles.",
+      "Hay un buen sistema. No hay túneles.",
+      "No hay un buen sistema. Hay túneles."
+    ],
+    "correct": 0,
+    "feedback": "¡Eso! There isn't y there aren't any dicen que no hay.",
+    "feedbackWrong": "Escuchá de nuevo: ¿cada frase dice que hay o que no hay?",
+    "hint": "¿Hay o no hay?",
+    "feedbackExtra": "There isn't a good system. = No hay un buen sistema. There aren't any tunnels. = No hay túneles. n't dice que no hay.",
+    "scaffold": {
+      "altExplanation": "Antes de Bazalgette, Londres no tiene sistema ni túneles: escuchá si cada frase lleva n't."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Elige «Hay un buen sistema»",
+          "hacer": "Preguntale qué oyó después de there en la primera frase: ¿is o isn't?"
+        }
+      ],
+      "variaciones": [
+        "Que diga qué NO hay en su barrio con there isn't."
+      ],
+      "decis": [
+        "Is there a good system? Yes or no?"
       ]
     }
   },
@@ -14270,7 +15439,7 @@ const EXERCISES_M0 = [
       "registra": "Una marca para el momento: solo / con ayuda / todavía no."
     },
     "experienciaProfe": "PRF-PRO-03",
-    "image": _ASSET_DEDUP_70,
+    "image": _ASSET_DEDUP_77,
     "imageAlt": "Un aula vacía: pizarra, reloj, dos ventanas y pupitres con sus sillas."
   },
   {
@@ -14396,6 +15565,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Si la frase tiene n't, dice que no hay; si no, dice que hay."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -14410,6 +15580,405 @@ const EXERCISES_M0 = [
         "Is it \"there is\" or \"there isn't\"?"
       ]
     }
+  },
+  {
+    "id": "EN-A2-U02-756",
+    "status": "draft",
+    "nivelId": "m0-n5",
+    "kind": "classify",
+    "stage": "Asociación",
+    "skill": "CLAS_01",
+    "difficulty": 2,
+    "question": "¿Dice que hay algo o que no hay? Poné cada frase en su grupo.",
+    "items": [
+      "There is a big river.",
+      "There isn't a good system.",
+      "There are twenty politicians.",
+      "There aren't any tunnels."
+    ],
+    "categories": [
+      "Hay",
+      "No hay"
+    ],
+    "correct": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "feedback": "¡Bien! Con isn't y aren't no hay; con is y are, hay.",
+    "feedbackWrong": "Alguna frase está en el otro grupo: fijate cuáles dicen que no hay.",
+    "hint": "Buscá n't en cada frase.",
+    "feedbackExtra": "there is / there are = hay · there isn't / there aren't any = no hay.",
+    "scaffold": {
+      "altExplanation": "En Londres hay un río grande y muchos políticos, pero no hay sistema ni túneles: buscá n't en cada frase."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Pone «There aren't any tunnels» en Hay",
+          "hacer": "Preguntale qué quiere decir n't."
+        }
+      ],
+      "variaciones": [
+        "Que lea cada frase en voz alta."
+      ],
+      "decis": [
+        "Is there or isn't there?"
+      ]
+    }
+  },
+  {
+    "id": "EN-A2-U02-911",
+    "status": "draft",
+    "nivelId": "m0-n5",
+    "kind": "mundo",
+    "ordenFijo": true,
+    "stage": "Producción guiada",
+    "skill": "PROD_01",
+    "difficulty": 2,
+    "question": "Uní cada dato con lo que dice el político.",
+    "feedback": "¡Todas las cuerdas se iluminaron!",
+    "feedbackWrong": "Mirá las filas marcadas: ahí está la pista.",
+    "hint": "Empezá por la primera fila marcada.",
+    "scaffold": {
+      "altExplanation": "Cada dato tiene una sola cuerda. Si una quedó en ámbar, esa unión no coincide: soltala tocando su extremo y probá con otra."
+    },
+    "feedbackExtra": "Leé el dato: si hay una cosa, va there is; si hay varias, there are; si no hay, isn't o aren't any.",
+    "mundo": {
+      "id": "mundo-cuerdas-cuerdas_londres_clase_l5",
+      "tipo": "cuerdas",
+      "nombre": "Cuerdas - datos",
+      "unidad": "en-a2-u02-things-and-school",
+      "leccion": "L5",
+      "desde": [
+        "EN-A2-U02-755",
+        "EN-A2-U02-756"
+      ],
+      "titulo": "Uní cada dato con lo que dice el político.",
+      "consigna": {
+        "banner": "Un político cuenta qué hay y qué no hay en Londres. Uní cada dato con la frase en inglés que lo dice.",
+        "tip": "Tocá uno de la izquierda y después el que le corresponde a la derecha. Para soltar una cuerda, tocá su extremo."
+      },
+      "escena": {
+        "hablante": "Un político",
+        "receptor": "el capitán",
+        "imagen": "a2u02-londres-rio",
+        "tablero": "Unir",
+        "rotuloIzq": "EL DATO",
+        "rotuloDer": "EN INGLÉS",
+        "marcoCuerdas": "mundo-marco-cuerdas",
+        "cartel": "mundo-cartel-oro",
+        "marcoImg": _ASSET_DEDUP_37,
+        "cartelImg": _ASSET_DEDUP_38
+      },
+      "vocab": {
+        "dato": [
+          "cuerda",
+          "cuerdas"
+        ],
+        "referencia": "lo que dice el marinero",
+        "receptor": "el capitán",
+        "pieza": [
+          "unión",
+          "uniones"
+        ],
+        "sobra": [
+          "cuerda de más",
+          "cuerdas de más"
+        ],
+        "falta": [
+          "cuerda",
+          "cuerdas"
+        ]
+      },
+      "textos": {
+        "okTitulo": "¡Todas las cuerdas se iluminaron!",
+        "okTexto": "Cada uno quedó unido con lo que le corresponde.",
+        "casiTitulo": "Casi."
+      },
+      "reacciones": {
+        "ok": "",
+        "distinto": "",
+        "no-entendio": "",
+        "sobra": ""
+      },
+      "ayudas": [
+        "Cada dato tiene una sola cuerda. Si una quedó en ámbar, esa unión no coincide: soltala tocando su extremo y probá con otra.",
+        "Leé el dato: si hay una cosa, va there is; si hay varias, there are; si no hay, isn't o aren't any."
+      ],
+      "demo": {
+        "error": {
+          "h_rio": "rio__x",
+          "h_plan": "plan__p",
+          "h_tuneles": "tuneles__t",
+          "h_barcos": "barcos__p"
+        }
+      },
+      "enListado": false,
+      "modo": "clase",
+      "ambientacion": "cuento",
+      "_nota": "Mundo de clase ambientado en «El barco sin nadie» (fuente: generadores/mundos_clase_u02.py; molde: cuerdas_datos_l1 de A2 U01).",
+      "cuerdas": {
+        "izquierda": [
+          {
+            "id": "rio",
+            "texto": "Hay un río."
+          },
+          {
+            "id": "plan",
+            "texto": "No hay un plan."
+          },
+          {
+            "id": "tuneles",
+            "texto": "Hay dos túneles."
+          },
+          {
+            "id": "barcos",
+            "texto": "No hay barcos."
+          }
+        ],
+        "derecha": [
+          {
+            "id": "r",
+            "texto": "There is a river."
+          },
+          {
+            "id": "p",
+            "texto": "There isn't a plan."
+          },
+          {
+            "id": "t",
+            "texto": "There are two tunnels."
+          },
+          {
+            "id": "b",
+            "texto": "There aren't any boats."
+          },
+          {
+            "id": "x",
+            "texto": "There isn't a river."
+          }
+        ]
+      },
+      "campos": [
+        {
+          "id": "rio",
+          "etiqueta": "Hay un río."
+        },
+        {
+          "id": "plan",
+          "etiqueta": "No hay un plan."
+        },
+        {
+          "id": "tuneles",
+          "etiqueta": "Hay dos túneles."
+        },
+        {
+          "id": "barcos",
+          "etiqueta": "No hay barcos."
+        }
+      ],
+      "objetivo": {
+        "rio": "There is a river.",
+        "plan": "There isn't a plan.",
+        "tuneles": "There are two tunnels.",
+        "barcos": "There aren't any boats."
+      },
+      "piezas": [
+        {
+          "id": "rio__r",
+          "texto": "There is a river.",
+          "efecto": {
+            "rio": "There is a river."
+          }
+        },
+        {
+          "id": "rio__p",
+          "texto": "There isn't a plan.",
+          "efecto": {
+            "rio": "There isn't a plan."
+          }
+        },
+        {
+          "id": "rio__t",
+          "texto": "There are two tunnels.",
+          "efecto": {
+            "rio": "There are two tunnels."
+          }
+        },
+        {
+          "id": "rio__b",
+          "texto": "There aren't any boats.",
+          "efecto": {
+            "rio": "There aren't any boats."
+          }
+        },
+        {
+          "id": "rio__x",
+          "texto": "There isn't a river.",
+          "efecto": {
+            "rio": "There isn't a river."
+          }
+        },
+        {
+          "id": "plan__r",
+          "texto": "There is a river.",
+          "efecto": {
+            "plan": "There is a river."
+          }
+        },
+        {
+          "id": "plan__p",
+          "texto": "There isn't a plan.",
+          "efecto": {
+            "plan": "There isn't a plan."
+          }
+        },
+        {
+          "id": "plan__t",
+          "texto": "There are two tunnels.",
+          "efecto": {
+            "plan": "There are two tunnels."
+          }
+        },
+        {
+          "id": "plan__b",
+          "texto": "There aren't any boats.",
+          "efecto": {
+            "plan": "There aren't any boats."
+          }
+        },
+        {
+          "id": "plan__x",
+          "texto": "There isn't a river.",
+          "efecto": {
+            "plan": "There isn't a river."
+          }
+        },
+        {
+          "id": "tuneles__r",
+          "texto": "There is a river.",
+          "efecto": {
+            "tuneles": "There is a river."
+          }
+        },
+        {
+          "id": "tuneles__p",
+          "texto": "There isn't a plan.",
+          "efecto": {
+            "tuneles": "There isn't a plan."
+          }
+        },
+        {
+          "id": "tuneles__t",
+          "texto": "There are two tunnels.",
+          "efecto": {
+            "tuneles": "There are two tunnels."
+          }
+        },
+        {
+          "id": "tuneles__b",
+          "texto": "There aren't any boats.",
+          "efecto": {
+            "tuneles": "There aren't any boats."
+          }
+        },
+        {
+          "id": "tuneles__x",
+          "texto": "There isn't a river.",
+          "efecto": {
+            "tuneles": "There isn't a river."
+          }
+        },
+        {
+          "id": "barcos__r",
+          "texto": "There is a river.",
+          "efecto": {
+            "barcos": "There is a river."
+          }
+        },
+        {
+          "id": "barcos__p",
+          "texto": "There isn't a plan.",
+          "efecto": {
+            "barcos": "There isn't a plan."
+          }
+        },
+        {
+          "id": "barcos__t",
+          "texto": "There are two tunnels.",
+          "efecto": {
+            "barcos": "There are two tunnels."
+          }
+        },
+        {
+          "id": "barcos__b",
+          "texto": "There aren't any boats.",
+          "efecto": {
+            "barcos": "There aren't any boats."
+          }
+        },
+        {
+          "id": "barcos__x",
+          "texto": "There isn't a river.",
+          "efecto": {
+            "barcos": "There isn't a river."
+          }
+        }
+      ],
+      "huecos": [
+        {
+          "id": "h_rio",
+          "rotulo": "Hay un río.",
+          "opciones": [
+            "rio__r",
+            "rio__p",
+            "rio__t",
+            "rio__b",
+            "rio__x"
+          ]
+        },
+        {
+          "id": "h_plan",
+          "rotulo": "No hay un plan.",
+          "opciones": [
+            "plan__r",
+            "plan__p",
+            "plan__t",
+            "plan__b",
+            "plan__x"
+          ]
+        },
+        {
+          "id": "h_tuneles",
+          "rotulo": "Hay dos túneles.",
+          "opciones": [
+            "tuneles__r",
+            "tuneles__p",
+            "tuneles__t",
+            "tuneles__b",
+            "tuneles__x"
+          ]
+        },
+        {
+          "id": "h_barcos",
+          "rotulo": "No hay barcos.",
+          "opciones": [
+            "barcos__r",
+            "barcos__p",
+            "barcos__t",
+            "barcos__b",
+            "barcos__x"
+          ]
+        }
+      ]
+    },
+    "avatar": _ASSET_DEDUP_72,
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-305",
@@ -14453,13 +16022,66 @@ const EXERCISES_M0 = [
             {
               "titulo": "There are two windows.",
               "texto": "Hay dos ventanas.",
-              "img": _ASSET_DEDUP_66
+              "img": _ASSET_DEDUP_67
             }
           ]
         },
         "audio": _ASSET_DEDUP_22
       }
-    ]
+    ],
+    "modo": "personal"
+  },
+  {
+    "id": "EN-A2-U02-335",
+    "status": "draft",
+    "nivelId": "m0-n5",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "recordar la regla antes de escribir",
+    "feedback": "Listo: ya te acordás de la regla.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Antes de escribir, un recordatorio.",
+        "title": "Recordá",
+        "regla": "Contá las cosas: **there is** si es una, **there are** si son varias.",
+        "fichas": [
+          {
+            "en": "There's a map.",
+            "es": "Hay un mapa.",
+            "rotulo": "UNA COSA"
+          },
+          {
+            "en": "There are two tunnels.",
+            "es": "Hay dos túneles.",
+            "rotulo": "VARIAS COSAS"
+          }
+        ],
+        "notas": [
+          "Para decir que no hay: isn't / aren't any."
+        ],
+        "idea": "Contá las cosas: there is si es una, there are si son varias. There's a map. = Hay un mapa. There are two tunnels. = Hay dos túneles. Para decir que no hay: isn't / aren't any.",
+        "media": {
+          "tipo": "tres",
+          "items": [
+            {
+              "titulo": "There's a map.",
+              "texto": "Hay un mapa.",
+              "img": _ASSET_DEDUP_59
+            },
+            {
+              "titulo": "There are tunnels.",
+              "texto": "Hay túneles.",
+              "img": _ASSET_DEDUP_71
+            }
+          ]
+        },
+        "audio": _ASSET_DEDUP_22
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-058",
@@ -14496,6 +16118,7 @@ const EXERCISES_M0 = [
       },
       "altExplanation": "Doce es más de una: cuando hay varias cosas, la palabra termina en s y va there are."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -14512,6 +16135,62 @@ const EXERCISES_M0 = [
       ],
       "decis": [
         "How many desks? One or more?"
+      ]
+    }
+  },
+  {
+    "id": "EN-A2-U02-758",
+    "status": "draft",
+    "nivelId": "m0-n5",
+    "kind": "word-bank",
+    "stage": "Producción guiada",
+    "skill": "PROD_01",
+    "difficulty": 2,
+    "question": "Completá lo que dice el ingeniero de su plan.",
+    "sentence": "THE ENGINEER: There ___ two big tunnels in my plan.",
+    "bank": [
+      "isn't",
+      "are",
+      "is"
+    ],
+    "correct": 1,
+    "answers": [
+      "are"
+    ],
+    "feedback": "¡Eso! Son dos túneles: con varias cosas va are.",
+    "feedbackWrong": "Fijate cuántas cosas hay y qué forma va con esa cantidad.",
+    "hint": "Mirá cuántos túneles hay.",
+    "feedbackExtra": "There are two big tunnels in my plan. = Hay dos túneles grandes en mi plan. Con varias cosas va there are.",
+    "scaffold": {
+      "example": {
+        "label": "Un caso más simple: una sola cosa",
+        "steps": [
+          {
+            "math": "There ___ a map in my plan. → There is a map.",
+            "reason": "Con una sola cosa va is; con varias, la otra forma."
+          }
+        ]
+      },
+      "altExplanation": "El plan del ingeniero tiene dos túneles: con varias cosas la forma es la de plural."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Elige is",
+          "hacer": "Preguntale cuántos túneles son."
+        },
+        {
+          "si": "Elige isn't",
+          "hacer": "¿El plan tiene túneles o no?"
+        }
+      ],
+      "variaciones": [
+        "Que diga la frase completa en voz alta."
+      ],
+      "decis": [
+        "How many tunnels: one or two?"
       ]
     }
   },
@@ -14551,6 +16230,7 @@ const EXERCISES_M0 = [
       },
       "altExplanation": "Contá las cosas: si son varias, la palabra después de there cambia."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -14567,6 +16247,59 @@ const EXERCISES_M0 = [
     },
     "image": "../pdp-assets/07dcc7b8c3441239c879ec026d94d630.jpg",
     "imageAlt": "Maya señala distintas cosas de un aula mientras la describe."
+  },
+  {
+    "id": "EN-A2-U02-759",
+    "status": "draft",
+    "nivelId": "m0-n5",
+    "kind": "error-find",
+    "stage": "Producción guiada",
+    "skill": "CORR_01",
+    "difficulty": 2,
+    "question": "Un político describe la sala, pero hay un error. Tocá la palabra que está mal y corregila.",
+    "sentence": [
+      "There",
+      "is",
+      "fifteen",
+      "windows",
+      "in",
+      "the",
+      "room."
+    ],
+    "errorIndex": 1,
+    "correction": "are",
+    "feedback": "¡Eso! Con varias cosas va esa palabra.",
+    "feedbackWrong": "Una palabra no es la que va con varias cosas.",
+    "hint": "Mirá la palabra después de there.",
+    "feedbackExtra": "There are fifteen windows in the room. Con varias cosas (fifteen windows) va there are.",
+    "scaffold": {
+      "example": {
+        "label": "Un caso más simple: con una sola cosa",
+        "steps": [
+          {
+            "math": "There is a window. There is a door.",
+            "reason": "Con una sola cosa va is; con varias, otra palabra."
+          }
+        ]
+      },
+      "altExplanation": "Son quince ventanas: con varias cosas la forma después de there cambia."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Marca windows",
+          "hacer": "Preguntale cuántas ventanas son y qué va con varias."
+        }
+      ],
+      "variaciones": [
+        "Que corrija otra: There is ten politicians."
+      ],
+      "decis": [
+        "Which word is wrong?"
+      ]
+    }
   },
   {
     "id": "EN-A2-U02-313",
@@ -14615,7 +16348,7 @@ const EXERCISES_M0 = [
             {
               "titulo": "desks",
               "texto": "pupitres",
-              "img": _ASSET_DEDUP_67
+              "img": _ASSET_DEDUP_68
             }
           ]
         },
@@ -14641,7 +16374,85 @@ const EXERCISES_M0 = [
         },
         "audio": _ASSET_DEDUP_25
       }
-    ]
+    ],
+    "modo": "personal"
+  },
+  {
+    "id": "EN-A2-U02-343",
+    "status": "draft",
+    "nivelId": "m0-n5",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "repasar lo que aprendiste antes de la prueba",
+    "feedback": "Listo: repasaste lo que aprendiste.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Lo que aprendiste en esta lección.",
+        "title": "Lo que aprendiste",
+        "regla": "En esta lección aprendiste estas cosas.",
+        "fichas": [
+          {
+            "en": "There's a window.",
+            "es": "una cosa",
+            "rotulo": "UNA"
+          },
+          {
+            "en": "There are twelve politicians.",
+            "es": "varias cosas",
+            "rotulo": "VARIAS"
+          },
+          {
+            "en": "There aren't any tunnels.",
+            "es": "lo que NO hay",
+            "rotulo": "NO HAY"
+          }
+        ],
+        "notas": [
+          "Ahora, la prueba de la lección."
+        ],
+        "idea": "En esta lección aprendiste estas cosas. There's a window. = una cosa There are twelve politicians. = varias cosas There aren't any tunnels. = lo que NO hay Ahora, la prueba de la lección.",
+        "media": {
+          "tipo": "tres",
+          "items": [
+            {
+              "titulo": "a window",
+              "texto": "una ventana",
+              "img": _ASSET_DEDUP_66
+            },
+            {
+              "titulo": "politicians",
+              "texto": "políticos",
+              "img": _ASSET_DEDUP_58
+            }
+          ]
+        },
+        "audio": _ASSET_DEDUP_24
+      },
+      {
+        "proposito": "ensenanza",
+        "block": "compare",
+        "voz": "Ojo con esto.",
+        "correcto": {
+          "titulo": "✓ Así sí",
+          "items": [
+            "There are two tunnels.",
+            "There isn't a good system."
+          ]
+        },
+        "incorrecto": {
+          "titulo": "✗ Así no",
+          "items": [
+            "There is two tunnels.",
+            "There aren't a good system."
+          ]
+        },
+        "audio": _ASSET_DEDUP_25
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "status": "published",
@@ -14651,20 +16462,20 @@ const EXERCISES_M0 = [
     "id": "EN-A2-U02-P22",
     "nivelId": "m0-n5",
     "forma": "pausa",
-    "question": "Contale a tu profe qué hay en el aula de un amigo (tarjeta).",
-    "tutor": "Mirá la tarjeta y contale cómo es el aula de Leo.",
+    "question": "Contale a tu profe qué hay en la sala del Parlamento.",
+    "tutor": "Imaginá la sala del Parlamento de la historia y contale a tu profe qué hay y qué no hay.",
     "paraProfe": {
       "criterios": [
-        "Usa there is, there are y there isn't según la tarjeta.",
-        "Dice los números de la tarjeta.",
+        "Usa there is, there are y there isn't según los datos.",
+        "Dice los números.",
         "Registrá cada frase como solo, con pista o no."
       ],
-      "objetivo": "Describir un aula distinta a la propia con datos de una tarjeta (variación de lugar).",
+      "objetivo": "Describir un lugar distinto del aula con los datos que da el profe (variación de lugar).",
       "decis": [
-        "Look at this card: Leo's classroom. What's in it? (tarjeta: una pizarra, dos puertas, doce sillas; no hay reloj)"
+        "The room in Parliament: what's in it? (inventado: una ventana grande, dos puertas, veinte sillas; no hay reloj)"
       ],
       "esperas": [
-        "There's a board. There are two doors. There are twelve chairs. There isn't a clock."
+        "There's a big window. There are two doors. There are twenty chairs. There isn't a clock."
       ],
       "variantes": [
         "There is…",
@@ -14691,16 +16502,16 @@ const EXERCISES_M0 = [
         },
         {
           "si": "Cuenta de su propia aula",
-          "hacer": "Señalá la tarjeta: \"And Leo's classroom?\"."
+          "hacer": "Preguntale: \"And the room in Parliament?\"."
         }
       ],
       "variaciones": [
-        "Que diga lo mismo de otra aula de otra tarjeta."
+        "Que diga lo mismo de la oficina del ingeniero, inventando qué hay."
       ],
       "registra": "Una marca para el momento: solo / con ayuda / todavía no."
     },
     "experienciaProfe": "PRF-TRA-04",
-    "image": _ASSET_DEDUP_68,
+    "image": _ASSET_DEDUP_73,
     "imageAlt": "El aula de Leo: una pizarra, dos puertas y doce sillas. No hay reloj."
   },
   {
@@ -14731,6 +16542,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Primero there y la forma para varias cosas, después el número y la cosa en plural."
     },
+    "modo": "personal",
     "paraProfe": {
       "variantes": [
         "There are thirty chairs in the classroom."
@@ -14742,6 +16554,57 @@ const EXERCISES_M0 = [
         },
         {
           "si": "Escribe \"There are thirty chair\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-761",
+    "status": "draft",
+    "nivelId": "m0-n5",
+    "kind": "fill",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "PROD_01",
+    "difficulty": 3,
+    "question": "Escribí con there que en la sala hay treinta políticos (el número con letras).",
+    "answer": "There are thirty politicians.",
+    "acceptVariants": [
+      "There are thirty politicians.",
+      "There are thirty politicians",
+      "there are thirty politicians.",
+      "there are thirty politicians",
+      "There are thirty politicians in the room.",
+      "There are thirty politicians in the room",
+      "there are thirty politicians in the room.",
+      "there are thirty politicians in the room"
+    ],
+    "feedback": "¡Eso! Así se dice cuántas personas hay.",
+    "feedbackWrong": "Escribí la frase completa: there, la forma que va con varias cosas, el número y la palabra en plural.",
+    "hint": "Pensá cuántos son y cómo se escribe la cantidad.",
+    "feedbackExtra": "There are thirty politicians. = Hay treinta políticos. Con varios va there are y la palabra termina en s.",
+    "scaffold": {
+      "altExplanation": "Primero there y la forma para varios, después el número y politicians."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "variantes": [
+        "There are thirty politicians in the room."
+      ],
+      "errores": [
+        {
+          "si": "Escribe \"There is thirty politicians\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        },
+        {
+          "si": "Escribe \"There are thirty politician\"",
           "hacer": "No intervenir. Registrar como error de forma."
         }
       ],
@@ -14780,11 +16643,57 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Contá las cosas: si es una sola, la palabra después de there cambia."
     },
+    "modo": "personal",
     "paraProfe": {
       "variantes": [],
       "errores": [
         {
           "si": "Marca computer o classroom",
+          "hacer": "No intervenir. Registrar como error de forma."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-762",
+    "status": "draft",
+    "nivelId": "m0-n5",
+    "kind": "error-find",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "CORR_01",
+    "difficulty": 3,
+    "question": "Un político dice qué no hay en la sala, pero hay un error. Tocá la palabra que está mal y corregila.",
+    "sentence": [
+      "There",
+      "aren't",
+      "a",
+      "phone",
+      "in",
+      "the",
+      "room."
+    ],
+    "errorIndex": 1,
+    "correction": "isn't",
+    "feedback": "¡Eso! Con una sola cosa va esa palabra.",
+    "feedbackWrong": "Una palabra no es la que va con una sola cosa.",
+    "hint": "Mirá la palabra que sigue a there.",
+    "feedbackExtra": "There isn't a phone in the room. Con una sola cosa (a phone) va there isn't. En 1858 no hay teléfonos.",
+    "scaffold": {
+      "altExplanation": "Es un solo teléfono: la negación con una sola cosa es otra."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "variantes": [],
+      "errores": [
+        {
+          "si": "Marca phone o room",
           "hacer": "No intervenir. Registrar como error de forma."
         }
       ],
@@ -14847,9 +16756,78 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Es la negación para varias cosas: la forma negativa de are, la palabra que acompaña y la cosa en plural."
     },
+    "modo": "personal",
     "paraProfe": {
       "variantes": [
         "There aren't any maps in the classroom."
+      ],
+      "errores": [
+        {
+          "si": "Escribe \"There aren't maps\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        },
+        {
+          "si": "Escribe \"There isn't any maps\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-763",
+    "status": "draft",
+    "nivelId": "m0-n5",
+    "kind": "fill",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "PROD_01",
+    "difficulty": 3,
+    "question": "Escribí con there que en Londres NO hay mapas del río.",
+    "answer": "There aren't any maps.",
+    "acceptVariants": [
+      "There aren't any maps.",
+      "There aren't any maps",
+      "there aren't any maps.",
+      "there aren't any maps",
+      "There aren’t any maps.",
+      "There aren’t any maps",
+      "there aren’t any maps.",
+      "there aren’t any maps",
+      "There aren't any maps of the river.",
+      "There aren't any maps of the river",
+      "there aren't any maps of the river.",
+      "there aren't any maps of the river",
+      "There aren’t any maps of the river.",
+      "There aren’t any maps of the river",
+      "there aren’t any maps of the river.",
+      "there aren’t any maps of the river",
+      "There are not any maps.",
+      "There are not any maps",
+      "there are not any maps.",
+      "there are not any maps",
+      "There are not any maps of the river.",
+      "There are not any maps of the river",
+      "there are not any maps of the river.",
+      "there are not any maps of the river"
+    ],
+    "feedback": "¡Eso! Así se dice que no hay varias cosas.",
+    "feedbackWrong": "Escribí la frase completa: there, la forma negativa que va con varias cosas y la cosa.",
+    "hint": "Pensá en lo que se usa para decir que no hay varias cosas.",
+    "feedbackExtra": "There aren't any maps. = No hay mapas. Con varias cosas: there aren't any y la cosa en plural.",
+    "scaffold": {
+      "altExplanation": "Es la negación para varias cosas: la forma negativa de are, la palabra que acompaña y la cosa en plural."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "variantes": [
+        "There aren't any maps of the river.",
+        "There are not any maps."
       ],
       "errores": [
         {
@@ -15058,19 +17036,19 @@ const EXERCISES_M0 = [
               "titulo": "in",
               "texto": "adentro de",
               "ejemplo": "The ball is in the box.",
-              "img": _ASSET_DEDUP_71
+              "img": _ASSET_DEDUP_78
             },
             {
               "titulo": "on",
               "texto": "sobre",
               "ejemplo": "The ball is on the box.",
-              "img": _ASSET_DEDUP_72
+              "img": _ASSET_DEDUP_79
             },
             {
               "titulo": "under",
               "texto": "debajo de",
               "ejemplo": "The ball is under the table.",
-              "img": _ASSET_DEDUP_73
+              "img": _ASSET_DEDUP_80
             }
           ]
         },
@@ -15092,25 +17070,26 @@ const EXERCISES_M0 = [
           "items": [
             {
               "titulo": "next to",
-              "img": _ASSET_DEDUP_74
+              "img": _ASSET_DEDUP_81
             },
             {
               "titulo": "behind",
-              "img": _ASSET_DEDUP_75
+              "img": _ASSET_DEDUP_82
             },
             {
               "titulo": "in front of",
-              "img": _ASSET_DEDUP_76
+              "img": _ASSET_DEDUP_83
             },
             {
               "titulo": "between",
-              "img": "../pdp-assets/93b293af60ee9a9f4173f9a922f19093.jpg"
+              "img": _ASSET_DEDUP_84
             }
           ]
         },
-        "audio": "../pdp-assets/6452665da70290b4a3df5a2f106e3e2a.mp3"
+        "audio": _ASSET_DEDUP_85
       }
     ],
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -15171,6 +17150,85 @@ const EXERCISES_M0 = [
     }
   },
   {
+    "id": "EN-A2-U02-764",
+    "status": "draft",
+    "nivelId": "m0-n6",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "decir dónde está algo",
+    "feedback": "Ya sabés decir dónde está algo.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Mirá dónde está cada cosa en Londres.",
+        "title": "in, on, under",
+        "regla": "Para decir dónde está algo usás una **palabra de lugar**.",
+        "idea": "Para decir dónde está algo usás una palabra de lugar.",
+        "media": {
+          "tipo": "tres",
+          "items": [
+            {
+              "titulo": "in",
+              "texto": "adentro de",
+              "ejemplo": "The politicians are in the room.",
+              "img": _ASSET_DEDUP_58
+            },
+            {
+              "titulo": "on",
+              "texto": "sobre",
+              "ejemplo": "The powder is on the curtains.",
+              "img": _ASSET_DEDUP_66
+            },
+            {
+              "titulo": "under",
+              "texto": "debajo de",
+              "ejemplo": "The tunnels are under the city.",
+              "img": _ASSET_DEDUP_71
+            }
+          ]
+        },
+        "audio": "../pdp-assets/516db48b807bb7e271e344d8a0b4c251.mp3"
+      },
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Hay más palabras de lugar.",
+        "title": "next to, behind, in front of, between",
+        "regla": "Hay más palabras de lugar.",
+        "notas": [
+          "**next to** = al lado de · **behind** = detrás de",
+          "**in front of** = delante de · **between** = entre"
+        ],
+        "idea": "Hay más palabras de lugar. next to = al lado de · behind = detrás de in front of = delante de · between = entre",
+        "media": {
+          "tipo": "rejilla",
+          "items": [
+            {
+              "titulo": "next to",
+              "img": _ASSET_DEDUP_81
+            },
+            {
+              "titulo": "behind",
+              "img": _ASSET_DEDUP_82
+            },
+            {
+              "titulo": "in front of",
+              "img": _ASSET_DEDUP_83
+            },
+            {
+              "titulo": "between",
+              "img": _ASSET_DEDUP_84
+            }
+          ]
+        },
+        "audio": _ASSET_DEDUP_85
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
+  },
+  {
     "id": "EN-A2-U02-065",
     "status": "draft",
     "nivelId": "m0-n6",
@@ -15194,6 +17252,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "En cada frase hay una cosa y un lugar. Escuchá la palabra de lugar de cada una."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -15210,6 +17269,51 @@ const EXERCISES_M0 = [
       ],
       "decis": [
         "Listen again. On or under?"
+      ]
+    }
+  },
+  {
+    "id": "EN-A2-U02-765",
+    "status": "draft",
+    "nivelId": "m0-n6",
+    "kind": "listen",
+    "stage": "Reconocimiento",
+    "skill": "COMP_01",
+    "difficulty": 1,
+    "question": "Escuchá al ingeniero. ¿Qué dice?",
+    "vozEntrada": "The map is on the table. The bag is under the chair.",
+    "audio": "../pdp-assets/6a0018c6d87c0c64ba7b9b64f405e4d6.mp3",
+    "options": [
+      "El mapa está sobre la mesa. La mochila está detrás de la silla.",
+      "El mapa está sobre la mesa. La mochila está debajo de la silla.",
+      "El mapa está debajo de la mesa. La mochila está debajo de la silla."
+    ],
+    "correct": 1,
+    "feedback": "¡Eso! El mapa está sobre la mesa y la mochila, debajo de la silla.",
+    "feedbackWrong": "Escuchá de nuevo: ¿dónde está cada cosa?",
+    "hint": "Escuchá la palabra de lugar.",
+    "feedbackExtra": "The map is on the table. = El mapa está sobre la mesa. The bag is under the chair. = La mochila está debajo de la silla. on = sobre; under = debajo de.",
+    "scaffold": {
+      "altExplanation": "En cada frase el ingeniero dice una cosa y dónde está: la palabra de lugar va justo antes del mueble."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Elige «debajo de la mesa»",
+          "hacer": "Preguntale qué oyó antes de the table: ¿on o under?"
+        },
+        {
+          "si": "Elige «detrás de la silla»",
+          "hacer": "Preguntale qué oyó antes de the chair."
+        }
+      ],
+      "variaciones": [
+        "Que diga dónde está su mochila ahora."
+      ],
+      "decis": [
+        "Listen again. Where is the map?"
       ]
     }
   },
@@ -15246,10 +17350,10 @@ const EXERCISES_M0 = [
         "idea": "Para preguntar dónde está algo: Where's…? Where's the map? = ¿Dónde está el mapa? The map is on the shelf. = El mapa está sobre el estante. Where's = Where is.",
         "media": {
           "tipo": "hero",
-          "img": _ASSET_DEDUP_77,
+          "img": _ASSET_DEDUP_86,
           "alt": "Un rincón del aula: un estante junto a la ventana con un mapa encima y una silla debajo."
         },
-        "audio": "../pdp-assets/0d612de19aa9e092ac43fd634d94f588.mp3"
+        "audio": _ASSET_DEDUP_87
       },
       {
         "proposito": "ensenanza",
@@ -15269,7 +17373,7 @@ const EXERCISES_M0 = [
             "Where is map?"
           ]
         },
-        "audio": "../pdp-assets/a16466e5b6c1d79fb534aa739cd8fa32.mp3"
+        "audio": _ASSET_DEDUP_88
       },
       {
         "proposito": "ensenanza",
@@ -15287,18 +17391,108 @@ const EXERCISES_M0 = [
             {
               "titulo": "Is there a board?",
               "texto": "Yes, there is.",
-              "img": _ASSET_DEDUP_68
+              "img": _ASSET_DEDUP_73
             },
             {
               "titulo": "Are there any computers?",
               "texto": "No, there aren't.",
-              "img": _ASSET_DEDUP_69
+              "img": _ASSET_DEDUP_74
             }
           ]
         },
-        "audio": "../pdp-assets/f0cddb816b0499a9f5ea75e2d2c8929e.mp3"
+        "audio": _ASSET_DEDUP_89
       }
-    ]
+    ],
+    "modo": "personal"
+  },
+  {
+    "id": "EN-A2-U02-491",
+    "status": "draft",
+    "nivelId": "m0-n6",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "preguntar dónde está algo y si hay algo",
+    "feedback": "Ya sabés preguntar dónde está algo y si hay algo.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Para preguntar dónde está algo.",
+        "title": "Where's…?",
+        "regla": "Para preguntar dónde está algo: **Where's…?**",
+        "fichas": [
+          {
+            "en": "Where's the map?",
+            "es": "¿Dónde está el mapa?",
+            "rotulo": "PREGUNTA"
+          },
+          {
+            "en": "The map is on the table.",
+            "es": "El mapa está sobre la mesa.",
+            "rotulo": "RESPUESTA"
+          }
+        ],
+        "notas": [
+          "Where's = Where is."
+        ],
+        "idea": "Para preguntar dónde está algo: Where's…? Where's the map? = ¿Dónde está el mapa? The map is on the table. = El mapa está sobre la mesa. Where's = Where is.",
+        "media": {
+          "tipo": "hero",
+          "img": _ASSET_DEDUP_59,
+          "alt": "El ingeniero muestra su mapa, que está sobre la mesa, a los políticos."
+        },
+        "audio": _ASSET_DEDUP_87
+      },
+      {
+        "proposito": "ensenanza",
+        "block": "compare",
+        "voz": "Fijate cómo se pregunta.",
+        "correcto": {
+          "titulo": "✓ Así sí",
+          "items": [
+            "Where's the map?",
+            "Where is the map?"
+          ]
+        },
+        "incorrecto": {
+          "titulo": "✗ Así no",
+          "items": [
+            "Where the map is?",
+            "Where is map?"
+          ]
+        },
+        "audio": _ASSET_DEDUP_88
+      },
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Para preguntar si hay algo.",
+        "title": "Is there…? Are there…?",
+        "regla": "Para preguntar si hay: **Is there…?** (una cosa) y **Are there…?** (varias).",
+        "notas": [
+          "La respuesta repite there y is o are."
+        ],
+        "idea": "Para preguntar si hay: Is there…? (una cosa) y Are there…? (varias). La respuesta repite there y is o are.",
+        "media": {
+          "tipo": "tres",
+          "items": [
+            {
+              "titulo": "Is there a river?",
+              "texto": "Yes, there is.",
+              "img": _ASSET_DEDUP_72
+            },
+            {
+              "titulo": "Are there any tunnels?",
+              "texto": "No, there aren't.",
+              "img": _ASSET_DEDUP_66
+            }
+          ]
+        },
+        "audio": _ASSET_DEDUP_89
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-066",
@@ -15312,11 +17506,11 @@ const EXERCISES_M0 = [
     "vozEntrada": "Is there a map? Yes, there is. Where's the map? The map is behind the door.",
     "audio": "../pdp-assets/73b80080f74b3af6242357d112caa0a9.mp3",
     "options": [
-      "¿Hay un mapa? Sí, hay. ¿Dónde está el mapa? El mapa está delante de la puerta.",
       "¿Hay un mapa? Sí, hay. ¿Dónde está el mapa? El mapa está detrás de la puerta.",
-      "¿Hay un mapa? No, no hay. ¿Dónde está el mapa? El mapa está detrás de la puerta."
+      "¿Hay un mapa? No, no hay. ¿Dónde está el mapa? El mapa está detrás de la puerta.",
+      "¿Hay un mapa? Sí, hay. ¿Dónde está el mapa? El mapa está delante de la puerta."
     ],
-    "correct": 1,
+    "correct": 0,
     "feedback": "¡Eso! Sí hay un mapa y está detrás de la puerta.",
     "feedbackWrong": "Escuchá de nuevo: ¿contesta sí o no? ¿Y dónde está el mapa?",
     "hint": "Fijate en la respuesta y en el lugar.",
@@ -15324,6 +17518,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Son dos preguntas con sus respuestas. Escuchá cada parte: primero si hay, después dónde está."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -15340,6 +17535,51 @@ const EXERCISES_M0 = [
       ],
       "decis": [
         "Listen again. Yes or no? Behind or in front of?"
+      ]
+    }
+  },
+  {
+    "id": "EN-A2-U02-766",
+    "status": "draft",
+    "nivelId": "m0-n6",
+    "kind": "listen",
+    "stage": "Reconocimiento",
+    "skill": "COMP_01",
+    "difficulty": 2,
+    "question": "Escuchá a dos políticos. ¿Qué dicen?",
+    "vozEntrada": "Is there a river? Yes, there is. Where's Parliament? Parliament is next to the river.",
+    "audio": "../pdp-assets/e51e7c80c479d5bf703f40e367e1fb02.mp3",
+    "options": [
+      "¿Hay un río? No, no hay. ¿Dónde está el Parlamento? El Parlamento está al lado del río.",
+      "¿Hay un río? Sí, hay. ¿Dónde está el Parlamento? El Parlamento está detrás del río.",
+      "¿Hay un río? Sí, hay. ¿Dónde está el Parlamento? El Parlamento está al lado del río."
+    ],
+    "correct": 2,
+    "feedback": "¡Eso! Hay un río, y el Parlamento está al lado.",
+    "feedbackWrong": "Escuchá de nuevo: ¿contesta sí o no? ¿Y dónde está el Parlamento?",
+    "hint": "¿Sí o no? ¿Dónde?",
+    "feedbackExtra": "Is there a river? Yes, there is. = ¿Hay un río? Sí, hay. Where's Parliament? = ¿Dónde está el Parlamento? next to = al lado de.",
+    "scaffold": {
+      "altExplanation": "Son dos preguntas: si hay un río (Is there…?) y dónde está el Parlamento (Where's…?). Escuchá la respuesta corta y la palabra de lugar."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Elige «No, no hay»",
+          "hacer": "Preguntale qué oyó: ¿Yes, there is o No, there isn't?"
+        },
+        {
+          "si": "Elige «detrás»",
+          "hacer": "Preguntale qué palabra de lugar oyó."
+        }
+      ],
+      "variaciones": [
+        "Que pregunte por otra cosa con Is there…?"
+      ],
+      "decis": [
+        "Is there a river? Where is Parliament?"
       ]
     }
   },
@@ -15377,6 +17617,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Cada frase dice dónde está algo o pregunta algo. Buscá la palabra de lugar o la que pregunta."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -15389,6 +17630,57 @@ const EXERCISES_M0 = [
       ],
       "decis": [
         "Which one is a question?"
+      ]
+    }
+  },
+  {
+    "id": "EN-A2-U02-767",
+    "status": "draft",
+    "nivelId": "m0-n6",
+    "kind": "match",
+    "stage": "Asociación",
+    "skill": "ASOC_01",
+    "difficulty": 2,
+    "question": "Uní cada frase con lo que quiere decir.",
+    "left": [
+      "The powder is on the curtains.",
+      "The tunnels are under the city.",
+      "Where's the engineer?",
+      "Is there a map?"
+    ],
+    "right": [
+      "¿Hay un mapa?",
+      "El polvo está sobre las cortinas.",
+      "Los túneles están debajo de la ciudad.",
+      "¿Dónde está el ingeniero?"
+    ],
+    "pairs": {
+      "0": 1,
+      "1": 2,
+      "2": 3,
+      "3": 0
+    },
+    "feedback": "¡Bien relacionado!",
+    "feedbackWrong": "Algún par no coincide: fijate qué cosa es y qué dice de ella.",
+    "hint": "Buscá la palabra de lugar o la palabra que pregunta.",
+    "feedbackExtra": "on = sobre · under = debajo de · Where's…? = ¿Dónde está…? · Is there…? = ¿Hay…?",
+    "scaffold": {
+      "altExplanation": "Dos frases dicen dónde está algo (on, under) y dos preguntan: dónde está alguien o si hay algo."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Une under con sobre",
+          "hacer": "Preguntale qué quiere decir under."
+        }
+      ],
+      "variaciones": [
+        "Que lea cada frase en voz alta."
+      ],
+      "decis": [
+        "Which one is: ¿Dónde está el ingeniero?"
       ]
     }
   },
@@ -15447,7 +17739,7 @@ const EXERCISES_M0 = [
       "registra": "Una marca para el momento: solo / con ayuda / todavía no."
     },
     "experienciaProfe": "PRF-INT-10",
-    "image": _ASSET_DEDUP_77,
+    "image": _ASSET_DEDUP_86,
     "imageAlt": "Un rincón del aula: un estante junto a la ventana con un mapa encima y una silla debajo."
   },
   {
@@ -15569,23 +17861,76 @@ const EXERCISES_M0 = [
             {
               "titulo": "in",
               "texto": "adentro de",
-              "img": _ASSET_DEDUP_71
+              "img": _ASSET_DEDUP_78
             },
             {
               "titulo": "on",
               "texto": "sobre",
-              "img": _ASSET_DEDUP_72
+              "img": _ASSET_DEDUP_79
             },
             {
               "titulo": "under",
               "texto": "debajo de",
-              "img": _ASSET_DEDUP_73
+              "img": _ASSET_DEDUP_80
             }
           ]
         },
         "audio": _ASSET_DEDUP_22
       }
-    ]
+    ],
+    "modo": "personal"
+  },
+  {
+    "id": "EN-A2-U02-336",
+    "status": "draft",
+    "nivelId": "m0-n6",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "recordar la regla antes de escribir",
+    "feedback": "Listo: ya te acordás de la regla.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Antes de escribir, un recordatorio.",
+        "title": "Recordá",
+        "regla": "Para decir dónde está algo, usás una **palabra de lugar**.",
+        "fichas": [
+          {
+            "en": "Parliament is next to the river.",
+            "es": "El Parlamento está al lado del río.",
+            "rotulo": "EJEMPLO"
+          }
+        ],
+        "notas": [
+          "Para preguntar: Where's…?"
+        ],
+        "idea": "Para decir dónde está algo, usás una palabra de lugar. Parliament is next to the river. = El Parlamento está al lado del río. Para preguntar: Where's…?",
+        "media": {
+          "tipo": "tres",
+          "items": [
+            {
+              "titulo": "in",
+              "texto": "adentro de",
+              "img": _ASSET_DEDUP_78
+            },
+            {
+              "titulo": "on",
+              "texto": "sobre",
+              "img": _ASSET_DEDUP_79
+            },
+            {
+              "titulo": "under",
+              "texto": "debajo de",
+              "img": _ASSET_DEDUP_80
+            }
+          ]
+        },
+        "audio": _ASSET_DEDUP_22
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-068",
@@ -15598,11 +17943,11 @@ const EXERCISES_M0 = [
     "question": "Completá la pregunta de Maya.",
     "sentence": "MAYA: ___ there a clock in the classroom?",
     "bank": [
+      "Are",
       "Do",
-      "Is",
-      "Are"
+      "Is"
     ],
-    "correct": 1,
+    "correct": 2,
     "answers": [
       "Is"
     ],
@@ -15622,6 +17967,7 @@ const EXERCISES_M0 = [
       },
       "altExplanation": "Una sola cosa: la pregunta empieza con is. Varias cosas: con are."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -15640,8 +17986,64 @@ const EXERCISES_M0 = [
         "Is there a clock in your classroom? Yes or no?"
       ]
     },
-    "image": _ASSET_DEDUP_68,
+    "image": _ASSET_DEDUP_73,
     "imageAlt": "El aula de Leo: una pizarra, dos puertas y doce sillas. No hay reloj."
+  },
+  {
+    "id": "EN-A2-U02-768",
+    "status": "draft",
+    "nivelId": "m0-n6",
+    "kind": "word-bank",
+    "stage": "Producción guiada",
+    "skill": "PROD_01",
+    "difficulty": 2,
+    "question": "Completá la pregunta de un político.",
+    "sentence": "A POLITICIAN: ___ there a map of the tunnels?",
+    "bank": [
+      "Do",
+      "Is",
+      "Are"
+    ],
+    "correct": 1,
+    "answers": [
+      "Is"
+    ],
+    "feedback": "¡Eso! Pregunta por un mapa: con una cosa va is.",
+    "feedbackWrong": "Fijate si pregunta por una cosa o por varias y qué palabra abre la pregunta.",
+    "hint": "Mirá si pregunta por una cosa o por varias.",
+    "feedbackExtra": "Is there a map of the tunnels? = ¿Hay un mapa de los túneles? Con una cosa: Is there…?; con varias: Are there…?",
+    "scaffold": {
+      "example": {
+        "label": "Un caso más simple: con varias cosas",
+        "steps": [
+          {
+            "math": "Are there two tunnels? → varias",
+            "reason": "Con varias cosas la pregunta empieza con are; con una sola, con otra palabra."
+          }
+        ]
+      },
+      "altExplanation": "El político pregunta por UN mapa (los túneles son de qué es el mapa): con una cosa la pregunta empieza con is."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Elige Are",
+          "hacer": "Preguntale cuántos mapas son."
+        },
+        {
+          "si": "Elige Do",
+          "hacer": "Recordale que con there no va do."
+        }
+      ],
+      "variaciones": [
+        "Que diga la pregunta completa en voz alta."
+      ],
+      "decis": [
+        "One map or many?"
+      ]
+    }
   },
   {
     "id": "EN-A2-U02-069",
@@ -15676,6 +18078,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Leé una frase por vez y buscá la palabra de lugar: ¿es la misma que en el texto?"
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -15694,8 +18097,58 @@ const EXERCISES_M0 = [
         "Is the map on or under the board?"
       ]
     },
-    "image": _ASSET_DEDUP_78,
+    "image": _ASSET_DEDUP_90,
     "imageAlt": "Un aula: un mapa sobre la pizarra, un reloj al lado del mapa y una mochila debajo de un escritorio."
+  },
+  {
+    "id": "EN-A2-U02-769",
+    "status": "draft",
+    "nivelId": "m0-n6",
+    "kind": "mc-multi",
+    "stage": "Verificación",
+    "skill": "COMP_03",
+    "difficulty": 3,
+    "guided": true,
+    "guidedMessages": [
+      {
+        "when": "start",
+        "text": "Leé el texto y marcá todas las frases que dicen lo mismo."
+      }
+    ],
+    "question": "Leé: «The map is on the table. The engineer is next to the map. The politicians are behind the table.» ¿Cuáles de estas frases dicen lo mismo?",
+    "options": [
+      "El ingeniero está al lado del mapa.",
+      "Los políticos están delante de la mesa.",
+      "El mapa está debajo de la mesa.",
+      "El mapa está sobre la mesa."
+    ],
+    "correct": [
+      0,
+      3
+    ],
+    "feedback": "¡Eso! Son las dos primeras.",
+    "feedbackWrong": "Alguna de las que marcaste (o te falta una) no dice lo mismo: fijate en cada palabra de lugar.",
+    "hint": "Compará cada palabra de lugar.",
+    "feedbackExtra": "on = sobre · next to = al lado de · behind = detrás de (no delante de) · under = debajo de.",
+    "scaffold": {
+      "altExplanation": "Leé el texto frase por frase y compará la palabra de lugar con la de cada opción: behind no es delante."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Marca «delante de la mesa»",
+          "hacer": "Preguntale qué quiere decir behind."
+        }
+      ],
+      "variaciones": [
+        "Que lea el texto en voz alta antes de marcar."
+      ],
+      "decis": [
+        "Behind or in front of?"
+      ]
+    }
   },
   {
     "id": "EN-A2-U02-070",
@@ -15731,6 +18184,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Una pregunta de lugar abre con where, sigue la forma de ser y al final va de quién es y la cosa."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -15749,8 +18203,68 @@ const EXERCISES_M0 = [
         "Ask me: where is Maya's map?"
       ]
     },
-    "image": _ASSET_DEDUP_77,
+    "image": _ASSET_DEDUP_86,
     "imageAlt": "Un rincón del aula: un estante junto a la ventana con un mapa encima y una silla debajo."
+  },
+  {
+    "id": "EN-A2-U02-770",
+    "status": "draft",
+    "nivelId": "m0-n6",
+    "kind": "order",
+    "stage": "Producción guiada",
+    "skill": "TEMP_02",
+    "difficulty": 2,
+    "question": "Ordená la pregunta de un político por el mapa de Bazalgette.",
+    "words": [
+      "map?",
+      "is",
+      "Where",
+      "Bazalgette's"
+    ],
+    "correctOrder": [
+      2,
+      1,
+      3,
+      0
+    ],
+    "correct": [
+      2,
+      1,
+      3,
+      0
+    ],
+    "feedback": "¡Correcto! \"Where is Bazalgette's map?\"",
+    "feedbackWrong": "Revisá qué palabra abre una pregunta de lugar y de quién es el mapa.",
+    "hint": "Empezá por la palabra que abre la pregunta.",
+    "feedbackExtra": "Where is Bazalgette's map? = ¿Dónde está el mapa de Bazalgette? Where va primero; después is y de quién es la cosa.",
+    "scaffold": {
+      "example": {
+        "label": "Una guía de orden",
+        "steps": [
+          {
+            "math": "Where · is · de quién · la cosa?",
+            "reason": "Primero la palabra que pregunta dónde."
+          }
+        ]
+      },
+      "altExplanation": "Una pregunta de lugar empieza con where; después va is y la cosa (el mapa de Bazalgette)."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Empieza por map",
+          "hacer": "Preguntale qué palabra pregunta dónde."
+        }
+      ],
+      "variaciones": [
+        "Que haga la misma pregunta por el río."
+      ],
+      "decis": [
+        "Where…?"
+      ]
+    }
   },
   {
     "id": "EN-A2-U02-071",
@@ -15798,6 +18312,7 @@ const EXERCISES_M0 = [
       },
       "altExplanation": "Primero quién está, después is, después el lugar y al final la otra persona."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -15816,8 +18331,74 @@ const EXERCISES_M0 = [
         "Who is next to Maya?"
       ]
     },
-    "image": _ASSET_DEDUP_79,
+    "image": _ASSET_DEDUP_91,
     "imageAlt": "Tom está parado al lado de Maya."
+  },
+  {
+    "id": "EN-A2-U02-771",
+    "status": "draft",
+    "nivelId": "m0-n6",
+    "kind": "order",
+    "stage": "Producción guiada",
+    "skill": "TEMP_02",
+    "difficulty": 2,
+    "question": "Ordená lo que dice el ingeniero.",
+    "words": [
+      "Parliament",
+      "next",
+      "is",
+      "to",
+      "river",
+      "The"
+    ],
+    "correctOrder": [
+      5,
+      4,
+      2,
+      1,
+      3,
+      0
+    ],
+    "correct": [
+      5,
+      4,
+      2,
+      1,
+      3,
+      0
+    ],
+    "feedback": "¡Correcto! \"The river is next to Parliament.\"",
+    "feedbackWrong": "Revisá qué está primero y qué lugar nombra la frase.",
+    "hint": "Empezá por lo que está al lado.",
+    "feedbackExtra": "The river is next to Parliament. = El río está al lado del Parlamento. Orden: la cosa + is + next to + el lugar.",
+    "scaffold": {
+      "example": {
+        "label": "Una guía de orden",
+        "steps": [
+          {
+            "math": "la cosa · is · next to · el lugar",
+            "reason": "Armá la frase en ese orden."
+          }
+        ]
+      },
+      "altExplanation": "Primero lo que está (the river), después is, la palabra de lugar (next to) y el lugar."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Empieza por Parliament",
+          "hacer": "Preguntale qué está al lado de qué."
+        }
+      ],
+      "variaciones": [
+        "Que diga dónde está el Parlamento."
+      ],
+      "decis": [
+        "What is next to Parliament?"
+      ]
+    }
   },
   {
     "id": "EN-A2-U02-314",
@@ -15859,15 +18440,15 @@ const EXERCISES_M0 = [
           "items": [
             {
               "titulo": "next to",
-              "img": _ASSET_DEDUP_74
+              "img": _ASSET_DEDUP_81
             },
             {
               "titulo": "behind",
-              "img": _ASSET_DEDUP_75
+              "img": _ASSET_DEDUP_82
             },
             {
               "titulo": "in front of",
-              "img": _ASSET_DEDUP_76
+              "img": _ASSET_DEDUP_83
             }
           ]
         },
@@ -15893,7 +18474,386 @@ const EXERCISES_M0 = [
         },
         "audio": _ASSET_DEDUP_25
       }
-    ]
+    ],
+    "modo": "personal"
+  },
+  {
+    "id": "EN-A2-U02-344",
+    "status": "draft",
+    "nivelId": "m0-n6",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "repasar lo que aprendiste antes de la prueba",
+    "feedback": "Listo: repasaste lo que aprendiste.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Lo que aprendiste en esta lección.",
+        "title": "Lo que aprendiste",
+        "regla": "En esta lección aprendiste estas cosas.",
+        "fichas": [
+          {
+            "en": "The map is on the table.",
+            "es": "dónde está",
+            "rotulo": "DÓNDE ESTÁ"
+          },
+          {
+            "en": "Where's the map?",
+            "es": "¿dónde está el mapa?",
+            "rotulo": "PREGUNTA"
+          },
+          {
+            "en": "Is there a river? · Are there two tunnels?",
+            "rotulo": "¿HAY?"
+          }
+        ],
+        "notas": [
+          "Ahora, la prueba de la lección."
+        ],
+        "idea": "En esta lección aprendiste estas cosas. The map is on the table. = dónde está Where's the map? = ¿dónde está el mapa? Is there a river? · Are there two tunnels? Ahora, la prueba de la lección.",
+        "media": {
+          "tipo": "rejilla",
+          "items": [
+            {
+              "titulo": "next to",
+              "img": _ASSET_DEDUP_81
+            },
+            {
+              "titulo": "behind",
+              "img": _ASSET_DEDUP_82
+            },
+            {
+              "titulo": "in front of",
+              "img": _ASSET_DEDUP_83
+            }
+          ]
+        },
+        "audio": _ASSET_DEDUP_24
+      },
+      {
+        "proposito": "ensenanza",
+        "block": "compare",
+        "voz": "Ojo con esto.",
+        "correcto": {
+          "titulo": "✓ Así sí",
+          "items": [
+            "Where's the map?",
+            "Are there two tunnels?"
+          ]
+        },
+        "incorrecto": {
+          "titulo": "✗ Así no",
+          "items": [
+            "Where the map is?",
+            "Is there two tunnels?"
+          ]
+        },
+        "audio": _ASSET_DEDUP_25
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
+  },
+  {
+    "id": "EN-A2-U02-912",
+    "status": "draft",
+    "nivelId": "m0-n6",
+    "kind": "mundo",
+    "ordenFijo": true,
+    "stage": "Producción guiada",
+    "skill": "PROD_01",
+    "difficulty": 2,
+    "question": "Poné cada cosa donde dice el ingeniero.",
+    "feedback": "¡Todo en su lugar!",
+    "feedbackWrong": "Mirá las filas marcadas: ahí está la pista.",
+    "hint": "Empezá por la primera fila marcada.",
+    "scaffold": {
+      "altExplanation": "Leé lo que dice el ingeniero de una cosa por vez: on es sobre y next to es al lado de."
+    },
+    "feedbackExtra": "on = sobre · next to = al lado de. Fijate en cada frase qué palabra de lugar dice y de qué cosa habla: el mapa o el libro.",
+    "mundo": {
+      "id": "mundo-escena-ingeniero-clase-l6",
+      "tipo": "escena",
+      "nombre": "Escena",
+      "unidad": "en-a2-u02-things-and-school",
+      "leccion": "L6",
+      "desde": [
+        "EN-A2-U02-765",
+        "EN-A2-U02-767"
+      ],
+      "titulo": "Poné cada cosa donde dice el ingeniero.",
+      "consigna": {
+        "banner": "My pen is on the map. My ruler is next to the map. My folder is on the book.",
+        "tip": "Tocá una cosa y después el lugar donde dice el ingeniero."
+      },
+      "escena": {
+        "hablante": "El ingeniero",
+        "receptor": "El ingeniero",
+        "imagen": "a2u02-londres-ingeniero",
+        "imagenAncho": 800,
+        "imagenAlto": 400,
+        "tablero": "La mesa del ingeniero",
+        "rotuloBandeja": "Todavía sin lugar",
+        "rotuloBandejaVacia": "Todo tiene su lugar"
+      },
+      "vocab": {
+        "dato": [
+          "cosa",
+          "cosas"
+        ],
+        "referencia": "lo que dice el ingeniero",
+        "receptor": "El ingeniero",
+        "pieza": [
+          "cosa",
+          "cosas"
+        ],
+        "sobra": [
+          "cosa de más",
+          "cosas de más"
+        ],
+        "falta": [
+          "cosa",
+          "cosas"
+        ]
+      },
+      "textos": {
+        "okTitulo": "¡Todo en su lugar!",
+        "okTexto": "Cada cosa quedó donde dice el ingeniero.",
+        "casiTitulo": "Casi.",
+        "mirar": "Mirá las cosas marcadas y volvé a leer dónde dice el ingeniero que va cada una."
+      },
+      "reacciones": {
+        "ok": "",
+        "distinto": "",
+        "no-entendio": "",
+        "sobra": ""
+      },
+      "ayudas": [
+        "Leé lo que dice el ingeniero de una cosa por vez: on es sobre y next to es al lado de.",
+        "on = sobre · next to = al lado de. Fijate en cada frase qué palabra de lugar dice y de qué cosa habla: el mapa o el libro."
+      ],
+      "demo": {
+        "error": {
+          "h_pen": "pen__next-map",
+          "h_ruler": "ruler__on-map",
+          "h_folder": "folder__on-book"
+        }
+      },
+      "modo": "clase",
+      "ambientacion": "cuento",
+      "gemeloDe": "EN-A2-U02-901",
+      "_nota": "Gemelo de clase de escena_rincon_l6.json (fuente: generadores/mundos_clase_u02.py). Imagen: ilustración 5 de «El gran hedor de Londres»; cajas medidas sobre 800×400.",
+      "aula": {
+        "objetos": [
+          {
+            "id": "pen",
+            "texto": "pen",
+            "icono": "🖊️"
+          },
+          {
+            "id": "ruler",
+            "texto": "ruler",
+            "icono": "📏"
+          },
+          {
+            "id": "folder",
+            "texto": "folder",
+            "icono": "📁"
+          }
+        ],
+        "lugares": [
+          {
+            "id": "on-map",
+            "texto": "on the map",
+            "caja": [
+              44,
+              62,
+              26,
+              22
+            ],
+            "capacidad": 1
+          },
+          {
+            "id": "next-map",
+            "texto": "next to the map",
+            "caja": [
+              79,
+              56,
+              18,
+              22
+            ],
+            "capacidad": 1
+          },
+          {
+            "id": "on-book",
+            "texto": "on the book",
+            "caja": [
+              12,
+              74,
+              24,
+              22
+            ],
+            "capacidad": 1
+          },
+          {
+            "id": "next-book",
+            "texto": "next to the book",
+            "caja": [
+              0,
+              74,
+              11,
+              22
+            ],
+            "capacidad": 1
+          }
+        ],
+        "bandeja": null
+      },
+      "campos": [
+        {
+          "id": "pen",
+          "etiqueta": "pen",
+          "icono": "🖊️"
+        },
+        {
+          "id": "ruler",
+          "etiqueta": "ruler",
+          "icono": "📏"
+        },
+        {
+          "id": "folder",
+          "etiqueta": "folder",
+          "icono": "📁"
+        }
+      ],
+      "objetivo": {
+        "pen": "on the map",
+        "ruler": "next to the map",
+        "folder": "on the book"
+      },
+      "piezas": [
+        {
+          "id": "pen__on-map",
+          "texto": "pen on the map",
+          "efecto": {
+            "pen": "on the map"
+          }
+        },
+        {
+          "id": "pen__next-map",
+          "texto": "pen next to the map",
+          "efecto": {
+            "pen": "next to the map"
+          }
+        },
+        {
+          "id": "pen__on-book",
+          "texto": "pen on the book",
+          "efecto": {
+            "pen": "on the book"
+          }
+        },
+        {
+          "id": "pen__next-book",
+          "texto": "pen next to the book",
+          "efecto": {
+            "pen": "next to the book"
+          }
+        },
+        {
+          "id": "ruler__on-map",
+          "texto": "ruler on the map",
+          "efecto": {
+            "ruler": "on the map"
+          }
+        },
+        {
+          "id": "ruler__next-map",
+          "texto": "ruler next to the map",
+          "efecto": {
+            "ruler": "next to the map"
+          }
+        },
+        {
+          "id": "ruler__on-book",
+          "texto": "ruler on the book",
+          "efecto": {
+            "ruler": "on the book"
+          }
+        },
+        {
+          "id": "ruler__next-book",
+          "texto": "ruler next to the book",
+          "efecto": {
+            "ruler": "next to the book"
+          }
+        },
+        {
+          "id": "folder__on-map",
+          "texto": "folder on the map",
+          "efecto": {
+            "folder": "on the map"
+          }
+        },
+        {
+          "id": "folder__next-map",
+          "texto": "folder next to the map",
+          "efecto": {
+            "folder": "next to the map"
+          }
+        },
+        {
+          "id": "folder__on-book",
+          "texto": "folder on the book",
+          "efecto": {
+            "folder": "on the book"
+          }
+        },
+        {
+          "id": "folder__next-book",
+          "texto": "folder next to the book",
+          "efecto": {
+            "folder": "next to the book"
+          }
+        }
+      ],
+      "huecos": [
+        {
+          "id": "h_pen",
+          "rotulo": "pen",
+          "opciones": [
+            "pen__on-map",
+            "pen__next-map",
+            "pen__on-book",
+            "pen__next-book"
+          ]
+        },
+        {
+          "id": "h_ruler",
+          "rotulo": "ruler",
+          "opciones": [
+            "ruler__on-map",
+            "ruler__next-map",
+            "ruler__on-book",
+            "ruler__next-book"
+          ]
+        },
+        {
+          "id": "h_folder",
+          "rotulo": "folder",
+          "opciones": [
+            "folder__on-map",
+            "folder__next-map",
+            "folder__on-book",
+            "folder__next-book"
+          ]
+        }
+      ]
+    },
+    "avatar": _ASSET_DEDUP_59,
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-901",
@@ -16222,7 +19182,8 @@ const EXERCISES_M0 = [
         }
       ]
     },
-    "avatar": _ASSET_DEDUP_77
+    "avatar": _ASSET_DEDUP_86,
+    "modo": "personal"
   },
   {
     "status": "published",
@@ -16232,8 +19193,8 @@ const EXERCISES_M0 = [
     "id": "EN-A2-U02-P25",
     "nivelId": "m0-n6",
     "forma": "pausa",
-    "question": "Describí un rincón de tu aula con una tarjeta.",
-    "tutor": "Mirá la tarjeta y decí dónde está cada cosa.",
+    "question": "Describí la oficina del ingeniero.",
+    "tutor": "Imaginá la oficina del ingeniero de la historia y decí dónde está cada cosa.",
     "paraProfe": {
       "criterios": [
         "Usa dos palabras de lugar distintas.",
@@ -16242,10 +19203,10 @@ const EXERCISES_M0 = [
       ],
       "objetivo": "Describir dónde están varias cosas en un lugar dado (variación de lugar).",
       "decis": [
-        "Look at this card: a corner of the classroom. Where are things? (tarjeta: el estante está al lado de la ventana; el mapa está sobre el estante; una silla está debajo del estante)"
+        "The engineer's office: where are things? (inventado: el estante está al lado de la ventana; el plano está sobre la mesa; una silla está detrás de la mesa)"
       ],
       "esperas": [
-        "The shelf is next to the window. The map is on the shelf. The chair is under the shelf."
+        "The shelf is next to the window. The plan is on the table. The chair is behind the table."
       ],
       "variantes": [
         "The shelf is beside…",
@@ -16253,7 +19214,7 @@ const EXERCISES_M0 = [
       ],
       "temas": [
         "dónde está el estante",
-        "dónde está el mapa",
+        "dónde está el plano",
         "dónde está la silla"
       ],
       "ayudaMolde": [
@@ -16261,7 +19222,7 @@ const EXERCISES_M0 = [
       ],
       "ayudaModelo": [
         "The pen is on the shelf.",
-        "The bag is under the chair."
+        "The bag is behind the chair."
       ],
       "errores": [
         {
@@ -16270,16 +19231,16 @@ const EXERCISES_M0 = [
         },
         {
           "si": "Se queda sin palabra de lugar",
-          "hacer": "Señalá en la tarjeta dónde está: cuenta como con ayuda."
+          "hacer": "Señalá con las manos dónde está: cuenta como con ayuda."
         }
       ],
       "variaciones": [
-        "Que describa otro rincón con dos preguntas tuyas."
+        "Que describa la sala del Parlamento con dos preguntas tuyas."
       ],
       "registra": "Una marca para el momento: solo / con ayuda / todavía no."
     },
     "experienciaProfe": "PRF-PRO-03",
-    "image": _ASSET_DEDUP_77,
+    "image": _ASSET_DEDUP_86,
     "imageAlt": "Un rincón del aula: un estante junto a la ventana con un mapa encima y una silla debajo."
   },
   {
@@ -16314,6 +19275,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Primero la cosa, después is, la palabra de lugar y el lugar con the."
     },
+    "modo": "personal",
     "paraProfe": {
       "variantes": [],
       "errores": [
@@ -16323,6 +19285,53 @@ const EXERCISES_M0 = [
         },
         {
           "si": "Escribe \"The pen under the book\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-772",
+    "status": "draft",
+    "nivelId": "m0-n6",
+    "kind": "fill",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "PROD_01",
+    "difficulty": 3,
+    "question": "Escribí en inglés: el mapa está debajo del libro.",
+    "answer": "The map is under the book.",
+    "acceptVariants": [
+      "The map is under the book.",
+      "The map is under the book",
+      "the map is under the book.",
+      "the map is under the book"
+    ],
+    "feedback": "¡Eso! Así se dice dónde está algo.",
+    "feedbackWrong": "Escribí la frase completa: la cosa, el verbo, la palabra de lugar y el lugar.",
+    "hint": "Pensá en la palabra de lugar para debajo de.",
+    "feedbackExtra": "The map is under the book. = El mapa está debajo del libro. under = debajo de.",
+    "scaffold": {
+      "altExplanation": "Armá la frase: the map, is, la palabra de lugar y the book."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "variantes": [
+        "The map is under the book."
+      ],
+      "errores": [
+        {
+          "si": "Escribe \"The map is in the book\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        },
+        {
+          "si": "Escribe \"The map under the book\"",
           "hacer": "No intervenir. Registrar como error de forma."
         }
       ],
@@ -16365,6 +19374,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Primero la palabra que pregunta dónde, después la cosa con the."
     },
+    "modo": "personal",
     "paraProfe": {
       "variantes": [
         "Where is the clock?"
@@ -16372,6 +19382,57 @@ const EXERCISES_M0 = [
       "errores": [
         {
           "si": "Escribe \"Where the clock is?\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-773",
+    "status": "draft",
+    "nivelId": "m0-n6",
+    "kind": "fill",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "PROD_01",
+    "difficulty": 3,
+    "question": "Escribí en inglés la pregunta: ¿dónde está el ingeniero?",
+    "answer": "Where's the engineer?",
+    "acceptVariants": [
+      "Where's the engineer?",
+      "Where's the engineer",
+      "where's the engineer?",
+      "where's the engineer",
+      "Where’s the engineer?",
+      "Where’s the engineer",
+      "where’s the engineer?",
+      "where’s the engineer",
+      "Where is the engineer?",
+      "Where is the engineer",
+      "where is the engineer?",
+      "where is the engineer"
+    ],
+    "feedback": "¡Eso! Así se pregunta dónde está alguien.",
+    "feedbackWrong": "Escribí la pregunta completa: la palabra que pregunta dónde, el verbo y la persona.",
+    "hint": "Pensá cómo se pregunta dónde está algo.",
+    "feedbackExtra": "Where's the engineer? = ¿Dónde está el ingeniero? Where's = Where is.",
+    "scaffold": {
+      "altExplanation": "Empezá con la palabra que pregunta dónde y seguí con is y la persona."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "variantes": [
+        "Where is the engineer?"
+      ],
+      "errores": [
+        {
+          "si": "Escribe \"Where the engineer is?\"",
           "hacer": "No intervenir. Registrar como error de forma."
         }
       ],
@@ -16410,11 +19471,57 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Contá las cosas: si son varias, la primera palabra de la pregunta cambia."
     },
+    "modo": "personal",
     "paraProfe": {
       "variantes": [],
       "errores": [
         {
           "si": "Marca there o windows",
+          "hacer": "No intervenir. Registrar como error de forma."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-774",
+    "status": "draft",
+    "nivelId": "m0-n6",
+    "kind": "error-find",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "CORR_01",
+    "difficulty": 3,
+    "question": "Un político pregunta si hay túneles, pero hay un error. Tocá la palabra que está mal y corregila.",
+    "sentence": [
+      "Is",
+      "there",
+      "two",
+      "tunnels",
+      "under",
+      "the",
+      "city?"
+    ],
+    "errorIndex": 0,
+    "correction": "Are",
+    "feedback": "¡Eso! Con varias cosas la pregunta empieza con esa palabra.",
+    "feedbackWrong": "Una palabra no es la que abre la pregunta con varias cosas.",
+    "hint": "Mirá con qué palabra abre la pregunta.",
+    "feedbackExtra": "Are there two tunnels under the city? Con varias cosas la pregunta empieza con are.",
+    "scaffold": {
+      "altExplanation": "Son dos túneles: con varias cosas la pregunta empieza con otra palabra."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "variantes": [],
+      "errores": [
+        {
+          "si": "Marca tunnels o city",
           "hacer": "No intervenir. Registrar como error de forma."
         }
       ],
@@ -16435,7 +19542,7 @@ const EXERCISES_M0 = [
     "feedback": "¡Bien leído!",
     "pantallas": [
       {
-        "img": _ASSET_DEDUP_80,
+        "img": _ASSET_DEDUP_92,
         "s": [
           [
             "Egypt, 1799. French soldiers find a big black stone near the town of Rosetta.",
@@ -16452,7 +19559,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_81,
+        "img": _ASSET_DEDUP_93,
         "s": [
           [
             "Nobody can read ancient Egyptian writing. It is a mystery for a very long time.",
@@ -16469,7 +19576,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_82,
+        "img": _ASSET_DEDUP_94,
         "s": [
           [
             "Many scientists try. An English doctor, Thomas Young, reads the middle text.",
@@ -16540,7 +19647,7 @@ const EXERCISES_M0 = [
     "feedback": "¡Bien leído!",
     "pantallas": [
       {
-        "img": _ASSET_DEDUP_83,
+        "img": _ASSET_DEDUP_95,
         "s": [
           [
             "A young French man, Jean-François Champollion, knows many languages.",
@@ -16557,7 +19664,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_84,
+        "img": _ASSET_DEDUP_96,
         "s": [
           [
             "He compares the names.",
@@ -16574,7 +19681,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_85,
+        "img": _ASSET_DEDUP_97,
         "s": [
           [
             "In 1822, Champollion can finally read ancient Egyptian writing.",
@@ -16665,18 +19772,19 @@ const EXERCISES_M0 = [
             {
               "titulo": "Can I have a pen, please?",
               "texto": "¿Me das una lapicera, por favor?",
-              "img": _ASSET_DEDUP_86
+              "img": _ASSET_DEDUP_98
             },
             {
               "titulo": "Can I borrow your ruler, please?",
               "texto": "¿Me prestás tu regla, por favor?",
-              "img": _ASSET_DEDUP_87
+              "img": _ASSET_DEDUP_99
             }
           ]
         },
-        "audio": "../pdp-assets/19e2735ff04d8b1d027ac83d21115620.mp3"
+        "audio": _ASSET_DEDUP_100
       }
     ],
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -16737,6 +19845,47 @@ const EXERCISES_M0 = [
     }
   },
   {
+    "id": "EN-A2-U02-775",
+    "status": "draft",
+    "nivelId": "m0-n7",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "pedir una cosa",
+    "feedback": "Ya sabés pedir una cosa.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Para pedir una cosa.",
+        "title": "Can I have…? Can I borrow…?",
+        "regla": "Para pedir una cosa: **Can I have…?** o **Can I borrow…?**",
+        "notas": [
+          "borrow = pedir prestado · please = por favor.",
+          "Si no la tiene: Sorry, I haven't got a pen."
+        ],
+        "idea": "Para pedir una cosa: Can I have…? o Can I borrow…? borrow = pedir prestado · please = por favor. Si no la tiene: Sorry, I haven't got a pen.",
+        "media": {
+          "tipo": "tres",
+          "items": [
+            {
+              "titulo": "Can I have a copy, please?",
+              "texto": "¿Me das una copia, por favor?",
+              "img": _ASSET_DEDUP_101
+            },
+            {
+              "titulo": "Can I borrow your pen, please?",
+              "texto": "¿Me prestás tu lapicera, por favor?",
+              "img": _ASSET_DEDUP_102
+            }
+          ]
+        },
+        "audio": _ASSET_DEDUP_100
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
+  },
+  {
     "id": "EN-A2-U02-076",
     "status": "draft",
     "nivelId": "m0-n7",
@@ -16748,11 +19897,11 @@ const EXERCISES_M0 = [
     "vozEntrada": "Can I have a pen, please? Sure. Here you are.",
     "audio": "../pdp-assets/2c68ff0c7751f261e9b2e01e67ba0c39.mp3",
     "options": [
+      "¿Me das una lapicera, por favor? Perdón, no tengo una lapicera.",
       "¿Me das una lapicera, por favor? Claro. Tomá.",
-      "¿Me das una regla, por favor? Claro. Tomá.",
-      "¿Me das una lapicera, por favor? Perdón, no tengo una lapicera."
+      "¿Me das una regla, por favor? Claro. Tomá."
     ],
-    "correct": 0,
+    "correct": 1,
     "feedback": "¡Eso! Pide una lapicera y se la dan.",
     "feedbackWrong": "Escuchá de nuevo: ¿qué pide y qué le contestan?",
     "hint": "Fijate en lo que pide y en la respuesta.",
@@ -16760,6 +19909,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Es un pedido y su respuesta. Escuchá qué cosa pide y si se la dan."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -16776,6 +19926,51 @@ const EXERCISES_M0 = [
       ],
       "decis": [
         "Listen again. A pen or a ruler?"
+      ]
+    }
+  },
+  {
+    "id": "EN-A2-U02-776",
+    "status": "draft",
+    "nivelId": "m0-n7",
+    "kind": "listen",
+    "stage": "Reconocimiento",
+    "skill": "COMP_01",
+    "difficulty": 1,
+    "question": "Escuchá a Champollion. ¿Qué dicen?",
+    "vozEntrada": "Can I have a copy, please? Sure. Here you are.",
+    "audio": "../pdp-assets/65666dabdc7d6198cd75067a3749c884.mp3",
+    "options": [
+      "¿Me das una copia, por favor? Claro. Tomá.",
+      "¿Me das un mapa, por favor? Claro. Tomá.",
+      "¿Me das una copia, por favor? Perdón, no tengo una copia."
+    ],
+    "correct": 0,
+    "feedback": "¡Eso! Champollion pide una copia y se la dan.",
+    "feedbackWrong": "Escuchá de nuevo: ¿qué pide y qué le contestan?",
+    "hint": "¿Qué pide? ¿Qué le contestan?",
+    "feedbackExtra": "Can I have a copy, please? = ¿Me das una copia, por favor? Sure. Here you are. = Claro. Tomá.",
+    "scaffold": {
+      "altExplanation": "Champollion pide una cosa con Can I have…? y escucha la respuesta: si es sí, Sure y Here you are."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Elige el mapa",
+          "hacer": "Preguntale qué cosa pide."
+        },
+        {
+          "si": "Elige «no tengo»",
+          "hacer": "Preguntale qué oyó: ¿Sure o Sorry?"
+        }
+      ],
+      "variaciones": [
+        "Que pida otra cosa con Can I have…?"
+      ],
+      "decis": [
+        "What does he want?"
       ]
     }
   },
@@ -16804,7 +19999,7 @@ const EXERCISES_M0 = [
             {
               "titulo": "Can I open the window, please?",
               "texto": "¿Puedo abrir la ventana?",
-              "img": _ASSET_DEDUP_88
+              "img": _ASSET_DEDUP_103
             },
             {
               "titulo": "Can I close the door, please?",
@@ -16813,7 +20008,7 @@ const EXERCISES_M0 = [
             }
           ]
         },
-        "audio": "../pdp-assets/86d4b8f1a6c3013d90495f278ff92c4e.mp3"
+        "audio": _ASSET_DEDUP_104
       },
       {
         "proposito": "ensenanza",
@@ -16833,9 +20028,70 @@ const EXERCISES_M0 = [
             "Can I opening the window?"
           ]
         },
-        "audio": "../pdp-assets/e5a1edd9c2ebfaf46c222c91ffe1a9bb.mp3"
+        "audio": _ASSET_DEDUP_105
       }
-    ]
+    ],
+    "modo": "personal"
+  },
+  {
+    "id": "EN-A2-U02-493",
+    "status": "draft",
+    "nivelId": "m0-n7",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "pedir permiso",
+    "feedback": "Ya sabés pedir permiso.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Para pedir permiso.",
+        "title": "Can I open…? Can I see…?",
+        "regla": "Para pedir permiso: **Can I** + verbo.",
+        "notas": [
+          "Después de Can I el verbo va solo: sin to, sin s, sin -ing."
+        ],
+        "idea": "Para pedir permiso: Can I + verbo. Después de Can I el verbo va solo: sin to, sin s, sin -ing.",
+        "media": {
+          "tipo": "tres",
+          "items": [
+            {
+              "titulo": "Can I see the stone, please?",
+              "texto": "¿Puedo ver la piedra?",
+              "img": _ASSET_DEDUP_106
+            },
+            {
+              "titulo": "Can I open the window, please?",
+              "texto": "¿Puedo abrir la ventana?",
+              "img": _ASSET_DEDUP_101
+            }
+          ]
+        },
+        "audio": _ASSET_DEDUP_104
+      },
+      {
+        "proposito": "ensenanza",
+        "block": "compare",
+        "voz": "Después de Can I, el verbo va solo.",
+        "correcto": {
+          "titulo": "✓ Así sí",
+          "items": [
+            "Can I see the stone?",
+            "Can I open the window?"
+          ]
+        },
+        "incorrecto": {
+          "titulo": "✗ Así no",
+          "items": [
+            "Can I to see the stone?",
+            "Can I seeing the stone?"
+          ]
+        },
+        "audio": _ASSET_DEDUP_105
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-079",
@@ -16869,6 +20125,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Si lo que sigue es algo que te dan (una cosa), pedís una cosa; si es algo que vos hacés (abrir, cerrar), pedís permiso."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -16881,6 +20138,55 @@ const EXERCISES_M0 = [
       ],
       "decis": [
         "Is it a thing or an action?"
+      ]
+    }
+  },
+  {
+    "id": "EN-A2-U02-779",
+    "status": "draft",
+    "nivelId": "m0-n7",
+    "kind": "classify",
+    "stage": "Asociación",
+    "skill": "CLAS_01",
+    "difficulty": 2,
+    "question": "¿Pide una cosa o pide permiso? Poné cada frase en su grupo.",
+    "items": [
+      "Can I borrow your pen, please?",
+      "Can I close the window, please?",
+      "Can I have a copy, please?",
+      "Can I see the stone, please?"
+    ],
+    "categories": [
+      "Pide una cosa",
+      "Pide permiso"
+    ],
+    "correct": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "feedback": "¡Bien! Have y borrow piden una cosa; los otros verbos piden permiso para hacer algo.",
+    "feedbackWrong": "Alguna frase está en el otro grupo: fijate qué sigue a Can I.",
+    "hint": "Mirá qué sigue a Can I en cada frase.",
+    "feedbackExtra": "Can I have / borrow… = pedir una cosa · Can I close / see… = pedir permiso para hacer algo.",
+    "scaffold": {
+      "altExplanation": "Si después de Can I viene have o borrow, pide una cosa; si viene otro verbo (close, see), pide permiso."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Pone see the stone en «una cosa»",
+          "hacer": "Preguntale si pide la piedra o pide verla."
+        }
+      ],
+      "variaciones": [
+        "Que lea cada pedido en voz alta."
+      ],
+      "decis": [
+        "A thing or permission?"
       ]
     }
   },
@@ -16917,10 +20223,10 @@ const EXERCISES_M0 = [
         "idea": "Para pedirle algo a otra persona: Can you + verbo. Can I…? = pide algo para mí Can you…? = le pide algo a otro Se contesta: Sure. = Claro. · Here you are. = Tomá.",
         "media": {
           "tipo": "hero",
-          "img": _ASSET_DEDUP_89,
+          "img": _ASSET_DEDUP_107,
           "alt": "Tom le pide ayuda a Maya con un libro grande."
         },
-        "audio": "../pdp-assets/1e8d2cf5604f0f2f9070da3094708c64.mp3"
+        "audio": _ASSET_DEDUP_108
       },
       {
         "proposito": "ensenanza",
@@ -16939,9 +20245,71 @@ const EXERCISES_M0 = [
             "Can you help me? — Sorry, you can't."
           ]
         },
-        "audio": "../pdp-assets/a4d04820636a6a45bb2c4b3c675c2f8c.mp3"
+        "audio": _ASSET_DEDUP_109
       }
-    ]
+    ],
+    "modo": "personal"
+  },
+  {
+    "id": "EN-A2-U02-494",
+    "status": "draft",
+    "nivelId": "m0-n7",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "pedirle algo a otro",
+    "feedback": "Ya sabés pedirle algo a otra persona.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Para pedirle algo a otro.",
+        "title": "Can you…?",
+        "regla": "Para pedirle algo a otra persona: **Can you** + verbo.",
+        "fichas": [
+          {
+            "en": "Can I…?",
+            "es": "pide algo para mí",
+            "rotulo": "CAN I"
+          },
+          {
+            "en": "Can you…?",
+            "es": "le pide algo a otro",
+            "rotulo": "CAN YOU"
+          }
+        ],
+        "notas": [
+          "Se contesta: Sure. = Claro. · Here you are. = Tomá."
+        ],
+        "idea": "Para pedirle algo a otra persona: Can you + verbo. Can I…? = pide algo para mí Can you…? = le pide algo a otro Se contesta: Sure. = Claro. · Here you are. = Tomá.",
+        "media": {
+          "tipo": "hero",
+          "img": _ASSET_DEDUP_110,
+          "alt": "Champollion compara dos nombres escritos con signos egipcios: necesita que alguien lo ayude."
+        },
+        "audio": _ASSET_DEDUP_108
+      },
+      {
+        "proposito": "ensenanza",
+        "block": "compare",
+        "voz": "Y para decir que no.",
+        "correcto": {
+          "titulo": "✓ Así sí",
+          "items": [
+            "Can you help me? — Sorry, I can't.",
+            "Can I see the stone? — Sorry, you can't."
+          ]
+        },
+        "incorrecto": {
+          "titulo": "✗ Así no",
+          "items": [
+            "Can you help me? — Sorry, you can't."
+          ]
+        },
+        "audio": _ASSET_DEDUP_109
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-077",
@@ -16967,6 +20335,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Son dos pedidos. Con Can I…? se pide permiso; con Can you…?, que alguien haga algo. Escuchá cada respuesta."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -16983,6 +20352,47 @@ const EXERCISES_M0 = [
       ],
       "decis": [
         "Listen again. Window or door? Yes or no?"
+      ]
+    }
+  },
+  {
+    "id": "EN-A2-U02-777",
+    "status": "draft",
+    "nivelId": "m0-n7",
+    "kind": "listen",
+    "stage": "Reconocimiento",
+    "skill": "COMP_01",
+    "difficulty": 2,
+    "question": "Escuchá a Champollion y a un amigo. ¿Qué dicen?",
+    "vozEntrada": "Can I close the door, please? Sorry, you can't. Can you help me, please? Sure.",
+    "audio": "../pdp-assets/0968c50d5c543c3e2853ab91b893fe0b.mp3",
+    "options": [
+      "¿Puedo cerrar la ventana, por favor? Perdón, no podés. ¿Me ayudás, por favor? Claro.",
+      "¿Puedo cerrar la puerta, por favor? Perdón, no podés. ¿Me ayudás, por favor? Claro.",
+      "¿Puedo cerrar la puerta, por favor? Claro. ¿Me ayudás, por favor? Claro."
+    ],
+    "correct": 1,
+    "feedback": "¡Eso! Para la puerta le dicen que no; para ayudar, que sí.",
+    "feedbackWrong": "Escuchá de nuevo: ¿qué pide y qué le contestan cada vez?",
+    "hint": "¿Puerta o ventana? ¿Sí o no?",
+    "feedbackExtra": "Can I close the door? Sorry, you can't. = ¿Puedo cerrar la puerta? Perdón, no podés. Can you help me? Sure. = ¿Me ayudás? Claro.",
+    "scaffold": {
+      "altExplanation": "Son dos pedidos: un permiso (Can I…?) y una ayuda (Can you…?). Escuchá la respuesta de cada uno."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Elige «Claro» para la puerta",
+          "hacer": "Preguntale qué oyó: ¿Sure o Sorry, you can't?"
+        }
+      ],
+      "variaciones": [
+        "Que haga los dos pedidos en voz alta."
+      ],
+      "decis": [
+        "Door or window? Yes or no?"
       ]
     }
   },
@@ -17018,21 +20428,72 @@ const EXERCISES_M0 = [
           "items": [
             {
               "titulo": "a student card",
-              "img": "../pdp-assets/0be1a1bfbc4e053fc5ac4a71ccc75e42.jpg"
+              "img": _ASSET_DEDUP_111
             },
             {
               "titulo": "an ID card",
-              "img": "../pdp-assets/d092d24e5502c6e4759454db7983c492.jpg"
+              "img": _ASSET_DEDUP_112
             },
             {
               "titulo": "a form",
-              "img": "../pdp-assets/2517a3659b2c90aadd9b58495a087b07.jpg"
+              "img": _ASSET_DEDUP_113
             }
           ]
         },
-        "audio": "../pdp-assets/627766b1de3eb2700c00c31890774647.mp3"
+        "audio": _ASSET_DEDUP_114
       }
-    ]
+    ],
+    "modo": "personal"
+  },
+  {
+    "id": "EN-A2-U02-495",
+    "status": "draft",
+    "nivelId": "m0-n7",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "pedir que te muestren algo",
+    "feedback": "Ya sabés pedir que te muestren algo.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Para pedir que te muestren algo.",
+        "title": "Can I see your ID card?",
+        "regla": "Para pedir que te muestren algo: **Can I see…?**",
+        "fichas": [
+          {
+            "en": "Can I see your ID card, please?",
+            "es": "¿Puedo ver tu documento, por favor?",
+            "rotulo": "EN INGLÉS"
+          }
+        ],
+        "notas": [
+          "En el museo, el guardia lo pide. Se contesta: Here you are.",
+          "ID card = documento · form = formulario."
+        ],
+        "idea": "Para pedir que te muestren algo: Can I see…? Can I see your ID card, please? = ¿Puedo ver tu documento, por favor? En el museo, el guardia lo pide. Se contesta: Here you are. ID card = documento · form = formulario.",
+        "media": {
+          "tipo": "rejilla",
+          "items": [
+            {
+              "titulo": "a student card",
+              "img": _ASSET_DEDUP_111
+            },
+            {
+              "titulo": "an ID card",
+              "img": _ASSET_DEDUP_112
+            },
+            {
+              "titulo": "a form",
+              "img": _ASSET_DEDUP_113
+            }
+          ]
+        },
+        "audio": _ASSET_DEDUP_114
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-082",
@@ -17074,6 +20535,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Un pedido de algo prestado lleva cuatro partes: cómo se pide, el verbo de prestar, la cosa y please."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -17092,8 +20554,74 @@ const EXERCISES_M0 = [
         "Ask me for a ruler."
       ]
     },
-    "image": _ASSET_DEDUP_87,
+    "image": _ASSET_DEDUP_99,
     "imageAlt": "Leo le pide prestada una regla a Tom."
+  },
+  {
+    "id": "EN-A2-U02-782",
+    "status": "draft",
+    "nivelId": "m0-n7",
+    "kind": "order",
+    "stage": "Producción guiada",
+    "skill": "TEMP_02",
+    "difficulty": 2,
+    "question": "Ordená lo que Thomas Young le pide a Champollion.",
+    "words": [
+      "Champollion's",
+      "please?",
+      "Can",
+      "borrow",
+      "pen",
+      "I"
+    ],
+    "correctOrder": [
+      2,
+      5,
+      3,
+      0,
+      4,
+      1
+    ],
+    "correct": [
+      2,
+      5,
+      3,
+      0,
+      4,
+      1
+    ],
+    "feedback": "¡Correcto! \"Can I borrow Champollion's pen, please?\"",
+    "feedbackWrong": "Revisá qué palabras abren el pedido y dónde va la palabra de cortesía.",
+    "hint": "Un pedido empieza con la forma de pedir.",
+    "feedbackExtra": "Can I borrow Champollion's pen, please? Orden: Can I + borrow + de quién es + la cosa + please.",
+    "scaffold": {
+      "example": {
+        "label": "Una guía de orden",
+        "steps": [
+          {
+            "math": "Can I · el verbo · de quién · la cosa · please?",
+            "reason": "Armá el pedido en ese orden."
+          }
+        ]
+      },
+      "altExplanation": "Primero la forma de pedir (Can I), después el verbo, de quién es la cosa, la cosa y al final please."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Empieza por Champollion's",
+          "hacer": "Preguntale cómo empieza un pedido."
+        }
+      ],
+      "variaciones": [
+        "Que pida otra cosa a Champollion."
+      ],
+      "decis": [
+        "Can I… what?"
+      ]
+    }
   },
   {
     "status": "published",
@@ -17152,7 +20680,7 @@ const EXERCISES_M0 = [
       "registra": "Una marca para el momento: solo / con ayuda / todavía no."
     },
     "experienciaProfe": "PRF-JUE-08",
-    "image": _ASSET_DEDUP_86,
+    "image": _ASSET_DEDUP_98,
     "imageAlt": "Tom le pide una lapicera a Maya."
   },
   {
@@ -17240,7 +20768,7 @@ const EXERCISES_M0 = [
       "registra": "Una marca por actividad: solo / con ayuda / todavía no."
     },
     "experienciaProfe": "PRF-INT-09",
-    "image": _ASSET_DEDUP_88,
+    "image": _ASSET_DEDUP_103,
     "imageAlt": "Maya le pide permiso a la profesora para abrir la ventana."
   },
   {
@@ -17277,6 +20805,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Cada pedido tiene una palabra clave: have, open, help o see. Buscala y unila con lo que quiere decir."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -17289,6 +20818,57 @@ const EXERCISES_M0 = [
       ],
       "decis": [
         "Which one asks for help?"
+      ]
+    }
+  },
+  {
+    "id": "EN-A2-U02-778",
+    "status": "draft",
+    "nivelId": "m0-n7",
+    "kind": "match",
+    "stage": "Asociación",
+    "skill": "ASOC_01",
+    "difficulty": 2,
+    "question": "Uní cada pedido con lo que quiere decir.",
+    "left": [
+      "Can I have a copy, please?",
+      "Can I open the window, please?",
+      "Can you help me, please?",
+      "Can I see your ID card, please?"
+    ],
+    "right": [
+      "¿Puedo abrir la ventana, por favor?",
+      "¿Me ayudás, por favor?",
+      "¿Puedo ver tu documento, por favor?",
+      "¿Me das una copia, por favor?"
+    ],
+    "pairs": {
+      "0": 3,
+      "1": 0,
+      "2": 1,
+      "3": 2
+    },
+    "feedback": "¡Bien relacionado!",
+    "feedbackWrong": "Algún par no coincide: fijate qué se pide en cada uno.",
+    "hint": "Buscá el verbo de cada pedido.",
+    "feedbackExtra": "have = dame · open = abrir · help = ayudar · see your ID card = ver tu documento.",
+    "scaffold": {
+      "altExplanation": "En cada pedido, el verbo que va después de Can I o Can you dice qué se pide."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Une help con ventana",
+          "hacer": "Preguntale qué quiere decir help."
+        }
+      ],
+      "variaciones": [
+        "Que lea cada pedido en voz alta."
+      ],
+      "decis": [
+        "Which one is: ¿Me ayudás?"
       ]
     }
   },
@@ -17315,6 +20895,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Cuando te piden algo a vos, la respuesta habla de vos (I)."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -17333,8 +20914,48 @@ const EXERCISES_M0 = [
         "Can you help me, please? Can you?"
       ]
     },
-    "image": _ASSET_DEDUP_89,
+    "image": _ASSET_DEDUP_107,
     "imageAlt": "Tom le pide ayuda a Maya con un libro grande."
+  },
+  {
+    "id": "EN-A2-U02-780",
+    "status": "draft",
+    "nivelId": "m0-n7",
+    "kind": "mc",
+    "stage": "Verificación",
+    "skill": "COMP_02",
+    "difficulty": 3,
+    "question": "Champollion te pregunta: «Can you help me, please?». Vos no podés ayudarlo ahora. ¿Qué le contestás?",
+    "options": [
+      "Sorry, I'm not.",
+      "Sorry, I can't.",
+      "Sorry, you can't.",
+      "Sorry, I haven't."
+    ],
+    "correct": 1,
+    "feedback": "¡Eso! Sos vos el que no puede ayudar.",
+    "feedbackWrong": "Fijate quién tendría que hacer la acción.",
+    "hint": "¿Quién ayudaría?",
+    "feedbackExtra": "Sorry, I can't. = Perdón, no puedo. Te pidió a vos (Can you…?): el que no puede sos vos (I).",
+    "scaffold": {
+      "altExplanation": "Champollion te pide ayuda a vos: la respuesta dice que vos no podés."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Elige Sorry, you can't",
+          "hacer": "Preguntale quién tendría que ayudar."
+        }
+      ],
+      "variaciones": [
+        "Que conteste que sí: Sure."
+      ],
+      "decis": [
+        "Who can't help: you or me?"
+      ]
+    }
   },
   {
     "id": "EN-A2-U02-307",
@@ -17368,18 +20989,66 @@ const EXERCISES_M0 = [
             {
               "titulo": "Can I open the window, please?",
               "texto": "¿Puedo abrir la ventana?",
-              "img": _ASSET_DEDUP_88
+              "img": _ASSET_DEDUP_103
             },
             {
               "titulo": "Can you help me, please?",
               "texto": "¿Me ayudás, por favor?",
-              "img": _ASSET_DEDUP_89
+              "img": _ASSET_DEDUP_107
             }
           ]
         },
         "audio": _ASSET_DEDUP_22
       }
-    ]
+    ],
+    "modo": "personal"
+  },
+  {
+    "id": "EN-A2-U02-337",
+    "status": "draft",
+    "nivelId": "m0-n7",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "recordar la regla antes de escribir",
+    "feedback": "Listo: ya te acordás de la regla.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Antes de escribir, un recordatorio.",
+        "title": "Recordá",
+        "regla": "**Can I** + verbo para pedir. **Can you** + verbo para que otro haga algo.",
+        "fichas": [
+          {
+            "en": "Can I see the stone, please?",
+            "rotulo": "PEDIR PERMISO"
+          },
+          {
+            "en": "Can you help me, please?",
+            "rotulo": "PEDIR AYUDA"
+          }
+        ],
+        "idea": "Can I + verbo para pedir. Can you + verbo para que otro haga algo. Can I see the stone, please? Can you help me, please?",
+        "media": {
+          "tipo": "tres",
+          "items": [
+            {
+              "titulo": "Can I see the stone, please?",
+              "texto": "¿Puedo ver la piedra?",
+              "img": _ASSET_DEDUP_106
+            },
+            {
+              "titulo": "Can you help me, please?",
+              "texto": "¿Me ayudás, por favor?",
+              "img": _ASSET_DEDUP_110
+            }
+          ]
+        },
+        "audio": _ASSET_DEDUP_22
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-081",
@@ -17416,6 +21085,7 @@ const EXERCISES_M0 = [
       },
       "altExplanation": "El verbo que sigue a Can I no cambia: va solo, sin terminación y sin to."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -17434,8 +21104,64 @@ const EXERCISES_M0 = [
         "Can I open the window? What goes after Can I?"
       ]
     },
-    "image": _ASSET_DEDUP_88,
+    "image": _ASSET_DEDUP_103,
     "imageAlt": "Maya le pide permiso a la profesora para abrir la ventana."
+  },
+  {
+    "id": "EN-A2-U02-781",
+    "status": "draft",
+    "nivelId": "m0-n7",
+    "kind": "word-bank",
+    "stage": "Producción guiada",
+    "skill": "PROD_01",
+    "difficulty": 2,
+    "question": "Completá lo que dice Champollion en el museo.",
+    "sentence": "CHAMPOLLION: Can I ___ the stone, please?",
+    "bank": [
+      "to see",
+      "see",
+      "sees"
+    ],
+    "correct": 1,
+    "answers": [
+      "see"
+    ],
+    "feedback": "¡Eso! Después de Can I el verbo va solo.",
+    "feedbackWrong": "Fijate cómo va el verbo después de Can I.",
+    "hint": "Mirá qué va después de Can I.",
+    "feedbackExtra": "Can I see the stone, please? Después de Can I el verbo va solo: sin to, sin s.",
+    "scaffold": {
+      "example": {
+        "label": "Un caso más simple: otro verbo",
+        "steps": [
+          {
+            "math": "Can I ___ the window? → open",
+            "reason": "Después de Can I el verbo va tal cual, sin cambiarle nada."
+          }
+        ]
+      },
+      "altExplanation": "Champollion pide permiso: después de Can I el verbo va sin to y sin s."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Elige to see",
+          "hacer": "Recordale que después de Can I no va to."
+        },
+        {
+          "si": "Elige sees",
+          "hacer": "Recordale que después de Can I no va s."
+        }
+      ],
+      "variaciones": [
+        "Que diga el pedido completo en voz alta."
+      ],
+      "decis": [
+        "Can I + verb: see, sees or to see?"
+      ]
+    }
   },
   {
     "id": "EN-A2-U02-315",
@@ -17476,17 +21202,17 @@ const EXERCISES_M0 = [
             {
               "titulo": "have",
               "texto": "pedir una cosa",
-              "img": _ASSET_DEDUP_86
+              "img": _ASSET_DEDUP_98
             },
             {
               "titulo": "Can I…?",
               "texto": "pedir permiso",
-              "img": _ASSET_DEDUP_88
+              "img": _ASSET_DEDUP_103
             },
             {
               "titulo": "Can you…?",
               "texto": "pedir ayuda",
-              "img": _ASSET_DEDUP_89
+              "img": _ASSET_DEDUP_107
             }
           ]
         },
@@ -17512,7 +21238,325 @@ const EXERCISES_M0 = [
         },
         "audio": _ASSET_DEDUP_25
       }
-    ]
+    ],
+    "modo": "personal"
+  },
+  {
+    "id": "EN-A2-U02-345",
+    "status": "draft",
+    "nivelId": "m0-n7",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "repasar lo que aprendiste antes de la prueba",
+    "feedback": "Listo: repasaste lo que aprendiste.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Lo que aprendiste en esta lección.",
+        "title": "Lo que aprendiste",
+        "regla": "En esta lección aprendiste estas cosas.",
+        "fichas": [
+          {
+            "en": "Can I have a copy, please?",
+            "rotulo": "PEDIR UNA COSA"
+          },
+          {
+            "en": "Can I open the window, please?",
+            "rotulo": "PEDIR PERMISO"
+          },
+          {
+            "en": "Can you help me, please?",
+            "rotulo": "PEDIR AYUDA"
+          }
+        ],
+        "notas": [
+          "Sure. · Sorry, I can't. · Sorry, you can't."
+        ],
+        "idea": "En esta lección aprendiste estas cosas. Can I have a copy, please? Can I open the window, please? Can you help me, please? Sure. · Sorry, I can't. · Sorry, you can't.",
+        "media": {
+          "tipo": "tres",
+          "items": [
+            {
+              "titulo": "have",
+              "texto": "pedir una cosa",
+              "img": _ASSET_DEDUP_102
+            },
+            {
+              "titulo": "Can I…?",
+              "texto": "pedir permiso",
+              "img": _ASSET_DEDUP_106
+            },
+            {
+              "titulo": "Can you…?",
+              "texto": "pedir ayuda",
+              "img": _ASSET_DEDUP_110
+            }
+          ]
+        },
+        "audio": _ASSET_DEDUP_24
+      },
+      {
+        "proposito": "ensenanza",
+        "block": "compare",
+        "voz": "Ojo con esto.",
+        "correcto": {
+          "titulo": "✓ Así sí",
+          "items": [
+            "Can I open the window?",
+            "Sorry, I can't."
+          ]
+        },
+        "incorrecto": {
+          "titulo": "✗ Así no",
+          "items": [
+            "Can I to open the window?",
+            "Sorry, you can't help."
+          ]
+        },
+        "audio": _ASSET_DEDUP_25
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
+  },
+  {
+    "id": "EN-A2-U02-913",
+    "status": "draft",
+    "nivelId": "m0-n7",
+    "kind": "mundo",
+    "ordenFijo": true,
+    "stage": "Producción guiada",
+    "skill": "PROD_01",
+    "difficulty": 2,
+    "question": "Conseguí lo que le falta a Champollion.",
+    "feedback": "¡Conseguiste todo!",
+    "feedbackWrong": "Mirá las filas marcadas: ahí está la pista.",
+    "hint": "Empezá por la primera fila marcada.",
+    "scaffold": {
+      "altExplanation": "Primero fijate quién tiene cada cosa: has got = tiene; hasn't got / haven't got = no tiene. Pedile a ese compañero."
+    },
+    "feedbackExtra": "Para pedir prestado: Can I borrow your …, please? Después de Can I va el verbo solo, sin to, y your antes de la cosa.",
+    "mundo": {
+      "id": "mundo-dialogo-champollion-clase-l7",
+      "tipo": "dialogo",
+      "nombre": "Diálogo",
+      "unidad": "en-a2-u02-things-and-school",
+      "leccion": "L7",
+      "desde": [
+        "EN-A2-U02-776",
+        "EN-A2-U02-778"
+      ],
+      "titulo": "Conseguí lo que le falta a Champollion.",
+      "consigna": {
+        "banner": "Sos Champollion: te falta una copia de la piedra y una lapicera. Leé lo que dice Thomas Young y pedile cada cosa a quien la tiene.",
+        "tip": "Elegí qué decís. Fijate a quién le hablás y cómo lo pedís."
+      },
+      "escena": {
+        "hablante": "Champollion",
+        "receptor": "Young",
+        "imagen": "a2u02-rosetta-cartuchos",
+        "tablero": "Lo que conseguiste",
+        "tableroSub": "Quién te presta cada cosa",
+        "rotuloArmado": "La charla",
+        "rotuloBanco": "",
+        "ficha": "mundo-tablero-madera",
+        "fichaCeldas": {
+          "ruler": [
+            49,
+            94,
+            625,
+            47
+          ],
+          "calc": [
+            49,
+            143,
+            625,
+            51
+          ]
+        },
+        "fichaAncho": 720,
+        "fichaAlto": 360,
+        "fichaEtiquetas": true,
+        "fichaTitulo": [
+          118,
+          18,
+          420,
+          64
+        ],
+        "fichaMax": 390,
+        "fondoPantalla": "mundo-fondo-noche",
+        "boton": "mundo-boton-dorado",
+        "pildoraCrema": "mundo-pildora-crema",
+        "opcionAzul": "mundo-opcion-azul",
+        "opcionDorada": "mundo-opcion-dorada",
+        "circuloAzul": "mundo-circulo-azul",
+        "circuloDorado": "mundo-circulo-dorado",
+        "etiquetaNombre": "mundo-etiqueta-nombre",
+        "fichaEtiquetaPct": 48.3,
+        "globoPunta": "mundo-globo-punta",
+        "reaccionEnChat": true,
+        "fichaImg": _ASSET_DEDUP_115,
+        "botonImg": _ASSET_DEDUP_116,
+        "pildoraCremaImg": _ASSET_DEDUP_117,
+        "opcionAzulImg": _ASSET_DEDUP_118,
+        "opcionDoradaImg": _ASSET_DEDUP_119,
+        "circuloAzulImg": _ASSET_DEDUP_120,
+        "circuloDoradoImg": _ASSET_DEDUP_121,
+        "etiquetaNombreImg": _ASSET_DEDUP_122,
+        "globoPuntaImg": _ASSET_DEDUP_123,
+        "fondoPantallaImg": _ASSET_DEDUP_124
+      },
+      "vocab": {
+        "dato": [
+          "cosa",
+          "cosas"
+        ],
+        "referencia": "lo que necesitás",
+        "receptor": "Un compañero",
+        "pieza": [
+          "pedido",
+          "pedidos"
+        ],
+        "sobra": [
+          "cosa de más",
+          "cosas de más"
+        ],
+        "falta": [
+          "cosa",
+          "cosas"
+        ]
+      },
+      "textos": {
+        "okTitulo": "¡Conseguiste todo!",
+        "okTexto": "Le pediste cada cosa a quien la tenía, y bien pedida.",
+        "casiTitulo": "Casi.",
+        "mirar": "Mirá las filas marcadas: fijate a quién se lo pediste y cómo lo pediste."
+      },
+      "campos": [
+        {
+          "id": "ruler",
+          "etiqueta": "Copy",
+          "sub": "Te la presta"
+        },
+        {
+          "id": "calc",
+          "etiqueta": "Pen",
+          "sub": "Te la presta"
+        }
+      ],
+      "objetivo": {
+        "ruler": "Pierre",
+        "calc": "Young"
+      },
+      "piezas": [
+        {
+          "id": "r1",
+          "texto": "Pierre, can I borrow your copy, please?",
+          "efecto": {
+            "ruler": "Pierre"
+          },
+          "reaccion": "Sure! Here you are.",
+          "quien": "Pierre"
+        },
+        {
+          "id": "r2",
+          "texto": "Young, can I borrow your copy, please?",
+          "efecto": {
+            "ruler": "Young"
+          },
+          "reaccion": "Sorry, I haven't got a copy.",
+          "quien": "Young"
+        },
+        {
+          "id": "r3",
+          "texto": "Pierre, can I to borrow your copy?",
+          "efecto": null,
+          "forma": {
+            "campo": "ruler",
+            "valor": "can I to borrow"
+          },
+          "reaccion": "Sorry? I didn't get that.",
+          "quien": "Pierre"
+        },
+        {
+          "id": "c1",
+          "texto": "Young, can I borrow your pen, please?",
+          "efecto": {
+            "calc": "Young"
+          },
+          "reaccion": "Sure! Here you are.",
+          "quien": "Young"
+        },
+        {
+          "id": "c2",
+          "texto": "Pierre, can I borrow your pen, please?",
+          "efecto": {
+            "calc": "Pierre"
+          },
+          "reaccion": "Sorry, I haven't got a pen.",
+          "quien": "Pierre"
+        },
+        {
+          "id": "c3",
+          "texto": "Young, can I borrow you pen?",
+          "efecto": null,
+          "forma": {
+            "campo": "calc",
+            "valor": "borrow you pen"
+          },
+          "reaccion": "Sorry? I didn't get that.",
+          "quien": "Young"
+        }
+      ],
+      "huecos": [
+        {
+          "id": "t1",
+          "rotulo": "1",
+          "quien": "Young",
+          "pregunta": "I haven't got a copy. Pierre has got a copy. I've got a pen.",
+          "opciones": [
+            "r2",
+            "r1",
+            "r3"
+          ]
+        },
+        {
+          "id": "t2",
+          "rotulo": "2",
+          "quien": "Young",
+          "pregunta": "What else do you need?",
+          "opciones": [
+            "c3",
+            "c2",
+            "c1"
+          ]
+        }
+      ],
+      "reacciones": {
+        "ok": "Sure! Here you are.",
+        "distinto": "Hmm… are you sure?",
+        "no-entendio": "Sorry? I didn't get that.",
+        "sobra": "Hmm… OK."
+      },
+      "ayudas": [
+        "Primero fijate quién tiene cada cosa: has got = tiene; hasn't got / haven't got = no tiene. Pedile a ese compañero.",
+        "Para pedir prestado: Can I borrow your …, please? Después de Can I va el verbo solo, sin to, y your antes de la cosa."
+      ],
+      "demo": {
+        "error": {
+          "t1": "r2",
+          "t2": "c3"
+        }
+      },
+      "modo": "clase",
+      "ambientacion": "cuento",
+      "gemeloDe": "EN-A2-U02-904",
+      "_nota": "Gemelo de clase de dialogo_prestar_l7.json (fuente: generadores/mundos_clase_u02.py): Champollion le pide una copia y una lapicera a Thomas Young o a Pierre (inventado). Imagen: ilustración 4 de «La piedra de Rosetta»."
+    },
+    "avatar": _ASSET_DEDUP_110,
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-904",
@@ -17595,18 +21639,18 @@ const EXERCISES_M0 = [
         "retratoMarco": "mundo-retrato-marco",
         "globoPunta": "mundo-globo-punta",
         "reaccionEnChat": true,
-        "fichaImg": "../pdp-assets/528e43088e23b646417eeafc6b78bc52.png",
-        "botonImg": "../pdp-assets/b1d40c05a4b27af023255264898eff2e.png",
-        "pildoraCremaImg": "../pdp-assets/569b76072566f68d2f8b0e6f3bf57d7f.png",
-        "opcionAzulImg": "../pdp-assets/956d2188a0d284b7e0a1f837b8b5f866.png",
-        "opcionDoradaImg": "../pdp-assets/2cceabf77925bccb59b5183b27204edb.png",
-        "circuloAzulImg": "../pdp-assets/5b527aa31ed66ec451eb51b052cb2633.png",
-        "circuloDoradoImg": "../pdp-assets/9d669127fb0c134747c4d12229c550aa.png",
-        "etiquetaNombreImg": "../pdp-assets/981768ee82e762cab7794934ed7d2d9b.png",
-        "retratoImg": _ASSET_DEDUP_79,
+        "fichaImg": _ASSET_DEDUP_115,
+        "botonImg": _ASSET_DEDUP_116,
+        "pildoraCremaImg": _ASSET_DEDUP_117,
+        "opcionAzulImg": _ASSET_DEDUP_118,
+        "opcionDoradaImg": _ASSET_DEDUP_119,
+        "circuloAzulImg": _ASSET_DEDUP_120,
+        "circuloDoradoImg": _ASSET_DEDUP_121,
+        "etiquetaNombreImg": _ASSET_DEDUP_122,
+        "retratoImg": _ASSET_DEDUP_91,
         "retratoMarcoImg": "../pdp-assets/24ba8576ae4f78af96e5751236a2a7e6.png",
-        "globoPuntaImg": "../pdp-assets/66dfd2b40e8b86a3f7754f201527fe7d.png",
-        "fondoPantallaImg": "../pdp-assets/e6fa933fab214c1578230273e537b09f.jpg"
+        "globoPuntaImg": _ASSET_DEDUP_123,
+        "fondoPantallaImg": _ASSET_DEDUP_124
       },
       "vocab": {
         "dato": [
@@ -17751,7 +21795,8 @@ const EXERCISES_M0 = [
         }
       }
     },
-    "avatar": _ASSET_DEDUP_90
+    "avatar": _ASSET_DEDUP_125,
+    "modo": "personal"
   },
   {
     "status": "published",
@@ -17761,8 +21806,8 @@ const EXERCISES_M0 = [
     "id": "EN-A2-U02-P28",
     "nivelId": "m0-n7",
     "forma": "pausa",
-    "question": "Hacé una gestión en la biblioteca con tu profe.",
-    "tutor": "Tu profe hace de bibliotecario. Mostrale tu documento y pedile un formulario.",
+    "question": "Hacé una gestión en el museo con tu profe.",
+    "tutor": "Tu profe hace de guardia del Museo Británico, donde está la piedra. Mostrale tu documento y pedile un formulario.",
     "paraProfe": {
       "criterios": [
         "Contesta Here you are al pedido del documento.",
@@ -17771,7 +21816,7 @@ const EXERCISES_M0 = [
       ],
       "objetivo": "Resolver una situación real con lo de la lección: mostrar un documento y pedir algo.",
       "decis": [
-        "Hello. Can I see your student card, please?"
+        "Hello. Can I see your ID card, please?"
       ],
       "esperas": [
         "Here you are. Can I have a form, please?"
@@ -17781,7 +21826,7 @@ const EXERCISES_M0 = [
         "frases cortas"
       ],
       "temas": [
-        "mostrá tu carnet cuando te lo piden",
+        "mostrá tu documento cuando te lo piden",
         "pedí un formulario"
       ],
       "ayudaMolde": [
@@ -17794,8 +21839,8 @@ const EXERCISES_M0 = [
       ],
       "errores": [
         {
-          "si": "No contesta cuando le piden el carnet",
-          "hacer": "Repetí el pedido y mostrá el carnet: cuenta como con ayuda."
+          "si": "No contesta cuando le piden el documento",
+          "hacer": "Repetí el pedido y mostrá un documento: cuenta como con ayuda."
         },
         {
           "si": "Pide sin please",
@@ -17803,12 +21848,12 @@ const EXERCISES_M0 = [
         }
       ],
       "variaciones": [
-        "Que pida también un horario."
+        "Que pida también permiso para ver la piedra."
       ],
       "registra": "Una marca para el momento: solo / con ayuda / todavía no."
     },
     "experienciaProfe": "PRF-TRA-03",
-    "image": _ASSET_DEDUP_91,
+    "image": _ASSET_DEDUP_126,
     "imageAlt": "Maya le da su carnet de estudiante a la bibliotecaria."
   },
   {
@@ -17820,7 +21865,7 @@ const EXERCISES_M0 = [
     "role": "skill_check",
     "skill": "PROD_01",
     "difficulty": 3,
-    "question": "Escribí en inglés: le pedís permiso a tu profe para ver el mapa, con please.",
+    "question": "Escribí en inglés: le pedís permiso a la bibliotecaria para ver el mapa, con please.",
     "answer": "Can I see the map, please?",
     "acceptVariants": [
       "Can I see the map, please?",
@@ -17839,6 +21884,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Armá el pedido: cómo se pide permiso, la acción y qué cosa."
     },
+    "modo": "personal",
     "paraProfe": {
       "variantes": [
         "Can I see the map please?"
@@ -17850,6 +21896,51 @@ const EXERCISES_M0 = [
         },
         {
           "si": "Escribe \"I see the map, please?\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-783",
+    "status": "draft",
+    "nivelId": "m0-n7",
+    "kind": "fill",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "PROD_01",
+    "difficulty": 3,
+    "question": "Escribí en inglés: en el museo, le pedís permiso al guardia para ver la copia, con please.",
+    "answer": "Can I see the copy, please?",
+    "acceptVariants": [
+      "Can I see the copy, please?",
+      "Can I see the copy, please",
+      "can I see the copy, please?",
+      "can I see the copy, please"
+    ],
+    "feedback": "¡Eso! Así se pide permiso para hacer algo.",
+    "feedbackWrong": "Escribí el pedido completo: la forma de pedir permiso, el verbo, la cosa y please.",
+    "hint": "Pensá cómo se pide permiso para hacer algo.",
+    "feedbackExtra": "Can I see the copy, please? = ¿Puedo ver la copia, por favor? Can I + verbo + please.",
+    "scaffold": {
+      "altExplanation": "Empezá con la forma de pedir permiso, seguí con el verbo (see), la cosa y please."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "variantes": [],
+      "errores": [
+        {
+          "si": "Escribe \"Can I to see the copy?\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        },
+        {
+          "si": "Escribe \"I can see the copy?\"",
           "hacer": "No intervenir. Registrar como error de forma."
         }
       ],
@@ -17904,6 +21995,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Es una respuesta corta: pedís perdón y le decís a la otra persona que no puede."
     },
+    "modo": "personal",
     "paraProfe": {
       "variantes": [
         "Sorry you can't.",
@@ -17913,6 +22005,65 @@ const EXERCISES_M0 = [
         {
           "si": "Escribe \"Sorry, I can't\"",
           "hacer": "No intervenir. Registrar como error de significado."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-784",
+    "status": "draft",
+    "nivelId": "m0-n7",
+    "kind": "fill",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "PROD_01",
+    "difficulty": 3,
+    "question": "Un visitante te pregunta «Can I close the door, please?». Vos NO querés que la cierre. Escribí tu respuesta corta.",
+    "answer": "Sorry, you can't.",
+    "acceptVariants": [
+      "Sorry, you can't.",
+      "Sorry, you can't",
+      "sorry, you can't.",
+      "sorry, you can't",
+      "Sorry, you can’t.",
+      "Sorry, you can’t",
+      "sorry, you can’t.",
+      "sorry, you can’t",
+      "Sorry, you cannot.",
+      "Sorry, you cannot",
+      "sorry, you cannot.",
+      "sorry, you cannot",
+      "Sorry you can't.",
+      "Sorry you can't",
+      "sorry you can't.",
+      "sorry you can't",
+      "Sorry you can’t.",
+      "Sorry you can’t",
+      "sorry you can’t.",
+      "sorry you can’t"
+    ],
+    "feedback": "¡Eso! Le negás el permiso a él.",
+    "feedbackWrong": "Escribí la respuesta corta: perdón y a quién se lo negás.",
+    "hint": "Pensá a quién le negás el permiso.",
+    "feedbackExtra": "Sorry, you can't. = Perdón, no podés. El que pide permiso es el otro (you).",
+    "scaffold": {
+      "altExplanation": "Es la respuesta a un permiso: perdón, y que el otro (you) no puede."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "variantes": [
+        "Sorry, you cannot."
+      ],
+      "errores": [
+        {
+          "si": "Escribe \"Sorry, I can't\"",
+          "hacer": "No intervenir. Registrar como error de forma."
         }
       ],
       "variaciones": [],
@@ -17949,11 +22100,56 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Después de Can I el verbo va tal cual, sin terminación."
     },
+    "modo": "personal",
     "paraProfe": {
       "variantes": [],
       "errores": [
         {
           "si": "Marca book o please",
+          "hacer": "No intervenir. Registrar como error de forma."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-785",
+    "status": "draft",
+    "nivelId": "m0-n7",
+    "kind": "error-find",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "CORR_01",
+    "difficulty": 3,
+    "question": "Un visitante pide permiso para ver la piedra, pero hay un error. Tocá la palabra que está mal y corregila.",
+    "sentence": [
+      "Can",
+      "I",
+      "seeing",
+      "the",
+      "stone,",
+      "please?"
+    ],
+    "errorIndex": 2,
+    "correction": "see",
+    "feedback": "¡Eso! Después de Can I el verbo va solo.",
+    "feedbackWrong": "Una palabra no es la forma del verbo que va después de Can I.",
+    "hint": "Mirá la palabra después de Can I.",
+    "feedbackExtra": "Can I see the stone, please? Después de Can I el verbo va sin -ing, sin to y sin s.",
+    "scaffold": {
+      "altExplanation": "Después de Can I el verbo va tal cual: buscá el que tiene algo de más."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "variantes": [],
+      "errores": [
+        {
+          "si": "Marca stone o please",
           "hacer": "No intervenir. Registrar como error de forma."
         }
       ],
@@ -17974,7 +22170,7 @@ const EXERCISES_M0 = [
     "feedback": "¡Bien leído!",
     "pantallas": [
       {
-        "img": _ASSET_DEDUP_80,
+        "img": _ASSET_DEDUP_92,
         "s": [
           [
             "Egypt, 1799. French soldiers find a big black stone near the town of Rosetta.",
@@ -17991,7 +22187,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_81,
+        "img": _ASSET_DEDUP_93,
         "s": [
           [
             "Nobody can read ancient Egyptian writing. It is a mystery for a very long time.",
@@ -18008,7 +22204,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_82,
+        "img": _ASSET_DEDUP_94,
         "s": [
           [
             "Many scientists try. An English doctor, Thomas Young, reads the middle text.",
@@ -18059,7 +22255,7 @@ const EXERCISES_M0 = [
     "feedback": "¡Bien leído!",
     "pantallas": [
       {
-        "img": _ASSET_DEDUP_83,
+        "img": _ASSET_DEDUP_95,
         "s": [
           [
             "A young French man, Jean-François Champollion, knows many languages.",
@@ -18076,7 +22272,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_84,
+        "img": _ASSET_DEDUP_96,
         "s": [
           [
             "He compares the names.",
@@ -18093,7 +22289,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_85,
+        "img": _ASSET_DEDUP_97,
         "s": [
           [
             "In 1822, Champollion can finally read ancient Egyptian writing.",
@@ -18192,10 +22388,10 @@ const EXERCISES_M0 = [
         "idea": "Para describir un lugar: qué hay, cuántos y qué NO hay. There's a board and a clock. = Hay una pizarra y un reloj. There are eight desks. = Hay ocho pupitres. There isn't a computer. = No hay una computadora.",
         "media": {
           "tipo": "hero",
-          "img": _ASSET_DEDUP_70,
+          "img": _ASSET_DEDUP_77,
           "alt": "Un aula vacía: una pizarra con un reloj encima, dos ventanas y ocho pupitres con sus sillas en dos filas."
         },
-        "audio": "../pdp-assets/03d9b0868cc3f9142ac5b2e62ddaa09d.mp3"
+        "audio": _ASSET_DEDUP_127
       },
       {
         "proposito": "ensenanza",
@@ -18213,10 +22409,10 @@ const EXERCISES_M0 = [
         "idea": "Después, dónde está cada cosa. The clock is next to the door. = El reloj está al lado de la puerta.",
         "media": {
           "tipo": "hero",
-          "img": _ASSET_DEDUP_69,
+          "img": _ASSET_DEDUP_74,
           "alt": "La biblioteca vista desde arriba: mesas en filas, estantes con libros y un reloj junto a la puerta."
         },
-        "audio": "../pdp-assets/084c7a9241831d708b3b4365f2e25950.mp3"
+        "audio": _ASSET_DEDUP_128
       },
       {
         "proposito": "ensenanza",
@@ -18239,6 +22435,7 @@ const EXERCISES_M0 = [
         "audio": _ASSET_DEDUP_25
       }
     ],
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -18297,6 +22494,88 @@ const EXERCISES_M0 = [
         }
       ]
     }
+  },
+  {
+    "id": "EN-A2-U02-786",
+    "status": "draft",
+    "nivelId": "m0-n8",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "describir qué hay y dónde está",
+    "feedback": "Ya sabés describir un aula.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Primero, qué hay y cuántos.",
+        "title": "Qué hay y cuántos",
+        "regla": "Para describir un lugar: qué hay, cuántos y qué NO hay.",
+        "fichas": [
+          {
+            "en": "There's a big stone and a window.",
+            "es": "Hay una piedra grande y una ventana."
+          },
+          {
+            "en": "There are three kinds of writing.",
+            "es": "Hay tres clases de escritura."
+          },
+          {
+            "en": "There isn't a computer.",
+            "es": "No hay una computadora."
+          }
+        ],
+        "idea": "Para describir un lugar: qué hay, cuántos y qué NO hay. There's a big stone and a window. = Hay una piedra grande y una ventana. There are three kinds of writing. = Hay tres clases de escritura. There isn't a computer. = No hay una computadora.",
+        "media": {
+          "tipo": "hero",
+          "img": _ASSET_DEDUP_106,
+          "alt": "La sala del Museo Británico: la piedra de Rosetta en el medio, una ventana al lado y visitantes alrededor."
+        },
+        "audio": _ASSET_DEDUP_127
+      },
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Después, dónde está cada cosa.",
+        "title": "Dónde está",
+        "regla": "Después, dónde está cada cosa.",
+        "fichas": [
+          {
+            "en": "The window is next to the stone.",
+            "es": "La ventana está al lado de la piedra.",
+            "rotulo": "EN INGLÉS"
+          }
+        ],
+        "idea": "Después, dónde está cada cosa. The window is next to the stone. = La ventana está al lado de la piedra.",
+        "media": {
+          "tipo": "hero",
+          "img": "../pdp-assets/6258165fe56bed39642b2b5f78ebcc0a.jpg",
+          "alt": "Alguien mira con una lupa la escritura que está sobre la piedra."
+        },
+        "audio": _ASSET_DEDUP_128
+      },
+      {
+        "proposito": "ensenanza",
+        "block": "compare",
+        "voz": "Ojo con esto.",
+        "correcto": {
+          "titulo": "✓ Así sí",
+          "items": [
+            "There's a stone.",
+            "There are two windows."
+          ]
+        },
+        "incorrecto": {
+          "titulo": "✗ Así no",
+          "items": [
+            "There is two windows.",
+            "There are a stone."
+          ]
+        },
+        "audio": _ASSET_DEDUP_25
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "status": "published",
@@ -18358,7 +22637,7 @@ const EXERCISES_M0 = [
       "registra": "Una marca para el momento: solo / con ayuda / todavía no."
     },
     "experienciaProfe": "PRF-PRO-03",
-    "image": _ASSET_DEDUP_70,
+    "image": _ASSET_DEDUP_77,
     "imageAlt": "Un aula vacía: pizarra, reloj, dos ventanas y pupitres con sus sillas."
   },
   {
@@ -18385,19 +22664,19 @@ const EXERCISES_M0 = [
           "items": [
             {
               "titulo": "a timetable",
-              "img": "../pdp-assets/49ee4213cff91ca8ca6169c6292a6d0f.jpg"
+              "img": _ASSET_DEDUP_129
             },
             {
               "titulo": "the library",
-              "img": _ASSET_DEDUP_69
+              "img": _ASSET_DEDUP_74
             },
             {
               "titulo": "the playground",
-              "img": "../pdp-assets/3e47adf588c173b33239c0d366ba2c4b.jpg"
+              "img": _ASSET_DEDUP_130
             }
           ]
         },
-        "audio": "../pdp-assets/ba5f1ff06d1f4def674116815dd157e2.mp3"
+        "audio": _ASSET_DEDUP_131
       },
       {
         "proposito": "ensenanza",
@@ -18421,9 +22700,76 @@ const EXERCISES_M0 = [
           "img": "../pdp-assets/13b227989c91a1f14d85f487dbfa0f6a.jpg",
           "alt": "Leo sostiene una calculadora y un mapa; Sofia tiene su mochila abierta y vacía."
         },
-        "audio": "../pdp-assets/0f60a6cb9f5764cc13699dc58011889e.mp3"
+        "audio": _ASSET_DEDUP_132
       }
-    ]
+    ],
+    "modo": "personal"
+  },
+  {
+    "id": "EN-A2-U02-496",
+    "status": "draft",
+    "nivelId": "m0-n8",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "decir qué tiene alguien",
+    "feedback": "Ya sabés decir qué tiene alguien.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Tres palabras nuevas.",
+        "title": "Lugares y cosas",
+        "regla": "Tres palabras nuevas.",
+        "notas": [
+          "**timetable** = horario · **library** = biblioteca · **playground** = patio."
+        ],
+        "idea": "Tres palabras nuevas. timetable = horario · library = biblioteca · playground = patio.",
+        "media": {
+          "tipo": "rejilla",
+          "items": [
+            {
+              "titulo": "a timetable",
+              "img": _ASSET_DEDUP_129
+            },
+            {
+              "titulo": "the library",
+              "img": _ASSET_DEDUP_74
+            },
+            {
+              "titulo": "the playground",
+              "img": _ASSET_DEDUP_130
+            }
+          ]
+        },
+        "audio": _ASSET_DEDUP_131
+      },
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "También podés decir qué tiene alguien.",
+        "title": "Qué tiene alguien",
+        "regla": "También podés decir qué tiene alguien.",
+        "fichas": [
+          {
+            "en": "Champollion has got a copy and a pen.",
+            "es": "Champollion tiene una copia y una lapicera."
+          },
+          {
+            "en": "Young hasn't got a copy.",
+            "es": "Young no tiene una copia."
+          }
+        ],
+        "idea": "También podés decir qué tiene alguien. Champollion has got a copy and a pen. = Champollion tiene una copia y una lapicera. Young hasn't got a copy. = Young no tiene una copia.",
+        "media": {
+          "tipo": "hero",
+          "img": _ASSET_DEDUP_102,
+          "alt": "Champollion escribe en su escritorio, rodeado de copias de la piedra."
+        },
+        "audio": _ASSET_DEDUP_132
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-087",
@@ -18437,11 +22783,11 @@ const EXERCISES_M0 = [
     "vozEntrada": "There are fifteen desks in the classroom. The clock is on the board. Tom has got a calculator.",
     "audio": "../pdp-assets/82ebeb801906356226d5077318b54b27.mp3",
     "options": [
-      "Hay quince pupitres en el aula. El reloj está debajo de la pizarra. Tom tiene una calculadora.",
       "Hay quince pupitres en el aula. El reloj está sobre la pizarra. Tom tiene una calculadora.",
-      "Hay doce pupitres en el aula. El reloj está sobre la pizarra. Tom tiene una calculadora."
+      "Hay doce pupitres en el aula. El reloj está sobre la pizarra. Tom tiene una calculadora.",
+      "Hay quince pupitres en el aula. El reloj está debajo de la pizarra. Tom tiene una calculadora."
     ],
-    "correct": 1,
+    "correct": 0,
     "feedback": "¡Eso! Quince pupitres, el reloj sobre la pizarra y Tom con la calculadora.",
     "feedbackWrong": "Escuchá de nuevo: ¿cuántos pupitres, dónde está el reloj y qué tiene Tom?",
     "hint": "Hay tres frases: escuchá el número y el lugar.",
@@ -18449,6 +22795,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Hay tres frases con tres datos distintos: un número, un lugar y qué tiene Tom. Escuchá cada una."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -18465,6 +22812,51 @@ const EXERCISES_M0 = [
       ],
       "decis": [
         "Listen again. Twelve or fifteen? On or under?"
+      ]
+    }
+  },
+  {
+    "id": "EN-A2-U02-787",
+    "status": "draft",
+    "nivelId": "m0-n8",
+    "kind": "listen",
+    "stage": "Reconocimiento",
+    "skill": "COMP_01",
+    "difficulty": 1,
+    "question": "Escuchá a un visitante del museo. ¿Qué dice?",
+    "vozEntrada": "There are three kinds of writing on the stone. The stone is in the museum. Champollion has got a copy.",
+    "audio": "../pdp-assets/2a9be8aa8fd6493649c9d4ee25d098e9.mp3",
+    "options": [
+      "Hay dos clases de escritura en la piedra. La piedra está en el museo. Champollion tiene una copia.",
+      "Hay tres clases de escritura en la piedra. La piedra está en el museo. Champollion no tiene una copia.",
+      "Hay tres clases de escritura en la piedra. La piedra está en el museo. Champollion tiene una copia."
+    ],
+    "correct": 2,
+    "feedback": "¡Eso! Tres clases de escritura, la piedra en el museo y la copia de Champollion.",
+    "feedbackWrong": "Escuchá de nuevo: ¿cuántas, dónde y qué tiene Champollion?",
+    "hint": "Fijate en el número y en la última frase.",
+    "feedbackExtra": "There are three kinds of writing… = Hay tres clases de escritura… The stone is in the museum. = La piedra está en el museo. Champollion has got a copy. = Champollion tiene una copia.",
+    "scaffold": {
+      "altExplanation": "Son tres frases: cuántas clases de escritura hay (there are), dónde está la piedra (in) y qué tiene Champollion (has got)."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Elige dos",
+          "hacer": "Preguntale qué número oyó."
+        },
+        {
+          "si": "Elige «no tiene»",
+          "hacer": "Preguntale qué oyó al final: has got o hasn't got."
+        }
+      ],
+      "variaciones": [
+        "Que describa el aula con there are y un número."
+      ],
+      "decis": [
+        "How many kinds of writing?"
       ]
     }
   },
@@ -18499,12 +22891,53 @@ const EXERCISES_M0 = [
         "idea": "Y pedir lo que necesitás. Can I see your student card, please? Can you help me, please? Se contesta: Sure. / Sorry, I can't.",
         "media": {
           "tipo": "hero",
-          "img": _ASSET_DEDUP_91,
+          "img": _ASSET_DEDUP_126,
           "alt": "Maya le da su carnet de estudiante a la bibliotecaria, detrás del mostrador."
         },
-        "audio": "../pdp-assets/9b72faa9652257c48096f6d0a01c29e9.mp3"
+        "audio": _ASSET_DEDUP_133
       }
-    ]
+    ],
+    "modo": "personal"
+  },
+  {
+    "id": "EN-A2-U02-497",
+    "status": "draft",
+    "nivelId": "m0-n8",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "pedir lo que necesitás",
+    "feedback": "Ya sabés pedir lo que necesitás.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Y pedir lo que necesitás.",
+        "title": "Can I…? Can you…?",
+        "regla": "Y pedir lo que necesitás.",
+        "fichas": [
+          {
+            "en": "Can I see your ID card, please?",
+            "rotulo": "PEDIR"
+          },
+          {
+            "en": "Can you help me, please?",
+            "rotulo": "PEDIR AYUDA"
+          }
+        ],
+        "notas": [
+          "Se contesta: Sure. / Sorry, I can't."
+        ],
+        "idea": "Y pedir lo que necesitás. Can I see your ID card, please? Can you help me, please? Se contesta: Sure. / Sorry, I can't.",
+        "media": {
+          "tipo": "hero",
+          "img": _ASSET_DEDUP_106,
+          "alt": "En el museo, un visitante le pide algo al guardia."
+        },
+        "audio": _ASSET_DEDUP_133
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-088",
@@ -18518,11 +22951,11 @@ const EXERCISES_M0 = [
     "vozEntrada": "Is there a timetable next to the door? Yes, there is. Can I see the timetable, please? Sure. Here you are.",
     "audio": "../pdp-assets/877a9064167f453e64dbd94234a50340.mp3",
     "options": [
+      "¿Hay un horario al lado de la ventana? Sí, hay. ¿Puedo ver el horario, por favor? Claro. Tomá.",
       "¿Hay un horario al lado de la puerta? Sí, hay. ¿Puedo ver el horario, por favor? Claro. Tomá.",
-      "¿Hay un horario al lado de la puerta? No, no hay. ¿Puedo ver el horario, por favor? Claro. Tomá.",
-      "¿Hay un horario al lado de la ventana? Sí, hay. ¿Puedo ver el horario, por favor? Claro. Tomá."
+      "¿Hay un horario al lado de la puerta? No, no hay. ¿Puedo ver el horario, por favor? Claro. Tomá."
     ],
-    "correct": 0,
+    "correct": 1,
     "feedback": "¡Eso! Sí hay un horario al lado de la puerta y se lo muestran.",
     "feedbackWrong": "Escuchá de nuevo: ¿hay o no hay? ¿Dónde? ¿Y qué le contestan?",
     "hint": "Hay una pregunta de lugar y un pedido.",
@@ -18530,6 +22963,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Son dos partes: una pregunta de si hay algo y dónde, y un pedido. Escuchá cada respuesta."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -18546,6 +22980,51 @@ const EXERCISES_M0 = [
       ],
       "decis": [
         "Listen again. Yes or no? Door or window?"
+      ]
+    }
+  },
+  {
+    "id": "EN-A2-U02-788",
+    "status": "draft",
+    "nivelId": "m0-n8",
+    "kind": "listen",
+    "stage": "Reconocimiento",
+    "skill": "COMP_01",
+    "difficulty": 1,
+    "question": "Escuchá a un visitante y al guardia. ¿Qué dicen?",
+    "vozEntrada": "Is there a map next to the door? Yes, there is. Can I see the map, please? Sure. Here you are.",
+    "audio": "../pdp-assets/39eacbcb91f5c5cf164bfdacf0cb0227.mp3",
+    "options": [
+      "¿Hay un mapa al lado de la puerta? Sí, hay. ¿Puedo ver el mapa, por favor? Claro. Tomá.",
+      "¿Hay un mapa al lado de la puerta? No, no hay. ¿Puedo ver el mapa, por favor? Claro. Tomá.",
+      "¿Hay un mapa detrás de la puerta? Sí, hay. ¿Puedo ver el mapa, por favor? Claro. Tomá."
+    ],
+    "correct": 0,
+    "feedback": "¡Eso! Hay un mapa al lado de la puerta y el guardia se lo da.",
+    "feedbackWrong": "Escuchá de nuevo: ¿hay o no hay? ¿Dónde?",
+    "hint": "¿Sí o no? ¿Dónde?",
+    "feedbackExtra": "Is there a map next to the door? Yes, there is. = ¿Hay un mapa al lado de la puerta? Sí, hay. Can I see the map? = ¿Puedo ver el mapa?",
+    "scaffold": {
+      "altExplanation": "Primero el visitante pregunta si hay un mapa (Is there…?) y dónde; después pide verlo (Can I see…?). Escuchá la respuesta corta y la palabra de lugar."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Elige «No, no hay»",
+          "hacer": "Preguntale qué oyó: ¿Yes, there is?"
+        },
+        {
+          "si": "Elige «detrás»",
+          "hacer": "Preguntale qué palabra de lugar oyó."
+        }
+      ],
+      "variaciones": [
+        "Que pida ver otra cosa del museo."
+      ],
+      "decis": [
+        "Is there a map? Where?"
       ]
     }
   },
@@ -18590,6 +23069,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Primero se pide, después contestan, después se pide otra cosa y por último se la dan."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -18608,8 +23088,66 @@ const EXERCISES_M0 = [
         "Who asks first?"
       ]
     },
-    "image": _ASSET_DEDUP_90,
+    "image": _ASSET_DEDUP_125,
     "imageAlt": "Un chico le pide algo prestado a un compañero en la biblioteca."
+  },
+  {
+    "id": "EN-A2-U02-789",
+    "status": "draft",
+    "nivelId": "m0-n8",
+    "kind": "timeline",
+    "stage": "Asociación",
+    "skill": "TEMP_01",
+    "difficulty": 2,
+    "guided": true,
+    "guidedMessages": [
+      {
+        "when": "start",
+        "text": "Tocá una frase y después el lugar de la línea donde va. Ordená la conversación."
+      }
+    ],
+    "question": "Ordená la conversación en el museo, de lo primero a lo último.",
+    "labels": [
+      "Primero",
+      "Segundo",
+      "Tercero",
+      "Cuarto"
+    ],
+    "events": [
+      "Here you are.",
+      "Hello! Can I see the stone, please?",
+      "Thank you! Where's the stone?",
+      "Sure. Can I see your ID card, please?"
+    ],
+    "correctOrder": [
+      1,
+      3,
+      0,
+      2
+    ],
+    "feedback": "¡Bien! Esa es la conversación.",
+    "feedbackWrong": "Alguna frase no está en su lugar: pensá qué se dice primero y qué contesta el otro.",
+    "hint": "Empezá por el primer pedido.",
+    "feedbackExtra": "Hello! Can I see the stone, please? → Sure. Can I see your ID card, please? → Here you are. → Thank you! Where's the stone?",
+    "scaffold": {
+      "altExplanation": "Primero el visitante pide ver la piedra; el guardia dice que sí y pide el documento; el visitante se lo da y pregunta dónde está la piedra."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Pone Here you are primero",
+          "hacer": "Preguntale qué se dice antes de dar algo."
+        }
+      ],
+      "variaciones": [
+        "Que diga la conversación entera con vos, vos de guardia."
+      ],
+      "decis": [
+        "Who asks first?"
+      ]
+    }
   },
   {
     "status": "published",
@@ -18646,12 +23184,12 @@ const EXERCISES_M0 = [
         "espera": "There are three windows.",
         "otras": [
           {
-            "decis": "Leo have got a form.",
-            "espera": "Leo has got a form."
+            "decis": "Young have got a pen.",
+            "espera": "Young has got a pen."
           },
           {
-            "decis": "Can I to see your student card?",
-            "espera": "Can I see your student card?"
+            "decis": "Can I to open the door?",
+            "espera": "Can I open the door?"
           }
         ]
       },
@@ -18733,6 +23271,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Cada frase es de una lección distinta: hay, qué tiene alguien, pedir y dónde está. Buscá la palabra clave."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -18745,6 +23284,57 @@ const EXERCISES_M0 = [
       ],
       "decis": [
         "Which one is a question about Tom?"
+      ]
+    }
+  },
+  {
+    "id": "EN-A2-U02-790",
+    "status": "draft",
+    "nivelId": "m0-n8",
+    "kind": "match",
+    "stage": "Asociación",
+    "skill": "ASOC_01",
+    "difficulty": 2,
+    "question": "Uní cada frase con lo que quiere decir.",
+    "left": [
+      "There are three kinds of writing.",
+      "Has Champollion got a copy?",
+      "Can I see the stone, please?",
+      "The stone is in the museum."
+    ],
+    "right": [
+      "¿Puedo ver la piedra, por favor?",
+      "La piedra está en el museo.",
+      "Hay tres clases de escritura.",
+      "¿Tiene Champollion una copia?"
+    ],
+    "pairs": {
+      "0": 2,
+      "1": 3,
+      "2": 0,
+      "3": 1
+    },
+    "feedback": "¡Bien relacionado!",
+    "feedbackWrong": "Algún par no coincide: fijate qué cosa es y qué dice de ella.",
+    "hint": "Buscá there, has, can o una palabra de lugar.",
+    "feedbackExtra": "There are = hay · Has … got? = ¿tiene…? · Can I see…? = ¿puedo ver…? · in the museum = en el museo.",
+    "scaffold": {
+      "altExplanation": "Cada frase usa algo de una lección distinta: hay, tener, pedir o dónde está."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Une Can I con «está en el museo»",
+          "hacer": "Preguntale qué quiere decir can."
+        }
+      ],
+      "variaciones": [
+        "Que lea cada frase en voz alta."
+      ],
+      "decis": [
+        "Which one is: ¿Tiene Champollion una copia?"
       ]
     }
   },
@@ -18776,12 +23366,50 @@ const EXERCISES_M0 = [
         "idea": "Para describir un lugar: qué hay, cuántos y dónde está. There are eight desks. The clock is next to the door.",
         "media": {
           "tipo": "hero",
-          "img": _ASSET_DEDUP_70,
+          "img": _ASSET_DEDUP_77,
           "alt": "Un aula vacía: una pizarra con un reloj encima, dos ventanas y ocho pupitres con sus sillas en dos filas."
         },
         "audio": _ASSET_DEDUP_22
       }
-    ]
+    ],
+    "modo": "personal"
+  },
+  {
+    "id": "EN-A2-U02-338",
+    "status": "draft",
+    "nivelId": "m0-n8",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "recordar la regla antes de escribir",
+    "feedback": "Listo: ya te acordás de la regla.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Antes de escribir, un recordatorio.",
+        "title": "Recordá",
+        "regla": "Para describir un lugar: **qué hay**, **cuántos** y **dónde está**.",
+        "fichas": [
+          {
+            "en": "There are three kinds of writing.",
+            "rotulo": "CUÁNTOS"
+          },
+          {
+            "en": "The window is next to the stone.",
+            "rotulo": "DÓNDE"
+          }
+        ],
+        "idea": "Para describir un lugar: qué hay, cuántos y dónde está. There are three kinds of writing. The window is next to the stone.",
+        "media": {
+          "tipo": "hero",
+          "img": _ASSET_DEDUP_106,
+          "alt": "La sala del Museo Británico: la piedra de Rosetta en el medio, una ventana al lado y visitantes alrededor."
+        },
+        "audio": _ASSET_DEDUP_22
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-091",
@@ -18794,11 +23422,11 @@ const EXERCISES_M0 = [
     "question": "Completá lo que dice Maya de su aula.",
     "sentence": "MAYA: There ___ any computers in my classroom.",
     "bank": [
-      "haven't",
       "aren't",
-      "isn't"
+      "isn't",
+      "haven't"
     ],
-    "correct": 1,
+    "correct": 0,
     "answers": [
       "aren't"
     ],
@@ -18818,6 +23446,7 @@ const EXERCISES_M0 = [
       },
       "altExplanation": "Any acompaña a varias cosas: la forma negativa que va con varias es la de are."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -18836,8 +23465,64 @@ const EXERCISES_M0 = [
         "One or more? Is there any?"
       ]
     },
-    "image": _ASSET_DEDUP_68,
+    "image": _ASSET_DEDUP_73,
     "imageAlt": "El aula de Leo: una pizarra, dos puertas y doce sillas. No hay reloj."
+  },
+  {
+    "id": "EN-A2-U02-791",
+    "status": "draft",
+    "nivelId": "m0-n8",
+    "kind": "word-bank",
+    "stage": "Producción guiada",
+    "skill": "PROD_01",
+    "difficulty": 2,
+    "question": "Completá lo que dice el guardia del museo.",
+    "sentence": "THE GUARD: There ___ any computers in this room.",
+    "bank": [
+      "isn't",
+      "haven't",
+      "aren't"
+    ],
+    "correct": 2,
+    "answers": [
+      "aren't"
+    ],
+    "feedback": "¡Eso! Con any y varias cosas va aren't.",
+    "feedbackWrong": "Fijate si hablan de una o de varias cosas y qué forma negativa va con ellas.",
+    "hint": "Fijate en la palabra any.",
+    "feedbackExtra": "There aren't any computers in this room. = No hay computadoras en esta sala. Con varias cosas: there aren't any.",
+    "scaffold": {
+      "example": {
+        "label": "Un caso más simple: una sola cosa",
+        "steps": [
+          {
+            "math": "There ___ a computer. → There isn't a computer.",
+            "reason": "Con una sola cosa va isn't; con varias y any, la otra forma."
+          }
+        ]
+      },
+      "altExplanation": "El guardia dice que no hay varias cosas (computers, con any): la forma negativa es la de plural; haven't es de tener."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Elige isn't",
+          "hacer": "¿Habla de una computadora o de varias? Mirá any."
+        },
+        {
+          "si": "Elige haven't",
+          "hacer": "Recordale que haven't es de tener, no de haber."
+        }
+      ],
+      "variaciones": [
+        "Que diga qué NO hay en el aula."
+      ],
+      "decis": [
+        "One computer or many?"
+      ]
+    }
   },
   {
     "id": "EN-A2-U02-092",
@@ -18891,6 +23576,7 @@ const EXERCISES_M0 = [
       },
       "altExplanation": "Pensá en el orden: quién tiene, cuál es la forma de tener que le toca a esa persona y qué tiene, con su origen al final."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -18913,6 +23599,75 @@ const EXERCISES_M0 = [
     "imageAlt": "Leo con un mapa plegado."
   },
   {
+    "id": "EN-A2-U02-792",
+    "status": "draft",
+    "nivelId": "m0-n8",
+    "kind": "order",
+    "stage": "Producción guiada",
+    "skill": "TEMP_02",
+    "difficulty": 2,
+    "question": "Ordená lo que dice Young de Champollion.",
+    "words": [
+      "copy",
+      "from",
+      "Egypt",
+      "has",
+      "a",
+      "Champollion",
+      "got"
+    ],
+    "correctOrder": [
+      5,
+      3,
+      6,
+      4,
+      0,
+      1,
+      2
+    ],
+    "correct": [
+      5,
+      3,
+      6,
+      4,
+      0,
+      1,
+      2
+    ],
+    "feedback": "¡Correcto! \"Champollion has got a copy from Egypt.\"",
+    "feedbackWrong": "Revisá quién tiene la cosa y qué forma de tener le sigue.",
+    "hint": "Empezá por quien tiene la cosa.",
+    "feedbackExtra": "Champollion has got a copy from Egypt. Orden: quién + has got + a + la cosa + de dónde es.",
+    "scaffold": {
+      "example": {
+        "label": "Una guía de orden",
+        "steps": [
+          {
+            "math": "quién · has got · a · la cosa · de dónde",
+            "reason": "Armá la frase en ese orden."
+          }
+        ]
+      },
+      "altExplanation": "Champollion es he: después de él va has got, la cosa y de dónde viene."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Empieza por copy",
+          "hacer": "Preguntale quién tiene la cosa."
+        }
+      ],
+      "variaciones": [
+        "Que diga qué tiene Young, inventando."
+      ],
+      "decis": [
+        "Who has got the copy?"
+      ]
+    }
+  },
+  {
     "id": "EN-A2-U02-093",
     "status": "draft",
     "nivelId": "m0-n8",
@@ -18923,11 +23678,11 @@ const EXERCISES_M0 = [
     "question": "Completá lo que dice Maya: le pide prestada una lapicera a su compañero.",
     "sentence": "MAYA: Can ___ borrow your pen, please?",
     "bank": [
-      "you",
       "it",
-      "I"
+      "I",
+      "you"
     ],
-    "correct": 2,
+    "correct": 1,
     "answers": [
       "I"
     ],
@@ -18947,6 +23702,7 @@ const EXERCISES_M0 = [
       },
       "altExplanation": "Cuando uno pide permiso para hacer algo uno mismo, la palabra después de Can es la de uno mismo."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -18965,8 +23721,60 @@ const EXERCISES_M0 = [
         "Ask me for a pen."
       ]
     },
-    "image": _ASSET_DEDUP_86,
+    "image": _ASSET_DEDUP_98,
     "imageAlt": "Tom le pide una lapicera a Maya."
+  },
+  {
+    "id": "EN-A2-U02-793",
+    "status": "draft",
+    "nivelId": "m0-n8",
+    "kind": "word-bank",
+    "stage": "Producción guiada",
+    "skill": "PROD_01",
+    "difficulty": 2,
+    "question": "Completá lo que dice Champollion: le pide prestada una lapicera a Young.",
+    "sentence": "CHAMPOLLION: Can ___ borrow your pen, please?",
+    "bank": [
+      "I",
+      "you",
+      "it"
+    ],
+    "correct": 0,
+    "answers": [
+      "I"
+    ],
+    "feedback": "¡Eso! El que pide prestado es Champollion: I.",
+    "feedbackWrong": "Fijate quién pide prestado en esta escena.",
+    "hint": "Pensá quién pide.",
+    "feedbackExtra": "Can I borrow your pen, please? = ¿Me prestás tu lapicera? El que pide es Champollion (I).",
+    "scaffold": {
+      "example": {
+        "label": "Un caso más simple: otro pedido",
+        "steps": [
+          {
+            "math": "Can ___ have a copy? → I",
+            "reason": "Si pedís algo para vos, va I."
+          }
+        ]
+      },
+      "altExplanation": "Champollion pide algo para él: la pregunta va con I."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Elige you",
+          "hacer": "Preguntale quién pide la lapicera."
+        }
+      ],
+      "variaciones": [
+        "Que pida otra cosa a un compañero."
+      ],
+      "decis": [
+        "Who asks: I or you?"
+      ]
+    }
   },
   {
     "id": "EN-A2-U02-316",
@@ -19019,11 +23827,11 @@ const EXERCISES_M0 = [
             },
             {
               "titulo": "dónde está",
-              "img": _ASSET_DEDUP_77
+              "img": _ASSET_DEDUP_86
             },
             {
               "titulo": "pedir",
-              "img": _ASSET_DEDUP_86
+              "img": _ASSET_DEDUP_98
             }
           ]
         },
@@ -19067,12 +23875,121 @@ const EXERCISES_M0 = [
         "idea": "Con toda la Unidad ya podés hacer tres cosas. Decir qué tenés y qué tienen los demás. Describir un lugar: qué hay, cuántos y dónde está. Pedir cosas, permiso y ayuda. Ahora, el Level Check final.",
         "media": {
           "tipo": "hero",
-          "img": _ASSET_DEDUP_70,
+          "img": _ASSET_DEDUP_77,
           "alt": "Un aula vacía: una pizarra con un reloj encima, dos ventanas y ocho pupitres con sus sillas en dos filas."
         },
         "audio": _ASSET_DEDUP_63
       }
-    ]
+    ],
+    "modo": "personal"
+  },
+  {
+    "id": "EN-A2-U02-346",
+    "status": "draft",
+    "nivelId": "m0-n8",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "integrar todo lo que aprendiste antes del Level Check",
+    "feedback": "Listo: repasaste lo que aprendiste.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Todo junto.",
+        "title": "La Unidad en un mapa",
+        "regla": "Cuatro cosas que ya sabés decir en inglés.",
+        "fichas": [
+          {
+            "en": "She's got a pencil. · Has he got a map?",
+            "es": "qué tiene alguien",
+            "rotulo": "LECCIONES 1 A 4"
+          },
+          {
+            "en": "There are twenty politicians. · There isn't a clock.",
+            "es": "qué hay",
+            "rotulo": "LECCIÓN 5"
+          },
+          {
+            "en": "The map is on the table. · Where's the map?",
+            "es": "dónde está algo",
+            "rotulo": "LECCIÓN 6"
+          },
+          {
+            "en": "Can I see the stone, please? · Can you help me?",
+            "es": "pedir",
+            "rotulo": "LECCIÓN 7"
+          }
+        ],
+        "idea": "Cuatro cosas que ya sabés decir en inglés. She's got a pencil. · Has he got a map? = qué tiene alguien There are twenty politicians. · There isn't a clock. = qué hay The map is on the table. · Where's the map? = dónde está algo Can I see the stone, please? · Can you help me? = pedir",
+        "media": {
+          "tipo": "rejilla",
+          "items": [
+            {
+              "titulo": "qué tiene",
+              "img": _ASSET_DEDUP_32
+            },
+            {
+              "titulo": "qué hay",
+              "img": _ASSET_DEDUP_58
+            },
+            {
+              "titulo": "dónde está",
+              "img": _ASSET_DEDUP_59
+            },
+            {
+              "titulo": "pedir",
+              "img": _ASSET_DEDUP_106
+            }
+          ]
+        },
+        "audio": _ASSET_DEDUP_62
+      },
+      {
+        "proposito": "ensenanza",
+        "block": "compare",
+        "voz": "Ojo con esto.",
+        "correcto": {
+          "titulo": "✓ Así sí",
+          "items": [
+            "She has got a pencil.",
+            "There are two tunnels.",
+            "Where's the map?",
+            "Can I see the stone?"
+          ]
+        },
+        "incorrecto": {
+          "titulo": "✗ Así no",
+          "items": [
+            "She have got a pencil.",
+            "There is two tunnels.",
+            "Where the map is?",
+            "Can I to see the stone?"
+          ]
+        },
+        "audio": _ASSET_DEDUP_25
+      },
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Lo que ya podés hacer.",
+        "title": "Ahora podés…",
+        "regla": "Con toda la Unidad ya podés hacer tres cosas.",
+        "notas": [
+          "Decir qué tenés y qué tienen los demás.",
+          "Describir un lugar: qué hay, cuántos y dónde está.",
+          "Pedir cosas, permiso y ayuda. Ahora, el Level Check final."
+        ],
+        "idea": "Con toda la Unidad ya podés hacer tres cosas. Decir qué tenés y qué tienen los demás. Describir un lugar: qué hay, cuántos y dónde está. Pedir cosas, permiso y ayuda. Ahora, el Level Check final.",
+        "media": {
+          "tipo": "hero",
+          "img": _ASSET_DEDUP_106,
+          "alt": "La sala del Museo Británico: la piedra de Rosetta en el medio, una ventana al lado y visitantes alrededor."
+        },
+        "audio": _ASSET_DEDUP_63
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-903",
@@ -19368,8 +24285,310 @@ const EXERCISES_M0 = [
         }
       ]
     },
-    "avatar": _ASSET_DEDUP_78,
-    "modo": "marcar"
+    "avatar": _ASSET_DEDUP_90,
+    "modo": "personal"
+  },
+  {
+    "id": "EN-A2-U02-914",
+    "status": "draft",
+    "nivelId": "m0-n8",
+    "kind": "mundo",
+    "ordenFijo": true,
+    "stage": "Producción guiada",
+    "skill": "PROD_01",
+    "difficulty": 2,
+    "question": "¿Qué no es como dice el visitante?",
+    "feedback": "¡Las encontraste!",
+    "feedbackWrong": "Mirá las filas marcadas: ahí está la pista.",
+    "hint": "Empezá por la primera fila marcada.",
+    "scaffold": {
+      "altExplanation": "Leé una frase del visitante por vez y buscá esa cosa en el dibujo. Si en el dibujo no es así, tocala."
+    },
+    "feedbackExtra": "Fijate en las palabras de lugar (in the middle, next to) y en there is / there isn't: there isn't quiere decir que no hay.",
+    "mundo": {
+      "id": "mundo-escena-museo-clase-l8",
+      "tipo": "escena",
+      "modo": "marcar",
+      "nombre": "Escena",
+      "unidad": "en-a2-u02-things-and-school",
+      "leccion": "L8",
+      "desde": [
+        "EN-A2-U02-791",
+        "EN-A2-U02-787"
+      ],
+      "titulo": "¿Qué no es como dice el visitante?",
+      "consigna": {
+        "banner": "The stone is in the middle. There's a window next to the stone. There isn't a statue. The man is next to the stone. There's a woman next to the man.",
+        "tip": "Leé lo que dice el visitante del museo. Tocá en el dibujo lo que NO es como él dice. Si te equivocás, tocalo otra vez."
+      },
+      "escena": {
+        "hablante": "el visitante",
+        "receptor": "el visitante",
+        "imagen": "a2u02-rosetta-museo",
+        "imagenAncho": 800,
+        "imagenAlto": 400,
+        "tablero": "La sala del museo"
+      },
+      "vocab": {
+        "dato": [
+          "cosa",
+          "cosas"
+        ],
+        "referencia": "lo que dice el visitante",
+        "receptor": "el visitante",
+        "pieza": [
+          "marca",
+          "marcas"
+        ],
+        "sobra": [
+          "marca de más",
+          "marcas de más"
+        ],
+        "falta": [
+          "cosa",
+          "cosas"
+        ]
+      },
+      "textos": {
+        "okTitulo": "¡Las encontraste!",
+        "okTexto": "Marcaste justo lo que no es como dice el visitante.",
+        "casiTitulo": "Casi.",
+        "mirar": "Mirá las cosas en ámbar: volvé a leer qué dice el visitante de cada una y fijate si en el dibujo es así."
+      },
+      "reacciones": {
+        "ok": "",
+        "distinto": "",
+        "no-entendio": "",
+        "sobra": ""
+      },
+      "ayudas": [
+        "Leé una frase del visitante por vez y buscá esa cosa en el dibujo. Si en el dibujo no es así, tocala.",
+        "Fijate en las palabras de lugar (in the middle, next to) y en there is / there isn't: there isn't quiere decir que no hay."
+      ],
+      "demo": {
+        "error": {
+          "h_stone": "stone__distinto",
+          "h_window": "window__igual",
+          "h_statue": "statue__igual",
+          "h_man": "man__distinto",
+          "h_woman": "woman__igual"
+        }
+      },
+      "ambientacion": "cuento",
+      "gemeloDe": "EN-A2-U02-903",
+      "modoUso": "clase",
+      "_nota": "Gemelo de clase de escena_aula_equivocada_l8.json (fuente: generadores/mundos_clase_u02.py). Imagen: ilustración 6 de «La piedra de Rosetta»; cajas medidas sobre 800×400.",
+      "aula": {
+        "objetos": [
+          {
+            "id": "stone",
+            "texto": "stone",
+            "caja": [
+              42,
+              6,
+              31,
+              72
+            ]
+          },
+          {
+            "id": "window",
+            "texto": "window",
+            "caja": [
+              80,
+              12,
+              12,
+              38
+            ]
+          },
+          {
+            "id": "statue",
+            "texto": "statue",
+            "caja": [
+              93,
+              18,
+              7,
+              42
+            ]
+          },
+          {
+            "id": "man",
+            "texto": "man",
+            "caja": [
+              0,
+              22,
+              7,
+              28
+            ]
+          },
+          {
+            "id": "woman",
+            "texto": "woman",
+            "caja": [
+              4,
+              52,
+              11,
+              22
+            ]
+          }
+        ],
+        "lugares": [],
+        "bandeja": {
+          "id": "igual",
+          "texto": "is like he says"
+        },
+        "modo": "marcar",
+        "marcado": {
+          "id": "distinto",
+          "texto": "is not like he says"
+        }
+      },
+      "campos": [
+        {
+          "id": "stone",
+          "etiqueta": "stone"
+        },
+        {
+          "id": "window",
+          "etiqueta": "window"
+        },
+        {
+          "id": "statue",
+          "etiqueta": "statue"
+        },
+        {
+          "id": "man",
+          "etiqueta": "man"
+        },
+        {
+          "id": "woman",
+          "etiqueta": "woman"
+        }
+      ],
+      "objetivo": {
+        "stone": "is like he says",
+        "window": "is like he says",
+        "statue": "is not like he says",
+        "man": "is not like he says",
+        "woman": "is like he says"
+      },
+      "piezas": [
+        {
+          "id": "stone__distinto",
+          "texto": "stone is not like he says",
+          "efecto": {
+            "stone": "is not like he says"
+          }
+        },
+        {
+          "id": "stone__igual",
+          "texto": "stone is like he says",
+          "efecto": {
+            "stone": "is like he says"
+          }
+        },
+        {
+          "id": "window__distinto",
+          "texto": "window is not like he says",
+          "efecto": {
+            "window": "is not like he says"
+          }
+        },
+        {
+          "id": "window__igual",
+          "texto": "window is like he says",
+          "efecto": {
+            "window": "is like he says"
+          }
+        },
+        {
+          "id": "statue__distinto",
+          "texto": "statue is not like he says",
+          "efecto": {
+            "statue": "is not like he says"
+          }
+        },
+        {
+          "id": "statue__igual",
+          "texto": "statue is like he says",
+          "efecto": {
+            "statue": "is like he says"
+          }
+        },
+        {
+          "id": "man__distinto",
+          "texto": "man is not like he says",
+          "efecto": {
+            "man": "is not like he says"
+          }
+        },
+        {
+          "id": "man__igual",
+          "texto": "man is like he says",
+          "efecto": {
+            "man": "is like he says"
+          }
+        },
+        {
+          "id": "woman__distinto",
+          "texto": "woman is not like he says",
+          "efecto": {
+            "woman": "is not like he says"
+          }
+        },
+        {
+          "id": "woman__igual",
+          "texto": "woman is like he says",
+          "efecto": {
+            "woman": "is like he says"
+          }
+        }
+      ],
+      "huecos": [
+        {
+          "id": "h_stone",
+          "rotulo": "stone",
+          "opciones": [
+            "stone__distinto",
+            "stone__igual"
+          ]
+        },
+        {
+          "id": "h_window",
+          "rotulo": "window",
+          "opciones": [
+            "window__distinto",
+            "window__igual"
+          ]
+        },
+        {
+          "id": "h_statue",
+          "rotulo": "statue",
+          "opciones": [
+            "statue__distinto",
+            "statue__igual"
+          ]
+        },
+        {
+          "id": "h_man",
+          "rotulo": "man",
+          "opciones": [
+            "man__distinto",
+            "man__igual"
+          ]
+        },
+        {
+          "id": "h_woman",
+          "rotulo": "woman",
+          "opciones": [
+            "woman__distinto",
+            "woman__igual"
+          ]
+        }
+      ]
+    },
+    "avatar": _ASSET_DEDUP_106,
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "status": "published",
@@ -19379,20 +24598,20 @@ const EXERCISES_M0 = [
     "id": "EN-A2-U02-P31",
     "nivelId": "m0-n8",
     "forma": "pausa",
-    "question": "Contale a tu profe cómo es la biblioteca de una tarjeta.",
-    "tutor": "Mirá la tarjeta y contale cómo es esa biblioteca.",
+    "question": "Contale a tu profe cómo es la sala del museo.",
+    "tutor": "Imaginá la sala del museo donde está la piedra y contale a tu profe cómo es.",
     "paraProfe": {
       "criterios": [
-        "Dice qué hay, cuántos y dónde con los datos de la tarjeta.",
+        "Dice qué hay, cuántos y dónde con los datos que le dan.",
         "Usa there is, there are y there isn't.",
         "Registrá cada frase como solo, con pista o no."
       ],
-      "objetivo": "Describir un lugar nuevo con los datos de una tarjeta (variación de lugar).",
+      "objetivo": "Describir un lugar nuevo con los datos que da el profe (variación de lugar).",
       "decis": [
-        "Look at this card: the library. What's in it? (tarjeta: diecisiete mesas; un reloj al lado de la puerta; no hay computadoras)"
+        "The museum room: what's in it? (inventado: diecisiete sillas; un reloj al lado de la puerta; no hay computadoras)"
       ],
       "esperas": [
-        "There are seventeen tables. There's a clock next to the door. There aren't any computers."
+        "There are seventeen chairs. There's a clock next to the door. There aren't any computers."
       ],
       "variantes": [
         "There are…",
@@ -19418,17 +24637,17 @@ const EXERCISES_M0 = [
           "hacer": "Repetí con are: \"There are seventeen tables\", y esperá que la repita."
         },
         {
-          "si": "Cuenta del aula en vez de la biblioteca",
-          "hacer": "Señalá la tarjeta: cuenta como con ayuda."
+          "si": "Cuenta del aula en vez del museo",
+          "hacer": "Recordale los datos del museo: cuenta como con ayuda."
         }
       ],
       "variaciones": [
-        "Que diga lo mismo de otra tarjeta."
+        "Que diga lo mismo del escritorio de Champollion, inventando."
       ],
       "registra": "Una marca para el momento: solo / con ayuda / todavía no."
     },
     "experienciaProfe": "PRF-TRA-02",
-    "image": _ASSET_DEDUP_69,
+    "image": _ASSET_DEDUP_74,
     "imageAlt": "La biblioteca de la escuela vista desde arriba."
   },
   {
@@ -19459,6 +24678,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Tres partes: there con la forma para varias cosas, el número escrito con guion y la cosa en plural."
     },
+    "modo": "personal",
     "paraProfe": {
       "variantes": [
         "There are twenty-two desks in the classroom."
@@ -19471,6 +24691,61 @@ const EXERCISES_M0 = [
         {
           "si": "Escribe \"There are twenty two desks\"",
           "hacer": "No intervenir. Registrar como error de forma (falta el guion)."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-794",
+    "status": "draft",
+    "nivelId": "m0-n8",
+    "kind": "fill",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "PROD_01",
+    "difficulty": 3,
+    "question": "Escribí en inglés: en la sala del museo hay veintidós sillas (el número con letras).",
+    "answer": "There are twenty-two chairs.",
+    "acceptVariants": [
+      "There are twenty-two chairs.",
+      "There are twenty-two chairs",
+      "there are twenty-two chairs.",
+      "there are twenty-two chairs",
+      "There are twenty-two chairs in the room.",
+      "There are twenty-two chairs in the room",
+      "there are twenty-two chairs in the room.",
+      "there are twenty-two chairs in the room",
+      "There are twenty two chairs.",
+      "There are twenty two chairs",
+      "there are twenty two chairs.",
+      "there are twenty two chairs"
+    ],
+    "feedback": "¡Eso! Así se dice cuántas cosas hay.",
+    "feedbackWrong": "Escribí la frase completa: la forma para varias cosas, el número con guion y la cosa en plural.",
+    "hint": "Pensá cuántas cosas hay y cómo se escribe la cantidad.",
+    "feedbackExtra": "There are twenty-two chairs. = Hay veintidós sillas. Con varias cosas: there are; del 21 al 29 va con guion.",
+    "scaffold": {
+      "altExplanation": "Primero there y la forma para varias cosas, después el número con guion y chairs."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "variantes": [
+        "There are twenty-two chairs in the room."
+      ],
+      "errores": [
+        {
+          "si": "Escribe \"There is twenty-two chairs\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        },
+        {
+          "si": "Escribe \"twentytwo\"",
+          "hacer": "No intervenir. Registrar como error de forma."
         }
       ],
       "variaciones": [],
@@ -19509,11 +24784,58 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Mirá a Maya: con una sola persona (she) la forma de tener es otra que con I o they. Buscá la que no va."
     },
+    "modo": "personal",
     "paraProfe": {
       "variantes": [],
       "errores": [
         {
           "si": "Marca got o timetable",
+          "hacer": "No intervenir. Registrar como error de forma."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-795",
+    "status": "draft",
+    "nivelId": "m0-n8",
+    "kind": "error-find",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "CORR_01",
+    "difficulty": 3,
+    "question": "Young cuenta qué tiene Champollion, pero hay un error. Tocá la palabra que está mal y corregila.",
+    "sentence": [
+      "Champollion",
+      "have",
+      "got",
+      "a",
+      "copy",
+      "and",
+      "a",
+      "pen."
+    ],
+    "errorIndex": 1,
+    "correction": "has",
+    "feedback": "¡Eso! Con Champollion (he) va esa palabra.",
+    "feedbackWrong": "Una palabra no es la que va después de Champollion.",
+    "hint": "Mirá la palabra después de Champollion.",
+    "feedbackExtra": "Champollion has got a copy and a pen. Champollion es he, y con he va has got.",
+    "scaffold": {
+      "altExplanation": "Con he y con she la forma de tener cambia. Buscá la palabra que no es esa."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "variantes": [],
+      "errores": [
+        {
+          "si": "Marca got o copy",
           "hacer": "No intervenir. Registrar como error de forma."
         }
       ],
@@ -19552,6 +24874,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Armá el pedido: cómo se le pide a otro, la acción y qué cosa."
     },
+    "modo": "personal",
     "paraProfe": {
       "variantes": [
         "Can you open the window please?"
@@ -19560,6 +24883,51 @@ const EXERCISES_M0 = [
         {
           "si": "Escribe \"Can I open the window, please?\"",
           "hacer": "No intervenir. Registrar como error de significado: pidió permiso en vez de pedirle a otra persona."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-796",
+    "status": "draft",
+    "nivelId": "m0-n8",
+    "kind": "fill",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "PROD_01",
+    "difficulty": 3,
+    "question": "Escribí en inglés: le pedís a Young que abra la ventana, con please.",
+    "answer": "Can you open the window, please?",
+    "acceptVariants": [
+      "Can you open the window, please?",
+      "Can you open the window, please",
+      "can you open the window, please?",
+      "can you open the window, please"
+    ],
+    "feedback": "¡Eso! Así se le pide a otro que haga algo.",
+    "feedbackWrong": "Escribí el pedido completo: la forma de pedirle a otro, el verbo, la cosa y please.",
+    "hint": "Pensá cómo se le pide a otra persona que haga algo.",
+    "feedbackExtra": "Can you open the window, please? = ¿Abrís la ventana, por favor? Can you + verbo + please.",
+    "scaffold": {
+      "altExplanation": "Para que otro haga algo: Can you, el verbo, la cosa y please."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "variantes": [],
+      "errores": [
+        {
+          "si": "Escribe \"Can I open the window?\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        },
+        {
+          "si": "Escribe \"Can you to open…\"",
+          "hacer": "No intervenir. Registrar como error de forma."
         }
       ],
       "variaciones": [],
