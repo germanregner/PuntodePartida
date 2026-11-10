@@ -357,6 +357,8 @@ function pdpIrAUnidadDeEntrada(base){
   }).catch(()=>{ location.href=base; });
 }
 function pdpAlternarModoPrueba(on){
+  /* 2026-11-08 (Director): pasar de prueba a normal (o al revés) NO vuelve a preguntar «¿Cómo querés hacerla?»: es la misma Unidad en el mismo teléfono, se conserva el modo que ya tenías. */
+  try{ if(window.__pdpUnidadDeClase===true) pdpConfirmarModo(window.__pdpModoPersonal?'personal':'clase'); }catch(_){}
   try{
     const archivo=location.pathname.split('/').pop();
     const base=location.pathname.replace(/vista-previa\/[^/]*$/,'').replace(/[^/]*$/,'');
@@ -690,6 +692,14 @@ function pdpAplicarEstiloMundo(){ try{ document.documentElement.setAttribute('da
 /* Variaciones de presentación del modo prueba (2026-10-20, pedido del Director: ver variantes de cómo quedaría mejor, directo en la app). Cada grupo es un <select> en el 🧪; la elección queda en ese teléfono
    y se aplica como atributo data-var-<id> del <html>, que el CSS usa. Fuera del modo prueba SIEMPRE rige el valor por defecto. Al decidirse un grupo, se fija su defecto y se retira de acá. */
 const PDP_VARIACIONES=[
+  { id:'atl-hoja', titulo:'Skin · hoja de cuaderno', fija:true, defecto:'si', opciones:[['unidad','La de la Unidad'],['si','Con hoja'],['no','Sin hoja']] },
+  { id:'atl-entrada', titulo:'Skin · entrada', fija:true, porMateria:{ math:'mezcla', language:'fundido' }, defecto:'unidad', opciones:[['unidad','La de la Unidad'],['no','Sin efecto'],['papelitos','Papelitos'],['dibujado','Dibujado'],['pegado','Pegado'],['mezcla','Dibujado + pegado'],['fundido','Fundido (aparece suave)'],['pergamino','Pergamino (se desenrolla)'],['sello','Sello (golpecito)'],['dibujado-rapido','Dibujado rápido']] },
+  { id:'skin', titulo:'Skin de Matemática', fija:true, defecto:'no', opciones:[['no','No'],['atelier','Atelier']] },
+  { id:'hoja-brujula', titulo:'Hoja · brújula', fija:true, defecto:'actual', opciones:[['actual','Actual'],['1','1 · Arcoíris vitral'],['2','2 · Acuarela'],['3','3 · Lápiz gris'],['4','4 · Hilos'],['5','5 · Recortes'],['6','6 · Mosaico'],['7','7 · Puntillismo'],['8','8 · Vitral naranja'],['9','9 · Vitral rayitas'],['10','10 · Galaxia'],['11','11 · Piedra oscura'],['12','12 · Crayón'],['13','13 · Masa'],['14','14 · Plano técnico'],['15','15 · Bronce'],['16','16 · Soga'],['17','17 · Papel azul'],['18','18 · Neón'],['19','19 · Madera'],['20','20 · Salpicadura']] },
+  { id:'hoja-iconos', titulo:'Hoja · íconos', fija:true, defecto:'1', opciones:[['1','Kit 1'],['2','Kit 2']] },
+  { id:'hoja-piezas', titulo:'Hoja · piezas', fija:true, defecto:'ilustrado', opciones:[['actual','Actual'],['mixto','Mixto'],['ilustrado','Ilustrado'],['realista','Realista']] },
+  { id:'hoja', titulo:'Pantalla hoja (opción múltiple)', fija:true, defecto:'no', opciones:[['no','No'],['si','Sí']] },
+  { id:'deslizar-izq', titulo:'Deslizar a la izquierda', defecto:'saltar', opciones:[['saltar','Saltar ejercicio'],['comprobar','Comprobar (modo personal)']] },   /* 2026-11-10, pedido del Director: probar deslizar en lugar de apretar «Comprobar» */
   { id:'imagen-efecto', titulo:'Imágenes de los ejercicios', fija:true, defecto:'pergamino', opciones:[['marco','Marco dorado (como hoy)'],['pergamino','Borde de pergamino, sin marco (como las lecturas)']] },
   /* DECIDIDAS por el Director (2026-10-21, después de probarlas en el teléfono): `fija:true` = rige solo el valor por defecto y el 🧪 ya no las ofrece. Se conservan las opciones descartadas por si se quiere volver a probarlas. */
   { id:'mundo-vista', titulo:'Vista de ficha y agenda', fija:true, defecto:'credencial', opciones:[['credencial','Credencial (foto al costado, en todos)'],['tabla','Tabla (foto larga arriba, en todos)'],['compacta','Compacta (avatar y globo)']] },
@@ -698,7 +708,14 @@ const PDP_VARIACIONES=[
   { id:'zonas-movimiento', titulo:'Zonas · movimiento', fija:true, defecto:'deslizar', opciones:[['deslizar','Deslizar'],['salto','Salto'],['ninguno','Sin movimiento']] },
   { id:'zonas-agregados', titulo:'Zonas · agregados', fija:true, defecto:'brillo', opciones:[['brillo','Brillo al llegar'],['sonido','Sonido al llegar'],['ambos','Brillo y sonido'],['ninguno','Ninguno']] }
 ];
-function pdpVariacion(id){ const g=PDP_VARIACIONES.find(x=>x.id===id); if(!g) return null; if(!pdpModoPrueba()||g.fija) return g.defecto;
+function pdpEsMat(){ try{ return APP_CONFIG.colorScheme==='math'; }catch(_){ return false; } }
+function pdpMateria(){ try{ const e=APP_CONFIG.colorScheme; return e==='math'?'math':(e==='language'?'language':''); }catch(_){ return ''; } }   /* 'math' | 'language' | '' (otra materia) */
+/* Solo para pruebas automáticas: deja que una variación DECIDIDA (fija) se ejercite igual desde localStorage. El producto la ignora. */
+function pdpVarForzar(){ try{ return localStorage.getItem('pdp_var_forzar')==='1'; }catch(_){ return false; } }
+/* Decisión del Director (2026-11-07): en Matemática el 🧪 ya no ofrece «Skin · hoja», «Skin · entrada», «Skin de Matemática», «Hoja · brújula», «Hoja · íconos», «Hoja · piezas» ni «Pantalla hoja»: quedan decididas (con hoja, entrada «Dibujado + pegado» por la Unidad, Atelier por la Unidad, íconos Kit 1, piezas ilustradas; la brújula vitral y la pantalla hoja de opción múltiple se descartaron). `ocultaMat:true` = oculta en Matemática pero la sigue ofreciendo a otras materias (Inglés usa «Skin · entrada»). */
+/* `probableEn:[materias]` (2026-11-08, Director: apagar los papelitos para ver si el titileo se va): en esas materias, y SOLO en vista previa, la elección guardada del 🧪 gana sobre lo decidido por materia / `fija`. El producto sigue ignorándola. */
+function pdpVariacion(id){ const g=PDP_VARIACIONES.find(x=>x.id===id); if(!g) return null; if(g.probableEn&&g.probableEn.indexOf(pdpMateria())>=0&&pdpModoPrueba()){ try{ const s=localStorage.getItem('pdp_var_'+id); if(s&&s!=='unidad'&&g.opciones.some(o=>o[0]===s)) return s; }catch(_){} }   /* sin elegir nada, sigue valiendo lo decidido por materia */
+  if(g.porMateria&&!pdpVarForzar()){ const v=g.porMateria[pdpMateria()]; if(v) return v; } if(!pdpModoPrueba()||(g.fija&&!pdpVarForzar())) return g.defecto;
   try{ const v=localStorage.getItem('pdp_var_'+id); if(g.opciones.some(o=>o[0]===v)) return v; }catch(_){} return g.defecto; }
 function pdpAplicarVariaciones(){ try{ PDP_VARIACIONES.forEach(g=>document.documentElement.setAttribute('data-var-'+g.id,pdpVariacion(g.id))); }catch(_){} }
 function pdpPruebaDemo(modo){
@@ -711,6 +728,7 @@ function pdpPruebaDemo(modo){
   }catch(_){}
 }
 function pdpMontarPrueba(){
+  try{ if(pdpModoPrueba()&&!pdpVarForzar()){ ['pdp_var_skin','pdp_var_atl-hoja','pdp_var_hoja','pdp_var_hoja-brujula','pdp_var_hoja-iconos','pdp_var_hoja-piezas','pdp_var_atl-entrada'].forEach(function(k){ localStorage.removeItem(k); }); } }catch(_){}   /* limpieza (2026-11-07): esas elecciones quedaron DECIDIDAS y el valor guardado vale para todo el sitio (se coló el skin de Matemática en Inglés); las páginas con un Motor anterior leen estos valores, así que se limpian y la entrada queda en papelitos para Inglés */
   try{
     // Gesto secreto (2026-10-08, pedido del Director): 5 toques seguidos en el castillo del fondo de Inicio (zona invisible, desde 2026-10-11; antes el Spike del saludo) activan o apagan el modo prueba.
     // Solo si el perfil en uso es de profe (o si no hay perfiles): un alumno que toca a Spike no puede dejar de guardar su avance sin querer.
@@ -737,7 +755,7 @@ function pdpMontarPrueba(){
     const demos=el_('div',null,'pdp-prueba-demos');
     [['bien','Mostrar cómo se resuelve ✓'],['error','Mostrar con error y después bien'],['soloError','Mostrar solo el error']].forEach(([m,tx])=>{ const b=el_('button',tx); b.type='button'; b.setAttribute('data-demo',m); b.onclick=()=>{ panel.hidden=true; pdpPruebaDemo(m); }; demos.appendChild(b); });
     panel.appendChild(demos);
-    PDP_VARIACIONES.filter(g=>!g.fija).forEach(g=>{ const sel=el_('select'); sel.id='pdp-var-'+g.id; sel.setAttribute('aria-label',g.titulo);
+    PDP_VARIACIONES.filter(g=>!g.fija||(g.probableEn&&g.probableEn.indexOf(pdpMateria())>=0)).forEach(g=>{ const sel=el_('select'); sel.id='pdp-var-'+g.id; sel.setAttribute('aria-label',g.titulo);
       g.opciones.forEach(([v,tx])=>{ const o=el_('option',g.titulo+': '+tx); o.value=v; sel.appendChild(o); }); sel.value=pdpVariacion(g.id);
       sel.onchange=()=>{ try{ localStorage.setItem('pdp_var_'+g.id,sel.value); }catch(_){} pdpAplicarVariaciones(); }; panel.appendChild(sel); });
     const adel=el_('button','Adelantar ⏭'); adel.type='button';
@@ -959,7 +977,7 @@ function getTotalCorrect() { return Object.values(state.progress).reduce((a,m)=>
 /* ── Navegación ── */
 function goToScreen(id, saveHist=true) {
   if(id==='screen-map' && state.currentScreen==='screen-home' && pdpHayQueConfirmarAlEntrar()){ if(!document.getElementById('pdp-modo-ov')) pdpPedirModoAlEntrar(()=>goToScreen(id,saveHist)); return; }
-  if(id==='screen-exercise' && pdpModoPrueba() && !window.__pdpHintSig){ window.__pdpHintSig=1; setTimeout(()=>{ try{ if(state.currentScreen==='screen-exercise') showToast('Modo prueba: deslizá a la izquierda para pasar al siguiente ejercicio',2000); }catch(_){} },1200); }
+  if(id==='screen-exercise' && pdpModoPrueba() && !window.__pdpHintSig){ window.__pdpHintSig=1; setTimeout(()=>{ try{ if(state.currentScreen==='screen-exercise') showToast(pdpDeslizarActivo()?'Modo prueba: deslizá a la izquierda para comprobar (y continuar)':'Modo prueba: deslizá a la izquierda para pasar al siguiente ejercicio',2000);   /* 2026-11-10: con la opción «Comprobar» el deslizar ya no salta */ }catch(_){} },1200); }
   if(id==='screen-exercise' && window.__pdpPruebaId) pdpMarcarUnidadVista(window.__pdpPruebaId);   // una Unidad de prueba pasa a Inicio recién cuando se empieza una lección (2026-10-19)
   // Sheet fantasma — cobertura general (2026-08-25, hallazgo real de
   // dispositivo del Director: el tutor grande quedaba flotando, desconectado,
@@ -3401,7 +3419,7 @@ function pdpPiezasEj(ex){
   if(ex.kind==='memory'){ H.classList.add('pdp-ej-memoria'); try{ pdpMemoriaTitulo(); }catch(_){} try{ pdpMemoriaDorso(ex); }catch(_){} }
   const orc=pdpFillOracion(ex), rollo=(ex.kind==='word-bank'||ex.kind==='order'||!!orc); if(rollo) H.classList.add('pdp-ej-rollo'); if(rollo&&ex.kind!=='order') H.classList.add('pdp-ej-panel');
   if(!rollo&&ex.kind!=='error-find'&&!H.classList.contains('pdp-ej-tabla')){ try{ pdpTituloEnDos(); }catch(_){} }
-  if((ex.guided||ex.tutor||ex.tutorTitle)&&ex.kind!=='classify'&&ex.kind!=='error-find') return;   // Clasificá en libro y Encontrá el error: la consigna va siempre en el cartel y el cuadro del tutor se oculta (2026-11-05, Director: «hay un par que no tiene consigna» — el «Encontrá el error» guiado quedaba sin ninguna consigna visible: la ayuda guiada va detrás del «?» y el cartel no se armaba)
+  if((ex.guided||ex.tutor||ex.tutorTitle)&&ex.kind!=='classify'&&ex.kind!=='error-find'&&ex.kind!=='order') return;   // «Ordená» guiado también lleva la consigna en el cartel (2026-11-07, Director: la consigna salía chica, blanca y sin fondo)   // Clasificá en libro y Encontrá el error: la consigna va siempre en el cartel y el cuadro del tutor se oculta (2026-11-05, Director: «hay un par que no tiene consigna» — el «Encontrá el error» guiado quedaba sin ninguna consigna visible: la ayuda guiada va detrás del «?» y el cartel no se armaba)
   const texto=orc?orc.instr:(rollo||ex.kind==='classify'?ex.question:INSTR[ex.kind]); if(!texto) return;
   const qEl=document.getElementById('exercise-question'); if(!qEl) return;
   const b=document.createElement('div'); b.id='ej-banner-q'; b.className='ej-banner-q';
@@ -3417,7 +3435,591 @@ function pdpRollo(ex,area){
   if(!document.getElementById('ej-banner-q') && !(orc_&&!orc_.instr)){ const q=document.createElement('div'); q.className='exercise-question ej-rollo-q'; q.textContent=orc_?orc_.instr:ex.question; try{ makeTextTranslatable(q); }catch(_){} r.appendChild(q); }
   area.appendChild(r); return r;
 }
+/* ATELIER-MOTOR:INICIO (generado por Assets/atelier/inyectar_atelier.py; no editar a mano) */
+/* ═══ Skin «Atelier» (2026-11-05, Director: kit definitivo de Matemática, MAT-27) ═══
+   Capa: Motor Base (presentación de la pantalla de ejercicio). Opt-in: APP_CONFIG.skin:'atelier' (Unidad) o 🧪 «Skin» (modo prueba). Sin la opción no cambia nada.
+   Viste los componentes REALES (consigna, figura, respuestas, Confirmar); no corrige, no cambia datos ni contratos. Lo que agrega es el «chrome» del cuaderno: fondo en 3 tiras, cintas,
+   progreso y a Ronnie con su globo (el texto del globo es `ex.tutor`; la pose, `ex.ronnie`, por defecto «senala»).
+   Textos de las cintas: APP_CONFIG.atelier = { area, unidad } y el módulo actual (nombre = título, rotulo = «Lección N»).
+   Fuente: Assets/atelier/atelier.js (+ atelier.css); se inyecta con inyectar_atelier.py. No editar a mano acá. ═══ */
+const PdPAtelier=(function(){
+  const NO=['concept','slides','profe','lectura','exp'];
+  const NS='http://www.w3.org/2000/svg';
+  let root=null, obsBtn=null, roPie=null, roGrid=null, claseVieja=[];
+  const q=s=>document.querySelector(s);
+  const el=(t,c,txt)=>{ const e=document.createElement(t); if(c) e.className=c; if(txt!=null) e.textContent=txt; return e; };
+  function opcion(){
+    if(!esMatematica()) return false;   /* Atelier es la piel de MATEMÁTICA y de nada más (2026-11-07): ni una Unidad de otra materia ni un «skin» guardado en el teléfono (vale para todo el sitio) pueden encenderla */
+    try{ if(typeof APP_CONFIG!=='undefined' && APP_CONFIG.skin==='atelier') return true; }catch(_){}
+    try{ return pdpVariacion('skin')==='atelier'; }catch(_){ return false; }
+  }
+  function sinHoja(){ let m='unidad'; try{ m=pdpVariacion('atl-hoja')||'unidad'; }catch(_){} if(m==='no') return true; if(m==='si') return false; try{ return (APP_CONFIG.atelier||{}).hoja===false; }catch(_){ return false; } }
+  function activa(ex){ return !!ex && opcion() && NO.indexOf(ex.kind)<0; }
+  const ancho=()=>Math.min(innerWidth,480);
+  function ponerU(){ document.documentElement.style.setProperty('--u',(ancho()/1086)+'px'); }
+  function textos(){
+    let cfg={}; try{ cfg=APP_CONFIG.atelier||{}; }catch(_){}
+    let m=null,idx=0; try{ m=MODULES.find(x=>x.id===state.currentModule); idx=MODULES.indexOf(m); }catch(_){}
+    return { area:cfg.area||'PdP · Matemática', unidad:cfg.unidad||((typeof APP_CONFIG!=='undefined'&&APP_CONFIG.titulo)||''),
+             rotulo:(m&&m.rotulo)||('Lección '+(idx+1)), titulo:(m&&m.nombre)||'' };
+  }
+  /* La cuadrícula de fondo toma el tamaño de la celda de la figura (que se dibuja a mano en la Unidad): ex.cuadricula = {celda, ox, oy, ancho} en unidades del dibujo
+     (celda = lado de un cuadradito, ox/oy = dónde cae una línea de la cuadrícula, ancho = ancho del dibujo). Así los cuadraditos de la figura coinciden con los del papel (2026-11-06, Director). */
+  function cuadricula(ex){
+    const z=document.getElementById('exercise-image-zone'); if(!z||!ex||!ex.cuadricula) return;
+    const c=ex.cuadricula, im=z.querySelector('img'); if(!im) return;
+    /* Se mide con el DISEÑO (clientWidth, padding, borde), nunca con getBoundingClientRect: durante la animación de entrada el papel está escalado/girado y esa medida sale chica
+       (en el teléfono del Director la cuadrícula quedó diminuta por eso, 2026-11-06). */
+    const aj=()=>{ const w=im.clientWidth; if(!w) return; const k=w/c.ancho, ce=c.celda*k, cs=getComputedStyle(z);
+      const pl=parseFloat(cs.paddingLeft)||0, pt=parseFloat(cs.paddingTop)||0, pb=parseFloat(cs.paddingBottom)||0;
+      const x0=pl, y0=pt+Math.max(0,(z.clientHeight-pt-pb-im.clientHeight)/2);
+      const mod=(a,b)=>((a%b)+b)%b;
+      z.style.backgroundSize=ce+'px '+ce+'px'; z.style.backgroundPosition=mod(x0+c.ox*k,ce)+'px '+mod(y0+c.oy*k,ce)+'px'; };
+    aj(); if(im.complete===false) im.addEventListener('load',aj,{once:true});
+    if(window.ResizeObserver){ roGrid=new ResizeObserver(aj); roGrid.observe(z); roGrid.observe(im); }
+    z.addEventListener('transitionend',aj); [150,500,1200,2500].forEach(t=>setTimeout(aj,t));
+  }
+  function montar(ex){
+    desmontar();
+    if(!activa(ex)){ try{ entrada(ex); }catch(e){ console.error('[entrada]',e); } return; }   /* la entrada de los componentes también corre SIN el skin (p. ej. unidades de Inglés con APP_CONFIG.entrada) */
+    const scr=document.getElementById('screen-exercise'); if(!scr) return;
+    const H=document.documentElement; H.classList.add('pdp-atl-on'); H.classList.toggle('pdp-atl-sinhoja',sinHoja()); H.classList.toggle('pdp-atl-arriba',ex.layout==='ronnie-arriba'); H.classList.toggle('pdp-atl-math',esMatematica()); ponerU(); destellosConsigna();
+    claseVieja=['pdp-fondo-ej','pdp-ej-piezas'].filter(c=>H.classList.contains(c)); claseVieja.forEach(c=>H.classList.remove(c));
+    const t=textos(), exs=getActiveExercises(state.currentModule), n=exs.length, i=state.currentExerciseIndex||0;
+    root=el('div'); root.id='atl-root'; root.setAttribute('aria-hidden','false');
+    root.innerHTML='<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="atl-rough" x="-5%" y="-10%" width="110%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="7"/></filter></svg>';
+    const st=el('div','atl-stage'); root.appendChild(st);
+    const bg=el('div','atl-bg'); ['atl-top','atl-mid','atl-bot'].forEach(c=>bg.appendChild(el('i',c))); st.appendChild(bg);
+    /* cabecera */
+    const comp=el('button','atl-el atl-comp'); comp.type='button'; comp.setAttribute('aria-label','Salir del ejercicio'); comp.onclick=()=>{ try{ requestExitExercise(); }catch(_){} }; st.appendChild(comp);
+    /* sin las cintas de «PdP · Matemática» y de la unidad (2026-11-05, Director: «los carteles de arriba del todo sacalos», «que la pantalla quede limpia con el ejercicio») */
+    st.appendChild(el('div','atl-el atl-lec',t.rotulo));
+    const tit=el('div','atl-el atl-tit'); tit.appendChild(el('i','atl-nube')); tit.appendChild(document.createTextNode(t.titulo)); st.appendChild(tit);
+    const chip=el('div','atl-el atl-chip'); chip.appendChild(el('b','','★')); chip.appendChild(document.createTextNode((i+1)+'/'+n)); chip.setAttribute('aria-label','Ejercicio '+(i+1)+' de '+n); st.appendChild(chip);
+    const rail=el('div','atl-el atl-rail'); rail.setAttribute('role','img'); rail.setAttribute('aria-label','Progreso: '+(i+1)+' de '+n);
+    const d=Math.min(n,7); for(let k=0;k<d;k++){ const dot=el('i','atl-dot'); const lim=n>d?Math.round(i*(d-1)/Math.max(1,n-1)):i; if(k<=lim) dot.classList.add('hecho'); rail.appendChild(dot); }
+    st.appendChild(rail);
+    const snd=el('button','atl-el atl-snd','🔊'); snd.type='button'; snd.setAttribute('aria-label','Silenciar o activar el audio'); snd.onclick=()=>{ try{ toggleAudioMuted(); }catch(_){} setTimeout(()=>{ try{ snd.textContent=state.audioMuted?'🔇':'🔊'; }catch(_){} },50); }; try{ snd.textContent=state.audioMuted?'🔇':'🔊'; }catch(_){} st.appendChild(snd);
+    /* Ronnie y su globo */
+    const pose=(ex.ronnie&&/^(senala|piensa|celebra|desconcertado|sorprendido|idea)$/.test(ex.ronnie))?ex.ronnie:'senala';
+    const ron=el('button','atl-el atl-ronnie'); ron.type='button'; ron.style.setProperty('--atl-ronnie','var(--atl-ronnie-'+pose+')'); ron.setAttribute('aria-label','Ronnie: pedir una pista'); ron.onclick=()=>{ try{ toggleTutorHelp(); }catch(_){} }; st.appendChild(ron);
+    if(ex.tutor){ const g=el('div','atl-el atl-globo'); g.appendChild(el('i','atl-nube')); const tx=el('span'); String(ex.tutor).split(String.fromCharCode(10)).forEach(t=>{ const q=el('p'); q.textContent=t; tx.appendChild(q); });   /* sin el nombre delante: Ronnie ya se ve (2026-11-05, «sin texto de más») */ g.appendChild(tx); st.appendChild(g); }
+    scr.insertBefore(root,scr.firstChild);
+    /* botón principal: el color depende de la etapa (Confirmar / Continuar / Intentar de nuevo) */
+    const cb=document.getElementById('confirm-btn');
+    const marca=()=>{ const x=(cb.textContent||'').trim().toLowerCase(); cb.setAttribute('data-atl',/continuar|siguiente/.test(x)?'continuar':/nuevo|reintent/.test(x)?'reintentar':'confirmar'); };
+    if(cb){ marca(); obsBtn=new MutationObserver(marca); obsBtn.observe(cb,{childList:true,characterData:true,subtree:true}); }
+    const pie=q('#screen-exercise .exercise-footer'); const alt=()=>{ if(!pie) return; root.style.setProperty('--atl-pie',Math.round(pie.getBoundingClientRect().height)+'px'); };
+    alt(); if(pie&&window.ResizeObserver){ roPie=new ResizeObserver(alt); roPie.observe(pie); }
+    try{ cuadricula(ex); }catch(_){}
+    try{ entrada(ex); }catch(e){ console.error('[atelier entrada]',e); }
+  }
+  /* ── entrada de los componentes (2026-11-05, Director: «que los componentes aparezcan y de a poco se introduzcan») ──
+     🧪 «Skin · entrada»: sin efecto / papelitos que se despliegan / dibujado de esquina a esquina / pegado que se acomoda.
+     Va en el orden de lectura (cabecera → consigna → figura → respuestas → Ronnie), ~100 ms entre uno y otro, y NO bloquea: los componentes ya están en su lugar y se pueden tocar.
+     Sin movimiento con prefers-reduced-motion. */
+  function modoEntrada(){ let m='unidad'; try{ m=pdpVariacion('atl-entrada')||'unidad'; }catch(_){} if(m==='unidad'){ try{ m=(APP_CONFIG.atelier||{}).entrada||APP_CONFIG.entrada||'no'; if(APP_CONFIG.entradaPrueba&&pdpModoPrueba()) m=APP_CONFIG.entradaPrueba; }catch(_){ m='no'; } }
+    else { try{ const u=(APP_CONFIG.atelier||{}).entrada||APP_CONFIG.entrada; if(u==='no') m='no'; }catch(_){} }   /* por materia (Matemática: dibujado + pegado; Inglés: papelitos); una Unidad que declara «no» (p. ej. el Club de lectura) sigue sin efecto */
+    return m; }   /* entradaPrueba: la versión de los chicos usa «entrada»; el modo prueba / vista previa puede probar otra (2026-11-06) */
+  function objetivos(){
+    const qa=s=>[].slice.call(document.querySelectorAll(s));
+    const cab=root?[].slice.call(root.querySelectorAll('.atl-comp,.atl-lec,.atl-tit,.atl-chip,.atl-rail,.atl-snd')):[];
+    let cuerpo=qa('#tutor-zone,#exercise-question,#exercise-image-zone:not(.hidden)').filter(e=>e.offsetHeight>0);
+    const pil=qa('#exercise-input-area .options-list .option-btn,#exercise-input-area .tf-row .tf-btn');
+    cuerpo=cuerpo.concat(pil.length?pil:qa('#exercise-input-area'));
+    const pie=root?[].slice.call(root.querySelectorAll('.atl-ronnie,.atl-globo')):[]; /* fuera de Atelier la brújula del tutor queda fija: no entra como papelito (Director, 2026-11-07) */
+    return {cab,cuerpo,pie};
+  }
+  const MASCARA='linear-gradient(135deg,#000 0%,#000 36%,transparent 64%,transparent 100%)';
+  const rectP=[[-10,-30],[35,-30],[110,-30],[110,35],[110,110],[35,110],[-10,110],[-10,35]];
+  function bolita(i){ const a=[[45,45],[52,42],[58,47],[56,54],[52,58],[46,56],[42,52],[43,47]]; return a.map((p,k)=>[p[0]+(((i+k)*7)%5)-2,p[1]+(((i+k)*5)%5)-2]); }
+  const poli=pts=>'polygon('+pts.map(p=>p[0]+'% '+p[1]+'%').join(',')+')';
+  /* Tres entradas MUY distintas entre sí:
+     · papelitos: llega rodando como una bolita de papel arrugado (siempre visible, oscura y apretada), se frena, se estira y se alisa;
+     · dibujado: primero se ve solo el trazo, en gris, como a lápiz (se dibuja de esquina a esquina) y recién después se llena de color;
+     · pegado: cae desde arriba girado, con un rebote, y le aparece una cinta que lo sostiene un instante. */
+  function cinta(e,d,r){
+    const cont=root||document.getElementById('screen-exercise'); if(!cont) return;
+    const b=e.getBoundingClientRect(), s=cont.getBoundingClientRect();
+    const c=el('i','atl-cinta'); c.style.cssText='position:absolute;pointer-events:none;z-index:5;left:'+(b.left-s.left+b.width/2-26)+'px;top:'+(b.top-s.top-9)+'px;width:52px;height:20px;border-radius:2px;background:rgba(246,222,150,.82);box-shadow:0 1px 2px rgba(80,60,10,.35);transform:rotate('+r+'deg);opacity:0';
+    cont.appendChild(c);
+    const a=c.animate([{opacity:0},{opacity:1,offset:.15},{opacity:1,offset:.7},{opacity:0}],{duration:1100,delay:d+320,fill:'both'});
+    a.onfinish=()=>{ if(c.parentNode) c.parentNode.removeChild(c); };
+  }
+  function efecto(modo,e,i,t0){
+    const d=t0, base={delay:d,fill:'backwards'}, lado=(i%2)?1:-1;   /* t0 = demora de este componente (ms) */
+    if(modo==='papelitos'){
+      /* rueda desde un costado hecho una bolita opaca y apretada, se frena, se estira con un rebote y se alisa */
+      e.animate([{clipPath:poli(bolita(i)),transform:'translateX('+(lado*150)+'px) scale(.34) rotate('+(lado*-300)+'deg)',opacity:1,filter:'contrast(1.9) brightness(.68) sepia(.4)'},
+                 {clipPath:poli(bolita(i)),transform:'translateX('+(lado*8)+'px) scale(.34) rotate(0deg)',opacity:1,filter:'contrast(1.9) brightness(.68) sepia(.4)',offset:.38},
+                 {clipPath:poli(rectP.map(p=>[p[0]*.6+8,p[1]*.6+8])),transform:'scale(1.09) rotate('+(lado*-3)+'deg)',opacity:1,filter:'contrast(1.35) brightness(.86)',offset:.7},
+                 {clipPath:poli(rectP),transform:'none',opacity:1,filter:'none'}],Object.assign({duration:900,easing:'cubic-bezier(.35,.6,.3,1)'},base));
+    }else if(modo==='fundido'){
+      /* (2026-11-09, Director pidió otras ideas para Inglés) aparece suave, de borroso a nítido; no se mueve, así que no desborda */
+      e.animate([{opacity:0,filter:'blur(6px)'},{opacity:1,filter:'blur(0)'}],Object.assign({duration:520,easing:'ease-out'},base));
+    }else if(modo==='pergamino'){
+      /* se desenrolla de arriba hacia abajo, con un tono de papel viejo que se va; tampoco se mueve */
+      e.animate([{clipPath:'inset(0 0 100% 0 round 14px)',filter:'sepia(.7) brightness(.92)'},{clipPath:'inset(0 0 0% 0 round 14px)',filter:'sepia(.35) brightness(.97)',offset:.7},{clipPath:'inset(0 0 0% 0 round 0px)',filter:'none'}],Object.assign({duration:620,easing:'cubic-bezier(.3,.7,.3,1)'},base));
+    }else if(modo==='sello'){
+      /* aparece de un golpecito, como un sello: chico → apenas más grande → su tamaño (crece poco: casi no desborda) */
+      e.animate([{opacity:0,transform:'scale(.82)'},{opacity:1,transform:'scale(1.03)',offset:.6},{opacity:1,transform:'none'}],Object.assign({duration:420,easing:'cubic-bezier(.3,.7,.4,1)'},base));
+    }else if(modo==='dibujado'||modo==='dibujado-rapido'){
+      /* trazo gris de esquina a esquina y después se llena de color («rápido»: el mismo, en poco más de la mitad del tiempo) */
+      const o={webkitMaskImage:MASCARA,maskImage:MASCARA,webkitMaskSize:'300% 300%',maskSize:'300% 300%',webkitMaskRepeat:'no-repeat',maskRepeat:'no-repeat'};
+      Object.assign(e.style,o);
+      const T=modo==='dibujado'?980:560, a=e.animate([{webkitMaskPosition:'100% 100%',maskPosition:'100% 100%'},{webkitMaskPosition:'0% 0%',maskPosition:'0% 0%',offset:.6},{webkitMaskPosition:'0% 0%',maskPosition:'0% 0%'}],Object.assign({duration:T,easing:'linear'},base,{fill:'both'}));
+      e.animate([{filter:'grayscale(1) contrast(2.4) brightness(1.18)'},{filter:'grayscale(1) contrast(2.4) brightness(1.18)',offset:.62},{filter:'none'}],Object.assign({duration:T,easing:'ease-out'},base));
+      const fin=()=>{ try{ a.cancel(); }catch(_){} e.style.webkitMaskImage=e.style.maskImage=e.style.webkitMaskSize=e.style.maskSize=''; };
+      a.onfinish=fin; setTimeout(fin,d+T+250);
+    }else if(modo==='mezcla'){
+      /* dibujado + pegado (2026-11-05, Director: «una mezcla entre pegado y dibujado»): la pieza cae y se acomoda como pegada MIENTRAS se dibuja a lápiz (trazo gris de esquina a esquina) y se llena de color; la cinta aparece al apoyarse */
+      const T=1150, r=lado*(5+(i%3)*2);
+      Object.assign(e.style,{webkitMaskImage:MASCARA,maskImage:MASCARA,webkitMaskSize:'300% 300%',maskSize:'300% 300%',webkitMaskRepeat:'no-repeat',maskRepeat:'no-repeat'});
+      const a=e.animate([{webkitMaskPosition:'100% 100%',maskPosition:'100% 100%'},{webkitMaskPosition:'0% 0%',maskPosition:'0% 0%',offset:.6},{webkitMaskPosition:'0% 0%',maskPosition:'0% 0%'}],Object.assign({duration:T,easing:'linear'},base,{fill:'both'}));
+      e.animate([{filter:'grayscale(1) contrast(2.4) brightness(1.18)'},{filter:'grayscale(1) contrast(2.4) brightness(1.18)',offset:.62},{filter:'none'}],Object.assign({duration:T,easing:'ease-out'},base));
+      e.animate([{transform:'translateY(-70px) rotate('+r+'deg) scale(1.08)'},{transform:'translateY(7px) rotate('+(-r/2.5)+'deg) scale(.98)',offset:.55},{transform:'translateY(-3px) rotate('+(r/8)+'deg)',offset:.78},{transform:'none'}],Object.assign({duration:T,easing:'cubic-bezier(.25,.8,.3,1)'},base));
+      const fin=()=>{ try{ a.cancel(); }catch(_){} e.style.webkitMaskImage=e.style.maskImage=e.style.webkitMaskSize=e.style.maskSize=''; };
+      a.onfinish=fin; setTimeout(fin,d+T+250);
+      if(e.id==='exercise-question'||e.id==='exercise-image-zone'||(e.classList&&e.classList.contains('atl-globo'))) cinta(e,d+160,-lado*5);
+    }else if(modo==='pegado'){
+      /* cae girado desde arriba, rebota y se acomoda; una cinta lo sostiene un instante */
+      const r=lado*(6+(i%3)*2);
+      e.animate([{opacity:0,transform:'translateY(-90px) rotate('+r+'deg) scale(1.12)'},{opacity:1,transform:'translateY(8px) rotate('+(-r/2.5)+'deg) scale(.97)',offset:.5},{opacity:1,transform:'translateY(-4px) rotate('+(r/6)+'deg)',offset:.72},{opacity:1,transform:'none'}],Object.assign({duration:720,easing:'cubic-bezier(.25,.8,.3,1)'},base));
+      if(e.id==='exercise-question'||e.id==='exercise-image-zone'||(e.classList&&e.classList.contains('atl-globo'))) cinta(e,d,-lado*5);
+    }
+  }
+  /* «Barra de carga» al entrar (2026-11-08, Director: aparecía una raya fina arriba de la barra de navegación solo con papelitos y pegado, y un pequeño glitch al terminar).
+     Causa medida: las animaciones con transform (papelitos: rueda ±150 px; pegado: cae girado) hacen que el cuerpo del ejercicio (#exercise-body, overflow:auto) y #app tengan desborde
+     horizontal por un momento (27 px con papelitos) → el navegador dibuja su barra de desplazamiento (la raya) y al terminar desaparece (el glitch). «Dibujado» no mueve nada y no lo hace.
+     Arreglo: mientras dura el efecto, esos contenedores no desplazan en horizontal (overflow-x:hidden, solo en ese lapso; el desplazamiento vertical sigue igual). */
+  let entTimer=0;
+  function contenerDesborde(ms){
+    const H=document.documentElement;
+    if(!document.getElementById('atl-entrando-css')){ const st=document.createElement('style'); st.id='atl-entrando-css'; st.textContent='html.atl-entrando #exercise-body,html.atl-entrando #app{overflow-x:hidden!important}'; document.head.appendChild(st); }
+    H.classList.add('atl-entrando'); clearTimeout(entTimer); entTimer=setTimeout(()=>H.classList.remove('atl-entrando'),ms);
+  }
+  function entrada(ex){
+    const modo=modoEntrada(); if(modo==='no'||reducido()||NO.indexOf((ex||{}).kind)>=0) return;
+    const o=objetivos(); let i=0;
+    contenerDesborde(230+o.cuerpo.length*95+o.pie.length*90+1500);   /* la última entrada empieza a 230+… ms y dura ≤ 1,2 s; sobra margen */
+    o.cab.forEach((e,k)=>efecto(modo,e,i++,k*40));                   /* cabecera: rápida, casi junta */
+    o.cuerpo.forEach((e,k)=>efecto(modo,e,i++,230+k*95));            /* consigna → figura → respuestas, en orden de lectura */
+    o.pie.forEach((e,k)=>efecto(modo,e,i++,230+o.cuerpo.length*95+k*90));   /* Ronnie y su globo al final */
+  }
+  /* Matemática (decisión del Director, 2026-11-07): el globo de la lámina y los destellos de la consigna valen SOLO para unidades de Matemática (colorScheme 'math'); idiomas y demás materias no cambian. */
+  function esMatematica(){ try{ return APP_CONFIG && APP_CONFIG.colorScheme==='math'; }catch(_){ return false; } }
+  function destellosConsigna(){
+    if(!esMatematica()) return;
+    const q=document.getElementById('exercise-question'); if(!q||q.querySelector('.atl-destello-q')) return;
+    ['i','d'].forEach(l=>{ const sp=document.createElement('span'); sp.className='atl-destello-q atl-destello-q-'+l; sp.setAttribute('aria-hidden','true'); q.appendChild(sp); });   /* los pseudo-elementos de la consigna ya dibujan su tarjeta: los destellos son elementos propios, sin texto */
+  }
+  function desmontar(){
+    try{ if(obsBtn) obsBtn.disconnect(); if(roPie) roPie.disconnect(); if(roGrid) roGrid.disconnect(); }catch(_){}
+    obsBtn=roPie=roGrid=null;
+    try{ const z=document.getElementById('exercise-image-zone'); if(z){ z.style.backgroundSize=''; z.style.backgroundPosition=''; } }catch(_){}
+    if(root&&root.parentNode) root.parentNode.removeChild(root); root=null;
+    document.documentElement.classList.remove('atl-pasando');
+    const H=document.documentElement; if(H.classList.contains('pdp-atl-on')){ H.classList.remove('pdp-atl-on','pdp-atl-sinhoja','pdp-atl-arriba','pdp-atl-math'); claseVieja.forEach(c=>H.classList.add(c)); claseVieja=[]; }
+    const cb=document.getElementById('confirm-btn'); if(cb) cb.removeAttribute('data-atl');
+    document.querySelectorAll('.atl-destello-q').forEach(n=>n.parentNode&&n.parentNode.removeChild(n));
+  }
+
+  /* ── la hoja se arranca de las anillas ──
+     (2026-11-05, Director: «que se arranque la hoja… de los anillados reales, que se arrugue y que entre otra hoja detrás»).
+     Al avanzar se hace una COPIA de la pantalla de ejercicio (la hoja que se va) y el Motor sigue su camino normal: la hoja siguiente ya está debajo.
+     La copia es la HOJA ENTERA (arte del Director: papel roto con las muescas abiertas de las anillas): da un tirón y sale de las anillas, se arruga y vuela. Las anillas y la tapa se quedan.
+     No retrasa nada: el Motor ya avanzó; esto es solo lo que se ve encima. Sin movimiento con prefers-reduced-motion. */
+  const reducido=()=>{ try{ return matchMedia('(prefers-reduced-motion: reduce)').matches; }catch(_){ return false; } };
+  let trans=null;
+  function limpiarTrans(){ if(trans&&trans.parentNode) trans.parentNode.removeChild(trans); trans=null; }
+  function alAvanzar(){
+    if(!root||reducido()||sinHoja()) return;
+    const scr=document.getElementById('screen-exercise'); if(!scr||!scr.classList.contains('active')) return;
+    limpiarTrans();
+    const r=scr.getBoundingClientRect(), W=r.width, Hh=r.height, u=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--u'))||(Math.min(innerWidth,480)/1086);
+    const izq=(W-1086*u)/2;
+    trans=el('div'); trans.id='atl-transicion'; trans.setAttribute('aria-hidden','true');
+    trans.style.cssText='position:fixed;left:'+r.left+'px;top:'+r.top+'px;width:'+W+'px;height:'+Hh+'px;z-index:60;pointer-events:none;overflow:hidden';
+    /* la hoja entera: papel y silueta de la hoja rota con las muescas de las anillas (arte del Director, Assets/atelier/atl-hoja.webp), encima el contenido real de la pantalla */
+    const hx=izq+27*u, hy=30*u, hw=1010*u, hh=Hh-30*u-96*u;
+    const hoja=el('div','atl-tr-hoja'); hoja.style.cssText='position:absolute;inset:0;will-change:transform,clip-path;-webkit-mask:var(--atl-hoja) '+hx+'px '+hy+'px/'+hw+'px '+hh+'px no-repeat;mask:var(--atl-hoja) '+hx+'px '+hy+'px/'+hw+'px '+hh+'px no-repeat;filter:drop-shadow(0 6px 10px rgba(60,40,10,.35))';
+    const papel=el('div'); papel.style.cssText='position:absolute;left:'+hx+'px;top:'+hy+'px;width:'+hw+'px;height:'+hh+'px;background:var(--atl-hoja) 0 0/100% 100% no-repeat'; hoja.appendChild(papel);
+    const copia=scr.cloneNode(true); copia.setAttribute('inert','');   /* conserva los ids: los estilos del skin se escriben con #screen-exercise; getElementById sigue devolviendo la pantalla real (va primero en el documento) */
+    copia.style.cssText='position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none'; copia.style.setProperty('background','transparent','important');
+    const fondo=copia.querySelector('.atl-bg'); if(fondo) fondo.style.visibility='hidden';   /* el cuaderno y las anillas se quedan: solo se va el papel */
+    hoja.appendChild(copia);
+    const folds=el('div','atl-tr-arrugas'); folds.style.cssText='position:absolute;inset:0;opacity:0;pointer-events:none;mix-blend-mode:multiply;background:var(--hz-arr,none) center/cover'; hoja.appendChild(folds);
+    trans.appendChild(hoja); document.body.appendChild(trans);
+    /* la hoja de abajo queda en blanco (2026-11-05, Director: «queda atrás la otra, se debería borrar»): el contenido viejo se oculta hasta que se arme el próximo ejercicio (desmontar lo saca) */
+    document.documentElement.classList.add('atl-pasando');
+    /* el recorte que se arruga: toda la pantalla → bolita */
+    const N=16, rect=[]; for(let i=0;i<N;i++){ const t4=i/N*4, e=Math.floor(t4), f=t4-e; rect.push([[f,0],[1,f],[1-f,1],[0,1-f]][e]); }
+    const cx=(hx+hw/2)/W, cy=(hy+hh/2)/Hh;
+    const blob=rect.map((_,i)=>{ const a=i/N*Math.PI*2, k=.5+((i*37)%7)/40; return [cx+Math.cos(a)*.13*k, cy+Math.sin(a)*.09*k]; });
+    const mid=rect.map((p,i)=>[p[0]*.8+blob[i][0]*.2+(((i*53)%5)-2)*.01, p[1]*.8+blob[i][1]*.2+(((i*29)%5)-2)*.01]);
+    const poly=pts=>'polygon('+pts.map(p=>(p[0]*100).toFixed(1)+'% '+(p[1]*100).toFixed(1)+'%').join(',')+')';
+    hoja.style.clipPath=poly(rect); hoja.style.transformOrigin=(hx+hw/2)+'px '+(hy+hh/2)+'px';
+    /* tirón: la hoja sale de las anillas (las muescas son abiertas), después se arruga y vuela */
+    const TUR=240, CR=760, ease='cubic-bezier(.5,0,.7,.4)';
+    const tug='translateX('+(46*u)+'px) rotate(-2.2deg)';
+    hoja.animate([{transform:'none'},{transform:tug}],{duration:TUR,easing:'cubic-bezier(.3,0,.3,1)',fill:'forwards'});
+    folds.animate([{opacity:0},{opacity:1}],{duration:CR*.8,delay:TUR,fill:'forwards'});
+    /* se arruga EN SU LUGAR hasta quedar hecha una bolita (2026-11-05, Director: «el arrugado, que se haga bolita como antes») y la bolita de papel rueda hacia afuera */
+    const fin='translate('+(30*u)+'px,0) scale(.2) rotate(40deg)';
+    const vuelo=hoja.animate([{clipPath:poly(rect),transform:tug,opacity:1},{clipPath:poly(mid),transform:'translate('+(40*u)+'px,0) scale(.8) rotate(-7deg)',offset:.5,opacity:1},{clipPath:poly(blob),transform:fin,opacity:1}],{duration:CR,delay:TUR,easing:ease,fill:'forwards'});
+    vuelo.onfinish=()=>{
+      if(!trans) return;
+      hoja.style.visibility='hidden';
+      const bw=300*u, bh=252*u, bx=hx+hw/2+30*u-bw/2, by=hy+hh/2-bh/2;
+      const bola=el('div','atl-tr-bola'); bola.style.cssText='position:absolute;left:'+bx+'px;top:'+by+'px;width:'+bw+'px;height:'+bh+'px;pointer-events:none;background:var(--hz-bola) center/contain no-repeat;filter:drop-shadow(0 '+(22*u)+'px '+(22*u)+'px rgba(60,44,20,.35))';
+      trans.appendChild(bola);
+      const rodar=bola.animate([{transform:'translate(0,0) rotate(0deg) scale(1)'},{transform:'translate('+(120*u)+'px,'+(220*u)+'px) rotate(90deg) scale(1)',offset:.35},{transform:'translate('+(460*u)+'px,'+(560*u)+'px) rotate(300deg) scale(.9)',offset:.8},{transform:'translate('+(700*u)+'px,'+(760*u)+'px) rotate(420deg) scale(.7)',opacity:0}],{duration:850,easing:'ease-in',fill:'forwards'});
+      rodar.onfinish=limpiarTrans;
+    };
+    setTimeout(limpiarTrans,TUR+CR+2600);
+  }
+  addEventListener('resize',()=>{ if(root) ponerU(); });
+  return { alRenderizar:montar, desmontar, alAvanzar, activa, activado:opcion, _estado:()=>({montada:!!root, transicion:!!trans}) };
+})();
+
+/* ATELIER-MOTOR:FIN */
+/* HOJA-MOTOR:INICIO (generado por Assets/piezas-hoja/inyectar_en_motor.py; no editar a mano) */
+/* ═══ Pantalla «hoja que se dibuja» (2026-11-05, Director: «promoverlo al motor, dale. Me convence cómo se siente») ═══
+   Capa: Motor Base (presentación de un ejercicio). Alcance v0.1: SOLO `mc` (opción múltiple), sin ayuda guiada, sin imagen y fuera de evaluaciones y Skill Checks, y SOLO con la opción activada
+   (`APP_CONFIG.pantallaHoja:true` en una Unidad, o «Pantalla hoja» en el 🧪). Sin la opción no cambia nada.
+   Cómo funciona: arma una capa a pantalla completa DEBAJO del header/pie del Motor y encima del cuerpo del ejercicio. La corrección, el feedback, la escalera de ayuda, los reintentos y la evidencia siguen siendo los
+   del Motor (esta capa no corrige nada): tocar una opción de la hoja hace `click()` sobre la opción real; el botón Confirmar es el real (con la pieza dibujada de fondo y el rótulo escrito encima); el resultado lo
+   muestra el panel de siempre. La capa solo ESPEJA el estado de las opciones reales (seleccionada / correcta / equivocada / descartada).
+   Efectos: las piezas se dibujan de esquina a esquina todas a la vez; el texto se escribe letra por letra con el alfabeto del Director (Assets/piezas-hoja/hz-atlas.webp); al elegir, la hoja amarilla se dibuja y el
+   número se vuelve a escribir; al pasar al siguiente ejercicio la hoja se arruga (textura y bolita del Director). Sin movimiento con `prefers-reduced-motion`.
+   Fuente de este bloque: Assets/piezas-hoja/hoja_motor.js (+ hoja_motor.css); se inyecta con inyectar_en_motor.py. No editar a mano acá. ═══ */
+const PdPHoja=(function(){
+  const PZ={"x": [60, 78, 130, 132], "son": [762, 78, 132, 132], "res": [80, 191, 778, 111], "sub": [170, 302, 585, 66], "card": [60, 340, 835, 535], "oA": [105, 900, 360, 150], "oB": [470, 898, 372, 154], "oC": [102, 1062, 363, 148], "oD": [472, 1062, 373, 148], "chL": [60, 890, 48, 122], "chR": [836, 890, 59, 122], "calc": [66, 1210, 242, 215], "libros": [560, 1215, 336, 210], "bru": [66, 1428, 164, 168], "btn": [230, 1425, 644, 177], "star": [405, 40, 165, 150]};                 /* pieza -> [x,y,w,h] en la hoja de 942 px */
+  const GL={"Ñ": {"x": 0, "y": 0, "w": 115, "h": 125, "d": 1.2}, "f": {"x": 117, "y": 0, "w": 94, "h": 123, "d": 24.8}, "J": {"x": 213, "y": 0, "w": 100, "h": 119, "d": 8.0}, "A": {"x": 315, "y": 0, "w": 119, "h": 118, "d": 6.4}, "Q": {"x": 436, "y": 0, "w": 92, "h": 118, "d": 11.6}, "j": {"x": 530, "y": 0, "w": 74, "h": 118, "d": 24.8}, "B": {"x": 606, "y": 0, "w": 96, "h": 113, "d": 1.6}, "G": {"x": 704, "y": 0, "w": 97, "h": 113, "d": 0.8}, "C": {"x": 803, "y": 0, "w": 90, "h": 111, "d": 0.0}, "D": {"x": 895, "y": 0, "w": 102, "h": 111, "d": 0.0}, "F": {"x": 999, "y": 0, "w": 98, "h": 111, "d": 0.0}, "H": {"x": 1099, "y": 0, "w": 117, "h": 111, "d": 0.0}, "K": {"x": 0, "y": 127, "w": 110, "h": 111, "d": 0.8}, "L": {"x": 112, "y": 127, "w": 81, "h": 111, "d": 0.0}, "Y": {"x": 195, "y": 127, "w": 89, "h": 111, "d": 9.2}, "E": {"x": 286, "y": 127, "w": 98, "h": 110, "d": -0.8}, "I": {"x": 386, "y": 127, "w": 78, "h": 110, "d": 0.0}, "P": {"x": 466, "y": 127, "w": 98, "h": 110, "d": 1.2}, "R": {"x": 566, "y": 127, "w": 99, "h": 110, "d": 1.2}, "M": {"x": 667, "y": 127, "w": 124, "h": 109, "d": -2.4}, "S": {"x": 793, "y": 127, "w": 86, "h": 108, "d": 0.4}, "N": {"x": 881, "y": 127, "w": 116, "h": 107, "d": 3.6}, "3": {"x": 999, "y": 127, "w": 82, "h": 107, "d": 0.0}, "O": {"x": 1083, "y": 127, "w": 91, "h": 106, "d": -1.2}, "T": {"x": 1176, "y": 127, "w": 88, "h": 106, "d": -0.4}, "U": {"x": 0, "y": 240, "w": 101, "h": 106, "d": -0.4}, "W": {"x": 103, "y": 240, "w": 118, "h": 106, "d": -1.2}, "0": {"x": 223, "y": 240, "w": 86, "h": 106, "d": -0.8}, "4": {"x": 311, "y": 240, "w": 81, "h": 106, "d": -0.8}, "5": {"x": 394, "y": 240, "w": 84, "h": 106, "d": 1.6}, "6": {"x": 480, "y": 240, "w": 78, "h": 106, "d": 0.0}, "8": {"x": 560, "y": 240, "w": 79, "h": 106, "d": 0.0}, "9": {"x": 641, "y": 240, "w": 78, "h": 106, "d": 0.0}, "V": {"x": 721, "y": 240, "w": 93, "h": 105, "d": -1.2}, "X": {"x": 816, "y": 240, "w": 105, "h": 105, "d": -0.4}, "1": {"x": 923, "y": 240, "w": 64, "h": 105, "d": -0.8}, "2": {"x": 989, "y": 240, "w": 81, "h": 105, "d": -1.6}, "7": {"x": 1072, "y": 240, "w": 78, "h": 104, "d": 0.0}, "Z": {"x": 1152, "y": 240, "w": 98, "h": 102, "d": -0.4}, "l": {"x": 0, "y": 348, "w": 57, "h": 101, "d": 1.6}, "y": {"x": 59, "y": 348, "w": 85, "h": 101, "d": 28.8}, "b": {"x": 146, "y": 348, "w": 74, "h": 99, "d": 0.0}, "k": {"x": 222, "y": 348, "w": 78, "h": 99, "d": 0.8}, "p": {"x": 302, "y": 348, "w": 86, "h": 99, "d": 25.6}, "d": {"x": 390, "y": 348, "w": 87, "h": 98, "d": -0.8}, "g": {"x": 479, "y": 348, "w": 82, "h": 98, "d": 26.4}, "h": {"x": 563, "y": 348, "w": 78, "h": 98, "d": 0.0}, "(": {"x": 643, "y": 348, "w": 54, "h": 98, "d": 12.8}, ")": {"x": 699, "y": 348, "w": 53, "h": 97, "d": 12.8}, "q": {"x": 754, "y": 348, "w": 73, "h": 96, "d": 24.0}, "!": {"x": 829, "y": 348, "w": 51, "h": 94, "d": 3.2}, "i": {"x": 882, "y": 348, "w": 50, "h": 92, "d": 0.0}, "¿": {"x": 934, "y": 348, "w": 61, "h": 91, "d": 11.2}, "¡": {"x": 997, "y": 348, "w": 49, "h": 90, "d": 12.0}, "?": {"x": 1048, "y": 348, "w": 60, "h": 90, "d": 4.0}, "ñ": {"x": 1110, "y": 348, "w": 78, "h": 89, "d": -0.8}, "t": {"x": 1190, "y": 348, "w": 60, "h": 88, "d": 0.0}, "+": {"x": 0, "y": 451, "w": 77, "h": 82, "d": -6.4}, ";": {"x": 79, "y": 451, "w": 43, "h": 77, "d": 8.8}, "÷": {"x": 124, "y": 451, "w": 75, "h": 77, "d": -8.8}, "´": {"x": 201, "y": 451, "w": 69, "h": 77, "d": 0.0}, "s": {"x": 272, "y": 451, "w": 65, "h": 73, "d": 1.6}, "v": {"x": 339, "y": 451, "w": 74, "h": 72, "d": 0.0}, "w": {"x": 415, "y": 451, "w": 98, "h": 72, "d": 0.0}, "x": {"x": 515, "y": 451, "w": 83, "h": 72, "d": 0.0}, "a": {"x": 600, "y": 451, "w": 82, "h": 71, "d": -1.6}, "c": {"x": 684, "y": 451, "w": 67, "h": 71, "d": -0.8}, "e": {"x": 753, "y": 451, "w": 64, "h": 71, "d": -0.8}, "z": {"x": 819, "y": 451, "w": 74, "h": 71, "d": -0.8}, "m": {"x": 895, "y": 451, "w": 105, "h": 70, "d": 0.0}, "n": {"x": 1002, "y": 451, "w": 81, "h": 70, "d": 0.0}, "o": {"x": 1085, "y": 451, "w": 69, "h": 70, "d": -0.8}, "r": {"x": 1156, "y": 451, "w": 68, "h": 70, "d": -1.6}, "u": {"x": 0, "y": 535, "w": 76, "h": 70, "d": -1.6}, "×": {"x": 78, "y": 535, "w": 74, "h": 70, "d": -12.0}, ":": {"x": 154, "y": 535, "w": 41, "h": 62, "d": -4.0}, ",": {"x": 197, "y": 535, "w": 40, "h": 50, "d": 8.8}, "=": {"x": 239, "y": 535, "w": 72, "h": 50, "d": -22.4}, ".": {"x": 313, "y": 535, "w": 35, "h": 35, "d": 0.0}, "−": {"x": 350, "y": 535, "w": 72, "h": 32, "d": -31.2}};               /* letra -> {x,y,w,h,d} en el atlas */
+  const AW=1300, AH=607, PADT=10.4;
+  const ACC={'á':'a','é':'e','í':'i','ó':'o','ú':'u','Á':'A','É':'E','Í':'I','Ó':'O','Ú':'U'};
+  const NS='http://www.w3.org/2000/svg';
+  const OCULTO='inset(-80% 100% -40% -14%)', VISTO='inset(-80% -14% -40% -14%)';
+  const MASK='linear-gradient(135deg,#000 0%,#000 36%,transparent 64%,transparent 100%)';
+  const SLOT=['oA','oB','oC','oD'], PIEZA_OP=['oa','od','oc','od'];
+  let root=null,stage=null,pg=null,exCur=null,S=1,H=1670,L=0,fz=null;
+  let obsOp=null,obsBtn=null,roFoot=null,lbl=null,comp=null,crumpling=false,pasando=false,st=null,rsz=0;
+
+  const reducido=()=>{ try{ return matchMedia('(prefers-reduced-motion: reduce)').matches; }catch(_){ return false; } };
+  const el=(t,c,css)=>{ const e=document.createElement(t); if(c) e.className=c; if(css) e.style.cssText=css; return e; };
+  const q=s=>document.querySelector(s);
+
+  /* ---------- cuándo se usa ---------- */
+  function opcionActivada(){
+    try{ if(typeof APP_CONFIG!=='undefined' && APP_CONFIG.pantallaHoja===true) return true; }catch(_){}
+    try{ return pdpVariacion('hoja')==='si'; }catch(_){ return false; }
+  }
+  /* tipos que la hoja sabe vestir (2026-11-05, Director: «todos los ejercicios me aparecen opción múltiple»):
+     'op'    = opciones que se dibujan como piezas (mc, tf): la hoja espeja las reales y les hace click;
+     'marco' = el ejercicio real (campo, arrastres, uniones…) queda encima de la hoja, que pone el fondo, el título, el riel y el enunciado en una tarjeta */
+  const MARCO=['fill','order','match','classify','word-bank','number-line','memory','error-find'];
+  const SIN_ENUNCIADO={memory:'Encontrá las parejas'};
+  const modo=ex=>!ex?null:(ex.kind==='mc'||ex.kind==='tf')?'op':MARCO.indexOf(ex.kind)>=0?'marco':null;
+  function activa(ex){
+    if(!modo(ex)||!opcionActivada()) return false;
+    /* el cuaderno es de día aun con el teléfono en oscuro (2026-11-05, Director: «sigue la piel anterior»): todavía no hay versión de noche de las piezas */
+    if(ex.guided||ex.image||ex.tutor||ex.tutorTitle||ex.role==='skill_check') return false;
+    try{ if(isEvalModule(state.currentModule)) return false; }catch(_){}
+    if(ex.kind==='mc'){ const n=(ex.options||[]).length; return n>=2&&n<=4; }
+    return true;
+  }
+
+  /* ---------- letras con el alfabeto del Director ---------- */
+  const avance=(ch,s)=>{ if(ch===' ') return 30*s; const g=GL[ACC[ch]||ch]; return g?(g.w-2*(PADT-1.6))*s:(GL.n.w-2*(PADT-1.6))*s*0.95; };
+  function nodoLetra(ch,s){
+    const base=ACC[ch]||ch, g=GL[base];
+    if(!g){                                   /* letra que el alfabeto no trae: serif cursiva con halo crema */
+      const f=el('i','hj-fb'); f.textContent=ch; f.setAttribute('aria-hidden','true');
+      f.style.cssText='font-size:'+(88*s)+'px;height:'+(88*s)+'px;line-height:'+(88*s)+'px;margin:0 '+(1*s)+'px';
+      return f;
+    }
+    const w=g.w*s, h=g.h*s, mx=-(PADT-1.6)*s;
+    const e=el('i','hj-g'); e.setAttribute('aria-hidden','true');
+    e.style.cssText='width:'+w+'px;height:'+h+'px;background-size:'+(AW*s)+'px '+(AH*s)+'px;background-position:'+(-g.x*s)+'px '+(-g.y*s)+'px;margin:0 '+mx+'px '+(-(g.d+PADT)*s)+'px '+mx+'px';
+    if(ACC[ch]){
+      const a=GL['´'], ae=el('i','hj-ga');
+      ae.style.cssText='width:'+(a.w*s)+'px;height:'+(a.h*s)+'px;background-size:'+(AW*s)+'px '+(AH*s)+'px;background-position:'+(-a.x*s)+'px '+(-a.y*s)+'px;left:'+((g.w/2-a.w/2+7)*s)+'px;top:'+((14.8-a.h)*s)+'px';
+      e.appendChild(ae);
+    }
+    return e;
+  }
+  function envolver(txt,s,maxW){            /* reparte en renglones sin medir el DOM */
+    const pal=String(txt).split(/\s+/).filter(Boolean), lin=[]; let cur='', w=0;
+    pal.forEach(p=>{ const pw=[...p].reduce((a,c)=>a+avance(c,s),0); const add=cur?avance(' ',s):0;
+      if(cur&&w+add+pw>maxW){ lin.push(cur); cur=p; w=pw; } else { cur=cur?cur+' '+p:p; w+=add+pw; } });
+    if(cur) lin.push(cur); return lin;
+  }
+  const anchoLinea=(t,s)=>[...t].reduce((a,c)=>a+avance(c,s),0);
+  function renglon(t,s){
+    const ln=el('div','hj-ln'), inner=el('span'), units=[];
+    ln.appendChild(inner);
+    [...t].forEach(ch=>{ if(ch===' '){ const sp=el('i','hj-sp','width:'+(30*s)+'px;height:1px'); inner.appendChild(sp); return; } const n=nodoLetra(ch,s); inner.appendChild(n); units.push(n); });
+    ln.style.height=(GL.H.h*0.86*s)+'px';
+    return {el:ln,units};
+  }
+  /* bloque de texto: busca la escala más grande (de s0 hacia abajo) en la que entra en maxW × maxH; si no entra ni a s mínima, texto común */
+  function bloque(txt,s0,maxW,maxH,gap,sMin,unaLinea){
+    txt=String(txt==null?'':txt).replace(/<[^>]*>/g,'').replace(/\s+/g,' ').trim();
+    let s=s0, lin=null;
+    for(;s>=sMin-1e-6;s-=0.04){ lin=envolver(txt,s,maxW); const h=lin.length*(GL.H.h*0.86*s)+(lin.length-1)*gap; if(lin.every(l=>anchoLinea(l,s)<=maxW*1.02)&&h<=maxH&&(!unaLinea||lin.length===1)) break; lin=null; }
+    const box=el('div','hj-tx'); box.style.gap=gap+'px'; box.setAttribute('role','text'); box.setAttribute('aria-label',txt);
+    if(!lin){ const p=el('div','hj-plain'); p.textContent=txt; p.style.fontSize=Math.max(30,Math.min(46,maxW/Math.max(14,txt.length/3)))+'px'; box.appendChild(p); return {el:box,lines:[]}; }
+    const lines=lin.map(t=>{ const r=renglon(t,s); box.appendChild(r.el); return r.units; });
+    return {el:box,lines};
+  }
+  function escribir(units,delay,step,dur){
+    if(reducido()||!units.length) return delay;
+    units.forEach((u,i)=>{
+      const a=u.animate([{clipPath:OCULTO},{clipPath:VISTO}],{duration:dur,delay:delay+i*step,easing:'cubic-bezier(.35,.1,.55,1)',fill:'both'});
+      a.onfinish=()=>{ try{ a.cancel(); }catch(_){} u.style.clipPath=''; };
+    });
+    return delay+units.length*step+dur;
+  }
+  function reescribir(units){ units.forEach(u=>{ u.getAnimations().forEach(a=>a.cancel()); u.style.clipPath=''; }); escribir(units,150,70,150); }
+
+  /* ---------- piezas dibujadas de esquina a esquina ---------- */
+  function dibujar(e,delay,dur){
+    if(reducido()) return;
+    const s=e.style; s.webkitMaskImage=s.maskImage=MASK; s.webkitMaskSize=s.maskSize='300% 300%'; s.webkitMaskRepeat=s.maskRepeat='no-repeat'; s.webkitMaskPosition=s.maskPosition='100% 100%';
+    const a=e.animate([{maskPosition:'100% 100%',webkitMaskPosition:'100% 100%'},{maskPosition:'0% 0%',webkitMaskPosition:'0% 0%'}],{duration:dur,delay,easing:'cubic-bezier(.45,.05,.4,1)',fill:'forwards'});
+    a.onfinish=()=>{ try{ a.cancel(); }catch(_){} s.webkitMaskImage=s.maskImage=''; };
+  }
+  function pieza(parent,key,vr,x,y,w,h){
+    const m=PZ[key], d=el('div','hj-pc'); d.style.backgroundImage='var(--hz-'+vr+')';
+    d.style.cssText+=';left:'+(x==null?m[0]:x)+'px;top:'+(y==null?m[1]:y)+'px;width:'+(w||m[2])+'px;height:'+(h||m[3])+'px';
+    parent.appendChild(d); return d;
+  }
+  function trazo(parent,cx,cy,paths,fill,w,delay){
+    const s=document.createElementNS(NS,'svg'); s.setAttribute('viewBox','-60 -60 120 120'); s.setAttribute('aria-hidden','true');
+    s.style.cssText='position:absolute;left:'+(cx-60)+'px;top:'+(cy-60)+'px;width:120px;height:120px;pointer-events:none;overflow:visible';
+    paths.forEach((d,i)=>{ const p=document.createElementNS(NS,'path'); p.setAttribute('d',d); p.setAttribute('pathLength','1'); p.setAttribute('fill',i===0&&fill?'#14213d':'none');
+      p.setAttribute('stroke','#14213d'); p.setAttribute('stroke-width',w); p.setAttribute('stroke-linecap','round'); p.setAttribute('stroke-linejoin','round');
+      if(!reducido()){ p.style.strokeDasharray='1'; p.style.strokeDashoffset='1'; p.animate([{strokeDashoffset:1},{strokeDashoffset:0}],{duration:520,delay:delay+i*180,fill:'forwards',easing:'ease-out'}); }
+      s.appendChild(p); });
+    parent.appendChild(s); return s;
+  }
+
+  /* ---------- montaje ---------- */
+  function medir(){
+    const vw=Math.min(innerWidth,480), vh=(window.visualViewport&&visualViewport.height)||innerHeight;
+    S=Math.min(vw/942,vh/1670); H=Math.round(vh/S); L=(innerWidth-942*S)/2;
+  }
+  function pieTop(){ const f=q('#screen-exercise .exercise-footer'); const vh=(window.visualViewport&&visualViewport.height)||innerHeight; return f?f.getBoundingClientRect().top:vh-120; }
+  function nativas(){ return [...document.querySelectorAll('#exercise-input-area .options-list .option-btn, #exercise-input-area .tf-row .tf-btn')]; }
+  function textoOpcion(b){ const c=b.cloneNode(true); c.querySelectorAll('.tf-icon').forEach(i=>i.remove()); return (c.textContent||'').trim(); }
+  function montar(ex,animar){
+    desmontar();
+    if(!activa(ex)) return;
+    exCur=ex; medir();
+    const marco=modo(ex)==='marco';
+    const scr=document.getElementById('screen-exercise'); if(!scr) return;
+    root=el('div'); root.id='hoja-ej'; scr.appendChild(root);
+    document.documentElement.classList.add('pdp-hoja-on'); if(marco) document.documentElement.classList.add('pdp-hoja-marco');
+    stage=el('div','hj-stage'); stage.style.height=H+'px'; stage.style.transform='translate('+L+'px,0) scale('+S+')'; root.appendChild(stage);
+    pg=el('div','hj-pg'); pg.style.height=H+'px'; stage.appendChild(pg);
+    /* Deslizar (2026-11-05, Director: «necesito que el swipe funcione bien»): el Motor escucha el gesto en #exercise-body, que la hoja tapa, así que se repite acá con las MISMAS reglas y las MISMAS funciones del Motor:
+       derecha = vuelve al ejercicio anterior; izquierda = el siguiente, solo en modo prueba. No actúa con la ayuda abierta. Un arrastre horizontal largo no es un toque, así que puede empezar sobre una opción. */
+    { let g=null;
+      root.addEventListener('pointerdown',e=>{ if(e.pointerType==='mouse'&&e.button!==0) return; const ho=document.getElementById('help-overlay'); if(ho&&ho.classList.contains('open')) return; g={x:e.clientX,y:e.clientY}; },{passive:true});
+      root.addEventListener('pointermove',e=>{ if(!g) return; const dx=e.clientX-g.x, dy=e.clientY-g.y;
+        if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5){ g=null; try{ if(dx>0) swipeBackToPreviousExercise(); else pdpDeslizarIzquierda(); }catch(_){} } },{passive:true});
+      ['pointerup','pointercancel'].forEach(ev=>root.addEventListener(ev,()=>{ g=null; },{passive:true})); }
+    const dib=animar!==false&&!reducido(), T=k=>dib?k:0;
+    const ft=pieTop()/S, extra=Math.max(0,ft-1456);
+    const ops=marco?[]:ex.kind==='tf'?nativas().map(textoOpcion):ex.options.map(String);
+    const ex1=marco?-60:Math.min(380,Math.round(extra*.7));
+    const n=ops.length, rowsH=n>2?306:150, optY=900+ex1;
+    const fondoOp=optY+rowsH;
+    const decoOk=!marco&&ft-14-210>=fondoOp+14;
+    const pcs=[], add=d=>{ pcs.push(d); return d; };
+    /* riel: línea + avance + estrella (sigue el progreso real) */
+    const exs=getActiveExercises(state.currentModule), idx=state.currentExerciseIndex||0, fr=exs.length>1?Math.min(1,idx/(exs.length-1)):0;
+    const rail=el('div','hj-rail'); rail.style.cssText='left:195px;top:128px;width:563px;height:0';
+    rail.innerHTML='<i class="hj-rl"></i><i class="hj-rf" style="width:'+(fr*100)+'%"></i>'; pg.appendChild(rail); add(rail);
+    const star=pieza(pg,'star','star',null,null,null,null); star.style.left=(195+fr*563-82)+'px'; star.style.top='40px'; add(star);
+    add(pieza(pg,'res','res')); add(pieza(pg,'sub','sub')); add(pieza(pg,'x','ico-x')); const sonEl=add(pieza(pg,'son','ico-son'));
+    /* tarjeta en 3 tiras (la del medio se estira) */
+    const cm=PZ.card, cw=cm[2], chh=cm[3], topH=200, botH=150, midH=chh-topH-botH, k=(midH+ex1)/midH;
+    const card=el('div','hj-card'); card.style.cssText='left:'+cm[0]+'px;top:'+cm[1]+'px;width:'+cw+'px;height:'+(chh+ex1)+'px';
+    [[0,topH,cw+'px '+chh+'px','0 0'],[topH,midH+ex1+1,cw+'px '+(chh*k)+'px','0 '+(-topH*k)+'px'],[topH+midH+ex1,botH,cw+'px '+chh+'px','0 '+(-(chh-botH))+'px']].forEach(p=>{
+      const d=el('div','hj-cs'); d.style.cssText='top:'+p[0]+'px;height:'+p[1]+'px;background-size:'+p[2]+';background-position:'+p[3]; card.appendChild(d); });
+    pg.appendChild(card); add(card);
+    /* opciones */
+    const pos=[]; for(let i=0;i<n;i++){ const m=PZ[SLOT[i]]; let x=m[0], y=m[1]-900+optY; if(n===3&&i===2) x=Math.round((942-m[2])/2); pos.push({x,y,w:m[2],h:m[3]}); }
+    st={pieces:[],rings:[],ticks:[],sel:[],txt:[],hits:[],pos,ex1,lbl:null};
+    pos.forEach((r,i)=>{ add(pieza(pg,SLOT[i],PIEZA_OP[i],r.x,r.y,r.w,r.h)); });
+    if(!marco){ add(pieza(pg,'chL','chl',null,PZ.chL[1]-900+optY)); add(pieza(pg,'chR','chr',null,PZ.chR[1]-900+optY)); }
+    let calc=null,lib=null; if(decoOk){ const by=ft-14; calc=add(pieza(pg,'calc','calc',null,by-PZ.calc[3])); lib=add(pieza(pg,'libros','libros',null,by-PZ.libros[3])); }
+    st.calc=calc; st.lib=lib;
+    if(dib) pcs.forEach(p=>dibujar(p,Math.random()*160,1100+Math.random()*340));
+    /* el botón Confirmar y la brújula del pie son del Motor (no de la hoja), pero también se dibujan de esquina a esquina con el resto (2026-11-05, Director: «algunos componentes se dibujen como el artefacto») */
+    if(dib){ const cb0=document.getElementById('confirm-btn'), st0=document.getElementById('exercise-tutor-strip'); if(cb0) dibujar(cb0,Math.random()*160,1100+Math.random()*340); if(st0&&!st0.classList.contains('hidden')) dibujar(st0,Math.random()*160,1000+Math.random()*300); }
+    /* íconos: la X y el parlante son piezas del Director (kit de íconos) */
+    st.sound=sonEl;
+    /* título, etiqueta, enunciado, opciones */
+    let mat=''; try{ mat=(APP_CONFIG.materia||APP_CONFIG.titulo||'').trim(); }catch(_){} mat=mat.split(/\s+[—–-]\s+/)[0].trim();   /* «Matemática — Fracciones…» → «Matemática» */
+    if(mat){ const tt=bloque(mat,.72,540,110,0,.4,true); tt.el.style.cssText+=';left:180px;top:193px;width:565px;height:120px'; pg.appendChild(tt.el); if(tt.lines[0]) escribir(tt.lines[0],T(820),T(55),T(150)); }
+    let tg=String(ex.concept||'').trim().toUpperCase(); if(!tg||tg.length>24) tg='PREGUNTA';
+    const tgW=380,tgH=70,tgY=cm[1]+112; const pill=el('div','hj-tag','left:'+(471-tgW/2)+'px;top:'+tgY+'px;width:'+tgW+'px;height:'+tgH+'px'); pg.appendChild(pill); if(dib) dibujar(pill,T(760),500);
+    let tb=bloque(tg,.34,340,60,0,.2,true); if(!tb.lines.length){ tg='PREGUNTA'; tb=bloque(tg,.34,340,60,0,.2,true); }   /* una etiqueta que no entra en una línea con el alfabeto del Director cae a «PREGUNTA» */ tb.el.style.cssText+=';left:'+(471-tgW/2)+'px;top:'+(tgY+2)+'px;width:'+tgW+'px;height:'+tgH+'px'; pg.appendChild(tb.el); if(tb.lines[0]) escribir(tb.lines[0],T(970),T(45),T(140));
+    const qTop=cm[1]+210, qBot=cm[1]+chh+ex1-70;
+    const qq=bloque(ex.question||SIN_ENUNCIADO[ex.kind]||'',.6,690,qBot-qTop,10,.36); qq.el.style.cssText+=';left:'+(cm[0]+60)+'px;top:'+qTop+'px;width:'+(cw-120)+'px;height:'+(qBot-qTop)+'px'; pg.appendChild(qq.el);
+    let t=T(1500); qq.lines.forEach(u=>{ t=escribir(u,t,T(30),T(120))+T(120); });
+    const tOp=t+T(80);
+    ops.forEach((o,i)=>{ const r=pos[i];
+      const b=bloque(o,String(o).length>3?.6:.78,r.w-90,r.h-24,6,.3); b.el.style.cssText+=';left:'+r.x+'px;top:'+r.y+'px;width:'+r.w+'px;height:'+(r.h-8)+'px;z-index:2'; b.el.removeAttribute('aria-label'); b.el.removeAttribute('role');
+      pg.appendChild(b.el); st.txt.push(b); if(b.lines[0]) escribir(b.lines[0],tOp,T(95),T(190)); });
+    /* toques: cada opción de la hoja hace click en la real */
+    ops.forEach((o,i)=>{ const r=pos[i], b=el('button','hj-hit','left:'+r.x+'px;top:'+r.y+'px;width:'+r.w+'px;height:'+r.h+'px'); b.type='button'; b.setAttribute('aria-label','Opción '+(i+1)+': '+o); b.setAttribute('aria-pressed','false');
+      b.addEventListener('click',()=>{ const nb=nativas()[i]; if(nb&&!nb.disabled) nb.click(); }); pg.appendChild(b); st.hits.push(b); });
+    const xb=el('button','hj-hit','left:66px;top:83px;width:118px;height:122px;border-radius:60px'); xb.type='button'; xb.setAttribute('aria-label','Salir del ejercicio'); xb.addEventListener('click',()=>{ try{ requestExitExercise(); }catch(_){} }); pg.appendChild(xb);
+    const sb=el('button','hj-hit','left:767px;top:82px;width:121px;height:123px;border-radius:60px'); sb.type='button'; sb.setAttribute('aria-label','Silenciar o activar el audio'); sb.addEventListener('click',()=>{ try{ toggleAudioMuted(); }catch(_){} setTimeout(sincronizar,50); }); pg.appendChild(sb);
+    /* Confirmar real + compás + rótulo escrito (viven en el pie del Motor, por encima de la hoja) */
+    prepararPie(animar!==false?T(tOp+520):0);
+    if(marco){ ubicarMarco(cm[1]+chh+ex1, dib?T(1500):0);
+      /* la decoración del pie (calculadora y libros) solo si el ejercicio real deja lugar debajo */
+      const ar=document.getElementById('exercise-input-area'); const fondo=ar?ar.getBoundingClientRect().bottom/S:0;
+      if(ft-14-210>=fondo+40){ const by=ft-14; st.calc=pieza(pg,'calc','calc',null,by-PZ.calc[3]); st.lib=pieza(pg,'libros','libros',null,by-PZ.libros[3]); if(dib){ dibujar(st.calc,T(900),1100); dibujar(st.lib,T(1000),1100); } } }
+    /* espejo del estado real */
+    const area=document.getElementById('exercise-input-area');
+    obsOp=new MutationObserver(sincronizar); if(area) obsOp.observe(area,{subtree:true,attributes:true,attributeFilter:['class','disabled']});
+    const cb=document.getElementById('confirm-btn'); obsBtn=new MutationObserver(sincronizarBoton); obsBtn.observe(cb,{childList:true,characterData:true,subtree:true,attributes:true,attributeFilter:['disabled','class']});
+    const foot=q('#screen-exercise .exercise-footer'); if(foot&&window.ResizeObserver){ roFoot=new ResizeObserver(reubicar); roFoot.observe(foot); }
+    (marco?['#exercise-question','#exercise-image-zone','#workspace-zone']:['#exercise-question','#exercise-input-area','#exercise-image-zone','#workspace-zone']).forEach(s=>{ const e=q(s); if(e) e.setAttribute('aria-hidden','true'); });
+    sincronizar(); sincronizarBoton();
+  }
+  /* tipos 'marco': el ejercicio real se ve encima de la hoja, justo bajo la tarjeta del enunciado, dentro de su propia bandeja (tema claro y oscuro) */
+  function ubicarMarco(cardBottom,delay){
+    const a=document.getElementById('exercise-input-area'); if(!a) return;
+    a.style.marginTop='0px';
+    const ajustar=()=>{                       /* la pantalla entra con una transición: se mide otra vez al terminar, sumando solo la diferencia */
+      if(!root||document.getElementById('exercise-input-area')!==a) return;
+      const deseado=cardBottom*S+16, actual=parseFloat(a.style.marginTop)||0, top=a.getBoundingClientRect().top;
+      if(Math.abs(deseado-top)>1) a.style.marginTop=Math.max(0,Math.round(actual+deseado-top))+'px';
+    };
+    ajustar(); [350,900].forEach(ms=>setTimeout(ajustar,ms));
+    if(delay!==0&&!reducido()) dibujar(a,delay,700);
+  }
+  function prepararPie(delay){
+    const foot=q('#screen-exercise .exercise-footer'); if(!foot) return;
+    lbl=el('div','hj-btn-label'); lbl.id='hj-btn-label'; lbl.setAttribute('aria-hidden','true'); foot.appendChild(lbl);
+    /* la brújula NO es una pieza de la hoja: reemplaza el ícono del Spike viejo del pie (el botón de ayuda del Motor) por CSS, ver `#exercise-tutor-strip-icon` en hoja_motor.css (2026-11-05, Director: «de brújula déjala y que reemplace a ese tutor viejo») */
+    st.lblDelay=delay; st.label=null; reubicar();
+  }
+  function reubicar(){
+    if(!root) return;
+    const cb=document.getElementById('confirm-btn'), foot=q('#screen-exercise .exercise-footer'); if(!cb||!foot) return;
+    const r=cb.getBoundingClientRect(), f=foot.getBoundingClientRect();
+    if(lbl){ lbl.style.left=(r.left-f.left)+'px'; lbl.style.top=(r.top-f.top)+'px'; lbl.style.width=r.width+'px'; lbl.style.height=r.height+'px'; }
+    if(comp){ const z=Math.min(120,r.height*1.08); comp.style.cssText='left:'+Math.max(2,r.left-z-4)+'px;top:'+(r.top+r.height/2-z/2)+'px;width:'+z+'px;height:'+z+'px'; }
+    /* deco pegada a la pieza de arriba del pie */
+    const ft=pieTop()/S;
+    if(st&&st.calc){ const by=ft-14, top1=by-PZ.calc[3]; st.calc.style.top=top1+'px'; st.lib.style.top=(by-PZ.libros[3])+'px'; }
+  }
+  function escribirEtiqueta(txt,delay){
+    if(!lbl) return;
+    lbl.textContent=''; if(!txt) return;
+    const wmax=(parseFloat(lbl.style.width)||300)*0.72, sc=Math.min(.56,Math.max(.28,(parseFloat(lbl.style.height)||90)/ (GL.H.h*1.55)));
+    const b=bloque(txt,sc,wmax,(parseFloat(lbl.style.height)||90)*0.9,0,.2,true);
+    if(b.lines[0]){ const inner=b.el; lbl.appendChild(inner); escribir(b.lines[0],delay||0,35,120); } else { lbl.appendChild(b.el); }
+  }
+  function sincronizarBoton(){
+    if(!root) return;
+    const cb=document.getElementById('confirm-btn'), txt=(cb.textContent||'').trim();
+    if(lbl) lbl.classList.toggle('hj-off',!!cb.disabled);
+    if(txt!==st.label){ const primera=st.label===null; st.label=txt; reubicar(); escribirEtiqueta(txt,primera?(st.lblDelay||0):0); }
+  }
+
+  /* ---------- espejo del estado de las opciones reales ---------- */
+  function sincronizar(){
+    if(!root||!st) return;
+    const nb=nativas();
+    nb.forEach((b,i)=>{
+      const r=st.pos[i]; if(!r) return;
+      const sel=b.classList.contains('selected'), ok=b.classList.contains('correct'), wr=b.classList.contains('wrong')||b.classList.contains('wrong-first'), rej=b.classList.contains('rejected');
+      const amarillo=sel||ok;
+      if(amarillo&&!st.sel[i]){ const p=pieza(pg,'oB','ob',r.x,r.y,r.w,r.h); pg.insertBefore(p,st.txt[i].el); dibujar(p,0,360); st.sel[i]=p; const u=st.txt[i].lines[0]; if(u) reescribir(u); }
+      if(!amarillo&&st.sel[i]){ const p=st.sel[i]; st.sel[i]=null; p.animate([{opacity:1},{opacity:0}],{duration:160,fill:'forwards'}).onfinish=()=>p.remove(); }
+      if(wr&&!st.rings[i]){ st.rings[i]=aro(r); }
+      if(!wr&&st.rings[i]){ const g=st.rings[i]; st.rings[i]=null; g.animate([{opacity:1},{opacity:0}],{duration:200,fill:'forwards'}).onfinish=()=>g.remove(); }
+      if(ok&&!st.ticks[i]){ st.ticks[i]=tilde(r); }
+      if(!ok&&st.ticks[i]){ st.ticks[i].remove(); st.ticks[i]=null; }
+      st.txt[i].el.style.opacity=rej?.35:1;
+      const h=st.hits[i]; if(h){ h.disabled=b.disabled&&!sel&&!ok&&!wr&&!rej?true:b.disabled; h.setAttribute('aria-pressed',sel?'true':'false'); }
+    });
+    try{ const mu=(document.getElementById('audio-mute-btn')||{}).textContent||''; if(st.sound) st.sound.style.opacity=/🔇/.test(mu)?.45:1; }catch(_){}
+  }
+  function aro(r){
+    const w=r.w+40,h=r.h+40,s=document.createElementNS(NS,'svg'); s.setAttribute('class','hj-ring'); s.setAttribute('viewBox','0 0 '+w+' '+h); s.setAttribute('aria-hidden','true');
+    s.style.cssText='left:'+(r.x-20)+'px;top:'+(r.y-20)+'px;width:'+w+'px;height:'+h+'px';
+    const p=document.createElementNS(NS,'path');
+    p.setAttribute('d','M'+w*.1+' '+h*.2+' C'+w*.3+' '+h*.04+' '+w*.7+' '+h*.02+' '+w*.92+' '+h*.16+' C'+w*1.0+' '+h*.4+' '+w*.98+' '+h*.72+' '+w*.9+' '+h*.88+' C'+w*.65+' '+h*1.0+' '+w*.3+' '+h*.99+' '+w*.1+' '+h*.84+' C'+w*0+' '+h*.6+' '+w*.02+' '+h*.36+' '+w*.14+' '+h*.18);
+    p.setAttribute('fill','none'); p.setAttribute('stroke','#F59E0B'); p.setAttribute('stroke-width','9'); p.setAttribute('stroke-linecap','round'); p.setAttribute('pathLength','1');
+    if(!reducido()){ p.style.strokeDasharray='1'; p.style.strokeDashoffset='1'; p.animate([{strokeDashoffset:1},{strokeDashoffset:0}],{duration:420,fill:'forwards',easing:'ease-out'});
+      s.animate([{transform:'translateX(0)'},{transform:'translateX(-9px)'},{transform:'translateX(8px)'},{transform:'translateX(-6px)'},{transform:'translateX(0)'}],{duration:320,delay:380}); }
+    s.appendChild(p); pg.insertBefore(s,st.hits[0]); return s;
+  }
+  function tilde(r){
+    const d=el('div','hj-pc hj-check'); d.setAttribute('aria-hidden','true');
+    d.style.cssText='background-image:var(--hz-ico-check);left:'+(r.x+r.w-88)+'px;top:'+(r.y+(r.h-80)/2)+'px;width:80px;height:80px';
+    pg.insertBefore(d,st.hits[0]); dibujar(d,60,360); return d;
+  }
+
+  /* ---------- desmontar ---------- */
+  function desmontar(){
+    try{ if(obsOp) obsOp.disconnect(); if(obsBtn) obsBtn.disconnect(); if(roFoot) roFoot.disconnect(); }catch(_){}
+    obsOp=obsBtn=roFoot=null;
+    if(root&&root.parentNode) root.parentNode.removeChild(root);
+    if(lbl&&lbl.parentNode) lbl.parentNode.removeChild(lbl);
+    root=stage=pg=lbl=comp=null; st=null; exCur=null; crumpling=false;
+    const H_=document.documentElement; H_.classList.remove('pdp-hoja-on'); H_.classList.remove('pdp-hoja-marco'); H_.classList.remove('hj-arrugando');
+    ['#exercise-question','#exercise-input-area','#exercise-image-zone','#workspace-zone'].forEach(s=>{ const e=q(s); if(e){ e.removeAttribute('aria-hidden'); } });
+    { const a=document.getElementById('exercise-input-area'); if(a) a.style.marginTop=''; }
+  }
+
+  /* ---------- la hoja se arruga y pasa a la siguiente ---------- */
+  function interceptarAvance(){
+    if(!root||!pg||crumpling||pasando||reducido()) return false;
+    crumpling=true; document.documentElement.classList.add('hj-arrugando');
+    let hecho=false;
+    const fin=()=>{ if(hecho) return; hecho=true; clearTimeout(guard);
+      pasando=true; try{ goToNextExercise(); } finally { pasando=false; crumpling=false; document.documentElement.classList.remove('hj-arrugando'); } };
+    const guard=setTimeout(fin,4600);
+    try{ arrugar(pg,fin); }catch(e){ fin(); }
+    return true;
+  }
+  function arrugar(old,cb){
+    const N=16, rect=[]; for(let i=0;i<N;i++){ const t=i/N*4,e=Math.floor(t),f=t-e; rect.push([[f,0],[1,f],[1-f,1],[0,1-f]][e]); }
+    const poly=pts=>'polygon('+pts.map(p=>(p[0]*100).toFixed(1)+'% '+(p[1]*100).toFixed(1)+'%').join(',')+')';
+    const blob=rect.map((_,i)=>{ const a=i/N*Math.PI*2, r=.3+((i*37)%7)/70; return [.5+Math.cos(a)*r*.62,.5+Math.sin(a)*r*.62*(942/H)]; });
+    const mid=rect.map((p,i)=>[p[0]*.8+blob[i][0]*.2+(((i*53)%5)-2)*.012,p[1]*.8+blob[i][1]*.2+(((i*29)%5)-2)*.012]);
+    const folds=el('div','hj-folds'); stage.appendChild(folds);
+    const D1=560,D2=700, eas='cubic-bezier(.5,0,.7,.4)';
+    folds.animate([{opacity:0},{opacity:1}],{duration:D1,fill:'forwards'});
+    const kf=()=>[{clipPath:poly(rect),transform:'scale(1) rotate(0deg)'},{clipPath:poly(mid),transform:'scale(.78) rotate(-6deg)',offset:.5},{clipPath:poly(blob),transform:'scale(.22) rotate(40deg)'}];
+    old.animate(kf(),{duration:D1+D2,easing:eas,fill:'forwards'}); folds.animate(kf(),{duration:D1+D2,easing:eas,fill:'forwards'});
+    setTimeout(()=>{
+      folds.remove(); old.style.visibility='hidden';
+      const ball=el('div','hj-ball'); stage.appendChild(ball);
+      ball.animate([{transform:'translate(0,0) rotate(0deg) scale(1)'},{transform:'translate(110px,200px) rotate(90deg) scale(1)',offset:.35},{transform:'translate(420px,480px) rotate(300deg) scale(.9)',offset:.8},{transform:'translate(640px,640px) rotate(420deg) scale(.7)',opacity:0}],{duration:950,easing:'ease-in',fill:'forwards'});
+      setTimeout(()=>{ ball.remove(); cb(); },760);
+    },D1+D2);
+  }
+  addEventListener('resize',()=>{ clearTimeout(rsz); rsz=setTimeout(()=>{ const ae=document.activeElement; if(ae&&/^(INPUT|TEXTAREA)$/.test(ae.tagName)) return;   /* escribiendo: el teclado achica la pantalla, no se rearma la hoja */
+      if(root&&exCur&&!crumpling){ const ex=exCur; montar(ex,false); } },150); });
+  return { alRenderizar:ex=>montar(ex,true), desmontar, interceptarAvance, activa, activada:opcionActivada, _estado:()=>({montada:!!root,arrugando:crumpling}) };
+})();
+
+/* HOJA-MOTOR:FIN */
 function renderExercise() {
+  try { setTimeout(pdpPistaDeslizar, 500); } catch (_) {}   // deslizar para comprobar (2026-11-10): pista la primera vez
+  try { PdPAtelier.desmontar(); } catch (_) {}   // skin Atelier (2026-11-05)
+  try { PdPHoja.desmontar(); } catch (_) {}   // pantalla «hoja que se dibuja» (2026-11-05): se vuelve a armar al final si corresponde
   document.documentElement.classList.remove('pdp-ej-memoria'); document.documentElement.style.removeProperty('--pdp-dorso'); { const ms_=document.getElementById('mem-sub'); if(ms_) ms_.remove(); } document.documentElement.classList.remove('pdp-ej-panel'); document.documentElement.classList.remove('pdp-ej-piezas'); document.documentElement.classList.remove('pdp-ej-campo-azul'); document.documentElement.classList.remove('pdp-ej-castillo'); document.documentElement.classList.remove('pdp-ej-libre'); document.documentElement.classList.remove('pdp-ej-libro'); document.documentElement.classList.remove('pdp-ej-union'); document.documentElement.classList.remove('pdp-ej-linea'); document.documentElement.classList.remove('pdp-ej-selva'); { const q_=document.getElementById('exercise-question'); if(q_) delete q_.dataset.s; } ['--pz-banner','--pz-b-sl','--pz-b-w','--pz-campo','--pz-c-sl','--pz-c-w','--pz-boton','--pz-k-slice','--pz-k-bw','--pz-k-bw2','--pz-tira','--pz-t-sl','--pz-t-w','--pz-foto','--pz-foto-pad','--pz-hueco','--pz-h-pad','--pz-h-sl'].forEach(function (v_) { document.documentElement.style.removeProperty(v_); }); document.documentElement.classList.remove('pdp-ej-rollo'); document.documentElement.classList.remove('pdp-ej-tabla'); { const b_=document.getElementById('ej-banner-q'); if(b_) b_.remove(); }
   try { document.documentElement.style.removeProperty('--pdp-valle-bg'); document.documentElement.style.removeProperty('--pdp-boton-img'); ['--pdp-opcion-azul', '--pdp-opcion-dorada', '--pdp-circulo-azul', '--pdp-circulo-dorado', '--pdp-nombre', '--pdp-retrato-marco', '--pdp-globo-punta'].forEach(function (v_) { document.documentElement.style.removeProperty(v_); }); document.documentElement.style.removeProperty('--pdp-pildora-crema'); document.documentElement.classList.remove('pdp-fondo-mundo'); document.documentElement.classList.remove('pdp-mundo-noche'); document.documentElement.classList.remove('pdp-mundo-fondo-doble'); document.documentElement.style.removeProperty('--pdp-valle-bg-noche'); } catch (_) {}   // un mundo puede traer su propio fondo de pantalla (escena.fondoPantalla); cada ejercicio vuelve al de la Unidad
   const exs=getActiveExercises(state.currentModule), ex=exs[state.currentExerciseIndex];
@@ -3510,7 +4112,7 @@ function renderExercise() {
   } else {
     liveStatsBar.classList.remove('active');
   }
-  if(exs.length>1 && state.currentExerciseIndex===Math.floor(exs.length/2) && state._midpointShownFor!==state.currentModule){
+  if(exs.length>1 && state.currentExerciseIndex===Math.floor(exs.length/2) && state._midpointShownFor!==state.currentModule && !(typeof APP_CONFIG!=='undefined' && APP_CONFIG.skin==='atelier')){   // con el skin Atelier Ronnie ya habla en su globo: este aviso se le encimaba al encabezado (2026-11-06)
     state._midpointShownFor=state.currentModule;
     // Nota real: no hay mensaje de contenido dedicado a "mitad de módulo"
     // (mensajesRacha es específico de racha, semánticamente equivocado
@@ -3744,6 +4346,8 @@ function renderExercise() {
     area.appendChild(w);
     showToast('⚠ Tipo "'+ex.kind+'" sin renderer. Ver consola.');
   }
+  try { PdPAtelier.alRenderizar(ex); } catch (e) { console.error('[atelier]', e); try { PdPAtelier.desmontar(); } catch (_) {} }   // skin Atelier (2026-11-05): solo con la opción activada
+  try { PdPHoja.alRenderizar(ex); } catch (e) { console.error('[hoja]', e); try { PdPHoja.desmontar(); } catch (_) {} }   // pantalla «hoja que se dibuja» (2026-11-05): solo mc y solo si la opción está activada; ver bloque HOJA-MOTOR
 }
 
 /* ── Nivel 2: Slides ── */
@@ -4395,11 +4999,23 @@ function currentVozAudioSource(ex) {
 // sigue abajo, intacta. Deliberadamente breve (§6: "no convertir esto en una
 // pantalla extensa de texto") — es una segunda vía de acceso al MISMO
 // contenido pedagógico, no una lección escrita.
+/* Leer lo que dice el audio (2026-11-09, pedido del Director): en un «escuchar» cuyas opciones están en español, desde el 2.º escalón de ayuda (no a la primera) el panel de Spike ofrece
+   «Leer lo que dice» (plegado, como el diccionario) con el texto en inglés. Leerlo sigue exigiendo entenderlo: las opciones son traducciones. Nunca si las opciones están en inglés
+   (el texto sería la respuesta), nunca en un dictado (ex.answer) y nunca en Skill Check / Level Check (ahí no hay ayuda). */
+function pdpPuedeLeerEscucha(ex) {
+  try {
+    if (!ex || ex.kind !== 'listen' || !ex.vozEntrada || state.answered) return false;
+    if (pdpTextoEsEspanol(ssmlToTexto(ex.vozEntrada))) return false;
+    const ok = Array.isArray(ex.options) ? ex.options[ex.correct] : null; if (!ok || !pdpTextoEsEspanol(String(ok))) return false;
+    return (state.helpLevel || 0) >= 1;
+  } catch (_) { return false; }
+}
 function prependTranscripcion(content, ex) {
   const src = currentVozAudioSource(ex);
   if (!src) return;
+  const plegada = pdpPuedeLeerEscucha(ex);
   // No regalar el audio (2026-10-04): en un ejercicio de escucha con texto en inglés, la transcripción es la respuesta; recién después de responder.
-  if (ex && ex.kind !== 'concept' && ex.vozEntrada && !state.answered && (ex.kind === 'listen' || ex.answer !== undefined) && !pdpTextoEsEspanol(ssmlToTexto(ex.vozEntrada))) return;
+  if (!plegada && ex && ex.kind !== 'concept' && ex.vozEntrada && !state.answered && (ex.kind === 'listen' || ex.answer !== undefined) && !pdpTextoEsEspanol(ssmlToTexto(ex.vozEntrada))) return;
   const txt = ssmlToTexto(src.voz);
   if (!txt) return;
   const box = document.createElement('div');
@@ -4418,6 +5034,13 @@ function prependTranscripcion(content, ex) {
     replayBtn.textContent = '▶ Escuchar de nuevo';
     replayBtn.onclick = () => { if (!audioEsReproducible(src.audio) && ex && ex.kind !== 'concept') { hablarVozEntrada({ vozEntrada: src.voz }); return; } playExerciseAudio(src.audio); }; // respaldo con la voz del dispositivo (2026-10-04)
     box.appendChild(replayBtn);
+  }
+  if (plegada) {   // plegada: un botón como el del diccionario; al abrirlo se ve el texto en inglés
+    lbl.textContent = 'Lo que dice el audio';
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'help-dic-btn help-leer-btn'; b.setAttribute('aria-expanded', 'false'); b.textContent = 'Leer lo que dice';
+    box.hidden = true; box.classList.add('tutor-transcript-leer');
+    b.onclick = () => { box.hidden = !box.hidden; b.setAttribute('aria-expanded', String(!box.hidden)); const pn = document.getElementById('help-panel'); if (pn) pn.classList.toggle('dic-abierto', !box.hidden); [40, 360].forEach(ms => setTimeout(() => { try { riseTutor(); if (!box.hidden && box.scrollIntoView) box.scrollIntoView({ block: 'nearest' }); } catch (_) {} }, ms)); };   // el panel crece (como con el diccionario) y el texto queda a la vista
+    content.appendChild(b); content.appendChild(box); return;
   }
   content.insertBefore(box, content.firstChild);
 }
@@ -4451,10 +5074,10 @@ function pdpTerminoEn(txt,en){
 function pdpAgregarDiccionario(content, ex){
   try{
     { const pn=document.getElementById('help-panel'); if(pn) pn.classList.remove('dic-abierto'); }   // cada vez que se arma el panel, el diccionario arranca cerrado y el panel en su alto de siempre
-    if(!content||!ex) return; content.querySelectorAll('.help-dic-btn,.help-dic').forEach(x=>x.remove());
-    if(ex.kind==='listen') return;   // 2026-11-03: lo que se escucha no está escrito; la lista de la lección dejaría emparejar el audio con su significado
+    if(!content||!ex) return; content.querySelectorAll('.help-dic-btn:not(.help-leer-btn),.help-dic').forEach(x=>x.remove());
+    if(ex.kind==='listen' && !pdpPuedeLeerEscucha(ex)) return;   // 2026-11-03: lo que se escucha no está escrito; la lista de la lección dejaría emparejar el audio con su significado. 2026-11-09: cuando ya se puede leer lo que dice (2.º escalón), sí
     const G=pdpGlosarioUnidad(); if(!G.length) return;
-    const txt=pdpTextoDelEjercicio(ex), aca=G.filter(g=>pdpTerminoEn(txt,g.en));
+    const txt=pdpTextoDelEjercicio(ex)+(ex.kind==='listen'?' \n '+String(ssmlToTexto(ex.vozEntrada)||'').toLowerCase():''), aca=G.filter(g=>pdpTerminoEn(txt,g.en));
     const mas=G.filter(g=>g.nivelId&&g.nivelId===ex.nivelId&&aca.indexOf(g)<0);
     if(!aca.length&&!mas.length) return;
     const b=document.createElement('button'); b.type='button'; b.className='help-dic-btn'; b.setAttribute('aria-expanded','false'); b.textContent='Diccionario';
@@ -5035,6 +5658,8 @@ function guidedMsg(when) {
   // Pantalla de tabla con cartel de madera (2026-10-28, pedido del Director): el cartel ya
   // da la consigna y el aviso de arranque la repetía con otras palabras; solo el de arranque.
   if (when === 'start' && document.documentElement.classList.contains('pdp-ej-tabla')) return;
+  // Con cartel de consigna (Encontrá el error, Ordená, Clasificá): el aviso de arranque repetía la consigna y salía doble (2026-11-07, Director).
+  if (when === 'start' && document.getElementById('ej-banner-q')) return;
 
   // Guardrail de contenido (2026-09-22, hallazgo real: un mensaje guiado
   // quedó cargado con una sola letra suelta, probablemente un error de
@@ -6465,7 +7090,7 @@ var MundoRunner = (function () {
     if (d.noEntendio.length) partes.push(v.receptor + ' no entendió ' + d.noEntendio.length + ' ' + plural(d.noEntendio.length, v.pieza) + '.');
     if (d.sobran.length) partes.push('Hay ' + d.sobran.length + ' ' + plural(d.sobran.length, v.sobra) + '.');
     if (d.faltan.length && !d.noEntendio.length) partes.push(plural(d.faltan.length, ['Falta ', 'Faltan ']) + d.faltan.length + ' ' + plural(d.faltan.length, v.falta) + '.');
-    return { ok: false, titulo: (m.textos && m.textos.casiTitulo) || 'Casi.', texto: partes.join(' ') + ' Mirá las filas marcadas.' };
+    return { ok: false, titulo: (m.textos && m.textos.casiTitulo) || 'Casi.', texto: partes.join(' ') + ' ' + ((m.textos && m.textos.mirar) || 'Mirá las filas marcadas.') };   // textos.mirar (2026-11-09): la escena no tiene filas
   }
 
   /** Todas las jugadas posibles (banco común sin repetir piezas; con `opciones`, una por hueco). Generador. */
@@ -6722,7 +7347,7 @@ var PDP_MUNDO = (function () {
 
   function actualizar() {
     var M = state.mundo; if (!M) return;
-    if (completo(M) && !M.corriendo && !state.answered) { enableConfirm(); var b = confirmBtn(); b.textContent = boton(); b.onclick = correr; }
+    if (completo(M) && !(M.def.aula && M.def.aula.bandeja && !M.tocado) && !M.corriendo && !state.answered) { enableConfirm(); var b = confirmBtn(); b.textContent = boton(); b.onclick = correr; }
     else if (!state.answered) { disableConfirm(); confirmBtn().textContent = boton(); }
   }
 
@@ -6759,6 +7384,7 @@ var PDP_MUNDO = (function () {
   function sincronizarZonas(M) {
     if (M && M.def && M.def.escena && M.def.escena.vista === 'arcos') { sincronizarArcos(M); return; }
     if (M && M.def && M.def.tipo === 'cuerdas') sincronizarCuerdas(M);
+    if (M && M.def && M.def.tipo === 'escena') sincronizarEscena(M);
     if (M && M.def && M.def.tipo === 'analizador') sincronizarLinea(M);
     var box = M && M.area && M.area.querySelector('.mundo-zonas'); if (!box) return;
     var zs = (M.def.escena && M.def.escena.zonas) || [], espera = box.querySelector('.mundo-zona.espera');
@@ -6854,6 +7480,114 @@ var PDP_MUNDO = (function () {
     box.classList.toggle('eligiendo', !!M.sel);
     Array.prototype.forEach.call(svg.querySelectorAll('.cuerda'), function (g) { if (!M.jugada['h_' + g.dataset.i]) g.remove(); });
   }
+  /* ESCENA (2026-11-09, elegido por el Director: «Poné cada cosa en su lugar»): el dibujo de la escena (la imagen del mundo) con lugares marcados encima (def.aula.lugares, caja en % de la imagen)
+     y una bandeja con los objetos. Tocar un objeto y después un lugar lo lleva ahí; también se puede arrastrar. Un objeto por lugar: poner otro en un lugar ocupado devuelve el anterior a la bandeja.
+     Es el mismo mundo: la TABLA oculta sigue siendo la fuente del estado (cada objeto es un campo; su valor, el texto del lugar). La jugada es una por hueco: M.jugada['h_'+obj] = obj+'__'+lugar. */
+  function construirEscena(M, avatar) {
+    var def = M.def, au = def.aula, e = def.escena, box = el('div', 'mundo-aula'), dib = el('div', 'mundo-aula-dib');
+    if (avatar) dib.style.backgroundImage = 'url(' + avatar + ')'; dib.style.aspectRatio = (e.imagenAncho || 4) + ' / ' + (e.imagenAlto || 3);
+    au.lugares.forEach(function (l) {
+      var b = el('div', 'mundo-aula-lugar' + ((l.capacidad || 1) > 1 ? ' multi' : '')); b.dataset.id = l.id; b.dataset.cap = l.capacidad || 1; b.setAttribute('role', 'button'); b.tabIndex = 0; b.setAttribute('aria-label', l.texto);
+      var c = l.caja || [0, 0, 10, 10]; b.style.left = c[0] + '%'; b.style.top = c[1] + '%'; b.style.width = c[2] + '%'; b.style.height = c[3] + '%';
+      b.onclick = function () { clickLugar(M, l.id); }; b.onkeydown = function (ev) { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); clickLugar(M, l.id); } };
+      dib.appendChild(b);
+    });
+    if (au.modo === 'marcar') {
+      box.classList.add('marcar');
+      au.objetos.forEach(function (o) {
+        var b = el('div', 'mundo-aula-marca'); b.dataset.id = o.id; b.setAttribute('role', 'button'); b.tabIndex = 0; b.setAttribute('aria-pressed', 'false'); b.setAttribute('aria-label', o.texto);
+        var c = o.caja || [0, 0, 10, 10]; b.style.left = c[0] + '%'; b.style.top = c[1] + '%'; b.style.width = c[2] + '%'; b.style.height = c[3] + '%';
+        b.onclick = function () { alternarMarca(M, o.id); }; b.onkeydown = function (ev) { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); alternarMarca(M, o.id); } };
+        dib.appendChild(b);
+      });
+      box.appendChild(dib); box.appendChild(el('div', 'mundo-aula-guia', esc((e.guia) || 'Tocá en el dibujo lo que no es como dice ' + (e.hablante || '') + '.')));
+      iniciarBandeja(M);
+      return box;
+    }
+    box.appendChild(dib);
+    var band = el('div', 'mundo-aula-bandeja'), objs = el('div', 'mundo-aula-objs'); band.appendChild(el('div', 'mundo-aula-rot', esc(e.rotuloBandeja || 'Todavía sin lugar'))); band.appendChild(objs); box.appendChild(band);
+    band.onclick = function (ev) { if (ev.target.closest && ev.target.closest('.mundo-aula-obj')) return; volverABandeja(M); };
+    if (au.bandeja) { band.classList.add('es-lugar'); band.dataset.id = au.bandeja.id; iniciarBandeja(M); }   // la bandeja ES un lugar («not in the bag»): todo empieza ahí y cuenta como puesto
+    au.objetos.forEach(function (o) {
+      var b = el('button', 'mundo-aula-obj', (o.img ? '<img class="ao-img" alt="">' : '<span class="ao-ico" aria-hidden="true">' + esc(o.icono || '') + '</span>') + '<span class="ao-t">' + esc(o.texto) + '</span>');
+      b.type = 'button'; b.dataset.id = o.id; if (o.img) b.querySelector('img').src = o.img;
+      b.onclick = function (ev) { ev.stopPropagation(); if (b.__arrastrado) { b.__arrastrado = false; return; } var lg = b.parentNode && b.parentNode.classList && b.parentNode.classList.contains('mundo-aula-lugar') ? b.parentNode : null; if (lg && M.sel && M.sel !== o.id) { clickLugar(M, lg.dataset.id); return; } clickObjeto(M, o.id); };   // con otra cosa elegida, tocar un lugar ocupado es tocar el lugar
+      arrastrable(M, b, o.id); objs.appendChild(b);
+    });
+    return box;
+  }
+  function alternarMarca(M, id) {
+    if (M.corriendo || state.answered) return;
+    var au = M.def.aula, h = 'h_' + id, marcada = String(M.jugada[h] || '').split('__')[1] === au.marcado.id;
+    M.jugada[h] = id + '__' + (marcada ? au.bandeja.id : au.marcado.id); delete M.malos[h]; M.tocado = true;
+    vivo(M); actualizar(); sincronizarEscena(M);
+  }
+  function iniciarBandeja(M) { var b = M.def.aula.bandeja; M.tocado = false; if (b) M.def.aula.objetos.forEach(function (o) { M.jugada['h_' + o.id] = o.id + '__' + b.id; }); }
+  function aBandeja(M, h) { var b = M.def.aula.bandeja; if (b) M.jugada[h] = h.slice(2) + '__' + b.id; else delete M.jugada[h]; delete M.malos[h]; }
+  function clickObjeto(M, id) { if (M.corriendo || state.answered) return; M.sel = (M.sel === id) ? null : id; sincronizarEscena(M); }
+  function ponerEn(M, id, lid) {
+    var lg = (M.def.aula.lugares || []).find(function (x) { return x.id === lid; }), cap = lg ? (lg.capacidad || 1) : 1e9;
+    var dentro = Object.keys(M.jugada).filter(function (h) { return h !== 'h_' + id && String(M.jugada[h]).split('__')[1] === lid; });
+    while (dentro.length >= cap) aBandeja(M, dentro.shift());   // lugar lleno: el que estaba primero vuelve a la bandeja
+    M.jugada['h_' + id] = id + '__' + lid; delete M.malos['h_' + id]; M.sel = null; M.tocado = true;
+    vivo(M); actualizar(); sincronizarEscena(M);
+  }
+  function clickLugar(M, lid) {
+    if (M.corriendo || state.answered) return;
+    if (!M.sel) { var dentro = M.area.querySelector('.mundo-aula-lugar[data-id="' + lid + '"] .mundo-aula-obj'); if (dentro) clickObjeto(M, dentro.dataset.id); return; }
+    ponerEn(M, M.sel, lid);
+  }
+  function volverABandeja(M) {
+    if (M.corriendo || state.answered || !M.sel) return;
+    aBandeja(M, 'h_' + M.sel); M.tocado = true;
+    M.sel = null; vivo(M); actualizar(); sincronizarEscena(M);
+  }
+  function arrastrable(M, b, id) {   // arrastrar con el dedo (o el mouse): el objeto sigue al dedo y cae en el lugar que queda debajo; un toque sin mover es un toque normal
+    var ini = null, fant = null, sobre = null;
+    function lugarEn(x, y) { var t = document.elementFromPoint(x, y); return t && t.closest ? (t.closest('.mundo-aula-lugar') || t.closest('.mundo-aula-bandeja')) : null; }
+    b.addEventListener('pointerdown', function (ev) { if (M.corriendo || state.answered || (ev.button && ev.button !== 0)) return; ini = { x: ev.clientX, y: ev.clientY, id: ev.pointerId }; });
+    b.addEventListener('pointermove', function (ev) {
+      if (!ini || ev.pointerId !== ini.id) return;
+      if (!fant) { if (Math.abs(ev.clientX - ini.x) + Math.abs(ev.clientY - ini.y) < 10) return; try { b.setPointerCapture(ev.pointerId); } catch (_) {} fant = b.cloneNode(true); fant.classList.add('mundo-aula-fantasma'); fant.classList.remove('sel', 'ok', 'bad'); document.body.appendChild(fant); M.sel = id; sincronizarEscena(M); }
+      fant.style.left = ev.clientX + 'px'; fant.style.top = ev.clientY + 'px';
+      var l = lugarEn(ev.clientX, ev.clientY); if (sobre && sobre !== l) sobre.classList.remove('arrastre'); sobre = l; if (l && l.classList.contains('mundo-aula-lugar')) l.classList.add('arrastre');
+    });
+    function fin(ev) {
+      if (!ini) return; var arr = !!fant; ini = null; if (sobre) sobre.classList.remove('arrastre');
+      if (fant) { fant.remove(); fant = null; }
+      if (!arr) return; b.__arrastrado = true; setTimeout(function () { b.__arrastrado = false; }, 350);
+      var l = ev && ev.type === 'pointerup' ? lugarEn(ev.clientX, ev.clientY) : null; sobre = null;
+      if (l && l.classList.contains('mundo-aula-lugar')) ponerEn(M, id, l.dataset.id);
+      else if (l && l.classList.contains('mundo-aula-bandeja')) { M.sel = id; volverABandeja(M); }
+      else { M.sel = null; sincronizarEscena(M); }
+    }
+    b.addEventListener('pointerup', fin); b.addEventListener('pointercancel', fin);
+  }
+  function sincronizarEscena(M) {
+    var box = M && M.area && M.area.querySelector('.mundo-aula'); if (!box) return;
+    if (M.def.aula.modo === 'marcar') {
+      M.def.aula.objetos.forEach(function (o) {
+        var b = box.querySelector('.mundo-aula-marca[data-id="' + o.id + '"]'); if (!b) return;
+        var mk = String(M.jugada['h_' + o.id] || '').split('__')[1] === M.def.aula.marcado.id, r = fila(M, o.id);
+        var est = (r && r.classList.contains('is-ok')) ? 'ok' : (((r && r.classList.contains('is-bad')) || M.malos['h_' + o.id]) ? 'bad' : '');
+        b.classList.toggle('marcado', mk); b.setAttribute('aria-pressed', String(mk)); b.classList.toggle('ok', est === 'ok'); b.classList.toggle('bad', est === 'bad');
+      });
+      return;
+    }
+    var objs = box.querySelector('.mundo-aula-objs'), e = M.def.escena;
+    M.def.aula.objetos.forEach(function (o) {
+      var b = box.querySelector('.mundo-aula-obj[data-id="' + o.id + '"]'); if (!b) return;
+      var pid = M.jugada['h_' + o.id], dest = objs;
+      if (pid) { var lg = box.querySelector('.mundo-aula-lugar[data-id="' + String(pid).split('__')[1] + '"]'); if (lg) dest = lg; }   // la bandeja-lugar no es un .mundo-aula-lugar: queda en la bandeja
+      var r = fila(M, o.id), est = (r && r.classList.contains('is-ok')) ? 'ok' : (((r && r.classList.contains('is-bad')) || M.malos['h_' + o.id]) ? 'bad' : '');
+      b.classList.toggle('sel', M.sel === o.id); b.classList.toggle('ok', est === 'ok'); b.classList.toggle('bad', est === 'bad');
+      if (b.parentNode !== dest) { var antes = b.getBoundingClientRect(); dest.appendChild(b); moverFicha(b, antes, 'deslizar'); }
+    });
+    Array.prototype.forEach.call(box.querySelectorAll('.mundo-aula-lugar'), function (l) { l.classList.toggle('ocupado', !!l.querySelector('.mundo-aula-obj')); });
+    var vacia = !objs.querySelector('.mundo-aula-obj'), band = box.querySelector('.mundo-aula-bandeja'); band.classList.toggle('vacia', vacia);
+    band.querySelector('.mundo-aula-rot').textContent = vacia ? (e.rotuloBandejaVacia || 'Todo tiene su lugar') : (e.rotuloBandeja || 'Todavía sin lugar');   // sin saltos: la bandeja no desaparece, cambia de mensaje
+    box.classList.toggle('eligiendo', !!M.sel);
+  }
   /* ANALIZADOR DE FRASES (2026-10-20, elegido por el Director): el mismo mundo de ficha (campos = funciones de la frase: sujeto, verbo, resto), pero el tablero es UNA LÍNEA que se arma con las palabras
      y, como un corrector de código, al probar marca DÓNDE deja de concordar (la palabra subrayada y una línea de aviso). Nunca dice la palabra correcta. La tabla oculta sigue siendo la fuente del estado.
      `def.avisos`: [{campo, si?:{campoX: valor}, texto}]; en `texto`, {campoX} se reemplaza por lo que el alumno armó en ese campo. */
@@ -6937,7 +7671,7 @@ var PDP_MUNDO = (function () {
   /* ¿Se puede escribir a mano en este tablero? Solo en las tablas visibles (no en arcos, línea, cuerdas ni zonas, que mueven fichas) y con movimiento normal. */
   function manoOk(M) {
     if (RM || typeof PDP_PIZARRA === 'undefined' || document.documentElement.getAttribute('data-escritura') === 'maquina') return false;
-    if (M.def.tipo === 'cuerdas' || M.def.tipo === 'analizador' || (M.def.escena && M.def.escena.vista === 'arcos')) return false;
+    if (M.def.tipo === 'cuerdas' || M.def.tipo === 'escena' || M.def.tipo === 'analizador' || (M.def.escena && M.def.escena.vista === 'arcos')) return false;
     return !(M.area.querySelector('.mundo-wrap.tiene-zonas') && document.documentElement.getAttribute('data-var-zonas-vista') !== 'tabla');
   }
   function vivo(M) {
@@ -6960,7 +7694,8 @@ var PDP_MUNDO = (function () {
     var v = r.querySelector('.mundo-val'); texto = String(texto); v.classList.remove('pizarra');
     var Mz = state.mundo; if (Mz && Mz.def.escena && Mz.def.escena.vista === 'arcos') { v.textContent = texto; sincronizarArcos(Mz); return sleep(440); }   // la tarjeta cae en su arco
     if (Mz && Mz.def.tipo === 'analizador') { v.textContent = texto; sincronizarLinea(Mz); return sleep(380); }   // la palabra entra en la línea y se analiza
-    if (Mz && Mz.def.tipo === 'cuerdas') { v.textContent = texto; sincronizarCuerdas(Mz); return sleep(560); }   // la cuerda se ilumina y pasa a la siguiente, despacio
+    if (Mz && Mz.def.tipo === 'cuerdas') { v.textContent = texto; sincronizarCuerdas(Mz); return sleep(560); }
+    if (Mz && Mz.def.tipo === 'escena') { v.textContent = texto; sincronizarEscena(Mz); return sleep(520); }   // cada objeto se marca en su lugar, de a uno   // la cuerda se ilumina y pasa a la siguiente, despacio
     var enZonas = !!(Mz && Mz.area.querySelector('.mundo-wrap.tiene-zonas') && document.documentElement.getAttribute('data-var-zonas-vista') !== 'tabla');
     if (enZonas) { v.textContent = texto; sincronizarZonas(Mz); return sleep(440); }   // la ficha camina a su lugar (la vista de zonas no escribe letra por letra)
     if (RM) { v.textContent = texto; return Promise.resolve(); }
@@ -6999,13 +7734,14 @@ var PDP_MUNDO = (function () {
     hilo.innerHTML = '';
     def.huecos.forEach(function (h, i) {
       if (i > vis) return;
-      var q = el('div', 'mundo-burbuja leo', '<small>' + esc(def.escena.receptor) + '</small>' + esc(h.pregunta)); hilo.appendChild(q); ultimo = q;
+      var q = el('div', 'mundo-burbuja leo', '<small>' + esc(h.quien || def.escena.receptor) + '</small>' + esc(h.pregunta)); hilo.appendChild(q); ultimo = q;
       var elegido = M.jugada[h.id];
       if (elegido) {
         var y = el('button', 'mundo-burbuja yo', '<small>' + esc(def.escena.hablante) + '</small>' + esc(pieza(M, elegido).texto)); y.type = 'button';
         y.setAttribute('aria-label', M.malos[h.id] ? 'Respuesta para corregir: tocala para cambiarla' : 'Cambiar esta respuesta'); if (M.malos[h.id]) y.classList.add('mal');
-        y.onclick = function () { if (M.corriendo || state.answered) return; delete M.jugada[h.id]; delete M.malos[h.id]; vivo(M); actualizar(); pintarHilo(M, true); };   // tocar una respuesta la deshace y vuelve a la pregunta
+        y.onclick = function () { if (M.corriendo || state.answered) return; delete M.jugada[h.id]; delete M.malos[h.id]; if (M.reac) delete M.reac[h.id]; vivo(M); actualizar(); pintarHilo(M, true); };   // tocar una respuesta la deshace y vuelve a la pregunta
         hilo.appendChild(y); ultimo = y;
+        if (M.reac && M.reac[h.id]) { var rq = el('div', 'mundo-burbuja leo reac', '<small>' + esc(M.reac[h.id].quien) + '</small>' + esc(M.reac[h.id].texto)); hilo.appendChild(rq); ultimo = rq; }   // lo que contestó el compañero al probar
       } else {
         var o = el('div', 'mundo-opciones'); o.dataset.h = h.id;
         h.opciones.forEach(function (pid) {
@@ -7027,6 +7763,7 @@ var PDP_MUNDO = (function () {
     marcarLetras(M);
     if (comun(M.def)) Array.prototype.forEach.call(M.area.querySelectorAll('.word-bank .word-chip'), function (c) { var on = M.picks.indexOf(c.dataset.pid) > -1; c.classList.toggle('pick', on); c.classList.toggle('mal', on && !!M.malos[c.dataset.pid]); c.setAttribute('aria-pressed', String(on)); });
     else if (M.def.tipo === 'cuerdas') sincronizarCuerdas(M);
+    else if (M.def.tipo === 'escena') sincronizarEscena(M);
     else pintarHilo(M, false);
   }
   /* Hueco libre (2026-10-21, hallazgo del Director en el teléfono; corregido 2026-10-31): con más frases que huecos y todos ocupados, el Motor solo libera un hueco cuando NO hay duda de cuál:
@@ -7106,6 +7843,7 @@ var PDP_MUNDO = (function () {
     if (def.tipo === 'zonas' && def.escena.vista === 'arcos') { wrap.classList.add('tiene-arcos'); if ((def.escena.zonas || []).length > 2) wrap.classList.add('arcos3'); if (def.escena.cuenta) wrap.appendChild(el('div', 'mundo-cuenta', esc(def.escena.cuenta))); wrap.appendChild(construirArcos(M)); }
     else if (def.tipo === 'zonas') { wrap.classList.add('tiene-zonas'); wrap.appendChild(construirZonas(M)); }
     if (def.tipo === 'cuerdas') { wrap.classList.add('tiene-cuerdas'); wrap.appendChild(construirCuerdas(M)); }
+    if (def.tipo === 'escena') { wrap.classList.add('tiene-escena'); wrap.appendChild(construirEscena(M, ex.avatar)); }
     if (def.tipo === 'analizador') { wrap.classList.add('tiene-linea'); var lin = construirLinea(M); wrap.appendChild(lin); lin.classList.add('ad-bl'); if (typeof APP_CONFIG !== 'undefined' && APP_CONFIG.fondoEjercicios) ['tl', 'tr', 'bl', 'br'].forEach(function (k) { var f = document.createElement('i'); f.className = 'pc-esq pc-esq-' + k; f.setAttribute('aria-hidden', 'true'); lin.appendChild(f); }); }   // mismo marco delicado que los bloques de las pantallas con el profe (.ad-bl)
     if (comun(def)) {
       var bank = el('div', 'word-bank'); if (conLetras) M.letras = {};
@@ -7118,7 +7856,7 @@ var PDP_MUNDO = (function () {
         bank.appendChild(b);
       });
       wrap.appendChild(bank); if (def.tipo === 'analizador') { bank.classList.add('ad-bl'); if (typeof APP_CONFIG !== 'undefined' && APP_CONFIG.fondoEjercicios) ['tl', 'tr', 'bl', 'br'].forEach(function (k) { var f = document.createElement('i'); f.className = 'pc-esq pc-esq-' + k; f.setAttribute('aria-hidden', 'true'); bank.appendChild(f); }); }
-    } else if (def.tipo !== 'cuerdas') wrap.appendChild(el('div', 'mundo-hilo'));
+    } else if (def.tipo !== 'cuerdas' && def.tipo !== 'escena') wrap.appendChild(el('div', 'mundo-hilo'));
     if (esc_.retratoImg) {   // retrato del que habla junto a su mensaje (2026-10-25, pieza del Director «para las que llevan imagen arriba»): el globo pasa a vivir dentro de la fila del retrato; en el diálogo la fila va ARRIBA de la libreta, en la agenda queda donde estaba el globo
       var dz = wrap.querySelector(':scope > .mundo-dice');
       if (dz) {
@@ -7172,7 +7910,8 @@ var PDP_MUNDO = (function () {
           marcar(M, s.campo, s.estado === 'ok');
           texto = s.reaccion || (def.reacciones && def.reacciones[s.estado === 'sobra' ? 'sobra' : (s.estado === 'ok' ? 'ok' : 'distinto')]) || null;
         }
-        if (texto) { dice(M, esc_.receptor, texto); await sleep(RM ? 0 : 420); } else await sleep(RM ? 0 : 140);
+        if (texto && esc_.reaccionEnChat && !comun(def) && s.hueco) { var pzc = s.pieza ? pieza(M, s.pieza) : null; M.reac = M.reac || {}; M.reac[s.hueco] = { quien: (pzc && pzc.quien) || esc_.receptor, texto: texto }; pintarHilo(M, true); await sleep(RM ? 0 : 520); }   // escena.reaccionEnChat (2026-11-09): cada compañero contesta en el chat, con su nombre, debajo del pedido
+        else if (texto) { var pz_ = s.pieza ? pieza(M, s.pieza) : null; dice(M, (pz_ && pz_.quien) || esc_.receptor, texto); await sleep(RM ? 0 : 420); } else await sleep(RM ? 0 : 140);
       }
       res.diferencias.faltan.forEach(function (id) { var r = fila(M, id); r.classList.add('is-miss'); r.querySelector('.mundo-mark').textContent = '?'; });
     }
@@ -7189,7 +7928,7 @@ var PDP_MUNDO = (function () {
     M.corriendo = false;
     historia[String(M.ex.id)] = { picks: M.picks.slice(), jugada: JSON.parse(JSON.stringify(M.jugada)), logrado: res.logrado };
     handleConfirm();
-    if (!comun(def) && def.tipo !== 'cuerdas') setTimeout(function () { abajo(M); }, RM ? 30 : 450);   // la hoja de resultado sube desde abajo: la conversación queda ARRIBA de la hoja, no detrás (nota del teléfono, 2026-10-19)
+    if (!comun(def) && def.tipo !== 'cuerdas' && def.tipo !== 'escena') setTimeout(function () { abajo(M); }, RM ? 30 : 450);   // la hoja de resultado sube desde abajo: la conversación queda ARRIBA de la hoja, no detrás (nota del teléfono, 2026-10-19)
   }
   /* lleva el final de la conversación hasta el borde de abajo del contenido (el cuerpo del ejercicio ya reserva el alto de la hoja de resultado) */
   function abajo(M) {
@@ -7205,6 +7944,8 @@ var PDP_MUNDO = (function () {
   async function jugarDemo(M, jugada) {
     for (var i = 0; i < M.def.huecos.length; i++) {
       var pid = jugada[M.def.huecos[i].id];
+      if (M.def.tipo === 'escena' && M.def.aula.modo === 'marcar') { var pm = String(pid).split('__'), mk_ = M.area.querySelector('.mundo-aula-marca[data-id="' + pm[0] + '"]'); if (mk_ && mk_.classList.contains('marcado') !== (pm[1] === M.def.aula.marcado.id)) { mk_.click(); await pausa(520); } continue; }
+      if (M.def.tipo === 'escena') { var pe = String(pid).split('__'), ob = M.area.querySelector('.mundo-aula-obj[data-id="' + pe[0] + '"]'), lu = M.area.querySelector('.mundo-aula-lugar[data-id="' + pe[1] + '"]') || M.area.querySelector('.mundo-aula-bandeja.es-lugar[data-id="' + pe[1] + '"] .mundo-aula-rot'); if (ob && lu) { ob.click(); await pausa(380); lu.click(); await pausa(620); } continue; }
       if (M.def.tipo === 'cuerdas') { var ps = String(pid).split('__'), li = M.area.querySelector('.mundo-cuerda-it.izq[data-id="' + ps[0] + '"]'), dd = M.area.querySelector('.mundo-cuerda-it.der[data-id="' + ps[1] + '"]'); if (li && dd) { li.click(); await pausa(380); dd.click(); await pausa(620); } continue; }
       var b = comun(M.def) ? M.area.querySelector('.word-chip[data-pid="' + pid + '"]') : M.area.querySelector('.mundo-opciones .option-btn[data-pid="' + pid + '"]');
       if (!b) { b = null; continue; }
@@ -7213,6 +7954,7 @@ var PDP_MUNDO = (function () {
     await pausa(450);
   }
   async function vaciarDemo(M) {
+    if (M.def.tipo === 'escena') { M.jugada = {}; M.malos = {}; M.sel = null; iniciarBandeja(M); vivo(M); actualizar(); sincronizarEscena(M); return; }
     if (M.def.tipo === 'cuerdas') { var u = M.area.querySelectorAll('.mundo-cuerda-it.izq.unido'); for (var q = 0; q < u.length; q++) { u[q].click(); await pausa(160); } M.sel = null; sincronizarCuerdas(M); return; }
     if (comun(M.def)) { var s = M.area.querySelectorAll('.word-bank .word-chip.pick'); for (var i = 0; i < s.length; i++) { s[i].click(); await pausa(120); } }
     else { var y; while ((y = M.area.querySelectorAll('.mundo-burbuja.yo')).length) { y[y.length - 1].click(); await pausa(120); } }
@@ -10852,9 +11594,11 @@ function renderLectura(ex, area){
     Promise.all(anims.map(a=>a.finished)).catch(()=>{}).then(()=>{ if(viejo.parentNode) viejo.remove(); nuevo.classList.remove('lec-entra'); escena.style.height=''; escena.style.overflow=''; escena.style.overflowClipMargin=''; animando=false; });
     return true;
   }
-  function avanzar(dir){ if(animando) return; const n=pi+dir; if(n<0||n>=P.length){ rebote(dir); return; } ocultarPista(true); irA(n,dir); }
+  // 2026-11-10 (pedido del Director): en la última página, deslizar hacia adelante (o la flecha del teclado) termina la lectura y pasa a lo que sigue (p. ej. el momento con el profe), igual que el tilde.
+  // Antes se frenaba con un rebote. Hacia atrás en la primera página sigue el rebote. El momento con el profe no se saltea deslizando: eso no cambia.
+  function avanzar(dir){ if(animando) return; const n=pi+dir; if(n>=P.length&&dir>0){ ocultarPista(true); terminar(); return; } if(n<0){ rebote(dir); return; } ocultarPista(true); irA(n,dir); }
   ant.onclick=()=>avanzar(-1);
-  sig.onclick=()=>{ if(pi===P.length-1) terminar(); else avanzar(1); };   // en la última página la flecha es un tilde y termina; deslizar nunca termina
+  sig.onclick=()=>{ if(pi===P.length-1) terminar(); else avanzar(1); };   // en la última página la flecha es un tilde y termina; deslizar también
 
   // gestos: el desplazamiento horizontal pasa la página; el vertical sigue siendo scroll (touch-action:pan-y). Mismo umbral y dominancia que el swipe del Motor.
   let x0=null, y0=null, t0=0, horiz=null;
@@ -13334,6 +14078,8 @@ function checkDiagnosticSkip() {
   return true;
 }
 function goToNextExercise() {
+  try { PdPAtelier.alAvanzar(); } catch (_) {}   // skin Atelier (2026-11-05): la hoja se arranca de las anillas (solo se ve encima; no demora el avance)
+  try { if (PdPHoja.interceptarAvance()) return; } catch (_) {}   // pantalla «hoja que se dibuja» (2026-11-05): la hoja se arruga y recién después pasa al siguiente (vuelve a llamar acá)
   if (state._pruebaTour && pdpModoPrueba()) { pdpTourMover(1); return; } // recorrido por tipo del 🧪 (2026-10-29): «siguiente» es el siguiente del mismo tipo
   // Evidencia de runtime (T-002, CKPT-005) — antes de tocar cualquier
   // estado de navegación, registrar que este ejercicio se completó. Guard
@@ -13607,6 +14353,8 @@ function goToNextExercise() {
       exercise: nextEx,
       payload: { module_id: state.currentModule, level_id: state.currentNivel || null }
     });
+    /* Cartel de entrada opcional por Unidad (2026-11-05, Director, MAT-27: «sacá el cartel de Skill Check de por medio»): con APP_CONFIG.skillCheckAviso===false se entra directo al ejercicio. El evento skill_check_started se emite igual (arriba) y el Skill Check sigue siendo de un intento y sin ayuda. */
+    try{ if(typeof APP_CONFIG!=='undefined' && APP_CONFIG.skillCheckAviso===false){ proceed(); return; } }catch(_){}
     openSkillCheckTransition(proceed);
     return;
   }
@@ -13617,11 +14365,35 @@ function goToNextExercise() {
 // que esta función interrumpió. Reusa #skillcheck-transition-overlay
 // (mismas clases que #break-suggest-overlay, ver CSS).
 function openSkillCheckTransition(onContinue){
-  document.getElementById('skillcheck-transition-overlay').classList.add('visible');
-  document.getElementById('skillcheck-transition-continue').onclick = () => {
-    document.getElementById('skillcheck-transition-overlay').classList.remove('visible');
-    onContinue();
+  const ov = document.getElementById('skillcheck-transition-overlay');
+  ov.classList.add('visible');
+  const empezar = () => { ov.classList.remove('visible'); onContinue(); };
+  document.getElementById('skillcheck-transition-continue').onclick = empezar;
+  pdpSkDeslizarMontar(ov, empezar);
+}
+/* Cartel de entrada del Skill Check con DOS deslizamientos a la izquierda (2026-11-10, pedido del Director; solo con la opción 🧪 «Deslizar a la izquierda → Comprobar» en el modo personal):
+   el primero «arma» (la carta se mueve un poco y el aviso pasa a «Una vez más»), el segundo comienza. Si pasan 6 s sin el segundo, vuelve a pedir los dos. El botón de la carta sigue andando.
+   No cambia lo que se mide: el evento skill_check_started se emite al aparecer el cartel, no al cerrarlo. Sin la opción, el cartel es como siempre (solo el botón). */
+function pdpSkDeslizarMontar(ov, empezar) {
+  let pill = ov.querySelector('.sk-desliz');
+  clearTimeout(ov._skT); ov._skArmado = false; ov._skGo = null;
+  if (!pdpDeslizarActivo()) { if (pill) pill.remove(); return; }
+  if (!pill) { pill = document.createElement('div'); pill.className = 'sk-desliz'; pill.setAttribute('role', 'status'); ov.appendChild(pill); }
+  const texto = (armado) => { pill.className = 'sk-desliz' + (armado ? ' listo' : ''); pill.textContent = armado ? '← Una vez más para comenzar' : '← Deslizá dos veces para comenzar'; };
+  texto(false);
+  ov._skGo = () => {
+    if (!ov._skArmado) {
+      ov._skArmado = true; texto(true);
+      try { const card = ov.querySelector('.break-suggest-card'); if (card && card.animate && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) card.animate([{ translate: '0 0' }, { translate: '-14px 0' }, { translate: '0 0' }], { duration: 240, easing: 'ease-out' }); } catch (_) {}
+      ov._skT = setTimeout(() => { ov._skArmado = false; texto(false); }, 6000);
+    } else { clearTimeout(ov._skT); ov._skArmado = false; empezar(); }
   };
+  if (ov._skGestos) return;
+  ov._skGestos = true;
+  let g = null;
+  ov.addEventListener('pointerdown', e => { if (!ov._skGo || (e.pointerType === 'mouse' && e.button !== 0)) return; g = { x: e.clientX, y: e.clientY }; }, { passive: true });
+  ov.addEventListener('pointermove', e => { if (!g || !ov._skGo) return; const dx = e.clientX - g.x, dy = e.clientY - g.y; if (dx < -60 && Math.abs(dx) > Math.abs(dy) * 1.5) { g = null; ov._skGo(); } }, { passive: true });
+  ['pointerup', 'pointercancel'].forEach(t => ov.addEventListener(t, () => { g = null; }, { passive: true }));
 }
 // Skill Check — cartel de resultado. "Ver explicación y practicar" muestra
 // la explicación del último ejercicio del Skill Check (si tiene
@@ -13933,6 +14705,54 @@ function restoreExerciseFromSnapshot(ex, snap) {
   }
 }
 
+/* Deslizar para comprobar (2026-11-10, pedido del Director; opción del 🧪 «Deslizar a la izquierda» → «Comprobar»): en el MODO PERSONAL, deslizar a la izquierda es
+   apretar el botón principal: comprueba y, si ya está corregido, continúa (lo mismo que el botón, que sigue estando). Sin respuesta todavía: rebote y aviso.
+   No en Skill Check ni Level Check (ahí queda el botón), ni en un mundo (tiene su «Probalo»), ni en una lectura (tiene su propio deslizar), ni en un momento con el profe.
+   En clase, o con «Saltar ejercicio», rige lo de antes (en el modo prueba, deslizar salta). Fuera del 🧪 rige el valor por defecto («Saltar»): los chicos no lo ven todavía. */
+/* ¿Rige la opción 🧪 «Deslizar a la izquierda → Comprobar»? Solo en el modo prueba (🧪) y en el modo personal; fuera de eso, nunca. */
+function pdpDeslizarActivo() {
+  try {
+    if (pdpVariacion('deslizar-izq') !== 'comprobar') return false;
+    return !!window.__pdpModoPersonal || (typeof APP_CONFIG !== 'undefined' && APP_CONFIG.formatoDeUso !== 'clase');
+  } catch (_) { return false; }
+}
+function pdpDeslizarComprueba() {
+  try {
+    if (!pdpDeslizarActivo()) return false;
+    const ex = getActiveExercises(state.currentModule)[state.currentExerciseIndex]; if (!ex) return false;
+    if (ex.role === 'skill_check' || isEvalModule(state.currentModule) || ['mundo', 'lectura', 'profe'].includes(ex.kind)) return false;
+    return true;
+  } catch (_) { return false; }
+}
+function pdpDeslizarAviso(texto, clase) {
+  let a = document.getElementById('pdp-desliz-aviso');
+  if (!a) { a = document.createElement('div'); a.id = 'pdp-desliz-aviso'; a.setAttribute('role', 'status'); document.body.appendChild(a); }
+  a.className = clase || ''; a.textContent = texto; clearTimeout(a._t);
+  requestAnimationFrame(() => a.classList.add('on'));
+  a._t = setTimeout(() => a.classList.remove('on'), clase === 'pista' ? 6000 : 2200);
+}
+function pdpDeslizarComprobar() {
+  if (state.currentScreen !== 'screen-exercise' || state._exSwipeAnimating) return;
+  const b = document.getElementById('confirm-btn');
+  if (!b || b.disabled || b.offsetParent === null) {
+    const body = document.getElementById('exercise-body');
+    try { if (body && body.animate && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) body.animate([{ transform: 'translateX(0)' }, { transform: 'translateX(-14px)' }, { transform: 'translateX(0)' }], { duration: 240, easing: 'ease-out' }); } catch (_) {}
+    pdpDeslizarAviso('Primero elegí una respuesta.', 'aviso');
+    return;
+  }
+  try { localStorage.setItem('pdp_pista_desliz_comp', '1'); } catch (_) {}
+  const a = document.getElementById('pdp-desliz-aviso'); if (a) a.classList.remove('on');
+  handleConfirm();
+}
+function pdpDeslizarIzquierda() {
+  if (pdpDeslizarComprueba()) { pdpDeslizarComprobar(); return; }
+  if (pdpModoPrueba()) pdpPruebaSiguiente();
+}
+/* la primera vez, una pista: «Deslizá para comprobar» (hasta que se usa) */
+function pdpPistaDeslizar() {
+  try { if (!pdpDeslizarComprueba() || localStorage.getItem('pdp_pista_desliz_comp') === '1') return; } catch (_) { return; }
+  pdpDeslizarAviso('← Deslizá para comprobar', 'pista');
+}
 /* Modo prueba (2026-10-19): deslizar a la izquierda pasa al ejercicio siguiente, aunque no esté contestado (reemplaza a «Saltar»). */
 function pdpPruebaSiguiente() {
   if (state.currentScreen !== 'screen-exercise' || state._exSwipeAnimating) return;
@@ -14095,7 +14915,7 @@ function initExerciseSwipeBack() {
     if (Math.abs(dx) > THRESHOLD_PX && Math.abs(dx) > Math.abs(dy) * DOMINANCE) {
       tracking = false; // ya decidido — un solo disparo por gesto
       if (dx > 0) swipeBackToPreviousExercise(); // derecha: vuelve al ejercicio anterior
-      else if (pdpModoPrueba()) pdpPruebaSiguiente(); // izquierda: SOLO en modo prueba pasa al siguiente (2026-10-19); para los chicos se ignora a propósito
+      else pdpDeslizarIzquierda(); // izquierda: en el modo prueba pasa al siguiente (2026-10-19); con la opción «Comprobar» del 🧪, en el modo personal comprueba (2026-11-10); para los chicos se ignora
     }
   }, { passive: true });
 
@@ -17998,6 +18818,12 @@ function hideSplash(){
   splash.classList.add('hide');
   setTimeout(()=>splash.remove(), 300);
 }
+/* Llegada directa al roadmap (?ir=mapa): el splash tapa hasta que el roadmap esté EN PANTALLA (si antes hay que elegir el modo, esa pregunta se dibuja encima del splash, nunca encima de Inicio).
+   Tope de seguridad: si el roadmap no llega en 15 s, se saca igual para no dejar la app tapada. */
+function hideSplashAlMapa(){
+  if(state.currentScreen==='screen-map'){ hideSplash(); return; }
+  const t0=Date.now(), iv=setInterval(()=>{ if(state.currentScreen==='screen-map'||Date.now()-t0>15000){ clearInterval(iv); hideSplash(); } },80);
+}
 /* ═══ Perfiles (2026-10-08, CONTRATO_PERFILES_v0.1): varios por teléfono, sin contraseña; el avance va por perfil y por Unidad ═══
    Capa: Motor Base. Todo vive en este teléfono (localStorage); nada se envía. El perfil activo vive en `__pdpPerfil` (lo lee _key()). */
 const PdPPerfiles=(function(){
@@ -18209,7 +19035,8 @@ function init(){
   if(!_preguntarModo) pdpAplicarModoUso(); // modo personal o clase (2026-10-18): se aplica a los datos antes de dibujar nada
   const _loadStart = performance.now();
   const _splashMinDelay = window.__pdpSplashMin = new Promise(resolve => setTimeout(resolve, _irMapa ? 0 : 6000)); // 3000 → 6000 (2026-10-11, pedido del Director: imagen nueva y «unos segundos» más)
-  if(_irMapa){ const sp=document.getElementById('app-splash'); if(sp) sp.classList.add('hide'); }
+  /* 2026-11-08 (Director, video en el teléfono): con ?ir=mapa el splash se escondía de entrada y, hasta que el roadmap estaba listo (librerías → perfil → avance → dibujar), se veía ~2 s la pantalla de INICIO vacía
+     («¡Hola!», «Continuar», «Tu progreso» sin nada) encendiéndose, que no deja tocar nada. Ahora el splash (sin los 6 s mínimos) queda tapando hasta que el roadmap está en pantalla; ver hideSplashAlMapa(). */
   // Pivote dorado/navy, Parte B' (2026-07-21): Playfair Display + Inter.
   // NO pasa por PDP_LIBS/hasCapability() — ese registro es para que un
   // RENDERER decida comportamiento según si una capacidad opcional está
@@ -18272,7 +19099,7 @@ function init(){
     PdPTelemetry.contentLoadOk();
     PdPTelemetry.loadTime({ durationMs: Math.round(performance.now() - _loadStart) });
     PdPContentUpdate.offerUpdateIfAvailable(APP_CONFIG.version);
-    _splashMinDelay.then(hideSplash);
+    if(_irMapa) hideSplashAlMapa(); else _splashMinDelay.then(hideSplash);
   })));
 }
 init();

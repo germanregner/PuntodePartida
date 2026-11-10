@@ -2,15 +2,15 @@
 
 const _ASSET_DEDUP_0 = "../pdp-assets/09c6ff6fbf91136cff481d96749a6bf7.png";
 
-/* DATA ZONE generado por Pipeline v0 — 2026-11-04T13:24:37.957Z
+/* DATA ZONE generado por Pipeline v0 — 2026-11-10T11:44:06.287Z
    Proyecto: projects/ingles/en-lectura-casos-01
    Motor fuente: template-standard-v3.html
    NO EDITAR — artefacto generado. Toda modificación vuelve a la Unidad
    (Principio de generación, DOCTRINA_CONGELADA.md §4). */
 
 const PDP_BUILD = {
-  "fecha": "2026-11-04 10:24",
-  "id": "4c70fd"
+  "fecha": "2026-11-10 08:44",
+  "id": "dbe056"
 };
 
 const APP_CONFIG = {
@@ -18,6 +18,7 @@ const APP_CONFIG = {
   "materia": "Inglés · lectura guiada (prueba)",
   "saludo": "¡Hola! Hoy leemos historias que pasaron de verdad. Tocá una oración para ver cómo se dice en español.",
   "version": "0.1",
+  "entrada": "no",
   "colorScheme": "language",
   "stickers": {
     "ok": [
