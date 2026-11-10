@@ -75,15 +75,15 @@ const _ASSET_DEDUP_71 = "../pdp-assets/f449cae460224a12090fdc89d818a562.webp";
 const _ASSET_DEDUP_72 = "../pdp-assets/a518109093173f968c798300016f2218.webp";
 const _ASSET_DEDUP_73 = "../pdp-assets/7549f71e8b4f3aec1fb381ba6ca234c4.jpg";
 
-/* DATA ZONE generado por Pipeline v0 — 2026-11-09T11:02:31.907Z
+/* DATA ZONE generado por Pipeline v0 — 2026-11-10T04:25:33.673Z
    Proyecto: projects/ingles/en-a2-u01-back-to-basics
    Motor fuente: template-standard-v3.html
    NO EDITAR — artefacto generado. Toda modificación vuelve a la Unidad
    (Principio de generación, DOCTRINA_CONGELADA.md §4). */
 
 const PDP_BUILD = {
-  "fecha": "2026-11-09 08:02",
-  "id": "5e703c"
+  "fecha": "2026-11-10 01:25",
+  "id": "e45e5b"
 };
 
 const APP_CONFIG = {
