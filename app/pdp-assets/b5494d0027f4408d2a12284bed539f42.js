@@ -17,79 +17,91 @@ const _ASSET_DEDUP_13 = "../pdp-assets/ff293de353aa2cb27d713aac3d2e4963.mp3";
 const _ASSET_DEDUP_14 = "../pdp-assets/2b443b927e9718368f947c5c5c551dcb.jpg";
 const _ASSET_DEDUP_15 = "../pdp-assets/3a8f9cbf5f62e3c6c3b94c3a8e39ff31.jpg";
 const _ASSET_DEDUP_16 = "../pdp-assets/9388ac5fdfa046967ce34bebb9410efc.mp3";
-const _ASSET_DEDUP_17 = "../pdp-assets/8a8ee84777c571d554e54b1b385bf93c.jpg";
-const _ASSET_DEDUP_18 = "../pdp-assets/bae725f8b85125de4db74493b46f6dfb.jpg";
-const _ASSET_DEDUP_19 = "../pdp-assets/e4e844d2c7ac6f6694a7c3b0434d2c08.jpg";
-const _ASSET_DEDUP_20 = "../pdp-assets/4dd735f5a0a1421ced98e9408100a0c4.mp3";
-const _ASSET_DEDUP_21 = "../pdp-assets/69b44ce2395a6b043870cde253706a0f.mp3";
-const _ASSET_DEDUP_22 = "../pdp-assets/c104c27c128b7c9ae87e6e85226f5011.jpg";
-const _ASSET_DEDUP_23 = "../pdp-assets/3502e699bf42c99e5d72149af77f89b1.mp3";
-const _ASSET_DEDUP_24 = "../pdp-assets/e165ee6badfc54b7135f497199993d59.mp3";
-const _ASSET_DEDUP_25 = "../pdp-assets/a0dcc4c3e602c113fb66b3a2e4d01e62.jpg";
-const _ASSET_DEDUP_26 = "../pdp-assets/31d9f7d884288d4efc5e492dcdceafc6.jpg";
-const _ASSET_DEDUP_27 = "../pdp-assets/bcb766452946fda2da90682effdd3836.mp3";
-const _ASSET_DEDUP_28 = "../pdp-assets/3a2414fc163b51088e1935a382132626.mp3";
-const _ASSET_DEDUP_29 = "../pdp-assets/3554769775cb9270b74e21f9915af956.jpg";
-const _ASSET_DEDUP_30 = "../pdp-assets/63b6b113692957f8c08b35a27f0789a3.jpg";
-const _ASSET_DEDUP_31 = "../pdp-assets/2db63e6203619da6795ea8840c9b8ac6.jpg";
-const _ASSET_DEDUP_32 = "../pdp-assets/797bc18265d1f4254189bae3a41b1f4e.mp3";
-const _ASSET_DEDUP_33 = "../pdp-assets/137f591e5c79959b9b2960f86ee020ca.mp3";
-const _ASSET_DEDUP_34 = "../pdp-assets/45dda542bc6bf956bc07abd34c6deb4b.jpg";
-const _ASSET_DEDUP_35 = "../pdp-assets/7b2ffaf1dade552ee6ad05ba3b6d010b.jpg";
-const _ASSET_DEDUP_36 = "../pdp-assets/daf764ff6cfd2b786e49e6d3c39aeb0c.mp3";
-const _ASSET_DEDUP_37 = "../pdp-assets/5ab746ed2c14866231aa24c828885751.mp3";
-const _ASSET_DEDUP_38 = "../pdp-assets/aced12f50311b37674973682eea2d6e9.jpg";
-const _ASSET_DEDUP_39 = "../pdp-assets/8e6364fe6c7b113b9cc430f638952f74.mp3";
-const _ASSET_DEDUP_40 = "../pdp-assets/fc4e4333b1d9e63ea674cc7d4c2390c3.mp3";
-const _ASSET_DEDUP_41 = "../pdp-assets/d1fe314f7809e20e8a8013f980877c92.webp";
-const _ASSET_DEDUP_42 = "../pdp-assets/044eccc2ab3d6fc9cdf51a0453c00806.webp";
-const _ASSET_DEDUP_43 = "../pdp-assets/066cfe8777c2af704f7e03f59855067b.webp";
-const _ASSET_DEDUP_44 = "../pdp-assets/0d27540d9592e8a982928e10ffe4b9b7.webp";
-const _ASSET_DEDUP_45 = "../pdp-assets/814dcd328e6ec2ad87d678d6d2ece178.webp";
-const _ASSET_DEDUP_46 = "../pdp-assets/2874c3075f5e2c8974043c94e883ed04.webp";
-const _ASSET_DEDUP_47 = "../pdp-assets/8712ed1f73286db20d7eed7e7fbd4cbe.jpg";
-const _ASSET_DEDUP_48 = "../pdp-assets/7b3c4e1cce59df92086346b5d182c019.jpg";
-const _ASSET_DEDUP_49 = "../pdp-assets/ac7e9d2829a84effc209bd65cad73274.jpg";
-const _ASSET_DEDUP_50 = "../pdp-assets/a97077e3a95a5240bfe02864856a2bd4.mp3";
-const _ASSET_DEDUP_51 = "../pdp-assets/4fc2b7974d32c4c7a11e0aa45a7f3b97.mp3";
-const _ASSET_DEDUP_52 = "../pdp-assets/9a81bbd1d2a594bb9775d3ffda2ded7c.jpg";
-const _ASSET_DEDUP_53 = "../pdp-assets/b91840022df5d37694783e5a55bb3b94.jpg";
-const _ASSET_DEDUP_54 = "../pdp-assets/859fcfc8ef3f05c70c75af70b7beb07a.jpg";
-const _ASSET_DEDUP_55 = "../pdp-assets/863e8a1d49006a375ed232e411106859.jpg";
-const _ASSET_DEDUP_56 = "../pdp-assets/f57c39e404e3338132623826c8e97048.jpg";
-const _ASSET_DEDUP_57 = "../pdp-assets/16c746d238f244fb8b559410da1258bc.jpg";
-const _ASSET_DEDUP_58 = "../pdp-assets/cf7eb1754c02504454d0e404257b17b2.jpg";
-const _ASSET_DEDUP_59 = "../pdp-assets/74f244ef7964a2fd55c6bec97ffd9e1e.jpg";
-const _ASSET_DEDUP_60 = "../pdp-assets/296dc3cf272e9054e172e565f359815c.jpg";
-const _ASSET_DEDUP_61 = "../pdp-assets/3180c3ebc9e0fc5cf3f71971e344c32e.jpg";
-const _ASSET_DEDUP_62 = "../pdp-assets/53170dfe0a51ddf9c824636ee22c11c1.jpg";
-const _ASSET_DEDUP_63 = "../pdp-assets/5defb74fe5dd5793160b285f28e8f17f.jpg";
-const _ASSET_DEDUP_64 = "../pdp-assets/ab0c112c79b12d2d5520ea5ddd8098db.jpg";
-const _ASSET_DEDUP_65 = "../pdp-assets/4398fce5c68c813d9bae2b55f89a5258.jpg";
-const _ASSET_DEDUP_66 = "../pdp-assets/a2f9fecb8550b9c756137f2c0da9907b.jpg";
-const _ASSET_DEDUP_67 = "../pdp-assets/1dd3d34dac96ec092537c99df02a4890.jpg";
-const _ASSET_DEDUP_68 = "../pdp-assets/bcd3f2520d670bfe5e12ff1ac6da640d.webp";
-const _ASSET_DEDUP_69 = "../pdp-assets/6bf7452d99e6fbc0cdb23bcda9680be7.webp";
-const _ASSET_DEDUP_70 = "../pdp-assets/4b6914c10a55a6d61cb35b9c7c98e6f6.webp";
-const _ASSET_DEDUP_71 = "../pdp-assets/96a460c63c283f0914bfcd3c4718181e.webp";
-const _ASSET_DEDUP_72 = "../pdp-assets/df45179598531081dc634fecd4b3f50c.webp";
-const _ASSET_DEDUP_73 = "../pdp-assets/c67588194d77507556e953be4779dd37.webp";
-const _ASSET_DEDUP_74 = "../pdp-assets/f51a71a845b6ce85870707a6f585c0e2.jpg";
-const _ASSET_DEDUP_75 = "../pdp-assets/a780676200aad6fe97cae7dffef2585d.jpg";
-const _ASSET_DEDUP_76 = "../pdp-assets/489a8f368c855a3a5f15526ab7e8d4ac.jpg";
-const _ASSET_DEDUP_77 = "../pdp-assets/d78a6b0479a1450afcf0f14f1da3f405.jpg";
-const _ASSET_DEDUP_78 = "../pdp-assets/12c63d50e57c03494669f0c472e41783.jpg";
-const _ASSET_DEDUP_79 = "../pdp-assets/3c5d3ab03090707b7818ac7b8e2f8263.jpg";
+const _ASSET_DEDUP_17 = "../pdp-assets/524379b172147f9caf52321c4a9ea623.jpg";
+const _ASSET_DEDUP_18 = "../pdp-assets/8a8ee84777c571d554e54b1b385bf93c.jpg";
+const _ASSET_DEDUP_19 = "../pdp-assets/bae725f8b85125de4db74493b46f6dfb.jpg";
+const _ASSET_DEDUP_20 = "../pdp-assets/e4e844d2c7ac6f6694a7c3b0434d2c08.jpg";
+const _ASSET_DEDUP_21 = "../pdp-assets/4dd735f5a0a1421ced98e9408100a0c4.mp3";
+const _ASSET_DEDUP_22 = "../pdp-assets/69b44ce2395a6b043870cde253706a0f.mp3";
+const _ASSET_DEDUP_23 = "../pdp-assets/c104c27c128b7c9ae87e6e85226f5011.jpg";
+const _ASSET_DEDUP_24 = "../pdp-assets/3502e699bf42c99e5d72149af77f89b1.mp3";
+const _ASSET_DEDUP_25 = "../pdp-assets/e165ee6badfc54b7135f497199993d59.mp3";
+const _ASSET_DEDUP_26 = "../pdp-assets/e2728d1daff8aee28a952d688ab595fe.jpg";
+const _ASSET_DEDUP_27 = "../pdp-assets/a0dcc4c3e602c113fb66b3a2e4d01e62.jpg";
+const _ASSET_DEDUP_28 = "../pdp-assets/31d9f7d884288d4efc5e492dcdceafc6.jpg";
+const _ASSET_DEDUP_29 = "../pdp-assets/bcb766452946fda2da90682effdd3836.mp3";
+const _ASSET_DEDUP_30 = "../pdp-assets/3a2414fc163b51088e1935a382132626.mp3";
+const _ASSET_DEDUP_31 = "../pdp-assets/3554769775cb9270b74e21f9915af956.jpg";
+const _ASSET_DEDUP_32 = "../pdp-assets/956ce52422de5254c274fb836a3cd2fe.jpg";
+const _ASSET_DEDUP_33 = "../pdp-assets/63b6b113692957f8c08b35a27f0789a3.jpg";
+const _ASSET_DEDUP_34 = "../pdp-assets/2db63e6203619da6795ea8840c9b8ac6.jpg";
+const _ASSET_DEDUP_35 = "../pdp-assets/797bc18265d1f4254189bae3a41b1f4e.mp3";
+const _ASSET_DEDUP_36 = "../pdp-assets/137f591e5c79959b9b2960f86ee020ca.mp3";
+const _ASSET_DEDUP_37 = "../pdp-assets/6a4177fed3d4c99ba8373303d1327295.png";
+const _ASSET_DEDUP_38 = "../pdp-assets/8848b4b6c14a97cb8f79aacad1ab629d.png";
+const _ASSET_DEDUP_39 = "../pdp-assets/1b33bd58d50e028a76ba5231d733f127.jpg";
+const _ASSET_DEDUP_40 = "../pdp-assets/45dda542bc6bf956bc07abd34c6deb4b.jpg";
+const _ASSET_DEDUP_41 = "../pdp-assets/7b2ffaf1dade552ee6ad05ba3b6d010b.jpg";
+const _ASSET_DEDUP_42 = "../pdp-assets/daf764ff6cfd2b786e49e6d3c39aeb0c.mp3";
+const _ASSET_DEDUP_43 = "../pdp-assets/5ab746ed2c14866231aa24c828885751.mp3";
+const _ASSET_DEDUP_44 = "../pdp-assets/aced12f50311b37674973682eea2d6e9.jpg";
+const _ASSET_DEDUP_45 = "../pdp-assets/8e6364fe6c7b113b9cc430f638952f74.mp3";
+const _ASSET_DEDUP_46 = "../pdp-assets/fc4e4333b1d9e63ea674cc7d4c2390c3.mp3";
+const _ASSET_DEDUP_47 = "../pdp-assets/d1fe314f7809e20e8a8013f980877c92.webp";
+const _ASSET_DEDUP_48 = "../pdp-assets/044eccc2ab3d6fc9cdf51a0453c00806.webp";
+const _ASSET_DEDUP_49 = "../pdp-assets/066cfe8777c2af704f7e03f59855067b.webp";
+const _ASSET_DEDUP_50 = "../pdp-assets/0d27540d9592e8a982928e10ffe4b9b7.webp";
+const _ASSET_DEDUP_51 = "../pdp-assets/814dcd328e6ec2ad87d678d6d2ece178.webp";
+const _ASSET_DEDUP_52 = "../pdp-assets/2874c3075f5e2c8974043c94e883ed04.webp";
+const _ASSET_DEDUP_53 = "../pdp-assets/8712ed1f73286db20d7eed7e7fbd4cbe.jpg";
+const _ASSET_DEDUP_54 = "../pdp-assets/7b3c4e1cce59df92086346b5d182c019.jpg";
+const _ASSET_DEDUP_55 = "../pdp-assets/ac7e9d2829a84effc209bd65cad73274.jpg";
+const _ASSET_DEDUP_56 = "../pdp-assets/404477cea196e637ca22d23b0f399caf.mp3";
+const _ASSET_DEDUP_57 = "../pdp-assets/5d5264d2d4e836a0706a2089a2f5602c.mp3";
+const _ASSET_DEDUP_58 = "../pdp-assets/22b29b435c7e4738cf96ae00b526a069.jpg";
+const _ASSET_DEDUP_59 = "../pdp-assets/189dba1a6447e816ab56a913fb5397df.jpg";
+const _ASSET_DEDUP_60 = "../pdp-assets/ee85552ff75ab3a89d121f4ad3697303.mp3";
+const _ASSET_DEDUP_61 = "../pdp-assets/c29abdd3590e72b086e623a703534edb.mp3";
+const _ASSET_DEDUP_62 = "../pdp-assets/a97077e3a95a5240bfe02864856a2bd4.mp3";
+const _ASSET_DEDUP_63 = "../pdp-assets/4fc2b7974d32c4c7a11e0aa45a7f3b97.mp3";
+const _ASSET_DEDUP_64 = "../pdp-assets/9a81bbd1d2a594bb9775d3ffda2ded7c.jpg";
+const _ASSET_DEDUP_65 = "../pdp-assets/b91840022df5d37694783e5a55bb3b94.jpg";
+const _ASSET_DEDUP_66 = "../pdp-assets/859fcfc8ef3f05c70c75af70b7beb07a.jpg";
+const _ASSET_DEDUP_67 = "../pdp-assets/863e8a1d49006a375ed232e411106859.jpg";
+const _ASSET_DEDUP_68 = "../pdp-assets/f57c39e404e3338132623826c8e97048.jpg";
+const _ASSET_DEDUP_69 = "../pdp-assets/16c746d238f244fb8b559410da1258bc.jpg";
+const _ASSET_DEDUP_70 = "../pdp-assets/cf7eb1754c02504454d0e404257b17b2.jpg";
+const _ASSET_DEDUP_71 = "../pdp-assets/74f244ef7964a2fd55c6bec97ffd9e1e.jpg";
+const _ASSET_DEDUP_72 = "../pdp-assets/296dc3cf272e9054e172e565f359815c.jpg";
+const _ASSET_DEDUP_73 = "../pdp-assets/3180c3ebc9e0fc5cf3f71971e344c32e.jpg";
+const _ASSET_DEDUP_74 = "../pdp-assets/53170dfe0a51ddf9c824636ee22c11c1.jpg";
+const _ASSET_DEDUP_75 = "../pdp-assets/5defb74fe5dd5793160b285f28e8f17f.jpg";
+const _ASSET_DEDUP_76 = "../pdp-assets/ab0c112c79b12d2d5520ea5ddd8098db.jpg";
+const _ASSET_DEDUP_77 = "../pdp-assets/4398fce5c68c813d9bae2b55f89a5258.jpg";
+const _ASSET_DEDUP_78 = "../pdp-assets/a2f9fecb8550b9c756137f2c0da9907b.jpg";
+const _ASSET_DEDUP_79 = "../pdp-assets/1dd3d34dac96ec092537c99df02a4890.jpg";
+const _ASSET_DEDUP_80 = "../pdp-assets/bcd3f2520d670bfe5e12ff1ac6da640d.webp";
+const _ASSET_DEDUP_81 = "../pdp-assets/6bf7452d99e6fbc0cdb23bcda9680be7.webp";
+const _ASSET_DEDUP_82 = "../pdp-assets/4b6914c10a55a6d61cb35b9c7c98e6f6.webp";
+const _ASSET_DEDUP_83 = "../pdp-assets/96a460c63c283f0914bfcd3c4718181e.webp";
+const _ASSET_DEDUP_84 = "../pdp-assets/df45179598531081dc634fecd4b3f50c.webp";
+const _ASSET_DEDUP_85 = "../pdp-assets/c67588194d77507556e953be4779dd37.webp";
+const _ASSET_DEDUP_86 = "../pdp-assets/f51a71a845b6ce85870707a6f585c0e2.jpg";
+const _ASSET_DEDUP_87 = "../pdp-assets/a780676200aad6fe97cae7dffef2585d.jpg";
+const _ASSET_DEDUP_88 = "../pdp-assets/489a8f368c855a3a5f15526ab7e8d4ac.jpg";
+const _ASSET_DEDUP_89 = "../pdp-assets/d78a6b0479a1450afcf0f14f1da3f405.jpg";
+const _ASSET_DEDUP_90 = "../pdp-assets/12c63d50e57c03494669f0c472e41783.jpg";
+const _ASSET_DEDUP_91 = "../pdp-assets/3c5d3ab03090707b7818ac7b8e2f8263.jpg";
 
-/* DATA ZONE generado por Pipeline v0 — 2026-11-10T00:04:10.439Z
+/* DATA ZONE generado por Pipeline v0 — 2026-11-10T04:20:10.888Z
    Proyecto: projects/ingles/en-a2-u02-things-and-school
    Motor fuente: template-standard-v3.html
    NO EDITAR — artefacto generado. Toda modificación vuelve a la Unidad
    (Principio de generación, DOCTRINA_CONGELADA.md §4). */
 
 const PDP_BUILD = {
-  "fecha": "2026-11-09 21:04",
-  "id": "b4d85e"
+  "fecha": "2026-11-10 01:20",
+  "id": "e66165"
 };
 
 const APP_CONFIG = {
@@ -571,7 +583,27 @@ const MODULES = [
               "evidencia": "independiente; reconocimiento (listen) y asociación (match, classify) → producción guiada (word-bank, fill) y oral con el profesor (P01, P03) → producción independiente en este Skill Check"
             },
             {
+              "id": "EN-A2-U02-709",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "P-16",
+              "funcion": "escribir qué tiene",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (match, classify) → producción guiada (word-bank, fill) y oral con el profesor (P01, P03) → producción independiente en este Skill Check"
+            },
+            {
               "id": "EN-A2-U02-010",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "P-07",
+              "funcion": "corregir a / an",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (match, classify) → producción guiada (word-bank, fill) y oral con el profesor (P01, P03) → producción independiente en este Skill Check"
+            },
+            {
+              "id": "EN-A2-U02-710",
               "patronesLengua": [
                 "P1"
               ],
@@ -589,6 +621,29 @@ const MODULES = [
               "funcion": "escribir qué no tiene",
               "objetivoN1": "apoyo",
               "evidencia": "independiente; reconocimiento (listen) y asociación (match, classify) → producción guiada (word-bank, fill) y oral con el profesor (P01, P03) → producción independiente en este Skill Check"
+            },
+            {
+              "id": "EN-A2-U02-711",
+              "patronesLengua": [
+                "P2"
+              ],
+              "realiza": "P-16",
+              "funcion": "escribir qué no tiene",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (match, classify) → producción guiada (word-bank, fill) y oral con el profesor (P01, P03) → producción independiente en este Skill Check"
+            },
+            {
+              "id": "EN-A2-U02-905",
+              "patronesLengua": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "realiza": "—",
+              "funcion": "producción guiada con consecuencia (mundo): escena",
+              "objetivoN1": "apoyo",
+              "evidencia": "arma la jugada y el tablero coincide con lo esperado",
+              "nota": "extiende EN-A2-U02-702, EN-A2-U02-705 (CONTRATO_MUNDO_v1)"
             },
             {
               "id": "EN-A2-U02-902",
@@ -911,7 +966,28 @@ const MODULES = [
               "evidencia": "independiente; reconocimiento (listen) y asociación (memory) → producción guiada (word-bank, order, fill) y oral con el profesor (P04, P06) → producción independiente en este Skill Check"
             },
             {
+              "id": "EN-A2-U02-720",
+              "patronesLengua": [
+                "P1",
+                "P3"
+              ],
+              "realiza": "P-16",
+              "funcion": "escribir qué tiene otra persona",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (memory) → producción guiada (word-bank, order, fill) y oral con el profesor (P04, P06) → producción independiente en este Skill Check"
+            },
+            {
               "id": "EN-A2-U02-021",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "P-07",
+              "funcion": "corregir have por has",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (memory) → producción guiada (word-bank, order, fill) y oral con el profesor (P04, P06) → producción independiente en este Skill Check"
+            },
+            {
+              "id": "EN-A2-U02-721",
               "patronesLengua": [
                 "P1"
               ],
@@ -929,6 +1005,40 @@ const MODULES = [
               "funcion": "escribir qué no tiene otra persona",
               "objetivoN1": "apoyo",
               "evidencia": "independiente; reconocimiento (listen) y asociación (memory) → producción guiada (word-bank, order, fill) y oral con el profesor (P04, P06) → producción independiente en este Skill Check"
+            },
+            {
+              "id": "EN-A2-U02-722",
+              "patronesLengua": [
+                "P2"
+              ],
+              "realiza": "P-16",
+              "funcion": "escribir qué no tiene otra persona",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (memory) → producción guiada (word-bank, order, fill) y oral con el profesor (P04, P06) → producción independiente en este Skill Check"
+            },
+            {
+              "id": "EN-A2-U02-907",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "—",
+              "funcion": "producción guiada con consecuencia (mundo): analizador",
+              "objetivoN1": "apoyo",
+              "evidencia": "arma la jugada y el tablero coincide con lo esperado",
+              "nota": "extiende EN-A2-U02-716, EN-A2-U02-718 (CONTRATO_MUNDO_v1)"
+            },
+            {
+              "id": "EN-A2-U02-906",
+              "patronesLengua": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "realiza": "—",
+              "funcion": "producción guiada con consecuencia (mundo): cuerdas",
+              "objetivoN1": "apoyo",
+              "evidencia": "arma la jugada y el tablero coincide con lo esperado",
+              "nota": "mundo intercalado después de EN-A2-U02-714"
             }
           ]
         }
@@ -1251,7 +1361,27 @@ const MODULES = [
               "evidencia": "independiente; reconocimiento (listen) y asociación (match) → producción guiada (word-bank, order, fill) y oral con el profesor (P07, P09) → producción independiente en este Skill Check"
             },
             {
+              "id": "EN-A2-U02-731",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "P-16",
+              "funcion": "escribir una pregunta con Have you got",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (match) → producción guiada (word-bank, order, fill) y oral con el profesor (P07, P09) → producción independiente en este Skill Check"
+            },
+            {
               "id": "EN-A2-U02-032",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "P-16",
+              "funcion": "escribir una respuesta corta negativa",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (match) → producción guiada (word-bank, order, fill) y oral con el profesor (P07, P09) → producción independiente en este Skill Check"
+            },
+            {
+              "id": "EN-A2-U02-732",
               "patronesLengua": [
                 "P1"
               ],
@@ -1269,6 +1399,41 @@ const MODULES = [
               "funcion": "corregir Have por Has",
               "objetivoN1": "apoyo",
               "evidencia": "independiente; reconocimiento (listen) y asociación (match) → producción guiada (word-bank, order, fill) y oral con el profesor (P07, P09) → producción independiente en este Skill Check"
+            },
+            {
+              "id": "EN-A2-U02-733",
+              "patronesLengua": [
+                "P2"
+              ],
+              "realiza": "P-07",
+              "funcion": "corregir Have por Has",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (match) → producción guiada (word-bank, order, fill) y oral con el profesor (P07, P09) → producción independiente en este Skill Check"
+            },
+            {
+              "id": "EN-A2-U02-908",
+              "patronesLengua": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "realiza": "—",
+              "funcion": "producción guiada con consecuencia (mundo): analizador",
+              "objetivoN1": "apoyo",
+              "evidencia": "arma la jugada y el tablero coincide con lo esperado",
+              "nota": "mundo intercalado después de EN-A2-U02-727"
+            },
+            {
+              "id": "EN-A2-U02-909",
+              "patronesLengua": [
+                "P1",
+                "P2"
+              ],
+              "realiza": "—",
+              "funcion": "producción guiada con consecuencia (mundo): cuerdas",
+              "objetivoN1": "apoyo",
+              "evidencia": "arma la jugada y el tablero coincide con lo esperado",
+              "nota": "extiende EN-A2-U02-724, EN-A2-U02-725 (CONTRATO_MUNDO_v1)"
             }
           ]
         }
@@ -1324,7 +1489,30 @@ const MODULES = [
               "evidencia": "ninguna: la predicción no puntúa"
             },
             {
+              "id": "EN-A2-U02-734",
+              "patronesLengua": [
+                "P1",
+                "P2"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
               "id": "EN-A2-U02-035",
+              "patronesLengua": [
+                "P1",
+                "P2"
+              ],
+              "realiza": "P-02",
+              "funcion": "reconocimiento (oído ↔ opción)",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (listen)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
+              "id": "EN-A2-U02-735",
               "patronesLengua": [
                 "P1",
                 "P2"
@@ -1346,6 +1534,16 @@ const MODULES = [
               "evidencia": "ninguna: la predicción no puntúa"
             },
             {
+              "id": "EN-A2-U02-487",
+              "patronesLengua": [
+                "P3"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
               "id": "EN-A2-U02-036",
               "patronesLengua": [
                 "P3"
@@ -1357,7 +1555,30 @@ const MODULES = [
               "nota": "traza automática (modo ligero): no es una clasificación revisada"
             },
             {
+              "id": "EN-A2-U02-736",
+              "patronesLengua": [
+                "P3"
+              ],
+              "realiza": "P-02",
+              "funcion": "reconocimiento (oído ↔ opción)",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (listen)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
               "id": "EN-A2-U02-408",
+              "patronesLengua": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
+              "id": "EN-A2-U02-488",
               "patronesLengua": [
                 "P1",
                 "P2",
@@ -1382,7 +1603,31 @@ const MODULES = [
               "nota": "traza automática (modo ligero): no es una clasificación revisada"
             },
             {
+              "id": "EN-A2-U02-737",
+              "patronesLengua": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "realiza": "sin clasificar",
+              "funcion": "classify",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (classify)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
               "id": "EN-A2-U02-038",
+              "patronesLengua": [
+                "P2"
+              ],
+              "realiza": "P-06",
+              "funcion": "verdadero o falso",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (tf)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
+              "id": "EN-A2-U02-738",
               "patronesLengua": [
                 "P2"
               ],
@@ -1405,7 +1650,30 @@ const MODULES = [
               "evidencia": "ninguna: la predicción no puntúa"
             },
             {
+              "id": "EN-A2-U02-334",
+              "patronesLengua": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
               "id": "EN-A2-U02-039",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "P-16",
+              "funcion": "completar un hueco de estructura",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (word-bank)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
+              "id": "EN-A2-U02-739",
               "patronesLengua": [
                 "P1"
               ],
@@ -1427,7 +1695,29 @@ const MODULES = [
               "nota": "traza automática (modo ligero): no es una clasificación revisada"
             },
             {
+              "id": "EN-A2-U02-740",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "P-15",
+              "funcion": "ordenar los elementos",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (order)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
               "id": "EN-A2-U02-041",
+              "patronesLengua": [
+                "P3"
+              ],
+              "realiza": "P-07",
+              "funcion": "detectar y corregir",
+              "objetivoN1": "apoyo",
+              "evidencia": "acierta el ejercicio (error-find)",
+              "nota": "traza automática (modo ligero): no es una clasificación revisada"
+            },
+            {
+              "id": "EN-A2-U02-741",
               "patronesLengua": [
                 "P3"
               ],
@@ -1450,7 +1740,29 @@ const MODULES = [
               "evidencia": "ninguna: la predicción no puntúa"
             },
             {
+              "id": "EN-A2-U02-342",
+              "patronesLengua": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "realiza": "—",
+              "funcion": "enseñanza",
+              "objetivoN1": "—",
+              "evidencia": "ninguna: la predicción no puntúa"
+            },
+            {
               "id": "EN-A2-U02-042",
+              "patronesLengua": [
+                "P1"
+              ],
+              "realiza": "P-16",
+              "funcion": "escribir una negativa con we",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (classify) → producción guiada (word-bank, order, error-find) y oral con el profesor (P10, P12) → producción independiente en este Skill Check"
+            },
+            {
+              "id": "EN-A2-U02-742",
               "patronesLengua": [
                 "P1"
               ],
@@ -1470,6 +1782,16 @@ const MODULES = [
               "evidencia": "independiente; reconocimiento (listen) y asociación (classify) → producción guiada (word-bank, order, error-find) y oral con el profesor (P10, P12) → producción independiente en este Skill Check"
             },
             {
+              "id": "EN-A2-U02-743",
+              "patronesLengua": [
+                "P3"
+              ],
+              "realiza": "P-16",
+              "funcion": "escribir una pregunta sobre otra persona",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (classify) → producción guiada (word-bank, order, error-find) y oral con el profesor (P10, P12) → producción independiente en este Skill Check"
+            },
+            {
               "id": "EN-A2-U02-044",
               "patronesLengua": [
                 "P2"
@@ -1478,6 +1800,29 @@ const MODULES = [
               "funcion": "corregir haven't por hasn't",
               "objetivoN1": "apoyo",
               "evidencia": "independiente; reconocimiento (listen) y asociación (classify) → producción guiada (word-bank, order, error-find) y oral con el profesor (P10, P12) → producción independiente en este Skill Check"
+            },
+            {
+              "id": "EN-A2-U02-744",
+              "patronesLengua": [
+                "P2"
+              ],
+              "realiza": "P-07",
+              "funcion": "corregir haven't por hasn't",
+              "objetivoN1": "apoyo",
+              "evidencia": "independiente; reconocimiento (listen) y asociación (classify) → producción guiada (word-bank, order, error-find) y oral con el profesor (P10, P12) → producción independiente en este Skill Check"
+            },
+            {
+              "id": "EN-A2-U02-910",
+              "patronesLengua": [
+                "P1",
+                "P2",
+                "P3"
+              ],
+              "realiza": "—",
+              "funcion": "producción guiada con consecuencia (mundo): analizador",
+              "objetivoN1": "apoyo",
+              "evidencia": "arma la jugada y el tablero coincide con lo esperado",
+              "nota": "mundo intercalado después de EN-A2-U02-737"
             }
           ]
         }
@@ -2991,6 +3336,7 @@ const EXERCISES_M0 = [
       }
     ],
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -3093,6 +3439,7 @@ const EXERCISES_M0 = [
       "altExplanation": "El marinero dice I've got (tengo) y después nombra sus cosas. Escuchá las tres, una por una, y buscá la opción que nombra las mismas."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -3192,6 +3539,11 @@ const EXERCISES_M0 = [
           "haven't = have not."
         ],
         "idea": "Para decir lo que NO tenés usás haven't got. I haven't got a map. = No tengo un mapa. haven't = have not.",
+        "media": {
+          "tipo": "hero",
+          "img": _ASSET_DEDUP_17,
+          "alt": "Los marineros del Dei Gratia en la cubierta del barco vacío."
+        },
         "audio": "../pdp-assets/22eb67a3986ab7f441ba8d02b2406ea1.mp3"
       },
       {
@@ -3213,7 +3565,8 @@ const EXERCISES_M0 = [
         "audio": _ASSET_DEDUP_16
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-004",
@@ -3314,6 +3667,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Las frases del marinero van de a dos: una dice que tiene y la otra que no. Lo único que cambia es haven't, que quiere decir no tengo."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -3354,21 +3708,21 @@ const EXERCISES_M0 = [
             {
               "titulo": "You've got a book.",
               "texto": "Vos tenés un libro.",
-              "img": _ASSET_DEDUP_17
+              "img": _ASSET_DEDUP_18
             },
             {
               "titulo": "We've got a map.",
               "texto": "Nosotros tenemos un mapa.",
-              "img": _ASSET_DEDUP_18
+              "img": _ASSET_DEDUP_19
             },
             {
               "titulo": "They've got a phone.",
               "texto": "Ellos tienen un teléfono.",
-              "img": _ASSET_DEDUP_19
+              "img": _ASSET_DEDUP_20
             }
           ]
         },
-        "audio": _ASSET_DEDUP_20
+        "audio": _ASSET_DEDUP_21
       }
     ],
     "modo": "personal"
@@ -3398,24 +3752,25 @@ const EXERCISES_M0 = [
             {
               "titulo": "You've got a book.",
               "texto": "Vos tenés un libro.",
-              "img": _ASSET_DEDUP_17
+              "img": _ASSET_DEDUP_18
             },
             {
               "titulo": "We've got a map.",
               "texto": "Nosotros tenemos un mapa.",
-              "img": _ASSET_DEDUP_18
+              "img": _ASSET_DEDUP_19
             },
             {
               "titulo": "They've got a boat.",
               "texto": "Ellos tienen un bote.",
-              "img": _ASSET_DEDUP_19
+              "img": _ASSET_DEDUP_20
             }
           ]
         },
-        "audio": _ASSET_DEDUP_20
+        "audio": _ASSET_DEDUP_21
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-003",
@@ -3482,6 +3837,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Los marineros hablan de los dos (we). Con we la forma es igual que con I: en una frase oís haven't (no tienen) y en la otra 've (tienen)."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -3748,6 +4104,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Hablen el marinero, los dos marineros o los del bote, la regla es igual: haven't es que no la tiene; 've es que la tiene."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -3799,7 +4156,7 @@ const EXERCISES_M0 = [
           "img": _ASSET_DEDUP_15,
           "alt": "La mochila de Maya, abierta sobre el escritorio: tiene una lapicera, un cuaderno y una calculadora, y no tiene una regla."
         },
-        "audio": _ASSET_DEDUP_21
+        "audio": _ASSET_DEDUP_22
       }
     ],
     "modo": "personal"
@@ -3835,10 +4192,16 @@ const EXERCISES_M0 = [
           "Delante de la cosa: a o an."
         ],
         "idea": "Con I, you, we, they va have got. Para decir que NO: haven't got. I've got a book. = Tengo un libro. I haven't got a map. = No tengo un mapa. Delante de la cosa: a o an.",
-        "audio": _ASSET_DEDUP_21
+        "media": {
+          "tipo": "hero",
+          "img": _ASSET_DEDUP_17,
+          "alt": "Los marineros del Dei Gratia en la cubierta del barco vacío."
+        },
+        "audio": _ASSET_DEDUP_22
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-006",
@@ -3941,6 +4304,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Con got no se usa don't: la negación es haven't got. Y hasn't es solo para he y she: el marinero habla de sí mismo, con I."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -4070,6 +4434,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Hablás vos, como el marinero: empezá con I, seguí con la forma de tener y got, y terminá con la cosa con a o an."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -4145,7 +4510,7 @@ const EXERCISES_M0 = [
         "Which word is wrong?"
       ]
     },
-    "image": _ASSET_DEDUP_22,
+    "image": _ASSET_DEDUP_23,
     "imageAlt": "Maya y Tom, de pie, uno al lado del otro."
   },
   {
@@ -4190,6 +4555,7 @@ const EXERCISES_M0 = [
       "altExplanation": "El marinero le habla a otro (you). Con you la forma de tener es la misma que con I: buscá la palabra que no es esa."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -4258,7 +4624,7 @@ const EXERCISES_M0 = [
             }
           ]
         },
-        "audio": _ASSET_DEDUP_23
+        "audio": _ASSET_DEDUP_24
       },
       {
         "proposito": "ensenanza",
@@ -4278,7 +4644,7 @@ const EXERCISES_M0 = [
             "I has got a book."
           ]
         },
-        "audio": _ASSET_DEDUP_24
+        "audio": _ASSET_DEDUP_25
       }
     ],
     "modo": "personal"
@@ -4336,7 +4702,7 @@ const EXERCISES_M0 = [
             }
           ]
         },
-        "audio": _ASSET_DEDUP_23
+        "audio": _ASSET_DEDUP_24
       },
       {
         "proposito": "ensenanza",
@@ -4356,10 +4722,301 @@ const EXERCISES_M0 = [
             "I has got a book."
           ]
         },
-        "audio": _ASSET_DEDUP_24
+        "audio": _ASSET_DEDUP_25
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
+  },
+  {
+    "id": "EN-A2-U02-905",
+    "status": "draft",
+    "nivelId": "m0-n1",
+    "kind": "mundo",
+    "ordenFijo": true,
+    "stage": "Producción guiada",
+    "skill": "PROD_01",
+    "difficulty": 2,
+    "question": "Armá el baúl del marinero.",
+    "feedback": "¡El baúl quedó listo!",
+    "feedbackWrong": "Mirá las filas marcadas: ahí está la pista.",
+    "hint": "Empezá por la primera fila marcada.",
+    "scaffold": {
+      "altExplanation": "Leé lo que dice el marinero de cada cosa. I've got quiere decir que la tiene: va adentro. I haven't got quiere decir que no la tiene: queda afuera."
+    },
+    "feedbackExtra": "Fijate en la palabra que viene antes de cada cosa: después de I've got van las que tiene; después de I haven't got, las que no tiene.",
+    "mundo": {
+      "id": "mundo-escena-baul-clase-l1",
+      "tipo": "escena",
+      "nombre": "Escena",
+      "unidad": "en-a2-u02-things-and-school",
+      "leccion": "L1",
+      "desde": [
+        "EN-A2-U02-702",
+        "EN-A2-U02-705"
+      ],
+      "titulo": "Armá el baúl del marinero.",
+      "consigna": {
+        "banner": "I've got a book, a map and a pen in my box. I haven't got a ruler. I haven't got an eraser.",
+        "tip": "Tocá una cosa y después el baúl. Lo que el marinero no tiene queda afuera."
+      },
+      "escena": {
+        "hablante": "El marinero",
+        "receptor": "El marinero",
+        "imagen": "a2u02-barco-baul",
+        "imagenAncho": 800,
+        "imagenAlto": 400,
+        "tablero": "El baúl del marinero",
+        "rotuloBandeja": "Afuera del baúl",
+        "rotuloBandejaVacia": "Afuera del baúl"
+      },
+      "vocab": {
+        "dato": [
+          "cosa",
+          "cosas"
+        ],
+        "referencia": "lo que dice el marinero",
+        "receptor": "El marinero",
+        "pieza": [
+          "cosa",
+          "cosas"
+        ],
+        "sobra": [
+          "cosa de más",
+          "cosas de más"
+        ],
+        "falta": [
+          "cosa",
+          "cosas"
+        ]
+      },
+      "textos": {
+        "okTitulo": "¡El baúl quedó listo!",
+        "okTexto": "Adentro está lo que el marinero tiene; afuera, lo que no tiene.",
+        "casiTitulo": "Casi.",
+        "mirar": "Mirá las cosas marcadas y volvé a leer qué tiene el marinero y qué no tiene."
+      },
+      "reacciones": {
+        "ok": "",
+        "distinto": "",
+        "no-entendio": "",
+        "sobra": ""
+      },
+      "ayudas": [
+        "Leé lo que dice el marinero de cada cosa. I've got quiere decir que la tiene: va adentro. I haven't got quiere decir que no la tiene: queda afuera.",
+        "Fijate en la palabra que viene antes de cada cosa: después de I've got van las que tiene; después de I haven't got, las que no tiene."
+      ],
+      "demo": {
+        "error": {
+          "h_book": "book__in-bag",
+          "h_ruler": "ruler__in-bag",
+          "h_map": "map__in-bag",
+          "h_eraser": "eraser__out",
+          "h_pen": "pen__out"
+        }
+      },
+      "modo": "clase",
+      "ambientacion": "cuento",
+      "gemeloDe": "EN-A2-U02-902",
+      "_nota": "Gemelo de clase de escena_mochila_l1.json (fuente: generadores/mundos_clase_u02.py). Imagen: ilustración 4 de «El barco sin nadie» (el baúl con las cosas de los marineros).",
+      "aula": {
+        "objetos": [
+          {
+            "id": "book",
+            "texto": "book",
+            "icono": "📕"
+          },
+          {
+            "id": "ruler",
+            "texto": "ruler",
+            "icono": "📏"
+          },
+          {
+            "id": "map",
+            "texto": "map",
+            "icono": "🗺️"
+          },
+          {
+            "id": "eraser",
+            "texto": "eraser",
+            "icono": "🧽"
+          },
+          {
+            "id": "pen",
+            "texto": "pen",
+            "icono": "🖊️"
+          }
+        ],
+        "lugares": [
+          {
+            "id": "in-bag",
+            "texto": "in the box",
+            "caja": [
+              24,
+              12,
+              70,
+              62
+            ],
+            "capacidad": 5
+          }
+        ],
+        "bandeja": {
+          "id": "out",
+          "texto": "not in the box"
+        }
+      },
+      "campos": [
+        {
+          "id": "book",
+          "etiqueta": "book",
+          "icono": "📕"
+        },
+        {
+          "id": "ruler",
+          "etiqueta": "ruler",
+          "icono": "📏"
+        },
+        {
+          "id": "map",
+          "etiqueta": "map",
+          "icono": "🗺️"
+        },
+        {
+          "id": "eraser",
+          "etiqueta": "eraser",
+          "icono": "🧽"
+        },
+        {
+          "id": "pen",
+          "etiqueta": "pen",
+          "icono": "🖊️"
+        }
+      ],
+      "objetivo": {
+        "book": "in the box",
+        "ruler": "not in the box",
+        "map": "in the box",
+        "eraser": "not in the box",
+        "pen": "in the box"
+      },
+      "piezas": [
+        {
+          "id": "book__in-bag",
+          "texto": "book in the box",
+          "efecto": {
+            "book": "in the box"
+          }
+        },
+        {
+          "id": "book__out",
+          "texto": "book not in the box",
+          "efecto": {
+            "book": "not in the box"
+          }
+        },
+        {
+          "id": "ruler__in-bag",
+          "texto": "ruler in the box",
+          "efecto": {
+            "ruler": "in the box"
+          }
+        },
+        {
+          "id": "ruler__out",
+          "texto": "ruler not in the box",
+          "efecto": {
+            "ruler": "not in the box"
+          }
+        },
+        {
+          "id": "map__in-bag",
+          "texto": "map in the box",
+          "efecto": {
+            "map": "in the box"
+          }
+        },
+        {
+          "id": "map__out",
+          "texto": "map not in the box",
+          "efecto": {
+            "map": "not in the box"
+          }
+        },
+        {
+          "id": "eraser__in-bag",
+          "texto": "eraser in the box",
+          "efecto": {
+            "eraser": "in the box"
+          }
+        },
+        {
+          "id": "eraser__out",
+          "texto": "eraser not in the box",
+          "efecto": {
+            "eraser": "not in the box"
+          }
+        },
+        {
+          "id": "pen__in-bag",
+          "texto": "pen in the box",
+          "efecto": {
+            "pen": "in the box"
+          }
+        },
+        {
+          "id": "pen__out",
+          "texto": "pen not in the box",
+          "efecto": {
+            "pen": "not in the box"
+          }
+        }
+      ],
+      "huecos": [
+        {
+          "id": "h_book",
+          "rotulo": "book",
+          "opciones": [
+            "book__in-bag",
+            "book__out"
+          ]
+        },
+        {
+          "id": "h_ruler",
+          "rotulo": "ruler",
+          "opciones": [
+            "ruler__in-bag",
+            "ruler__out"
+          ]
+        },
+        {
+          "id": "h_map",
+          "rotulo": "map",
+          "opciones": [
+            "map__in-bag",
+            "map__out"
+          ]
+        },
+        {
+          "id": "h_eraser",
+          "rotulo": "eraser",
+          "opciones": [
+            "eraser__in-bag",
+            "eraser__out"
+          ]
+        },
+        {
+          "id": "h_pen",
+          "rotulo": "pen",
+          "opciones": [
+            "pen__in-bag",
+            "pen__out"
+          ]
+        }
+      ]
+    },
+    "avatar": _ASSET_DEDUP_26,
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-902",
@@ -4643,7 +5300,8 @@ const EXERCISES_M0 = [
         }
       ]
     },
-    "avatar": _ASSET_DEDUP_15
+    "avatar": _ASSET_DEDUP_15,
+    "modo": "personal"
   },
   {
     "status": "published",
@@ -4737,6 +5395,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Primero quién tiene, después la forma de tener con got y al final a o an y la cosa."
     },
+    "modo": "personal",
     "paraProfe": {
       "variantes": [
         "I have got a calculator."
@@ -4745,6 +5404,61 @@ const EXERCISES_M0 = [
         {
           "si": "Escribe \"I have a calculator\" (sin got)",
           "hacer": "No intervenir. La consigna pedía got: registrar como error de forma."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-709",
+    "status": "draft",
+    "nivelId": "m0-n1",
+    "kind": "fill",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "PROD_01",
+    "difficulty": 3,
+    "question": "Sos un marinero. Escribí con got que tenés un libro.",
+    "answer": "I've got a book.",
+    "acceptVariants": [
+      "I've got a book.",
+      "I've got a book",
+      "i've got a book.",
+      "i've got a book",
+      "I’ve got a book.",
+      "I’ve got a book",
+      "i’ve got a book.",
+      "i’ve got a book",
+      "I have got a book.",
+      "I have got a book",
+      "i have got a book.",
+      "i have got a book"
+    ],
+    "feedback": "¡Eso! Así se dice que tenés algo.",
+    "feedbackWrong": "Escribí la frase completa: quién, la forma de tener y la cosa con a o an.",
+    "hint": "Pensá en las tres partes de la frase.",
+    "feedbackExtra": "I've got a book. = Tengo un libro. I've got = I have got; delante de book va a.",
+    "scaffold": {
+      "altExplanation": "Primero quién tiene, después la forma de tener con got y al final a o an y la cosa."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "variantes": [
+        "I have got a book."
+      ],
+      "errores": [
+        {
+          "si": "Escribe \"I've got book\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        },
+        {
+          "si": "Escribe \"I got a book\"",
+          "hacer": "No intervenir. Registrar como error de forma."
         }
       ],
       "variaciones": [],
@@ -4782,11 +5496,57 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Fijate con qué sonido empieza eraser: ¿de vocal o de otra letra?"
     },
+    "modo": "personal",
     "paraProfe": {
       "variantes": [],
       "errores": [
         {
           "si": "Marca got o bag",
+          "hacer": "No intervenir. Registrar como error de forma."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-710",
+    "status": "draft",
+    "nivelId": "m0-n1",
+    "kind": "error-find",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "CORR_01",
+    "difficulty": 3,
+    "question": "Un marinero cuenta qué tiene, pero hay un error. Tocá la palabra que está mal y corregila.",
+    "sentence": [
+      "I've",
+      "got",
+      "a",
+      "eraser",
+      "and",
+      "a",
+      "map."
+    ],
+    "errorIndex": 2,
+    "correction": "an",
+    "feedback": "¡Eso! Delante de eraser va esa palabra.",
+    "feedbackWrong": "Una palabra no es la que va delante de esa cosa.",
+    "hint": "Mirá la palabra antes de eraser.",
+    "feedbackExtra": "I've got an eraser and a map. An va cuando la palabra empieza con sonido de vocal (an eraser); a va con las demás (a map).",
+    "scaffold": {
+      "altExplanation": "Fijate con qué sonido empieza eraser: ¿de vocal o de otra letra?"
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "variantes": [],
+      "errores": [
+        {
+          "si": "Marca got o map",
           "hacer": "No intervenir. Registrar como error de forma."
         }
       ],
@@ -4828,6 +5588,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Es la misma frase que para tener, pero con la forma de no tener: haven't got."
     },
+    "modo": "personal",
     "paraProfe": {
       "variantes": [
         "I have not got a notebook."
@@ -4835,6 +5596,57 @@ const EXERCISES_M0 = [
       "errores": [
         {
           "si": "Escribe \"I don't got a notebook\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-711",
+    "status": "draft",
+    "nivelId": "m0-n1",
+    "kind": "fill",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "PROD_01",
+    "difficulty": 3,
+    "question": "Sos un marinero. Escribí con got que NO tenés un mapa.",
+    "answer": "I haven't got a map.",
+    "acceptVariants": [
+      "I haven't got a map.",
+      "I haven't got a map",
+      "i haven't got a map.",
+      "i haven't got a map",
+      "I haven’t got a map.",
+      "I haven’t got a map",
+      "i haven’t got a map.",
+      "i haven’t got a map",
+      "I have not got a map.",
+      "I have not got a map",
+      "i have not got a map.",
+      "i have not got a map"
+    ],
+    "feedback": "¡Eso! Así se dice que no tenés algo.",
+    "feedbackWrong": "Escribí la frase completa: quién, la forma de no tener y la cosa con a o an.",
+    "hint": "Es la forma negativa de tener.",
+    "feedbackExtra": "I haven't got a map. = No tengo un mapa. Haven't = have not; delante de map va a.",
+    "scaffold": {
+      "altExplanation": "Es la misma frase que para tener, pero con la forma de no tener: haven't got."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "variantes": [
+        "I have not got a map."
+      ],
+      "errores": [
+        {
+          "si": "Escribe \"I don't got a map\"",
           "hacer": "No intervenir. Registrar como error de forma."
         }
       ],
@@ -5071,7 +5883,7 @@ const EXERCISES_M0 = [
         "idea": "Para una chica usás she. Para un chico, he. she = Maya he = Tom",
         "media": {
           "tipo": "hero",
-          "img": _ASSET_DEDUP_22,
+          "img": _ASSET_DEDUP_23,
           "alt": "Maya y Tom, de pie, uno al lado del otro."
         },
         "audio": "../pdp-assets/580dd6baf4a281ae43dc67aa903fa708.mp3"
@@ -5089,16 +5901,16 @@ const EXERCISES_M0 = [
             {
               "titulo": "She has got a pen.",
               "texto": "Ella tiene una lapicera.",
-              "img": _ASSET_DEDUP_25
+              "img": _ASSET_DEDUP_27
             },
             {
               "titulo": "He has got a phone.",
               "texto": "Él tiene un teléfono.",
-              "img": _ASSET_DEDUP_26
+              "img": _ASSET_DEDUP_28
             }
           ]
         },
-        "audio": _ASSET_DEDUP_27
+        "audio": _ASSET_DEDUP_29
       },
       {
         "proposito": "ensenanza",
@@ -5116,16 +5928,16 @@ const EXERCISES_M0 = [
             {
               "titulo": "She's got a pen.",
               "texto": "= She has got a pen.",
-              "img": _ASSET_DEDUP_25
+              "img": _ASSET_DEDUP_27
             },
             {
               "titulo": "He's got a phone.",
               "texto": "= He has got a phone.",
-              "img": _ASSET_DEDUP_26
+              "img": _ASSET_DEDUP_28
             }
           ]
         },
-        "audio": _ASSET_DEDUP_28
+        "audio": _ASSET_DEDUP_30
       }
     ],
     "modo": "personal",
@@ -5235,16 +6047,16 @@ const EXERCISES_M0 = [
             {
               "titulo": "She has got a pencil.",
               "texto": "Ella tiene un lápiz.",
-              "img": _ASSET_DEDUP_29
+              "img": _ASSET_DEDUP_31
             },
             {
               "titulo": "He has got a book.",
               "texto": "Él tiene un libro.",
-              "img": _ASSET_DEDUP_14
+              "img": _ASSET_DEDUP_32
             }
           ]
         },
-        "audio": _ASSET_DEDUP_27
+        "audio": _ASSET_DEDUP_29
       },
       {
         "proposito": "ensenanza",
@@ -5262,19 +6074,20 @@ const EXERCISES_M0 = [
             {
               "titulo": "She's got a pencil.",
               "texto": "= She has got a pencil.",
-              "img": _ASSET_DEDUP_29
+              "img": _ASSET_DEDUP_31
             },
             {
               "titulo": "He's got a book.",
               "texto": "= He has got a book.",
-              "img": _ASSET_DEDUP_14
+              "img": _ASSET_DEDUP_32
             }
           ]
         },
-        "audio": _ASSET_DEDUP_28
+        "audio": _ASSET_DEDUP_30
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-013",
@@ -5345,6 +6158,7 @@ const EXERCISES_M0 = [
       "altExplanation": "El capitán es un hombre: he. Con he va has got. Tiene dos cosas: escuchá las dos, una por una."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -5389,16 +6203,16 @@ const EXERCISES_M0 = [
             {
               "titulo": "She hasn't got a ruler.",
               "texto": "Ella no tiene una regla.",
-              "img": _ASSET_DEDUP_30
+              "img": _ASSET_DEDUP_33
             },
             {
               "titulo": "He hasn't got a bag.",
               "texto": "Él no tiene una mochila.",
-              "img": _ASSET_DEDUP_31
+              "img": _ASSET_DEDUP_34
             }
           ]
         },
-        "audio": _ASSET_DEDUP_32
+        "audio": _ASSET_DEDUP_35
       },
       {
         "proposito": "ensenanza",
@@ -5419,7 +6233,7 @@ const EXERCISES_M0 = [
             "She doesn't got a pen."
           ]
         },
-        "audio": _ASSET_DEDUP_33
+        "audio": _ASSET_DEDUP_36
       }
     ],
     "modo": "personal"
@@ -5455,7 +6269,7 @@ const EXERCISES_M0 = [
           "hasn't = has not."
         ],
         "idea": "Para decir lo que NO tiene usás hasn't got. She hasn't got a bag. = Ella no tiene una mochila. He hasn't got a phone. = Él no tiene un teléfono. hasn't = has not.",
-        "audio": _ASSET_DEDUP_32
+        "audio": _ASSET_DEDUP_35
       },
       {
         "proposito": "ensenanza",
@@ -5476,10 +6290,11 @@ const EXERCISES_M0 = [
             "She doesn't got a pencil."
           ]
         },
-        "audio": _ASSET_DEDUP_33
+        "audio": _ASSET_DEDUP_36
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-014",
@@ -5546,6 +6361,7 @@ const EXERCISES_M0 = [
       "altExplanation": "En la primera frase 's got dice que tiene. En la segunda, hasn't got dice que no tiene."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -5714,6 +6530,356 @@ const EXERCISES_M0 = [
     "experienciaProfe": "PRF-ORA-12"
   },
   {
+    "id": "EN-A2-U02-906",
+    "status": "draft",
+    "nivelId": "m0-n2",
+    "kind": "mundo",
+    "ordenFijo": true,
+    "stage": "Producción guiada",
+    "skill": "PROD_01",
+    "difficulty": 2,
+    "question": "Uní cada dato con lo que dice el marinero.",
+    "feedback": "¡Todas las cuerdas se iluminaron!",
+    "feedbackWrong": "Mirá las filas marcadas: ahí está la pista.",
+    "hint": "Empezá por la primera fila marcada.",
+    "scaffold": {
+      "altExplanation": "Cada dato tiene una sola cuerda. Si una quedó en ámbar, esa unión no coincide: soltala tocando su extremo y probá con otra."
+    },
+    "feedbackExtra": "Leé el dato y buscá la frase que dice lo mismo: she o he según la persona, la misma cosa, y si la tiene ('s got) o no la tiene (hasn't got).",
+    "mundo": {
+      "id": "mundo-cuerdas-cuerdas_barco_clase_l2",
+      "tipo": "cuerdas",
+      "nombre": "Cuerdas - datos",
+      "unidad": "en-a2-u02-things-and-school",
+      "leccion": "L2",
+      "desde": [
+        "EN-A2-U02-713",
+        "EN-A2-U02-714"
+      ],
+      "titulo": "Uní cada dato con lo que dice el marinero.",
+      "consigna": {
+        "banner": "Un marinero cuenta qué tiene cada uno en el barco. Uní cada dato con la frase en inglés que lo dice: she para la hija y la esposa, he para el capitán y el marinero.",
+        "tip": "Tocá uno de la izquierda y después el que le corresponde a la derecha. Para soltar una cuerda, tocá su extremo."
+      },
+      "escena": {
+        "hablante": "Un marinero",
+        "receptor": "el capitán",
+        "imagen": "a2u02-barco-cubierta",
+        "tablero": "Unir",
+        "rotuloIzq": "EL DATO",
+        "rotuloDer": "EN INGLÉS",
+        "marcoCuerdas": "mundo-marco-cuerdas",
+        "cartel": "mundo-cartel-oro",
+        "marcoImg": _ASSET_DEDUP_37,
+        "cartelImg": _ASSET_DEDUP_38
+      },
+      "vocab": {
+        "dato": [
+          "cuerda",
+          "cuerdas"
+        ],
+        "referencia": "lo que dice el marinero",
+        "receptor": "el capitán",
+        "pieza": [
+          "unión",
+          "uniones"
+        ],
+        "sobra": [
+          "cuerda de más",
+          "cuerdas de más"
+        ],
+        "falta": [
+          "cuerda",
+          "cuerdas"
+        ]
+      },
+      "textos": {
+        "okTitulo": "¡Todas las cuerdas se iluminaron!",
+        "okTexto": "Cada uno quedó unido con lo que le corresponde.",
+        "casiTitulo": "Casi."
+      },
+      "reacciones": {
+        "ok": "",
+        "distinto": "",
+        "no-entendio": "",
+        "sobra": ""
+      },
+      "ayudas": [
+        "Cada dato tiene una sola cuerda. Si una quedó en ámbar, esa unión no coincide: soltala tocando su extremo y probá con otra.",
+        "Leé el dato y buscá la frase que dice lo mismo: she o he según la persona, la misma cosa, y si la tiene ('s got) o no la tiene (hasn't got)."
+      ],
+      "demo": {
+        "error": {
+          "h_hija": "hija__x",
+          "h_capitan": "capitan__c",
+          "h_esposa": "esposa__h",
+          "h_marinero": "marinero__m"
+        }
+      },
+      "enListado": false,
+      "modo": "clase",
+      "ambientacion": "cuento",
+      "_nota": "Mundo de clase ambientado en «El barco sin nadie» (fuente: generadores/mundos_clase_u02.py; molde: cuerdas_datos_l1 de A2 U01).",
+      "cuerdas": {
+        "izquierda": [
+          {
+            "id": "hija",
+            "texto": "Su hija tiene un lápiz."
+          },
+          {
+            "id": "capitan",
+            "texto": "El capitán no tiene un teléfono."
+          },
+          {
+            "id": "esposa",
+            "texto": "Su esposa tiene un mapa."
+          },
+          {
+            "id": "marinero",
+            "texto": "Un marinero tiene una carpeta."
+          }
+        ],
+        "derecha": [
+          {
+            "id": "h",
+            "texto": "She's got a pencil."
+          },
+          {
+            "id": "c",
+            "texto": "He hasn't got a phone."
+          },
+          {
+            "id": "e",
+            "texto": "She's got a map."
+          },
+          {
+            "id": "m",
+            "texto": "He's got a folder."
+          },
+          {
+            "id": "x",
+            "texto": "She hasn't got a map."
+          }
+        ]
+      },
+      "campos": [
+        {
+          "id": "hija",
+          "etiqueta": "Su hija tiene un lápiz."
+        },
+        {
+          "id": "capitan",
+          "etiqueta": "El capitán no tiene un teléfono."
+        },
+        {
+          "id": "esposa",
+          "etiqueta": "Su esposa tiene un mapa."
+        },
+        {
+          "id": "marinero",
+          "etiqueta": "Un marinero tiene una carpeta."
+        }
+      ],
+      "objetivo": {
+        "hija": "She's got a pencil.",
+        "capitan": "He hasn't got a phone.",
+        "esposa": "She's got a map.",
+        "marinero": "He's got a folder."
+      },
+      "piezas": [
+        {
+          "id": "hija__h",
+          "texto": "She's got a pencil.",
+          "efecto": {
+            "hija": "She's got a pencil."
+          }
+        },
+        {
+          "id": "hija__c",
+          "texto": "He hasn't got a phone.",
+          "efecto": {
+            "hija": "He hasn't got a phone."
+          }
+        },
+        {
+          "id": "hija__e",
+          "texto": "She's got a map.",
+          "efecto": {
+            "hija": "She's got a map."
+          }
+        },
+        {
+          "id": "hija__m",
+          "texto": "He's got a folder.",
+          "efecto": {
+            "hija": "He's got a folder."
+          }
+        },
+        {
+          "id": "hija__x",
+          "texto": "She hasn't got a map.",
+          "efecto": {
+            "hija": "She hasn't got a map."
+          }
+        },
+        {
+          "id": "capitan__h",
+          "texto": "She's got a pencil.",
+          "efecto": {
+            "capitan": "She's got a pencil."
+          }
+        },
+        {
+          "id": "capitan__c",
+          "texto": "He hasn't got a phone.",
+          "efecto": {
+            "capitan": "He hasn't got a phone."
+          }
+        },
+        {
+          "id": "capitan__e",
+          "texto": "She's got a map.",
+          "efecto": {
+            "capitan": "She's got a map."
+          }
+        },
+        {
+          "id": "capitan__m",
+          "texto": "He's got a folder.",
+          "efecto": {
+            "capitan": "He's got a folder."
+          }
+        },
+        {
+          "id": "capitan__x",
+          "texto": "She hasn't got a map.",
+          "efecto": {
+            "capitan": "She hasn't got a map."
+          }
+        },
+        {
+          "id": "esposa__h",
+          "texto": "She's got a pencil.",
+          "efecto": {
+            "esposa": "She's got a pencil."
+          }
+        },
+        {
+          "id": "esposa__c",
+          "texto": "He hasn't got a phone.",
+          "efecto": {
+            "esposa": "He hasn't got a phone."
+          }
+        },
+        {
+          "id": "esposa__e",
+          "texto": "She's got a map.",
+          "efecto": {
+            "esposa": "She's got a map."
+          }
+        },
+        {
+          "id": "esposa__m",
+          "texto": "He's got a folder.",
+          "efecto": {
+            "esposa": "He's got a folder."
+          }
+        },
+        {
+          "id": "esposa__x",
+          "texto": "She hasn't got a map.",
+          "efecto": {
+            "esposa": "She hasn't got a map."
+          }
+        },
+        {
+          "id": "marinero__h",
+          "texto": "She's got a pencil.",
+          "efecto": {
+            "marinero": "She's got a pencil."
+          }
+        },
+        {
+          "id": "marinero__c",
+          "texto": "He hasn't got a phone.",
+          "efecto": {
+            "marinero": "He hasn't got a phone."
+          }
+        },
+        {
+          "id": "marinero__e",
+          "texto": "She's got a map.",
+          "efecto": {
+            "marinero": "She's got a map."
+          }
+        },
+        {
+          "id": "marinero__m",
+          "texto": "He's got a folder.",
+          "efecto": {
+            "marinero": "He's got a folder."
+          }
+        },
+        {
+          "id": "marinero__x",
+          "texto": "She hasn't got a map.",
+          "efecto": {
+            "marinero": "She hasn't got a map."
+          }
+        }
+      ],
+      "huecos": [
+        {
+          "id": "h_hija",
+          "rotulo": "Su hija tiene un lápiz.",
+          "opciones": [
+            "hija__h",
+            "hija__c",
+            "hija__e",
+            "hija__m",
+            "hija__x"
+          ]
+        },
+        {
+          "id": "h_capitan",
+          "rotulo": "El capitán no tiene un teléfono.",
+          "opciones": [
+            "capitan__h",
+            "capitan__c",
+            "capitan__e",
+            "capitan__m",
+            "capitan__x"
+          ]
+        },
+        {
+          "id": "h_esposa",
+          "rotulo": "Su esposa tiene un mapa.",
+          "opciones": [
+            "esposa__h",
+            "esposa__c",
+            "esposa__e",
+            "esposa__m",
+            "esposa__x"
+          ]
+        },
+        {
+          "id": "h_marinero",
+          "rotulo": "Un marinero tiene una carpeta.",
+          "opciones": [
+            "marinero__h",
+            "marinero__c",
+            "marinero__e",
+            "marinero__m",
+            "marinero__x"
+          ]
+        }
+      ]
+    },
+    "avatar": _ASSET_DEDUP_17,
+    "modo": "clase",
+    "ambientacion": "cuento"
+  },
+  {
     "id": "EN-A2-U02-015",
     "status": "draft",
     "nivelId": "m0-n2",
@@ -5804,6 +6970,7 @@ const EXERCISES_M0 = [
     "feedbackWrong": "Esas dos no dicen lo mismo: buscá la misma frase, corta y larga.",
     "feedbackExtra": "He's got = He has got · She's got = She has got · hasn't = has not.",
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -5853,16 +7020,16 @@ const EXERCISES_M0 = [
             {
               "titulo": "She's got a pen.",
               "texto": "Ella tiene una lapicera.",
-              "img": _ASSET_DEDUP_25
+              "img": _ASSET_DEDUP_27
             },
             {
               "titulo": "He hasn't got a bag.",
               "texto": "Él no tiene una mochila.",
-              "img": _ASSET_DEDUP_31
+              "img": _ASSET_DEDUP_34
             }
           ]
         },
-        "audio": _ASSET_DEDUP_21
+        "audio": _ASSET_DEDUP_22
       }
     ],
     "modo": "personal"
@@ -5901,19 +7068,20 @@ const EXERCISES_M0 = [
             {
               "titulo": "She's got a pencil.",
               "texto": "Ella tiene un lápiz.",
-              "img": _ASSET_DEDUP_29
+              "img": _ASSET_DEDUP_31
             },
             {
               "titulo": "He's got a book.",
               "texto": "Él tiene un libro.",
-              "img": _ASSET_DEDUP_14
+              "img": _ASSET_DEDUP_32
             }
           ]
         },
-        "audio": _ASSET_DEDUP_21
+        "audio": _ASSET_DEDUP_22
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-016",
@@ -5969,7 +7137,7 @@ const EXERCISES_M0 = [
         "Maya: has she got a pen? Yes or no?"
       ]
     },
-    "image": _ASSET_DEDUP_25,
+    "image": _ASSET_DEDUP_27,
     "imageAlt": "Maya muestra una lapicera."
   },
   {
@@ -6008,6 +7176,7 @@ const EXERCISES_M0 = [
       "altExplanation": "El capitán es un hombre: he. Con he se usa la forma de tener que termina en s, y el but dice que el capitán sí tiene."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -6171,6 +7340,7 @@ const EXERCISES_M0 = [
       "altExplanation": "La frase tiene tres partes: quién tiene, la forma de tener y lo que tiene, con el lugar al final."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -6278,6 +7448,7 @@ const EXERCISES_M0 = [
       "altExplanation": "El capitán es he. Con he la forma de NO tener cambia: buscá la palabra que no es esa."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -6386,6 +7557,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Un marinero es una persona: he. Con he se usa la forma de tener que termina en s."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -6447,16 +7619,16 @@ const EXERCISES_M0 = [
             {
               "titulo": "she",
               "texto": "Maya",
-              "img": _ASSET_DEDUP_25
+              "img": _ASSET_DEDUP_27
             },
             {
               "titulo": "he",
               "texto": "Tom",
-              "img": _ASSET_DEDUP_26
+              "img": _ASSET_DEDUP_28
             }
           ]
         },
-        "audio": _ASSET_DEDUP_23
+        "audio": _ASSET_DEDUP_24
       },
       {
         "proposito": "ensenanza",
@@ -6476,7 +7648,7 @@ const EXERCISES_M0 = [
             "He haven't got a bag."
           ]
         },
-        "audio": _ASSET_DEDUP_24
+        "audio": _ASSET_DEDUP_25
       }
     ],
     "modo": "personal"
@@ -6523,16 +7695,16 @@ const EXERCISES_M0 = [
             {
               "titulo": "she",
               "texto": "su hija",
-              "img": _ASSET_DEDUP_29
+              "img": _ASSET_DEDUP_31
             },
             {
               "titulo": "he",
               "texto": "el capitán",
-              "img": _ASSET_DEDUP_14
+              "img": _ASSET_DEDUP_32
             }
           ]
         },
-        "audio": _ASSET_DEDUP_23
+        "audio": _ASSET_DEDUP_24
       },
       {
         "proposito": "ensenanza",
@@ -6552,10 +7724,218 @@ const EXERCISES_M0 = [
             "He haven't got a phone."
           ]
         },
-        "audio": _ASSET_DEDUP_24
+        "audio": _ASSET_DEDUP_25
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
+  },
+  {
+    "id": "EN-A2-U02-907",
+    "status": "draft",
+    "nivelId": "m0-n2",
+    "kind": "mundo",
+    "ordenFijo": true,
+    "stage": "Producción guiada",
+    "skill": "PROD_01",
+    "difficulty": 2,
+    "question": "Armá la frase del marinero y mirá qué marca el analizador.",
+    "feedback": "¡La línea quedó limpia!",
+    "feedbackWrong": "Mirá las filas marcadas: ahí está la pista.",
+    "hint": "Empezá por la primera fila marcada.",
+    "scaffold": {
+      "altExplanation": "Cada palabra cae en su lugar de la línea. Si una parte se subraya en ámbar, ahí está el problema: la línea de abajo te dice qué mirar, no cuál es la palabra."
+    },
+    "feedbackExtra": "Leé la línea como si la dijera el marinero: la hija del capitán es she, y con she la forma de tener es la que termina en s.",
+    "mundo": {
+      "id": "mundo-analizador-analizador_barco_clase_l2",
+      "tipo": "analizador",
+      "unidad": "en-a2-u02-things-and-school",
+      "leccion": "L2",
+      "desde": [
+        "EN-A2-U02-716",
+        "EN-A2-U02-718"
+      ],
+      "titulo": "Armá la frase del marinero y mirá qué marca el analizador.",
+      "consigna": {
+        "banner": "Un marinero cuenta qué tiene la hija del capitán. Armá la frase con las palabras: el analizador va marcando dónde algo no concuerda.",
+        "tip": "Cada palabra cae en su lugar de la línea. Probá y corregí hasta que la línea quede limpia."
+      },
+      "escena": {
+        "hablante": "Un marinero",
+        "receptor": "el analizador",
+        "imagen": "a2u02-barco-gibraltar",
+        "tablero": "Línea 1",
+        "tableroSub": "La frase del marinero",
+        "rotuloArmado": "Lo que dice el marinero",
+        "rotuloBanco": "Palabras"
+      },
+      "vocab": {
+        "dato": [
+          "parte",
+          "partes"
+        ],
+        "referencia": "lo que dice Maya",
+        "receptor": "El analizador",
+        "pieza": [
+          "palabra",
+          "palabras"
+        ],
+        "sobra": [
+          "parte de más",
+          "partes de más"
+        ],
+        "falta": [
+          "parte",
+          "partes"
+        ]
+      },
+      "textos": {
+        "okTitulo": "¡La línea quedó limpia!",
+        "okTexto": "Todas las partes de la frase concuerdan con lo que cuenta el marinero.",
+        "casiTitulo": "Casi."
+      },
+      "campos": [
+        {
+          "id": "sujeto",
+          "etiqueta": "Quién",
+          "pista": "su hija"
+        },
+        {
+          "id": "verbo",
+          "etiqueta": "Tener",
+          "pista": "tiene"
+        },
+        {
+          "id": "cosa",
+          "etiqueta": "Cosa",
+          "pista": "un lápiz"
+        }
+      ],
+      "objetivo": {
+        "sujeto": "His daughter",
+        "verbo": "has got",
+        "cosa": "a pencil"
+      },
+      "piezas": [
+        {
+          "id": "v2",
+          "texto": "have got",
+          "efecto": {
+            "verbo": "have got"
+          }
+        },
+        {
+          "id": "s1",
+          "texto": "His daughter",
+          "efecto": {
+            "sujeto": "His daughter"
+          }
+        },
+        {
+          "id": "c2",
+          "texto": "a pen",
+          "efecto": {
+            "cosa": "a pen"
+          }
+        },
+        {
+          "id": "v1",
+          "texto": "has got",
+          "efecto": {
+            "verbo": "has got"
+          }
+        },
+        {
+          "id": "c3",
+          "texto": "an pencil",
+          "efecto": null,
+          "forma": {
+            "campo": "cosa",
+            "valor": "an pencil"
+          }
+        },
+        {
+          "id": "s2",
+          "texto": "I",
+          "efecto": {
+            "sujeto": "I"
+          }
+        },
+        {
+          "id": "c1",
+          "texto": "a pencil",
+          "efecto": {
+            "cosa": "a pencil"
+          }
+        }
+      ],
+      "huecos": [
+        {
+          "id": "p1"
+        },
+        {
+          "id": "p2"
+        },
+        {
+          "id": "p3"
+        }
+      ],
+      "avisos": [
+        {
+          "campo": "verbo",
+          "si": {
+            "sujeto": "His daughter",
+            "verbo": "have got"
+          },
+          "texto": "«{verbo}» no concuerda con «{sujeto}»: con he o she la forma de tener cambia."
+        },
+        {
+          "campo": "verbo",
+          "texto": "«{verbo}» no es lo que cuenta el marinero."
+        },
+        {
+          "campo": "sujeto",
+          "texto": "«{sujeto}» no es de quien habla el marinero."
+        },
+        {
+          "campo": "cosa",
+          "si": {
+            "cosa": "an pencil"
+          },
+          "texto": "«{cosa}»: delante de pencil va otra palabra."
+        },
+        {
+          "campo": "cosa",
+          "texto": "«{cosa}» no es lo que tiene la hija del capitán."
+        }
+      ],
+      "reacciones": {
+        "ok": "",
+        "distinto": "",
+        "no-entendio": "",
+        "sobra": ""
+      },
+      "ayudas": [
+        "Cada palabra cae en su lugar de la línea. Si una parte se subraya en ámbar, ahí está el problema: la línea de abajo te dice qué mirar, no cuál es la palabra.",
+        "Leé la línea como si la dijera el marinero: la hija del capitán es she, y con she la forma de tener es la que termina en s."
+      ],
+      "demo": {
+        "error": {
+          "p1": "s1",
+          "p2": "v2",
+          "p3": "c3"
+        }
+      },
+      "nombre": "Analizador",
+      "modo": "clase",
+      "ambientacion": "cuento",
+      "enListado": false,
+      "_nota": "Mundo de clase ambientado en «El barco sin nadie» (fuente: generadores/mundos_clase_u02.py; molde: analizador_mama_l5 de A2 U01)."
+    },
+    "avatar": _ASSET_DEDUP_39,
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "status": "published",
@@ -6659,10 +8039,95 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Primero quién tiene (she o he), después la forma de tener con got y al final a o an y la cosa."
     },
+    "modo": "personal",
     "paraProfe": {
       "variantes": [
         "She has got a notebook.",
         "Maya has got a notebook."
+      ],
+      "errores": [
+        {
+          "si": "Escribe \"She have got a notebook\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        },
+        {
+          "si": "Escribe \"She got a notebook\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-720",
+    "status": "draft",
+    "nivelId": "m0-n2",
+    "kind": "fill",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "PROD_01",
+    "difficulty": 3,
+    "question": "Escribí con got que la hija del capitán tiene un cuaderno.",
+    "answer": "She's got a notebook.",
+    "acceptVariants": [
+      "She's got a notebook.",
+      "She's got a notebook",
+      "she's got a notebook.",
+      "she's got a notebook",
+      "She’s got a notebook.",
+      "She’s got a notebook",
+      "she’s got a notebook.",
+      "she’s got a notebook",
+      "She has got a notebook.",
+      "She has got a notebook",
+      "she has got a notebook.",
+      "she has got a notebook",
+      "His daughter has got a notebook.",
+      "His daughter has got a notebook",
+      "his daughter has got a notebook.",
+      "his daughter has got a notebook",
+      "His daughter's got a notebook.",
+      "His daughter's got a notebook",
+      "his daughter's got a notebook.",
+      "his daughter's got a notebook",
+      "His daughter’s got a notebook.",
+      "His daughter’s got a notebook",
+      "his daughter’s got a notebook.",
+      "his daughter’s got a notebook",
+      "The captain's daughter has got a notebook.",
+      "The captain's daughter has got a notebook",
+      "the captain's daughter has got a notebook.",
+      "the captain's daughter has got a notebook",
+      "The captain’s daughter has got a notebook.",
+      "The captain’s daughter has got a notebook",
+      "the captain’s daughter has got a notebook.",
+      "the captain’s daughter has got a notebook",
+      "The captain's daughter's got a notebook.",
+      "The captain's daughter's got a notebook",
+      "the captain's daughter's got a notebook.",
+      "the captain's daughter's got a notebook",
+      "The captain’s daughter’s got a notebook.",
+      "The captain’s daughter’s got a notebook",
+      "the captain’s daughter’s got a notebook.",
+      "the captain’s daughter’s got a notebook"
+    ],
+    "feedback": "¡Eso! Así se dice lo que tiene otra persona.",
+    "feedbackWrong": "Escribí la frase completa: quién, la forma de tener y la cosa con a o an.",
+    "hint": "Pensá en las tres partes de la frase.",
+    "feedbackExtra": "She's got a notebook. = Ella tiene un cuaderno. La hija del capitán es she; 's got = has got.",
+    "scaffold": {
+      "altExplanation": "Primero quién tiene (she o he), después la forma de tener con got y al final a o an y la cosa."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "variantes": [
+        "She has got a notebook.",
+        "His daughter has got a notebook."
       ],
       "errores": [
         {
@@ -6710,11 +8175,59 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Con he y con she la forma de tener cambia. Buscá la palabra que no es esa."
     },
+    "modo": "personal",
     "paraProfe": {
       "variantes": [],
       "errores": [
         {
           "si": "Marca got o Tom",
+          "hacer": "No intervenir. Registrar como error de forma."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-721",
+    "status": "draft",
+    "nivelId": "m0-n2",
+    "kind": "error-find",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "CORR_01",
+    "difficulty": 3,
+    "question": "Un marinero cuenta qué tiene el capitán, pero hay un error. Tocá la palabra que está mal y corregila.",
+    "sentence": [
+      "The",
+      "captain",
+      "have",
+      "got",
+      "a",
+      "pencil",
+      "and",
+      "a",
+      "book."
+    ],
+    "errorIndex": 2,
+    "correction": "has",
+    "feedback": "¡Eso! Con the captain (he) va esa palabra.",
+    "feedbackWrong": "Una palabra no es la que va después de the captain.",
+    "hint": "Mirá la palabra después de captain.",
+    "feedbackExtra": "The captain has got a pencil and a book. El capitán es he, y con he va has got.",
+    "scaffold": {
+      "altExplanation": "Con he y con she la forma de tener cambia. Buscá la palabra que no es esa."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "variantes": [],
+      "errores": [
+        {
+          "si": "Marca got o captain",
           "hacer": "No intervenir. Registrar como error de forma."
         }
       ],
@@ -6769,9 +8282,86 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Es la misma frase que para tener, pero con la forma de no tener: hasn't got."
     },
+    "modo": "personal",
     "paraProfe": {
       "variantes": [
         "He has not got a book."
+      ],
+      "errores": [
+        {
+          "si": "Escribe \"He doesn't got a book\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-722",
+    "status": "draft",
+    "nivelId": "m0-n2",
+    "kind": "fill",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "PROD_01",
+    "difficulty": 3,
+    "question": "Escribí con got que un marinero NO tiene un libro.",
+    "answer": "He hasn't got a book.",
+    "acceptVariants": [
+      "He hasn't got a book.",
+      "He hasn't got a book",
+      "he hasn't got a book.",
+      "he hasn't got a book",
+      "He hasn’t got a book.",
+      "He hasn’t got a book",
+      "he hasn’t got a book.",
+      "he hasn’t got a book",
+      "He has not got a book.",
+      "He has not got a book",
+      "he has not got a book.",
+      "he has not got a book",
+      "A sailor hasn't got a book.",
+      "A sailor hasn't got a book",
+      "a sailor hasn't got a book.",
+      "a sailor hasn't got a book",
+      "A sailor hasn’t got a book.",
+      "A sailor hasn’t got a book",
+      "a sailor hasn’t got a book.",
+      "a sailor hasn’t got a book",
+      "A sailor has not got a book.",
+      "A sailor has not got a book",
+      "a sailor has not got a book.",
+      "a sailor has not got a book",
+      "The sailor hasn't got a book.",
+      "The sailor hasn't got a book",
+      "the sailor hasn't got a book.",
+      "the sailor hasn't got a book",
+      "The sailor hasn’t got a book.",
+      "The sailor hasn’t got a book",
+      "the sailor hasn’t got a book.",
+      "the sailor hasn’t got a book",
+      "The sailor has not got a book.",
+      "The sailor has not got a book",
+      "the sailor has not got a book.",
+      "the sailor has not got a book"
+    ],
+    "feedback": "¡Eso! Así se dice que otra persona no tiene algo.",
+    "feedbackWrong": "Escribí la frase completa: quién, la forma de no tener y la cosa con a o an.",
+    "hint": "Es la forma negativa de tener.",
+    "feedbackExtra": "He hasn't got a book. = Él no tiene un libro. Un marinero es he; hasn't = has not.",
+    "scaffold": {
+      "altExplanation": "Es la misma frase que para tener, pero con la forma de no tener: hasn't got."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "variantes": [
+        "He has not got a book.",
+        "A sailor hasn't got a book."
       ],
       "errores": [
         {
@@ -7015,7 +8605,7 @@ const EXERCISES_M0 = [
         "idea": "Para preguntar, cambiás el orden: have pasa al principio. You've got a pen. = Vos tenés una lapicera. Have you got a pen? = ¿Tenés una lapicera? La pregunta termina con ?.",
         "media": {
           "tipo": "hero",
-          "img": _ASSET_DEDUP_34,
+          "img": _ASSET_DEDUP_40,
           "alt": "Maya le pregunta algo a Tom."
         },
         "audio": "../pdp-assets/401d79099600a6d080b838335732c9b1.mp3"
@@ -7036,16 +8626,16 @@ const EXERCISES_M0 = [
             {
               "titulo": "Have you got a phone?",
               "texto": "Yes, I have.",
-              "img": _ASSET_DEDUP_26
+              "img": _ASSET_DEDUP_28
             },
             {
               "titulo": "Have you got a map?",
               "texto": "No, I haven't.",
-              "img": _ASSET_DEDUP_35
+              "img": _ASSET_DEDUP_41
             }
           ]
         },
-        "audio": _ASSET_DEDUP_36
+        "audio": _ASSET_DEDUP_42
       },
       {
         "proposito": "ensenanza",
@@ -7065,7 +8655,7 @@ const EXERCISES_M0 = [
             "Yes, I have got."
           ]
         },
-        "audio": _ASSET_DEDUP_37
+        "audio": _ASSET_DEDUP_43
       }
     ],
     "modo": "personal",
@@ -7159,6 +8749,11 @@ const EXERCISES_M0 = [
           "La pregunta termina con ?."
         ],
         "idea": "Para preguntar, cambiás el orden: have pasa al principio. You've got a map. = Vos tenés un mapa. Have you got a map? = ¿Tenés un mapa? La pregunta termina con ?.",
+        "media": {
+          "tipo": "hero",
+          "img": _ASSET_DEDUP_39,
+          "alt": "Los marineros hablan entre ellos al llegar a Gibraltar."
+        },
         "audio": "../pdp-assets/2f4d2f6a23a2126901b993b5cb48e7d3.mp3"
       },
       {
@@ -7182,11 +8777,11 @@ const EXERCISES_M0 = [
             {
               "titulo": "Have you got a map?",
               "texto": "No, I haven't.",
-              "img": _ASSET_DEDUP_35
+              "img": _ASSET_DEDUP_41
             }
           ]
         },
-        "audio": _ASSET_DEDUP_36
+        "audio": _ASSET_DEDUP_42
       },
       {
         "proposito": "ensenanza",
@@ -7206,10 +8801,11 @@ const EXERCISES_M0 = [
             "Yes, I have got."
           ]
         },
-        "audio": _ASSET_DEDUP_37
+        "audio": _ASSET_DEDUP_43
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-024",
@@ -7280,6 +8876,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Un marinero pregunta con have al principio y el otro contesta repitiendo have. Escuchá qué cosa pregunta y si el otro dice que sí o que no."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -7329,11 +8926,11 @@ const EXERCISES_M0 = [
             {
               "titulo": "Has Leo got a map?",
               "texto": "No, he hasn't.",
-              "img": _ASSET_DEDUP_38
+              "img": _ASSET_DEDUP_44
             }
           ]
         },
-        "audio": _ASSET_DEDUP_39
+        "audio": _ASSET_DEDUP_45
       }
     ],
     "modo": "personal"
@@ -7363,14 +8960,15 @@ const EXERCISES_M0 = [
             {
               "titulo": "Has his daughter got a pencil?",
               "texto": "Yes, she has.",
-              "img": _ASSET_DEDUP_29
+              "img": _ASSET_DEDUP_31
             }
           ]
         },
-        "audio": _ASSET_DEDUP_39
+        "audio": _ASSET_DEDUP_45
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-025",
@@ -7441,6 +9039,7 @@ const EXERCISES_M0 = [
       "altExplanation": "La hija del capitán es she: por eso la pregunta empieza con has. Escuchá qué cosa nombran y si la respuesta es sí o no."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -7487,7 +9086,7 @@ const EXERCISES_M0 = [
           "img": "../pdp-assets/5ac980f519776f7effd8c799bd98c8ae.jpg",
           "alt": "Sofia abre su mochila: adentro hay una lapicera y un libro."
         },
-        "audio": _ASSET_DEDUP_40
+        "audio": _ASSET_DEDUP_46
       }
     ],
     "modo": "personal"
@@ -7518,10 +9117,16 @@ const EXERCISES_M0 = [
           "La respuesta no es sí ni no: es lo que tiene."
         ],
         "idea": "Para saber qué cosas tiene alguien: What have you got? I've got a book and a map. = Tengo un libro y un mapa. La respuesta no es sí ni no: es lo que tiene.",
-        "audio": _ASSET_DEDUP_40
+        "media": {
+          "tipo": "hero",
+          "img": _ASSET_DEDUP_26,
+          "alt": "Un marinero abre su baúl: adentro están sus cosas."
+        },
+        "audio": _ASSET_DEDUP_46
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-026",
@@ -7608,6 +9213,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Si le preguntan a vos (you), empieza con have; si preguntan por el capitán o su esposa (he o she), con has. What pregunta qué cosas tiene."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -7851,6 +9457,7 @@ const EXERCISES_M0 = [
       "altExplanation": "El marinero pregunta con have y vos sí tenés el mapa: la respuesta corta repite esa palabra, entera, con I."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -7869,6 +9476,213 @@ const EXERCISES_M0 = [
         "Have you got a map? — Yes, …"
       ]
     }
+  },
+  {
+    "id": "EN-A2-U02-908",
+    "status": "draft",
+    "nivelId": "m0-n3",
+    "kind": "mundo",
+    "ordenFijo": true,
+    "stage": "Producción guiada",
+    "skill": "PROD_01",
+    "difficulty": 2,
+    "question": "Armá la pregunta del marinero y mirá qué marca el analizador.",
+    "feedback": "¡La línea quedó limpia!",
+    "feedbackWrong": "Mirá las filas marcadas: ahí está la pista.",
+    "hint": "Empezá por la primera fila marcada.",
+    "scaffold": {
+      "altExplanation": "Armá la pregunta pieza por pieza. Si la primera parte queda en ámbar, revisá con qué palabra empieza una pregunta por el capitán."
+    },
+    "feedbackExtra": "Una pregunta con got empieza con la forma de tener. El capitán es he: con he esa forma termina en s.",
+    "mundo": {
+      "id": "mundo-analizador-analizador_barco_clase_l3",
+      "tipo": "analizador",
+      "unidad": "en-a2-u02-things-and-school",
+      "leccion": "L3",
+      "desde": [
+        "EN-A2-U02-726",
+        "EN-A2-U02-727"
+      ],
+      "titulo": "Armá la pregunta del marinero y mirá qué marca el analizador.",
+      "consigna": {
+        "banner": "Un marinero quiere saber si el capitán tiene un libro. Armá la pregunta: el analizador va marcando dónde algo no concuerda.",
+        "tip": "Cada palabra cae en su lugar de la línea. Probá y corregí hasta que la línea quede limpia."
+      },
+      "escena": {
+        "hablante": "Un marinero",
+        "receptor": "el analizador",
+        "imagen": "a2u02-barco-capitan",
+        "tablero": "Línea 1",
+        "tableroSub": "La pregunta del marinero",
+        "rotuloArmado": "Lo que dice el marinero",
+        "rotuloBanco": "Palabras"
+      },
+      "vocab": {
+        "dato": [
+          "parte",
+          "partes"
+        ],
+        "referencia": "lo que dice Maya",
+        "receptor": "El analizador",
+        "pieza": [
+          "palabra",
+          "palabras"
+        ],
+        "sobra": [
+          "parte de más",
+          "partes de más"
+        ],
+        "falta": [
+          "parte",
+          "partes"
+        ]
+      },
+      "textos": {
+        "okTitulo": "¡La línea quedó limpia!",
+        "okTexto": "Todas las partes de la frase concuerdan con lo que cuenta el marinero.",
+        "casiTitulo": "Casi."
+      },
+      "campos": [
+        {
+          "id": "inicio",
+          "etiqueta": "Empieza",
+          "pista": "¿tiene…?"
+        },
+        {
+          "id": "quien",
+          "etiqueta": "Quién",
+          "pista": "el capitán"
+        },
+        {
+          "id": "cosa",
+          "etiqueta": "Cosa",
+          "pista": "un libro"
+        }
+      ],
+      "objetivo": {
+        "inicio": "Has",
+        "quien": "the captain got",
+        "cosa": "a book?"
+      },
+      "piezas": [
+        {
+          "id": "q2",
+          "texto": "his daughter got",
+          "efecto": {
+            "quien": "his daughter got"
+          }
+        },
+        {
+          "id": "i1",
+          "texto": "Has",
+          "efecto": {
+            "inicio": "Has"
+          }
+        },
+        {
+          "id": "c2",
+          "texto": "a map?",
+          "efecto": {
+            "cosa": "a map?"
+          }
+        },
+        {
+          "id": "q1",
+          "texto": "the captain got",
+          "efecto": {
+            "quien": "the captain got"
+          }
+        },
+        {
+          "id": "i3",
+          "texto": "Does",
+          "efecto": null,
+          "forma": {
+            "campo": "inicio",
+            "valor": "Does"
+          }
+        },
+        {
+          "id": "i2",
+          "texto": "Have",
+          "efecto": {
+            "inicio": "Have"
+          }
+        },
+        {
+          "id": "c1",
+          "texto": "a book?",
+          "efecto": {
+            "cosa": "a book?"
+          }
+        }
+      ],
+      "huecos": [
+        {
+          "id": "p1"
+        },
+        {
+          "id": "p2"
+        },
+        {
+          "id": "p3"
+        }
+      ],
+      "avisos": [
+        {
+          "campo": "inicio",
+          "si": {
+            "quien": "the captain got",
+            "inicio": "Have"
+          },
+          "texto": "«{inicio}» no concuerda con «{quien}»: si preguntás por he o she, la pregunta empieza con otra palabra."
+        },
+        {
+          "campo": "inicio",
+          "si": {
+            "inicio": "Does"
+          },
+          "texto": "«{inicio}»: con got la pregunta no empieza así."
+        },
+        {
+          "campo": "inicio",
+          "texto": "«{inicio}» no abre la pregunta del marinero."
+        },
+        {
+          "campo": "quien",
+          "texto": "«{quien}» no es por quien pregunta el marinero."
+        },
+        {
+          "campo": "cosa",
+          "texto": "«{cosa}» no es lo que quiere saber el marinero."
+        }
+      ],
+      "reacciones": {
+        "ok": "",
+        "distinto": "",
+        "no-entendio": "",
+        "sobra": ""
+      },
+      "ayudas": [
+        "Armá la pregunta pieza por pieza. Si la primera parte queda en ámbar, revisá con qué palabra empieza una pregunta por el capitán.",
+        "Una pregunta con got empieza con la forma de tener. El capitán es he: con he esa forma termina en s."
+      ],
+      "demo": {
+        "error": {
+          "p1": "i2",
+          "p2": "q1",
+          "p3": "c2"
+        }
+      },
+      "nombre": "Analizador",
+      "modo": "clase",
+      "ambientacion": "cuento",
+      "enListado": false,
+      "_nota": "Mundo de clase ambientado en «El barco sin nadie» (fuente: generadores/mundos_clase_u02.py; molde: analizador_mama_l5 de A2 U01)."
+    },
+    "avatar": _ASSET_DEDUP_32,
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-303",
@@ -7903,10 +9717,10 @@ const EXERCISES_M0 = [
         "idea": "En la pregunta, have o has va primero. Have you got a pen? = ¿Tenés una lapicera? Has Maya got a ruler? = ¿Maya tiene una regla? La respuesta corta repite have o has.",
         "media": {
           "tipo": "hero",
-          "img": _ASSET_DEDUP_34,
+          "img": _ASSET_DEDUP_40,
           "alt": "Maya le pregunta algo a Tom."
         },
-        "audio": _ASSET_DEDUP_21
+        "audio": _ASSET_DEDUP_22
       }
     ],
     "modo": "personal"
@@ -7942,10 +9756,16 @@ const EXERCISES_M0 = [
           "La respuesta corta repite have o has."
         ],
         "idea": "En la pregunta, have o has va primero. Have you got a map? = ¿Tenés un mapa? Has the captain got a book? = ¿El capitán tiene un libro? La respuesta corta repite have o has.",
-        "audio": _ASSET_DEDUP_21
+        "media": {
+          "tipo": "hero",
+          "img": _ASSET_DEDUP_39,
+          "alt": "Los marineros hablan entre ellos al llegar a Gibraltar."
+        },
+        "audio": _ASSET_DEDUP_22
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-028",
@@ -8001,7 +9821,7 @@ const EXERCISES_M0 = [
         "Have you got a pen? And you?"
       ]
     },
-    "image": _ASSET_DEDUP_34,
+    "image": _ASSET_DEDUP_40,
     "imageAlt": "Maya le hace una pregunta a Tom."
   },
   {
@@ -8040,6 +9860,7 @@ const EXERCISES_M0 = [
       "altExplanation": "El capitán le pregunta a un marinero (you). La pregunta con got empieza con la forma de tener que va con you; no se usa do."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -8177,6 +9998,7 @@ const EXERCISES_M0 = [
       "altExplanation": "Captain Briggs es el capitán (he): la pregunta empieza con has, después va él, después got y al final la cosa."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -8261,6 +10083,7 @@ const EXERCISES_M0 = [
       "altExplanation": "El capitán pregunta por un marinero (he): has va primero. Escuchá de quién pregunta y qué cosa nombra."
     },
     "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "errores": [
         {
@@ -8321,16 +10144,16 @@ const EXERCISES_M0 = [
             {
               "titulo": "Yes, I have.",
               "texto": "Sí, tengo.",
-              "img": _ASSET_DEDUP_26
+              "img": _ASSET_DEDUP_28
             },
             {
               "titulo": "No, I haven't.",
               "texto": "No, no tengo.",
-              "img": _ASSET_DEDUP_35
+              "img": _ASSET_DEDUP_41
             }
           ]
         },
-        "audio": _ASSET_DEDUP_23
+        "audio": _ASSET_DEDUP_24
       },
       {
         "proposito": "ensenanza",
@@ -8350,7 +10173,7 @@ const EXERCISES_M0 = [
             "Yes, he's."
           ]
         },
-        "audio": _ASSET_DEDUP_24
+        "audio": _ASSET_DEDUP_25
       }
     ],
     "modo": "personal"
@@ -8401,11 +10224,11 @@ const EXERCISES_M0 = [
             {
               "titulo": "No, I haven't.",
               "texto": "No, no tengo.",
-              "img": _ASSET_DEDUP_35
+              "img": _ASSET_DEDUP_41
             }
           ]
         },
-        "audio": _ASSET_DEDUP_23
+        "audio": _ASSET_DEDUP_24
       },
       {
         "proposito": "ensenanza",
@@ -8425,10 +10248,361 @@ const EXERCISES_M0 = [
             "Yes, he's."
           ]
         },
-        "audio": _ASSET_DEDUP_24
+        "audio": _ASSET_DEDUP_25
       }
     ],
-    "modo": "clase"
+    "modo": "clase",
+    "ambientacion": "cuento"
+  },
+  {
+    "id": "EN-A2-U02-909",
+    "status": "draft",
+    "nivelId": "m0-n3",
+    "kind": "mundo",
+    "ordenFijo": true,
+    "stage": "Producción guiada",
+    "skill": "PROD_01",
+    "difficulty": 2,
+    "question": "Uní cada situación con su respuesta corta.",
+    "feedback": "¡Todas las cuerdas se iluminaron!",
+    "feedbackWrong": "Mirá las filas marcadas: ahí está la pista.",
+    "hint": "Empezá por la primera fila marcada.",
+    "scaffold": {
+      "altExplanation": "Cada situación tiene una sola cuerda. Si una quedó en ámbar, esa respuesta no coincide: soltala tocando su extremo y probá con otra."
+    },
+    "feedbackExtra": "La respuesta corta repite quién (I, he o she) y la forma de tener: have o has si es sí; haven't o hasn't si es no.",
+    "mundo": {
+      "id": "mundo-cuerdas-cuerdas_barco_clase_l3",
+      "tipo": "cuerdas",
+      "nombre": "Cuerdas - datos",
+      "unidad": "en-a2-u02-things-and-school",
+      "leccion": "L3",
+      "desde": [
+        "EN-A2-U02-724",
+        "EN-A2-U02-725"
+      ],
+      "titulo": "Uní cada situación con su respuesta corta.",
+      "consigna": {
+        "banner": "En el barco se hacen preguntas. Uní cada situación con la respuesta corta en inglés que corresponde.",
+        "tip": "Tocá uno de la izquierda y después el que le corresponde a la derecha. Para soltar una cuerda, tocá su extremo."
+      },
+      "escena": {
+        "hablante": "Un marinero",
+        "receptor": "el capitán",
+        "imagen": "a2u02-barco-cubierta",
+        "tablero": "Unir",
+        "rotuloIzq": "SITUACIÓN",
+        "rotuloDer": "EN INGLÉS",
+        "marcoCuerdas": "mundo-marco-cuerdas",
+        "cartel": "mundo-cartel-oro",
+        "marcoImg": _ASSET_DEDUP_37,
+        "cartelImg": _ASSET_DEDUP_38
+      },
+      "vocab": {
+        "dato": [
+          "cuerda",
+          "cuerdas"
+        ],
+        "referencia": "lo que dice el marinero",
+        "receptor": "el capitán",
+        "pieza": [
+          "unión",
+          "uniones"
+        ],
+        "sobra": [
+          "cuerda de más",
+          "cuerdas de más"
+        ],
+        "falta": [
+          "cuerda",
+          "cuerdas"
+        ]
+      },
+      "textos": {
+        "okTitulo": "¡Todas las cuerdas se iluminaron!",
+        "okTexto": "Cada uno quedó unido con lo que le corresponde.",
+        "casiTitulo": "Casi."
+      },
+      "reacciones": {
+        "ok": "",
+        "distinto": "",
+        "no-entendio": "",
+        "sobra": ""
+      },
+      "ayudas": [
+        "Cada situación tiene una sola cuerda. Si una quedó en ámbar, esa respuesta no coincide: soltala tocando su extremo y probá con otra.",
+        "La respuesta corta repite quién (I, he o she) y la forma de tener: have o has si es sí; haven't o hasn't si es no."
+      ],
+      "demo": {
+        "error": {
+          "h_yo-si": "yo-si__a",
+          "h_yo-no": "yo-no__a",
+          "h_capitan": "capitan__x",
+          "h_hija": "hija__d"
+        }
+      },
+      "enListado": false,
+      "modo": "clase",
+      "ambientacion": "cuento",
+      "_nota": "Mundo de clase ambientado en «El barco sin nadie» (fuente: generadores/mundos_clase_u02.py; molde: cuerdas_datos_l1 de A2 U01).",
+      "cuerdas": {
+        "izquierda": [
+          {
+            "id": "yo-si",
+            "texto": "¿Vos tenés un mapa? Sí."
+          },
+          {
+            "id": "yo-no",
+            "texto": "¿Vos tenés una regla? No."
+          },
+          {
+            "id": "capitan",
+            "texto": "¿El capitán tiene un libro? Sí."
+          },
+          {
+            "id": "hija",
+            "texto": "¿Su hija tiene una mochila? No."
+          }
+        ],
+        "derecha": [
+          {
+            "id": "a",
+            "texto": "Yes, I have."
+          },
+          {
+            "id": "b",
+            "texto": "No, I haven't."
+          },
+          {
+            "id": "c",
+            "texto": "Yes, he has."
+          },
+          {
+            "id": "d",
+            "texto": "No, she hasn't."
+          },
+          {
+            "id": "x",
+            "texto": "Yes, she has."
+          }
+        ]
+      },
+      "campos": [
+        {
+          "id": "yo-si",
+          "etiqueta": "¿Vos tenés un mapa? Sí."
+        },
+        {
+          "id": "yo-no",
+          "etiqueta": "¿Vos tenés una regla? No."
+        },
+        {
+          "id": "capitan",
+          "etiqueta": "¿El capitán tiene un libro? Sí."
+        },
+        {
+          "id": "hija",
+          "etiqueta": "¿Su hija tiene una mochila? No."
+        }
+      ],
+      "objetivo": {
+        "yo-si": "Yes, I have.",
+        "yo-no": "No, I haven't.",
+        "capitan": "Yes, he has.",
+        "hija": "No, she hasn't."
+      },
+      "piezas": [
+        {
+          "id": "yo-si__a",
+          "texto": "Yes, I have.",
+          "efecto": {
+            "yo-si": "Yes, I have."
+          }
+        },
+        {
+          "id": "yo-si__b",
+          "texto": "No, I haven't.",
+          "efecto": {
+            "yo-si": "No, I haven't."
+          }
+        },
+        {
+          "id": "yo-si__c",
+          "texto": "Yes, he has.",
+          "efecto": {
+            "yo-si": "Yes, he has."
+          }
+        },
+        {
+          "id": "yo-si__d",
+          "texto": "No, she hasn't.",
+          "efecto": {
+            "yo-si": "No, she hasn't."
+          }
+        },
+        {
+          "id": "yo-si__x",
+          "texto": "Yes, she has.",
+          "efecto": {
+            "yo-si": "Yes, she has."
+          }
+        },
+        {
+          "id": "yo-no__a",
+          "texto": "Yes, I have.",
+          "efecto": {
+            "yo-no": "Yes, I have."
+          }
+        },
+        {
+          "id": "yo-no__b",
+          "texto": "No, I haven't.",
+          "efecto": {
+            "yo-no": "No, I haven't."
+          }
+        },
+        {
+          "id": "yo-no__c",
+          "texto": "Yes, he has.",
+          "efecto": {
+            "yo-no": "Yes, he has."
+          }
+        },
+        {
+          "id": "yo-no__d",
+          "texto": "No, she hasn't.",
+          "efecto": {
+            "yo-no": "No, she hasn't."
+          }
+        },
+        {
+          "id": "yo-no__x",
+          "texto": "Yes, she has.",
+          "efecto": {
+            "yo-no": "Yes, she has."
+          }
+        },
+        {
+          "id": "capitan__a",
+          "texto": "Yes, I have.",
+          "efecto": {
+            "capitan": "Yes, I have."
+          }
+        },
+        {
+          "id": "capitan__b",
+          "texto": "No, I haven't.",
+          "efecto": {
+            "capitan": "No, I haven't."
+          }
+        },
+        {
+          "id": "capitan__c",
+          "texto": "Yes, he has.",
+          "efecto": {
+            "capitan": "Yes, he has."
+          }
+        },
+        {
+          "id": "capitan__d",
+          "texto": "No, she hasn't.",
+          "efecto": {
+            "capitan": "No, she hasn't."
+          }
+        },
+        {
+          "id": "capitan__x",
+          "texto": "Yes, she has.",
+          "efecto": {
+            "capitan": "Yes, she has."
+          }
+        },
+        {
+          "id": "hija__a",
+          "texto": "Yes, I have.",
+          "efecto": {
+            "hija": "Yes, I have."
+          }
+        },
+        {
+          "id": "hija__b",
+          "texto": "No, I haven't.",
+          "efecto": {
+            "hija": "No, I haven't."
+          }
+        },
+        {
+          "id": "hija__c",
+          "texto": "Yes, he has.",
+          "efecto": {
+            "hija": "Yes, he has."
+          }
+        },
+        {
+          "id": "hija__d",
+          "texto": "No, she hasn't.",
+          "efecto": {
+            "hija": "No, she hasn't."
+          }
+        },
+        {
+          "id": "hija__x",
+          "texto": "Yes, she has.",
+          "efecto": {
+            "hija": "Yes, she has."
+          }
+        }
+      ],
+      "huecos": [
+        {
+          "id": "h_yo-si",
+          "rotulo": "¿Vos tenés un mapa? Sí.",
+          "opciones": [
+            "yo-si__a",
+            "yo-si__b",
+            "yo-si__c",
+            "yo-si__d",
+            "yo-si__x"
+          ]
+        },
+        {
+          "id": "h_yo-no",
+          "rotulo": "¿Vos tenés una regla? No.",
+          "opciones": [
+            "yo-no__a",
+            "yo-no__b",
+            "yo-no__c",
+            "yo-no__d",
+            "yo-no__x"
+          ]
+        },
+        {
+          "id": "h_capitan",
+          "rotulo": "¿El capitán tiene un libro? Sí.",
+          "opciones": [
+            "capitan__a",
+            "capitan__b",
+            "capitan__c",
+            "capitan__d",
+            "capitan__x"
+          ]
+        },
+        {
+          "id": "h_hija",
+          "rotulo": "¿Su hija tiene una mochila? No.",
+          "opciones": [
+            "hija__a",
+            "hija__b",
+            "hija__c",
+            "hija__d",
+            "hija__x"
+          ]
+        }
+      ]
+    },
+    "avatar": _ASSET_DEDUP_17,
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "status": "published",
@@ -8468,7 +10642,7 @@ const EXERCISES_M0 = [
       ],
       "ayudaModelo": [
         "Has the captain got a map?",
-        "Has his daughter got a pen?"
+        "Has his daughter got a map?"
       ],
       "errores": [
         {
@@ -8511,6 +10685,52 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Empezá por la palabra de la pregunta, después quién, got y la cosa con a o an."
     },
+    "modo": "personal",
+    "paraProfe": {
+      "variantes": [],
+      "errores": [
+        {
+          "si": "Escribe \"You have got a bag?\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        },
+        {
+          "si": "Escribe \"Do you got a bag?\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-731",
+    "status": "draft",
+    "nivelId": "m0-n3",
+    "kind": "fill",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "PROD_01",
+    "difficulty": 3,
+    "question": "Un marinero le pregunta a otro. Escribí con got la pregunta: ¿tenés una mochila?",
+    "answer": "Have you got a bag?",
+    "acceptVariants": [
+      "Have you got a bag?",
+      "Have you got a bag",
+      "have you got a bag?",
+      "have you got a bag"
+    ],
+    "feedback": "¡Eso! Así se pregunta si alguien tiene algo.",
+    "feedbackWrong": "Escribí la pregunta completa: la palabra que va primero, quién, got y la cosa con a o an.",
+    "hint": "Pensá en el orden de una pregunta.",
+    "feedbackExtra": "Have you got a bag? = ¿Tenés una mochila? La forma de tener pasa al principio; delante de bag va a.",
+    "scaffold": {
+      "altExplanation": "Empezá por la palabra de la pregunta, después quién, got y la cosa con a o an."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "variantes": [],
       "errores": [
@@ -8562,6 +10782,62 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "La respuesta corta empieza con no, sigue I y la forma negativa de la palabra que abrió la pregunta."
     },
+    "modo": "personal",
+    "paraProfe": {
+      "variantes": [
+        "No, I have not."
+      ],
+      "errores": [
+        {
+          "si": "Escribe \"No, I haven't got\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        },
+        {
+          "si": "Escribe \"No, I not\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-732",
+    "status": "draft",
+    "nivelId": "m0-n3",
+    "kind": "fill",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "PROD_01",
+    "difficulty": 3,
+    "question": "El capitán te pregunta «Have you got a map?». Vos NO tenés un mapa. Escribí tu respuesta corta.",
+    "answer": "No, I haven't.",
+    "acceptVariants": [
+      "No, I haven't.",
+      "No, I haven't",
+      "no, I haven't.",
+      "no, I haven't",
+      "No, I haven’t.",
+      "No, I haven’t",
+      "no, I haven’t.",
+      "no, I haven’t",
+      "No, I have not.",
+      "No, I have not",
+      "no, I have not.",
+      "no, I have not"
+    ],
+    "feedback": "¡Eso! La respuesta corta es no y repite la forma de tener.",
+    "feedbackWrong": "Escribí la respuesta corta: no, una coma y I con la forma negativa.",
+    "hint": "La respuesta corta repite una palabra de la pregunta.",
+    "feedbackExtra": "No, I haven't. = No, no tengo. Es la respuesta corta: no se repite got ni la cosa.",
+    "scaffold": {
+      "altExplanation": "La respuesta corta empieza con no, sigue I y la forma negativa de la palabra que abrió la pregunta."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
     "paraProfe": {
       "variantes": [
         "No, I have not."
@@ -8609,11 +10885,56 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Con he y she la pregunta empieza con la forma que termina en s. Mirá la primera palabra."
     },
+    "modo": "personal",
     "paraProfe": {
       "variantes": [],
       "errores": [
         {
           "si": "Marca got o phone",
+          "hacer": "No intervenir. Registrar como error de forma."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-733",
+    "status": "draft",
+    "nivelId": "m0-n3",
+    "kind": "error-find",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "CORR_01",
+    "difficulty": 3,
+    "question": "Un marinero pregunta por la hija del capitán, pero hay un error. Tocá la palabra que está mal y corregila.",
+    "sentence": [
+      "Have",
+      "his",
+      "daughter",
+      "got",
+      "a",
+      "pencil?"
+    ],
+    "errorIndex": 0,
+    "correction": "Has",
+    "feedback": "¡Eso! Con la hija del capitán (she) la pregunta empieza con esa palabra.",
+    "feedbackWrong": "Una palabra no es la que abre la pregunta cuando se habla de ella.",
+    "hint": "Mirá la primera palabra de la pregunta.",
+    "feedbackExtra": "Has his daughter got a pencil? Con he y she la pregunta empieza con has; have es para you, I, we y they.",
+    "scaffold": {
+      "altExplanation": "Con he y she la pregunta empieza con la forma que termina en s. Mirá la primera palabra."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "variantes": [],
+      "errores": [
+        {
+          "si": "Marca got o pencil",
           "hacer": "No intervenir. Registrar como error de forma."
         }
       ],
@@ -8634,7 +10955,7 @@ const EXERCISES_M0 = [
     "feedback": "¡Bien leído!",
     "pantallas": [
       {
-        "img": _ASSET_DEDUP_41,
+        "img": _ASSET_DEDUP_47,
         "s": [
           [
             "London, summer 1858.",
@@ -8651,7 +10972,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_42,
+        "img": _ASSET_DEDUP_48,
         "s": [
           [
             "Why? London has no good system for dirty water.",
@@ -8668,7 +10989,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_43,
+        "img": _ASSET_DEDUP_49,
         "s": [
           [
             "The smell arrives at Parliament, next to the river.",
@@ -8729,7 +11050,7 @@ const EXERCISES_M0 = [
     "feedback": "¡Bien leído!",
     "pantallas": [
       {
-        "img": _ASSET_DEDUP_44,
+        "img": _ASSET_DEDUP_50,
         "s": [
           [
             "At that time, many doctors believe that bad smells make people sick.",
@@ -8742,7 +11063,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_45,
+        "img": _ASSET_DEDUP_51,
         "s": [
           [
             "An engineer, Joseph Bazalgette, has a plan.",
@@ -8759,7 +11080,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_46,
+        "img": _ASSET_DEDUP_52,
         "s": [
           [
             "The work starts in 1859 and takes many years.",
@@ -8834,31 +11155,31 @@ const EXERCISES_M0 = [
           "items": [
             {
               "titulo": "I",
-              "img": _ASSET_DEDUP_47
+              "img": _ASSET_DEDUP_53
             },
             {
               "titulo": "you",
-              "img": _ASSET_DEDUP_17
-            },
-            {
-              "titulo": "we",
               "img": _ASSET_DEDUP_18
             },
             {
-              "titulo": "they",
+              "titulo": "we",
               "img": _ASSET_DEDUP_19
             },
             {
+              "titulo": "they",
+              "img": _ASSET_DEDUP_20
+            },
+            {
               "titulo": "he",
-              "img": _ASSET_DEDUP_48
+              "img": _ASSET_DEDUP_54
             },
             {
               "titulo": "she",
-              "img": _ASSET_DEDUP_49
+              "img": _ASSET_DEDUP_55
             }
           ]
         },
-        "audio": "../pdp-assets/404477cea196e637ca22d23b0f399caf.mp3"
+        "audio": _ASSET_DEDUP_56
       },
       {
         "proposito": "ensenanza",
@@ -8878,9 +11199,10 @@ const EXERCISES_M0 = [
             "I don't got a ruler."
           ]
         },
-        "audio": "../pdp-assets/5d5264d2d4e836a0706a2089a2f5602c.mp3"
+        "audio": _ASSET_DEDUP_57
       }
     ],
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -8945,6 +11267,64 @@ const EXERCISES_M0 = [
     }
   },
   {
+    "id": "EN-A2-U02-734",
+    "status": "draft",
+    "nivelId": "m0-n4",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "elegir have o has",
+    "feedback": "Ya sabés elegir have o has.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "¿Quién tiene?",
+        "title": "I, you, we, they y he, she",
+        "regla": "Con **I, you, we, they** va **have got**. Con **he, she** va **has got**.",
+        "notas": [
+          "'s quiere decir has cuando después viene got."
+        ],
+        "idea": "Con I, you, we, they va have got. Con he, she va has got. 's quiere decir has cuando después viene got.",
+        "media": {
+          "tipo": "rejilla",
+          "items": [
+            {
+              "titulo": "I · you · we · they",
+              "img": _ASSET_DEDUP_58
+            },
+            {
+              "titulo": "he · she",
+              "img": _ASSET_DEDUP_59
+            }
+          ]
+        },
+        "audio": _ASSET_DEDUP_56
+      },
+      {
+        "proposito": "ensenanza",
+        "block": "compare",
+        "voz": "Y para lo que no tenés.",
+        "correcto": {
+          "titulo": "✓ Así sí",
+          "items": [
+            "I haven't got a plan.",
+            "He hasn't got a plan."
+          ]
+        },
+        "incorrecto": {
+          "titulo": "✗ Así no",
+          "items": [
+            "He haven't got a plan.",
+            "I don't got a plan."
+          ]
+        },
+        "audio": _ASSET_DEDUP_57
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
+  },
+  {
     "id": "EN-A2-U02-035",
     "status": "draft",
     "nivelId": "m0-n4",
@@ -8968,6 +11348,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Hay dos personas: yo (I) y Tom. Escuchá qué tiene cada una y qué no tiene."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -8984,6 +11365,51 @@ const EXERCISES_M0 = [
       ],
       "decis": [
         "Listen again. Who has got the calculator?"
+      ]
+    }
+  },
+  {
+    "id": "EN-A2-U02-735",
+    "status": "draft",
+    "nivelId": "m0-n4",
+    "kind": "listen",
+    "stage": "Reconocimiento",
+    "skill": "COMP_01",
+    "difficulty": 2,
+    "question": "Escuchá a un político de Londres. ¿Qué dice?",
+    "vozEntrada": "I've got a map, but I haven't got a plan. The engineer has got a plan.",
+    "audio": "../pdp-assets/d3e9f62ba3ffee2c3c539fcf76460476.mp3",
+    "options": [
+      "Tengo un mapa, pero no tengo un plan. El ingeniero tiene un plan.",
+      "Tengo un mapa y un plan. El ingeniero tiene un plan.",
+      "Tengo un mapa, pero no tengo un plan. El ingeniero no tiene un plan."
+    ],
+    "correct": 0,
+    "feedback": "¡Eso! El político tiene un mapa, pero el plan lo tiene el ingeniero.",
+    "feedbackWrong": "Escuchá de nuevo: ¿quién tiene cada cosa y quién no la tiene?",
+    "hint": "¿Quién tiene el plan?",
+    "feedbackExtra": "I've got a map, but I haven't got a plan. The engineer has got a plan. Con I: have / haven't; con the engineer (he): has.",
+    "scaffold": {
+      "altExplanation": "El político habla de él (I) y después del ingeniero (he). Escuchá en cada frase si dice que tiene o que no tiene."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Elige «tengo un mapa y un plan»",
+          "hacer": "Preguntale qué oyó antes de got a plan: ¿I've o I haven't?"
+        },
+        {
+          "si": "Elige «el ingeniero no tiene»",
+          "hacer": "Preguntale qué oyó después de the engineer."
+        }
+      ],
+      "variaciones": [
+        "Que diga quién tiene el plan."
+      ],
+      "decis": [
+        "Who has got the plan?"
       ]
     }
   },
@@ -9009,18 +11435,56 @@ const EXERCISES_M0 = [
             {
               "titulo": "Have you got a phone?",
               "texto": "Yes, I have.",
-              "img": _ASSET_DEDUP_26
+              "img": _ASSET_DEDUP_28
             },
             {
               "titulo": "Has Leo got a map?",
               "texto": "No, he hasn't.",
-              "img": _ASSET_DEDUP_38
+              "img": _ASSET_DEDUP_44
             }
           ]
         },
-        "audio": "../pdp-assets/ee85552ff75ab3a89d121f4ad3697303.mp3"
+        "audio": _ASSET_DEDUP_60
       }
-    ]
+    ],
+    "modo": "personal"
+  },
+  {
+    "id": "EN-A2-U02-487",
+    "status": "draft",
+    "nivelId": "m0-n4",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "preguntas y respuestas cortas",
+    "feedback": "Ya sabés preguntar y contestar.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Preguntas y respuestas.",
+        "title": "Preguntas y respuestas cortas",
+        "regla": "La forma de tener pasa al principio y la respuesta la repite.",
+        "idea": "La forma de tener pasa al principio y la respuesta la repite.",
+        "media": {
+          "tipo": "tres",
+          "items": [
+            {
+              "titulo": "Has the engineer got a plan?",
+              "texto": "Yes, he has.",
+              "img": _ASSET_DEDUP_59
+            },
+            {
+              "titulo": "Have you got a plan?",
+              "texto": "No, we haven't.",
+              "img": _ASSET_DEDUP_58
+            }
+          ]
+        },
+        "audio": _ASSET_DEDUP_60
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-036",
@@ -9034,11 +11498,11 @@ const EXERCISES_M0 = [
     "vozEntrada": "Have you got a folder? No, I haven't. Has Leo got a folder? Yes, he has.",
     "audio": "../pdp-assets/9a98f26f71e3ee248ed9fdc323a91b63.mp3",
     "options": [
-      "¿Tenés una carpeta? No, no tengo. ¿Tiene Leo una carpeta? Sí, tiene.",
       "¿Tenés una carpeta? Sí, tengo. ¿Tiene Leo una carpeta? Sí, tiene.",
-      "¿Tenés una carpeta? No, no tengo. ¿Tiene Leo una carpeta? No, no tiene."
+      "¿Tenés una carpeta? No, no tengo. ¿Tiene Leo una carpeta? No, no tiene.",
+      "¿Tenés una carpeta? No, no tengo. ¿Tiene Leo una carpeta? Sí, tiene."
     ],
-    "correct": 0,
+    "correct": 2,
     "feedback": "¡Eso! Vos no tenés la carpeta, pero Leo sí.",
     "feedbackWrong": "Escuchá de nuevo: ¿qué contesta cada vez, sí o no?",
     "hint": "Hay dos preguntas: escuchá cada respuesta.",
@@ -9046,6 +11510,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Son dos preguntas con dos respuestas cortas. Escuchá si cada una dice sí o no."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -9062,6 +11527,47 @@ const EXERCISES_M0 = [
       ],
       "decis": [
         "Listen again. Two answers: yes or no?"
+      ]
+    }
+  },
+  {
+    "id": "EN-A2-U02-736",
+    "status": "draft",
+    "nivelId": "m0-n4",
+    "kind": "listen",
+    "stage": "Reconocimiento",
+    "skill": "COMP_01",
+    "difficulty": 2,
+    "question": "Escuchá. ¿Qué dicen?",
+    "vozEntrada": "Have you got a pen? No, I haven't. Has the engineer got a pen? Yes, he has.",
+    "audio": "../pdp-assets/7d6d8682cbc5dd99770c2d01c4d01611.mp3",
+    "options": [
+      "¿Tenés una lapicera? No, no tengo. ¿Tiene el ingeniero una lapicera? No, no tiene.",
+      "¿Tenés una lapicera? No, no tengo. ¿Tiene el ingeniero una lapicera? Sí, tiene.",
+      "¿Tenés una lapicera? Sí, tengo. ¿Tiene el ingeniero una lapicera? Sí, tiene."
+    ],
+    "correct": 1,
+    "feedback": "¡Eso! Vos no tenés la lapicera, pero el ingeniero sí.",
+    "feedbackWrong": "Escuchá de nuevo: ¿qué contesta cada vez, sí o no?",
+    "hint": "Hay dos respuestas: ¿sí o no?",
+    "feedbackExtra": "Have you got a pen? No, I haven't. Has the engineer got a pen? Yes, he has. La respuesta corta repite have o has.",
+    "scaffold": {
+      "altExplanation": "Son dos preguntas: una a vos y otra por el ingeniero. Escuchá si cada respuesta corta es sí o no."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Elige «Sí, tengo»",
+          "hacer": "Preguntale qué oyó: ¿Yes, I have o No, I haven't?"
+        }
+      ],
+      "variaciones": [
+        "Que haga la misma pregunta por un político: Has he got…?"
+      ],
+      "decis": [
+        "Two answers: yes or no?"
       ]
     }
   },
@@ -9098,9 +11604,49 @@ const EXERCISES_M0 = [
           "Delante de la cosa, a o an."
         ],
         "idea": "Tres preguntas para armar la frase. I, you, we, they: have · he, she: has haven't · hasn't Have you got…? · Has she got…? Delante de la cosa, a o an.",
-        "audio": "../pdp-assets/c29abdd3590e72b086e623a703534edb.mp3"
+        "audio": _ASSET_DEDUP_61
       }
-    ]
+    ],
+    "modo": "personal"
+  },
+  {
+    "id": "EN-A2-U02-488",
+    "status": "draft",
+    "nivelId": "m0-n4",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "elegir la forma correcta",
+    "feedback": "Ya sabés cómo elegir bien.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Tres preguntas para elegir bien.",
+        "title": "Cómo elegir",
+        "regla": "Tres preguntas para armar la frase.",
+        "fichas": [
+          {
+            "en": "I, you, we, they: have · he, she: has",
+            "rotulo": "1 · ¿QUIÉN TIENE?"
+          },
+          {
+            "en": "haven't · hasn't",
+            "rotulo": "2 · ¿TIENE O NO TIENE?"
+          },
+          {
+            "en": "Have you got…? · Has she got…?",
+            "rotulo": "3 · ¿FRASE O PREGUNTA?"
+          }
+        ],
+        "notas": [
+          "Delante de la cosa, a o an."
+        ],
+        "idea": "Tres preguntas para armar la frase. I, you, we, they: have · he, she: has haven't · hasn't Have you got…? · Has she got…? Delante de la cosa, a o an.",
+        "audio": _ASSET_DEDUP_61
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-037",
@@ -9134,6 +11680,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Fijate quién tiene la cosa: si es una sola persona que no sos vos (he o she), va has; si es I, you, we o they, va have."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -9150,6 +11697,55 @@ const EXERCISES_M0 = [
       ],
       "decis": [
         "Which sentence goes with has?"
+      ]
+    }
+  },
+  {
+    "id": "EN-A2-U02-737",
+    "status": "draft",
+    "nivelId": "m0-n4",
+    "kind": "classify",
+    "stage": "Asociación",
+    "skill": "CLAS_01",
+    "difficulty": 2,
+    "question": "Poné cada frase en su grupo: ¿con has / hasn't o con have / haven't?",
+    "items": [
+      "The engineer has got a plan.",
+      "We haven't got a good system.",
+      "Has the river got a terrible smell?",
+      "The politicians have got white powder."
+    ],
+    "categories": [
+      "Con has / hasn't",
+      "Con have / haven't"
+    ],
+    "correct": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "feedback": "¡Bien! Has va con una persona o una cosa (he, she, it); have, con I, you, we y they.",
+    "feedbackWrong": "Alguna frase está en el otro grupo: fijate quién tiene la cosa.",
+    "hint": "Buscá quién tiene la cosa en cada frase.",
+    "feedbackExtra": "has / hasn't: el ingeniero (he), el río (it) · have / haven't: we, they (los políticos).",
+    "scaffold": {
+      "altExplanation": "Fijate quién tiene: si es uno solo (el ingeniero, el río), va has; si son varios o sos vos, va have."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Pone el río con have",
+          "hacer": "Preguntale si el río es uno solo o varios."
+        }
+      ],
+      "variaciones": [
+        "Que lea cada frase en voz alta."
+      ],
+      "decis": [
+        "Who has got it: one or many?"
       ]
     }
   },
@@ -9196,7 +11792,7 @@ const EXERCISES_M0 = [
       ],
       "ayudaModelo": [
         "I've got a pen.",
-        "Maya's got a ruler."
+        "My friend's got a ruler."
       ],
       "errores": [
         {
@@ -9231,17 +11827,17 @@ const EXERCISES_M0 = [
       {
         "titulo": "Ping-pong mezclado",
         "detalle": "Tu profe te hace preguntas rápidas, unas sobre vos y otras sobre otra persona; vos contestás con la respuesta corta o con una frase.",
-        "accion": "Mezclá las preguntas: sobre vos, sobre Maya, sobre Leo.",
+        "accion": "Mezclá las preguntas: sobre vos, sobre el ingeniero, sobre los políticos.",
         "decis": [
           "Have you got a pen?",
-          "Has Maya got a phone? (según la tarjeta)",
+          "Has the engineer got a map? (inventá: sí)",
           "What have you got?"
         ],
-        "espera": "Yes, I have. / Yes, she has. / I've got a …",
+        "espera": "Yes, I have. / Yes, he has. / I've got a …",
         "otras": [
           {
-            "decis": "Has Leo got a ruler? (según la tarjeta)",
-            "espera": "Yes, he has. / No, he hasn't."
+            "decis": "Have the politicians got a plan? (en la historia, no)",
+            "espera": "No, they haven't."
           }
         ]
       },
@@ -9249,31 +11845,31 @@ const EXERCISES_M0 = [
         "titulo": "Escuchá y corregí",
         "detalle": "Tu profe dice frases con errores de todo tipo; vos las decís bien.",
         "decis": [
-          "Maya have got a folder."
+          "The engineer have got a map."
         ],
-        "espera": "Maya has got a folder. (o: She's got a folder.)",
+        "espera": "The engineer has got a map. (o: He's got a map.)",
         "otras": [
           {
             "decis": "Do you got a notebook?",
             "espera": "Have you got a notebook?"
           },
           {
-            "decis": "Tom haven't got a bag.",
-            "espera": "Tom hasn't got a bag."
+            "decis": "The river haven't got a good smell.",
+            "espera": "The river hasn't got a good smell."
           }
         ]
       },
       {
-        "titulo": "La ficha de Sofia",
-        "detalle": "Tu profe te da la ficha de Sofia: tiene un mapa y una calculadora, y no tiene una regla. Hablá como si fueras Sofia.",
-        "accion": "Dale la ficha y pedile que hable como Sofia, en primera persona.",
+        "titulo": "Sos el ingeniero",
+        "detalle": "Sos Joseph Bazalgette, el ingeniero de la historia: tenés un plan y un mapa, y no tenés una regla. Hablá como si fueras él.",
+        "accion": "Pedile que hable como el ingeniero, en primera persona.",
         "decis": [
-          "You're Sofia. What have you got?"
+          "You're the engineer. What have you got?"
         ],
-        "espera": "I've got a map and a calculator. I haven't got a ruler.",
+        "espera": "I've got a plan and a map. I haven't got a ruler.",
         "otras": [
           {
-            "decis": "Sofia, have you got a phone?",
+            "decis": "Engineer, have you got a phone?",
             "espera": "No, I haven't."
           }
         ]
@@ -9283,7 +11879,7 @@ const EXERCISES_M0 = [
       "criterios": [
         "Ping-pong: contesta con la respuesta corta o con una frase, según la pregunta.",
         "Corrección: arregla el error y repite la frase completa.",
-        "Ficha: habla como Sofia, en primera persona."
+        "El ingeniero: habla como él, en primera persona."
       ],
       "objetivo": "Usar todo lo de have got de las lecciones 1 a 3 rápido y sin pensar demasiado.",
       "errores": [
@@ -9292,8 +11888,8 @@ const EXERCISES_M0 = [
           "hacer": "Repetí \"Yes, I have.\" y esperá que la repita."
         },
         {
-          "si": "En la ficha pasa a she",
-          "hacer": "Señalale que habla como Sofia: \"I've got…\"."
+          "si": "Como el ingeniero pasa a he",
+          "hacer": "Señalale que habla como el ingeniero: \"I've got…\"."
         }
       ],
       "variaciones": [
@@ -9305,6 +11901,213 @@ const EXERCISES_M0 = [
     "experienciaProfe": "PRF-INT-08",
     "image": "../pdp-assets/877f8a33c58f1a5ac43ef7a2ba6c6fd5.jpg",
     "imageAlt": "Maya, Tom, Leo y Sofia comparten sus cosas alrededor de una mesa."
+  },
+  {
+    "id": "EN-A2-U02-910",
+    "status": "draft",
+    "nivelId": "m0-n4",
+    "kind": "mundo",
+    "ordenFijo": true,
+    "stage": "Producción guiada",
+    "skill": "PROD_01",
+    "difficulty": 2,
+    "question": "Armá la frase del político y mirá qué marca el analizador.",
+    "feedback": "¡La línea quedó limpia!",
+    "feedbackWrong": "Mirá las filas marcadas: ahí está la pista.",
+    "hint": "Empezá por la primera fila marcada.",
+    "scaffold": {
+      "altExplanation": "Armá la frase pieza por pieza. Si la parte de no tener queda en ámbar, pensá cuántos son los políticos."
+    },
+    "feedbackExtra": "Los políticos son varios (they): con they la forma de NO tener es la misma que con I. Con got nunca va don't.",
+    "mundo": {
+      "id": "mundo-analizador-analizador_londres_clase_l4",
+      "tipo": "analizador",
+      "unidad": "en-a2-u02-things-and-school",
+      "leccion": "L4",
+      "desde": [
+        "EN-A2-U02-737",
+        "EN-A2-U02-740"
+      ],
+      "titulo": "Armá la frase del político y mirá qué marca el analizador.",
+      "consigna": {
+        "banner": "Un político cuenta qué NO tienen los políticos de Londres. Armá la frase con las palabras: el analizador va marcando dónde algo no concuerda.",
+        "tip": "Cada palabra cae en su lugar de la línea. Probá y corregí hasta que la línea quede limpia."
+      },
+      "escena": {
+        "hablante": "Un político",
+        "receptor": "el analizador",
+        "imagen": "a2u02-londres-politicos",
+        "tablero": "Línea 1",
+        "tableroSub": "La frase del político",
+        "rotuloArmado": "Lo que dice el político",
+        "rotuloBanco": "Palabras"
+      },
+      "vocab": {
+        "dato": [
+          "parte",
+          "partes"
+        ],
+        "referencia": "lo que dice Maya",
+        "receptor": "El analizador",
+        "pieza": [
+          "palabra",
+          "palabras"
+        ],
+        "sobra": [
+          "parte de más",
+          "partes de más"
+        ],
+        "falta": [
+          "parte",
+          "partes"
+        ]
+      },
+      "textos": {
+        "okTitulo": "¡La línea quedó limpia!",
+        "okTexto": "Todas las partes de la frase concuerdan con lo que cuenta el político.",
+        "casiTitulo": "Casi."
+      },
+      "campos": [
+        {
+          "id": "sujeto",
+          "etiqueta": "Quién",
+          "pista": "los políticos"
+        },
+        {
+          "id": "verbo",
+          "etiqueta": "No tener",
+          "pista": "no tienen"
+        },
+        {
+          "id": "cosa",
+          "etiqueta": "Cosa",
+          "pista": "un plan"
+        }
+      ],
+      "objetivo": {
+        "sujeto": "The politicians",
+        "verbo": "haven't got",
+        "cosa": "a plan"
+      },
+      "piezas": [
+        {
+          "id": "v2",
+          "texto": "hasn't got",
+          "efecto": {
+            "verbo": "hasn't got"
+          }
+        },
+        {
+          "id": "s1",
+          "texto": "The politicians",
+          "efecto": {
+            "sujeto": "The politicians"
+          }
+        },
+        {
+          "id": "c2",
+          "texto": "a map",
+          "efecto": {
+            "cosa": "a map"
+          }
+        },
+        {
+          "id": "v1",
+          "texto": "haven't got",
+          "efecto": {
+            "verbo": "haven't got"
+          }
+        },
+        {
+          "id": "v3",
+          "texto": "don't got",
+          "efecto": null,
+          "forma": {
+            "campo": "verbo",
+            "valor": "don't got"
+          }
+        },
+        {
+          "id": "s2",
+          "texto": "The engineer",
+          "efecto": {
+            "sujeto": "The engineer"
+          }
+        },
+        {
+          "id": "c1",
+          "texto": "a plan",
+          "efecto": {
+            "cosa": "a plan"
+          }
+        }
+      ],
+      "huecos": [
+        {
+          "id": "p1"
+        },
+        {
+          "id": "p2"
+        },
+        {
+          "id": "p3"
+        }
+      ],
+      "avisos": [
+        {
+          "campo": "verbo",
+          "si": {
+            "sujeto": "The politicians",
+            "verbo": "hasn't got"
+          },
+          "texto": "«{verbo}» no concuerda con «{sujeto}»: son varios (they), y con they la forma de no tener es otra."
+        },
+        {
+          "campo": "verbo",
+          "si": {
+            "verbo": "don't got"
+          },
+          "texto": "«{verbo}»: con got no se usa don't."
+        },
+        {
+          "campo": "verbo",
+          "texto": "«{verbo}» no es lo que cuenta el político."
+        },
+        {
+          "campo": "sujeto",
+          "texto": "«{sujeto}» no es de quienes habla el político."
+        },
+        {
+          "campo": "cosa",
+          "texto": "«{cosa}» no es lo que no tienen los políticos."
+        }
+      ],
+      "reacciones": {
+        "ok": "",
+        "distinto": "",
+        "no-entendio": "",
+        "sobra": ""
+      },
+      "ayudas": [
+        "Armá la frase pieza por pieza. Si la parte de no tener queda en ámbar, pensá cuántos son los políticos.",
+        "Los políticos son varios (they): con they la forma de NO tener es la misma que con I. Con got nunca va don't."
+      ],
+      "demo": {
+        "error": {
+          "p1": "s1",
+          "p2": "v2",
+          "p3": "c2"
+        }
+      },
+      "nombre": "Analizador",
+      "modo": "clase",
+      "ambientacion": "cuento",
+      "enListado": false,
+      "_nota": "Mundo de clase ambientado en «El barco sin nadie» (fuente: generadores/mundos_clase_u02.py; molde: analizador_mama_l5 de A2 U01)."
+    },
+    "avatar": _ASSET_DEDUP_58,
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-038",
@@ -9330,6 +12133,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Leé la frase con atención: ¿dice que Maya tiene la regla o que no la tiene?"
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -9342,6 +12146,47 @@ const EXERCISES_M0 = [
       ],
       "decis": [
         "Does Maya have a ruler? Yes or no?"
+      ]
+    }
+  },
+  {
+    "id": "EN-A2-U02-738",
+    "status": "draft",
+    "nivelId": "m0-n4",
+    "kind": "tf",
+    "stage": "Verificación",
+    "skill": "COMP_01",
+    "difficulty": 3,
+    "guided": true,
+    "guidedMessages": [
+      {
+        "when": "start",
+        "text": "Leé lo que dice el político y decidí si es verdadero o falso."
+      }
+    ],
+    "question": "Un político dice: «The engineer hasn't got a plan». Eso quiere decir que el ingeniero tiene un plan.",
+    "correct": false,
+    "feedback": "¡Eso! Es falso: hasn't got quiere decir que no tiene.",
+    "feedbackWrong": "Fijate qué quiere decir la palabra que sigue a engineer.",
+    "hint": "Mirá la palabra que sigue a engineer.",
+    "feedbackExtra": "Falso. The engineer hasn't got a plan = El ingeniero no tiene un plan. hasn't = has not.",
+    "scaffold": {
+      "altExplanation": "Leé la frase del político con atención: ¿dice que el ingeniero tiene el plan o que no lo tiene?"
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Elige verdadero",
+          "hacer": "Preguntale qué quiere decir hasn't."
+        }
+      ],
+      "variaciones": [
+        "Que diga la frase al revés: The engineer has got a plan."
+      ],
+      "decis": [
+        "Hasn't got: has he got it or not?"
       ]
     }
   },
@@ -9379,33 +12224,82 @@ const EXERCISES_M0 = [
           "items": [
             {
               "titulo": "I",
-              "img": _ASSET_DEDUP_47
+              "img": _ASSET_DEDUP_53
             },
             {
               "titulo": "you",
-              "img": _ASSET_DEDUP_17
-            },
-            {
-              "titulo": "we",
               "img": _ASSET_DEDUP_18
             },
             {
-              "titulo": "they",
+              "titulo": "we",
               "img": _ASSET_DEDUP_19
             },
             {
+              "titulo": "they",
+              "img": _ASSET_DEDUP_20
+            },
+            {
               "titulo": "he",
-              "img": _ASSET_DEDUP_48
+              "img": _ASSET_DEDUP_54
             },
             {
               "titulo": "she",
-              "img": _ASSET_DEDUP_49
+              "img": _ASSET_DEDUP_55
             }
           ]
         },
-        "audio": _ASSET_DEDUP_21
+        "audio": _ASSET_DEDUP_22
       }
-    ]
+    ],
+    "modo": "personal"
+  },
+  {
+    "id": "EN-A2-U02-334",
+    "status": "draft",
+    "nivelId": "m0-n4",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "recordar la regla antes de escribir",
+    "feedback": "Listo: ya te acordás de la regla.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Antes de escribir, un recordatorio.",
+        "title": "Recordá",
+        "regla": "Antes de armar la frase, preguntate **quién tiene**.",
+        "fichas": [
+          {
+            "en": "I, you, we, they: have",
+            "rotulo": "HAVE"
+          },
+          {
+            "en": "he, she: has",
+            "rotulo": "HAS"
+          }
+        ],
+        "notas": [
+          "Si no tiene: haven't o hasn't."
+        ],
+        "idea": "Antes de armar la frase, preguntate quién tiene. I, you, we, they: have he, she: has Si no tiene: haven't o hasn't.",
+        "media": {
+          "tipo": "rejilla",
+          "items": [
+            {
+              "titulo": "I · you · we · they",
+              "img": _ASSET_DEDUP_58
+            },
+            {
+              "titulo": "he · she",
+              "img": _ASSET_DEDUP_59
+            }
+          ]
+        },
+        "audio": _ASSET_DEDUP_22
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "id": "EN-A2-U02-039",
@@ -9442,6 +12336,7 @@ const EXERCISES_M0 = [
       },
       "altExplanation": "We es vos y otra persona: con we la forma es la misma que con I."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -9460,8 +12355,64 @@ const EXERCISES_M0 = [
         "Who has got the map?"
       ]
     },
-    "image": _ASSET_DEDUP_18,
+    "image": _ASSET_DEDUP_19,
     "imageAlt": "Maya y Tom juntos."
+  },
+  {
+    "id": "EN-A2-U02-739",
+    "status": "draft",
+    "nivelId": "m0-n4",
+    "kind": "word-bank",
+    "stage": "Producción guiada",
+    "skill": "PROD_01",
+    "difficulty": 2,
+    "question": "Completá lo que dice el ingeniero.",
+    "sentence": "THE ENGINEER: We ___ got a plan. We start today.",
+    "bank": [
+      "have",
+      "has",
+      "haven't"
+    ],
+    "correct": 0,
+    "answers": [
+      "have"
+    ],
+    "feedback": "¡Eso! Con we va have.",
+    "feedbackWrong": "Fijate quién tiene el plan y qué forma va con ese quién.",
+    "hint": "Fijate quién tiene el plan.",
+    "feedbackExtra": "We have got a plan. = We've got a plan. Con we va have got; has es para he y she; haven't diría que no tienen el plan.",
+    "scaffold": {
+      "example": {
+        "label": "Un caso más simple: con I",
+        "steps": [
+          {
+            "math": "I ___ got a pen. I use it. → I've got a pen.",
+            "reason": "Con I va la forma corta de have: la misma que va con we."
+          }
+        ]
+      },
+      "altExplanation": "El ingeniero habla de él y su equipo (we): con we la forma de tener no lleva s, y el plan sí lo tienen."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Elige has",
+          "hacer": "¿Quién tiene el plan: él solo o él y su equipo (we)?"
+        },
+        {
+          "si": "Elige haven't",
+          "hacer": "Preguntale qué dice la segunda frase: ¿lo usan hoy?"
+        }
+      ],
+      "variaciones": [
+        "Que diga la frase completa en voz alta."
+      ],
+      "decis": [
+        "We: have or has?"
+      ]
+    }
   },
   {
     "id": "EN-A2-U02-040",
@@ -9515,6 +12466,7 @@ const EXERCISES_M0 = [
       },
       "altExplanation": "Tres partes: quién, la forma negativa de tener y la cosa con su origen."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -9535,6 +12487,75 @@ const EXERCISES_M0 = [
     },
     "image": "../pdp-assets/ab8e8c12b589b3d4d5457d7c4bc321a5.jpg",
     "imageAlt": "Maya y Tom con las manos vacías, sin mapa."
+  },
+  {
+    "id": "EN-A2-U02-740",
+    "status": "draft",
+    "nivelId": "m0-n4",
+    "kind": "order",
+    "stage": "Producción guiada",
+    "skill": "TEMP_02",
+    "difficulty": 2,
+    "question": "Ordená lo que dicen los políticos.",
+    "words": [
+      "map",
+      "London",
+      "got",
+      "We",
+      "of",
+      "a",
+      "haven't"
+    ],
+    "correctOrder": [
+      3,
+      6,
+      2,
+      5,
+      0,
+      4,
+      1
+    ],
+    "correct": [
+      3,
+      6,
+      2,
+      5,
+      0,
+      4,
+      1
+    ],
+    "feedback": "¡Correcto! \"We haven't got a map of London.\"",
+    "feedbackWrong": "Revisá quién habla y si tiene o no tiene la cosa.",
+    "hint": "Empezá por quién habla.",
+    "feedbackExtra": "We haven't got a map of London. Orden: quién + haven't got + a + la cosa + de qué lugar es.",
+    "scaffold": {
+      "example": {
+        "label": "Una guía de orden",
+        "steps": [
+          {
+            "math": "quién · la forma negativa · got · la cosa · de qué lugar",
+            "reason": "Armá la frase en ese orden: primero quién habla."
+          }
+        ]
+      },
+      "altExplanation": "Hablan los políticos (we) y dicen que NO tienen: después de we va la forma negativa, got, la cosa y el lugar."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Empieza por map",
+          "hacer": "Preguntale quién habla y que empiece por ahí."
+        }
+      ],
+      "variaciones": [
+        "Que invente otra cosa que no tienen los políticos."
+      ],
+      "decis": [
+        "Who speaks? Have they got it?"
+      ]
+    }
   },
   {
     "id": "EN-A2-U02-041",
@@ -9561,6 +12582,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Con got no se usa do: la pregunta empieza con la forma de tener que va con you."
     },
+    "modo": "personal",
     "paraProfe": {
       "errores": [
         {
@@ -9575,8 +12597,50 @@ const EXERCISES_M0 = [
         "Which word is wrong?"
       ]
     },
-    "image": _ASSET_DEDUP_34,
+    "image": _ASSET_DEDUP_40,
     "imageAlt": "Maya le hace una pregunta a Tom."
+  },
+  {
+    "id": "EN-A2-U02-741",
+    "status": "draft",
+    "nivelId": "m0-n4",
+    "kind": "error-find",
+    "stage": "Producción guiada",
+    "skill": "CORR_01",
+    "difficulty": 2,
+    "question": "Un político le pregunta algo al ingeniero, pero hay un error. Tocá la palabra que está mal y corregila.",
+    "sentence": [
+      "Do",
+      "you",
+      "got",
+      "a",
+      "plan?"
+    ],
+    "errorIndex": 0,
+    "correction": "Have",
+    "feedback": "¡Eso! Con got la pregunta no empieza con do.",
+    "feedbackWrong": "Una palabra no es la que abre una pregunta con got.",
+    "hint": "Mirá cómo empieza la pregunta.",
+    "feedbackExtra": "Have you got a plan? Con got, la pregunta empieza con la forma de tener, no con do.",
+    "scaffold": {
+      "altExplanation": "El político le pregunta al ingeniero (you). Con got no se usa do: la pregunta empieza con la forma de tener que va con you."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "errores": [
+        {
+          "si": "Marca got",
+          "hacer": "Recordale que con got no va do."
+        }
+      ],
+      "variaciones": [
+        "Que haga la pregunta bien en voz alta."
+      ],
+      "decis": [
+        "Which word is wrong?"
+      ]
+    }
   },
   {
     "id": "EN-A2-U02-312",
@@ -9611,31 +12675,31 @@ const EXERCISES_M0 = [
           "items": [
             {
               "titulo": "I",
-              "img": _ASSET_DEDUP_47
+              "img": _ASSET_DEDUP_53
             },
             {
               "titulo": "you",
-              "img": _ASSET_DEDUP_17
-            },
-            {
-              "titulo": "we",
               "img": _ASSET_DEDUP_18
             },
             {
-              "titulo": "they",
+              "titulo": "we",
               "img": _ASSET_DEDUP_19
             },
             {
+              "titulo": "they",
+              "img": _ASSET_DEDUP_20
+            },
+            {
               "titulo": "he",
-              "img": _ASSET_DEDUP_48
+              "img": _ASSET_DEDUP_54
             },
             {
               "titulo": "she",
-              "img": _ASSET_DEDUP_49
+              "img": _ASSET_DEDUP_55
             }
           ]
         },
-        "audio": _ASSET_DEDUP_50
+        "audio": _ASSET_DEDUP_62
       },
       {
         "proposito": "ensenanza",
@@ -9657,7 +12721,7 @@ const EXERCISES_M0 = [
             "Yes, he's."
           ]
         },
-        "audio": _ASSET_DEDUP_24
+        "audio": _ASSET_DEDUP_25
       },
       {
         "proposito": "ensenanza",
@@ -9677,23 +12741,127 @@ const EXERCISES_M0 = [
             {
               "titulo": "I've got…",
               "texto": "decir qué tenés",
-              "img": _ASSET_DEDUP_26
+              "img": _ASSET_DEDUP_28
             },
             {
               "titulo": "She hasn't got…",
               "texto": "decir qué tiene otra persona",
-              "img": _ASSET_DEDUP_30
+              "img": _ASSET_DEDUP_33
             },
             {
               "titulo": "Have you got…?",
               "texto": "preguntar y contestar",
-              "img": _ASSET_DEDUP_34
+              "img": _ASSET_DEDUP_40
             }
           ]
         },
-        "audio": _ASSET_DEDUP_51
+        "audio": _ASSET_DEDUP_63
       }
-    ]
+    ],
+    "modo": "personal"
+  },
+  {
+    "id": "EN-A2-U02-342",
+    "status": "draft",
+    "nivelId": "m0-n4",
+    "kind": "concept",
+    "stage": "Concepto",
+    "concept": "integrar todo lo que aprendiste antes del Level Check",
+    "feedback": "Listo: repasaste lo que aprendiste.",
+    "screens": [
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Todo junto.",
+        "title": "Have got en una mirada",
+        "regla": "Quién tiene decide la forma: **have** o **has**.",
+        "fichas": [
+          {
+            "en": "I've got · I haven't got · Have you got…?",
+            "es": "con I, you, we y they",
+            "rotulo": "HAVE"
+          },
+          {
+            "en": "He's got · He hasn't got · Has he got…?",
+            "es": "con he y she",
+            "rotulo": "HAS"
+          }
+        ],
+        "idea": "Quién tiene decide la forma: have o has. I've got · I haven't got · Have you got…? = con I, you, we y they He's got · He hasn't got · Has he got…? = con he y she",
+        "media": {
+          "tipo": "rejilla",
+          "items": [
+            {
+              "titulo": "I · you · we · they",
+              "img": _ASSET_DEDUP_58
+            },
+            {
+              "titulo": "he · she",
+              "img": _ASSET_DEDUP_59
+            }
+          ]
+        },
+        "audio": _ASSET_DEDUP_62
+      },
+      {
+        "proposito": "ensenanza",
+        "block": "compare",
+        "voz": "Ojo con esto.",
+        "correcto": {
+          "titulo": "✓ Así sí",
+          "items": [
+            "We haven't got a plan.",
+            "Has the engineer got a plan?",
+            "Yes, he has."
+          ]
+        },
+        "incorrecto": {
+          "titulo": "✗ Así no",
+          "items": [
+            "We hasn't got a plan.",
+            "Have the engineer got a plan?",
+            "Yes, he's."
+          ]
+        },
+        "audio": _ASSET_DEDUP_25
+      },
+      {
+        "proposito": "ensenanza",
+        "block": "idea",
+        "voz": "Lo que ya podés hacer.",
+        "title": "Ahora podés…",
+        "regla": "Con las lecciones 1 a 4 ya podés hacer tres cosas.",
+        "notas": [
+          "Decir qué tenés y qué no tenés.",
+          "Decir qué tiene otra persona.",
+          "Preguntar si alguien tiene algo y contestar. Ahora, el Level Check."
+        ],
+        "idea": "Con las lecciones 1 a 4 ya podés hacer tres cosas. Decir qué tenés y qué no tenés. Decir qué tiene otra persona. Preguntar si alguien tiene algo y contestar. Ahora, el Level Check.",
+        "media": {
+          "tipo": "tres",
+          "items": [
+            {
+              "titulo": "I've got…",
+              "texto": "decir qué tenés",
+              "img": _ASSET_DEDUP_32
+            },
+            {
+              "titulo": "He hasn't got…",
+              "texto": "decir qué tiene otra persona",
+              "img": _ASSET_DEDUP_59
+            },
+            {
+              "titulo": "Have you got…?",
+              "texto": "preguntar y contestar",
+              "img": _ASSET_DEDUP_58
+            }
+          ]
+        },
+        "audio": _ASSET_DEDUP_63
+      }
+    ],
+    "modo": "clase",
+    "ambientacion": "cuento"
   },
   {
     "status": "published",
@@ -9703,28 +12871,28 @@ const EXERCISES_M0 = [
     "id": "EN-A2-U02-P12",
     "nivelId": "m0-n4",
     "forma": "pausa",
-    "question": "Sos Ana: contale a tu profe qué tenés y qué no tenés.",
-    "tutor": "Hablá como si fueras Ana, con los datos de la tarjeta.",
+    "question": "Sos un político de Londres: contale a tu profe qué tenés y qué no tenés.",
+    "tutor": "Hablá como si fueras un político de la historia, con los datos que te da tu profe.",
     "paraProfe": {
       "criterios": [
-        "Usa I've got / I haven't got con los datos de Ana.",
+        "Usa I've got / I haven't got con los datos del político.",
         "No usa sus propios datos.",
         "Registrá cada frase como solo, con pista o no."
       ],
       "objetivo": "Hablar como otra persona con los datos de una tarjeta (variación de persona).",
       "decis": [
-        "You're Ana. What have you got? (tarjeta: Ana tiene un teléfono y un cuaderno; no tiene una carpeta)"
+        "You're a politician. What have you got? (inventado: tiene un libro y una carpeta; no tiene un plan)"
       ],
       "esperas": [
-        "I've got a phone and a notebook. I haven't got a folder."
+        "I've got a book and a folder. I haven't got a plan."
       ],
       "variantes": [
         "I have got…",
         "frases cortas"
       ],
       "temas": [
-        "Ana: un teléfono y un cuaderno",
-        "Ana no tiene una carpeta"
+        "el político: un libro y una carpeta",
+        "el político no tiene un plan"
       ],
       "ayudaMolde": [
         "I've got a …",
@@ -9737,15 +12905,15 @@ const EXERCISES_M0 = [
       "errores": [
         {
           "si": "Usa sus propios datos",
-          "hacer": "Señalale la tarjeta: cuenta como con ayuda."
+          "hacer": "Recordale los datos del político: cuenta como con ayuda."
         },
         {
-          "si": "Pasa a she",
-          "hacer": "Recordale que habla como Ana: \"I've got…\"."
+          "si": "Pasa a he",
+          "hacer": "Recordale que habla como el político: \"I've got…\"."
         }
       ],
       "variaciones": [
-        "Que diga lo mismo de Ana con she, mirando la tarjeta."
+        "Que diga lo mismo del político con he."
       ],
       "registra": "Una marca para el momento: solo / con ayuda / todavía no."
     },
@@ -9783,6 +12951,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Vos y Maya son nosotros: con we la forma de no tener es haven't got."
     },
+    "modo": "personal",
     "paraProfe": {
       "variantes": [
         "We have not got a ruler."
@@ -9794,6 +12963,61 @@ const EXERCISES_M0 = [
         },
         {
           "si": "Escribe \"We hasn't got a ruler\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-742",
+    "status": "draft",
+    "nivelId": "m0-n4",
+    "kind": "fill",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "PROD_01",
+    "difficulty": 3,
+    "question": "Escribí con got que vos y el ingeniero NO tienen un mapa.",
+    "answer": "We haven't got a map.",
+    "acceptVariants": [
+      "We haven't got a map.",
+      "We haven't got a map",
+      "we haven't got a map.",
+      "we haven't got a map",
+      "We haven’t got a map.",
+      "We haven’t got a map",
+      "we haven’t got a map.",
+      "we haven’t got a map",
+      "We have not got a map.",
+      "We have not got a map",
+      "we have not got a map.",
+      "we have not got a map"
+    ],
+    "feedback": "¡Eso! Vos y el ingeniero son we; la negación es haven't got.",
+    "feedbackWrong": "Escribí la frase completa: quién, la forma de no tener y la cosa con a o an.",
+    "hint": "Vos y el ingeniero son nosotros.",
+    "feedbackExtra": "We haven't got a map. = No tenemos un mapa. Vos y el ingeniero = we: con we va haven't got.",
+    "scaffold": {
+      "altExplanation": "Vos y el ingeniero son nosotros: con we la forma de no tener es haven't got."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "variantes": [
+        "We have not got a map."
+      ],
+      "errores": [
+        {
+          "si": "Escribe \"We hasn't got a map\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        },
+        {
+          "si": "Escribe \"We don't got a map\"",
           "hacer": "No intervenir. Registrar como error de forma."
         }
       ],
@@ -9832,6 +13056,7 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Armá la pregunta en orden: la forma de tener, quién, got y la cosa con a o an."
     },
+    "modo": "personal",
     "paraProfe": {
       "variantes": [],
       "errores": [
@@ -9841,6 +13066,57 @@ const EXERCISES_M0 = [
         },
         {
           "si": "Escribe \"Leo has got a bag?\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-743",
+    "status": "draft",
+    "nivelId": "m0-n4",
+    "kind": "fill",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "PROD_01",
+    "difficulty": 3,
+    "question": "Escribí con got la pregunta: ¿tiene el ingeniero un plan?",
+    "answer": "Has the engineer got a plan?",
+    "acceptVariants": [
+      "Has the engineer got a plan?",
+      "Has the engineer got a plan",
+      "has the engineer got a plan?",
+      "has the engineer got a plan",
+      "Has he got a plan?",
+      "Has he got a plan",
+      "has he got a plan?",
+      "has he got a plan"
+    ],
+    "feedback": "¡Eso! Con the engineer (he) la pregunta empieza con has.",
+    "feedbackWrong": "Escribí la pregunta completa: la palabra que va primero, quién, got y la cosa con a o an.",
+    "hint": "Pensá en el orden de una pregunta.",
+    "feedbackExtra": "Has the engineer got a plan? = ¿Tiene el ingeniero un plan? Con the engineer (he) la pregunta empieza con has; delante de plan va a.",
+    "scaffold": {
+      "altExplanation": "Armá la pregunta en orden: la forma de tener, quién, got y la cosa con a o an."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "variantes": [
+        "Has he got a plan?"
+      ],
+      "errores": [
+        {
+          "si": "Escribe \"Have the engineer got a plan?\"",
+          "hacer": "No intervenir. Registrar como error de forma."
+        },
+        {
+          "si": "Escribe \"Does the engineer got a plan?\"",
           "hacer": "No intervenir. Registrar como error de forma."
         }
       ],
@@ -9877,11 +13153,56 @@ const EXERCISES_M0 = [
     "scaffold": {
       "altExplanation": "Con he y con she la forma negativa cambia. Buscá la palabra que no es esa."
     },
+    "modo": "personal",
     "paraProfe": {
       "variantes": [],
       "errores": [
         {
           "si": "Marca got o calculator",
+          "hacer": "No intervenir. Registrar como error de forma."
+        }
+      ],
+      "variaciones": [],
+      "frasesSugeridas": [],
+      "orientacionAlumno": "",
+      "registra": "Resultado independiente.",
+      "noAyudar": true
+    }
+  },
+  {
+    "id": "EN-A2-U02-744",
+    "status": "draft",
+    "nivelId": "m0-n4",
+    "kind": "error-find",
+    "stage": "Evaluación",
+    "role": "skill_check",
+    "skill": "CORR_01",
+    "difficulty": 3,
+    "question": "Un político cuenta qué no tiene el ingeniero, pero hay un error. Tocá la palabra que está mal y corregila.",
+    "sentence": [
+      "The",
+      "engineer",
+      "haven't",
+      "got",
+      "a",
+      "map."
+    ],
+    "errorIndex": 2,
+    "correction": "hasn't",
+    "feedback": "¡Eso! Con the engineer (he) va esa palabra.",
+    "feedbackWrong": "Una palabra no es la que va después de the engineer.",
+    "hint": "Mirá la palabra entre engineer y got.",
+    "feedbackExtra": "The engineer hasn't got a map. El ingeniero es he, y con he va hasn't got; haven't es para I, you, we y they.",
+    "scaffold": {
+      "altExplanation": "Con he y con she la forma negativa cambia. Buscá la palabra que no es esa."
+    },
+    "modo": "clase",
+    "ambientacion": "cuento",
+    "paraProfe": {
+      "variantes": [],
+      "errores": [
+        {
+          "si": "Marca got o map",
           "hacer": "No intervenir. Registrar como error de forma."
         }
       ],
@@ -10415,7 +13736,7 @@ const EXERCISES_M0 = [
     "feedback": "¡Bien leído!",
     "pantallas": [
       {
-        "img": _ASSET_DEDUP_41,
+        "img": _ASSET_DEDUP_47,
         "s": [
           [
             "London, summer 1858.",
@@ -10432,7 +13753,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_42,
+        "img": _ASSET_DEDUP_48,
         "s": [
           [
             "Why? London has no good system for dirty water.",
@@ -10449,7 +13770,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_43,
+        "img": _ASSET_DEDUP_49,
         "s": [
           [
             "The smell arrives at Parliament, next to the river.",
@@ -10490,7 +13811,7 @@ const EXERCISES_M0 = [
     "feedback": "¡Bien leído!",
     "pantallas": [
       {
-        "img": _ASSET_DEDUP_44,
+        "img": _ASSET_DEDUP_50,
         "s": [
           [
             "At that time, many doctors believe that bad smells make people sick.",
@@ -10503,7 +13824,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_45,
+        "img": _ASSET_DEDUP_51,
         "s": [
           [
             "An engineer, Joseph Bazalgette, has a plan.",
@@ -10520,7 +13841,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_46,
+        "img": _ASSET_DEDUP_52,
         "s": [
           [
             "The work starts in 1859 and takes many years.",
@@ -10598,12 +13919,12 @@ const EXERCISES_M0 = [
             {
               "titulo": "There's a board.",
               "texto": "Hay una pizarra.",
-              "img": _ASSET_DEDUP_52
+              "img": _ASSET_DEDUP_64
             },
             {
               "titulo": "There's a clock.",
               "texto": "Hay un reloj.",
-              "img": _ASSET_DEDUP_53
+              "img": _ASSET_DEDUP_65
             }
           ]
         },
@@ -10737,12 +14058,12 @@ const EXERCISES_M0 = [
             {
               "titulo": "There are two windows.",
               "texto": "Hay dos ventanas.",
-              "img": _ASSET_DEDUP_54
+              "img": _ASSET_DEDUP_66
             },
             {
               "titulo": "There are eight desks.",
               "texto": "Hay ocho pupitres.",
-              "img": _ASSET_DEDUP_55
+              "img": _ASSET_DEDUP_67
             },
             {
               "titulo": "There are three computers.",
@@ -10885,12 +14206,12 @@ const EXERCISES_M0 = [
             {
               "titulo": "There isn't a clock.",
               "texto": "No hay un reloj.",
-              "img": _ASSET_DEDUP_56
+              "img": _ASSET_DEDUP_68
             },
             {
               "titulo": "There aren't any computers.",
               "texto": "No hay computadoras.",
-              "img": _ASSET_DEDUP_57
+              "img": _ASSET_DEDUP_69
             }
           ]
         },
@@ -10929,11 +14250,11 @@ const EXERCISES_M0 = [
     "vozEntrada": "There isn't a computer. There aren't any chairs.",
     "audio": "../pdp-assets/a775216e6b9ee053de366bb948688500.mp3",
     "options": [
+      "No hay una computadora. No hay sillas.",
       "Hay una computadora. No hay sillas.",
-      "No hay una computadora. Hay sillas.",
-      "No hay una computadora. No hay sillas."
+      "No hay una computadora. Hay sillas."
     ],
-    "correct": 2,
+    "correct": 0,
     "feedback": "¡Eso! isn't y aren't dicen que no hay.",
     "feedbackWrong": "Escuchá de nuevo: ¿cada frase dice que hay o que no hay?",
     "hint": "Fijate qué sigue a there en cada frase.",
@@ -11020,7 +14341,7 @@ const EXERCISES_M0 = [
       "registra": "Una marca para el momento: solo / con ayuda / todavía no."
     },
     "experienciaProfe": "PRF-PRO-03",
-    "image": _ASSET_DEDUP_58,
+    "image": _ASSET_DEDUP_70,
     "imageAlt": "Un aula vacía: pizarra, reloj, dos ventanas y pupitres con sus sillas."
   },
   {
@@ -11198,16 +14519,16 @@ const EXERCISES_M0 = [
             {
               "titulo": "There's a clock.",
               "texto": "Hay un reloj.",
-              "img": _ASSET_DEDUP_53
+              "img": _ASSET_DEDUP_65
             },
             {
               "titulo": "There are two windows.",
               "texto": "Hay dos ventanas.",
-              "img": _ASSET_DEDUP_54
+              "img": _ASSET_DEDUP_66
             }
           ]
         },
-        "audio": _ASSET_DEDUP_21
+        "audio": _ASSET_DEDUP_22
       }
     ]
   },
@@ -11360,16 +14681,16 @@ const EXERCISES_M0 = [
             {
               "titulo": "a board",
               "texto": "una pizarra",
-              "img": _ASSET_DEDUP_52
+              "img": _ASSET_DEDUP_64
             },
             {
               "titulo": "desks",
               "texto": "pupitres",
-              "img": _ASSET_DEDUP_55
+              "img": _ASSET_DEDUP_67
             }
           ]
         },
-        "audio": _ASSET_DEDUP_23
+        "audio": _ASSET_DEDUP_24
       },
       {
         "proposito": "ensenanza",
@@ -11389,7 +14710,7 @@ const EXERCISES_M0 = [
             "There aren't a clock."
           ]
         },
-        "audio": _ASSET_DEDUP_24
+        "audio": _ASSET_DEDUP_25
       }
     ]
   },
@@ -11450,7 +14771,7 @@ const EXERCISES_M0 = [
       "registra": "Una marca para el momento: solo / con ayuda / todavía no."
     },
     "experienciaProfe": "PRF-TRA-04",
-    "image": _ASSET_DEDUP_56,
+    "image": _ASSET_DEDUP_68,
     "imageAlt": "El aula de Leo: una pizarra, dos puertas y doce sillas. No hay reloj."
   },
   {
@@ -11628,7 +14949,7 @@ const EXERCISES_M0 = [
     "feedback": "¡Bien leído!",
     "pantallas": [
       {
-        "img": _ASSET_DEDUP_41,
+        "img": _ASSET_DEDUP_47,
         "s": [
           [
             "London, summer 1858.",
@@ -11645,7 +14966,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_42,
+        "img": _ASSET_DEDUP_48,
         "s": [
           [
             "Why? London has no good system for dirty water.",
@@ -11662,7 +14983,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_43,
+        "img": _ASSET_DEDUP_49,
         "s": [
           [
             "The smell arrives at Parliament, next to the river.",
@@ -11703,7 +15024,7 @@ const EXERCISES_M0 = [
     "feedback": "¡Bien leído!",
     "pantallas": [
       {
-        "img": _ASSET_DEDUP_44,
+        "img": _ASSET_DEDUP_50,
         "s": [
           [
             "At that time, many doctors believe that bad smells make people sick.",
@@ -11716,7 +15037,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_45,
+        "img": _ASSET_DEDUP_51,
         "s": [
           [
             "An engineer, Joseph Bazalgette, has a plan.",
@@ -11733,7 +15054,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_46,
+        "img": _ASSET_DEDUP_52,
         "s": [
           [
             "The work starts in 1859 and takes many years.",
@@ -11808,19 +15129,19 @@ const EXERCISES_M0 = [
               "titulo": "in",
               "texto": "adentro de",
               "ejemplo": "The ball is in the box.",
-              "img": _ASSET_DEDUP_59
+              "img": _ASSET_DEDUP_71
             },
             {
               "titulo": "on",
               "texto": "sobre",
               "ejemplo": "The ball is on the box.",
-              "img": _ASSET_DEDUP_60
+              "img": _ASSET_DEDUP_72
             },
             {
               "titulo": "under",
               "texto": "debajo de",
               "ejemplo": "The ball is under the table.",
-              "img": _ASSET_DEDUP_61
+              "img": _ASSET_DEDUP_73
             }
           ]
         },
@@ -11842,15 +15163,15 @@ const EXERCISES_M0 = [
           "items": [
             {
               "titulo": "next to",
-              "img": _ASSET_DEDUP_62
+              "img": _ASSET_DEDUP_74
             },
             {
               "titulo": "behind",
-              "img": _ASSET_DEDUP_63
+              "img": _ASSET_DEDUP_75
             },
             {
               "titulo": "in front of",
-              "img": _ASSET_DEDUP_64
+              "img": _ASSET_DEDUP_76
             },
             {
               "titulo": "between",
@@ -11932,11 +15253,11 @@ const EXERCISES_M0 = [
     "vozEntrada": "The ruler is on the desk. The bag is under the chair.",
     "audio": "../pdp-assets/0587599558c1504352d05c8ccff931eb.mp3",
     "options": [
+      "La regla está debajo del escritorio. La mochila está debajo de la silla.",
       "La regla está sobre el escritorio. La mochila está detrás de la silla.",
-      "La regla está sobre el escritorio. La mochila está debajo de la silla.",
-      "La regla está debajo del escritorio. La mochila está debajo de la silla."
+      "La regla está sobre el escritorio. La mochila está debajo de la silla."
     ],
-    "correct": 1,
+    "correct": 2,
     "feedback": "¡Eso! La regla está sobre el escritorio y la mochila, debajo de la silla.",
     "feedbackWrong": "Escuchá de nuevo: ¿dónde está cada cosa?",
     "hint": "Escuchá la palabra de lugar.",
@@ -11996,7 +15317,7 @@ const EXERCISES_M0 = [
         "idea": "Para preguntar dónde está algo: Where's…? Where's the map? = ¿Dónde está el mapa? The map is on the shelf. = El mapa está sobre el estante. Where's = Where is.",
         "media": {
           "tipo": "hero",
-          "img": _ASSET_DEDUP_65,
+          "img": _ASSET_DEDUP_77,
           "alt": "Un rincón del aula: un estante junto a la ventana con un mapa encima y una silla debajo."
         },
         "audio": "../pdp-assets/0d612de19aa9e092ac43fd634d94f588.mp3"
@@ -12037,12 +15358,12 @@ const EXERCISES_M0 = [
             {
               "titulo": "Is there a board?",
               "texto": "Yes, there is.",
-              "img": _ASSET_DEDUP_56
+              "img": _ASSET_DEDUP_68
             },
             {
               "titulo": "Are there any computers?",
               "texto": "No, there aren't.",
-              "img": _ASSET_DEDUP_57
+              "img": _ASSET_DEDUP_69
             }
           ]
         },
@@ -12062,11 +15383,11 @@ const EXERCISES_M0 = [
     "vozEntrada": "Is there a map? Yes, there is. Where's the map? The map is behind the door.",
     "audio": "../pdp-assets/73b80080f74b3af6242357d112caa0a9.mp3",
     "options": [
+      "¿Hay un mapa? Sí, hay. ¿Dónde está el mapa? El mapa está delante de la puerta.",
       "¿Hay un mapa? Sí, hay. ¿Dónde está el mapa? El mapa está detrás de la puerta.",
-      "¿Hay un mapa? No, no hay. ¿Dónde está el mapa? El mapa está detrás de la puerta.",
-      "¿Hay un mapa? Sí, hay. ¿Dónde está el mapa? El mapa está delante de la puerta."
+      "¿Hay un mapa? No, no hay. ¿Dónde está el mapa? El mapa está detrás de la puerta."
     ],
-    "correct": 0,
+    "correct": 1,
     "feedback": "¡Eso! Sí hay un mapa y está detrás de la puerta.",
     "feedbackWrong": "Escuchá de nuevo: ¿contesta sí o no? ¿Y dónde está el mapa?",
     "hint": "Fijate en la respuesta y en el lugar.",
@@ -12197,7 +15518,7 @@ const EXERCISES_M0 = [
       "registra": "Una marca para el momento: solo / con ayuda / todavía no."
     },
     "experienciaProfe": "PRF-INT-10",
-    "image": _ASSET_DEDUP_65,
+    "image": _ASSET_DEDUP_77,
     "imageAlt": "Un rincón del aula: un estante junto a la ventana con un mapa encima y una silla debajo."
   },
   {
@@ -12319,21 +15640,21 @@ const EXERCISES_M0 = [
             {
               "titulo": "in",
               "texto": "adentro de",
-              "img": _ASSET_DEDUP_59
+              "img": _ASSET_DEDUP_71
             },
             {
               "titulo": "on",
               "texto": "sobre",
-              "img": _ASSET_DEDUP_60
+              "img": _ASSET_DEDUP_72
             },
             {
               "titulo": "under",
               "texto": "debajo de",
-              "img": _ASSET_DEDUP_61
+              "img": _ASSET_DEDUP_73
             }
           ]
         },
-        "audio": _ASSET_DEDUP_21
+        "audio": _ASSET_DEDUP_22
       }
     ]
   },
@@ -12390,7 +15711,7 @@ const EXERCISES_M0 = [
         "Is there a clock in your classroom? Yes or no?"
       ]
     },
-    "image": _ASSET_DEDUP_56,
+    "image": _ASSET_DEDUP_68,
     "imageAlt": "El aula de Leo: una pizarra, dos puertas y doce sillas. No hay reloj."
   },
   {
@@ -12444,7 +15765,7 @@ const EXERCISES_M0 = [
         "Is the map on or under the board?"
       ]
     },
-    "image": _ASSET_DEDUP_66,
+    "image": _ASSET_DEDUP_78,
     "imageAlt": "Un aula: un mapa sobre la pizarra, un reloj al lado del mapa y una mochila debajo de un escritorio."
   },
   {
@@ -12499,7 +15820,7 @@ const EXERCISES_M0 = [
         "Ask me: where is Maya's map?"
       ]
     },
-    "image": _ASSET_DEDUP_65,
+    "image": _ASSET_DEDUP_77,
     "imageAlt": "Un rincón del aula: un estante junto a la ventana con un mapa encima y una silla debajo."
   },
   {
@@ -12566,7 +15887,7 @@ const EXERCISES_M0 = [
         "Who is next to Maya?"
       ]
     },
-    "image": _ASSET_DEDUP_67,
+    "image": _ASSET_DEDUP_79,
     "imageAlt": "Tom está parado al lado de Maya."
   },
   {
@@ -12609,19 +15930,19 @@ const EXERCISES_M0 = [
           "items": [
             {
               "titulo": "next to",
-              "img": _ASSET_DEDUP_62
+              "img": _ASSET_DEDUP_74
             },
             {
               "titulo": "behind",
-              "img": _ASSET_DEDUP_63
+              "img": _ASSET_DEDUP_75
             },
             {
               "titulo": "in front of",
-              "img": _ASSET_DEDUP_64
+              "img": _ASSET_DEDUP_76
             }
           ]
         },
-        "audio": _ASSET_DEDUP_23
+        "audio": _ASSET_DEDUP_24
       },
       {
         "proposito": "ensenanza",
@@ -12641,7 +15962,7 @@ const EXERCISES_M0 = [
             "Is there two doors?"
           ]
         },
-        "audio": _ASSET_DEDUP_24
+        "audio": _ASSET_DEDUP_25
       }
     ]
   },
@@ -12972,7 +16293,7 @@ const EXERCISES_M0 = [
         }
       ]
     },
-    "avatar": _ASSET_DEDUP_65
+    "avatar": _ASSET_DEDUP_77
   },
   {
     "status": "published",
@@ -13029,7 +16350,7 @@ const EXERCISES_M0 = [
       "registra": "Una marca para el momento: solo / con ayuda / todavía no."
     },
     "experienciaProfe": "PRF-PRO-03",
-    "image": _ASSET_DEDUP_65,
+    "image": _ASSET_DEDUP_77,
     "imageAlt": "Un rincón del aula: un estante junto a la ventana con un mapa encima y una silla debajo."
   },
   {
@@ -13185,7 +16506,7 @@ const EXERCISES_M0 = [
     "feedback": "¡Bien leído!",
     "pantallas": [
       {
-        "img": _ASSET_DEDUP_68,
+        "img": _ASSET_DEDUP_80,
         "s": [
           [
             "Egypt, 1799. French soldiers find a big black stone near the town of Rosetta.",
@@ -13202,7 +16523,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_69,
+        "img": _ASSET_DEDUP_81,
         "s": [
           [
             "Nobody can read ancient Egyptian writing. It is a mystery for a very long time.",
@@ -13219,7 +16540,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_70,
+        "img": _ASSET_DEDUP_82,
         "s": [
           [
             "Many scientists try. An English doctor, Thomas Young, reads the middle text.",
@@ -13290,7 +16611,7 @@ const EXERCISES_M0 = [
     "feedback": "¡Bien leído!",
     "pantallas": [
       {
-        "img": _ASSET_DEDUP_71,
+        "img": _ASSET_DEDUP_83,
         "s": [
           [
             "A young French man, Jean-François Champollion, knows many languages.",
@@ -13307,7 +16628,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_72,
+        "img": _ASSET_DEDUP_84,
         "s": [
           [
             "He compares the names.",
@@ -13324,7 +16645,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_73,
+        "img": _ASSET_DEDUP_85,
         "s": [
           [
             "In 1822, Champollion can finally read ancient Egyptian writing.",
@@ -13415,12 +16736,12 @@ const EXERCISES_M0 = [
             {
               "titulo": "Can I have a pen, please?",
               "texto": "¿Me das una lapicera, por favor?",
-              "img": _ASSET_DEDUP_74
+              "img": _ASSET_DEDUP_86
             },
             {
               "titulo": "Can I borrow your ruler, please?",
               "texto": "¿Me prestás tu regla, por favor?",
-              "img": _ASSET_DEDUP_75
+              "img": _ASSET_DEDUP_87
             }
           ]
         },
@@ -13498,11 +16819,11 @@ const EXERCISES_M0 = [
     "vozEntrada": "Can I have a pen, please? Sure. Here you are.",
     "audio": "../pdp-assets/2c68ff0c7751f261e9b2e01e67ba0c39.mp3",
     "options": [
+      "¿Me das una lapicera, por favor? Claro. Tomá.",
       "¿Me das una regla, por favor? Claro. Tomá.",
-      "¿Me das una lapicera, por favor? Perdón, no tengo una lapicera.",
-      "¿Me das una lapicera, por favor? Claro. Tomá."
+      "¿Me das una lapicera, por favor? Perdón, no tengo una lapicera."
     ],
-    "correct": 2,
+    "correct": 0,
     "feedback": "¡Eso! Pide una lapicera y se la dan.",
     "feedbackWrong": "Escuchá de nuevo: ¿qué pide y qué le contestan?",
     "hint": "Fijate en lo que pide y en la respuesta.",
@@ -13554,7 +16875,7 @@ const EXERCISES_M0 = [
             {
               "titulo": "Can I open the window, please?",
               "texto": "¿Puedo abrir la ventana?",
-              "img": _ASSET_DEDUP_76
+              "img": _ASSET_DEDUP_88
             },
             {
               "titulo": "Can I close the door, please?",
@@ -13667,7 +16988,7 @@ const EXERCISES_M0 = [
         "idea": "Para pedirle algo a otra persona: Can you + verbo. Can I…? = pide algo para mí Can you…? = le pide algo a otro Se contesta: Sure. = Claro. · Here you are. = Tomá.",
         "media": {
           "tipo": "hero",
-          "img": _ASSET_DEDUP_77,
+          "img": _ASSET_DEDUP_89,
           "alt": "Tom le pide ayuda a Maya con un libro grande."
         },
         "audio": "../pdp-assets/1e8d2cf5604f0f2f9070da3094708c64.mp3"
@@ -13705,11 +17026,11 @@ const EXERCISES_M0 = [
     "vozEntrada": "Can I open the window, please? Sorry, you can't. Can you help me, please? Sure.",
     "audio": "../pdp-assets/cbbbcc7512d57079d347b5ce1b46d069.mp3",
     "options": [
+      "¿Puedo abrir la ventana, por favor? Claro. ¿Me ayudás, por favor? Claro.",
       "¿Puedo abrir la puerta, por favor? Perdón, no podés. ¿Me ayudás, por favor? Claro.",
-      "¿Puedo abrir la ventana, por favor? Perdón, no podés. ¿Me ayudás, por favor? Claro.",
-      "¿Puedo abrir la ventana, por favor? Claro. ¿Me ayudás, por favor? Claro."
+      "¿Puedo abrir la ventana, por favor? Perdón, no podés. ¿Me ayudás, por favor? Claro."
     ],
-    "correct": 1,
+    "correct": 2,
     "feedback": "¡Eso! No le dan permiso para abrir la ventana, pero sí lo ayudan.",
     "feedbackWrong": "Escuchá de nuevo: ¿qué pide cada vez y qué contestan?",
     "hint": "Hay dos pedidos: escuchá cada respuesta.",
@@ -13842,7 +17163,7 @@ const EXERCISES_M0 = [
         "Ask me for a ruler."
       ]
     },
-    "image": _ASSET_DEDUP_75,
+    "image": _ASSET_DEDUP_87,
     "imageAlt": "Leo le pide prestada una regla a Tom."
   },
   {
@@ -13902,7 +17223,7 @@ const EXERCISES_M0 = [
       "registra": "Una marca para el momento: solo / con ayuda / todavía no."
     },
     "experienciaProfe": "PRF-JUE-08",
-    "image": _ASSET_DEDUP_74,
+    "image": _ASSET_DEDUP_86,
     "imageAlt": "Tom le pide una lapicera a Maya."
   },
   {
@@ -13990,7 +17311,7 @@ const EXERCISES_M0 = [
       "registra": "Una marca por actividad: solo / con ayuda / todavía no."
     },
     "experienciaProfe": "PRF-INT-09",
-    "image": _ASSET_DEDUP_76,
+    "image": _ASSET_DEDUP_88,
     "imageAlt": "Maya le pide permiso a la profesora para abrir la ventana."
   },
   {
@@ -14083,7 +17404,7 @@ const EXERCISES_M0 = [
         "Can you help me, please? Can you?"
       ]
     },
-    "image": _ASSET_DEDUP_77,
+    "image": _ASSET_DEDUP_89,
     "imageAlt": "Tom le pide ayuda a Maya con un libro grande."
   },
   {
@@ -14118,16 +17439,16 @@ const EXERCISES_M0 = [
             {
               "titulo": "Can I open the window, please?",
               "texto": "¿Puedo abrir la ventana?",
-              "img": _ASSET_DEDUP_76
+              "img": _ASSET_DEDUP_88
             },
             {
               "titulo": "Can you help me, please?",
               "texto": "¿Me ayudás, por favor?",
-              "img": _ASSET_DEDUP_77
+              "img": _ASSET_DEDUP_89
             }
           ]
         },
-        "audio": _ASSET_DEDUP_21
+        "audio": _ASSET_DEDUP_22
       }
     ]
   },
@@ -14184,7 +17505,7 @@ const EXERCISES_M0 = [
         "Can I open the window? What goes after Can I?"
       ]
     },
-    "image": _ASSET_DEDUP_76,
+    "image": _ASSET_DEDUP_88,
     "imageAlt": "Maya le pide permiso a la profesora para abrir la ventana."
   },
   {
@@ -14226,21 +17547,21 @@ const EXERCISES_M0 = [
             {
               "titulo": "have",
               "texto": "pedir una cosa",
-              "img": _ASSET_DEDUP_74
+              "img": _ASSET_DEDUP_86
             },
             {
               "titulo": "Can I…?",
               "texto": "pedir permiso",
-              "img": _ASSET_DEDUP_76
+              "img": _ASSET_DEDUP_88
             },
             {
               "titulo": "Can you…?",
               "texto": "pedir ayuda",
-              "img": _ASSET_DEDUP_77
+              "img": _ASSET_DEDUP_89
             }
           ]
         },
-        "audio": _ASSET_DEDUP_23
+        "audio": _ASSET_DEDUP_24
       },
       {
         "proposito": "ensenanza",
@@ -14260,7 +17581,7 @@ const EXERCISES_M0 = [
             "Sorry, you can't help."
           ]
         },
-        "audio": _ASSET_DEDUP_24
+        "audio": _ASSET_DEDUP_25
       }
     ]
   },
@@ -14353,7 +17674,7 @@ const EXERCISES_M0 = [
         "circuloAzulImg": "../pdp-assets/5b527aa31ed66ec451eb51b052cb2633.png",
         "circuloDoradoImg": "../pdp-assets/9d669127fb0c134747c4d12229c550aa.png",
         "etiquetaNombreImg": "../pdp-assets/981768ee82e762cab7794934ed7d2d9b.png",
-        "retratoImg": _ASSET_DEDUP_67,
+        "retratoImg": _ASSET_DEDUP_79,
         "retratoMarcoImg": "../pdp-assets/24ba8576ae4f78af96e5751236a2a7e6.png",
         "globoPuntaImg": "../pdp-assets/66dfd2b40e8b86a3f7754f201527fe7d.png",
         "fondoPantallaImg": "../pdp-assets/e6fa933fab214c1578230273e537b09f.jpg"
@@ -14501,7 +17822,7 @@ const EXERCISES_M0 = [
         }
       }
     },
-    "avatar": _ASSET_DEDUP_78
+    "avatar": _ASSET_DEDUP_90
   },
   {
     "status": "published",
@@ -14558,7 +17879,7 @@ const EXERCISES_M0 = [
       "registra": "Una marca para el momento: solo / con ayuda / todavía no."
     },
     "experienciaProfe": "PRF-TRA-03",
-    "image": _ASSET_DEDUP_79,
+    "image": _ASSET_DEDUP_91,
     "imageAlt": "Maya le da su carnet de estudiante a la bibliotecaria."
   },
   {
@@ -14724,7 +18045,7 @@ const EXERCISES_M0 = [
     "feedback": "¡Bien leído!",
     "pantallas": [
       {
-        "img": _ASSET_DEDUP_68,
+        "img": _ASSET_DEDUP_80,
         "s": [
           [
             "Egypt, 1799. French soldiers find a big black stone near the town of Rosetta.",
@@ -14741,7 +18062,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_69,
+        "img": _ASSET_DEDUP_81,
         "s": [
           [
             "Nobody can read ancient Egyptian writing. It is a mystery for a very long time.",
@@ -14758,7 +18079,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_70,
+        "img": _ASSET_DEDUP_82,
         "s": [
           [
             "Many scientists try. An English doctor, Thomas Young, reads the middle text.",
@@ -14809,7 +18130,7 @@ const EXERCISES_M0 = [
     "feedback": "¡Bien leído!",
     "pantallas": [
       {
-        "img": _ASSET_DEDUP_71,
+        "img": _ASSET_DEDUP_83,
         "s": [
           [
             "A young French man, Jean-François Champollion, knows many languages.",
@@ -14826,7 +18147,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_72,
+        "img": _ASSET_DEDUP_84,
         "s": [
           [
             "He compares the names.",
@@ -14843,7 +18164,7 @@ const EXERCISES_M0 = [
         ]
       },
       {
-        "img": _ASSET_DEDUP_73,
+        "img": _ASSET_DEDUP_85,
         "s": [
           [
             "In 1822, Champollion can finally read ancient Egyptian writing.",
@@ -14942,7 +18263,7 @@ const EXERCISES_M0 = [
         "idea": "Para describir un lugar: qué hay, cuántos y qué NO hay. There's a board and a clock. = Hay una pizarra y un reloj. There are eight desks. = Hay ocho pupitres. There isn't a computer. = No hay una computadora.",
         "media": {
           "tipo": "hero",
-          "img": _ASSET_DEDUP_58,
+          "img": _ASSET_DEDUP_70,
           "alt": "Un aula vacía: una pizarra con un reloj encima, dos ventanas y ocho pupitres con sus sillas en dos filas."
         },
         "audio": "../pdp-assets/03d9b0868cc3f9142ac5b2e62ddaa09d.mp3"
@@ -14963,7 +18284,7 @@ const EXERCISES_M0 = [
         "idea": "Después, dónde está cada cosa. The clock is next to the door. = El reloj está al lado de la puerta.",
         "media": {
           "tipo": "hero",
-          "img": _ASSET_DEDUP_57,
+          "img": _ASSET_DEDUP_69,
           "alt": "La biblioteca vista desde arriba: mesas en filas, estantes con libros y un reloj junto a la puerta."
         },
         "audio": "../pdp-assets/084c7a9241831d708b3b4365f2e25950.mp3"
@@ -14986,7 +18307,7 @@ const EXERCISES_M0 = [
             "There are a clock."
           ]
         },
-        "audio": _ASSET_DEDUP_24
+        "audio": _ASSET_DEDUP_25
       }
     ],
     "paraProfe": {
@@ -15108,7 +18429,7 @@ const EXERCISES_M0 = [
       "registra": "Una marca para el momento: solo / con ayuda / todavía no."
     },
     "experienciaProfe": "PRF-PRO-03",
-    "image": _ASSET_DEDUP_58,
+    "image": _ASSET_DEDUP_70,
     "imageAlt": "Un aula vacía: pizarra, reloj, dos ventanas y pupitres con sus sillas."
   },
   {
@@ -15139,7 +18460,7 @@ const EXERCISES_M0 = [
             },
             {
               "titulo": "the library",
-              "img": _ASSET_DEDUP_57
+              "img": _ASSET_DEDUP_69
             },
             {
               "titulo": "the playground",
@@ -15187,11 +18508,11 @@ const EXERCISES_M0 = [
     "vozEntrada": "There are fifteen desks in the classroom. The clock is on the board. Tom has got a calculator.",
     "audio": "../pdp-assets/82ebeb801906356226d5077318b54b27.mp3",
     "options": [
+      "Hay quince pupitres en el aula. El reloj está debajo de la pizarra. Tom tiene una calculadora.",
       "Hay quince pupitres en el aula. El reloj está sobre la pizarra. Tom tiene una calculadora.",
-      "Hay doce pupitres en el aula. El reloj está sobre la pizarra. Tom tiene una calculadora.",
-      "Hay quince pupitres en el aula. El reloj está debajo de la pizarra. Tom tiene una calculadora."
+      "Hay doce pupitres en el aula. El reloj está sobre la pizarra. Tom tiene una calculadora."
     ],
-    "correct": 0,
+    "correct": 1,
     "feedback": "¡Eso! Quince pupitres, el reloj sobre la pizarra y Tom con la calculadora.",
     "feedbackWrong": "Escuchá de nuevo: ¿cuántos pupitres, dónde está el reloj y qué tiene Tom?",
     "hint": "Hay tres frases: escuchá el número y el lugar.",
@@ -15249,7 +18570,7 @@ const EXERCISES_M0 = [
         "idea": "Y pedir lo que necesitás. Can I see your student card, please? Can you help me, please? Se contesta: Sure. / Sorry, I can't.",
         "media": {
           "tipo": "hero",
-          "img": _ASSET_DEDUP_79,
+          "img": _ASSET_DEDUP_91,
           "alt": "Maya le da su carnet de estudiante a la bibliotecaria, detrás del mostrador."
         },
         "audio": "../pdp-assets/9b72faa9652257c48096f6d0a01c29e9.mp3"
@@ -15268,11 +18589,11 @@ const EXERCISES_M0 = [
     "vozEntrada": "Is there a timetable next to the door? Yes, there is. Can I see the timetable, please? Sure. Here you are.",
     "audio": "../pdp-assets/877a9064167f453e64dbd94234a50340.mp3",
     "options": [
+      "¿Hay un horario al lado de la puerta? Sí, hay. ¿Puedo ver el horario, por favor? Claro. Tomá.",
       "¿Hay un horario al lado de la puerta? No, no hay. ¿Puedo ver el horario, por favor? Claro. Tomá.",
-      "¿Hay un horario al lado de la ventana? Sí, hay. ¿Puedo ver el horario, por favor? Claro. Tomá.",
-      "¿Hay un horario al lado de la puerta? Sí, hay. ¿Puedo ver el horario, por favor? Claro. Tomá."
+      "¿Hay un horario al lado de la ventana? Sí, hay. ¿Puedo ver el horario, por favor? Claro. Tomá."
     ],
-    "correct": 2,
+    "correct": 0,
     "feedback": "¡Eso! Sí hay un horario al lado de la puerta y se lo muestran.",
     "feedbackWrong": "Escuchá de nuevo: ¿hay o no hay? ¿Dónde? ¿Y qué le contestan?",
     "hint": "Hay una pregunta de lugar y un pedido.",
@@ -15358,7 +18679,7 @@ const EXERCISES_M0 = [
         "Who asks first?"
       ]
     },
-    "image": _ASSET_DEDUP_78,
+    "image": _ASSET_DEDUP_90,
     "imageAlt": "Un chico le pide algo prestado a un compañero en la biblioteca."
   },
   {
@@ -15526,10 +18847,10 @@ const EXERCISES_M0 = [
         "idea": "Para describir un lugar: qué hay, cuántos y dónde está. There are eight desks. The clock is next to the door.",
         "media": {
           "tipo": "hero",
-          "img": _ASSET_DEDUP_58,
+          "img": _ASSET_DEDUP_70,
           "alt": "Un aula vacía: una pizarra con un reloj encima, dos ventanas y ocho pupitres con sus sillas en dos filas."
         },
-        "audio": _ASSET_DEDUP_21
+        "audio": _ASSET_DEDUP_22
       }
     ]
   },
@@ -15586,7 +18907,7 @@ const EXERCISES_M0 = [
         "One or more? Is there any?"
       ]
     },
-    "image": _ASSET_DEDUP_56,
+    "image": _ASSET_DEDUP_68,
     "imageAlt": "El aula de Leo: una pizarra, dos puertas y doce sillas. No hay reloj."
   },
   {
@@ -15673,11 +18994,11 @@ const EXERCISES_M0 = [
     "question": "Completá lo que dice Maya: le pide prestada una lapicera a su compañero.",
     "sentence": "MAYA: Can ___ borrow your pen, please?",
     "bank": [
-      "I",
       "you",
-      "it"
+      "it",
+      "I"
     ],
-    "correct": 0,
+    "correct": 2,
     "answers": [
       "I"
     ],
@@ -15715,7 +19036,7 @@ const EXERCISES_M0 = [
         "Ask me for a pen."
       ]
     },
-    "image": _ASSET_DEDUP_74,
+    "image": _ASSET_DEDUP_86,
     "imageAlt": "Tom le pide una lapicera a Maya."
   },
   {
@@ -15761,23 +19082,23 @@ const EXERCISES_M0 = [
           "items": [
             {
               "titulo": "qué tiene",
-              "img": _ASSET_DEDUP_25
+              "img": _ASSET_DEDUP_27
             },
             {
               "titulo": "qué hay",
-              "img": _ASSET_DEDUP_52
+              "img": _ASSET_DEDUP_64
             },
             {
               "titulo": "dónde está",
-              "img": _ASSET_DEDUP_65
+              "img": _ASSET_DEDUP_77
             },
             {
               "titulo": "pedir",
-              "img": _ASSET_DEDUP_74
+              "img": _ASSET_DEDUP_86
             }
           ]
         },
-        "audio": _ASSET_DEDUP_50
+        "audio": _ASSET_DEDUP_62
       },
       {
         "proposito": "ensenanza",
@@ -15801,7 +19122,7 @@ const EXERCISES_M0 = [
             "Can I to open the door?"
           ]
         },
-        "audio": _ASSET_DEDUP_24
+        "audio": _ASSET_DEDUP_25
       },
       {
         "proposito": "ensenanza",
@@ -15817,10 +19138,10 @@ const EXERCISES_M0 = [
         "idea": "Con toda la Unidad ya podés hacer tres cosas. Decir qué tenés y qué tienen los demás. Describir un lugar: qué hay, cuántos y dónde está. Pedir cosas, permiso y ayuda. Ahora, el Level Check final.",
         "media": {
           "tipo": "hero",
-          "img": _ASSET_DEDUP_58,
+          "img": _ASSET_DEDUP_70,
           "alt": "Un aula vacía: una pizarra con un reloj encima, dos ventanas y ocho pupitres con sus sillas en dos filas."
         },
-        "audio": _ASSET_DEDUP_51
+        "audio": _ASSET_DEDUP_63
       }
     ]
   },
@@ -16118,7 +19439,7 @@ const EXERCISES_M0 = [
         }
       ]
     },
-    "avatar": _ASSET_DEDUP_66,
+    "avatar": _ASSET_DEDUP_78,
     "modo": "marcar"
   },
   {
@@ -16178,7 +19499,7 @@ const EXERCISES_M0 = [
       "registra": "Una marca para el momento: solo / con ayuda / todavía no."
     },
     "experienciaProfe": "PRF-TRA-02",
-    "image": _ASSET_DEDUP_57,
+    "image": _ASSET_DEDUP_69,
     "imageAlt": "La biblioteca de la escuela vista desde arriba."
   },
   {
