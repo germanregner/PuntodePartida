@@ -1061,11 +1061,11 @@ textarea.text-input { min-height: 110px; }
 .pdp-reloj.cumplido{border-color:#F59E0B;color:#B45309}
 .listen-audio-btn.agotado{opacity:.55}
 /* M5: resultado al terminar un tramo con veredicto al final */
-#pdp-resultado-final{position:fixed;inset:0;z-index:210;background:var(--bg-base);color:var(--text-primary);overflow-y:auto;-webkit-overflow-scrolling:touch;padding:calc(env(safe-area-inset-top,0px) + 20px) 18px calc(env(safe-area-inset-bottom,0px) + 24px)}
-#pdp-resultado-final .rf-caja{max-width:520px;margin:0 auto}
-#pdp-resultado-final h2{font-size:22px;margin:0 0 4px}
+#pdp-resultado-final,#pdp-confirmar-entrega{position:fixed;inset:0;z-index:210;background:var(--bg-base);color:var(--text-primary);overflow-y:auto;-webkit-overflow-scrolling:touch;padding:calc(env(safe-area-inset-top,0px) + 20px) 18px calc(env(safe-area-inset-bottom,0px) + 24px)}
+#pdp-resultado-final .rf-caja,#pdp-confirmar-entrega .rf-caja{max-width:520px;margin:0 auto}
+#pdp-resultado-final h2,#pdp-confirmar-entrega h2{font-size:22px;margin:0 0 4px}
 #pdp-resultado-final .rf-total{font-size:34px;font-weight:800;margin:6px 0 2px;font-variant-numeric:tabular-nums}
-#pdp-resultado-final .rf-nota{font-size:14px;color:var(--text-muted);margin:0 0 16px}
+#pdp-resultado-final .rf-nota,#pdp-confirmar-entrega .rf-nota{font-size:14px;color:var(--text-muted);margin:0 0 16px}
 #pdp-resultado-final .rf-parte{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);padding:12px 14px;margin:0 0 10px}
 #pdp-resultado-final .rf-cab{display:flex;justify-content:space-between;gap:12px;font-weight:700}
 #pdp-resultado-final .rf-cab span:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
@@ -1074,8 +1074,8 @@ textarea.text-input { min-height: 110px; }
 #pdp-resultado-final .rf-items b{font-weight:700}
 #pdp-resultado-final .rf-mal{color:#B45309}
 #pdp-resultado-final .rf-pq{display:block;color:var(--text-secondary);margin-top:3px}
-#pdp-resultado-final .rf-acc{display:flex;flex-direction:column;gap:10px;margin-top:16px}
-#pdp-resultado-final .rf-acc button{min-height:48px}
+#pdp-resultado-final .rf-acc,#pdp-confirmar-entrega .rf-acc{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+#pdp-resultado-final .rf-acc button,#pdp-confirmar-entrega .rf-acc button{min-height:48px}
 /* Capacidad de imagen contextual (2026-09-23, F4/F5 — image/imageAlt como campos comunes
    opcionales, un único punto de render compartido por todos los kinds evaluados; ver
    especificaciones/INCIDENTES_ARQUITECTONICOS.md OA-018 para el caso relacionado de
@@ -7575,6 +7575,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/bb75f55a5030b91a3812b4c901be6a08.js"></script><script src="../pdp-assets/c95addefdf08f505f54d5a48d4e2b5a5.js"></script>
+<script src="../pdp-assets/b1361fd4f612f258787e2616fe667041.js"></script><script src="../pdp-assets/bc5ec2819bbef09495c7d6259e28a77c.js"></script>
 </body>
 </html>
