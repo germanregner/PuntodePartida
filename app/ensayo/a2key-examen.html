@@ -1087,6 +1087,11 @@ textarea.text-input { min-height: 110px; }
 #pdp-resultado-final .rf-pq{display:block;color:var(--text-secondary);margin-top:3px}
 #pdp-resultado-final .rf-acc,#pdp-confirmar-entrega .rf-acc{display:flex;flex-direction:column;gap:10px;margin-top:16px}
 #pdp-resultado-final .rf-acc button,#pdp-confirmar-entrega .rf-acc button{min-height:48px}
+#pdp-confirmar-entrega .rf-falta{list-style:none;margin:8px 0 12px;padding:10px 12px;border-left:4px solid #F59E0B;border-radius:8px;background:var(--bg-card);color:var(--text-primary);font-size:17px;font-weight:700;line-height:1.35}   /* examen (2026-11-13): lo que falta, primero */
+#pdp-confirmar-entrega .rf-falta li+li{margin-top:4px}
+#pdp-aviso-parte{position:fixed;inset:0;z-index:210;background:var(--bg-base);color:var(--text-primary);overflow-y:auto;-webkit-overflow-scrolling:touch;padding:calc(env(safe-area-inset-top,0px) + 20px) 18px calc(env(safe-area-inset-bottom,0px) + 24px);display:flex;align-items:center}
+#pdp-aviso-parte .rf-caja{max-width:520px;margin:0 auto;width:100%} #pdp-aviso-parte h2{font-size:22px;margin:0 0 10px} #pdp-aviso-parte .ap-texto{font-size:17px;line-height:1.45;margin:0 0 8px;color:var(--text-primary)}
+#pdp-aviso-parte h2:focus{outline:none} #pdp-aviso-parte .rf-acc{display:flex;flex-direction:column;gap:10px;margin-top:20px} #pdp-aviso-parte .rf-acc button{min-height:48px}   /* examen (2026-11-13): aviso al empezar cada parte */
 #pdp-mis-respuestas{position:fixed;inset:0;z-index:210;background:var(--bg-base);color:var(--text-primary);overflow-y:auto;-webkit-overflow-scrolling:touch;padding:calc(env(safe-area-inset-top,0px) + 20px) 18px calc(env(safe-area-inset-bottom,0px) + 24px)}
 #pdp-mis-respuestas .rf-caja{max-width:520px;margin:0 auto} #pdp-mis-respuestas h2{font-size:22px;margin:0 0 4px} #pdp-mis-respuestas .rf-nota{font-size:14px;color:var(--text-muted);margin:0 0 16px}
 #pdp-mis-respuestas .rf-parte{border:1px solid var(--border);border-radius:12px;margin:0 0 10px;overflow:hidden;background:var(--bg-card)} #pdp-mis-respuestas .rf-cab{padding:10px 12px;font-weight:700;font-size:14px}
@@ -7593,6 +7598,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/36e08770baf0c764964ffd1cebf30dfa.js"></script><script src="../pdp-assets/3db20f02bce62a81fbafbb41500a8029.js"></script>
+<script src="../pdp-assets/e9e2cc4e57c0dfc23fd08d62f7ddc39f.js"></script><script src="../pdp-assets/32e2a46c1ed0125f725d52841239ee8e.js"></script>
 </body>
 </html>
