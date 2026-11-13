@@ -1056,6 +1056,15 @@ textarea.text-input { min-height: 110px; }
 .pdp-estimulo p:last-child{margin-bottom:0}
 .pdp-estimulo .pe-marca{font-weight:800;text-decoration:underline;text-underline-offset:3px}
 .pdp-estimulo.pe-centrado{text-align:center}
+.pdp-estimulo{overflow-anchor:none}
+.pdp-estimulo .pe-ampliar{position:sticky;top:0;float:right;z-index:1;margin:-6px -8px 6px 10px;font:inherit;font-size:12px;font-weight:700;color:var(--text-secondary);background:var(--bg-card);border:1px solid var(--border);border-radius:999px;padding:0 12px;min-height:44px;cursor:pointer}
+.pdp-estimulo.pe-amplio{position:fixed;inset:0;z-index:205;max-height:none !important;border-radius:0;border:0;padding:calc(env(safe-area-inset-top,0px) + 16px) 18px calc(env(safe-area-inset-bottom,0px) + 24px)}
+.pdp-trad{margin:10px 0 0;text-align:left}
+.pdp-trad button{font:inherit;font-size:14px;font-weight:700;color:var(--text-secondary);background:none;border:1px dashed var(--border);border-radius:var(--radius-md);padding:8px 12px;min-height:44px;cursor:pointer}
+.pdp-trad button:disabled{opacity:.6}
+.pdp-trad .pt-rot{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted)}
+.pdp-trad .pt-txt{font-size:15px;line-height:1.45;color:var(--text-secondary);margin:2px 0 0;font-weight:400}
+.pdp-trad .pt-fin{font-size:13px;color:var(--text-muted);margin:0;font-weight:400}
 #exercise-image-zone .pdp-estimulo + img, #exercise-image-zone img + .pdp-estimulo{margin-top:10px}
 .pdp-reloj{position:fixed;top:calc(env(safe-area-inset-top,0px) + 6px);left:50%;transform:translateX(-50%);z-index:60;background:var(--bg-card);border:1px solid var(--border);border-radius:999px;padding:3px 12px;font-size:13px;font-weight:700;color:var(--text-primary);font-variant-numeric:tabular-nums;pointer-events:none}
 .pdp-reloj.cumplido{border-color:#F59E0B;color:#B45309}
@@ -7575,6 +7584,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/b1361fd4f612f258787e2616fe667041.js"></script><script src="../pdp-assets/bc5ec2819bbef09495c7d6259e28a77c.js"></script>
+<script src="../pdp-assets/0efd55e8255e7a0ba72a31b599788f10.js"></script><script src="../pdp-assets/c1032592acf437f8fbbd8812c02c2418.js"></script>
 </body>
 </html>
