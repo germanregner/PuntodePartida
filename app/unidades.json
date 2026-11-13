@@ -41,6 +41,16 @@
       "descripcion": "Matemática: perímetro y área. Unidad nueva con Ronnie (prueba).",
       "claveApp": "pdp_Perímetro_y_Área",
       "total": 11
+    },
+    {
+      "id": "pdp-examen-a2key",
+      "pagina": "vista-previa/a2key-examen.html",
+      "titulo": "Preparación A2 Key",
+      "materia": "Inglés",
+      "descripcion": "Inglés: preparación del examen A2 Key. Práctica por partes y dos simulacros (prueba).",
+      "claveApp": "pdp_Preparación_A2_Key",
+      "total": 205,
+      "icono": "pdp-assets/e1a38d81ce3c7f246d2cbd0fd851bdd5.png"
     }
   ]
 }
