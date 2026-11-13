@@ -1071,6 +1071,7 @@ textarea.text-input { min-height: 110px; }
 .pdp-reloj{position:fixed;top:calc(env(safe-area-inset-top,0px) + 6px);left:50%;transform:translateX(-50%);z-index:60;background:var(--bg-card);border:1px solid var(--border);border-radius:999px;padding:3px 12px;font-size:13px;font-weight:700;color:var(--text-primary);font-variant-numeric:tabular-nums;pointer-events:none}
 .pdp-reloj.cumplido{border-color:#F59E0B;color:#B45309}
 .listen-audio-btn.agotado{opacity:.55}
+.pdp-img-error{display:flex;flex-direction:column;align-items:center;gap:10px;padding:14px;border:1px dashed var(--border);border-radius:12px;color:var(--text-muted);text-align:center;font-size:15px}   /* examen (2026-11-14) */
 /* M5: resultado al terminar un tramo con veredicto al final */
 #pdp-resultado-final,#pdp-confirmar-entrega{position:fixed;inset:0;z-index:210;background:var(--bg-base);color:var(--text-primary);overflow-y:auto;-webkit-overflow-scrolling:touch;padding:calc(env(safe-area-inset-top,0px) + 20px) 18px calc(env(safe-area-inset-bottom,0px) + 24px)}
 #pdp-resultado-final .rf-caja,#pdp-confirmar-entrega .rf-caja{max-width:520px;margin:0 auto}
@@ -2850,7 +2851,7 @@ html:not(.pdp-fondo-ej) :is(#skillcheck-transition-overlay,#skillcheck-result-ov
    existe (hoy, solo CS-01) — MAT-14/21/27 usan la lista plana de
    ChapterCard, sin cambios de comportamiento. */
 .dot-nav-header { position: relative; }
-.pmap-docked-icon {
+.pmap-docked-icon { pointer-events:none;   /* 2026-11-14: decoración; nunca tapa la flecha */
   /* width/height:44px agregado (2026-08-19, bug real reportado con capturas
      por el Director: "el ícono principal... queda muy grande" en el header
      colapsado) — root cause: setIconoContent() (usado acá desde siempre)
@@ -7608,6 +7609,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/3a93309c10d2e7108e38fa069b003a29.js"></script><script src="../pdp-assets/49cf6c4c9f6f86960cf510575ab11ba1.js"></script>
+<script src="../pdp-assets/c5428e76d60ffe8039bc813188465f85.js"></script><script src="../pdp-assets/9c807bdd2b771ade76997f28b0c3bab1.js"></script>
 </body>
 </html>
