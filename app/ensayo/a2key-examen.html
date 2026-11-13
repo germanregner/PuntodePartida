@@ -1057,7 +1057,9 @@ textarea.text-input { min-height: 110px; }
 .pdp-estimulo .pe-marca{font-weight:800;text-decoration:underline;text-underline-offset:3px}
 .pdp-estimulo.pe-centrado{text-align:center}
 .pdp-estimulo{overflow-anchor:none}
-.pdp-estimulo .pe-ampliar{position:sticky;top:0;float:right;z-index:1;margin:-6px -8px 6px 10px;font:inherit;font-size:12px;font-weight:700;color:var(--text-secondary);background:var(--bg-card);border:1px solid var(--border);border-radius:999px;padding:0 12px;min-height:44px;cursor:pointer}
+.pe-ampliar[hidden]{display:none}
+.pe-ampliar.pe-sobre{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);right:14px;z-index:206;margin:0}
+.pe-ampliar{display:block;margin:6px 0 0 auto;font:inherit;font-size:12px;font-weight:700;color:var(--text-secondary);background:var(--bg-card);border:1px solid var(--border);border-radius:999px;padding:0 12px;min-height:44px;cursor:pointer}
 .pdp-estimulo.pe-amplio{position:fixed;inset:0;z-index:205;max-height:none !important;border-radius:0;border:0;padding:calc(env(safe-area-inset-top,0px) + 16px) 18px calc(env(safe-area-inset-bottom,0px) + 24px)}
 .pdp-trad{margin:10px 0 0;text-align:left}
 .pdp-trad button{font:inherit;font-size:14px;font-weight:700;color:var(--text-secondary);background:none;border:1px dashed var(--border);border-radius:var(--radius-md);padding:8px 12px;min-height:44px;cursor:pointer}
@@ -7584,6 +7586,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/63155107e0e2917ee30c2833880fab0f.js"></script><script src="../pdp-assets/9c98bbe9de9f0a89275abdeda9a7d257.js"></script>
+<script src="../pdp-assets/ac7b5beff642cdf8e27197e62d7de825.js"></script><script src="../pdp-assets/8c981aac213b59671fcebce84eddc324.js"></script>
 </body>
 </html>
