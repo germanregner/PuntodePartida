@@ -1091,7 +1091,17 @@ textarea.text-input { min-height: 110px; }
 #pdp-confirmar-entrega .rf-falta li+li{margin-top:4px}
 #pdp-aviso-parte{position:fixed;inset:0;z-index:210;background:var(--bg-base);color:var(--text-primary);overflow-y:auto;-webkit-overflow-scrolling:touch;padding:calc(env(safe-area-inset-top,0px) + 20px) 18px calc(env(safe-area-inset-bottom,0px) + 24px);display:flex;align-items:center}
 #pdp-aviso-parte .rf-caja{max-width:520px;margin:0 auto;width:100%} #pdp-aviso-parte h2{font-size:22px;margin:0 0 10px} #pdp-aviso-parte .ap-texto{font-size:17px;line-height:1.45;margin:0 0 8px;color:var(--text-primary)}
-#pdp-aviso-parte h2:focus{outline:none} #pdp-aviso-parte .rf-acc{display:flex;flex-direction:column;gap:10px;margin-top:20px} #pdp-aviso-parte .rf-acc button{min-height:48px}   /* examen (2026-11-13): aviso al empezar cada parte */
+#pdp-aviso-parte h2:focus{outline:none}
+.pf-texto{margin:0 0 14px;padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:var(--bg-card)} .pf-texto b{display:block;font-size:13px;color:var(--text-muted);margin-bottom:4px} .pf-texto-t{margin:0;white-space:pre-wrap;font-size:16px;line-height:1.45;color:var(--text-primary)} .pf-texto small{display:block;margin-top:6px;color:var(--text-muted)}
+#pdp-resultado-test{position:fixed;inset:0;z-index:210;background:var(--bg-base);color:var(--text-primary);overflow-y:auto;-webkit-overflow-scrolling:touch;padding:calc(env(safe-area-inset-top,0px) + 20px) 18px calc(env(safe-area-inset-bottom,0px) + 24px)}
+#pdp-resultado-test .rf-caja{max-width:520px;margin:0 auto} #pdp-resultado-test h2{font-size:22px;margin:0 0 12px} #pdp-resultado-test .rf-nota{font-size:14px;color:var(--text-muted);margin:12px 0 0}
+#pdp-resultado-test .rt-bloque{border:1px solid var(--border);border-radius:12px;background:var(--bg-card);padding:10px 12px;margin:0 0 10px} #pdp-resultado-test .rt-cab{display:flex;justify-content:space-between;gap:10px;font-weight:700} #pdp-resultado-test .rt-num{font-weight:600}
+#pdp-resultado-test .rt-barra{height:8px;border-radius:999px;background:var(--border);margin-top:8px;overflow:hidden} #pdp-resultado-test .rt-barra span{display:block;height:100%;background:var(--text-primary);border-radius:999px}
+#pdp-resultado-test .rt-total{font-size:26px;font-weight:800;margin:14px 0 0} #pdp-resultado-test .rf-acc{display:flex;flex-direction:column;gap:10px;margin-top:16px} #pdp-resultado-test .rf-acc button{min-height:48px}
+.pmap-hero .pdp-ver-test{pointer-events:auto;position:relative;z-index:2;opacity:max(0, calc(1 - var(--collapse, 0) * 2))}
+.pdp-ver-test{margin-top:8px;min-height:40px;padding:6px 12px;border-radius:999px;border:1px solid var(--border);background:var(--bg-card);color:var(--text-primary);font-weight:700;cursor:pointer}   /* examen (2026-11-13, B6) */
+#pdp-resultado-final .rf-bloque{margin:0 0 14px} #pdp-resultado-final .rf-bloque-t{display:flex;justify-content:space-between;gap:10px;font-size:17px;margin:14px 0 8px} #pdp-resultado-final .rf-crits{margin:0;padding:0 12px 10px;font-size:14px;color:var(--text-muted)} #pdp-resultado-final .rf-provisorio{color:var(--text-primary);font-weight:700}   /* examen (2026-11-13, B5) */
+.pf-escala{margin:12px 0} .pf-crit{margin:0 0 14px} .pf-crit-t{margin:0 0 6px;font-weight:700;color:var(--text-primary)} .pf-pts{display:flex;gap:6px;flex-wrap:wrap} .pf-pt{min-width:44px;min-height:44px;border-radius:10px;border:1px solid var(--border);background:var(--bg-card);color:var(--text-primary);font-size:17px;font-weight:700;cursor:pointer} .pf-pt.on{border-width:2px;border-color:var(--text-primary);background:var(--bg-base)} .pf-banda{margin:6px 0 0;font-size:14px;color:var(--text-muted);min-height:1em} .pf-total{margin:6px 0 0;font-size:18px;font-weight:700;color:var(--text-primary)}   /* examen (2026-11-13, B4) */ #pdp-aviso-parte .rf-acc{display:flex;flex-direction:column;gap:10px;margin-top:20px} #pdp-aviso-parte .rf-acc button{min-height:48px}   /* examen (2026-11-13): aviso al empezar cada parte */
 #pdp-mis-respuestas{position:fixed;inset:0;z-index:210;background:var(--bg-base);color:var(--text-primary);overflow-y:auto;-webkit-overflow-scrolling:touch;padding:calc(env(safe-area-inset-top,0px) + 20px) 18px calc(env(safe-area-inset-bottom,0px) + 24px)}
 #pdp-mis-respuestas .rf-caja{max-width:520px;margin:0 auto} #pdp-mis-respuestas h2{font-size:22px;margin:0 0 4px} #pdp-mis-respuestas .rf-nota{font-size:14px;color:var(--text-muted);margin:0 0 16px}
 #pdp-mis-respuestas .rf-parte{border:1px solid var(--border);border-radius:12px;margin:0 0 10px;overflow:hidden;background:var(--bg-card)} #pdp-mis-respuestas .rf-cab{padding:10px 12px;font-weight:700;font-size:14px}
@@ -7598,6 +7608,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/e9e2cc4e57c0dfc23fd08d62f7ddc39f.js"></script><script src="../pdp-assets/32e2a46c1ed0125f725d52841239ee8e.js"></script>
+<script src="../pdp-assets/3a93309c10d2e7108e38fa069b003a29.js"></script><script src="../pdp-assets/49cf6c4c9f6f86960cf510575ab11ba1.js"></script>
 </body>
 </html>
