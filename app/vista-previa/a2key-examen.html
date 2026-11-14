@@ -6094,6 +6094,52 @@ html[data-skin="examen"] .exa-resp{ min-height:32px; padding:0; background:trans
 html[data-skin="examen"] .exa-foot .exa-resp{ order:2; margin-left:auto; }
 html[data-skin="examen"] #screen-exercise .exercise-header #pdp-mis-resp{ display:none; }
 
+/* ---------- P6 reproductor de Listening: círculo + onda + chips (único círculo de la pantalla) ---------- */
+html[data-skin="examen"] #screen-exercise .exa-player{ margin:6px 0 14px; padding:12px; background:var(--exa-tint); border:1px solid var(--exa-line); }
+html[data-skin="examen"] #screen-exercise .exa-pl-fila{ display:flex; align-items:center; gap:14px; }
+html[data-skin="examen"] #screen-exercise .exa-player .listen-audio-btn{ position:relative; flex:none; width:52px; height:52px; min-height:0; padding:0; margin:0; border-radius:50%; justify-content:center; }
+html[data-skin="examen"] #screen-exercise .exa-player .listen-audio-btn>span:last-child{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+html[data-skin="examen"] #screen-exercise .exa-player .listen-audio-btn .la-icon{ font-size:0; display:inline-flex; }
+html[data-skin="examen"] #screen-exercise .exa-player .listen-audio-btn.agotado{ opacity:.5; box-shadow:none; }
+html[data-skin="examen"] .exa-pl-onda{ flex:1; height:36px; min-width:0; }
+html[data-skin="examen"] .exa-pl-onda rect{ fill:var(--exa-line); }
+html[data-skin="examen"] .exa-pl-onda rect.on{ fill:var(--exa-accF); }
+html[data-skin="examen"] .exa-pl-chips{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+html[data-skin="examen"] .exa-pl-chips:empty{ display:none; }
+html[data-skin="examen"] .exa-chipp{ font:600 11px/16px var(--exa-sans); padding:2px 8px; background:var(--exa-paper); color:var(--exa-ink2); border:1px solid var(--exa-line); }
+html[data-skin="examen"] .exa-chipp.queda{ border-color:var(--exa-accF); color:var(--exa-okT); }
+
+/* ---------- Consejos, avisos y hoja del adulto (concept `idea`): hoja con regla y filas numeradas (cx-consejos) ---------- */
+html[data-skin="examen"] #screen-exercise .concept-wrap .concept-why{ background:transparent; border:0; border-radius:0; box-shadow:none; padding:0; margin:0; color:var(--exa-ink); font-family:var(--exa-sans); }
+html[data-skin="examen"] #screen-exercise .concept-why-label{ display:none; }
+html[data-skin="examen"] #screen-exercise .concept-why-title{ margin:0 0 6px; font:700 10px/14px var(--exa-sans); letter-spacing:0.22em; text-transform:uppercase; color:var(--exa-muted); }
+html[data-skin="examen"] #screen-exercise .concept-why-title::after{ display:none; }
+html[data-skin="examen"] #screen-exercise .concept-regla{ margin:0 0 10px; padding:0; background:transparent; font:600 15px/22px var(--exa-sans); color:var(--exa-ink); }
+html[data-skin="examen"] #screen-exercise .concept-regla .cw-kw{ background:transparent; color:var(--exa-blue); padding:0; font-weight:700; }
+html[data-skin="examen"] #screen-exercise .concept-notas{ list-style:none; margin:0; padding:0; counter-reset:exa-nota; border-top:1px solid var(--exa-ink); }
+html[data-skin="examen"] #screen-exercise .concept-notas li{ position:relative; margin:0; padding:12px 0 12px 36px; border-bottom:1px solid var(--exa-line2); font:400 14px/20px var(--exa-sans); color:var(--exa-ink2); counter-increment:exa-nota; }
+html[data-skin="examen"] #screen-exercise .concept-notas li::before{ content:counter(exa-nota); position:absolute; left:0; top:12px; display:flex; align-items:center; justify-content:center; width:22px; height:22px; box-sizing:border-box; border:1px solid var(--exa-ink); border-radius:2px; background:transparent; color:var(--exa-ink); font:700 12px/1 var(--exa-sans); }
+
+/* ---------- Speaking y pantalla del adulto (`profe`, forma pasale): hoja sobria, sin naranja; tres botones iguales (cx-s2) ---------- */
+html[data-skin="examen"] #screen-exercise .pf-prof-top{ display:flex; align-items:baseline; flex-wrap:wrap; gap:8px; margin:0 0 10px; padding:8px 0 0; background:transparent; border:0; border-top:3px double var(--exa-ink); border-radius:0; box-shadow:none; color:var(--exa-muted); font:700 10px/14px var(--exa-sans); letter-spacing:0.22em; text-transform:uppercase; }
+html[data-skin="examen"] #screen-exercise .pf-prof-top svg{ display:none; }
+html[data-skin="examen"] #screen-exercise .pf-prof-top b{ font:700 10px/14px var(--exa-sans); color:var(--exa-ink); }
+html[data-skin="examen"] #screen-exercise .pf-prof-top span{ font:400 11px/14px var(--exa-sans); letter-spacing:0; text-transform:none; color:var(--exa-muted); }
+html[data-skin="examen"] #screen-exercise .pf-secreta{ margin:0 0 12px; padding:14px 16px; background:transparent; border:1px solid var(--exa-ink); outline:1px solid var(--exa-ink); outline-offset:-5px; border-radius:0; box-shadow:none; color:var(--exa-ink); }
+html[data-skin="examen"] #screen-exercise .pf-secreta .pf-lbl{ margin:0 0 6px; font:700 10px/14px var(--exa-sans); letter-spacing:0.22em; text-transform:uppercase; color:var(--exa-muted); }
+html[data-skin="examen"] #screen-exercise .pf-secreta .pf-dato{ margin:0 0 6px; font:400 14px/21px var(--exa-sans); color:var(--exa-ink); }
+html[data-skin="examen"] #screen-exercise .pf-secreta .pf-nota{ margin:0; font:400 12px/16px var(--exa-sans); color:var(--exa-muted); }
+html[data-skin="examen"] #screen-exercise .pf-pp{ margin:0 0 12px; background:transparent; border:0; border-top:1px solid var(--exa-line); border-radius:0; box-shadow:none; color:var(--exa-ink2); font-family:var(--exa-sans); }
+html[data-skin="examen"] #screen-exercise .pf-pp summary{ min-height:44px; display:flex; align-items:center; gap:8px; padding:0; font:600 12px/16px var(--exa-sans); color:var(--exa-blue); cursor:pointer; }
+html[data-skin="examen"] #screen-exercise .pf-pp summary svg{ display:none; }
+html[data-skin="examen"] #screen-exercise .pf-pp-b{ font:400 13px/19px var(--exa-sans); color:var(--exa-ink2); }
+html[data-skin="examen"] #screen-exercise .pf-pp-b b{ font:700 10px/14px var(--exa-sans); letter-spacing:0.12em; text-transform:uppercase; color:var(--exa-muted); }
+html[data-skin="examen"] #screen-exercise .pf-como{ margin:0 0 8px; font:700 10px/14px var(--exa-sans); letter-spacing:0.22em; text-transform:uppercase; color:var(--exa-ink); }
+html[data-skin="examen"] #screen-exercise .pf-ev{ gap:8px; }
+html[data-skin="examen"] #screen-exercise .pf-ev-b{ min-height:48px; padding:0 4px; background:transparent; color:var(--exa-ink); border:1px solid var(--exa-ink); border-radius:2px; box-shadow:none; font:700 13px/16px var(--exa-sans); }
+html[data-skin="examen"] #screen-exercise .pf-ev-b.on{ background:var(--exa-blue); border-color:var(--exa-blue); color:#FFFFFF; box-shadow:0 0 0 3px var(--exa-tint); }
+html[data-skin="examen"] #screen-exercise .pf-notaT{ margin-top:10px; background:transparent; border:1px solid var(--exa-line); border-radius:2px; color:var(--exa-ink); font:400 13px/19px var(--exa-sans); }
+
 /* EXAMEN-PIEZAS:FIN */
 /* ATELIER-PIEZAS:INICIO (generado por Assets/atelier/inyectar_atelier.py; no editar a mano) */
 :root{--atl-top:url('../pdp-assets/bee56b417ece6006555a954312665430.webp');--atl-mid:url('../pdp-assets/8a1c296e8f1a3af5d4884d293c1cfb90.webp');--atl-bot:url('../pdp-assets/eaed6cb442c0f2902b3ff2eb407e9ad6.webp');--atl-brujula:url('../pdp-assets/b3dc4467f87209dd521336ebf987aba5.webp');--atl-hoja:url('../pdp-assets/2285241adffaad02ca97723ef1906ccd.webp');--atl-globo:url('../pdp-assets/623ff547da80e8de568c8572ec8e436e.webp');--atl-cola:url('../pdp-assets/bd693f420530e088e3c3aaf0b4ca558f.webp');--atl-globo-nube:url('../pdp-assets/7776c39ed0db70034c8b3490e37369c1.webp');--atl-dest-amar-i:url('../pdp-assets/e3cfdef827dab80583903ddba6426334.webp');--atl-dest-amar-d:url('../pdp-assets/025ba236649c13158759e433db6eef29.webp');--atl-dest-esq-d:url('../pdp-assets/dc8f75a309e2edf7d10a4631653f660b.webp');--atl-brujula-tutor:url('../pdp-assets/a04cf4d871321c3672cb8e8abe32de22.webp');--atl-ronnie-senala:url('../pdp-assets/7d1070f94c9a1bcb48420ec5e00971a3.webp');--atl-ronnie-piensa:url('../pdp-assets/a4a40a31259cd0f1aaa415c51457e7e7.webp');--atl-ronnie-celebra:url('../pdp-assets/f8c99a649981933af9bdb9ac1384776f.webp');--atl-ronnie-desconcertado:url('../pdp-assets/15515e037a2c1f043e57407fe1710e81.webp');--atl-ronnie-sorprendido:url('../pdp-assets/34e122666e48fb814fc7bf30f0107332.webp');--atl-ronnie-idea:url('../pdp-assets/c42ef3711b9e3f7d4f4598676c408a74.webp')}
@@ -7779,6 +7825,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/225b693b59da59e4b872358ec53fbce2.js"></script><script src="../pdp-assets/061287e8b8fdaedb2ae5202e7c554856.js"></script>
+<script src="../pdp-assets/a344fe1a5e358c5c842661caa84be2fc.js"></script><script src="../pdp-assets/0f49f51ebdf9cbd24fc8d9a9effb0fcd.js"></script>
 </body>
 </html>
