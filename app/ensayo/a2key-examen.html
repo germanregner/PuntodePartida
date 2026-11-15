@@ -6575,6 +6575,62 @@ html[data-skin="examen"] .help-panel .pds-btn-depth, html[data-skin="examen"] #h
 html[data-skin="examen"] .help-panel .pds-btn-depth:active, html[data-skin="examen"] #help-panel #confirm-btn:active{ transform:translateY(3px); box-shadow:inset 0 -2px 0 rgba(0,0,0,0.10), 0 1px 0 var(--exa-btnEdge) !important; }
 html[data-skin="examen"] .help-panel .btn-secondary, html[data-skin="examen"] .help-panel .pds-btn-ghost{ background:var(--exa-paper) !important; color:var(--exa-ink) !important; border:1.5px solid var(--exa-line) !important; border-radius:8px !important; box-shadow:inset 0 1px 0 var(--exa-hi), 0 3px 0 var(--exa-line) !important; }
 
+/* ---------- arreglo: la hoja de comprobar no pinta un rectángulo detrás de la ola (los estados wrong/correct/hint/revealed del bloque anterior le ponían fondo propio) ---------- */
+html[data-skin="examen"] .feedback-zone.wrong-fb, html[data-skin="examen"] .feedback-zone.hint-fb, html[data-skin="examen"] .feedback-zone.correct-fb, html[data-skin="examen"] .feedback-zone.revealed-fb, html[data-skin="examen"] .feedback-zone.visible{ background:transparent !important; background-image:none !important; border-top:0 !important; box-shadow:none !important; }
+/* «Pista» con identidad: la brújula-estrella de PdP (la del Motor, --pdp-brujula) como medallón, sin subrayado */
+html[data-skin="examen"] #screen-exercise .help-btn{ gap:6px; padding:0 6px 0 2px; color:var(--exa-ink); font:700 13px/1 var(--exa-jakarta); text-decoration:none; letter-spacing:0.02em; }
+html[data-skin="examen"] #screen-exercise .help-btn::before{ content:''; flex:none; width:40px; height:40px; background:var(--pdp-brujula) center/contain no-repeat; filter:drop-shadow(0 3px 3px rgba(8,17,31,0.4)); transition:transform .25s var(--exa-curva); }
+html[data-skin="examen"] #screen-exercise .help-btn:active::before{ transform:rotate(45deg) scale(0.94); }
+@media (prefers-reduced-motion:reduce){ html[data-skin="examen"] #screen-exercise .help-btn:active::before{ transform:none; } }
+
+/* ---------- 20 brújulas para la «Pista» (las de la prueba de Matemática, brujulas_20.png). Se cambian desde el 🧪: «Examen · brújula de Pista» ---------- */
+html[data-skin="examen"]{
+  --exa-bruj-1:url('../pdp-assets/cabdba166e3bf07ea77566c6f801c24c.webp');
+  --exa-bruj-2:url('../pdp-assets/b5a66ef4a0a224677dda5c2213a5da0b.webp');
+  --exa-bruj-3:url('../pdp-assets/0a77f2db1f60ff30a97dba8879719827.webp');
+  --exa-bruj-4:url('../pdp-assets/7f67d78453eb8f897a77d68b728bd8bb.webp');
+  --exa-bruj-5:url('../pdp-assets/4a6262cb66d08be0ed1e47b1baaa7ab8.webp');
+  --exa-bruj-6:url('../pdp-assets/c7c4fc89f750aed5686544e2ee624991.webp');
+  --exa-bruj-7:url('../pdp-assets/56f6939824baf51eff93f144b58273e3.webp');
+  --exa-bruj-8:url('../pdp-assets/5a134960316149e5ebbbac33b1237f4e.webp');
+  --exa-bruj-9:url('../pdp-assets/7bbafc1e2595474cce219ef047ebf1ca.webp');
+  --exa-bruj-10:url('../pdp-assets/eba36154978a03e46975df65bcd16e04.webp');
+  --exa-bruj-11:url('../pdp-assets/c54d445acfba3e31b92d4e0ecad13d88.webp');
+  --exa-bruj-12:url('../pdp-assets/8a0052532bda3d0efbd081168cf0381f.webp');
+  --exa-bruj-13:url('../pdp-assets/9c17a820bea949be083c36988f6f922c.webp');
+  --exa-bruj-14:url('../pdp-assets/2ea2fc7def6cb282bac6a01577fd4a8d.webp');
+  --exa-bruj-15:url('../pdp-assets/4f1ddae043b6dda59a270f8240a00962.webp');
+  --exa-bruj-16:url('../pdp-assets/a9c3c56003cd197438c13f62bde1f297.webp');
+  --exa-bruj-17:url('../pdp-assets/6cc5af32140d83a29aa98b30f5e74cc1.webp');
+  --exa-bruj-18:url('../pdp-assets/14343e74e1234272a37870a5942a6122.webp');
+  --exa-bruj-19:url('../pdp-assets/1a654f83e6bde1a2a823b47d6bd473a4.webp');
+  --exa-bruj-20:url('../pdp-assets/34b7f90505e8aaa521c27a46fbae7bad.webp');
+}
+html[data-skin="examen"][data-var-exa-brujula="1"] #screen-exercise .help-btn::before{ background-image:var(--exa-bruj-1); }
+html[data-skin="examen"][data-var-exa-brujula="2"] #screen-exercise .help-btn::before{ background-image:var(--exa-bruj-2); }
+html[data-skin="examen"][data-var-exa-brujula="3"] #screen-exercise .help-btn::before{ background-image:var(--exa-bruj-3); }
+html[data-skin="examen"][data-var-exa-brujula="4"] #screen-exercise .help-btn::before{ background-image:var(--exa-bruj-4); }
+html[data-skin="examen"][data-var-exa-brujula="5"] #screen-exercise .help-btn::before{ background-image:var(--exa-bruj-5); }
+html[data-skin="examen"][data-var-exa-brujula="6"] #screen-exercise .help-btn::before{ background-image:var(--exa-bruj-6); }
+html[data-skin="examen"][data-var-exa-brujula="7"] #screen-exercise .help-btn::before{ background-image:var(--exa-bruj-7); }
+html[data-skin="examen"][data-var-exa-brujula="8"] #screen-exercise .help-btn::before{ background-image:var(--exa-bruj-8); }
+html[data-skin="examen"][data-var-exa-brujula="9"] #screen-exercise .help-btn::before{ background-image:var(--exa-bruj-9); }
+html[data-skin="examen"][data-var-exa-brujula="10"] #screen-exercise .help-btn::before{ background-image:var(--exa-bruj-10); }
+html[data-skin="examen"][data-var-exa-brujula="11"] #screen-exercise .help-btn::before{ background-image:var(--exa-bruj-11); }
+html[data-skin="examen"][data-var-exa-brujula="12"] #screen-exercise .help-btn::before{ background-image:var(--exa-bruj-12); }
+html[data-skin="examen"][data-var-exa-brujula="13"] #screen-exercise .help-btn::before{ background-image:var(--exa-bruj-13); }
+html[data-skin="examen"][data-var-exa-brujula="14"] #screen-exercise .help-btn::before{ background-image:var(--exa-bruj-14); }
+html[data-skin="examen"][data-var-exa-brujula="15"] #screen-exercise .help-btn::before{ background-image:var(--exa-bruj-15); }
+html[data-skin="examen"][data-var-exa-brujula="16"] #screen-exercise .help-btn::before{ background-image:var(--exa-bruj-16); }
+html[data-skin="examen"][data-var-exa-brujula="17"] #screen-exercise .help-btn::before{ background-image:var(--exa-bruj-17); }
+html[data-skin="examen"][data-var-exa-brujula="18"] #screen-exercise .help-btn::before{ background-image:var(--exa-bruj-18); }
+html[data-skin="examen"][data-var-exa-brujula="19"] #screen-exercise .help-btn::before{ background-image:var(--exa-bruj-19); }
+html[data-skin="examen"][data-var-exa-brujula="20"] #screen-exercise .help-btn::before{ background-image:var(--exa-bruj-20); }
+/* tono de la brújula (🧪 «Examen · color de la brújula»): suave por defecto, para que no desentone con el examen sobrio */
+html[data-skin="examen"] #screen-exercise .help-btn::before{ filter:drop-shadow(0 3px 3px rgba(8,17,31,0.4)); }
+html[data-skin="examen"][data-var-exa-brujula-tono="suave"] #screen-exercise .help-btn::before{ filter:saturate(0.42) drop-shadow(0 3px 3px rgba(8,17,31,0.4)); }
+html[data-skin="examen"][data-var-exa-brujula-tono="gris"] #screen-exercise .help-btn::before{ filter:saturate(0.12) drop-shadow(0 3px 3px rgba(8,17,31,0.4)); }
+
 /* EXAMEN-PIEZAS:FIN */
 /* ATELIER-PIEZAS:INICIO (generado por Assets/atelier/inyectar_atelier.py; no editar a mano) */
 :root{--atl-top:url('../pdp-assets/bee56b417ece6006555a954312665430.webp');--atl-mid:url('../pdp-assets/8a1c296e8f1a3af5d4884d293c1cfb90.webp');--atl-bot:url('../pdp-assets/eaed6cb442c0f2902b3ff2eb407e9ad6.webp');--atl-brujula:url('../pdp-assets/b3dc4467f87209dd521336ebf987aba5.webp');--atl-hoja:url('../pdp-assets/2285241adffaad02ca97723ef1906ccd.webp');--atl-globo:url('../pdp-assets/623ff547da80e8de568c8572ec8e436e.webp');--atl-cola:url('../pdp-assets/bd693f420530e088e3c3aaf0b4ca558f.webp');--atl-globo-nube:url('../pdp-assets/7776c39ed0db70034c8b3490e37369c1.webp');--atl-dest-amar-i:url('../pdp-assets/e3cfdef827dab80583903ddba6426334.webp');--atl-dest-amar-d:url('../pdp-assets/025ba236649c13158759e433db6eef29.webp');--atl-dest-esq-d:url('../pdp-assets/dc8f75a309e2edf7d10a4631653f660b.webp');--atl-brujula-tutor:url('../pdp-assets/a04cf4d871321c3672cb8e8abe32de22.webp');--atl-ronnie-senala:url('../pdp-assets/7d1070f94c9a1bcb48420ec5e00971a3.webp');--atl-ronnie-piensa:url('../pdp-assets/a4a40a31259cd0f1aaa415c51457e7e7.webp');--atl-ronnie-celebra:url('../pdp-assets/f8c99a649981933af9bdb9ac1384776f.webp');--atl-ronnie-desconcertado:url('../pdp-assets/15515e037a2c1f043e57407fe1710e81.webp');--atl-ronnie-sorprendido:url('../pdp-assets/34e122666e48fb814fc7bf30f0107332.webp');--atl-ronnie-idea:url('../pdp-assets/c42ef3711b9e3f7d4f4598676c408a74.webp')}
@@ -8260,6 +8316,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/3dae0ecd8fe8d7867e1075f44a164c55.js"></script><script src="../pdp-assets/f391691946d909c37f6130dc0d54cee8.js"></script>
+<script src="../pdp-assets/c1e65bf6af92f4e68b35d1a81fe67043.js"></script><script src="../pdp-assets/8c623807d76e203f4709e85d164639d0.js"></script>
 </body>
 </html>
