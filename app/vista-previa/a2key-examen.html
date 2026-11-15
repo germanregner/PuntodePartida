@@ -6140,6 +6140,77 @@ html[data-skin="examen"] #screen-exercise .pf-ev-b{ min-height:48px; padding:0 4
 html[data-skin="examen"] #screen-exercise .pf-ev-b.on{ background:var(--exa-blue); border-color:var(--exa-blue); color:#FFFFFF; box-shadow:0 0 0 3px var(--exa-tint); }
 html[data-skin="examen"] #screen-exercise .pf-notaT{ margin-top:10px; background:transparent; border:1px solid var(--exa-line); border-radius:2px; color:var(--exa-ink); font:400 13px/19px var(--exa-sans); }
 
+/* ---------- G3: carteles y resultados (overlays #pdp-*): hojas que suben (M5) y pantallas de resultado con cabecera ---------- */
+html[data-skin="examen"]{ --exa-oro-claro:#F2D48A; }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov{ font-family:var(--exa-sans); color:var(--exa-ink); }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov h2{ font-family:var(--exa-serif); font-weight:400; font-size:28px; line-height:32px; letter-spacing:0; margin:0 0 10px; color:var(--exa-ink); }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov .rf-nota{ font:400 12px/17px var(--exa-sans); color:var(--exa-muted); margin:0 0 14px; }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov .rf-acc{ display:flex; flex-direction:column; gap:10px; margin-top:16px; }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov .rf-acc button{ min-height:50px; font-family:var(--exa-sans); }
+/* hojas: aviso de parte, cartel de entrega, Mis respuestas */
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-hoja{ background:rgba(8,17,31,0.45); display:flex; align-items:flex-end; padding:0; opacity:0; transition:opacity .22s var(--exa-curva); }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-hoja.exa-sube{ opacity:1; }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-hoja .rf-caja{ width:100%; max-width:480px; max-height:85vh; overflow-y:auto; margin:0 auto; box-sizing:border-box; background:var(--exa-paper); border-top:3px solid var(--exa-ink); box-shadow:0 -16px 32px rgba(8,17,31,0.28); padding:22px 24px calc(22px + env(safe-area-inset-bottom,0px)); transform:translateY(100%); transition:transform .32s var(--exa-curva); }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-hoja.exa-sube .rf-caja{ transform:none; }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-hoja .ap-texto{ font:400 14px/21px var(--exa-sans); color:var(--exa-ink2); margin:0 0 6px; }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-hoja .rf-falta{ list-style:none; margin:0 0 12px; padding:10px 12px; background:var(--exa-warnBg); border:0; border-left:3px solid var(--exa-warnB); border-radius:0; font:700 14px/20px var(--exa-sans); color:var(--exa-ink); }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-hoja .rf-falta li+li{ margin-top:2px; }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-hoja .btn-primary{ background:var(--exa-ink); color:var(--exa-paper); border:0; border-radius:3px; box-shadow:0 3px 0 var(--exa-blue); font:700 15px/1 var(--exa-sans); }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-hoja .btn-secondary{ background:transparent; color:var(--exa-ink); border:1px solid var(--exa-ink); border-radius:2px; box-shadow:none; font:600 14px/1 var(--exa-sans); }
+html[data-skin="examen"] #pdp-mis-respuestas .rf-parte{ background:transparent; border:0; border-radius:0; margin:0 0 12px; }
+html[data-skin="examen"] #pdp-mis-respuestas .rf-cab{ padding:6px 0; font:700 10px/14px var(--exa-sans); letter-spacing:0.14em; text-transform:uppercase; color:var(--exa-muted); }
+html[data-skin="examen"] #pdp-mis-respuestas ul{ list-style:none; margin:0; padding:0; }
+html[data-skin="examen"] #pdp-mis-respuestas .pmr-fila{ padding:8px 0; border-top:1px solid var(--exa-line2); font:700 14px/20px var(--exa-sans); color:var(--exa-ink); }
+html[data-skin="examen"] #pdp-mis-respuestas .pmr-est{ font:600 11px/16px var(--exa-sans); padding:2px 8px; border:1px solid var(--exa-line); color:var(--exa-muted); background:transparent; }
+html[data-skin="examen"] #pdp-mis-respuestas .pmr-est.hecha{ border-color:transparent; background:var(--exa-tint); color:var(--exa-blue); }
+/* pantallas de resultado: cabecera con el porcentaje + lista por parte (registro app) */
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-pant{ background-color:var(--exa-bg); background-image:radial-gradient(var(--exa-dot) 1px,transparent 1.4px); background-size:14px 14px; padding:0 0 calc(24px + env(safe-area-inset-bottom,0px)); }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-pant .rf-caja{ max-width:480px; margin:0 auto; padding:0; }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas) .exa-hero{ position:relative; min-height:230px; overflow:hidden; background:linear-gradient(160deg,var(--exa-hero1) 0%,var(--exa-hero2) 100%); color:var(--exa-blanco); }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas) .exa-hero-comp{ position:absolute; left:0; top:0; pointer-events:none; }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas) .exa-hero-in{ position:relative; padding:64px 24px 26px; display:flex; flex-direction:column; align-items:flex-start; gap:4px; }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas) .exa-hero h2{ order:0; font:700 11px/16px var(--exa-jakarta); letter-spacing:0.16em; text-transform:uppercase; color:var(--exa-papel-listening-kc); margin:0 0 4px; }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas) .exa-pct{ order:1; font:400 italic 84px/0.9 var(--exa-serif); color:var(--exa-oro-claro); }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas) .exa-hero .rf-total{ order:2; font:600 14px/20px var(--exa-jakarta); margin:0; color:var(--exa-blanco); }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas) .exa-hero .rf-provisorio{ order:2; font:600 14px/20px var(--exa-jakarta); margin:6px 0 0; color:var(--exa-blanco); max-width:260px; }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-pant .rf-caja > :not(.exa-hero){ margin-left:24px; margin-right:24px; }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-pant .rf-caja > .exa-hero + *{ margin-top:22px; }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-pant .rf-bloque-t{ display:flex; justify-content:space-between; font:800 11px/16px var(--exa-jakarta); letter-spacing:0.16em; text-transform:uppercase; color:var(--exa-muted); margin:0 0 6px; padding-bottom:8px; border-bottom:1px solid var(--exa-line); }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-pant .rf-parte{ background:transparent; border:0; border-bottom:1px solid var(--exa-line2); border-radius:0; padding:11px 0; margin:0; }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-pant .rf-cab{ font:700 15px/20px var(--exa-jakarta); color:var(--exa-ink); }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-pant .rf-cab span:last-child{ font-weight:800; }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-pant .rf-items{ font:400 13px/19px var(--exa-sans); }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-pant .rf-items li{ border-top:1px solid var(--exa-line2); }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-pant .rf-mal{ color:var(--exa-warnB); }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-pant .rf-pq{ color:var(--exa-ink2); }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-pant .rf-nota{ text-align:center; font:400 11px/16px var(--exa-sans); color:var(--exa-muted); }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-pant .rt-bloque{ background:transparent; border:0; border-bottom:1px solid var(--exa-line2); border-radius:0; padding:11px 0; margin:0; }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-pant .rt-cab{ font:700 15px/20px var(--exa-jakarta); }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-pant .rt-num{ font-weight:800; font-variant-numeric:tabular-nums; }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-pant .rt-barra{ height:8px; border-radius:0; background:var(--exa-line2); margin-top:8px; }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-pant .rt-barra span{ background:var(--exa-blue); border-radius:0; }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-pant .btn-primary{ background:var(--exa-btn); color:var(--exa-btnT); border:0; border-radius:6px; box-shadow:0 4px 0 var(--exa-btnEdge); font:800 16px/1 var(--exa-jakarta); }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-pant .btn-secondary{ background:transparent; color:var(--exa-ink); border:1.5px solid var(--exa-line); border-radius:6px; box-shadow:none; font:700 15px/1 var(--exa-jakarta); }
+@media (prefers-reduced-motion:reduce){
+  html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-hoja{ transition:opacity .14s linear; }
+  html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-hoja .rf-caja{ transform:none; transition:none; }
+}
+
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas) h2:focus{ outline:none; }
+
+/* ---------- puntaje del adulto 0–5 (`profe` con escala): hoja con renglones y casillas de 44×44 (ad-puntaje) ---------- */
+html[data-skin="examen"] #screen-exercise .pf-texto{ margin:0 0 14px; padding:10px 12px; background:var(--exa-paper); border:1px solid var(--exa-ink); border-radius:0; background-image:repeating-linear-gradient(transparent 0 25px,var(--exa-line2) 25px 26px); }
+html[data-skin="examen"] #screen-exercise .pf-texto b{ font:700 10px/14px var(--exa-sans); letter-spacing:0.22em; text-transform:uppercase; color:var(--exa-muted); }
+html[data-skin="examen"] #screen-exercise .pf-texto-t{ font:400 15px/26px var(--exa-sans); color:var(--exa-ink); }
+html[data-skin="examen"] #screen-exercise .pf-texto small{ display:inline-block; margin-top:6px; padding:2px 8px; border:1px solid var(--exa-line); background:var(--exa-paper); font:600 11px/16px var(--exa-sans); color:var(--exa-ink2); }
+html[data-skin="examen"] #screen-exercise .pf-badge{ margin-bottom:8px; }
+html[data-skin="examen"] #screen-exercise .pf-luego{ background:transparent; border:0; box-shadow:none; color:var(--exa-muted); font:500 13px/1.3 var(--exa-sans); text-decoration:underline; text-underline-offset:3px; min-height:44px; }
+html[data-skin="examen"] #screen-exercise .pf-crit-t{ margin:14px 0 6px; font:700 14px/20px var(--exa-sans); color:var(--exa-ink); }
+html[data-skin="examen"] #screen-exercise .pf-pts{ display:flex; gap:6px; }
+html[data-skin="examen"] #screen-exercise .pf-pt{ width:44px; height:44px; min-width:44px; padding:0; background:transparent; color:var(--exa-ink); border:1px solid var(--exa-ink); border-radius:4px; box-shadow:none; font:700 15px/1 var(--exa-sans); }
+html[data-skin="examen"] #screen-exercise .pf-pt.on, html[data-skin="examen"] #screen-exercise .pf-pt[aria-checked="true"]{ background:var(--exa-blue); border-color:var(--exa-blue); color:#FFFFFF; box-shadow:0 0 0 3px var(--exa-tint); }
+html[data-skin="examen"] #screen-exercise .pf-banda{ margin:6px 0 0; font:400 12px/17px var(--exa-sans); color:var(--exa-muted); }
+
 /* EXAMEN-PIEZAS:FIN */
 /* ATELIER-PIEZAS:INICIO (generado por Assets/atelier/inyectar_atelier.py; no editar a mano) */
 :root{--atl-top:url('../pdp-assets/bee56b417ece6006555a954312665430.webp');--atl-mid:url('../pdp-assets/8a1c296e8f1a3af5d4884d293c1cfb90.webp');--atl-bot:url('../pdp-assets/eaed6cb442c0f2902b3ff2eb407e9ad6.webp');--atl-brujula:url('../pdp-assets/b3dc4467f87209dd521336ebf987aba5.webp');--atl-hoja:url('../pdp-assets/2285241adffaad02ca97723ef1906ccd.webp');--atl-globo:url('../pdp-assets/623ff547da80e8de568c8572ec8e436e.webp');--atl-cola:url('../pdp-assets/bd693f420530e088e3c3aaf0b4ca558f.webp');--atl-globo-nube:url('../pdp-assets/7776c39ed0db70034c8b3490e37369c1.webp');--atl-dest-amar-i:url('../pdp-assets/e3cfdef827dab80583903ddba6426334.webp');--atl-dest-amar-d:url('../pdp-assets/025ba236649c13158759e433db6eef29.webp');--atl-dest-esq-d:url('../pdp-assets/dc8f75a309e2edf7d10a4631653f660b.webp');--atl-brujula-tutor:url('../pdp-assets/a04cf4d871321c3672cb8e8abe32de22.webp');--atl-ronnie-senala:url('../pdp-assets/7d1070f94c9a1bcb48420ec5e00971a3.webp');--atl-ronnie-piensa:url('../pdp-assets/a4a40a31259cd0f1aaa415c51457e7e7.webp');--atl-ronnie-celebra:url('../pdp-assets/f8c99a649981933af9bdb9ac1384776f.webp');--atl-ronnie-desconcertado:url('../pdp-assets/15515e037a2c1f043e57407fe1710e81.webp');--atl-ronnie-sorprendido:url('../pdp-assets/34e122666e48fb814fc7bf30f0107332.webp');--atl-ronnie-idea:url('../pdp-assets/c42ef3711b9e3f7d4f4598676c408a74.webp')}
@@ -7825,6 +7896,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/a344fe1a5e358c5c842661caa84be2fc.js"></script><script src="../pdp-assets/0f49f51ebdf9cbd24fc8d9a9effb0fcd.js"></script>
+<script src="../pdp-assets/6f335314a11965f79b6833fd0e8bc789.js"></script><script src="../pdp-assets/6daf4fa8cf943e8cdbe793ec6abbafba.js"></script>
 </body>
 </html>
