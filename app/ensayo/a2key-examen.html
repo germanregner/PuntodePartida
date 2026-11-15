@@ -6668,6 +6668,21 @@ html[data-skin="examen"] .exa-fin-cua.c{ background:transparent; border:2px soli
 html[data-skin="examen"] .exa-fin-t{ flex:1; font:500 15px/1.2 var(--exa-jakarta); color:var(--exa-ink2); }
 html[data-skin="examen"] .exa-fin-v{ font:800 16px/1 var(--exa-jakarta); color:var(--exa-ink); font-variant-numeric:tabular-nums; }
 
+/* hoja de confirmación (en lugar de los cuadros nativos) */
+html[data-skin="examen"] #exa-conf{ position:fixed; inset:0; z-index:10060; display:flex; flex-direction:column; justify-content:flex-end; align-items:center; background:rgba(8,17,31,0.45); opacity:0; transition:opacity .22s var(--exa-curva); font-family:var(--exa-jakarta); }
+html[data-skin="examen"] #exa-conf.exa-sube{ opacity:1; }
+html[data-skin="examen"] #exa-conf .exa-onda{ transform:translateY(100%); }
+html[data-skin="examen"] #exa-conf.exa-sube .exa-onda{ transform:none; }
+html[data-skin="examen"] .exa-conf-caja{ width:100%; max-width:480px; box-sizing:border-box; background:var(--exa-paper); padding:14px 24px calc(22px + env(safe-area-inset-bottom,0px)); display:flex; flex-direction:column; gap:4px; color:var(--exa-ink); filter:drop-shadow(0 -10px 14px rgba(8,17,31,0.2)); transform:translateY(100%); transition:transform .32s var(--exa-curva); }
+html[data-skin="examen"] #exa-conf.exa-sube .exa-conf-caja{ transform:none; }
+html[data-skin="examen"] .exa-conf-t{ margin:0 0 4px; font:800 20px/1.2 var(--exa-jakarta); letter-spacing:-0.02em; }
+html[data-skin="examen"] .exa-conf-d{ margin:0 0 14px; font:400 14px/21px var(--exa-jakarta); color:var(--exa-ink2); }
+@media (prefers-reduced-motion:reduce){ html[data-skin="examen"] #exa-conf .exa-onda, html[data-skin="examen"] .exa-conf-caja{ transform:none; transition:none; } }
+/* aviso «Hay una versión nueva» */
+html[data-skin="examen"] #pdp-update{ background:var(--exa-ink) !important; color:var(--exa-paper) !important; border:0 !important; border-left:3px solid var(--exa-menta) !important; border-radius:4px !important; box-shadow:0 14px 24px -10px var(--exa-sombra) !important; font:600 14px/20px var(--exa-sans) !important; }
+html[data-skin="examen"] #pdp-update button:not(.pdp-update-x){ background:linear-gradient(180deg,var(--exa-btnHi) 0%,var(--exa-btn) 62%) !important; color:var(--exa-btnT) !important; border:0 !important; border-radius:8px !important; font:800 13.5px/1 var(--exa-jakarta) !important; box-shadow:0 3px 0 var(--exa-btnEdge) !important; }
+html[data-skin="examen"] #pdp-update .pdp-update-x{ color:var(--exa-paper) !important; opacity:0.7; }
+
 /* EXAMEN-PIEZAS:FIN */
 /* ATELIER-PIEZAS:INICIO (generado por Assets/atelier/inyectar_atelier.py; no editar a mano) */
 :root{--atl-top:url('../pdp-assets/bee56b417ece6006555a954312665430.webp');--atl-mid:url('../pdp-assets/8a1c296e8f1a3af5d4884d293c1cfb90.webp');--atl-bot:url('../pdp-assets/eaed6cb442c0f2902b3ff2eb407e9ad6.webp');--atl-brujula:url('../pdp-assets/b3dc4467f87209dd521336ebf987aba5.webp');--atl-hoja:url('../pdp-assets/2285241adffaad02ca97723ef1906ccd.webp');--atl-globo:url('../pdp-assets/623ff547da80e8de568c8572ec8e436e.webp');--atl-cola:url('../pdp-assets/bd693f420530e088e3c3aaf0b4ca558f.webp');--atl-globo-nube:url('../pdp-assets/7776c39ed0db70034c8b3490e37369c1.webp');--atl-dest-amar-i:url('../pdp-assets/e3cfdef827dab80583903ddba6426334.webp');--atl-dest-amar-d:url('../pdp-assets/025ba236649c13158759e433db6eef29.webp');--atl-dest-esq-d:url('../pdp-assets/dc8f75a309e2edf7d10a4631653f660b.webp');--atl-brujula-tutor:url('../pdp-assets/a04cf4d871321c3672cb8e8abe32de22.webp');--atl-ronnie-senala:url('../pdp-assets/7d1070f94c9a1bcb48420ec5e00971a3.webp');--atl-ronnie-piensa:url('../pdp-assets/a4a40a31259cd0f1aaa415c51457e7e7.webp');--atl-ronnie-celebra:url('../pdp-assets/f8c99a649981933af9bdb9ac1384776f.webp');--atl-ronnie-desconcertado:url('../pdp-assets/15515e037a2c1f043e57407fe1710e81.webp');--atl-ronnie-sorprendido:url('../pdp-assets/34e122666e48fb814fc7bf30f0107332.webp');--atl-ronnie-idea:url('../pdp-assets/c42ef3711b9e3f7d4f4598676c408a74.webp')}
@@ -8353,6 +8368,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/d802958088fb2e819967171375573f45.js"></script><script src="../pdp-assets/a5e9f4912dc9dc2e714fd1c7d7162248.js"></script>
+<script src="../pdp-assets/28c58c5ada914bfa40e7d6717b530b85.js"></script><script src="../pdp-assets/d25d81eada39a77f66a1845ee462e86d.js"></script>
 </body>
 </html>
