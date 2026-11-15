@@ -6547,13 +6547,11 @@ html[data-skin="examen"] .exa-en-op:focus-visible{ outline:2px solid var(--exa-b
 /* ---------- Hojas ONDULADAS (pedido del Director, 2026-11-15): el borde de arriba de toda hoja inferior (Pista, comprobar, avisos, entrega, Mis respuestas) es la misma ola de la cabecera:
    izquierda más baja, derecha más alta, puntas redondeadas y el degradé difuminado teal → azul. La forma es una máscara (el color sigue siendo del tema). ---------- */
 html[data-skin="examen"]{
-  --exa-onda-cuerpo:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 30' preserveAspectRatio='none'><path d='M0 30V22Q0 15 8 14C100 5 230 29 382 7Q390 6 390 13V30Z'/></svg>");
-  --exa-onda-brillo:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 60' preserveAspectRatio='none'><defs><filter id='a' x='-5%25' y='-150%25' width='110%25' height='400%25'><feGaussianBlur stdDeviation='7'/></filter><filter id='b' x='-5%25' y='-150%25' width='110%25' height='400%25'><feGaussianBlur stdDeviation='2.4'/></filter></defs><g transform='translate(0 -14)' filter='url(%23a)'><path d='M0 80V42Q0 35 8 34C100 25 230 49 382 27Q390 26 390 33V80Z' fill='black' fill-opacity='0.75'/></g><g transform='translate(0 -9)' filter='url(%23b)'><path d='M0 80V42Q0 35 8 34C100 25 230 49 382 27Q390 26 390 33V80Z' fill='black'/></g></svg>");
+  --exa-onda-cuerpo:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 30' preserveAspectRatio='none'><path d='M0 30V15C100 5 230 29 390 8V30Z'/></svg>");
+  --exa-onda-brillo:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 60' preserveAspectRatio='none'><defs><filter id='a' x='-5%25' y='-150%25' width='110%25' height='400%25'><feGaussianBlur stdDeviation='7'/></filter><filter id='b' x='-5%25' y='-150%25' width='110%25' height='400%25'><feGaussianBlur stdDeviation='2.4'/></filter></defs><g transform='translate(0 -14)' filter='url(%23a)'><path d='M0 80V35C100 25 230 49 390 28V80Z' fill='black' fill-opacity='0.75'/></g><g transform='translate(0 -9)' filter='url(%23b)'><path d='M0 80V35C100 25 230 49 390 28V80Z' fill='black'/></g></svg>");
 }
 html[data-skin="examen"] .feedback-zone, html[data-skin="examen"] .help-panel{ background:transparent !important; background-image:none !important; border:0 !important; box-shadow:none !important; border-radius:0 !important; isolation:isolate; filter:drop-shadow(0 -10px 14px rgba(8,17,31,0.22)); padding-top:62px !important; --exa-sheet:var(--exa-paper); }
 html[data-skin="examen"] .help-panel{ position:relative; }
-html[data-skin="examen"] .feedback-zone.wrong-fb, html[data-skin="examen"] .feedback-zone.hint-fb{ --exa-sheet:color-mix(in srgb, var(--exa-warn) 14%, var(--exa-paper)); }
-html[data-skin="examen"] .feedback-zone.correct-fb{ --exa-sheet:color-mix(in srgb, var(--exa-ok) 14%, var(--exa-paper)); }
 html[data-skin="examen"] .feedback-zone::before, html[data-skin="examen"] .help-panel::before{ content:'' !important; display:block !important; position:absolute; left:0; right:0; top:0; width:auto; height:60px; margin:0 !important; border-radius:0 !important; z-index:-1; background:linear-gradient(90deg,var(--exa-menta),var(--exa-papel-reading-qc)) !important;
   -webkit-mask:var(--exa-onda-brillo) 0 0/100% 60px no-repeat; mask:var(--exa-onda-brillo) 0 0/100% 60px no-repeat; }
 html[data-skin="examen"] .feedback-zone::after, html[data-skin="examen"] .help-panel::after{ content:''; position:absolute; inset:0; z-index:-1; background:var(--exa-sheet);
@@ -6630,6 +6628,10 @@ html[data-skin="examen"][data-var-exa-brujula="20"] #screen-exercise .help-btn::
 html[data-skin="examen"] #screen-exercise .help-btn::before{ filter:drop-shadow(0 3px 3px rgba(8,17,31,0.4)); }
 html[data-skin="examen"][data-var-exa-brujula-tono="suave"] #screen-exercise .help-btn::before{ filter:saturate(0.42) drop-shadow(0 3px 3px rgba(8,17,31,0.4)); }
 html[data-skin="examen"][data-var-exa-brujula-tono="gris"] #screen-exercise .help-btn::before{ filter:saturate(0.12) drop-shadow(0 3px 3px rgba(8,17,31,0.4)); }
+
+/* avisos chicos: la caja visible es .toast-tx (el #toast es solo el contenedor) */
+html[data-skin="examen"] #toast{ background:transparent !important; border:0 !important; box-shadow:none !important; }
+html[data-skin="examen"] #toast .toast-tx{ background:var(--exa-ink) !important; color:var(--exa-paper) !important; border:0 !important; border-left:3px solid var(--exa-warn) !important; border-radius:4px !important; box-shadow:0 14px 24px -10px var(--exa-sombra) !important; font:600 14px/20px var(--exa-sans) !important; }
 
 /* EXAMEN-PIEZAS:FIN */
 /* ATELIER-PIEZAS:INICIO (generado por Assets/atelier/inyectar_atelier.py; no editar a mano) */
@@ -8316,6 +8318,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/c1e65bf6af92f4e68b35d1a81fe67043.js"></script><script src="../pdp-assets/8c623807d76e203f4709e85d164639d0.js"></script>
+<script src="../pdp-assets/0196bc0e77bd7929fc51dabba38b481c.js"></script><script src="../pdp-assets/8c623807d76e203f4709e85d164639d0.js"></script>
 </body>
 </html>
