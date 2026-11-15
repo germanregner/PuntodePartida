@@ -6311,6 +6311,14 @@ html[data-skin="examen"] .screen, html[data-skin="examen"] .screen.active{ anima
 html[data-skin="examen"], html[data-skin="examen"] body{ background-color:var(--exa-bg) !important; scrollbar-width:none; }
 html[data-skin="examen"] ::-webkit-scrollbar{ display:none; width:0; height:0; }
 
+/* título de la cabecera: una sola línea, nunca tapa la flecha ni el kicker; pie con el progreso SIEMPRE centrado (texto | barra | «Mis respuestas») */
+html[data-skin="examen"] .exa-tit{ max-width:62%; }
+html[data-skin="examen"] .exa-t{ display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+html[data-skin="examen"] .exa-foot{ display:grid; grid-template-columns:1fr auto 1fr; align-items:center; column-gap:8px; }
+html[data-skin="examen"] .exa-foot > span:first-child{ grid-column:1; justify-self:start; }
+html[data-skin="examen"] .exa-foot > .exa-seg{ grid-column:2; justify-self:center; }
+html[data-skin="examen"] .exa-foot > .exa-resp{ grid-column:3; justify-self:end; margin-left:0; order:0; }
+
 /* EXAMEN-PIEZAS:FIN */
 /* ATELIER-PIEZAS:INICIO (generado por Assets/atelier/inyectar_atelier.py; no editar a mano) */
 :root{--atl-top:url('../pdp-assets/bee56b417ece6006555a954312665430.webp');--atl-mid:url('../pdp-assets/8a1c296e8f1a3af5d4884d293c1cfb90.webp');--atl-bot:url('../pdp-assets/eaed6cb442c0f2902b3ff2eb407e9ad6.webp');--atl-brujula:url('../pdp-assets/b3dc4467f87209dd521336ebf987aba5.webp');--atl-hoja:url('../pdp-assets/2285241adffaad02ca97723ef1906ccd.webp');--atl-globo:url('../pdp-assets/623ff547da80e8de568c8572ec8e436e.webp');--atl-cola:url('../pdp-assets/bd693f420530e088e3c3aaf0b4ca558f.webp');--atl-globo-nube:url('../pdp-assets/7776c39ed0db70034c8b3490e37369c1.webp');--atl-dest-amar-i:url('../pdp-assets/e3cfdef827dab80583903ddba6426334.webp');--atl-dest-amar-d:url('../pdp-assets/025ba236649c13158759e433db6eef29.webp');--atl-dest-esq-d:url('../pdp-assets/dc8f75a309e2edf7d10a4631653f660b.webp');--atl-brujula-tutor:url('../pdp-assets/a04cf4d871321c3672cb8e8abe32de22.webp');--atl-ronnie-senala:url('../pdp-assets/7d1070f94c9a1bcb48420ec5e00971a3.webp');--atl-ronnie-piensa:url('../pdp-assets/a4a40a31259cd0f1aaa415c51457e7e7.webp');--atl-ronnie-celebra:url('../pdp-assets/f8c99a649981933af9bdb9ac1384776f.webp');--atl-ronnie-desconcertado:url('../pdp-assets/15515e037a2c1f043e57407fe1710e81.webp');--atl-ronnie-sorprendido:url('../pdp-assets/34e122666e48fb814fc7bf30f0107332.webp');--atl-ronnie-idea:url('../pdp-assets/c42ef3711b9e3f7d4f4598676c408a74.webp')}
@@ -7996,6 +8004,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/db5dce6846b8bc134b3d8963eaa1eac9.js"></script><script src="../pdp-assets/701e63eabe91fa71febdcff296438289.js"></script>
+<script src="../pdp-assets/9f73b778898dfc224d2be169a9562404.js"></script><script src="../pdp-assets/adfa9ccbd1fc23705aa7011eed39c167.js"></script>
 </body>
 </html>
