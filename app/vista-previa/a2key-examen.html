@@ -6413,6 +6413,125 @@ html[data-skin="examen"] .exa-sonido:focus-visible{ outline:2px solid var(--exa-
 html[data-skin="examen"] .exa-sonido-der{ margin-left:auto; }
 html[data-skin="examen"] .exa-pl-onda rect{ transition:fill .12s linear; }
 
+
+/* ---------- G6: relieve (el Director aprobó el relieve del lienzo, 2026-11-15), Mis Unidades, perfil, medallas, tamaño de letra ---------- */
+html[data-skin="examen"]{ --exa-btnHi:#3FD6C0; --exa-hi:rgba(255,255,255,0.85); --exa-sombra:rgba(15,32,64,0.30); --exa-med1:#F7DE8E; --exa-med2:#E0B24A; --exa-med3:#A8761B; --exa-med-tinta:#5A3D07; --exa-med-cinta-a:#2F5FC4; --exa-med-cinta-b:#18B3A0; }
+html[data-skin="examen"][data-theme="dark"]{ --exa-btnHi:#58E0CB; --exa-hi:rgba(255,255,255,0.07); --exa-sombra:rgba(0,0,0,0.55); }
+/* botones principales: degradé, luz arriba, borde inferior grueso y sombra */
+html[data-skin="examen"] .exa-btn-p, html[data-skin="examen"] .exa-en-sig, html[data-skin="examen"] .exa-en-listo, html[data-skin="examen"] #screen-exercise #confirm-btn:not(:disabled){ background:linear-gradient(180deg,var(--exa-btnHi) 0%,var(--exa-btn) 62%); border-top:1px solid rgba(255,255,255,0.55); border-radius:8px;
+  box-shadow:inset 0 -2px 0 rgba(0,0,0,0.10), 0 4px 0 var(--exa-btnEdge), 0 14px 20px -8px var(--exa-sombra); }
+html[data-skin="examen"] .exa-btn-p:active, html[data-skin="examen"] .exa-en-sig:active, html[data-skin="examen"] .exa-en-listo:active{ transform:translateY(3px); box-shadow:inset 0 -2px 0 rgba(0,0,0,0.10), 0 1px 0 var(--exa-btnEdge), 0 6px 10px -6px var(--exa-sombra); }
+html[data-skin="examen"] .exa-btn-sec{ display:flex; align-items:center; justify-content:center; min-height:50px; width:100%; margin-top:10px; background:var(--exa-paper); color:var(--exa-ink); border:1.5px solid var(--exa-line); border-radius:8px; font:700 14px/1 var(--exa-jakarta); cursor:pointer;
+  box-shadow:inset 0 1px 0 var(--exa-hi), 0 3px 0 var(--exa-line); }
+html[data-skin="examen"] .exa-btn-sec:active{ transform:translateY(2px); box-shadow:inset 0 2px 4px rgba(8,17,31,0.18); }
+/* fichas con relieve (portada: tarjeta del adulto y filas de tests; perfil; Mis Unidades) */
+html[data-skin="examen"] .exa-fila-adulto, html[data-skin="examen"] .exa-ucard, html[data-skin="examen"] .exa-pf-fila, html[data-skin="examen"] .exa-pf-med, html[data-skin="examen"] .exa-medtira, html[data-skin="examen"] .exa-pf-muestra{ background:var(--exa-paper); border:1px solid var(--exa-line); border-radius:6px; box-shadow:inset 0 1px 0 var(--exa-hi), 0 2px 0 var(--exa-line), 0 12px 18px -12px var(--exa-sombra); }
+@media (prefers-reduced-motion:reduce){ html[data-skin="examen"] .exa-btn-p:active, html[data-skin="examen"] .exa-en-sig:active, html[data-skin="examen"] .exa-en-listo:active, html[data-skin="examen"] .exa-btn-sec:active{ transform:none; } }
+/* segmentados: sin elegir = alto; elegido = hundido con borde azul abajo */
+html[data-skin="examen"] .exa-seg2{ display:flex; gap:10px; margin-bottom:20px; }
+html[data-skin="examen"] .exa-seg2-b{ flex:1; min-height:52px; font:700 14px/1 var(--exa-jakarta); cursor:pointer; border-radius:8px; color:var(--exa-ink2); background:var(--exa-paper); border:1px solid var(--exa-line); box-shadow:inset 0 1px 0 var(--exa-hi), 0 3px 0 var(--exa-line), 0 10px 14px -8px var(--exa-sombra); }
+html[data-skin="examen"] .exa-seg2-b.on{ color:var(--exa-ink); background:var(--exa-tint-g4); border:1.5px solid var(--exa-blue); box-shadow:inset 0 3px 6px rgba(8,17,31,0.22), inset 0 -3px 0 var(--exa-blue); transform:translateY(2px); }
+html[data-skin="examen"] .exa-seg2-b:focus-visible, html[data-skin="examen"] .exa-ucard:focus-visible, html[data-skin="examen"] .exa-pf-fila:focus-visible, html[data-skin="examen"] .exa-btn-sec:focus-visible{ outline:2px solid var(--exa-blue); outline-offset:2px; }
+
+/* cabecera de portada con dos accesos: Mis Unidades (cuadrado A2) y perfil (rombo con la inicial) */
+html[data-skin="examen"] .exa-ph-top{ justify-content:space-between; }
+html[data-skin="examen"] .exa-unid{ display:flex; align-items:center; gap:10px; min-height:44px; margin:-6px 0 0 -6px; padding:0 10px 0 6px; background:transparent; border:0; color:var(--exa-blanco); cursor:pointer; }
+html[data-skin="examen"] .exa-unid .exa-sigla{ pointer-events:none; }
+html[data-skin="examen"] .exa-unid svg{ opacity:0.85; }
+html[data-skin="examen"] .exa-pf-btn{ display:flex; align-items:center; justify-content:center; width:44px; height:44px; margin:-6px -6px 0 0; background:transparent; border:0; cursor:pointer; }
+html[data-skin="examen"] .exa-pf-btn svg{ filter:drop-shadow(0 3px 0 rgba(0,0,0,0.22)); }
+html[data-skin="examen"] .exa-pf-rombo{ fill:var(--exa-forma-azul); stroke:var(--exa-en-tinta); }
+html[data-skin="examen"] .exa-pf-ini{ fill:var(--exa-en-tinta); }
+
+/* Mis Unidades */
+html[data-skin="examen"] #screen-map > :not(#exa-unidades){ display:none !important; }
+html[data-skin="examen"] #screen-map, html[data-skin="examen"] #screen-map::before, html[data-skin="examen"] #screen-map::after{ background-image:none !important; }
+html[data-skin="examen"] #screen-map{ background-color:var(--exa-bg) !important; padding:0 !important; }
+html[data-skin="examen"] #screen-map::before, html[data-skin="examen"] #screen-map::after{ display:none !important; }
+html[data-skin="examen"] .exa-sec-n{ font:400 12px/1 var(--exa-jakarta); color:var(--exa-muted); }
+html[data-skin="examen"] .exa-ucard{ display:flex; align-items:center; gap:14px; min-height:76px; padding:0 14px; width:100%; box-sizing:border-box; text-align:left; color:var(--exa-ink); cursor:pointer; margin-bottom:10px; font-family:var(--exa-jakarta); }
+html[data-skin="examen"] .exa-ucard.actual{ min-height:88px; background:var(--exa-tint-g4); border:1.5px solid var(--exa-blue); margin-bottom:22px; }
+html[data-skin="examen"] .exa-usig{ width:48px; height:48px; flex:none; border-radius:8px; background:var(--exa-accF); color:var(--exa-en-tinta); display:flex; align-items:center; justify-content:center; font:800 15px/1 var(--exa-jakarta); box-shadow:0 3px 0 rgba(0,0,0,0.18); }
+html[data-skin="examen"] .exa-usig.big{ background:var(--exa-gold); font-size:17px; }
+html[data-skin="examen"] .exa-uest{ font:800 12px/1 var(--exa-jakarta); color:var(--exa-acc); }
+html[data-skin="examen"] .exa-ulista{ display:flex; flex-direction:column; }
+html[data-skin="examen"] .exa-unota{ margin:4px 0 0; padding:12px 14px; border:1.5px dashed var(--exa-line); border-radius:6px; font:400 12px/18px var(--exa-jakarta); color:var(--exa-ink2); }
+html[data-skin="examen"] .exa-unota.vacia{ margin:0 0 10px; }
+
+/* perfil */
+html[data-skin="examen"] #screen-profile > :not(#exa-perfil-pg){ display:none !important; }
+html[data-skin="examen"] #screen-profile, html[data-skin="examen"] #screen-profile::before, html[data-skin="examen"] #screen-profile::after{ background-image:none !important; }
+html[data-skin="examen"] #screen-profile{ background-color:var(--exa-bg) !important; padding:0 !important; }
+html[data-skin="examen"] #screen-profile::before, html[data-skin="examen"] #screen-profile::after{ display:none !important; }
+html[data-skin="examen"] .exa-pf-av{ position:absolute; left:0; right:0; top:56px; display:flex; flex-direction:column; align-items:center; gap:6px; }
+html[data-skin="examen"] .exa-pf-av svg{ filter:drop-shadow(0 6px 0 rgba(0,0,0,0.22)); }
+html[data-skin="examen"] .exa-pf-meds{ display:flex; gap:8px; margin-bottom:22px; }
+html[data-skin="examen"] .exa-pf-med{ flex:1; min-width:0; display:flex; flex-direction:column; align-items:center; gap:6px; padding:12px 4px 10px; text-align:center; }
+html[data-skin="examen"] .exa-pf-mn{ font:800 12px/15px var(--exa-jakarta); color:var(--exa-ink); }
+html[data-skin="examen"] .exa-pf-ms{ font:400 11px/14px var(--exa-jakarta); color:var(--exa-muted); }
+html[data-skin="examen"] .exa-pf-muestra{ margin:-10px 0 0; padding:10px 12px; font:400 15px/22px var(--exa-jakarta); color:var(--exa-ink); }
+html[data-skin="examen"] .exa-pf-fila{ display:flex; align-items:center; gap:12px; min-height:58px; margin-top:12px; padding:8px 14px; width:100%; box-sizing:border-box; text-align:left; color:var(--exa-ink); cursor:pointer; font-family:var(--exa-jakarta); }
+html[data-skin="examen"] .exa-pf-fila:first-of-type{ margin-top:20px; }
+html[data-skin="examen"] .exa-pf-prueba{ cursor:default; }
+html[data-skin="examen"] .exa-pf-sw{ flex:none; min-width:112px; min-height:46px; }
+html[data-skin="examen"] .exa-pf-borrar{ align-self:flex-start; min-height:44px; margin-top:6px; padding:0 2px; background:transparent; border:0; font:700 13px/1 var(--exa-jakarta); color:var(--exa-warnB); text-decoration:underline; cursor:pointer; }
+
+/* medallas */
+html[data-skin="examen"] .exa-med-ca{ fill:var(--exa-med-cinta-a); } html[data-skin="examen"] .exa-med-cb{ fill:var(--exa-med-cinta-b); fill-opacity:0.92; }
+html[data-skin="examen"] .exa-med-sombra{ fill:rgba(8,17,31,0.22); }
+html[data-skin="examen"] .exa-med-aro{ stroke:var(--exa-med3); stroke-opacity:0.55; stroke-width:1.5; }
+html[data-skin="examen"] .exa-med-punto{ stroke:var(--exa-med3); stroke-opacity:0.5; stroke-width:1.5; stroke-dasharray:2 3; }
+html[data-skin="examen"] .exa-med-brillo{ stroke:#FFFFFF; stroke-opacity:0.65; stroke-width:3; stroke-linecap:round; }
+html[data-skin="examen"] .exa-med-txt{ font-family:var(--exa-serif); font-style:italic; fill:var(--exa-med-tinta); fill-opacity:0.9; }
+html[data-skin="examen"] .exa-medalla.apagada .exa-med-cuerpo{ fill:var(--exa-line2); }
+html[data-skin="examen"] .exa-medalla.apagada .exa-med-ca, html[data-skin="examen"] .exa-medalla.apagada .exa-med-cb{ fill:var(--exa-line); fill-opacity:1; }
+html[data-skin="examen"] .exa-medalla.apagada .exa-med-brillo{ stroke-opacity:0.25; }
+html[data-skin="examen"] .exa-medalla.apagada .exa-med-aro, html[data-skin="examen"] .exa-medalla.apagada .exa-med-punto{ stroke:var(--exa-muted); stroke-opacity:0.4; }
+html[data-skin="examen"] .exa-medalla.apagada .exa-med-txt{ fill:var(--exa-muted); fill-opacity:1; }
+html[data-skin="examen"] .exa-medov{ position:fixed; inset:0; z-index:9997; display:flex; justify-content:center; background-color:var(--exa-desk); background-image:radial-gradient(var(--exa-dot) 1px,transparent 1.4px); background-size:14px 14px; font-family:var(--exa-jakarta); color:var(--exa-ink); }
+html[data-skin="examen"] .exa-medpg{ overflow-y:auto; }
+html[data-skin="examen"] .exa-medhero{ position:relative; flex:0 0 auto; height:380px; overflow:hidden; color:var(--exa-blanco); background:linear-gradient(160deg,var(--exa-hero1) 0%,var(--exa-hero2) 100%); }
+html[data-skin="examen"] .exa-medhero .exa-en-art{ height:100%; }
+html[data-skin="examen"] .exa-medx{ position:absolute; left:12px; top:14px; margin:0; color:var(--exa-blanco); z-index:3; }
+html[data-skin="examen"] .exa-medgrande{ position:absolute; left:0; right:0; top:70px; display:flex; justify-content:center; filter:drop-shadow(0 14px 14px rgba(0,0,0,0.35)); }
+html[data-skin="examen"] .exa-medtit{ position:absolute; left:24px; right:24px; bottom:28px; display:flex; flex-direction:column; align-items:center; gap:6px; text-align:center; }
+html[data-skin="examen"] .exa-medtit .exa-ph1{ margin:0; text-align:center; }
+html[data-skin="examen"] .exa-medcu{ gap:14px; }
+html[data-skin="examen"] .exa-medx1{ margin:0; font:400 15px/23px var(--exa-jakarta); color:var(--exa-ink2); text-align:center; }
+html[data-skin="examen"] .exa-medtira{ display:flex; align-items:center; gap:10px; padding:12px 14px; }
+html[data-skin="examen"] .exa-medmini{ display:flex; align-items:center; gap:4px; }
+
+/* tamaño de letra (perfil): letra más grande en lo que se lee en el examen */
+html[data-skin="examen"][data-letra="grande"] #screen-exercise .exercise-question{ font-size:16px; line-height:24px; }
+html[data-skin="examen"][data-letra="grande"] #screen-exercise .option-btn{ font-size:17px; line-height:25px; }
+html[data-skin="examen"][data-letra="grande"] #screen-exercise .pdp-estimulo p{ font-size:17px; line-height:26px; }
+html[data-skin="examen"][data-letra="grande"] #screen-exercise .pdp-estimulo .pe-titulo{ font-size:25px; line-height:29px; }
+html[data-skin="examen"][data-letra="grande"] #screen-exercise .text-input{ font-size:18px; }
+
+/* ---------- Práctica: la Pista (hoja de ayuda), comprobar (bien / error) y los avisos, vestidos como el lienzo (cx-ayuda, cx-ok, cx-err). Sin mascota, sin rojo, sin cápsulas. ---------- */
+html[data-skin="examen"] .feedback-zone{ border-radius:0 !important; background:var(--exa-paper) !important; background-image:none !important; color:var(--exa-ink); border:0; border-top:3px solid var(--exa-ink); box-shadow:0 -16px 32px rgba(8,17,31,0.28); font-family:var(--exa-sans); }
+html[data-skin="examen"] .feedback-zone::before{ display:none !important; }
+html[data-skin="examen"] .feedback-zone.wrong-fb, html[data-skin="examen"] .feedback-zone.hint-fb{ border-top-color:var(--exa-warnB); background:linear-gradient(var(--exa-warnBg),var(--exa-warnBg)), var(--exa-paper) !important; }
+html[data-skin="examen"] .feedback-zone.correct-fb{ border-top-color:var(--exa-ok); background:linear-gradient(var(--exa-okBg),var(--exa-okBg)), var(--exa-paper) !important; }
+html[data-skin="examen"] .feedback-zone.revealed-fb{ border-top-color:var(--exa-muted); }
+html[data-skin="examen"] .feedback-header{ font:800 17px/1.2 var(--exa-jakarta); letter-spacing:-0.01em; }
+html[data-skin="examen"] .feedback-header.wrong, html[data-skin="examen"] .feedback-header.hint{ color:var(--exa-warnB); }
+html[data-skin="examen"] .feedback-header.correct{ color:var(--exa-okT); }
+html[data-skin="examen"] .feedback-text{ font:400 14px/20px var(--exa-sans); color:var(--exa-ink2); }
+html[data-skin="examen"] .feedback-zone-secondary-btn{ border-radius:4px !important; background:var(--exa-paper) !important; color:var(--exa-blue) !important; border:1.5px solid var(--exa-line) !important; font:700 13px/1 var(--exa-jakarta); min-height:44px; box-shadow:inset 0 1px 0 var(--exa-hi), 0 3px 0 var(--exa-line); }
+html[data-skin="examen"] .feedback-zone-secondary-btn:active{ transform:translateY(2px); box-shadow:inset 0 2px 4px rgba(8,17,31,0.18); }
+/* Pista */
+html[data-skin="examen"] #help-overlay{ background:rgba(8,17,31,0.45) !important; }
+html[data-skin="examen"] .help-panel{ border-radius:0 !important; background:var(--exa-paper) !important; background-image:none !important; color:var(--exa-ink); border-top:3px solid var(--exa-ink); box-shadow:0 -16px 32px rgba(8,17,31,0.28); font-family:var(--exa-sans); }
+html[data-skin="examen"] .help-panel::before{ display:none !important; }
+html[data-skin="examen"] #help-avatar, html[data-skin="examen"] #help-tutor-name{ display:none !important; }
+html[data-skin="examen"] .scaffold-card-label{ color:var(--exa-blue) !important; font:800 11px/1 var(--exa-jakarta); letter-spacing:0.16em; text-transform:uppercase; }
+html[data-skin="examen"] .scaffold-card-label .step-count, html[data-skin="examen"] .step-count{ color:var(--exa-muted) !important; }
+html[data-skin="examen"] .scaffold-card-body{ color:var(--exa-ink) !important; font:400 15px/22px var(--exa-sans); }
+html[data-skin="examen"] .help-panel-action-btn{ border-radius:4px !important; background:var(--exa-paper) !important; color:var(--exa-blue) !important; border:1.5px solid var(--exa-line) !important; font:700 13px/1 var(--exa-jakarta); min-height:44px; box-shadow:inset 0 1px 0 var(--exa-hi), 0 3px 0 var(--exa-line) !important; }
+/* avisos chicos («Deslizá hacia la derecha…», «No se pudo cargar el audio…») */
+html[data-skin="examen"] #toast{ border-radius:4px !important; background:var(--exa-ink) !important; color:var(--exa-paper) !important; border:0 !important; border-left:3px solid var(--exa-warn) !important; font:600 14px/20px var(--exa-sans); box-shadow:0 14px 24px -10px var(--exa-sombra); }
+
 /* EXAMEN-PIEZAS:FIN */
 /* ATELIER-PIEZAS:INICIO (generado por Assets/atelier/inyectar_atelier.py; no editar a mano) */
 :root{--atl-top:url('../pdp-assets/bee56b417ece6006555a954312665430.webp');--atl-mid:url('../pdp-assets/8a1c296e8f1a3af5d4884d293c1cfb90.webp');--atl-bot:url('../pdp-assets/eaed6cb442c0f2902b3ff2eb407e9ad6.webp');--atl-brujula:url('../pdp-assets/b3dc4467f87209dd521336ebf987aba5.webp');--atl-hoja:url('../pdp-assets/2285241adffaad02ca97723ef1906ccd.webp');--atl-globo:url('../pdp-assets/623ff547da80e8de568c8572ec8e436e.webp');--atl-cola:url('../pdp-assets/bd693f420530e088e3c3aaf0b4ca558f.webp');--atl-globo-nube:url('../pdp-assets/7776c39ed0db70034c8b3490e37369c1.webp');--atl-dest-amar-i:url('../pdp-assets/e3cfdef827dab80583903ddba6426334.webp');--atl-dest-amar-d:url('../pdp-assets/025ba236649c13158759e433db6eef29.webp');--atl-dest-esq-d:url('../pdp-assets/dc8f75a309e2edf7d10a4631653f660b.webp');--atl-brujula-tutor:url('../pdp-assets/a04cf4d871321c3672cb8e8abe32de22.webp');--atl-ronnie-senala:url('../pdp-assets/7d1070f94c9a1bcb48420ec5e00971a3.webp');--atl-ronnie-piensa:url('../pdp-assets/a4a40a31259cd0f1aaa415c51457e7e7.webp');--atl-ronnie-celebra:url('../pdp-assets/f8c99a649981933af9bdb9ac1384776f.webp');--atl-ronnie-desconcertado:url('../pdp-assets/15515e037a2c1f043e57407fe1710e81.webp');--atl-ronnie-sorprendido:url('../pdp-assets/34e122666e48fb814fc7bf30f0107332.webp');--atl-ronnie-idea:url('../pdp-assets/c42ef3711b9e3f7d4f4598676c408a74.webp')}
@@ -8098,6 +8217,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/af783edebb3a4c59a51bdd3c5333a2f2.js"></script><script src="../pdp-assets/d3c9f72e4cbf89bb050e047c5c9c9c87.js"></script>
+<script src="../pdp-assets/b3dedadfc5a25122ab8398c9c9905366.js"></script><script src="../pdp-assets/de2faec88aae7ada00a736b9a55b7c35.js"></script>
 </body>
 </html>
