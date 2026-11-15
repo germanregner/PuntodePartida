@@ -5990,7 +5990,8 @@ html[data-skin="examen"] #screen-exercise .pdp-trad{ margin:0 0 10px; }
 html[data-skin="examen"] #screen-exercise #pdp-trad-btn{ min-height:32px; padding:0; background:transparent; border:0; border-radius:0; box-shadow:none; font:600 12px/16px var(--exa-sans); color:var(--exa-blue); text-decoration:underline; text-underline-offset:3px; }
 html[data-skin="examen"] #screen-exercise .exercise-image-zone{ margin:0 0 6px; }
 html[data-skin="examen"] #screen-exercise .pdp-estimulo{
-  background:var(--exa-paper); border:1px solid var(--exa-ink); border-radius:0; outline:none; padding:14px 16px; color:var(--exa-ink);   /* un solo marco: el doble marco por outline cruzaba el texto al desplazarlo */
+  background:var(--exa-paper); border:1px solid var(--exa-ink); border-radius:0; outline:none; padding:14px 16px; color:var(--exa-ink);
+  box-shadow:0 0 0 4px var(--exa-paper), 0 0 0 5px var(--exa-ink); margin:6px;   /* doble marco del lienzo: el segundo trazo va POR FUERA (un outline interior cruzaba el texto al desplazarlo) */
   font-family:var(--exa-serif); font-size:20px; line-height:24px;
 }
 html[data-skin="examen"] #screen-exercise .pdp-estimulo .pe-rotulo{ font:700 10px/14px var(--exa-sans); letter-spacing:0.22em; color:var(--exa-muted); text-align:center; margin:0 0 6px; }
@@ -6212,7 +6213,7 @@ html[data-skin="examen"] #screen-exercise .pf-pt.on, html[data-skin="examen"] #s
 html[data-skin="examen"] #screen-exercise .pf-banda{ margin:6px 0 0; font:400 12px/17px var(--exa-sans); color:var(--exa-muted); }
 
 /* texto ampliado a pantalla completa (pe-amplio): hoja opaca y con aire, el botón «Cerrar el texto» arriba a la derecha (se veía la pantalla de atrás) */
-html[data-skin="examen"] #screen-exercise .pdp-estimulo.pe-amplio{ background:var(--exa-paper); border:0; outline:none; z-index:205; box-sizing:border-box; padding:calc(env(safe-area-inset-top,0px) + 76px) 22px calc(env(safe-area-inset-bottom,0px) + 28px); line-height:28px; }
+html[data-skin="examen"] #screen-exercise .pdp-estimulo.pe-amplio{ background:var(--exa-paper); border:0; outline:none; box-shadow:none; margin:0; z-index:205; box-sizing:border-box; padding:calc(env(safe-area-inset-top,0px) + 76px) 22px calc(env(safe-area-inset-bottom,0px) + 28px); line-height:28px; }
 html[data-skin="examen"] #screen-exercise .pe-ampliar.pe-sobre{ margin:0; background:var(--exa-paper); border:1px solid var(--exa-ink); color:var(--exa-ink); z-index:206; }
 
 /* EXAMEN-PIEZAS:FIN */
@@ -7900,6 +7901,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/2975dde2c31e020738a1aff5998795a6.js"></script><script src="../pdp-assets/6daf4fa8cf943e8cdbe793ec6abbafba.js"></script>
+<script src="../pdp-assets/8d80bc00add9461694a676349f935816.js"></script><script src="../pdp-assets/6daf4fa8cf943e8cdbe793ec6abbafba.js"></script>
 </body>
 </html>
