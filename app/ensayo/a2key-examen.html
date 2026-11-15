@@ -6548,23 +6548,23 @@ html[data-skin="examen"] .exa-en-op:focus-visible{ outline:2px solid var(--exa-b
    izquierda más baja, derecha más alta, puntas redondeadas y el degradé difuminado teal → azul. La forma es una máscara (el color sigue siendo del tema). ---------- */
 html[data-skin="examen"]{
   --exa-onda-cuerpo:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 30' preserveAspectRatio='none'><path d='M0 30V22Q0 15 8 14C100 5 230 29 382 7Q390 6 390 13V30Z'/></svg>");
-  --exa-onda-brillo:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 40' preserveAspectRatio='none'><defs><filter id='b' x='-5%25' y='-90%25' width='110%25' height='280%25'><feGaussianBlur stdDeviation='3'/></filter></defs><path d='M8 16C100 7 230 31 382 9' fill='none' stroke='black' stroke-width='6' stroke-linecap='round' filter='url(%23b)'/></svg>");
+  --exa-onda-brillo:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 390 60' preserveAspectRatio='none'><defs><filter id='a' x='-5%25' y='-150%25' width='110%25' height='400%25'><feGaussianBlur stdDeviation='7'/></filter><filter id='b' x='-5%25' y='-150%25' width='110%25' height='400%25'><feGaussianBlur stdDeviation='2.4'/></filter></defs><g transform='translate(0 -14)' filter='url(%23a)'><path d='M0 80V42Q0 35 8 34C100 25 230 49 382 27Q390 26 390 33V80Z' fill='black' fill-opacity='0.75'/></g><g transform='translate(0 -9)' filter='url(%23b)'><path d='M0 80V42Q0 35 8 34C100 25 230 49 382 27Q390 26 390 33V80Z' fill='black'/></g></svg>");
 }
-html[data-skin="examen"] .feedback-zone, html[data-skin="examen"] .help-panel{ background:transparent !important; background-image:none !important; border:0 !important; box-shadow:none !important; border-radius:0 !important; isolation:isolate; filter:drop-shadow(0 -10px 14px rgba(8,17,31,0.22)); padding-top:40px !important; --exa-sheet:var(--exa-paper); }
+html[data-skin="examen"] .feedback-zone, html[data-skin="examen"] .help-panel{ background:transparent !important; background-image:none !important; border:0 !important; box-shadow:none !important; border-radius:0 !important; isolation:isolate; filter:drop-shadow(0 -10px 14px rgba(8,17,31,0.22)); padding-top:62px !important; --exa-sheet:var(--exa-paper); }
 html[data-skin="examen"] .help-panel{ position:relative; }
 html[data-skin="examen"] .feedback-zone.wrong-fb, html[data-skin="examen"] .feedback-zone.hint-fb{ --exa-sheet:color-mix(in srgb, var(--exa-warn) 14%, var(--exa-paper)); }
 html[data-skin="examen"] .feedback-zone.correct-fb{ --exa-sheet:color-mix(in srgb, var(--exa-ok) 14%, var(--exa-paper)); }
-html[data-skin="examen"] .feedback-zone::before, html[data-skin="examen"] .help-panel::before{ content:'' !important; display:block !important; position:absolute; left:0; right:0; top:-3px; width:auto; height:40px; margin:0 !important; border-radius:0 !important; z-index:-1; background:linear-gradient(90deg,var(--exa-menta),var(--exa-papel-reading-qc)) !important;
-  -webkit-mask:var(--exa-onda-brillo) 0 0/100% 40px no-repeat; mask:var(--exa-onda-brillo) 0 0/100% 40px no-repeat; opacity:0.95; }
+html[data-skin="examen"] .feedback-zone::before, html[data-skin="examen"] .help-panel::before{ content:'' !important; display:block !important; position:absolute; left:0; right:0; top:0; width:auto; height:60px; margin:0 !important; border-radius:0 !important; z-index:-1; background:linear-gradient(90deg,var(--exa-menta),var(--exa-papel-reading-qc)) !important;
+  -webkit-mask:var(--exa-onda-brillo) 0 0/100% 60px no-repeat; mask:var(--exa-onda-brillo) 0 0/100% 60px no-repeat; }
 html[data-skin="examen"] .feedback-zone::after, html[data-skin="examen"] .help-panel::after{ content:''; position:absolute; inset:0; z-index:-1; background:var(--exa-sheet);
-  -webkit-mask:var(--exa-onda-cuerpo) 0 0/100% 30px no-repeat, linear-gradient(#000,#000) 0 29px/100% calc(100% - 29px) no-repeat; mask:var(--exa-onda-cuerpo) 0 0/100% 30px no-repeat, linear-gradient(#000,#000) 0 29px/100% calc(100% - 29px) no-repeat; }
+  -webkit-mask:var(--exa-onda-cuerpo) 0 20px/100% 30px no-repeat, linear-gradient(#000,#000) 0 49px/100% calc(100% - 49px) no-repeat; mask:var(--exa-onda-cuerpo) 0 20px/100% 30px no-repeat, linear-gradient(#000,#000) 0 49px/100% calc(100% - 49px) no-repeat; }
 /* hojas del examen (aviso, entrega, Mis respuestas): una tapa ondulada sobre la hoja (la arma examen.js) */
 html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-hoja{ flex-direction:column; justify-content:flex-end; align-items:center; }
 html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas).exa-ov-hoja .rf-caja{ border-top:0 !important; box-shadow:none !important; filter:drop-shadow(0 -10px 14px rgba(8,17,31,0.2)); }
 html[data-skin="examen"] .exa-onda{ position:relative; flex:none; width:100%; max-width:480px; height:30px; margin-bottom:-1px; pointer-events:none; transform:translateY(100%); transition:transform .32s var(--exa-curva); }
 html[data-skin="examen"] .exa-ov-hoja.exa-sube .exa-onda{ transform:none; }
 html[data-skin="examen"] .exa-onda i{ position:absolute; left:0; right:0; display:block; }
-html[data-skin="examen"] .exa-onda .brillo{ top:-6px; height:40px; background:linear-gradient(90deg,var(--exa-menta),var(--exa-papel-reading-qc)); -webkit-mask:var(--exa-onda-brillo) 0 0/100% 40px no-repeat; mask:var(--exa-onda-brillo) 0 0/100% 40px no-repeat; opacity:0.95; }
+html[data-skin="examen"] .exa-onda .brillo{ top:-20px; height:60px; background:linear-gradient(90deg,var(--exa-menta),var(--exa-papel-reading-qc)); -webkit-mask:var(--exa-onda-brillo) 0 0/100% 60px no-repeat; mask:var(--exa-onda-brillo) 0 0/100% 60px no-repeat; }
 html[data-skin="examen"] .exa-onda .cuerpo{ top:0; height:30px; background:var(--exa-paper); -webkit-mask:var(--exa-onda-cuerpo) 0 0/100% 30px no-repeat; mask:var(--exa-onda-cuerpo) 0 0/100% 30px no-repeat; }
 @media (prefers-reduced-motion:reduce){ html[data-skin="examen"] .exa-onda{ transform:none; transition:none; } }
 /* el texto de lectura NO se achica cuando se abre una hoja (el Motor achica la imagen de escena: no vale para un examen) */
@@ -8260,6 +8260,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/a7811557ecef1f7a438cee904bca9d5d.js"></script><script src="../pdp-assets/f391691946d909c37f6130dc0d54cee8.js"></script>
+<script src="../pdp-assets/3dae0ecd8fe8d7867e1075f44a164c55.js"></script><script src="../pdp-assets/f391691946d909c37f6130dc0d54cee8.js"></script>
 </body>
 </html>
