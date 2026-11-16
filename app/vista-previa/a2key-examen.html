@@ -6680,6 +6680,53 @@ html[data-skin="examen"]{ --exa-err-a:#F7A86B; --exa-err-b:#F5B83D; }
 html[data-skin="examen"] .feedback-zone.wrong-fb::before, html[data-skin="examen"] .feedback-zone.hint-fb::before{ background:linear-gradient(90deg,var(--exa-err-a),var(--exa-err-b)) !important; }
 
 /* fin de parte («Terminaste la Parte N») */
+/* F14 «¿Quién va a usar el test?» (ob-rol) y F15 panel del adulto (ad-inicio, ad-writing, ad-speaking, ad-informe) */
+html[data-skin="examen"] .exa-rol{ gap:14px; }
+html[data-skin="examen"] .exa-rol-card{ display:flex; align-items:center; gap:16px; width:100%; box-sizing:border-box; padding:18px 16px; cursor:pointer; font-family:var(--exa-jakarta); color:var(--exa-ink); text-align:left; border-radius:6px; background:var(--exa-paper); border:1px solid var(--exa-line); }
+html[data-skin="examen"] .exa-rol-card.on{ background:var(--exa-tint); border:2px solid var(--exa-blue); box-shadow:0 0 0 3px var(--exa-tint); padding:17px 15px; }
+html[data-skin="examen"] .exa-rol-card:focus-visible{ outline:2px solid var(--exa-blue); outline-offset:2px; }
+html[data-skin="examen"] .exa-rol-ic{ display:flex; align-items:center; justify-content:center; width:44px; height:44px; flex:none; border-radius:4px; background:var(--exa-blue); color:var(--exa-onblue); }
+html[data-skin="examen"] .exa-rol-ic[data-k="adulto"]{ background:var(--exa-accF); color:#08111F; }
+html[data-skin="examen"] .exa-rol-k{ flex:1; display:flex; flex-direction:column; gap:4px; }
+html[data-skin="examen"] .exa-rol-t{ font:800 18px/1.2 var(--exa-jakarta); letter-spacing:-0.02em; }
+html[data-skin="examen"] .exa-rol-x{ font:400 13px/19px var(--exa-jakarta); color:var(--exa-ink2); }
+html[data-skin="examen"] .exa-panelbtn{ position:relative; overflow:hidden; display:flex; flex-direction:column; align-items:flex-start; gap:2px; width:100%; margin-top:10px; padding:11px 12px; text-align:left; border:1px dashed var(--exa-line); border-radius:6px; background:transparent; color:var(--exa-ink); cursor:pointer; font-family:var(--exa-jakarta); user-select:none; -webkit-user-select:none; -webkit-touch-callout:none; touch-action:manipulation; }
+html[data-skin="examen"] .exa-panelbtn .pf-hold{ position:absolute; left:0; bottom:0; height:3px; width:0; background:var(--exa-accF); }
+html[data-skin="examen"] .exa-panelbtn .pf-hold.on{ width:100%; transition:width 2s linear; }
+html[data-skin="examen"] .exa-panelbtn:focus-visible{ outline:2px solid var(--exa-blue); outline-offset:2px; }
+html[data-skin="examen"] .exa-pn-hint{ font:400 12px/16px var(--exa-jakarta); color:var(--exa-muted); }
+html[data-skin="examen"] .exa-pn-alu{ display:flex; align-items:center; gap:14px; padding:14px; background:var(--exa-paper); border:1px solid var(--exa-line); margin-bottom:14px; }
+html[data-skin="examen"] .exa-pn-pg{ display:flex; flex-direction:column; gap:4px; margin-top:4px; }
+html[data-skin="examen"] .exa-pn-fila{ display:flex; align-items:center; gap:14px; width:100%; box-sizing:border-box; min-height:66px; padding:0 12px; text-align:left; color:var(--exa-ink); background:var(--exa-paper); border:1px solid var(--exa-line); margin-top:8px; cursor:pointer; font-family:var(--exa-jakarta); }
+html[data-skin="examen"] .exa-pn-fila.espera{ opacity:.7; cursor:default; }
+html[data-skin="examen"] .exa-pn-fila:focus-visible{ outline:2px solid var(--exa-blue); outline-offset:2px; }
+html[data-skin="examen"] .exa-pn-ic{ display:flex; align-items:center; justify-content:center; width:40px; height:40px; flex:none; border-radius:4px; background:var(--exa-papel-writing-qc); color:#08111F; }
+html[data-skin="examen"] .exa-pn-ic[data-papel="speaking"]{ background:var(--exa-ind); color:var(--exa-onind); }
+html[data-skin="examen"] .exa-pn-fila.espera .exa-pn-ic{ background:var(--exa-line); color:var(--exa-muted); }
+html[data-skin="examen"] .exa-pn-hecho{ display:flex; align-items:center; gap:14px; min-height:58px; padding:0 12px; border:1px solid var(--exa-line2); margin-top:8px; }
+html[data-skin="examen"] .exa-pn-ok{ display:flex; align-items:center; justify-content:center; width:32px; height:32px; flex:none; background:var(--exa-blue); color:var(--exa-onblue); font:800 15px/1 var(--exa-jakarta); }
+html[data-skin="examen"] .exa-pn-rot{ display:block; margin:14px 0 6px; font:800 11px/1.2 var(--exa-jakarta); letter-spacing:.14em; color:var(--exa-muted); }
+html[data-skin="examen"] .exa-pn-consigna{ margin:0; font:400 13.5px/20px var(--exa-jakarta); color:var(--exa-ink2); }
+html[data-skin="examen"] .exa-pn-texto{ padding:12px 14px; background:var(--exa-paper); border:1px solid var(--exa-line); border-top:3px double var(--exa-ink); font:400 15px/24px 'Inter',system-ui,sans-serif; color:var(--exa-ink); white-space:pre-wrap; }
+html[data-skin="examen"] .exa-pn-texto p{ margin:0; } html[data-skin="examen"] .exa-pn-texto small{ display:block; margin-top:6px; font:400 12px/16px var(--exa-jakarta); color:var(--exa-muted); }
+html[data-skin="examen"] .exa-pn-escala .pf-crit{ display:flex; flex-direction:column; gap:6px; padding-bottom:10px; border-bottom:1px solid var(--exa-line2); margin-bottom:8px; }
+html[data-skin="examen"] .exa-pn-escala .pf-crit-t{ margin:0; font:700 14px/1.3 var(--exa-jakarta); color:var(--exa-ink); }
+html[data-skin="examen"] .exa-pn-escala .pf-pts{ display:flex; gap:6px; }
+html[data-skin="examen"] .exa-pn-escala .pf-pt{ flex:1; min-height:44px; padding:0 4px; font:800 15px/1 var(--exa-jakarta); cursor:pointer; border-radius:3px; color:var(--exa-ink); background:transparent; border:1px solid var(--exa-line); }
+html[data-skin="examen"] .exa-pn-escala .pf-pt.on{ background:var(--exa-accF); border-color:var(--exa-accF); color:#08111F; }
+html[data-skin="examen"] .exa-pn-escala .pf-pt:focus-visible{ outline:2px solid var(--exa-blue); outline-offset:2px; }
+html[data-skin="examen"] .exa-pn-escala .pf-banda{ margin:0; font:400 12px/17px var(--exa-jakarta); color:var(--exa-ink2); }
+html[data-skin="examen"] .exa-pn-escala .pf-total{ margin:4px 0 0; font:800 14px/1 var(--exa-jakarta); color:var(--exa-ink); }
+html[data-skin="examen"] .exa-pn-practica{ margin-top:8px; }
+html[data-skin="examen"] .exa-pn-barras{ display:flex; flex-direction:column; }
+html[data-skin="examen"] .exa-pn-barra{ padding:12px 0; border-bottom:1px solid var(--exa-line2); display:flex; flex-direction:column; gap:8px; }
+html[data-skin="examen"] .exa-pn-bcab{ display:flex; justify-content:space-between; align-items:baseline; }
+html[data-skin="examen"] .exa-pn-bn{ display:flex; align-items:center; gap:8px; font:700 15px/1.2 var(--exa-jakarta); }
+html[data-skin="examen"] .exa-pn-bv{ font:800 14px/1 var(--exa-jakarta); font-variant-numeric:tabular-nums; }
+html[data-skin="examen"] .exa-pn-pista{ height:8px; background:var(--exa-line2); } html[data-skin="examen"] .exa-pn-pista.pend{ background:repeating-linear-gradient(135deg,var(--exa-line) 0 4px,transparent 4px 8px); }
+html[data-skin="examen"] .exa-pn-rell{ height:8px; background:var(--exa-blue); }
+html[data-skin="examen"] .exa-pn-rell[data-papel="writing"]{ background:var(--exa-papel-writing-qc); } html[data-skin="examen"] .exa-pn-rell[data-papel="listening"]{ background:var(--exa-papel-listening-qc); } html[data-skin="examen"] .exa-pn-rell[data-papel="speaking"]{ background:var(--exa-ind); }
+html[data-skin="examen"] .exa-pn-resumen{ margin:14px 0 0; padding:12px 14px; background:var(--exa-tint); border-top:2px solid var(--exa-accF); font:400 13px/19px var(--exa-jakarta); }
 /* «Para repasar» y «Mi progreso» (tableros cn-repasar, cn-progreso) y las dos tarjetas de la portada */
 html[data-skin="examen"] .exa-ov-pg{ position:fixed; inset:0; z-index:9998; display:flex; justify-content:center; background-color:var(--exa-desk); background-image:radial-gradient(var(--exa-dot) 1px,transparent 1.4px); background-size:14px 14px; font-family:var(--exa-jakarta); color:var(--exa-ink); }
 html[data-skin="examen"] .exa-cua{ width:9px; height:9px; flex:none; display:inline-block; background:var(--exa-blue); }
@@ -8432,6 +8479,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/c6b6ca66d981f9694ef871fae6242fd7.js"></script><script src="../pdp-assets/88af96c9731514e45ea3a251a8993715.js"></script>
+<script src="../pdp-assets/ee6ecf4a0b708f71b93fdf213909250e.js"></script><script src="../pdp-assets/03422fed2bf8f1826b02b5f88a57e71d.js"></script>
 </body>
 </html>
