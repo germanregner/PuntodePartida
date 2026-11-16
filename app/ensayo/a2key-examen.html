@@ -6526,9 +6526,10 @@ html[data-skin="examen"] .exa-medmini{ display:flex; align-items:center; gap:4px
 /* tamaño de letra (perfil): letra más grande en lo que se lee en el examen */
 html[data-skin="examen"][data-letra="grande"] #screen-exercise .exercise-question{ font-size:16px; line-height:24px; }
 html[data-skin="examen"][data-letra="grande"] #screen-exercise .option-btn{ font-size:17px; line-height:25px; }
-html[data-skin="examen"][data-letra="grande"] #screen-exercise .pdp-estimulo p{ font-size:17px; line-height:26px; }
-html[data-skin="examen"][data-letra="grande"] #screen-exercise .pdp-estimulo .pe-titulo{ font-size:25px; line-height:29px; }
 html[data-skin="examen"][data-letra="grande"] #screen-exercise .text-input{ font-size:18px; }
+html[data-skin="examen"][data-letra="grande"] #screen-exercise .pdp-estimulo :is(p,.pe-titulo){ zoom:1.15; }   /* antes achicaba el texto del cartel (20 px → 17 px): ahora lo agranda */
+/* «Grande» también en las pantallas de lectura de la piel (portada, listas, avisos, panel, hojas, perfil): se agranda el cuerpo de cada una */
+html[data-skin="examen"][data-letra="grande"] :is(.exa-pcuerpo,.exa-en-cuerpo,.exa-conf-caja,.exa-pa-caja){ zoom:1.14; }
 
 /* ---------- Práctica: la Pista (hoja de ayuda), comprobar (bien / error) y los avisos, vestidos como el lienzo (cx-ayuda, cx-ok, cx-err). Sin mascota, sin rojo, sin cápsulas. ---------- */
 html[data-skin="examen"] .feedback-zone{ border-radius:0 !important; background:var(--exa-paper) !important; background-image:none !important; color:var(--exa-ink); border:0; border-top:3px solid var(--exa-ink); box-shadow:0 -16px 32px rgba(8,17,31,0.28); font-family:var(--exa-sans); }
@@ -6537,7 +6538,7 @@ html[data-skin="examen"] .feedback-zone.wrong-fb, html[data-skin="examen"] .feed
 html[data-skin="examen"] .feedback-zone.correct-fb{ border-top-color:var(--exa-ok); background:linear-gradient(var(--exa-okBg),var(--exa-okBg)), var(--exa-paper) !important; }
 html[data-skin="examen"] .feedback-zone.revealed-fb{ border-top-color:var(--exa-muted); }
 html[data-skin="examen"] .feedback-header{ font:800 17px/1.2 var(--exa-jakarta); letter-spacing:-0.01em; }
-html[data-skin="examen"] .feedback-header.wrong, html[data-skin="examen"] .feedback-header.hint{ color:var(--exa-warnB); }
+html[data-skin="examen"] .feedback-header.wrong, html[data-skin="examen"] .feedback-header.hint{ color:var(--exa-errT,var(--exa-warnB)); }
 html[data-skin="examen"] .feedback-header.correct{ color:var(--exa-okT); }
 html[data-skin="examen"] .feedback-text{ font:400 14px/20px var(--exa-sans); color:var(--exa-ink2); }
 html[data-skin="examen"] .feedback-zone-secondary-btn{ border-radius:4px !important; background:var(--exa-paper) !important; color:var(--exa-blue) !important; border:1.5px solid var(--exa-line) !important; font:700 13px/1 var(--exa-jakarta); min-height:44px; box-shadow:inset 0 1px 0 var(--exa-hi), 0 3px 0 var(--exa-line); }
@@ -6676,8 +6677,14 @@ html[data-skin="examen"] .exa-btn-p:disabled{ opacity:0.45; box-shadow:none; }
 @media (prefers-reduced-motion:reduce){ html[data-skin="examen"] .exa-quien-card.on{ transform:none; } }
 
 /* ---------- brillo de la hoja de ERROR en tonos cálidos (el de «Correcto» sigue siendo teal → azul). Sin rojo. Se elige desde el 🧪 «Examen · brillo de la hoja de error» ---------- */
-html[data-skin="examen"]{ --exa-err-a:#F7A86B; --exa-err-b:#F5B83D; }
+html[data-skin="examen"]{ --exa-err-a:#F2CBA6; --exa-err-b:#F0DC9C; --exa-errT:#8A4B16; }   /* claro: durazno y ámbar apagados (Director, 16/11: «muy fuerte y demasiado naranja») */
+html[data-skin="examen"][data-theme="dark"]{ --exa-err-a:#F7A86B; --exa-err-b:#F5B83D; --exa-errT:#F5B83D; }
 html[data-skin="examen"] .feedback-zone.wrong-fb::before, html[data-skin="examen"] .feedback-zone.hint-fb::before{ background:linear-gradient(90deg,var(--exa-err-a),var(--exa-err-b)) !important; }
+
+/* «Intentar de nuevo»: el botón principal también se vuelve ámbar apagado en el error (pedido del Director, 16/11) */
+html[data-skin="examen"] #screen-exercise #confirm-btn.state-wrong:not(:disabled){ background:linear-gradient(180deg,#F8DDBB 0%,#EFBF87 62%); color:#3A2108; border-top:1px solid rgba(255,255,255,0.6); box-shadow:inset 0 -2px 0 rgba(0,0,0,0.08), 0 4px 0 #C48A45, 0 14px 20px -8px var(--exa-sombra); }
+html[data-skin="examen"][data-theme="dark"] #screen-exercise #confirm-btn.state-wrong:not(:disabled){ background:linear-gradient(180deg,#F8D08A 0%,#EBAE55 62%); color:#2A1A05; box-shadow:inset 0 -2px 0 rgba(0,0,0,0.10), 0 4px 0 #9A6A24, 0 14px 20px -8px var(--exa-sombra); }
+html[data-skin="examen"] #screen-exercise #confirm-btn.state-wrong:not(:disabled):active{ transform:translateY(3px); box-shadow:inset 0 -2px 0 rgba(0,0,0,0.10), 0 1px 0 #C48A45; }
 
 /* fin de parte («Terminaste la Parte N») */
 /* F13 «Ingresá tu código» (ob-codigo, ob-codigoerr): seis celdas, un campo real encima (transparente) para escribir */
@@ -8491,6 +8498,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/accc9eee0d72c1aee06da24a54693c63.js"></script><script src="../pdp-assets/a18365d815dca4aaf5968eba6ebca018.js"></script>
+<script src="../pdp-assets/632cf9de77b80ea574424bfd7ebccd4d.js"></script><script src="../pdp-assets/29e2e841b5069bd511da3a0f3e3888e0.js"></script>
 </body>
 </html>
