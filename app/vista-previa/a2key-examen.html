@@ -6053,10 +6053,10 @@ html[data-skin="examen"] #pdp-reloj[role="button"]::before{ content:''; display:
 html[data-skin="examen"] #pdp-reloj.cumplido::before{ display:none; }
 html[data-skin="examen"]:has(.pdp-estimulo.pe-amplio) #pdp-reloj[role="button"]{ pointer-events:none; }   /* con el texto ampliado a pantalla completa, el reloj no tapa «Cerrar el texto» */
 html[data-skin="examen"]:has(#pdp-reloj.exa-cinco) .exa-top .exa-kick{ visibility:hidden; }   /* el tablero cx-quedan5 deja vacío el rótulo del centro para que el aviso no lo pise */
-html[data-skin="examen"] #pdp-reloj.exa-cinco{ border-color:var(--exa-warn); color:var(--exa-warn); background:rgba(8,17,31,0.45); font-weight:700; }
-html[data-skin="examen"] #pdp-reloj.exa-cinco[data-nota]::after{ content:attr(data-nota); position:absolute; right:calc(100% + 8px); top:50%; transform:translateY(-50%); white-space:nowrap; font:700 11px/1 var(--exa-sans); color:var(--exa-warn); background:rgba(8,17,31,0.55); padding:3px 6px; border-radius:2px; }
+html[data-skin="examen"] #pdp-reloj.exa-cinco{ border-color:var(--exa-warn); color:var(--exa-warn); background:var(--exa-velo-chip); font-weight:700; }
+html[data-skin="examen"] #pdp-reloj.exa-cinco[data-nota]::after{ content:attr(data-nota); position:absolute; right:calc(100% + 8px); top:50%; transform:translateY(-50%); white-space:nowrap; font:700 11px/1 var(--exa-sans); color:var(--exa-warn); background:var(--exa-velo-nota); padding:3px 6px; border-radius:2px; }
 /* cartel de pausa (tablero cx-pausa) */
-html[data-skin="examen"] #exa-pausa{ position:fixed; inset:0; z-index:10070; background:rgba(8,17,31,0.62); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); font-family:var(--exa-jakarta); }
+html[data-skin="examen"] #exa-pausa{ position:fixed; inset:0; z-index:10070; background:var(--exa-velo); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); font-family:var(--exa-jakarta); }
 html[data-skin="examen"] .exa-pa-caja{ position:absolute; left:max(24px,calc(50% - 216px)); right:max(24px,calc(50% - 216px)); top:max(120px,calc(env(safe-area-inset-top,0px) + 120px)); box-sizing:border-box; padding:18px 18px 16px; background:var(--exa-paper); color:var(--exa-ink); border:1px solid var(--exa-ink); border-top:3px double var(--exa-ink); box-shadow:0 18px 36px rgba(8,17,31,0.4); display:flex; flex-direction:column; gap:12px; }
 html[data-skin="examen"] .exa-pa-k{ font:700 11px/1 var(--exa-jakarta); letter-spacing:.14em; color:var(--exa-muted); }
 html[data-skin="examen"] .exa-pa-fila{ display:flex; align-items:center; gap:14px; }
@@ -6065,6 +6065,11 @@ html[data-skin="examen"] .exa-pa-t{ display:flex; flex-direction:column; }
 html[data-skin="examen"] .exa-pa-h{ font:400 40px/1 var(--exa-serif); font-variant-numeric:tabular-nums; }
 html[data-skin="examen"] .exa-pa-s{ font:400 12px/16px var(--exa-jakarta); color:var(--exa-muted); }
 html[data-skin="examen"] .exa-pa-n{ margin:0; font:400 13px/19px var(--exa-jakarta); color:var(--exa-ink2); }
+@keyframes exaPausaEntra{ from{ opacity:0; } to{ opacity:1; } }
+@keyframes exaPausaCaja{ from{ opacity:0; transform:translateY(10px); } to{ opacity:1; transform:none; } }
+html[data-skin="examen"] #exa-pausa{ animation:exaPausaEntra .16s var(--exa-curva) both; }
+html[data-skin="examen"] .exa-pa-caja{ animation:exaPausaCaja .22s var(--exa-curva) both; }
+@media (prefers-reduced-motion:reduce){ html[data-skin="examen"] #exa-pausa, html[data-skin="examen"] .exa-pa-caja{ animation:none; } }
 html[data-skin="examen"] .exa-pa-b{ min-height:50px; border:0; border-radius:3px; font:700 15px/1 var(--exa-jakarta); cursor:pointer; background:var(--exa-ink); color:var(--exa-paper); box-shadow:0 3px 0 var(--exa-blue); }
 html[data-skin="examen"] .exa-pa-b:focus-visible{ outline:2px solid var(--exa-blue); outline-offset:3px; }
 
@@ -6677,21 +6682,21 @@ html[data-skin="examen"] .exa-btn-p:disabled{ opacity:0.45; box-shadow:none; }
 @media (prefers-reduced-motion:reduce){ html[data-skin="examen"] .exa-quien-card.on{ transform:none; } }
 
 /* ---------- brillo de la hoja de ERROR en tonos cálidos (el de «Correcto» sigue siendo teal → azul). Sin rojo. Se elige desde el 🧪 «Examen · brillo de la hoja de error» ---------- */
-html[data-skin="examen"]{ --exa-err-a:#F2CBA6; --exa-err-b:#F0DC9C; --exa-errT:#8A4B16; }   /* claro: durazno y ámbar apagados (Director, 16/11: «muy fuerte y demasiado naranja») */
-html[data-skin="examen"][data-theme="dark"]{ --exa-err-a:#F7A86B; --exa-err-b:#F5B83D; --exa-errT:#F5B83D; }
+html[data-skin="examen"]{ --exa-err-a:#F2CBA6; --exa-err-b:#F0DC9C; --exa-errT:#8A4B16; --exa-errbtn-1:#F8DDBB; --exa-errbtn-2:#EFBF87; --exa-errbtn-borde:#C48A45; --exa-errbtn-txt:#3A2108; --exa-velo:rgba(8,17,31,0.62); --exa-velo-chip:rgba(8,17,31,0.45); --exa-velo-nota:rgba(8,17,31,0.55); }   /* claro: durazno y ámbar apagados (Director, 16/11: «muy fuerte y demasiado naranja») */
+html[data-skin="examen"][data-theme="dark"]{ --exa-err-a:#F7A86B; --exa-err-b:#F5B83D; --exa-errT:#F5B83D; --exa-errbtn-1:#F8D08A; --exa-errbtn-2:#EBAE55; --exa-errbtn-borde:#9A6A24; --exa-errbtn-txt:#2A1A05; }
 html[data-skin="examen"] .feedback-zone.wrong-fb::before, html[data-skin="examen"] .feedback-zone.hint-fb::before{ background:linear-gradient(90deg,var(--exa-err-a),var(--exa-err-b)) !important; }
 
 /* «Intentar de nuevo»: el botón principal también se vuelve ámbar apagado en el error (pedido del Director, 16/11) */
-html[data-skin="examen"] #screen-exercise #confirm-btn.state-wrong:not(:disabled){ background:linear-gradient(180deg,#F8DDBB 0%,#EFBF87 62%); color:#3A2108; border-top:1px solid rgba(255,255,255,0.6); box-shadow:inset 0 -2px 0 rgba(0,0,0,0.08), 0 4px 0 #C48A45, 0 14px 20px -8px var(--exa-sombra); }
-html[data-skin="examen"][data-theme="dark"] #screen-exercise #confirm-btn.state-wrong:not(:disabled){ background:linear-gradient(180deg,#F8D08A 0%,#EBAE55 62%); color:#2A1A05; box-shadow:inset 0 -2px 0 rgba(0,0,0,0.10), 0 4px 0 #9A6A24, 0 14px 20px -8px var(--exa-sombra); }
-html[data-skin="examen"] #screen-exercise #confirm-btn.state-wrong:not(:disabled):active{ transform:translateY(3px); box-shadow:inset 0 -2px 0 rgba(0,0,0,0.10), 0 1px 0 #C48A45; }
+html[data-skin="examen"] #screen-exercise #confirm-btn.state-wrong:not(:disabled){ background:linear-gradient(180deg,var(--exa-errbtn-1) 0%,var(--exa-errbtn-2) 62%); color:var(--exa-errbtn-txt); border-top:1px solid rgba(255,255,255,0.6); box-shadow:inset 0 -2px 0 rgba(0,0,0,0.08), 0 4px 0 var(--exa-errbtn-borde), 0 14px 20px -8px var(--exa-sombra); }
+html[data-skin="examen"] #screen-exercise #confirm-btn.state-wrong:not(:disabled):active{ transform:translateY(3px); box-shadow:inset 0 -2px 0 rgba(0,0,0,0.10), 0 1px 0 var(--exa-errbtn-borde); }
 
 /* fin de parte («Terminaste la Parte N») */
 /* F13 «Ingresá tu código» (ob-codigo, ob-codigoerr): seis celdas, un campo real encima (transparente) para escribir */
 html[data-skin="examen"] .exa-cod{ gap:14px; }
-html[data-skin="examen"] .exa-cod-sub{ font:400 13px/18px var(--exa-jakarta); color:#C9D6EE; }
+html[data-skin="examen"] .exa-cod-sub{ font:400 13px/18px var(--exa-jakarta); color:var(--exa-en-sub2); }
 html[data-skin="examen"] .exa-cod-fila{ position:relative; display:flex; gap:8px; justify-content:space-between; margin-top:8px; }
 html[data-skin="examen"] .exa-cod-c{ flex:1; display:flex; align-items:center; justify-content:center; height:60px; box-sizing:border-box; background:var(--exa-paper); border:1px solid var(--exa-line); border-bottom:3px solid var(--exa-line); font:700 28px/1 var(--exa-jakarta); color:var(--exa-ink); }
+html[data-skin="examen"] .exa-cod-fila:focus-within{ outline:2px solid var(--exa-blue); outline-offset:3px; }
 html[data-skin="examen"] .exa-cod-c.act{ border-color:var(--exa-blue); border-bottom-color:var(--exa-accF); }
 html[data-skin="examen"] .exa-cod-fila.error .exa-cod-c{ border-color:var(--exa-warn); border-bottom-color:var(--exa-warn); }
 html[data-skin="examen"] .exa-cod-inp{ position:absolute; inset:0; width:100%; height:100%; opacity:0; border:0; padding:0; font-size:16px; cursor:text; }
@@ -6705,7 +6710,7 @@ html[data-skin="examen"] .exa-rol-card{ display:flex; align-items:center; gap:16
 html[data-skin="examen"] .exa-rol-card.on{ background:var(--exa-tint); border:2px solid var(--exa-blue); box-shadow:0 0 0 3px var(--exa-tint); padding:17px 15px; }
 html[data-skin="examen"] .exa-rol-card:focus-visible{ outline:2px solid var(--exa-blue); outline-offset:2px; }
 html[data-skin="examen"] .exa-rol-ic{ display:flex; align-items:center; justify-content:center; width:44px; height:44px; flex:none; border-radius:4px; background:var(--exa-blue); color:var(--exa-onblue); }
-html[data-skin="examen"] .exa-rol-ic[data-k="adulto"]{ background:var(--exa-accF); color:#08111F; }
+html[data-skin="examen"] .exa-rol-ic[data-k="adulto"]{ background:var(--exa-accF); color:var(--exa-en-sobre); }
 html[data-skin="examen"] .exa-rol-k{ flex:1; display:flex; flex-direction:column; gap:4px; }
 html[data-skin="examen"] .exa-rol-t{ font:800 18px/1.2 var(--exa-jakarta); letter-spacing:-0.02em; }
 html[data-skin="examen"] .exa-rol-x{ font:400 13px/19px var(--exa-jakarta); color:var(--exa-ink2); }
@@ -6719,7 +6724,7 @@ html[data-skin="examen"] .exa-pn-pg{ display:flex; flex-direction:column; gap:4p
 html[data-skin="examen"] .exa-pn-fila{ display:flex; align-items:center; gap:14px; width:100%; box-sizing:border-box; min-height:66px; padding:0 12px; text-align:left; color:var(--exa-ink); background:var(--exa-paper); border:1px solid var(--exa-line); margin-top:8px; cursor:pointer; font-family:var(--exa-jakarta); }
 html[data-skin="examen"] .exa-pn-fila.espera{ opacity:.7; cursor:default; }
 html[data-skin="examen"] .exa-pn-fila:focus-visible{ outline:2px solid var(--exa-blue); outline-offset:2px; }
-html[data-skin="examen"] .exa-pn-ic{ display:flex; align-items:center; justify-content:center; width:40px; height:40px; flex:none; border-radius:4px; background:var(--exa-papel-writing-qc); color:#08111F; }
+html[data-skin="examen"] .exa-pn-ic{ display:flex; align-items:center; justify-content:center; width:40px; height:40px; flex:none; border-radius:4px; background:var(--exa-papel-writing-qc); color:var(--exa-en-sobre); }
 html[data-skin="examen"] .exa-pn-ic[data-papel="speaking"]{ background:var(--exa-ind); color:var(--exa-onind); }
 html[data-skin="examen"] .exa-pn-fila.espera .exa-pn-ic{ background:var(--exa-line); color:var(--exa-muted); }
 html[data-skin="examen"] .exa-pn-hecho{ display:flex; align-items:center; gap:14px; min-height:58px; padding:0 12px; border:1px solid var(--exa-line2); margin-top:8px; }
@@ -6732,7 +6737,7 @@ html[data-skin="examen"] .exa-pn-escala .pf-crit{ display:flex; flex-direction:c
 html[data-skin="examen"] .exa-pn-escala .pf-crit-t{ margin:0; font:700 14px/1.3 var(--exa-jakarta); color:var(--exa-ink); }
 html[data-skin="examen"] .exa-pn-escala .pf-pts{ display:flex; gap:6px; }
 html[data-skin="examen"] .exa-pn-escala .pf-pt{ flex:1; min-height:44px; padding:0 4px; font:800 15px/1 var(--exa-jakarta); cursor:pointer; border-radius:3px; color:var(--exa-ink); background:transparent; border:1px solid var(--exa-line); }
-html[data-skin="examen"] .exa-pn-escala .pf-pt.on{ background:var(--exa-accF); border-color:var(--exa-accF); color:#08111F; }
+html[data-skin="examen"] .exa-pn-escala .pf-pt.on{ background:var(--exa-accF); border-color:var(--exa-accF); color:var(--exa-en-sobre); }
 html[data-skin="examen"] .exa-pn-escala .pf-pt:focus-visible{ outline:2px solid var(--exa-blue); outline-offset:2px; }
 html[data-skin="examen"] .exa-pn-escala .pf-banda{ margin:0; font:400 12px/17px var(--exa-jakarta); color:var(--exa-ink2); }
 html[data-skin="examen"] .exa-pn-escala .pf-total{ margin:4px 0 0; font:800 14px/1 var(--exa-jakarta); color:var(--exa-ink); }
@@ -8498,6 +8503,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/9b3ff8ce5a4a7a2d12c854aa48c67e76.js"></script><script src="../pdp-assets/d363a7eb8716dea9383c1f258e8d6769.js"></script>
+<script src="../pdp-assets/75b0ca568f51cc926bda8ec0bf63194e.js"></script><script src="../pdp-assets/981e8111788a00eb93c47f26ae186e4f.js"></script>
 </body>
 </html>
