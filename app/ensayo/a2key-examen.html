@@ -6045,6 +6045,28 @@ html[data-skin="examen"] #pdp-reloj{ position:fixed; top:calc(env(safe-area-inse
   border:1px solid rgba(255,255,255,0.4); border-radius:2px; padding:4px 9px; font:600 14px/1 var(--exa-sans); font-variant-numeric:tabular-nums; box-shadow:none; }
 html[data-skin="examen"] #pdp-reloj.cumplido{ border-color:var(--exa-warn); color:var(--exa-warn); background:rgba(8,17,31,0.45); }
 html[data-skin="examen"]:has(#pdp-reloj) .exa-chip{ visibility:hidden; }
+/* Quedan 5 minutos (tablero cx-quedan5) y botón de pausa (F22): el reloj se vuelve un botón; el aviso va a su izquierda (el texto sale de la Unidad: data-nota) */
+html[data-skin="examen"] #pdp-reloj[role="button"]{ cursor:pointer; touch-action:manipulation; pointer-events:auto; }   /* el reloj del Motor nace con pointer-events:none */
+html[data-skin="examen"] #pdp-reloj[role="button"]:not(.cumplido){ -webkit-tap-highlight-color:transparent; user-select:none; -webkit-user-select:none; }
+html[data-skin="examen"] #pdp-reloj[role="button"]:focus-visible{ outline:2px solid var(--exa-blue); outline-offset:3px; }
+html[data-skin="examen"] #pdp-reloj[role="button"]::before{ content:''; display:inline-block; width:8px; height:10px; box-sizing:border-box; border-left:2.5px solid currentColor; border-right:2.5px solid currentColor; margin-right:7px; opacity:.75; vertical-align:-1px; }
+html[data-skin="examen"] #pdp-reloj.cumplido::before{ display:none; }
+html[data-skin="examen"]:has(.pdp-estimulo.pe-amplio) #pdp-reloj[role="button"]{ pointer-events:none; }   /* con el texto ampliado a pantalla completa, el reloj no tapa «Cerrar el texto» */
+html[data-skin="examen"]:has(#pdp-reloj.exa-cinco) .exa-top .exa-kick{ visibility:hidden; }   /* el tablero cx-quedan5 deja vacío el rótulo del centro para que el aviso no lo pise */
+html[data-skin="examen"] #pdp-reloj.exa-cinco{ border-color:var(--exa-warn); color:var(--exa-warn); background:rgba(8,17,31,0.45); font-weight:700; }
+html[data-skin="examen"] #pdp-reloj.exa-cinco[data-nota]::after{ content:attr(data-nota); position:absolute; right:calc(100% + 8px); top:50%; transform:translateY(-50%); white-space:nowrap; font:700 11px/1 var(--exa-sans); color:var(--exa-warn); background:rgba(8,17,31,0.55); padding:3px 6px; border-radius:2px; }
+/* cartel de pausa (tablero cx-pausa) */
+html[data-skin="examen"] #exa-pausa{ position:fixed; inset:0; z-index:10070; background:rgba(8,17,31,0.62); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); font-family:var(--exa-jakarta); }
+html[data-skin="examen"] .exa-pa-caja{ position:absolute; left:max(24px,calc(50% - 216px)); right:max(24px,calc(50% - 216px)); top:max(120px,calc(env(safe-area-inset-top,0px) + 120px)); box-sizing:border-box; padding:18px 18px 16px; background:var(--exa-paper); color:var(--exa-ink); border:1px solid var(--exa-ink); border-top:3px double var(--exa-ink); box-shadow:0 18px 36px rgba(8,17,31,0.4); display:flex; flex-direction:column; gap:12px; }
+html[data-skin="examen"] .exa-pa-k{ font:700 11px/1 var(--exa-jakarta); letter-spacing:.14em; color:var(--exa-muted); }
+html[data-skin="examen"] .exa-pa-fila{ display:flex; align-items:center; gap:14px; }
+html[data-skin="examen"] .exa-pa-ic{ display:flex; align-items:center; justify-content:center; width:44px; height:44px; box-sizing:border-box; border:1px solid var(--exa-ink); flex:none; }
+html[data-skin="examen"] .exa-pa-t{ display:flex; flex-direction:column; }
+html[data-skin="examen"] .exa-pa-h{ font:400 40px/1 var(--exa-serif); font-variant-numeric:tabular-nums; }
+html[data-skin="examen"] .exa-pa-s{ font:400 12px/16px var(--exa-jakarta); color:var(--exa-muted); }
+html[data-skin="examen"] .exa-pa-n{ margin:0; font:400 13px/19px var(--exa-jakarta); color:var(--exa-ink2); }
+html[data-skin="examen"] .exa-pa-b{ min-height:50px; border:0; border-radius:3px; font:700 15px/1 var(--exa-jakarta); cursor:pointer; background:var(--exa-ink); color:var(--exa-paper); box-shadow:0 3px 0 var(--exa-blue); }
+html[data-skin="examen"] .exa-pa-b:focus-visible{ outline:2px solid var(--exa-blue); outline-offset:3px; }
 
 /* ---------- pie de examen (P7) ---------- */
 html[data-skin="examen"] #screen-exercise .exercise-footer{ max-width:480px; justify-content:space-between; flex-wrap:nowrap; padding:10px 24px calc(22px + env(safe-area-inset-bottom,0px)); background:linear-gradient(to top,var(--exa-desk) 70%,transparent); gap:12px; }
@@ -6658,6 +6680,48 @@ html[data-skin="examen"]{ --exa-err-a:#F7A86B; --exa-err-b:#F5B83D; }
 html[data-skin="examen"] .feedback-zone.wrong-fb::before, html[data-skin="examen"] .feedback-zone.hint-fb::before{ background:linear-gradient(90deg,var(--exa-err-a),var(--exa-err-b)) !important; }
 
 /* fin de parte («Terminaste la Parte N») */
+/* «Para repasar» y «Mi progreso» (tableros cn-repasar, cn-progreso) y las dos tarjetas de la portada */
+html[data-skin="examen"] .exa-ov-pg{ position:fixed; inset:0; z-index:9998; display:flex; justify-content:center; background-color:var(--exa-desk); background-image:radial-gradient(var(--exa-dot) 1px,transparent 1.4px); background-size:14px 14px; font-family:var(--exa-jakarta); color:var(--exa-ink); }
+html[data-skin="examen"] .exa-cua{ width:9px; height:9px; flex:none; display:inline-block; background:var(--exa-blue); }
+html[data-skin="examen"] .exa-cua[data-papel="writing"]{ background:var(--exa-papel-writing-qc); }
+html[data-skin="examen"] .exa-cua[data-papel="listening"]{ background:var(--exa-papel-listening-qc); }
+html[data-skin="examen"] .exa-cua[data-papel="speaking"]{ background:var(--exa-ind); }
+html[data-skin="examen"] .exa-cards2{ display:flex; gap:10px; margin-top:14px; }
+html[data-skin="examen"] .exa-card2{ flex:1; display:flex; flex-direction:column; align-items:flex-start; gap:2px; padding:12px; text-align:left; border:1px solid var(--exa-line); background:var(--exa-paper); box-shadow:inset 0 1px 0 var(--exa-hi), 0 2px 0 var(--exa-line), 0 12px 18px -12px var(--exa-sombra); border-radius:6px; color:var(--exa-ink); cursor:pointer; font-family:var(--exa-jakarta); }
+html[data-skin="examen"] .exa-card2-t{ font:800 11px/1.2 var(--exa-jakarta); letter-spacing:.14em; color:var(--exa-muted); }
+html[data-skin="examen"] .exa-card2-x{ font:800 15px/1.25 var(--exa-jakarta); }
+html[data-skin="examen"] .exa-card2:focus-visible, html[data-skin="examen"] .exa-rep-fila:focus-visible, html[data-skin="examen"] .exa-prog-tab:focus-visible{ outline:2px solid var(--exa-blue); outline-offset:2px; }
+html[data-skin="examen"] .exa-rep-lista{ border-top:1px solid var(--exa-line2); }
+html[data-skin="examen"] .exa-rep-fila{ display:flex; align-items:center; gap:14px; width:100%; min-height:64px; background:transparent; border:0; border-bottom:1px solid var(--exa-line2); color:var(--exa-ink); text-align:left; cursor:pointer; font-family:var(--exa-jakarta); padding:0; }
+html[data-skin="examen"] .exa-rep-acc{ font:800 13px/1 var(--exa-jakarta); color:var(--exa-acc, var(--exa-okT)); }
+html[data-skin="examen"] .exa-rep-nota{ margin:14px 0 0; font:400 12px/18px var(--exa-jakarta); color:var(--exa-ink2); }
+html[data-skin="examen"] .exa-rep-vt{ margin:8px 0 6px; font:800 20px/1.2 var(--exa-jakarta); letter-spacing:-0.02em; }
+html[data-skin="examen"] .exa-prog-tabs{ display:flex; margin-bottom:16px; }
+html[data-skin="examen"] .exa-prog-tab{ flex:1; min-height:44px; font:800 14px/1 var(--exa-jakarta); cursor:pointer; color:var(--exa-ink); background:transparent; border:0; border-bottom:3px solid var(--exa-line); }
+html[data-skin="examen"] .exa-prog-tab.on{ background:var(--exa-tint); border-bottom-color:var(--exa-accF); }
+html[data-skin="examen"] .exa-prog-filas{ display:flex; flex-direction:column; border-top:1px solid var(--exa-line2); }
+html[data-skin="examen"] .exa-prog-fila{ display:flex; align-items:center; gap:12px; min-height:86px; border-bottom:1px solid var(--exa-line2); }
+html[data-skin="examen"] .exa-prog-n{ display:flex; align-items:center; gap:8px; font-weight:800; }
+html[data-skin="examen"] .exa-prog-txt{ font:700 13px/1.3 var(--exa-jakarta); font-variant-numeric:tabular-nums; margin-top:3px; }
+html[data-skin="examen"] .exa-prog-der{ display:flex; flex-direction:column; align-items:flex-end; gap:2px; }
+html[data-skin="examen"] .exa-prog-l{ stroke:var(--exa-blue); }
+html[data-skin="examen"] .exa-prog-p{ fill:var(--exa-blue); stroke:var(--exa-bg); }
+html[data-skin="examen"] .exa-prog-svg[data-papel="writing"] .exa-prog-l{ stroke:var(--exa-papel-writing-qc); } html[data-skin="examen"] .exa-prog-svg[data-papel="writing"] .exa-prog-p{ fill:var(--exa-papel-writing-qc); }
+html[data-skin="examen"] .exa-prog-svg[data-papel="listening"] .exa-prog-l{ stroke:var(--exa-papel-listening-qc); } html[data-skin="examen"] .exa-prog-svg[data-papel="listening"] .exa-prog-p{ fill:var(--exa-papel-listening-qc); }
+html[data-skin="examen"] .exa-prog-svg[data-papel="speaking"] .exa-prog-l{ stroke:var(--exa-ind); } html[data-skin="examen"] .exa-prog-svg[data-papel="speaking"] .exa-prog-p{ fill:var(--exa-ind); }
+html[data-skin="examen"] .exa-prog-delta{ font:800 12px/1 var(--exa-jakarta); color:var(--exa-okT); }
+html[data-skin="examen"] .exa-prog-delta.baja{ color:var(--exa-warnB); }
+html[data-skin="examen"] .exa-prog-vacio{ width:150px; height:44px; box-sizing:border-box; border:1px dashed var(--exa-line); flex:none; }
+/* «Antes de empezar» (tablero cx-antes): pautas con ícono, sin casillas */
+html[data-skin="examen"] #exa-antes{ position:fixed; inset:0; z-index:9998; display:flex; justify-content:center; background-color:var(--exa-desk); background-image:radial-gradient(var(--exa-dot) 1px,transparent 1.4px); background-size:14px 14px; font-family:var(--exa-jakarta); color:var(--exa-ink); }
+html[data-skin="examen"] .exa-ant-txt{ margin:0 0 4px; font:400 14px/21px var(--exa-jakarta); color:var(--exa-ink2); }
+html[data-skin="examen"] .exa-ant-lista{ margin-top:10px; border-top:1px solid var(--exa-ink); }
+html[data-skin="examen"] .exa-ant-fila{ display:flex; align-items:center; gap:12px; min-height:58px; border-bottom:1px solid var(--exa-line2); }
+html[data-skin="examen"] .exa-ant-ic{ display:flex; align-items:center; justify-content:center; width:32px; height:32px; flex:none; border:1px solid var(--exa-line); background:var(--exa-tint); color:var(--exa-blue); }
+html[data-skin="examen"] .exa-ant-k{ flex:1; display:flex; flex-direction:column; }
+html[data-skin="examen"] .exa-ant-t{ font:700 14px/1.25 var(--exa-jakarta); }
+html[data-skin="examen"] .exa-ant-x{ font:400 12px/16px var(--exa-jakarta); color:var(--exa-muted); }
+html[data-skin="examen"] .exa-ant-nota{ margin:14px 0 0; padding:10px 12px; border:1px solid var(--exa-line); border-top:3px double var(--exa-ink); font:400 12px/18px var(--exa-jakarta); color:var(--exa-ink2); }
 html[data-skin="examen"] #exa-fin{ position:fixed; inset:0; z-index:9998; display:flex; justify-content:center; background-color:var(--exa-desk); background-image:radial-gradient(var(--exa-dot) 1px,transparent 1.4px); background-size:14px 14px; font-family:var(--exa-jakarta); color:var(--exa-ink); }
 html[data-skin="examen"] .exa-fin-tarj{ background:var(--exa-paper); border:1px solid var(--exa-line); border-radius:6px; box-shadow:inset 0 1px 0 var(--exa-hi), 0 2px 0 var(--exa-line), 0 12px 18px -12px var(--exa-sombra); padding:4px 16px; }
 html[data-skin="examen"] .exa-fin-fila{ display:flex; align-items:center; gap:12px; min-height:52px; border-bottom:1px solid var(--exa-line2); }
@@ -8368,6 +8432,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/d0d94a2bcc27ec5fb4820103bdf26366.js"></script><script src="../pdp-assets/74780574f741524658c38ec3e63b16e4.js"></script>
+<script src="../pdp-assets/c6b6ca66d981f9694ef871fae6242fd7.js"></script><script src="../pdp-assets/88af96c9731514e45ea3a251a8993715.js"></script>
 </body>
 </html>
