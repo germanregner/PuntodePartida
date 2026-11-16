@@ -1055,6 +1055,7 @@ textarea.text-input { min-height: 110px; }
 .pdp-estimulo p{margin:0 0 10px;white-space:pre-line}
 .pdp-estimulo p:last-child{margin-bottom:0}
 .pdp-estimulo .pe-marca{font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.pdp-estimulo .pe-resp{font-weight:800}
 .pdp-estimulo.pe-centrado{text-align:center}
 .pdp-estimulo{overflow-anchor:none}
 .pe-ampliar[hidden]{display:none}
@@ -6817,6 +6818,11 @@ html[data-skin="examen"] .exa-conf-d{ margin:0 0 14px; font:400 14px/21px var(--
 html[data-skin="examen"] #pdp-update{ background:var(--exa-ink) !important; color:var(--exa-paper) !important; border:0 !important; border-left:3px solid var(--exa-menta) !important; border-radius:4px !important; box-shadow:0 14px 24px -10px var(--exa-sombra) !important; font:600 14px/20px var(--exa-sans) !important; }
 html[data-skin="examen"] #pdp-update button:not(.pdp-update-x){ background:linear-gradient(180deg,var(--exa-btnHi) 0%,var(--exa-btn) 62%) !important; color:var(--exa-btnT) !important; border:0 !important; border-radius:8px !important; font:800 13.5px/1 var(--exa-jakarta) !important; box-shadow:0 3px 0 var(--exa-btnEdge) !important; }
 html[data-skin="examen"] #pdp-update .pdp-update-x{ color:var(--exa-paper) !important; opacity:0.7; }
+/* ---------- 16/11 (prueba en el Pixel, ?v=42) ---------- */
+html[data-skin="examen"] #screen-home{ overflow-y:auto; overflow-x:hidden; -webkit-overflow-scrolling:touch; }
+html[data-skin="examen"] .exa-ph-s .exa-back{ position:fixed; top:calc(env(safe-area-inset-top,0px) + 10px); left:12px; margin:0; z-index:30; background:rgba(8,16,32,0.55); border-radius:50%; }
+html[data-skin="examen"] .exa-aviso-prueba{ margin:0 0 14px; padding:10px 12px; border:1px dashed var(--exa-warnB); color:var(--exa-warnB); font:700 13px/18px var(--exa-jakarta); }
+html[data-skin="examen"] :is(#pdp-resultado-final,#pdp-resultado-test,#pdp-confirmar-entrega,#pdp-aviso-parte,#pdp-mis-respuestas) .exa-hero-gr{ margin:6px 0 0; font:800 20px/26px var(--exa-jakarta); color:var(--exa-blanco); }
 
 /* EXAMEN-PIEZAS:FIN */
 /* ATELIER-PIEZAS:INICIO (generado por Assets/atelier/inyectar_atelier.py; no editar a mano) */
@@ -8503,6 +8509,6 @@ body:not(:has(#screen-exercise.active)) .sy-pill-uno{display:none}
   </div>
 </div>
 
-<script src="../pdp-assets/2559aaac1dfd52e6662705835589f9bc.js"></script><script src="../pdp-assets/981e8111788a00eb93c47f26ae186e4f.js"></script>
+<script src="../pdp-assets/02b75b2966bcced8f9ae0edd435c25a0.js"></script><script src="../pdp-assets/3a80e177c2b45a2440d82ec1e2ed0485.js"></script>
 </body>
 </html>
