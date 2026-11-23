@@ -30,6 +30,15 @@
       "claveApp": "pdp_Free_Time",
       "total": 210,
       "icono": "pdp-assets/e1a38d81ce3c7f246d2cbd0fd851bdd5.png"
+    },
+    {
+      "id": "go-01-fundamentos-organizaciones",
+      "pagina": "go-01-fundamentos-organizaciones.html",
+      "titulo": "Fundamentos de las organizaciones",
+      "materia": "Gestión",
+      "descripcion": "Gestión de Organizaciones y Procesos: Unidad 1, semanas 1 y 2.",
+      "claveApp": "pdp_Fundamentos_de_las_organizaciones",
+      "total": 51
     }
   ],
   "pruebas": [
@@ -51,15 +60,6 @@
       "claveApp": "pdp_Preparación_A2_Key",
       "total": 205,
       "icono": "pdp-assets/e1a38d81ce3c7f246d2cbd0fd851bdd5.png"
-    },
-    {
-      "id": "go-01-fundamentos-organizaciones",
-      "pagina": "vista-previa/go-01-fundamentos-organizaciones.html",
-      "titulo": "Fundamentos de las organizaciones",
-      "materia": "Gestión",
-      "descripcion": "Gestión de Organizaciones y Procesos: Unidad 1, semanas 1 y 2 (prueba).",
-      "claveApp": "pdp_Fundamentos_de_las_organizaciones",
-      "total": 51
     }
   ]
 }
